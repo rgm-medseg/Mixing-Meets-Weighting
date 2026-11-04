@@ -1,0 +1,48 @@
+{
+  "aggregation": {
+    "background_in_foreground_macro": false,
+    "case_first_then_arithmetic_mean": true,
+    "foreground_macro": "equal mean of foreground per-class dataset metrics",
+    "primary_unit": "case_or_volume_after_3d_reconstruction"
+  },
+  "boundary_metrics": {
+    "ASD": "mean of symmetric directed nearest-surface distances",
+    "HD95": "95th percentile of symmetric directed nearest-surface distances",
+    "both_empty": "NaN and excluded from boundary mean/CI with excluded_both_empty_count reported",
+    "connectivity": "3D 6-connectivity",
+    "distance_unit": "millimeter",
+    "implementation": "common_evaluation/boundary_metrics.py",
+    "one_empty": "penalty equal to physical evaluation-domain diagonal in mm",
+    "spacing": "restored original case spacing after 2D-to-3D reconstruction"
+  },
+  "checkpoint_selection": {
+    "iou_hd95_asd_change_checkpoint_selection": false,
+    "rule_source": "common_evaluation/RANKING_AND_TIEBREAK_CONTRACT.md must be materialized before formal lock"
+  },
+  "metrics": [
+    "Dice",
+    "IoU",
+    "HD95",
+    "ASD"
+  ],
+  "region_metrics": {
+    "dice": "2TP/(2TP+FP+FN)",
+    "gt_empty_prediction_empty": {
+      "Dice": 1.0,
+      "IoU": 1.0
+    },
+    "gt_empty_prediction_nonempty": {
+      "Dice": 0.0,
+      "IoU": 0.0
+    },
+    "gt_nonempty_prediction_empty": {
+      "Dice": 0.0,
+      "IoU": 0.0
+    },
+    "iou": "TP/(TP+FP+FN)",
+    "smoothing_epsilon": "not used for formal values"
+  },
+  "schema_version": "V17_3_METRIC_DEFINITION_CONTRACT_V1",
+  "training_seed_count": 1,
+  "warning": "CASE_BOOTSTRAP_DOES_NOT_ESTIMATE_TRAINING_SEED_VARIANCE"
+}

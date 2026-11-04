@@ -1,0 +1,33 @@
+{
+  "model_checks": [
+    {
+      "base_pretrain_tensors_exact": true,
+      "base_tensor_count": 226,
+      "router_initialized_separately": true
+    },
+    {
+      "base_pretrain_tensors_exact": true,
+      "base_tensor_count": 226,
+      "router_initialized_separately": true
+    },
+    {
+      "base_pretrain_tensors_exact": true,
+      "base_tensor_count": 226,
+      "router_initialized_separately": true
+    }
+  ],
+  "optimizer_checks": [
+    {
+      "base_hyperparameters_exact": true,
+      "base_state_tensors_exact": true,
+      "base_parameters": 142,
+      "router_group_preserved": true
+    },
+    {
+      "base_hyperparameters_exact": true,
+      "base_state_tensors_exact": true,
+      "base_parameters": 142,
+      "router_group_preserved": true
+    }
+  ]
+}

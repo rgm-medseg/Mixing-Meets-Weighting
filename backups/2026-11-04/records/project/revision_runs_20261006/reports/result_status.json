@@ -1,0 +1,82 @@
+{
+  "experiments": {
+    "Historical_baseline": "EVALUATED",
+    "Historical_Full": "EVALUATED",
+    "E1": "RUNNING",
+    "E2": "PENDING",
+    "E3": "PENDING",
+    "E4": "PENDING",
+    "E5": "PENDING"
+  },
+  "analyses": {
+    "A1": {
+      "task": "A1",
+      "status": "PARTIAL",
+      "reason": "Historical sparse trace drawn; full-step traces added from new runs. Missing runs remain DEFERRED.",
+      "time": "2026-10-06T21:05:04.043976+08:00",
+      "runs": [
+        "Historical_Full (200-step sparse log)"
+      ],
+      "statistics": {
+        "samples": 150,
+        "s_min": 0.37774489402770994,
+        "s_max": 0.3795826244354248,
+        "distinct_actual_areas": 1,
+        "coverage": "every 200 updates, not all steps"
+      }
+    },
+    "A2": {
+      "task": "A2",
+      "status": "PARTIAL",
+      "reason": "Existing teacher best/last checkpoints on 14 fixed already-labeled slices; new checkpoints DEFERRED. E5 has no EMA teacher by official definition.",
+      "time": "2026-10-06T21:24:18.154903+08:00",
+      "samples": 14,
+      "correlations": [
+        {
+          "run": "Historical_Full",
+          "observations": 28,
+          "patients": 7,
+          "spearman": 0.12096332785987958,
+          "interpretation": "descriptive repeated checkpoints/slices, no independent-sample test or causal conclusion"
+        },
+        {
+          "run": "Historical_baseline",
+          "observations": 28,
+          "patients": 7,
+          "spearman": 0.11877394636015325,
+          "interpretation": "descriptive repeated checkpoints/slices, no independent-sample test or causal conclusion"
+        }
+      ]
+    },
+    "A3": {
+      "task": "A3",
+      "status": "PARTIAL",
+      "reason": "True two-student/EMA outputs on four fixed already-labeled slices mixed offline; 2-pixel neighborhoods separated into GT-only/mix-only/overlap/interior. No anatomical semantics assigned to tokens; normalization denominator floor 1e-6.",
+      "time": "2026-10-06T21:05:23.007591+08:00",
+      "diagnostic_only": true,
+      "test_access": false
+    },
+    "A4": {
+      "task": "A4",
+      "status": "PARTIAL",
+      "reason": "ACDC frame/class raw records aggregated by patient for paired differences; COVID shown individually with n=4 per run. No slicing/checkpoint pseudo-replication.",
+      "time": "2026-10-06T21:24:21.568811+08:00",
+      "patients": 20,
+      "covid_records": 16
+    },
+    "A5": {
+      "task": "A5",
+      "status": "PARTIAL",
+      "reason": "Same A100/FP32/shapes; CUDA synchronized, warmup10 + timing30; repeats are timing only. Training wall/peak from new runs; historical training wall source audited separately.",
+      "time": "2026-10-06T21:05:34.390707+08:00"
+    },
+    "A6": {
+      "task": "A6",
+      "status": "PARTIAL",
+      "reason": "Prespecified extreme/median patient gain selection, same frame/slice/display/colors; lowest gains retained even if adverse. Test used only for final descriptive display.",
+      "time": "2026-10-06T21:27:09.931649+08:00",
+      "rule": "largest/median/smallest patient Dice difference; frame01 if available; middle foreground-bearing slice"
+    }
+  },
+  "time": "2026-10-06T22:05:07.592651+08:00"
+}

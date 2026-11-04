@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-23T03:31:57.774492+00:00",
+  "selection": "final_report/paper_internal_evidence_v23_0/ACDC10_VAL_MECHANISM_VIS_CASE_SELECTION.tsv",
+  "split": "VAL",
+  "case_count": 4,
+  "figures": [
+    "final_report/paper_internal_evidence_v23_0/figures/FIG_X03_MECHANISM_patient002_frame01_slice1.png",
+    "final_report/paper_internal_evidence_v23_0/figures/FIG_X03_MECHANISM_patient002_frame02_slice1.png",
+    "final_report/paper_internal_evidence_v23_0/figures/FIG_X03_MECHANISM_patient019_frame01_slice1.png",
+    "final_report/paper_internal_evidence_v23_0/figures/FIG_X03_MECHANISM_patient019_frame02_slice1.png"
+  ],
+  "arm110_checkpoint": "runs/beta_fft_acdc_10pct_mask_token_adamix_full_seed42/checkpoints/best.ckpt",
+  "arm110_global_step": 25200,
+  "arm111_checkpoint": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/best.ckpt",
+  "arm111_global_step": 29600,
+  "x03_formula": "contour=norm01(spatial_gradient(0.5*(maxprob_model1+maxprob_model2))); boundary_weight=0.25+contour",
+  "test_access": 0,
+  "new_training_started": false
+}

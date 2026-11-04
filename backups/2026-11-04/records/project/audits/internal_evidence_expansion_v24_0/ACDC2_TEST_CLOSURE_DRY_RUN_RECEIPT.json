@@ -1,0 +1,58 @@
+{
+  "status": "DRY_RUN_PASS_READY_TO_RUN",
+  "created_at": "2026-08-26T03:21:40.647207+00:00",
+  "task_id": "ACDC2_TEST_CLOSURE",
+  "mode": "dry-run",
+  "training_started": false,
+  "inference_started": false,
+  "test_started": false,
+  "formal_started": false,
+  "upstream": {
+    "requires": [
+      {
+        "TaskID": "RESOLVE_ACDC2_PROTOCOL",
+        "TaskType": "PROTOCOL_GATE",
+        "Action": "READ_ONLY_READY",
+        "FinalLaunchReady": "PASS",
+        "Blocker": "",
+        "CompletionAsset": "audits/internal_evidence_expansion_v24_0/ACDC2_PROTOCOL_DECISION.json",
+        "CompletionAssetExists": true,
+        "CompletionAssetPass": true,
+        "CompletionEvidence": null,
+        "Ready": true
+      },
+      {
+        "TaskID": "ACDC2_BETAFFT_FULL",
+        "TaskType": "NEW_FULL",
+        "Action": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED",
+        "FinalLaunchReady": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED_FROM_FORMAL_QUEUE",
+        "Blocker": "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT",
+        "CompletionAsset": "experiments/internal_evidence_expansion_v24_0/ACDC2_BETAFFT_FULL/train.log",
+        "CompletionAssetExists": false,
+        "CompletionAssetPass": false,
+        "CompletionEvidence": null,
+        "Ready": true
+      },
+      {
+        "TaskID": "ACDC2_OURS_FULL",
+        "TaskType": "NEW_FULL",
+        "Action": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED",
+        "FinalLaunchReady": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED_FROM_FORMAL_QUEUE",
+        "Blocker": "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT",
+        "CompletionAsset": "experiments/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL/train.log",
+        "CompletionAssetExists": false,
+        "CompletionAssetPass": false,
+        "CompletionEvidence": null,
+        "Ready": true
+      }
+    ],
+    "blocked": [],
+    "ready": true
+  },
+  "planned_outputs": [
+    "audits/internal_evidence_expansion_v24_0/ACDC2_TEST_CLOSURE.json"
+  ],
+  "missing_planned_outputs": [],
+  "will_generate_fake_results": false,
+  "hard_gate": "FinalLaunchReady means launch-permitted only; PASS requires real completion evidence for FormalFullComplete, BestValSelected, FrozenCheckpointSHA, TEST_COMPLETION_RECEIPT, and ResultAsset."
+}

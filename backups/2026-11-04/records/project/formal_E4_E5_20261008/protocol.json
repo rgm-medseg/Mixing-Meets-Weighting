@@ -1,0 +1,12 @@
+{
+  "tasks": [
+    "E4",
+    "E5"
+  ],
+  "formal_joint_budget": 60000,
+  "E5_pretrain_budget": 0,
+  "seed": 42,
+  "E3_executed": false,
+  "old_queue": "INTERRUPTED",
+  "common_evaluation": "ACDC_v22_grid_directed_ASD"
+}

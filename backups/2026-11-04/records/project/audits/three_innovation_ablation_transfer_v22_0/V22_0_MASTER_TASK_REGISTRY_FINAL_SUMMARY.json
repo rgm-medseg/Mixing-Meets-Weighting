@@ -1,0 +1,18 @@
+{
+  "audit_id": "V22_0_MASTER_TASK_REGISTRY_FINAL",
+  "created_at": "2026-08-19T15:32:14.203246+00:00",
+  "registry": "audits/three_innovation_ablation_transfer_v22_0/V22_0_MASTER_TASK_REGISTRY_FINAL.tsv",
+  "registry_sha256": "9760904e8d99b6c02a86ba3a4385d67f0ba1bf7ddafbdcf815be61e76d23b673",
+  "task_count": 14,
+  "action_allowed_classes_only": true,
+  "exact_reuse_count": 3,
+  "new_full_ready_count": 10,
+  "blocked_count": 1,
+  "mscmr10_blocked": true,
+  "if_action_not_new_full_ready_final_launch_ready_not_true": true,
+  "if_blocked_formal_command_empty": true,
+  "formal_full_started": false,
+  "formal_tmux_started": false,
+  "formal_run_enabled": false,
+  "MASTER_REGISTRY_FINAL_PASS": true
+}

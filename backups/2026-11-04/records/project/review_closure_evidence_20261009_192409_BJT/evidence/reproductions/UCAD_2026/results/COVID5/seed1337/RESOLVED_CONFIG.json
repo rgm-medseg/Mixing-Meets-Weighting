@@ -1,0 +1,59 @@
+{
+  "_config_path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/configs/ucad_covid5.yaml",
+  "_config_sha256": "4ad6ab0c317e597a8ef3a67efc16bfcfe9cf43a85d2b0d7f1028d0fc5572e079",
+  "class_mapping": {
+    "0": "background",
+    "1": "infection"
+  },
+  "create_tmux": "NO",
+  "data_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data/COVID19_OFFICIAL20",
+  "dataset": "COVID19_OFFICIAL20",
+  "evaluator": {
+    "name": "beta_fft_covid_frozen",
+    "sha256": "ff20153cdbbe9e164bbdbd2348f6799daf0180a5503291177a86a5f9034f560b",
+    "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_COVID19/covid19_volume_evaluator.py"
+  },
+  "identity": "UCAD method ported to COVID under frozen beta-FFT COVID comparison protocol",
+  "label_ratio": "5%",
+  "labeled_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID5_labeled.tsv",
+  "num_classes": 2,
+  "output_dir": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/results/COVID5/seed1337",
+  "patch_size": [
+    256,
+    256
+  ],
+  "resolved_config_status": "PASS",
+  "run_formal_training": "NO",
+  "run_id": "UCAD_FAIR_COVID5",
+  "schema": "UCAD_2026_CONFIG_V1",
+  "seed": 1337,
+  "superpixel": {
+    "cache": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/superpixels/COVID19_OFFICIAL20",
+    "compactness": 0.1,
+    "n_segments": 40
+  },
+  "test_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID_test.tsv",
+  "train_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data/COVID19_OFFICIAL20/manifests/TRAIN_ALL_SLICES.tsv",
+  "ucad": {
+    "base_lr": 0.01,
+    "batch_size": 24,
+    "consistency": 0.1,
+    "consistency_rampup": 200.0,
+    "deterministic": 1,
+    "labeled_bs": 12,
+    "magnitude": 6.0,
+    "max_iterations": 30000,
+    "model": "unet",
+    "momentum": 0.9,
+    "num_labels": 20,
+    "optimizer": "SGD",
+    "pre_iterations": 10000,
+    "s_param": 6,
+    "temperature": 1.0,
+    "u_weight": 0.5,
+    "unc_weight": 0.2,
+    "weight_decay": 0.0001
+  },
+  "unlabeled_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID5_unlabeled.tsv",
+  "val_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID_val.tsv"
+}

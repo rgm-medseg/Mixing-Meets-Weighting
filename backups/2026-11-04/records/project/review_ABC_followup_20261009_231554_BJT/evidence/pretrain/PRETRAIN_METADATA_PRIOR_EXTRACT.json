@@ -1,0 +1,84 @@
+[
+  {
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label3/unet_best_model.pth",
+    "sha256": "3486fd3aecf5f30e77e7e15bec0841f56c87db6246a6dc50cc4dc6f2ee2087e0",
+    "bytes": 14685705,
+    "keys": [
+      "net",
+      "opt"
+    ],
+    "loaded_device": "CPU",
+    "cuda_visible_devices": "",
+    "model_created": false,
+    "forward_called": false,
+    "parameters_updated": false,
+    "state_dicts": {
+      "net": {
+        "tensor_keys": 226,
+        "tensor_numel": 1830440,
+        "all_cpu": true,
+        "TRC_tensor_keys": []
+      }
+    },
+    "opt": {
+      "groups": [
+        {
+          "lr": 0.01,
+          "momentum": 0.9,
+          "dampening": 0,
+          "weight_decay": 0.0001,
+          "nesterov": false,
+          "maximize": false,
+          "foreach": null,
+          "differentiable": false,
+          "parameter_count": 142
+        }
+      ],
+      "state_parameter_count": 82,
+      "momentum_buffer_count": 82,
+      "explicit_step_values": [],
+      "note": "SGD momentum has no step counter; update counts require training trace/source, not momentum contents."
+    }
+  },
+  {
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth",
+    "sha256": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3",
+    "bytes": 14685705,
+    "keys": [
+      "net",
+      "opt"
+    ],
+    "loaded_device": "CPU",
+    "cuda_visible_devices": "",
+    "model_created": false,
+    "forward_called": false,
+    "parameters_updated": false,
+    "state_dicts": {
+      "net": {
+        "tensor_keys": 226,
+        "tensor_numel": 1830440,
+        "all_cpu": true,
+        "TRC_tensor_keys": []
+      }
+    },
+    "opt": {
+      "groups": [
+        {
+          "lr": 0.01,
+          "momentum": 0.9,
+          "dampening": 0,
+          "weight_decay": 0.0001,
+          "nesterov": false,
+          "maximize": false,
+          "foreach": null,
+          "differentiable": false,
+          "parameter_count": 142
+        }
+      ],
+      "state_parameter_count": 82,
+      "momentum_buffer_count": 82,
+      "explicit_step_values": [],
+      "note": "SGD momentum has no step counter; update counts require training trace/source, not momentum contents."
+    }
+  }
+]

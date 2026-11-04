@@ -1,0 +1,8 @@
+{
+  "python": "3.10.20",
+  "pytorch": "2.4.1+cu121",
+  "torch_cuda": "12.1",
+  "cudnn": 90100,
+  "platform": "Linux-4.18.0-553.el8_10.x86_64-x86_64-with-glibc2.31",
+  "capture_kind": "Backup-time existing beta_fft environment; historical environment records are separately retained."
+}

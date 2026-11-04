@@ -1,0 +1,29 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/adapters/common/data.py
+ORIGINAL_SHA256: 4634f60a6e1267d5d045923c07047c90a869947921c4e308d168861670cd425a
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 194-218 ---
+194:     grouped: dict[str, list[dict[str, str]]] = {}
+195:     for row in read_tsv(manifest):
+196:         grouped.setdefault(row["patient_id"], []).append(row)
+197:     for patient_id, rows in sorted(grouped.items()):
+198:         rows.sort(key=lambda item: int(item["slice_idx"]))
+199:         images, labels, spacings = [], [], []
+200:         for row in rows:
+201:             path = Path(row["derived_path"])
+202:             if not path.is_absolute():
+203:                 path = Path(data["project_root"]) / path
+204:             payload = np.load(path)
+205:             images.append(payload["image"].astype(np.float32))
+206:             labels.append(payload["mask"].astype(np.uint8))
+207:             if "spacing" in payload.files:
+208:                 spacings.append(tuple(float(value) for value in payload["spacing"].tolist()))
+209:             else:
+210:                 spacings.append(tuple(float(value) for value in row["canonical_spacing"].split(",")))
+211:         if len(set(spacings)) != 1:
+212:             raise ValueError(f"inconsistent spacing for {patient_id}")
+213:         yield {
+214:             "case_id": patient_id,
+215:             "image": np.stack(images),
+216:             "label": np.stack(labels),
+217:             "spacing": spacings[0],
+218:         }

@@ -1,0 +1,2 @@
+E4_E5_final_evidence_20261008.tar.gz；24.68MiB；SHA256 6e295cc559e4b25b6c67f13b26ba12b5a297a2e9d1cc277fee3aee7367b82506。
+已实际解包并核验内部439文件；数组/权重索引见SERVER_ASSET_INDEX.csv。

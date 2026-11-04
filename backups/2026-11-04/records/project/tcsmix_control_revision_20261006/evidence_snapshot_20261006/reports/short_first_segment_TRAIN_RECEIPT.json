@@ -1,0 +1,12 @@
+{
+  "task": "SHORT_TCSMIX_V2",
+  "status": "INTERRUPTED",
+  "global_step": 200,
+  "time": "2026-10-06T23:31:56.488890+08:00",
+  "pid": 60571,
+  "training_seconds": 183.39657847955823,
+  "wall_time_convention": "Sum of active process segments; downtime excluded, unsaved final crash interval unavailable; replayed updates retained in trace",
+  "resume_exact": false,
+  "resume_boundary": "saved IDs and main RNG; worker augmentation streams restart",
+  "test_access_during_training": 0
+}

@@ -1,0 +1,54 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/adapters/common/metrics.py
+ORIGINAL_SHA256: 7d3402a95f857bb018798c774319a45b4ea0e26018c502b450538d0694f73a71
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 50-74 ---
+50: def _surface(mask: np.ndarray) -> np.ndarray:
+51:     mask = mask.astype(bool)
+52:     return mask ^ binary_erosion(mask) if mask.any() else mask
+53: 
+54: 
+55: def _binary_mm(pred: np.ndarray, truth: np.ndarray, spacing: tuple[float, ...]) -> dict[str, float]:
+56:     pred, truth = pred.astype(bool), truth.astype(bool)
+57:     intersection = int((pred & truth).sum())
+58:     union = int((pred | truth).sum())
+59:     denominator = int(pred.sum() + truth.sum())
+60:     pred_surface, truth_surface = _surface(pred), _surface(truth)
+61:     if not pred_surface.any() and not truth_surface.any():
+62:         distances = np.asarray([0.0])
+63:     elif not pred_surface.any() or not truth_surface.any():
+64:         distances = np.asarray([np.inf])
+65:     else:
+66:         dt_truth = distance_transform_edt(~truth_surface, sampling=spacing)
+67:         dt_pred = distance_transform_edt(~pred_surface, sampling=spacing)
+68:         distances = np.concatenate([dt_truth[pred_surface], dt_pred[truth_surface]])
+69:     return {
+70:         "dice": 1.0 if denominator == 0 else 2.0 * intersection / denominator,
+71:         "iou": 1.0 if union == 0 else intersection / union,
+72:         "hd95": float(np.percentile(distances, 95)),
+73:         "asd": float(np.mean(distances)),
+74:     }
+--- ORIGINAL LINES 99-122 ---
+99: def evaluate(model: torch.nn.Module, config: dict[str, Any], split: str, device: torch.device,
+100:              prediction_sink: Callable[[str, np.ndarray], None] | None = None,
+101:              max_cases: int | None = None) -> dict[str, Any]:
+102:     dataset = config["dataset"]
+103:     rows: list[dict[str, Any]] = []
+104:     for volume_index, volume in enumerate(iter_volumes(config, split)):
+105:         if max_cases is not None and volume_index >= max_cases:
+106:             break
+107:         pred = predict_volume(model, volume["image"], config, device)
+108:         truth = volume["label"]
+109:         if prediction_sink:
+110:             prediction_sink(volume["case_id"], pred)
+111:         if dataset == "ACDC":
+112:             for class_id, class_name in ((1, "RV"), (2, "MYO"), (3, "LV")):
+113:                 dice, iou, hd95, asd = _acdc_safe(pred == class_id, truth == class_id)
+114:                 rows.append({"case": volume["case_id"], "class": class_name, "dice": dice, "iou": iou, "hd95": hd95, "asd": asd})
+115:         elif dataset == "COVID19":
+116:             metric_row = _binary_mm(np.moveaxis(pred > 0, 0, -1), np.moveaxis(truth > 0, 0, -1), tuple(volume["spacing"]))
+117:             rows.append({"case": volume["case_id"], "class": "foreground", **metric_row})
+118:         else:
+119:             rows.append({"case": volume["case_id"], "class": "foreground", **_binary_pixel(pred > 0, truth > 0)})
+120:     keys = ("dice", "iou", "hd95", "asd")
+121:     macro = {key: float(np.mean([float(row[key]) for row in rows])) for key in keys}
+122:     return {"split": split, "dataset": dataset, "aggregation": "case_class_macro" if dataset == "ACDC" else "case_macro", "macro": macro, "rows": rows}

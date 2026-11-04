@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T00:53:47.451470+08:00",
+  "actual_effective_sha256": "3691d38eca08679c4ef406e4d2cdd7b022fa5687ce015e47b483479f4130281c",
+  "expected_source_sha256": "3691d38eca08679c4ef406e4d2cdd7b022fa5687ce015e47b483479f4130281c",
+  "real_recorded_joint_rows": 132,
+  "uniform_asserts_all_pass": true,
+  "mean_max_error": 1.1920928955078125e-07,
+  "range_max": 0.0
+}

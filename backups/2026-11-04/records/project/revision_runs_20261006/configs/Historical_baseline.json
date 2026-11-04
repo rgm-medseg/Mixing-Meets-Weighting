@@ -1,0 +1,11 @@
+{
+  "task": "Historical_baseline",
+  "model_family": "beta_fft",
+  "trc": "off",
+  "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/checkpoints/best.ckpt",
+  "dataset_root": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC",
+  "prediction_dir": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/Historical_baseline/evaluation/predictions",
+  "evaluation_dir": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/Historical_baseline/evaluation",
+  "seed": 42,
+  "max_iterations": 30000
+}

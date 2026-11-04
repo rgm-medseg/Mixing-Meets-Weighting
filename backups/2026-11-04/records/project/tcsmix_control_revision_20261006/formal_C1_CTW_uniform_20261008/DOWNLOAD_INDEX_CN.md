@@ -1,0 +1,17 @@
+最终证据包：C1_CTW_uniform_v2B_final_evidence.tar.gz
+SHA256：2b69e8d762ff3a92a3ecd48afd9e2574518013eedcece8a4976f5be2ac2b039c
+实际解包核验内部226文件。科学证据来自同一冻结快照；归档自身耗时/外层哈希在ARCHIVE_RECEIPT.json及sidecar。
+
+逻辑分包：C1_evidence_part_01.tar.gz；3.31MiB；SHA256 82ff829bf352818c2191a5cff91ab00f1b83d692d161847a61a25b1cf80de9d9
+
+逻辑分包：C1_evidence_part_02.tar.gz；13.21MiB；SHA256 83d65030c3356689471d061c5f69339547546682096ba4c8a8de41d07b4b7a6a
+
+逻辑分包：C1_evidence_part_03.tar.gz；0.59MiB；SHA256 f5ee1e5c2a17b3661efdce060bb5f09a2a14c6838c8bec7b9be62dcf3c6d42f7
+
+逻辑分包：C1_evidence_part_04.tar.gz；6.51MiB；SHA256 7b596f59e47d8636c8bd52e32677b92a811404f0f47363360808ca611b34c735
+
+逻辑分包：C1_evidence_part_05.tar.gz；7.96MiB；SHA256 8ea8ab6006bc17bf58fabc702101dbc5be6b4f67fd7d6bd0ff6976497f4e8f62
+
+逻辑分包：C1_evidence_part_06.tar.gz；3.73MiB；SHA256 0d0ec4cbb5f3b58dd5e6275d70535ade520adb91a073fdeb6e2d994a540f2f6a
+
+模型/完整医学预测未打包，见包内SERVER_ASSET_INDEX.csv。全部患者、全部配对CSV均保留。

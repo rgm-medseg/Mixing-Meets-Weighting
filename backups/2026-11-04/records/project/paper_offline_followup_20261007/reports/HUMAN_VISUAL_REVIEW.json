@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "verified_images": [
+    {
+      "name": "A2_common_signal_patient.png",
+      "sha256": "be05384f559ae29966437aa7ccf09008f46c37e178300e272b6c2f750b595718",
+      "pixels": [
+        1920,
+        960
+      ],
+      "visual": "checked shared scales, labels, colorbar and source/mixed alignment; min/median/max cases retained"
+    },
+    {
+      "name": "A2_common_signal_slice.png",
+      "sha256": "1e8bea276f7ffe317cea12aa414b7ebbd6ce4b60465420d420d6b5fe8a5468e5",
+      "pixels": [
+        1920,
+        960
+      ],
+      "visual": "checked shared scales, labels, colorbar and source/mixed alignment; min/median/max cases retained"
+    },
+    {
+      "name": "A3_example_maximum_enrichment.png",
+      "sha256": "0725508d9d483b6fb81184a1b1b896efba8cbc6930d1e7d4898d9666ba009f6f",
+      "pixels": [
+        2040,
+        1530
+      ],
+      "visual": "checked shared scales, labels, colorbar and source/mixed alignment; min/median/max cases retained"
+    },
+    {
+      "name": "A3_example_median_enrichment.png",
+      "sha256": "9bfdbe8a5b6b3df68df5459ef765885237b4f847e2f653dfdd0214531bfc242a",
+      "pixels": [
+        2040,
+        1530
+      ],
+      "visual": "checked shared scales, labels, colorbar and source/mixed alignment; min/median/max cases retained"
+    },
+    {
+      "name": "A3_example_minimum_enrichment.png",
+      "sha256": "913e0b94f919fb48d48fcac7d45551e64afe6efc407c04b945ba71e83a1919a6",
+      "pixels": [
+        2040,
+        1530
+      ],
+      "visual": "checked shared scales, labels, colorbar and source/mixed alignment; min/median/max cases retained"
+    },
+    {
+      "name": "A3_example_patient002_preselected.png",
+      "sha256": "c68391901d45f6d0ae2d59a50ae5a7eb9a87322792726ce40b31fc16ed0da620",
+      "pixels": [
+        2040,
+        1530
+      ],
+      "visual": "checked shared scales, labels, colorbar and source/mixed alignment; min/median/max cases retained"
+    },
+    {
+      "name": "A3_example_patient019_preselected.png",
+      "sha256": "abd7bc8f720a07f03b7d62b1bad876d7a2edbae1c8e51c8b83f3d44dd0e4a5aa",
+      "pixels": [
+        2040,
+        1530
+      ],
+      "visual": "checked shared scales, labels, colorbar and source/mixed alignment; min/median/max cases retained"
+    },
+    {
+      "name": "A3_region_and_uniform.png",
+      "sha256": "deb027cc96e9b03c6854f6cffeffad193700572d91d146529df9011cf7acf599",
+      "pixels": [
+        2040,
+        765
+      ],
+      "visual": "checked shared scales, labels, colorbar and source/mixed alignment; min/median/max cases retained"
+    },
+    {
+      "name": "A3_weight_distribution.png",
+      "sha256": "e8eb827dc9ae458216db8ac940a1fffa1a5773148d00bce974611d5471b341f1",
+      "pixels": [
+        2040,
+        595
+      ],
+      "visual": "checked shared scales, labels, colorbar and source/mixed alignment; min/median/max cases retained"
+    },
+    {
+      "name": "A3_weight_distribution_with_tail.png",
+      "sha256": "678a8b2922f1168b30883129cc09b7616584b2b6f4d574e788ecc7e5b756da7c",
+      "pixels": [
+        2040,
+        1105
+      ],
+      "visual": "checked shared scales, labels, colorbar and source/mixed alignment; min/median/max cases retained"
+    },
+    {
+      "name": "A5_deployment_timing.png",
+      "sha256": "45daa0855c1f74c0fa79154091f5f1615124bf89d5117278fe9d918f19ac4070",
+      "pixels": [
+        2040,
+        646
+      ],
+      "visual": "checked shared scales, labels, colorbar and source/mixed alignment; min/median/max cases retained"
+    }
+  ],
+  "scope": "All 11 PNGs inspected through image tools; PDF/SVG native outputs and text checked structurally; full medical arrays remain on server"
+}

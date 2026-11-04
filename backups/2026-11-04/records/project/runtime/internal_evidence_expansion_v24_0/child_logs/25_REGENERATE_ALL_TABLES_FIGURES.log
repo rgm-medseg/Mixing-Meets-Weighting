@@ -1,0 +1,49 @@
+{
+  "status": "REFUSE_RUN_WAITING_UPSTREAM",
+  "created_at": "2026-08-25T18:37:33.332613+00:00",
+  "task_id": "REGENERATE_ALL_TABLES_FIGURES",
+  "training_started": false,
+  "inference_started": false,
+  "test_started": false,
+  "formal_started": false,
+  "upstream": {
+    "requires": [
+      {
+        "TaskID": "BUILD_LABEL_EFFICIENCY",
+        "TaskType": "POST_FULL",
+        "Action": "POST_FULL_READY",
+        "FinalLaunchReady": "PASS",
+        "Blocker": "",
+        "CompletionAsset": "audits/internal_evidence_expansion_v24_0/BUILD_LABEL_EFFICIENCY.json",
+        "CompletionAssetExists": true,
+        "CompletionAssetPass": false,
+        "CompletionEvidence": null,
+        "Ready": false
+      },
+      {
+        "TaskID": "BUILD_SEED_STABILITY",
+        "TaskType": "POST_FULL",
+        "Action": "POST_FULL_READY",
+        "FinalLaunchReady": "PASS",
+        "Blocker": "",
+        "CompletionAsset": "audits/internal_evidence_expansion_v24_0/BUILD_SEED_STABILITY.json",
+        "CompletionAssetExists": true,
+        "CompletionAssetPass": false,
+        "CompletionEvidence": null,
+        "Ready": false
+      }
+    ],
+    "blocked": [
+      {
+        "TaskID": "BUILD_LABEL_EFFICIENCY",
+        "Reason": "WAITING_PASS_COMPLETION_ASSET:audits/internal_evidence_expansion_v24_0/BUILD_LABEL_EFFICIENCY.json"
+      },
+      {
+        "TaskID": "BUILD_SEED_STABILITY",
+        "Reason": "WAITING_PASS_COMPLETION_ASSET:audits/internal_evidence_expansion_v24_0/BUILD_SEED_STABILITY.json"
+      }
+    ],
+    "ready": false
+  },
+  "hard_gate": "Refused because required upstream completion evidence is absent; launch readiness was not treated as completion."
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T15:56:52.443841+00:00",
+  "task_id": "ACDC10_BETAFFT_SEED2025",
+  "mode": "run",
+  "training_started": false,
+  "formal_started": false,
+  "inference_started": false,
+  "test_started": false,
+  "split": "VAL",
+  "TEST_DATA_READ": false,
+  "TEST_USED_FOR_TUNING": false,
+  "TEST_USED_FOR_SELECTION": false,
+  "ENGINEERING_CANARY_ONLY": true,
+  "SCIENTIFIC_RESULT": false,
+  "PAPER_RESULT_ELIGIBLE": false,
+  "config": "configs/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025.json",
+  "config_sha256": "ebe3d5b2df5fb168ae7d6ff9a60d526eb951ecbe00f112b520c01ea54d4c61d9",
+  "val_list": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list",
+  "val_list_sha256": "61b935c936d8e12f7889e82d954f421fa25fb95305e92a476096b3242de8777d",
+  "val_canary_count": 3,
+  "val_canary_ids": [
+    "patient028_frame01",
+    "patient028_frame02",
+    "patient085_frame01"
+  ],
+  "manifest": "runtime/internal_evidence_expansion_v24_0/scratch_closed_loop/ACDC10_BETAFFT_SEED2025/VAL_ENGINEERING_CANARY_MANIFEST.tsv",
+  "manifest_sha256": "aed12713af4ecd3ee88d31d6c364488daec7d62509fbf5e9d080e5397eb2e795",
+  "metric_asset": "runtime/internal_evidence_expansion_v24_0/scratch_closed_loop/ACDC10_BETAFFT_SEED2025/SCRATCH_CANARY_FULL_PRECISION.tsv",
+  "metric_asset_sha256": "1d17d124204c2c65c365b54e79a52354dae73073126e112c79c2dd2d846cd094",
+  "closed_loop_components": [
+    "config_binding",
+    "VAL_engineering_canary_manifest",
+    "parser_full_precision_tsv",
+    "receipt"
+  ]
+}

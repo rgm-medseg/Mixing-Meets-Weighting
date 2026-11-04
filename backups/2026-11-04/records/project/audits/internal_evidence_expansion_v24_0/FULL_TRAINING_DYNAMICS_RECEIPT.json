@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T14:30:53.031345+00:00",
+  "task_id": "FULL_TRAINING_DYNAMICS",
+  "training_started": false,
+  "checkpoint_replay_started": false,
+  "test_manifest_accessed": false,
+  "validation_only": true,
+  "test_point_count": 0,
+  "input_asset": "final_report/paper_internal_evidence_v23_0/TRAINING_DYNAMICS_RAW.tsv",
+  "input_sha256": "fa630736fd580c21ed2c65765cf916a34b741488c27b78de3af9c4f5bea0b144",
+  "output_asset": "final_report/internal_evidence_expansion_v24_0/ACDC10_FULL_TRAINING_DYNAMICS.tsv",
+  "output_sha256": "98b55c959e6d1e68c75481694c8a817452128d28c6ccee9adf7a5bd58717b7b9",
+  "summary_asset": "final_report/internal_evidence_expansion_v24_0/ACDC10_FULL_TRAINING_DYNAMICS_SUMMARY.tsv",
+  "summary_sha256": "10e0d4d759d208109644f1ef2cbf6fcc6b6ec58d5c4e6659d5341a41aceaa784",
+  "stability_summary_asset": "final_report/internal_evidence_expansion_v24_0/ACDC10_TRAINING_STABILITY_SUMMARY.tsv",
+  "stability_summary_sha256": "10e0d4d759d208109644f1ef2cbf6fcc6b6ec58d5c4e6659d5341a41aceaa784",
+  "figure_assets": [
+    "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_VAL_DYNAMICS_BETAFFT_VS_OURS.png",
+    "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_VAL_DYNAMICS_BETAFFT_VS_OURS.pdf",
+    "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_VAL_DYNAMICS_000_110_111.png",
+    "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_VAL_DYNAMICS_000_110_111.pdf"
+  ],
+  "curve_row_count": 450,
+  "method_count": 3,
+  "raw_points_visible_in_figures": true,
+  "moving_average_window_validation_points": 5
+}

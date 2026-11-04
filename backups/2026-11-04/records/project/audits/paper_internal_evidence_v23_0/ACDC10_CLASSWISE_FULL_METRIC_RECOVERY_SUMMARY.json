@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T12:35:13.512392+00:00",
+  "full_metric_arms": [
+    "000",
+    "001",
+    "010",
+    "011",
+    "100",
+    "101",
+    "110",
+    "111"
+  ],
+  "dice_only_arms": [],
+  "arm000_replay_receipt": "final_report/paper_internal_evidence_v23_0/raw_test_replay/ACDC10_ARM_000/TEST_REPLAY_RECEIPT.json",
+  "output_tsv": "final_report/paper_internal_evidence_v23_0/ACDC10_8ARM_CLASSWISE_ALL_METRICS.tsv",
+  "no_values_invented": true,
+  "test_replay_purpose": "CLASSWISE_FULL_METRIC_RECOVERY_ONLY_NO_SELECTION"
+}

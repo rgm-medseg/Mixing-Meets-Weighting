@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-23T03:43:39.726563+00:00",
+  "tmux_session_exists": true,
+  "controller_pid_alive": true,
+  "heartbeat_file": "runtime/paper_internal_evidence_v23_0/monitor_heartbeat.json",
+  "heartbeat_created_at": "2026-08-23T03:43:39.390395+00:00",
+  "heartbeat_continuous_update_checked": true,
+  "first_new_full_task_from_registry": "ACDC10_X03_WEIGHT_001",
+  "active_task_inferred": "ACDC10_X03_WEIGHT_001",
+  "active_x03_weight_inferred": "0.01",
+  "first_task_identity_matches_final_registry": true,
+  "no_unexpected_task": true,
+  "no_test_prematurely_unlocked": true,
+  "unexpected_test_process_count": 0,
+  "formal_started": true,
+  "test_access": 0,
+  "monitor_interval_seconds_runtime_startup": 10,
+  "planned_low_frequency_monitor_interval_seconds": 1800
+}

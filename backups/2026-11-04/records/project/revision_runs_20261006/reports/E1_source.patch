@@ -1,0 +1,100 @@
+--- historical_full.py
++++ E1_revision_effective_source.py
+@@ -21,6 +21,9 @@
+ from dataloaders.dataset import BaseDataSets, TwoStreamBatchSampler, WeakStrongAugment
+ from v14_mask_adamix_components import (v14_bcp_net as BCP_net, generate_adamix_bcp_lite_v1_mask, load_parent_pretrain, transplant_parent_optimizer_state, make_optimizer, mask_token_endpoint, process_image_batches_parent_2d)
+ from v21_3_acdc10_third_innovation_components import compute_v21_3_innovation_x
++import revision_runtime as revision
++from revision_runtime import BCP_net, generate_adamix_bcp_lite_v1_mask, compute_v21_3_innovation_x, mask_token_endpoint
++from revision_runtime import StatefulSampler as TwoStreamBatchSampler
+ from utils import ramps, losses
+ process_image_batches = process_image_batches_parent_2d
+ from val_2D import test_single_volume
+@@ -187,8 +190,12 @@
+         "best_metrics": best_metrics,
+         "random_state": to_dict_state(),
+         "args": vars(args),
++        "sampler_state": revision.sampler_state(global_step),
++        "amp_state": None,
++        "lr_state": [g["lr"] for g in optimizer1.param_groups],
++        "resume_exact": False,
+     }
+-    torch.save(ckpt, path)
++    revision.atomic_torch(ckpt, path)
+ 
+ 
+ def load_full_ckpt(path, model_1, model_2, ema_model, optimizer1, optimizer2):
+@@ -200,6 +207,7 @@
+     optimizer2.load_state_dict(ckpt["optimizer2"])
+     if "random_state" in ckpt:
+         restore_dict_state(ckpt["random_state"])
++    revision.set_sampler_resume(ckpt.get("sampler_state"))
+     return ckpt
+ 
+ 
+@@ -263,7 +271,7 @@
+     pre_snapshot_path = Path(args.pretrained_model) if args.pretrained_model else Path("./Pre_model/label7")
+     pre_model = pre_snapshot_path / f"{args.model}_best_model.pth"
+     if not pre_model.exists():
+-        pre_model = Path(args.root_path).parent / "best_results" / "ACDC_10" / "unet_best.pth"
++        raise FileNotFoundError(pre_model)
+     logging.info(f"pretrained_model={pre_model}")
+ 
+     labeled_sub_bs = int(args.labeled_bs / 2)
+@@ -306,7 +314,7 @@
+         logging.info(f"resume_ckpt={resume_path}")
+         resume_state = load_full_ckpt(resume_path, model_1, model_2, ema_model, optimizer1, optimizer2)
+         iter_num = int(resume_state.get("global_step", 0))
+-        start_epoch = int(resume_state.get("epoch", 0))
++        start_epoch = iter_num // len(trainloader)
+         best_metrics = resume_state.get("best_metrics", {})
+         best_performance1 = float(best_metrics.get("model1_best_val_dice", 0.0))
+         best_performance2 = float(best_metrics.get("model2_best_val_dice", 0.0))
+@@ -320,10 +328,12 @@
+             transplant_parent_optimizer_state(optimizer1, load_state["opt"], args.mask_token_enabled)
+             transplant_parent_optimizer_state(optimizer2, load_state["opt"], args.mask_token_enabled)
+ 
+-    start_batch_offset = iter_num % len(trainloader) if args.resume_ckpt else 0
++    start_batch_offset = 0
+     iterator = tqdm(range(start_epoch, max_epoch), ncols=70)
+     for epoch in iterator:
+-        for batch_idx, sampled_batch in enumerate(trainloader):
++        saved_rng = revision.rng_state()
++        batch_iterator = revision.resumed_iterator(trainloader, bool(args.resume_ckpt and epoch == start_epoch), saved_rng)
++        for batch_idx, sampled_batch in enumerate(batch_iterator):
+             if epoch == start_epoch and batch_idx < start_batch_offset:
+                 continue
+             if iter_num >= args.max_iterations:
+@@ -445,6 +455,7 @@
+             optimizer2.step()
+ 
+             iter_num += 1
++            revision.record_step(run_root, iter_num, optimizer1, loss)
+             if args.mask_token_enabled and iter_num % args.mechanism_log_interval == 0:
+                 logging.info("iteration %d : mask_token_endpoint=%s", iter_num, json.dumps({"model1": mask_token_endpoint(model_1), "model2": mask_token_endpoint(model_2)}, sort_keys=True))
+             if args.adamix_enabled and iter_num % args.mechanism_log_interval == 0:
+@@ -534,7 +545,15 @@
+                 logging.info("iteration %d : model2_mean_dice : %f", iter_num, performance2)
+                 logging.info("iteration %d : model2_mean_dice_test : %f", iter_num, performance2_test)
+                 model_2.train()
+-
++                best_metrics = {"model1_best_val_dice": best_performance1, "model2_best_val_dice": best_performance2}
++                save_full_ckpt(run_root / "checkpoints/last.ckpt", model_1, model_2, ema_model, optimizer1, optimizer2, epoch, iter_num, best_metrics)
++
++            if revision.STOP:
++                best_metrics = {"model1_best_val_dice": best_performance1, "model2_best_val_dice": best_performance2}
++                save_full_ckpt(run_root / "checkpoints/last.ckpt", model_1, model_2, ema_model, optimizer1, optimizer2, epoch, iter_num, best_metrics)
++                revision.completion(run_root, iter_num, interrupted=True)
++                writer.close()
++                raise SystemExit(75)
+             if iter_num >= args.max_iterations:
+                 break
+         if iter_num >= args.max_iterations:
+@@ -558,6 +577,7 @@
+     finite_check(re_model_2, re_opt2)
+     finite_check(re_ema, re_opt1)
+     logging.info("resume_check_ok epoch=%s global_step=%s", re_ckpt.get("epoch"), re_ckpt.get("global_step"))
++    revision.completion(run_root, iter_num)
+     writer.close()
+ 
+ 

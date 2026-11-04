@@ -1,0 +1,91 @@
+{
+  "status": "NOT_READY",
+  "created_at": "2026-08-24T17:17:58.555154+00:00",
+  "task_id": "ACDC2_OURS_FULL",
+  "task_type": "NEW_FULL",
+  "action": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED",
+  "registry_FinalLaunchReady": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED_FROM_FORMAL_QUEUE",
+  "registry_Blocker": "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT",
+  "registry_BlockerCategory": "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT",
+  "LaunchBlocking": false,
+  "NoncriticalTerminalGap": false,
+  "ProtocolExcluded": true,
+  "FinalLaunchReady": false,
+  "FinalLaunchReady_semantics": "launch permission only; not completion evidence",
+  "PostFullCompletionEvidenceRequired": false,
+  "FormalFullStarted": false,
+  "TmuxStarted": false,
+  "checks": {
+    "StaticPass": true,
+    "ArgvPass": false,
+    "PathPass": true,
+    "ScientificIdentityPass": false,
+    "ImportPass": true,
+    "RoleBindingPass": true,
+    "SmokePass": false,
+    "ClosedLoopPass": false,
+    "FailureInjectionPass": false,
+    "ControllerDryPass": true,
+    "OutputClean": true,
+    "SourceFreezePass": true,
+    "ConfigFreezePass": false
+  },
+  "l1_l10": {
+    "TaskOrder": "16",
+    "TaskID": "ACDC2_OURS_FULL",
+    "Action": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED",
+    "FinalLaunchReady": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED_FROM_FORMAL_QUEUE",
+    "Blocker": "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT",
+    "L1StaticPaths": "PASS",
+    "L2DryRunOrReceiptMode": "TERMINAL_PROTOCOL_EXCLUDED",
+    "L3Paths": "PASS",
+    "L4ScientificIdentity": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED",
+    "L5ImportCompile": "PASS",
+    "L6TestFirewall": "PASS",
+    "L7SmokeGate": "TERMINAL_PROTOCOL_EXCLUDED",
+    "L8ClosedLoopReceipt": "TERMINAL_PROTOCOL_EXCLUDED",
+    "L9FailureInjection": "BLOCKED_OR_PENDING",
+    "L10ControllerDryConsumption": "PASS_WITH_BLOCKERS"
+  },
+  "freeze_evidence": {
+    "source": {
+      "applicable": true,
+      "pass": true,
+      "path": "train_ACDC/v21_3_acdc10_third_innovation_transfer.py",
+      "exists": true,
+      "expected_sha256": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+      "current_sha256": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15"
+    },
+    "launcher": {
+      "applicable": true,
+      "pass": true,
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc2_ours_full.sh",
+      "exists": true,
+      "expected_sha256": "2edba4eb4723afba9fbe0adf94a7e257efd16d8fd2052afac78e55097f54fc62",
+      "current_sha256": "2edba4eb4723afba9fbe0adf94a7e257efd16d8fd2052afac78e55097f54fc62"
+    },
+    "config": {
+      "applicable": true,
+      "pass": true,
+      "path": "configs/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL.json",
+      "exists": true,
+      "expected_sha256": "70e0684729a43d0f8c6fcd6b9158b90f744883f3fb783e9ca6d07b4e644a1d82",
+      "current_sha256": "70e0684729a43d0f8c6fcd6b9158b90f744883f3fb783e9ca6d07b4e644a1d82"
+    },
+    "checkpoint": {
+      "applicable": true,
+      "pass": false,
+      "path": "train_ACDC/Pre_model/label1/unet_best_model.pth",
+      "exists": false,
+      "expected_sha256": "",
+      "current_sha256": ""
+    }
+  },
+  "expected_receipt": "experiments/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL/train.log",
+  "test_semantics": {
+    "TESTAccessAllowed": "0",
+    "TEST_DATA_READ_FOR_PRE_REGISTERED_EVALUATION": false,
+    "TEST_USED_FOR_TUNING": false,
+    "TEST_USED_FOR_SELECTION": false
+  }
+}

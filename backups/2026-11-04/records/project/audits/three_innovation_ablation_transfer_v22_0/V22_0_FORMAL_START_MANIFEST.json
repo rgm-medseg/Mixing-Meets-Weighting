@@ -1,0 +1,47 @@
+{
+  "BLOCKED_count": 1,
+  "ControllerSHA256": "eb8684c937ff2d63cab1b8e177037d3e11c0e07afa2abfa6851d12d155c94928",
+  "DatasetEvaluatorProtocolLockSHA256": "edaae38db61842cff8523d070bc32c92aa0952a37ed933afd8a9bb3e6eec3fc9",
+  "EXACT_REUSE_count": 3,
+  "FORMAL_START_MANIFEST_CREATED": true,
+  "FinalRegistrySHA256": "9760904e8d99b6c02a86ba3a4385d67f0ba1bf7ddafbdcf815be61e76d23b673",
+  "InitializationCheckpointSHA256": {
+    "train_ACDC/Pre_model/label7/unet_best_model.pth": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3"
+  },
+  "LauncherSHA256": {
+    "scripts/three_innovation_ablation_transfer_v22_0/run_acdc10_arm_001.sh": "f2c61fc11bbf9128bc82340acd50e876c3d9380abed6807ae8f0b0b223e24f0b",
+    "scripts/three_innovation_ablation_transfer_v22_0/run_acdc10_arm_010.sh": "dc7a3c43f7aff1d727126fb2a1a56325a11a4b59a636dcf11d8a7c7ba95674c6",
+    "scripts/three_innovation_ablation_transfer_v22_0/run_acdc10_arm_011.sh": "cff187d3a734482a644962b427c222f40b2001164c879416216bf8f09b5942a7",
+    "scripts/three_innovation_ablation_transfer_v22_0/run_acdc10_arm_100.sh": "758fe6ec93dc302c13823c7f61b37b6aa8737cb0d2255216991bcb4d5253f5f1",
+    "scripts/three_innovation_ablation_transfer_v22_0/run_acdc10_arm_101.sh": "25cb6925b2eeb37657f7a54b09fcf357b6a3ab5b4d97b8cc1d2e12bf32c3eac2",
+    "scripts/three_innovation_ablation_transfer_v22_0/run_acdc5_final3.sh": "b295024e5c94ef91303d581e943d31ea564fc08a4b55f1bcba9ca03aa16ab9dd",
+    "scripts/three_innovation_ablation_transfer_v22_0/run_covid10_final3.sh": "0ddbf03569e3aa686b92f6219e65171e6b1ab07679c211247b9d588e796b49e4",
+    "scripts/three_innovation_ablation_transfer_v22_0/run_covid5_final3.sh": "94bf951b2dbe6b303dc136b132d4fbbf7e1c517c5abbc5258ddd233c366d3212",
+    "scripts/three_innovation_ablation_transfer_v22_0/run_mscmr5_final3.sh": "9fd0775b27609d645687d0d89f5d0184ab2d7cae0aa4dcba7c17f092dc42203d",
+    "scripts/three_innovation_ablation_transfer_v22_0/run_promise20_final3.sh": "e66be5910260fa5f28cf4ec11f394dde84f09d710b7df2582fe070b0e5ae57ed"
+  },
+  "MaskAdaMixSourceSHA256": "75754fa75e6fd6fc01c97682262895998799c7ce3c0bc2dcbe058ef4c63dcaee",
+  "NEW_FULL_DerivedConfigSHA256": {
+    "configs/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_001.json": "556950a86ab242b1b49451ef0647105e71f4d24543fc3d3d4b6088647b333115",
+    "configs/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_010.json": "03041830d188714f65baa07f271ca87d80a0cc47a14f0415bb59f1c2128bb7ed",
+    "configs/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_011.json": "85e930a09480d57e6a1180aba544ca96e0a2cdce40bd7940bf047df58f8ed387",
+    "configs/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100.json": "fe3049dd8286b77f4f346a2327d0d783ea3eb9100b522c91042d4c21b5cd094a",
+    "configs/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_101.json": "8c201fd0ec241ed6366e34e19676bdaf1f0fec8f2dbbadbe716aca98f703d9ce",
+    "configs/three_innovation_ablation_transfer_v22_0/ACDC5_FINAL3.json": "ed45b90f6e69fcfadd942a8b2ca121bd7c79d15e0495317817144263cc8daac8",
+    "configs/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3.json": "9001e52d247e35d95b1fab53b7babe680f5d37f35561beb7e04d96cc7f28e46c",
+    "configs/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3.json": "d13022633897fc7007d91e364ee4ecb4e24ef582a23660a19ceb55ae304eb21d",
+    "configs/three_innovation_ablation_transfer_v22_0/MSCMR10_FINAL3.json": "74dd4a297262d70fddfa5c989478fff45f637c48ec485a92426f90b536572022",
+    "configs/three_innovation_ablation_transfer_v22_0/MSCMR5_FINAL3.json": "c71c8ccfad18dcb380d10d8d83585aeb173b777ef11b7e3570062ca57007bd4b",
+    "configs/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3.json": "3afdbc5d68c56cf183669d9592d2de38ab894a7fcd9e5d5e2ddf3804e6947bfb"
+  },
+  "NEW_FULL_READY_count": 10,
+  "TrainerSourceSHA256": {
+    "train_ACDC/v21_3_acdc10_third_innovation_transfer.py": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+    "train_MSCMRSEG/v15_1_mscmr_mask_token_adamix_candidate.py": "a4345d91f4161973770020667e29d97b10ebf80ade24a6219d2e365080c5f3cf",
+    "train_promise12/train_promise12_bcp_fft.py": "e1006ebe9731d7665a886dc5f897f130c5818c132fa575cc16c9ea845cb27386"
+  },
+  "X03SourceSHA256": "f28abc48fedff330f9aa7470072ebc16a607c6c59fd14942c2adb111b8ce748a",
+  "audit_id": "V22_0_FORMAL_START_MANIFEST",
+  "created_at": "2026-08-19T15:34:35.082137+00:00",
+  "task_count": 14
+}

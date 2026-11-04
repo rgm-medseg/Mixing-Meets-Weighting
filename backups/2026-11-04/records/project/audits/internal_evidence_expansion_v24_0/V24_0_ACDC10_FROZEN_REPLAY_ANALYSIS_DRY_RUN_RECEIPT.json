@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:18:01.058756+00:00",
+  "mode": "dry-run",
+  "training_started": false,
+  "inference_started": false,
+  "checkpoint_replay_started": false,
+  "test_manifest_content_read": false,
+  "test_manifest_sha_recomputed": false,
+  "method_checks": [
+    {
+      "MethodID": "ACDC10_ARM_000",
+      "Checkpoint": "runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/checkpoints/best.ckpt",
+      "CheckpointExists": true,
+      "CheckpointSHA256": "825da2e9a944c930fa54cb9b7abc843345e4a7cde851d34c390739acaa0d5dbf",
+      "CheckpointSHAMatch": true,
+      "Receipt": "final_report/paper_internal_evidence_v23_0/raw_test_replay/ACDC10_ARM_000/TEST_REPLAY_RECEIPT.json",
+      "ReceiptExists": true,
+      "CleanMetrics": "final_report/paper_internal_evidence_v23_0/raw_test_replay/ACDC10_ARM_000/case_class_metrics.tsv",
+      "CleanMetricsExists": true
+    },
+    {
+      "MethodID": "ACDC10_ARM_110",
+      "Checkpoint": "runs/beta_fft_acdc_10pct_mask_token_adamix_full_seed42/checkpoints/best.ckpt",
+      "CheckpointExists": true,
+      "CheckpointSHA256": "f10f69989883a423117a53695311b47e01dc65fbc27fbce2d0c666d6fd733514",
+      "CheckpointSHAMatch": true,
+      "Receipt": "final_report/acdc10_top6_all_test_v21_5/raw_test/OURS/TEST_RECEIPT.json",
+      "ReceiptExists": true,
+      "CleanMetrics": "final_report/acdc10_top6_all_test_v21_5/raw_test/OURS/case_class_metrics.tsv",
+      "CleanMetricsExists": true
+    },
+    {
+      "MethodID": "ACDC10_ARM_111",
+      "Checkpoint": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/best.ckpt",
+      "CheckpointExists": true,
+      "CheckpointSHA256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+      "CheckpointSHAMatch": true,
+      "Receipt": "final_report/acdc10_top6_all_test_v21_5/raw_test/X03/TEST_RECEIPT.json",
+      "ReceiptExists": true,
+      "CleanMetrics": "final_report/acdc10_top6_all_test_v21_5/raw_test/X03/case_class_metrics.tsv",
+      "CleanMetricsExists": true
+    }
+  ],
+  "spec_checks": {
+    "BoundarySpecExists": true,
+    "BoundarySpecSHA256": "d2d84e8cbdb57efe822f8a63d6f6fc58294c2a5793e2b5d01ebab631fab51b38",
+    "CorruptionSpecExists": true,
+    "CorruptionSpecSHA256": "bcf5aacafcaa8db73f53fa4ce5ea9932becc876a08853850c245b28357d60c8c",
+    "DatasetRootExists": true,
+    "TestManifestPathExists": true,
+    "TestManifestContentRead": false,
+    "ExpectedTestManifestSHA256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671"
+  },
+  "failures": []
+}

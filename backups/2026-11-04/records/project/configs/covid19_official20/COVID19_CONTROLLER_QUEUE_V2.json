@@ -1,0 +1,27 @@
+{
+  "FORMAL_QUEUE_ADVANCE_DISABLED_FOR_P0": false,
+  "FULL_AUTHORIZATION": true,
+  "authorization_timestamp_utc": "2026-08-09T08:50:10.392439+00:00",
+  "auto_advance": true,
+  "configs": [
+    "configs/covid19_official20/COVID19_5P_BASELINE_R2.yaml",
+    "configs/covid19_official20/COVID19_5P_MASK_TOKEN_ADAMIX_R1.yaml",
+    "configs/covid19_official20/COVID19_10P_BASELINE_R1.yaml",
+    "configs/covid19_official20/COVID19_10P_MASK_TOKEN_ADAMIX_R1.yaml"
+  ],
+  "formal_full_runs": [
+    "COVID19_5P_BASELINE_R2",
+    "COVID19_5P_MASK_TOKEN_ADAMIX_R1",
+    "COVID19_10P_BASELINE_R1",
+    "COVID19_10P_MASK_TOKEN_ADAMIX_R1"
+  ],
+  "invalid_attempt_count": 1,
+  "invalid_attempts": [
+    "COVID19_5P_BASELINE_R1"
+  ],
+  "p0_disable_reason": "PRETRAIN_TOTAL_WRONGLY_SET_TO_30000_INVALID_CURRENT_R1",
+  "p0_disable_resolved": true,
+  "p0_resolution": "COVID19_5P_BASELINE_R1_INVALIDATED_AND_R2_QUEUE_BOUND_TO_PRETRAIN10000_SELFTRAIN30000",
+  "protocol_identity": "OFFICIAL20_PATIENTLEVEL_ALLSLICE_V2",
+  "tmux_session": "covid19_controller"
+}

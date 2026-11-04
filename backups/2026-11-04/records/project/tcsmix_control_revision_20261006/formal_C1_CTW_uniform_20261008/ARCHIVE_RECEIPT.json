@@ -1,0 +1,49 @@
+{
+  "status": "VERIFIED",
+  "time": "2026-10-08T08:15:20.248376+08:00",
+  "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/C1_CTW_uniform_v2B_final_evidence.tar.gz",
+  "sha256": "2b69e8d762ff3a92a3ecd48afd9e2574518013eedcece8a4976f5be2ac2b039c",
+  "bytes": 37373276,
+  "internal_files_verified": 226,
+  "actual_extract": true,
+  "snapshot": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/archives/final_snapshot_2026-10-08T081437330895+0800",
+  "archive_build_and_validation_seconds": 29.56640823557973,
+  "logical_parts": [
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/C1_evidence_part_01.tar.gz",
+      "sha256": "82ff829bf352818c2191a5cff91ab00f1b83d692d161847a61a25b1cf80de9d9",
+      "bytes": 3469907,
+      "files": 104
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/C1_evidence_part_02.tar.gz",
+      "sha256": "83d65030c3356689471d061c5f69339547546682096ba4c8a8de41d07b4b7a6a",
+      "bytes": 13853118,
+      "files": 1
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/C1_evidence_part_03.tar.gz",
+      "sha256": "f5ee1e5c2a17b3661efdce060bb5f09a2a14c6838c8bec7b9be62dcf3c6d42f7",
+      "bytes": 621070,
+      "files": 11
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/C1_evidence_part_04.tar.gz",
+      "sha256": "7b596f59e47d8636c8bd52e32677b92a811404f0f47363360808ca611b34c735",
+      "bytes": 6830787,
+      "files": 1
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/C1_evidence_part_05.tar.gz",
+      "sha256": "8ea8ab6006bc17bf58fabc702101dbc5be6b4f67fd7d6bd0ff6976497f4e8f62",
+      "bytes": 8351743,
+      "files": 9
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/C1_evidence_part_06.tar.gz",
+      "sha256": "0d0ec4cbb5f3b58dd5e6275d70535ade520adb91a073fdeb6e2d994a540f2f6a",
+      "bytes": 3912537,
+      "files": 101
+    }
+  ]
+}

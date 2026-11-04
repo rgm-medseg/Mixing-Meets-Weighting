@@ -1,0 +1,17 @@
+{
+  "status": "PASS_WITH_ACDC2_PRETRAIN_BLOCKER",
+  "created_at": "2026-08-24T14:23:10.679244+00:00",
+  "python_compile": "PASS",
+  "bash_n": "PASS",
+  "acdc10_seed_dry_run_ready_count": 4,
+  "new_full_count": 6,
+  "blocked_count": 2,
+  "blocked_tasks": [
+    "ACDC2_BETAFFT_FULL",
+    "ACDC2_OURS_FULL"
+  ],
+  "blocker": "PRETRAINED_MODEL_MISSING_LABEL1_BLOCKER",
+  "ACDC2_protocol_status": "PASS_CANONICAL_LABELNUM_1_PREFIX_POLICY",
+  "ACDC2_note": "Protocol is resolved, but current canonical label1 pretrain model is absent. Do not start V24 tmux until this is resolved or a pretrain subtask is formally added and audited.",
+  "audit_tsv": "audits/internal_evidence_expansion_v24_0/V24_0_NEW_FULL_L1_L2_EARLY_AUDIT.tsv"
+}

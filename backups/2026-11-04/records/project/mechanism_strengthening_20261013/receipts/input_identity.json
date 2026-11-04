@@ -1,0 +1,26 @@
+{
+  "inputs": {
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/best.ckpt": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/last.ckpt": "1abf5ae770438d871dda4f6afa04dfc3755442a823551787251b1350d9c76c5a",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/effective_source.py": "d3959d5baf54727db740f3ece79608292b396d3f0f49b7b97743398bda42ad00",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3",
+    "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/train_slices.list": "1b21b2a69d1b28b4dfce6837fdb0572414d337566b51b3dd0e0fda342a6f0648",
+    "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list": "61b935c936d8e12f7889e82d954f421fa25fb95305e92a476096b3242de8777d",
+    "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/test.list": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671"
+  },
+  "source_copy": "d3959d5baf54727db740f3ece79608292b396d3f0f49b7b97743398bda42ad00",
+  "dependencies": {
+    "scripts/frozen/val_2D.py": "8724f0ce4d3497f29415055ffd7f575bc0943d448705fd53a660ba9089ad70b4",
+    "scripts/frozen/v21_3_acdc10_third_innovation_components.py": "f28abc48fedff330f9aa7470072ebc16a607c6c59fd14942c2adb111b8ce748a",
+    "scripts/frozen/v14_mask_adamix_components.py": "75754fa75e6fd6fc01c97682262895998799c7ce3c0bc2dcbe058ef4c63dcaee",
+    "scripts/frozen/networks/net_factory.py": "4eab3d08ab7b201f55185edf78b8ce3a56f14a84750c036d0fc2ee45f2f2089f",
+    "scripts/frozen/networks/unet.py": "d5d3b2c826fbb9e5051eaac51b762c139f68367b3bf06e7b7f23d30abba51426",
+    "scripts/frozen/dataloaders/dataset.py": "0ee048bd93cda8cbea35c06755e855d9a1540a57077efa6b541b69945b22bd58",
+    "scripts/frozen/utils/displacement.py": "1ea291051aa2e08b10d22861a5d3241dde96b4b3eff31d4287d7bbd5548f7621",
+    "scripts/frozen/utils/losses.py": "06f3ef39004df0a70e116c783297ae2012ca7cd61de682fcdf964bbd32fcd480",
+    "scripts/frozen/utils/ramps.py": "272621382935891d236b5d951e3a3a7e6fe3f4d7913fd9eed4b7d47194322862"
+  },
+  "scope": "actual round inputs only",
+  "fixed_checkpoint_missing": "old E2 has no checkpoint; E3 stays cancelled",
+  "four_trained_combinations": "not available as a complete comparable set with TRC on and main signal; partial E1 excluded"
+}

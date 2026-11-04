@@ -1,0 +1,19 @@
+{
+  "source_files": [
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/results/fixed_control_table.csv"
+  ],
+  "source_sha256": {
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/results/fixed_control_table.csv": "8e569fd261f45e7581cc1d59bf56b5d9ede5036115169c15a1dc51b1f7eda6d4"
+  },
+  "case_selection": "all specified cohort observations aggregated; no case selection",
+  "transforms": "native vector table text from actual CSV; declared display rounding only",
+  "width_mm": 190,
+  "height_mm": 57.99999999999999,
+  "vector_text": true,
+  "raster_native_grid": null,
+  "png_dpi": 220,
+  "embedded_raster_export_dpi": 500,
+  "description": "Original Full and new fixed97 results, validation-selected checkpoints, classes and grid distances. Single-seed descriptive comparison.",
+  "manuscript_phase": "Neurocomputing draft; journal-specific guide returned403, final production choices pending verification",
+  "embedded_rasters": false
+}

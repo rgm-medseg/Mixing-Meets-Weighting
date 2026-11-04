@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T08:13:48.498786+08:00",
+  "logical_joint_steps": 30000,
+  "raw_trace_rows": 30000,
+  "duplicate_trace_records": 0,
+  "optimizer_success_calls": {
+    "optimizer1": 30000,
+    "optimizer2": 30000
+  },
+  "normal_calls_each_student": 30000,
+  "replayed_physical_updates": 0,
+  "full_checkpoint_keys": [
+    "amp_state",
+    "args",
+    "best_metrics",
+    "controller_metadata",
+    "ema_model",
+    "epoch",
+    "global_step",
+    "lr_state",
+    "lr_state_optimizer2",
+    "model_1",
+    "model_2",
+    "optimizer1",
+    "optimizer2",
+    "random_state",
+    "resume_exact",
+    "sampler_state",
+    "scheduler_state"
+  ],
+  "last_sha256": "51d13da07bd6540d872ccd79a7bedc1763792bc2e451c0edd39b341efd1c5593",
+  "best_sha256": "d37c9a8f6f28e3be0ce1b7041b9092044160011de10441f8eaea62b13c6517c7",
+  "worker_resume_exact": false,
+  "test_access_before_selection": false
+}

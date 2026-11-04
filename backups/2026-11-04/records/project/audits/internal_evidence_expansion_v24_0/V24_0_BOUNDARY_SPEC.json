@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T14:19:16.442164+00:00",
+  "dataset": "ACDC10 TEST",
+  "metric": "Boundary F1",
+  "tolerances_px": [
+    1,
+    2,
+    3
+  ],
+  "classes": [
+    "RV",
+    "MYO",
+    "LV",
+    "Mean"
+  ],
+  "unit": "pixel",
+  "empty_mask_policy": "fail-safe explicit zero/one handling in script; no post-hoc tolerance deletion"
+}

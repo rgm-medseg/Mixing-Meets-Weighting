@@ -1,0 +1,52 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/self_train/train_promise12_bcp_fft.py
+ORIGINAL_SHA256: e1006ebe9731d7665a886dc5f897f130c5818c132fa575cc16c9ea845cb27386
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 24-31 ---
+24: from networks.net_factory import net_factory
+25: from networks.vision_transformer import SwinUnet as ViT_seg
+26: from networks.config import get_config
+27: from utils import losses, ramps
+28: from val_2D import test_single_volume_promise
+29: from utils.displacement import process_image_batches
+30: import torch.nn as nn
+31: import torch.nn.functional as F
+--- ORIGINAL LINES 2311-2329 ---
+2311: def self_train_lineage_payload(args, pre_trained_model):
+2312:     pretrain_target = args.pretrain_max_iterations_override or COVID_FORMAL_PRETRAIN_UPDATES
+2313:     self_train_target = args.self_train_max_iterations_override or args.max_iterations
+2314:     return {
+2315:         'protocol_identity': 'OFFICIAL20_PATIENTLEVEL_ALLSLICE_V2' if args.dataset_name == 'covid19_official20' else 'LEGACY_PROMISE12',
+2316:         'run_id': args.exp,
+2317:         'dataset_name': args.dataset_name,
+2318:         'labeled_num': args.labeled_num,
+2319:         'pretrain_target_updates': int(pretrain_target),
+2320:         'self_train_target_updates': int(self_train_target),
+2321:         'use_mask_token_prehead_router': bool(args.use_mask_token_prehead_router),
+2322:         'use_adamix_bcp_lite_v1': bool(args.use_adamix_bcp_lite_v1),
+2323:         'training_core_sha256': sha256_file_for_identity(__file__),
+2324:         'pretrain_checkpoint_sha256': sha256_file_for_identity(pre_trained_model),
+2325:         'covid19_labeled_manifest_sha256': covid19_manifest_identity(args.covid19_labeled_manifest),
+2326:         'covid19_unlabeled_manifest_sha256': covid19_manifest_identity(args.covid19_unlabeled_manifest),
+2327:         'covid19_val_manifest_sha256': covid19_manifest_identity(args.covid19_val_manifest),
+2328:         'promise12_slice_indices_sha256': promise12_slice_index_identity(args.promise12_slice_indices_json),
+2329:     }
+--- ORIGINAL LINES 2435-2443 ---
+2435:     root = _project_root_for_covid19()
+2436:     if root not in sys.path:
+2437:         sys.path.insert(0, root)
+2438:     from train_COVID19.covid19_dataset_adapter import Covid19Official20TwoStreamDataset, covid19_two_stream_collate
+2439: 
+2440:     db_train = Covid19Official20TwoStreamDataset(args.covid19_labeled_manifest, args.covid19_unlabeled_manifest)
+2441:     total_slices = len(db_train)
+2442:     labeled_slice = db_train.labeled_count
+2443:     batch_sampler = TwoStreamBatchSampler(
+--- ORIGINAL LINES 2456-2464 ---
+2456:     root = _project_root_for_covid19()
+2457:     if root not in sys.path:
+2458:         sys.path.insert(0, root)
+2459:     from train_COVID19.covid19_dataset_adapter import Covid19Official20PatientVolumeDataset
+2460: 
+2461:     return Covid19Official20PatientVolumeDataset(args.covid19_val_manifest)
+2462: 
+2463: def pre_train(args, snapshot_path):
+2464:     base_lr = args.base_lr

@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T16:48:09.807792+00:00",
+  "task_id": "V24_0_PRESTART_ENVIRONMENT_GATE",
+  "formal_started": false,
+  "tmux_started": false,
+  "training_started": false,
+  "process": {
+    "CONFLICTING_CONTROLLER_COUNT": 0,
+    "conflicting_process_lines": [],
+    "tmux_session_exists": false,
+    "tmux_lines": []
+  },
+  "gpu": {
+    "gpu_visible": true,
+    "gpus": [
+      {
+        "index": "0",
+        "name": "NVIDIA A100-SXM4-40GB",
+        "memory_used_mib": 0,
+        "memory_total_mib": 40960,
+        "utilization_gpu_percent": 0
+      }
+    ],
+    "GPU_CONFLICTING_TASK_COUNT": 0
+  },
+  "disk": {
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+    "disk_total_bytes": 3659242965827584,
+    "disk_free_bytes": 3266788846469120,
+    "disk_free_gib": 3042434.199,
+    "disk_free_fraction": 0.8927499149350129,
+    "inode_total": 500000000000,
+    "inode_free": 499570449240,
+    "inode_free_fraction": 0.99914089848,
+    "required_disk_free_gib_minimum": 100.0,
+    "required_inode_free_minimum": 100000
+  },
+  "LOCAL_PC_OFF_EXECUTION_SAFE": "READY_AFTER_TMUX_DETACH_CANARY",
+  "SERVER_REBOOT_AUTO_RESUME": "NOT_CONFIGURED_ENVIRONMENT_BLOCKER",
+  "manual_resume_available": true
+}

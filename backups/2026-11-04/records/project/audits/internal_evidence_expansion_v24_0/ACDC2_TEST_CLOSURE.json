@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-26T03:21:51.775150+00:00",
+  "task_id": "ACDC2_TEST_CLOSURE",
+  "closure_type": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED",
+  "training_started": false,
+  "test_started": false,
+  "fake_results_generated": false,
+  "rows": [
+    {
+      "Dataset": "ACDC",
+      "Ratio": "2%",
+      "Method": "β-FFT",
+      "TaskID": "ACDC2_BETAFFT_FULL",
+      "Status": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED_FROM_FORMAL_QUEUE",
+      "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT": true,
+      "Dice": "",
+      "IoU": "",
+      "HD95": "",
+      "ASD": "",
+      "SourceAsset": "audits/internal_evidence_expansion_v24_0/ACDC2_PROTOCOL_DECISION.json",
+      "Receipt": "audits/internal_evidence_expansion_v24_0/ACDC2_TEST_CLOSURE.json"
+    },
+    {
+      "Dataset": "ACDC",
+      "Ratio": "2%",
+      "Method": "Ours",
+      "TaskID": "ACDC2_OURS_FULL",
+      "Status": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED_FROM_FORMAL_QUEUE",
+      "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT": true,
+      "Dice": "",
+      "IoU": "",
+      "HD95": "",
+      "ASD": "",
+      "SourceAsset": "audits/internal_evidence_expansion_v24_0/ACDC2_PROTOCOL_DECISION.json",
+      "Receipt": "audits/internal_evidence_expansion_v24_0/ACDC2_TEST_CLOSURE.json"
+    }
+  ]
+}

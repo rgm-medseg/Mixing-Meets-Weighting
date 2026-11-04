@@ -1,0 +1,197 @@
+{
+  "tasks": {
+    "E1": {
+      "status": "INTERRUPTED",
+      "command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/scripts/train_entry.py",
+        "--config",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/configs/E1_uniform.yaml"
+      ],
+      "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006",
+      "interpreter": "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "gpu": 0,
+      "config": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/configs/E1_uniform.yaml",
+      "config_sha256": "bf636da2611176e1cb20ebc46a07645524d39f22dcf9195b441ded9759af5e12",
+      "inputs": [
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/protocol.json",
+        "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/train_slices.list",
+        "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth"
+      ],
+      "output": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E1",
+      "budget": "30000 SSL updates, reuse exact historical pretraining file",
+      "pid": 28255,
+      "latest_step": 3975,
+      "retries": 0,
+      "expected_resource": {
+        "GPU": "GPU0 NVIDIA A100-SXM4-40GB",
+        "scheduling": "one training task at a time; wait when occupied",
+        "precision": "FP32",
+        "budget_updates": 30000,
+        "estimated_training_hours": 7.065156388888889,
+        "estimate_basis": "historical Full log elapsed25434.563seconds; rough reference only"
+      },
+      "started": "2026-10-06T21:30:16.266337+08:00",
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/E1.log",
+      "actual_command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/scripts/train_entry.py",
+        "--config",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/configs/E1_uniform.yaml"
+      ],
+      "exit_code": 75,
+      "process_exited": "2026-10-06T22:28:28.337558+08:00",
+      "reason": "Safe stop, full-state checkpoint available"
+    },
+    "E2": {
+      "status": "PENDING",
+      "command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/scripts/train_entry.py",
+        "--config",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/configs/E2_fixed.yaml"
+      ],
+      "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006",
+      "interpreter": "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "gpu": 0,
+      "config": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/configs/E2_fixed.yaml",
+      "config_sha256": "c926f819c4507ea53e80370995a8b3725070dbca0e87469ac7d7ffce1aa0774d",
+      "inputs": [
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/protocol.json",
+        "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/train_slices.list",
+        "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth"
+      ],
+      "output": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E2",
+      "budget": "30000 SSL updates, reuse exact historical pretraining file",
+      "pid": null,
+      "latest_step": 0,
+      "retries": 0,
+      "expected_resource": {
+        "GPU": "GPU0 NVIDIA A100-SXM4-40GB",
+        "scheduling": "one training task at a time; wait when occupied",
+        "precision": "FP32",
+        "budget_updates": 30000,
+        "estimated_training_hours": 7.065156388888889,
+        "estimate_basis": "historical Full log elapsed25434.563seconds; rough reference only"
+      }
+    },
+    "E3": {
+      "status": "PENDING",
+      "command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/scripts/train_entry.py",
+        "--config",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/configs/E3_fixed_uniform.yaml"
+      ],
+      "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006",
+      "interpreter": "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "gpu": 0,
+      "config": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/configs/E3_fixed_uniform.yaml",
+      "config_sha256": "3d9a3946996a73836091ff17f165f9b39a6f58006082a4c2f730fb6923d6741d",
+      "inputs": [
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/protocol.json",
+        "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/train_slices.list",
+        "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth"
+      ],
+      "output": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E3",
+      "budget": "30000 SSL updates, reuse exact historical pretraining file",
+      "pid": null,
+      "latest_step": 0,
+      "retries": 0,
+      "expected_resource": {
+        "GPU": "GPU0 NVIDIA A100-SXM4-40GB",
+        "scheduling": "one training task at a time; wait when occupied",
+        "precision": "FP32",
+        "budget_updates": 30000,
+        "estimated_training_hours": 7.065156388888889,
+        "estimate_basis": "historical Full log elapsed25434.563seconds; rough reference only"
+      }
+    },
+    "E4": {
+      "status": "PENDING",
+      "command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/scripts/train_entry.py",
+        "--config",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/configs/E4_bottleneck.yaml"
+      ],
+      "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006",
+      "interpreter": "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "gpu": 0,
+      "config": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/configs/E4_bottleneck.yaml",
+      "config_sha256": "02e6abd16eb518f220fad838505bc33ccd27f670a45d9414e2c0007d7dc750ea",
+      "inputs": [
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/protocol.json",
+        "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/train_slices.list",
+        "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth"
+      ],
+      "output": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E4",
+      "budget": "30000 SSL updates, reuse exact historical pretraining file",
+      "pid": null,
+      "latest_step": 0,
+      "retries": 0,
+      "expected_resource": {
+        "GPU": "GPU0 NVIDIA A100-SXM4-40GB",
+        "scheduling": "one training task at a time; wait when occupied",
+        "precision": "FP32",
+        "budget_updates": 30000,
+        "estimated_training_hours": 7.065156388888889,
+        "estimate_basis": "historical Full log elapsed25434.563seconds; rough reference only"
+      }
+    },
+    "E5": {
+      "status": "PENDING",
+      "command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/scripts/train_entry.py",
+        "--config",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/configs/E5_adamix_ct.yaml"
+      ],
+      "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006",
+      "interpreter": "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "gpu": 0,
+      "config": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/configs/E5_adamix_ct.yaml",
+      "config_sha256": "3dec398a9b920e44772bcbd344c117fdf4a3dfadab857e7347a91831875a8d85",
+      "inputs": [
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/protocol.json",
+        "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/train_slices.list",
+        "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/external/AdaMix"
+      ],
+      "output": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E5",
+      "budget": "30000 co-training updates, scratch init, no pretraining, official AdamW 1e-4, two main+two auxiliary loaders, each B16",
+      "pid": null,
+      "latest_step": 0,
+      "retries": 0,
+      "expected_resource": {
+        "GPU": "GPU0 NVIDIA A100-SXM4-40GB",
+        "scheduling": "one training task at a time; wait when occupied",
+        "precision": "FP32",
+        "budget_updates": 30000,
+        "estimated_training_hours": "NA: no comparable official AdaMix-CT history",
+        "estimate_basis": "historical Full log elapsed25434.563seconds; rough reference only"
+      }
+    }
+  },
+  "analyses": {},
+  "archive_status": "PENDING",
+  "controller_pid": 28224,
+  "controller_started": "2026-10-06T21:30:16.001449+08:00",
+  "active_task": null,
+  "status": "INTERRUPTED",
+  "heartbeat": "2026-10-06T22:28:28.360405+08:00",
+  "heartbeat_epoch": 1791296908.36041,
+  "resource": {
+    "used_mib": 0,
+    "free_mib": 40326,
+    "utilization_percent": 0,
+    "pids": []
+  },
+  "child_pid": null,
+  "stopping_since": "2026-10-06T22:28:26.316362+08:00",
+  "stopped": "2026-10-06T22:28:28.360390+08:00"
+}

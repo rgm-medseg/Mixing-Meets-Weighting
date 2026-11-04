@@ -1,0 +1,20 @@
+A3 medians ('Full_main', 'best', 'matched92')
+A3 medians ('Full_main', 'last', 'matched92')
+A3 medians ('R1_v2_B', 'best', 'matched92')
+A3 medians ('R1_v2_B', 'best', 'original_strategy')
+A3 medians ('R1_v2_B', 'last', 'matched92')
+A3 medians ('R1_v2_B', 'last', 'original_strategy')
+A3 medians ('R2_fixed92', 'best', 'matched92')
+A3 medians ('R2_fixed92', 'best', 'original_strategy')
+A3 medians ('R2_fixed92', 'last', 'matched92')
+A3 medians ('R2_fixed92', 'last', 'original_strategy')
+Traceback (most recent call last):
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/scripts/finish.py", line 180, in <module>
+    if __name__=='__main__':main()
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/scripts/finish.py", line 178, in main
+    timing_summary();spatial_summary();figures();review();reports()
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/scripts/finish.py", line 37, in figures
+    savefig(fig,'A3_region_and_uniform','Frozen eval best students; common matched 92x92 mask and identical predeclared weak/strong source pairings. Ten source patients have equal weight. Boundary band width2 grid pixels. Anatomy_clean excludes mix/cutout neighborhoods, occlusion and rotation padding; the four mutually exclusive regions use the uncleaned anatomy band. CTW is confidence-transition weighting. Same-mean uniform is a constant per full image with unchanged predictions and errors; the plotted delta is a conditional regional mean, not a retrained ablation score. Full original strategy remains NA pending mapping; all best/last and width1/3 results retained.')
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/scripts/finish.py", line 18, in savefig
+    assert not bad,('figure text outside canvas',bad)
+AssertionError: ('figure text outside canvas', ['1.4', '0.0200'])

@@ -1,0 +1,2 @@
+E4_E5_start_evidence_20261008.tar.gz；1.51MiB；SHA256 b9db25f1b84a6a0cdb30a116d3020a4964eea203e38fa5d61ecfcd7e88338b34。
+已实际解包并核验内部323文件；数组/权重索引见SERVER_ASSET_INDEX.csv。

@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T08:14:28.220462+08:00",
+  "patient_counts": {
+    "C1_improved": 7,
+    "tied": 0,
+    "C1_declined": 13,
+    "tie_tolerance_fraction": 1e-12
+  },
+  "selected_error_patients": [
+    {
+      "rule": "maximum_spatial_advantage",
+      "patient": "patient084",
+      "case": "patient084_frame02",
+      "class_name": "LV",
+      "z": 4,
+      "slice_rule": "largest R1 pred-to-GT surface-distance sum; native axes z,y,x, first tie",
+      "spatial_advantage_Dice_pp": 3.5085585207736303,
+      "R1_checkpoint_sha256": "5df2de9b8df16e4d89df9265f104b4b8c7c321245d9eaa0479971672b4d7a1a9",
+      "C1_checkpoint_sha256": "d37c9a8f6f28e3be0ce1b7041b9092044160011de10441f8eaea62b13c6517c7",
+      "axes": "z,y,x; origin upper",
+      "deidentification": "anonymous ACDC ID, normalized image render; no raw medical array or DICOM header",
+      "figure": "analysis/error_maximum_spatial_advantage.png"
+    },
+    {
+      "rule": "nearest_median_spatial_advantage",
+      "patient": "patient011",
+      "case": "patient011_frame02",
+      "class_name": "RV",
+      "z": 0,
+      "slice_rule": "largest R1 pred-to-GT surface-distance sum; native axes z,y,x, first tie",
+      "spatial_advantage_Dice_pp": 0.3360557046276691,
+      "R1_checkpoint_sha256": "5df2de9b8df16e4d89df9265f104b4b8c7c321245d9eaa0479971672b4d7a1a9",
+      "C1_checkpoint_sha256": "d37c9a8f6f28e3be0ce1b7041b9092044160011de10441f8eaea62b13c6517c7",
+      "axes": "z,y,x; origin upper",
+      "deidentification": "anonymous ACDC ID, normalized image render; no raw medical array or DICOM header",
+      "figure": "analysis/error_nearest_median_spatial_advantage.png"
+    },
+    {
+      "rule": "minimum_spatial_advantage",
+      "patient": "patient075",
+      "case": "patient075_frame02",
+      "class_name": "MYO",
+      "z": 11,
+      "slice_rule": "largest R1 pred-to-GT surface-distance sum; native axes z,y,x, first tie",
+      "spatial_advantage_Dice_pp": -2.7070530543433557,
+      "R1_checkpoint_sha256": "5df2de9b8df16e4d89df9265f104b4b8c7c321245d9eaa0479971672b4d7a1a9",
+      "C1_checkpoint_sha256": "d37c9a8f6f28e3be0ce1b7041b9092044160011de10441f8eaea62b13c6517c7",
+      "axes": "z,y,x; origin upper",
+      "deidentification": "anonymous ACDC ID, normalized image render; no raw medical array or DICOM header",
+      "figure": "analysis/error_minimum_spatial_advantage.png"
+    }
+  ],
+  "outputs": {
+    "FINAL_REPORT_C1_CN.md": "a61fd8fcbcc9245f9621dbeccf376cbd26acfc95ebd5fb066f6a0ce71a903eef",
+    "WRITING_HANDOFF_C1_CN.md": "f6aeb14708720d113b4005ba3db92c6164f3df06479d2ca3b72f460b4137edd1",
+    "analysis/error_maximum_spatial_advantage.svg": "6b1af4353172cf67444e54596d458296b5951fc9b3ea4bb7f5e8e8d872ff8078",
+    "analysis/error_maximum_spatial_advantage.png": "8a5f3e7a6e2737683eb1bf5e8babe893330255bf2c1cf1113a1047e35db5c649",
+    "analysis/error_minimum_spatial_advantage.svg": "9ec96c77070ff6106a64444e129cbfa7d28bdde5678b3bb10eabed9ce893ed6b",
+    "analysis/error_minimum_spatial_advantage.png": "865d3eff08829f9f643f1ec68b3595d14ad14457a42995f7e0699cc8d9f0c5aa",
+    "analysis/patient_Dice_spatial_advantage.png": "831cf7186c3bc80e21b8c0534dab822dbbba9404695085c83331ac9bd7362667",
+    "analysis/validation_and_geometry.png": "08911e0d5ee211b8f859a912ccea088a111b63f20efb11954147f6ce4988d15a",
+    "analysis/weight_matching_checks.png": "341d30d144096ec1cffa0d306fe294453fbee4802460e570b8044895e0990269",
+    "analysis/error_nearest_median_spatial_advantage.png": "6b159748d2058d89c50da6f8186ad44b8e2e240f2bb885f4ee3e05bd1f8dca28",
+    "analysis/patient_Dice_spatial_advantage.svg": "40ade3aabc03a73eb823343312fa4f0b62a57ec832bc5b9991df3d78fe231b87",
+    "analysis/validation_and_geometry.svg": "fe80c540ce228b8136c93ca148bd38c0997daf915d83a6f31f18f482c2f37554",
+    "analysis/weight_matching_checks.svg": "e3e2970ac1a042b3a15df4af2a97e3be02999400691a3e59bb09f7f4c5a94299",
+    "analysis/error_nearest_median_spatial_advantage.svg": "b3681687f2b354cfb5f4f9b9a3d48010252ff1161864ea1cbfd7f938218d3301",
+    "results/C1_vs_R1_summary.csv": "f183f5b6466aa1e6f593294498ecc53b6e8143cba8c5c0808b353bb6d5b763ab",
+    "results/patient_pairs.csv": "852a1a278ddd509dabb5d2878e56dbb54f1f3e38e353867a0f4eb6b97bce1bad",
+    "results/frame_pairs.csv": "1b97094861554c1de84c4d33f78d492b126b44aa11a515a3758161c53911cfcd",
+    "results/class_pairs.csv": "684452225e84a084303ba01acee32564152ea915a7637f13c6cf9419fff9e892",
+    "results/frame_class_pairs.csv": "e993ad964770ca1942b5205242c3e13bf4fa05c87910f1fd72a739a684c523ea",
+    "results/fixed_window_control_weight_summary.csv": "252b98911cf195f4604a7f75547f45034c60a87a21954e424fc53280df911bba",
+    "results/per_image_mean_checks.csv": "68a75f21a05e0b71484d07adc6edaeb5330f0e0c2574f140b1f1522a71b97af6",
+    "results/qualitative_selection.csv": "5d1a265f635fbc6a1e3cf872497390e689f0dddc7da8871d04569d74cc813afc",
+    "results/runtime_cost.csv": "2d926f6d0b88aa465d1bf6c1e08293d810f2567d70d9b16f662b52c9cf69567e",
+    "results/runtime_cost.json": "557009a7c1e1e279ead63ff41827446cc9ea9f0a118b0eb679715fd3046e6095"
+  },
+  "scope": "one seed descriptive pairs; no hypothesis test or configuration selection"
+}

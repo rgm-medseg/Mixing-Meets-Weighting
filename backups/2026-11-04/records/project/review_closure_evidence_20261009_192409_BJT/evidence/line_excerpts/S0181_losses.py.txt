@@ -1,0 +1,67 @@
+ORIGINAL: /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/utils/losses.py
+SHA256: 06f3ef39004df0a70e116c783297ae2012ca7cd61de682fcdf964bbd32fcd480
+8: def dice_loss(score, target):
+9:     target = target.float()
+10:     smooth = 1e-5
+11:     intersect = torch.sum(score * target)
+12:     y_sum = torch.sum(target * target)
+13:     z_sum = torch.sum(score * score)
+14:     loss = (2 * intersect + smooth) / (z_sum + y_sum + smooth)
+15:     loss = 1 - loss
+19: def dice_loss1(score, target):
+20:     target = target.float()
+21:     smooth = 1e-5
+22:     intersect = torch.sum(score * target)
+23:     y_sum = torch.sum(target)
+24:     z_sum = torch.sum(score)
+25:     loss = (2 * intersect + smooth) / (z_sum + y_sum + smooth)
+26:     loss = 1 - loss
+154: 
+155: 
+156: class DiceLoss(nn.Module):
+157:     def __init__(self, n_classes):
+158:         super(DiceLoss, self).__init__()
+159:         self.n_classes = n_classes
+160: 
+161:     def _one_hot_encoder(self, input_tensor):
+162:         tensor_list = []
+163:         for i in range(self.n_classes):
+164:             temp_prob = input_tensor == i * torch.ones_like(input_tensor)
+165:             tensor_list.append(temp_prob)
+169:     def _dice_loss(self, score, target):
+170:         target = target.float()
+171:         smooth = 1e-5
+172:         intersect = torch.sum(score * target)
+173:         y_sum = torch.sum(target * target)
+174:         z_sum = torch.sum(score * score)
+175:         loss = (2 * intersect + smooth) / (z_sum + y_sum + smooth)
+176:         loss = 1 - loss
+180:         target = target.float()
+181:         mask = mask.float()
+182:         smooth = 1e-10
+183:         intersect = torch.sum(score * target * mask)
+184:         y_sum = torch.sum(target * target * mask)
+185:         z_sum = torch.sum(score * score * mask)
+186:         loss = (2 * intersect + smooth ) / (z_sum + y_sum + smooth)
+187:         loss = 1 - loss
+188:         return loss
+193:         target = self._one_hot_encoder(target)
+194:         if weight is None:
+195:             weight = [1] * self.n_classes
+196:         assert inputs.size() == target.size(), 'predict & target shape do not match'
+197:         class_wise_dice = []
+199:         if mask is not None:
+200:             # mask = self._one_hot_mask_encoder(mask)
+201:             mask = mask.repeat(1, self.n_classes, 1, 1).type(torch.float32)
+202:             for i in range(0, self.n_classes): 
+203:                 dice = self._dice_mask_loss(inputs[:, i], target[:, i], mask[:, i])
+204:                 class_wise_dice.append(1.0 - dice.item())
+205:                 loss += dice * weight[i]
+206:         else:
+207:             for i in range(0, self.n_classes):
+208:                 dice = self._dice_loss(inputs[:, i], target[:, i])
+209:                 class_wise_dice.append(1.0 - dice.item())
+210:                 loss += dice * weight[i]
+211:         return loss / self.n_classes
+212: 
+213: 

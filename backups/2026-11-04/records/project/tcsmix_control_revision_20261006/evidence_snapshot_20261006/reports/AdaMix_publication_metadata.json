@@ -1,0 +1,33 @@
+{
+  "source": "https://api.crossref.org/works/10.1016/j.media.2025.103857",
+  "metadata": {
+    "DOI": "10.1016/j.media.2025.103857",
+    "title": [
+      "Adaptive mix for semi-supervised medical image segmentation"
+    ],
+    "publisher": "Elsevier BV",
+    "container-title": [
+      "Medical Image Analysis"
+    ],
+    "volume": "108",
+    "article-number": "103857",
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          2
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2026,
+          2
+        ]
+      ]
+    },
+    "published-online": null,
+    "URL": "https://doi.org/10.1016/j.media.2025.103857"
+  }
+}

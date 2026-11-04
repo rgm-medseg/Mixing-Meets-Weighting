@@ -1,0 +1,11 @@
+{
+  "pid": 41759,
+  "time": "2026-10-08T22:00:32.099326+08:00",
+  "joint_step": 30000,
+  "optimizer_calls": {
+    "optimizer1": 30000,
+    "optimizer2": 30000
+  },
+  "step_seconds": 0.13642503321170807,
+  "peak_cuda_bytes": 3275748352
+}

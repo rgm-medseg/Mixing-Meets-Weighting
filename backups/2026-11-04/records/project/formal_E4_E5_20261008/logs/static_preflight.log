@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/preflight.py", line 108, in <module>
+    else:freeze()
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/preflight.py", line 51, in freeze
+    valslices=(DATA/'val_slices.list').read_text().splitlines();assert {c.split('_')[0] for c in valslices}==sets['val']
+  File "/home/renguanming/.conda/envs/beta_fft/lib/python3.10/pathlib.py", line 1134, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/home/renguanming/.conda/envs/beta_fft/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val_slices.list'

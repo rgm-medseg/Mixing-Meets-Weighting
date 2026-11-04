@@ -1,0 +1,8 @@
+{
+  "best_val_dice": 0.8520451559303406,
+  "iterations": 30000,
+  "output_dir": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/results/ACDC5/seed1337",
+  "status": "TRAIN_AND_TEST_COMPLETE",
+  "test_metrics": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/results/ACDC5/seed1337/test_metrics.json",
+  "test_status": "TEST_PASS"
+}

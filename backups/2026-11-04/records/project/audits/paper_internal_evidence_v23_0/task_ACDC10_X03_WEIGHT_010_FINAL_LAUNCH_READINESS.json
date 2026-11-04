@@ -1,0 +1,23 @@
+{
+  "TaskID": "ACDC10_X03_WEIGHT_010",
+  "GeneratedAt": "2026-08-24T12:55:24.948143+00:00",
+  "BackfillReceiptAfterFormalStart": true,
+  "StaticPass": "PASS",
+  "ArgvPass": "PASS",
+  "PathPass": "PASS",
+  "ScientificIdentityPass": "PASS",
+  "ImportPass": "PASS",
+  "ReuseOrTogglePass": "PASS",
+  "SmokePass": "PASS",
+  "ClosedLoopPass": "PASS",
+  "FailureInjectionPass": "PASS",
+  "ControllerDryConsumptionPass": "PASS",
+  "OutputClean": "PASS",
+  "SourceFreezePass": "PASS",
+  "ConfigFreezePass": "PASS",
+  "FinalLaunchReady": true,
+  "TerminalStatus": "PASS",
+  "EvidenceReceipt": "experiments/paper_internal_evidence_v23_0/ACDC10_X03_WEIGHT_010/train.log",
+  "SourceRegistry": "audits/paper_internal_evidence_v23_0/V23_0_MASTER_TASK_REGISTRY_FINAL.tsv",
+  "Note": "Post-run machine receipt generated to close objective-required task_<TaskID>_FINAL_LAUNCH_READINESS naming; scientific/config/source assets were not modified."
+}

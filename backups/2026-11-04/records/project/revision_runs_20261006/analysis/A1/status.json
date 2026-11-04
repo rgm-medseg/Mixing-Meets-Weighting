@@ -1,0 +1,16 @@
+{
+  "task": "A1",
+  "status": "PARTIAL",
+  "reason": "Historical sparse trace drawn; full-step traces added from new runs. Missing runs remain DEFERRED.",
+  "time": "2026-10-06T21:05:04.043976+08:00",
+  "runs": [
+    "Historical_Full (200-step sparse log)"
+  ],
+  "statistics": {
+    "samples": 150,
+    "s_min": 0.37774489402770994,
+    "s_max": 0.3795826244354248,
+    "distinct_actual_areas": 1,
+    "coverage": "every 200 updates, not all steps"
+  }
+}

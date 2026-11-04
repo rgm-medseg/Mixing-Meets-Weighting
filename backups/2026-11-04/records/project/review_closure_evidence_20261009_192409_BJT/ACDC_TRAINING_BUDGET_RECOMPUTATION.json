@@ -1,0 +1,46 @@
+[
+  {
+    "run": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+    "trace_rows": 30001,
+    "unique_steps": 30000,
+    "first_step": 1,
+    "last_step": 30000,
+    "unique_steps_exactly_1_through_30000": true,
+    "duplicate_step_counts": {
+      "30000": 2
+    },
+    "terminal_sentinel_rows": 1,
+    "sentinel_source_line": "effective_source.py:549 appends checkpoint-only zero-loss terminal row; it is not another update",
+    "loss_finite_all": true,
+    "grad_finite_all": true,
+    "student1_updates_supported": 30000,
+    "student2_updates_supported": 30000,
+    "update_count_evidence": "One optimizer1.step and optimizer2.step per recorded loop; not independently instrumented optimizer call counters.",
+    "lr_assignment_in_entry": [],
+    "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/effective_source.py",
+    "source_sha256": "d3959d5baf54727db740f3ece79608292b396d3f0f49b7b97743398bda42ad00",
+    "trace_sha256": "975b0a29094315911034345af05cfdf7628d37a4d1f000a4db391745ea16fee8"
+  },
+  {
+    "run": "experiments/three_innovation_ablation_transfer_v22_0/ACDC5_FINAL3",
+    "trace_rows": 30001,
+    "unique_steps": 30000,
+    "first_step": 1,
+    "last_step": 30000,
+    "unique_steps_exactly_1_through_30000": true,
+    "duplicate_step_counts": {
+      "30000": 2
+    },
+    "terminal_sentinel_rows": 1,
+    "sentinel_source_line": "effective_source.py:549 appends checkpoint-only zero-loss terminal row; it is not another update",
+    "loss_finite_all": true,
+    "grad_finite_all": true,
+    "student1_updates_supported": 30000,
+    "student2_updates_supported": 30000,
+    "update_count_evidence": "One optimizer1.step and optimizer2.step per recorded loop; not independently instrumented optimizer call counters.",
+    "lr_assignment_in_entry": [],
+    "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC5_FINAL3/effective_source.py",
+    "source_sha256": "d3959d5baf54727db740f3ece79608292b396d3f0f49b7b97743398bda42ad00",
+    "trace_sha256": "b450b0ed8d0a8a95e5d7d1e03107b45a71d50bd1919f7c6b49e036b152876ba7"
+  }
+]

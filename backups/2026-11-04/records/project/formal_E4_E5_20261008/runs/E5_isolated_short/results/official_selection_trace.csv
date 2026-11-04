@@ -1,0 +1,2 @@
+time,segment,step,epoch,val_loss,best_val_loss,replaced,criterion,seconds
+2026-10-08T12:39:30.677818+08:00,2026-10-08T123923429330+0800,1,0,1.2746301548821586,1.2746301548821586,True,official <= supervised val_loss; common patients; official PIL/bilinear input; per_stream batch6,0.9243331961333752

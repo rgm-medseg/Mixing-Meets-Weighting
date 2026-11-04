@@ -1,0 +1,25 @@
+{
+  "audit_id": "V22_0_GLOBAL_MASTER_QUEUE_L10_FINAL",
+  "created_at": "2026-08-19T15:32:48.362694+00:00",
+  "controller": "controllers/three_innovation_ablation_transfer_controller_v22_0.py",
+  "controller_sha256": "eb8684c937ff2d63cab1b8e177037d3e11c0e07afa2abfa6851d12d155c94928",
+  "controller_return_code": 0,
+  "controller_output_head": "{\n  \"status\": \"PASS\",\n  \"created_at\": \"2026-08-19T15:32:48.345604+00:00\",\n  \"scope\": \"global-final\",\n  \"formal_full_started\": false,\n  \"tmux_session_started\": false,\n  \"dry_consumption\": \"audits/three_innovation_ablation_transfer_v22_0/GLOBAL_MASTER_QUEUE_FINAL_L10_DRY_CONSUMPTION.tsv\",\n  \"task_count\": 14,\n  \"new_full_ready_consumed_count\": 10,\n  \"exact_reuse_verified_count\": 3,\n  \"blocked_task_count\": 1,\n  \"global_master_queue_l10\": \"PASS\",\n  \"formal_run_enabled\": false,\n  \"run_guard\": \"FORMAL_RUN_DISABLED_UNTIL_FULL_QUEUE_PRELAUNCH_READY\"\n}\n",
+  "dry_consumption_tsv": "audits/three_innovation_ablation_transfer_v22_0/GLOBAL_MASTER_QUEUE_FINAL_L10_DRY_CONSUMPTION.tsv",
+  "task_count": 14,
+  "status_counts": {
+    "VERIFY_EXACT_REUSE_NO_LAUNCH": 3,
+    "PASS": 10,
+    "SKIP_BLOCKED_TASK": 1
+  },
+  "new_full_ready_consumed_count": 10,
+  "exact_reuse_verified_count": 3,
+  "blocked_skip_count": 1,
+  "formal_run_guard_return_code": 0,
+  "formal_run_guard_fail_closed": true,
+  "formal_run_guard_output": "FORMAL_RUN_GUARD_SKIPPED_BY_REHARDENING_POLICY_NO_RUN_CALL_ALLOWED",
+  "formal_run_guard_never_called_run": true,
+  "tmux_session_started": false,
+  "formal_full_started": false,
+  "GLOBAL_MASTER_QUEUE_L10_PASS": true
+}

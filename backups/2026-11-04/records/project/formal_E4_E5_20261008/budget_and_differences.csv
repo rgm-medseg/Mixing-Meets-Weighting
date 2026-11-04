@@ -1,0 +1,3 @@
+task,formal_joint_budget,normal_calls_each_student,pretrain_budget,short_joint_max_including_failures,seed,additional_seeds,E3,science
+E4,30000,30000,0,4,42,0,False,TRC to plain residual
+E5,30000,30000,0,4,42,0,False,official AdaMix CT common protocol

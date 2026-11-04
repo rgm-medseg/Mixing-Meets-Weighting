@@ -1,0 +1,87 @@
+{
+  "status": "PASS_WITH_PATIENT_LEVEL_SOURCE_ASSET_BLOCKER",
+  "created_at": "2026-08-24T14:30:53.049755+00:00",
+  "training_started": false,
+  "checkpoint_replay_started": false,
+  "test_manifest_accessed": false,
+  "receipts": {
+    "factorial_effects": {
+      "status": "PASS",
+      "created_at": "2026-08-24T14:30:52.539587+00:00",
+      "task_id": "FACTORIAL_EFFECTS",
+      "training_started": false,
+      "checkpoint_replay_started": false,
+      "test_manifest_accessed": false,
+      "input_asset": "final_report/paper_internal_evidence_v23_0/tables/TABLE4_ACDC10_8ARM_FULL_PRECISION.tsv",
+      "input_sha256": "5cb39eec601182edfe1df2a4024583b6ca8878e25ab5a2a50bd815476a373e46",
+      "output_asset": "final_report/internal_evidence_expansion_v24_0/ACDC10_FACTORIAL_EFFECTS_FULL.tsv",
+      "output_sha256": "469fc3f591210d13586b72b407cb664e8a3ab09487c7b51ed4471db8f01ed5a7",
+      "markdown_table": "final_report/internal_evidence_expansion_v24_0/tables/TABLE_S_ACDC10_FACTORIAL_EFFECTS.md",
+      "tex_table": "final_report/internal_evidence_expansion_v24_0/tables/TABLE_S_ACDC10_FACTORIAL_EFFECTS.tex",
+      "figure_assets": [
+        "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_FACTORIAL_MAIN_EFFECTS.png",
+        "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_FACTORIAL_MAIN_EFFECTS.pdf",
+        "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_FACTORIAL_INTERACTIONS.png",
+        "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_FACTORIAL_INTERACTIONS.pdf"
+      ],
+      "exact_formula": "For contrast sign s in {-1,+1}, RawEffect = mean(y | s=+1) - mean(y | s=-1). Main-effect signs use the target factor; interaction signs use the product of coded factors with OFF=-1 and ON=+1. ImprovementEffect equals RawEffect for Dice/IoU and -RawEffect for HD95/ASD.",
+      "DESCRIPTIVE_FACTORIAL_ONLY": true,
+      "anova_or_p_value_computed": false,
+      "arm_count": 8,
+      "effect_row_count": 28
+    },
+    "full_training_dynamics": {
+      "status": "PASS",
+      "created_at": "2026-08-24T14:30:53.031345+00:00",
+      "task_id": "FULL_TRAINING_DYNAMICS",
+      "training_started": false,
+      "checkpoint_replay_started": false,
+      "test_manifest_accessed": false,
+      "validation_only": true,
+      "test_point_count": 0,
+      "input_asset": "final_report/paper_internal_evidence_v23_0/TRAINING_DYNAMICS_RAW.tsv",
+      "input_sha256": "fa630736fd580c21ed2c65765cf916a34b741488c27b78de3af9c4f5bea0b144",
+      "output_asset": "final_report/internal_evidence_expansion_v24_0/ACDC10_FULL_TRAINING_DYNAMICS.tsv",
+      "output_sha256": "98b55c959e6d1e68c75481694c8a817452128d28c6ccee9adf7a5bd58717b7b9",
+      "summary_asset": "final_report/internal_evidence_expansion_v24_0/ACDC10_FULL_TRAINING_DYNAMICS_SUMMARY.tsv",
+      "summary_sha256": "10e0d4d759d208109644f1ef2cbf6fcc6b6ec58d5c4e6659d5341a41aceaa784",
+      "stability_summary_asset": "final_report/internal_evidence_expansion_v24_0/ACDC10_TRAINING_STABILITY_SUMMARY.tsv",
+      "stability_summary_sha256": "10e0d4d759d208109644f1ef2cbf6fcc6b6ec58d5c4e6659d5341a41aceaa784",
+      "figure_assets": [
+        "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_VAL_DYNAMICS_BETAFFT_VS_OURS.png",
+        "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_VAL_DYNAMICS_BETAFFT_VS_OURS.pdf",
+        "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_VAL_DYNAMICS_000_110_111.png",
+        "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_VAL_DYNAMICS_000_110_111.pdf"
+      ],
+      "curve_row_count": 450,
+      "method_count": 3,
+      "raw_points_visible_in_figures": true,
+      "moving_average_window_validation_points": 5
+    },
+    "patient_level_stats_input_audit": {
+      "status": "BLOCKED_MISSING_SOURCE_ASSET",
+      "created_at": "2026-08-24T14:30:53.046901+00:00",
+      "task_id": "PATIENT_LEVEL_STATS",
+      "training_started": false,
+      "checkpoint_replay_started": false,
+      "test_manifest_accessed": false,
+      "required_arms": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "100",
+        "101",
+        "110",
+        "111"
+      ],
+      "missing_case_class_metric_arms": [
+        "110",
+        "111"
+      ],
+      "audit_asset": "audits/internal_evidence_expansion_v24_0/PATIENT_LEVEL_STATS_INPUT_ASSET_AUDIT.tsv",
+      "audit_sha256": "3f026d8611f43b17b26b2ff75f39a617f758b07a2f8129b01ee2f41387f3d6c5",
+      "next_action": "FROZEN_CHECKPOINT_REPLAY_REQUIRED_FOR_MISSING_ARMS"
+    }
+  }
+}

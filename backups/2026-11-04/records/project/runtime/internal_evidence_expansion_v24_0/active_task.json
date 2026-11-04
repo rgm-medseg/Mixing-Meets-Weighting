@@ -1,0 +1,30 @@
+{
+  "status": "RUNNING",
+  "created_at": "2026-08-25T18:37:34.046493+00:00",
+  "active_task": "FINAL_HANDOFF",
+  "TaskOrder": "27",
+  "row": {
+    "TaskOrder": "27",
+    "TaskID": "FINAL_HANDOFF",
+    "TaskType": "FINALIZATION",
+    "Action": "FINALIZATION_READY",
+    "Dataset": "MULTI",
+    "Split": "",
+    "Seed": "",
+    "ConfigPath": "",
+    "ConfigSHA": "",
+    "SourcePath": "scripts/internal_evidence_expansion_v24_0/v24_postfull_and_finalization.py",
+    "SourceSHA": "5b589a5f772b940803eb05fe5b048f0dae5284d515c7d5eb0fdfeed631f20008",
+    "Launcher": "scripts/internal_evidence_expansion_v24_0/run_final_handoff.sh",
+    "LauncherSHA": "c9ac9e17bf214bb228ebd845caec2f1df68cbde8d921aa86d5d1936b8b521c6f",
+    "CheckpointPath": "",
+    "CheckpointSHA": "",
+    "InputAssets": "",
+    "OutputDir": "final_report/internal_evidence_expansion_v24_0",
+    "ExpectedReceipt": "audits/internal_evidence_expansion_v24_0/FINAL_HANDOFF.json",
+    "GPURequired": "False",
+    "TESTAccessAllowed": "0",
+    "FinalLaunchReady": "PASS",
+    "Blocker": ""
+  }
+}

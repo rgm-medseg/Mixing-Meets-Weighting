@@ -1,0 +1,13 @@
+{
+  "created_bjt": "2026-10-09T19:24:09.914507+08:00",
+  "host": "n1",
+  "project_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+  "scope": "A-D existing-record CPU closure only",
+  "no_training": true,
+  "no_checkpoint_reselection": true,
+  "no_original_mutations": true,
+  "agents_lookup": "No applicable AGENTS.md found in project ancestors and requested evidence subtrees; lookup used rg --files --hidden -g AGENTS.md",
+  "prior_handoff": "experiment_status_handoff_20261009_171518_BJT",
+  "current_author_correction": "ACDC TEST did not participate in candidate method selection; old assistant labels are not causal evidence",
+  "all_comparison_rows_identity": "reproduced results per author confirmation"
+}

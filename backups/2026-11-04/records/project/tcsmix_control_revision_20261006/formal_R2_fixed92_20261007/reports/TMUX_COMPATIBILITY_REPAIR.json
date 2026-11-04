@@ -1,0 +1,12 @@
+{
+  "status": "REPAIRED_BEFORE_FIRST_TRAINING_UPDATE",
+  "time": "2026-10-07T11:05:37.747608+08:00",
+  "tmux": "3.0a",
+  "file": "scripts/launch_session.py",
+  "old_sha256": "e63ad923e5db7c9b90f7fd321ee23c41e56b0f3fca459a77d3c93d055029f584",
+  "new_sha256": "e6f65aa329eeb58a213c57c4643b273e271106827057e442a51c68fa725d06a4",
+  "scientific_source_and_config_unchanged": true,
+  "manifest_v1_sha256": "b22bd1f17ca739c28f546698a46e656aa608eeba7f309807e9960925097ce5b7",
+  "manifest_new_sha256": "452e4742bb903273f0d60c9c0a0a040d629e38f6c7d8784a9016d5e6aebbe05f",
+  "prior_launch_did_not_initialize_model": true
+}

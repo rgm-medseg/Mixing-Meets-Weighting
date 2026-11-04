@@ -1,0 +1,8 @@
+{
+  "audit_id": "V22_0_ACDC10_NEW_ARM_L3_L5_SUMMARY",
+  "created_at": "2026-08-19T15:29:23.330546+00:00",
+  "task_count": 5,
+  "L3_ALL_PASS": true,
+  "L4_ALL_PASS": true,
+  "L5_ALL_PASS": true
+}

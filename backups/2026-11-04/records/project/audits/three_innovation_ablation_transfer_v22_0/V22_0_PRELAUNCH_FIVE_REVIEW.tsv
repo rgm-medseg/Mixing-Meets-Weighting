@@ -1,0 +1,6 @@
+Review	Status	Evidence
+REVIEW_1_ABORT_CLEAN	PASS	old ARM_100 partial is aborted, non-resumable, non-test, non-paper; runtime clean
+REVIEW_2_SCRIPT_FINAL	PASS	10 NEW_FULL exact commands cold/dry audited; 3 reuse no launch; 1 blocked
+REVIEW_3_SCIENCE	PASS	three innovations unchanged; X03 weight 0.05; ACDC toggles only; transfer X03 ON
+REVIEW_4_CONTROLLER	PASS	global L10 PASS; resume canary PASS; blocked skip PASS; test gate PASS
+REVIEW_5_FRESH_RESTART	PASS	new ARM_100 uses canonical init and separated fresh output dir; no aborted checkpoint load

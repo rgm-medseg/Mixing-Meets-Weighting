@@ -1,0 +1,9 @@
+{
+  "status": "VERIFIED",
+  "time": "2026-10-07T11:03:36.864803+08:00",
+  "archive": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/TCSMix_R2_fixed92_final_evidence.tar.gz",
+  "sha256": "8e5d8f29c73ff610bc10d9a281ebdf363121e165845cf2b267e4d85d32376bf3",
+  "bytes": 12698301,
+  "files_verified": 186,
+  "snapshot": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/archives/final_snapshot_2026-10-07T110333357458+0800"
+}

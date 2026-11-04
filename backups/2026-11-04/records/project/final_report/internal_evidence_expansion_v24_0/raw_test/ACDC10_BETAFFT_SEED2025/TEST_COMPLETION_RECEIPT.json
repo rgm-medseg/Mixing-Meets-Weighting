@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-26T03:19:21.220337+00:00",
+  "task_id": "ACDC10_BETAFFT_SEED2025",
+  "TEST_COMPLETION_RECEIPT": true,
+  "training_started": false,
+  "checkpoint_selection_started": false,
+  "test_started": true,
+  "test_manifest_sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+  "case_count": 40,
+  "BestCheckpointPath": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025/checkpoints/best.ckpt",
+  "BestCheckpointSHA256": "18db038e6937975063f6b759884fc470212f2f7d013bf3763236821de6e4b5c9",
+  "test_used_for_tuning": false,
+  "test_used_for_selection": false,
+  "prediction_dir": "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2025/predictions_npz",
+  "case_class_metrics_tsv": "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2025/case_class_metrics.tsv",
+  "aggregate_metrics_tsv": "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2025/aggregate_metrics.tsv",
+  "aggregate": {
+    "dice": "0.900035248910",
+    "iou": "0.823419266451",
+    "hd95": "1.610904573530",
+    "asd": "0.462955647338"
+  }
+}

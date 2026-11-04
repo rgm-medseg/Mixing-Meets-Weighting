@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "updates_per_student": 30000,
+  "best_step": 29000,
+  "best_sha256": "a234794d53a3247b9504fd1a1ebc051686eed4495f0417866120941ddcf4b6d3",
+  "last_sha256": "08aa3751af49b44ca0ecce6dfbd85b68c497512edcf7cd5d20079464c94b9b79",
+  "best_validation": {
+    "model1_best_val_dice": 0.9016482222714811,
+    "model2_best_val_dice": 0.8988106632032213
+  },
+  "elapsed_seconds": 26220.68654710427,
+  "rectangle_calls": 30000
+}

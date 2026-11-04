@@ -1,0 +1,57 @@
+/home/renguanming/jupyterlab/rgm/beta-FFT-main/scripts/internal_evidence_expansion_v24_0/v24_x03_reliability_faithfulness.py:222: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho = spearmanr(xs, ys).correlation
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:19:30.739233+00:00",
+  "task_id": "X03_RELIABILITY_FAITHFULNESS",
+  "split": "VAL",
+  "test_access": 0,
+  "training_started": false,
+  "checkpoint_selection_started": false,
+  "gt_used_to_generate_score": false,
+  "gt_used_only_for_retrospective_evaluation": true,
+  "case_count": 20,
+  "score_contract": "audits/internal_evidence_expansion_v24_0/X03_SCORE_SEMANTIC_CONTRACT.json",
+  "score_contract_sha256": "7758c6ec04845e46ed692d2a438da681c1868ca804ffadf78001ec5281a8a7e6",
+  "score_semantics": "higher score means stronger contour uncertainty / stronger boundary consistency weight, not lower risk reliability",
+  "higher_score_means_more_reliable": false,
+  "higher_score_means_less_reliable_or_more_fragile_boundary": true,
+  "pixel_level_tsv": "final_report/internal_evidence_expansion_v24_0/X03_RELIABILITY_PIXEL_LEVEL.tsv",
+  "pixel_level_tsv_sha256": "3c7c7e23d49c4346800086a6ac3fa2374bd0358654c1bbcaf6c32f9502e763aa",
+  "case_level_tsv": "final_report/internal_evidence_expansion_v24_0/X03_RELIABILITY_CASE_LEVEL.tsv",
+  "case_level_tsv_sha256": "b86ba497fc2d807553f77951196f250c610e88e3b1ec026c68b79e2aae728a5d",
+  "quintile_error_tsv": "final_report/internal_evidence_expansion_v24_0/X03_RELIABILITY_QUINTILE_ERROR.tsv",
+  "quintile_error_tsv_sha256": "12cfe5c74b9b232a43929c867111baa148facaa2864473e3ea6ae824c0b8058d",
+  "risk_coverage_tsv": "final_report/internal_evidence_expansion_v24_0/X03_RELIABILITY_RISK_COVERAGE.tsv",
+  "risk_coverage_tsv_sha256": "1987e4808742b5bc6c1225c83163ecaf933c746e07f8a85bf8b1b1c076e21ba5",
+  "case_level_correlations": [
+    {
+      "Metric": "ARM111_Dice",
+      "SpearmanRho": "-0.233082706767",
+      "BootstrapCI95Low": "-0.585476550681",
+      "BootstrapCI95High": "0.232876712329"
+    },
+    {
+      "Metric": "ARM111_HD95",
+      "SpearmanRho": "0.350429799048",
+      "BootstrapCI95Low": "-0.152511950992",
+      "BootstrapCI95High": "0.712618882381"
+    },
+    {
+      "Metric": "ARM111_ASD",
+      "SpearmanRho": "0.439097744361",
+      "BootstrapCI95Low": "-0.007598784195",
+      "BootstrapCI95High": "0.749810462472"
+    }
+  ],
+  "bootstrap_iterations": 10000,
+  "bootstrap_seed": 2026,
+  "figures": [
+    "final_report/internal_evidence_expansion_v24_0/figures/X03_RELIABILITY_QUINTILE_ERROR.png",
+    "final_report/internal_evidence_expansion_v24_0/figures/X03_RELIABILITY_QUINTILE_ERROR.pdf",
+    "final_report/internal_evidence_expansion_v24_0/figures/X03_RELIABILITY_RISK_COVERAGE.png",
+    "final_report/internal_evidence_expansion_v24_0/figures/X03_RELIABILITY_RISK_COVERAGE.pdf",
+    "final_report/internal_evidence_expansion_v24_0/figures/X03_RELIABILITY_CASE_CORRELATION.png",
+    "final_report/internal_evidence_expansion_v24_0/figures/X03_RELIABILITY_CASE_CORRELATION.pdf"
+  ]
+}

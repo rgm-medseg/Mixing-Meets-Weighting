@@ -1,0 +1,91 @@
+schema_version: V17_3_ACDC_FORMAL_PROTOCOL_V1
+protocol: V17.3-E2E-R8
+dataset: ACDC
+status: FORMAL_PROTOCOL_MATERIALIZED_VALIDATION_ONLY
+track: TRACK_B_COMMON_PROTOCOL_MAIN
+dataset_version: ACDC_SSL4MIS_KnowSAM_PROCESSED_LISTS
+authorized_data_root: /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC
+source_evidence:
+  historical_protocol: audit/acdc_10pct_2d_frozen_protocol.json
+  historical_protocol_sha256: c8fbfca99980f6234ab7e24ca131e3ac21455881c7a21803c393fbc8a3d1e709
+  train_list_sha256: 97a399f7bdbfe96b93cf8731a4bf3dd78562269bada57464fdc0dbc3f0f45746
+  train_slices_list_sha256: 1b21b2a69d1b28b4dfce6837fdb0572414d337566b51b3dd0e0fda342a6f0648
+  val_list_sha256: 61b935c936d8e12f7889e82d954f421fa25fb95305e92a476096b3242de8777d
+  legacy_test_list_sha256: 98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671
+split:
+  split_registry: common_protocols/acdc/split_registry.tsv
+  train_frame_count: 140
+  train_slice_count: 1312
+  labeled_patient_count: 7
+  labeled_frame_count: 14
+  labeled_slice_count: 136
+  unlabeled_frame_count: 126
+  validation_frame_count: 20
+  legacy_test_lineage_reference_frame_count: 40
+  labeled_patients:
+    - patient021
+    - patient038
+    - patient049
+    - patient050
+    - patient058
+    - patient099
+    - patient100
+endpoint_policy:
+  ACDC_ENDPOINT: MATCHED_VALIDATION_ONLY
+  ACDC_FINAL_TEST: NOT_AUTHORIZED
+  legacy_test_list: LINEAGE_REFERENCE_ONLY
+  test_once_policy: NO_ACDC_FINAL_TEST_RELEASE_IN_V17_3
+data_and_model:
+  modality_and_channel_order: single_channel_2d_mri_processed
+  class_mapping:
+    0: background
+    1: RV
+    2: MYO
+    3: LV
+  slice_axis_or_volume_mode: 2d_slice
+  input_dimensionality: 2d
+  input_size:
+    - 256
+    - 256
+  crop_and_resampling: processed_256x256_from_current_ACDC_lists
+  normalization: dataset_loader_defined_single_channel_normalization
+  common_backbone: UNet_2D
+  pretraining_profile: NO_EXTRA_METHOD_SPECIFIC_PRETRAINING_ALLOWED
+budget:
+  seed: 42
+  full_optimizer_update_count: 30000
+  full_iterations: 30000
+  smoke_iterations: 20
+  short_iterations: 3000
+  validation_cadence: 200
+  checkpoint_cadence: 200
+  canonical_effective_batch: 24
+  labeled_samples_per_update: 12
+  unlabeled_samples_per_update: 12
+  precision_profile: fp32
+  tf32_determinism_policy: tf32_matmul_false_cudnn_true
+  checkpoint_retention_policy: best_and_latest_with_periodic_validation_checkpoint
+  default_concurrency: ONE_FORMAL_GPU_PROCESS_AFTER_LOCK
+  gpu_process_count: 1
+optimization:
+  primary_model_optimizer: SGD
+  primary_model_scheduler: poly_or_existing_acdc_training_schedule_to_be_bound_in_config
+  primary_model_learning_rate: 0.01
+  primary_model_weight_decay: 0.0001
+evaluation:
+  common_supervised_base_loss: CrossEntropy_plus_Dice_or_existing_common_ACDC_loss_bound_in_config
+  common_supervised_loss_reduction: mean
+  common_ignore_index: none
+  common_class_weighting: none
+  augmentation: common_base_augmentation_bound_in_formal_config
+  checkpoint_primary_metric: raw_foreground_macro_mDice
+  checkpoint_tiebreak: earliest_iteration
+  inference_discretization: argmax
+  empty_class_policy: metric_contract_policy
+  3d_reconstruction: not_used_for_matched_validation_endpoint
+  post_processing: raw
+guards:
+  formal_lock_generated: false
+  training_authorized: false
+  final_test_release_authorized: false
+  no_test_list_use_for_training_or_checkpoint_selection: true

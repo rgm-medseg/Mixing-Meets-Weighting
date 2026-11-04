@@ -1,0 +1,22 @@
+{
+  "status": "USER_SPECIFIED_BASIS_NOT_RECONCILED_WITH_COMPUTED_RECORD",
+  "date": "2026-10-17",
+  "comparison": "uniform -> CTW",
+  "region": "clean anatomical boundary intersected with erroneous weak-view teacher hard-target source pixels",
+  "denominator": "full source-patient consistency logit-gradient L1 sum, then patient equal",
+  "requested_aligned_share_percent": {
+    "uniform": 3.61,
+    "CTW": 4.83
+  },
+  "requested_opposing_share_percent": {
+    "uniform": 5.35,
+    "CTW": 4.26
+  },
+  "source": "User explicitly requested these aggregate values in chat after a conditional discussion; no new run or corrected source table supplied.",
+  "known_conflict": "Previously computed CSV assigns opposing share 4.26% to uniform and 5.35% to CTW.",
+  "computed_measurements_modified": false,
+  "new_experiments_performed": false,
+  "original_archive_sha256": "56b926023b0a89ba563a30937e96952a4454d0675bd5981fcd3faf0037c32937",
+  "paired_patient_counts_under_requested_basis": "NOT_ESTABLISHED",
+  "total_gradient_share_under_requested_basis": "NOT_ESTABLISHED; do not carry over 7.88% -> 10.18% as if consistent with the swapped opposing shares."
+}

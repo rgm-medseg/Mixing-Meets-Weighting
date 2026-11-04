@@ -1,0 +1,18 @@
+{
+  "audit_id": "V22_0_TRANSFER_REAL_TRAIN_VAL_SMOKE",
+  "created_at": "2026-08-19T15:32:12.961172+00:00",
+  "tsv": "audits/three_innovation_ablation_transfer_v22_0/TRANSFER_REAL_TRAIN_VAL_SMOKE.tsv",
+  "summary_tsv": "audits/three_innovation_ablation_transfer_v22_0/TRANSFER_REAL_TRAIN_VAL_SMOKE_SUMMARY.tsv",
+  "covered_tasks": [
+    "ACDC5_FINAL3",
+    "PROMISE20_FINAL3",
+    "MSCMR5_FINAL3",
+    "COVID5_FINAL3",
+    "COVID10_FINAL3"
+  ],
+  "pass_count": 5,
+  "task_count": 5,
+  "TRANSFER_REAL_TRAIN_VAL_SMOKE_PASS": true,
+  "TRANSFER_REAL_TEST_ACCESS_BEFORE_FORMAL": 0,
+  "blocking_rows": []
+}

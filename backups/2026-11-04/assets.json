@@ -1,0 +1,101 @@
+[
+  {
+    "name": "P0-acdc10.tar.gz",
+    "kind": "weights",
+    "size": 81582364,
+    "sha256": "dc13b932e553b68c0d2d8165bec4763ec1e8ff4665c6cbc2cf9c1f27f32b1eda",
+    "object_count": 3,
+    "download_url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P0-acdc10.tar.gz",
+    "upload_status": "PENDING_AUTHENTICATION"
+  },
+  {
+    "name": "P0-acdc5.tar.gz",
+    "kind": "weights",
+    "size": 81584599,
+    "sha256": "7f1c7c1be9ef75e55926c1f7ea26519622d19840cb059e153621187a208af731",
+    "object_count": 3,
+    "download_url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P0-acdc5.tar.gz",
+    "upload_status": "PENDING_AUTHENTICATION"
+  },
+  {
+    "name": "P0-covid10.tar.gz",
+    "kind": "weights",
+    "size": 168930252,
+    "sha256": "8a5afb03adca2489136904d5778831446dc7d83be92550b292329718408bee11",
+    "object_count": 8,
+    "download_url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P0-covid10.tar.gz",
+    "upload_status": "PENDING_AUTHENTICATION"
+  },
+  {
+    "name": "P0-covid5.tar.gz",
+    "kind": "weights",
+    "size": 168851688,
+    "sha256": "23574f6caa9817e8567e2f870401a6a8d4e26b56ec381cf319863d4b1de6be9e",
+    "object_count": 8,
+    "download_url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P0-covid5.tar.gz",
+    "upload_status": "PENDING_AUTHENTICATION"
+  },
+  {
+    "name": "P0-promise20.tar.gz",
+    "kind": "weights",
+    "size": 169102517,
+    "sha256": "a3a150f3eff9131edabdec0934a13b86632d511f183c3d21d15ca452497fe80e",
+    "object_count": 8,
+    "download_url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P0-promise20.tar.gz",
+    "upload_status": "PENDING_AUTHENTICATION"
+  },
+  {
+    "name": "P1-acdc-coefficients.tar.gz",
+    "kind": "weights",
+    "size": 272112982,
+    "sha256": "5e6d510ebb2ce2ede31895a1902152544d988bf0733f531334218c1123128311",
+    "object_count": 8,
+    "download_url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P1-acdc-coefficients.tar.gz",
+    "upload_status": "PENDING_AUTHENTICATION"
+  },
+  {
+    "name": "P1-acdc-controls.tar.gz",
+    "kind": "weights",
+    "size": 528266277,
+    "sha256": "9534282a75b28a126374114204d0b60f33dff3eb5a0906a95241dcbbb02dc684",
+    "object_count": 15,
+    "download_url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P1-acdc-controls.tar.gz",
+    "upload_status": "PENDING_AUTHENTICATION"
+  },
+  {
+    "name": "P1-acdc-factorial.tar.gz",
+    "kind": "weights",
+    "size": 543821791,
+    "sha256": "1f74b740a20158da90f56f3d969aab31467d96480818b4c48b29f452671f7519",
+    "object_count": 16,
+    "download_url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P1-acdc-factorial.tar.gz",
+    "upload_status": "PENDING_AUTHENTICATION"
+  },
+  {
+    "name": "P1-acdc-module-replacements.tar.gz",
+    "kind": "weights",
+    "size": 340143132,
+    "sha256": "a006189f822bf5d33c6ceb031b7a21260d817a19d4a04a5bb4a244c14f2a3ccc",
+    "object_count": 10,
+    "download_url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P1-acdc-module-replacements.tar.gz",
+    "upload_status": "PENDING_AUTHENTICATION"
+  },
+  {
+    "name": "P1-acdc-seeds.tar.gz",
+    "kind": "weights",
+    "size": 271968849,
+    "sha256": "f4b7df97d1ab1510b507b89c9d91cfe7ae08f7bdd4bbef04daa7a2c3be7903f4",
+    "object_count": 8,
+    "download_url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P1-acdc-seeds.tar.gz",
+    "upload_status": "PENDING_AUTHENTICATION"
+  },
+  {
+    "name": "comixw-catalog-2026-11-04.tar.gz",
+    "kind": "catalog",
+    "size": 320367331,
+    "sha256": "dbf2cfeaa97bb8c74ff8f517996b53d2dccb1519e92c3b8815d7a810c7a7311a",
+    "catalog_files": 7654,
+    "download_url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/comixw-catalog-2026-11-04.tar.gz",
+    "upload_status": "PENDING_AUTHENTICATION"
+  }
+]

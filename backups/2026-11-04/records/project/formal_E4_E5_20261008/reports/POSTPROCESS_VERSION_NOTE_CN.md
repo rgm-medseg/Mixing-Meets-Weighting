@@ -1,0 +1,1 @@
+本次工程收尾补充runtime_cost.csv中真实已完成分析阶段及原始冷启动smoke墙钟；保留同一选择回执的首次冻结时间，重复后处理核验后复用。原脚本与工程哈希在reports/engineering_versions/cost_and_selection_metadata_20261008/保留。两项科学代码/配置/检查点身份均未更改，无新训练调用。启动包此前快照完整保留，最终包采用统一冻结时刻的脚本版本。

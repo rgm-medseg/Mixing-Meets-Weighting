@@ -1,0 +1,2 @@
+time,segment,step,student1_macro_dice,student2_macro_dice,best_student1_macro_dice,seconds,selection
+2026-10-08T12:39:39.770852+08:00,2026-10-08T123923429330+0800,1,0.009117198399031306,NA: official model1 primary only,0.009117198399031306,9.088930167257786,strict student1 common val macro Dice; test excluded

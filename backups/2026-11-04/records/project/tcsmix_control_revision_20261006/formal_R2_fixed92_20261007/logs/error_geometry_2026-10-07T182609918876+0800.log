@@ -1,0 +1,66 @@
+{
+  "status": "DONE",
+  "time": "2026-10-07T18:27:01.165314+08:00",
+  "CPU_only": true,
+  "optimizer_updates": 0,
+  "GPU_inference": 0,
+  "models": [
+    "Old_Full",
+    "R1_v2_B",
+    "R2_fixed92"
+  ],
+  "volume_class_rows": 360,
+  "recomputed_metrics_match_frozen_CSV": true,
+  "R1_patients_Dice_declined": 12,
+  "R1_patients_count": 20,
+  "R1_class_deltas": [
+    {
+      "model": "R1_v2_B",
+      "class_name": "RV",
+      "dice_delta": 0.0019555476692891733,
+      "iou_delta": 0.00242179089133627,
+      "hd95_delta": -0.29369360507710757,
+      "asd_delta": -0.06294825287380643
+    },
+    {
+      "model": "R1_v2_B",
+      "class_name": "MYO",
+      "dice_delta": -0.005413050456933857,
+      "iou_delta": -0.00794931290868324,
+      "hd95_delta": 1.9405820935320839,
+      "asd_delta": 0.44897077905237326
+    },
+    {
+      "model": "R1_v2_B",
+      "class_name": "LV",
+      "dice_delta": -0.0074986647313787765,
+      "iou_delta": -0.012197185038979192,
+      "hd95_delta": 2.9094058417849658,
+      "asd_delta": 0.633674889299195
+    }
+  ],
+  "two_patient_net_contribution": {
+    "hd95": {
+      "all_net_sum": 182.2517732095977,
+      "two_patients_net_sum": 163.86239265350633,
+      "net_share": 0.8990990307954768,
+      "meaning": "signed delta sum share, includes cancellation; not exclusive cause attribution or exclusion-adjusted main score"
+    },
+    "asd": {
+      "all_net_sum": 40.78789661911049,
+      "two_patients_net_sum": 28.471255880026128,
+      "net_share": 0.6980319712462543,
+      "meaning": "signed delta sum share, includes cancellation; not exclusive cause attribution or exclusion-adjusted main score"
+    }
+  },
+  "connectivity": "6-neighbor (scipy generate_binary_structure(3,1)); erosion border_value=0; unit spacing1",
+  "surface_definition": "HD95 pooled bidirectional border distances; ASD pred-to-GT only",
+  "missing": [],
+  "priority_cases": [
+    "patient065",
+    "patient075",
+    "patient083"
+  ],
+  "test_use": "post-test error description only; no controller, area, checkpoint or postprocessing changes",
+  "R2_included": true
+}

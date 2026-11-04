@@ -1,0 +1,67 @@
+{
+  "auxiliary_decoders_at_test": false,
+  "base_lr": 0.01,
+  "batch_size": 24,
+  "checkpoint_cadence": 200,
+  "checkpoint_load": "full_mcnet2d_v2_strict_true",
+  "computed_but_not_optimized": "cross_entropy",
+  "consistency": 0.1,
+  "consistency_rampup": 200.0,
+  "data": {
+    "evaluator": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_COVID19/covid19_volume_evaluator.py",
+    "evaluator_sha256": "ff20153cdbbe9e164bbdbd2348f6799daf0180a5503291177a86a5f9034f560b",
+    "forbidden_during_training": [
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID_test.tsv",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data/COVID19_OFFICIAL20/derived_npz/*TEST*"
+    ],
+    "labeled_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID10_labeled.tsv",
+    "labeled_manifest_sha256": "05df744c315693f04d6949bf21d83956c282c868f3a23f1bfc79f6fff3ed3dee",
+    "project_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+    "root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data/COVID19_OFFICIAL20",
+    "test_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID_test.tsv",
+    "test_manifest_sha256": "453312727e51c7830423caa9e06b8cd67ad0ecf5c4f1e6058975cd3c973e73c3",
+    "unlabeled_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID10_unlabeled.tsv",
+    "unlabeled_manifest_sha256": "2afe89c4d7924e9f9f7eb1bda5e256f763aa491015e37f3706d7638f11dd3ee0",
+    "val_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID_val.tsv",
+    "val_manifest_sha256": "b586ef2080aaae74634eef4c3a126bf72e3216125bc426c88b82ebbc17efd56e"
+  },
+  "dataset": "COVID19",
+  "dataset_contract_sha256": "4424753baa5fdb3e923cf0de5dcdac10a239472d72b198027aa7da1bcee0279d",
+  "device": "cuda:0",
+  "formal_seed": 1337,
+  "inference_size": [
+    256,
+    256
+  ],
+  "input_channels": 1,
+  "job_id": "pmeul_covid19_10p_seed1337",
+  "labeled_batch_size": 12,
+  "lambda": 1.0,
+  "max_iterations": 30000,
+  "method": "PMEUL",
+  "momentum": 0.9,
+  "network": "mcnet2d_v2",
+  "num_classes": 2,
+  "optimized_supervised_loss": "sum_decoder_dice+0.3*sum_decoder_all_foreground_sdf_mse",
+  "optimizer": "SGD",
+  "paper_main_variant": "m=3",
+  "patch_size": [
+    256,
+    256
+  ],
+  "pretraining": {
+    "enabled": false
+  },
+  "ratio": "10p",
+  "schema": "BETA_FFT_2026_COMPARATOR_RUN_CONFIG_V1",
+  "seed": 1337,
+  "selection_rule": "best_validation_mean_dice_earliest_tie",
+  "source_commit": "2232ec0f5f11d8d219604343a427abdd86c25891",
+  "temperature": 0.1,
+  "test_access_during_training": false,
+  "test_output": "decoder1_output_index_0",
+  "test_selection_forbidden": true,
+  "unsupervised_loss": "ramped_ordered_cross_decoder_sharpened_mse",
+  "validation_cadence": 200,
+  "weight_decay": 0.0001
+}

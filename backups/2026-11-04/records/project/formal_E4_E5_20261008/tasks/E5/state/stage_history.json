@@ -1,0 +1,99 @@
+[
+  {
+    "task": "E5",
+    "stage": "SHORT_CHECK",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/short_check.py",
+      "--task",
+      "E5"
+    ],
+    "start": "2026-10-08T12:47:25.135455+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E5/logs/SHORT_CHECK_2026-10-08T124725135404+0800.log",
+    "resume_step": 0,
+    "process_identity": {
+      "pid": 43501,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/short_check.py --task E5 ",
+      "start_ticks": "2615985709"
+    },
+    "end": "2026-10-08T12:47:30.372694+08:00",
+    "exit_code": 0,
+    "elapsed_seconds": 5.237282939255238
+  },
+  {
+    "task": "E5",
+    "stage": "TRAIN",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E5_entry.py"
+    ],
+    "start": "2026-10-08T20:27:13.888668+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E5/logs/TRAIN_2026-10-08T202713888619+0800.log",
+    "resume_step": 0,
+    "process_identity": {
+      "pid": 41759,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E5_entry.py ",
+      "start_ticks": "2618744585"
+    },
+    "end": "2026-10-08T22:00:41.809184+08:00",
+    "exit_code": 0,
+    "elapsed_seconds": 5607.920556619763
+  },
+  {
+    "task": "E5",
+    "stage": "POSTCHECK",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_postcheck.py"
+    ],
+    "start": "2026-10-08T22:00:41.857127+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E5/logs/POSTCHECK_2026-10-08T220041857065+0800.log",
+    "resume_step": 30000,
+    "process_identity": {
+      "pid": 57183,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_postcheck.py ",
+      "start_ticks": "2619305382"
+    },
+    "end": "2026-10-08T22:00:52.131379+08:00",
+    "exit_code": 0,
+    "elapsed_seconds": 10.27429899200797
+  },
+  {
+    "task": "E5",
+    "stage": "EVALUATE",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/evaluate.py"
+    ],
+    "start": "2026-10-08T22:00:52.165992+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E5/logs/EVALUATE_2026-10-08T220052165904+0800.log",
+    "resume_step": 30000,
+    "process_identity": {
+      "pid": 57199,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/evaluate.py ",
+      "start_ticks": "2619306413"
+    },
+    "end": "2026-10-08T22:01:17.770377+08:00",
+    "exit_code": 0,
+    "elapsed_seconds": 25.604433823376894
+  },
+  {
+    "task": "E5",
+    "stage": "ANALYSIS",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/analyze.py"
+    ],
+    "start": "2026-10-08T22:01:17.855738+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E5/logs/ANALYSIS_2026-10-08T220117855656+0800.log",
+    "resume_step": 30000,
+    "process_identity": {
+      "pid": 57232,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/analyze.py ",
+      "start_ticks": "2619308982"
+    },
+    "end": "2026-10-08T22:01:28.351980+08:00",
+    "exit_code": 0,
+    "elapsed_seconds": 10.496289074420929
+  }
+]

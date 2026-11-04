@@ -1,0 +1,12 @@
+{
+  "time": "2026-10-08T20:27:18.639375+08:00",
+  "pid": 41759,
+  "actual_entry": [
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E5_entry.py"
+  ],
+  "resume": false,
+  "config_sha256": "dc70e720e1df0c4fc150bd16f34c971ac81def0e064ad5dd99c9e0600850eeb5",
+  "official_commit": "85361fb91cf43a69a158d41dfa9e7ee9fce36db9",
+  "official_entry": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/external/AdaMix/exp_acdc/train_adamix_ct.py",
+  "short_target": null
+}

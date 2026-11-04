@@ -1,0 +1,19 @@
+item,R1,E5,category,evidence
+data,70/10/20;7fixed patients,same explicit lists,预期改变,official shuffle overridden by common lists
+pseudo pool,1176 strict unlabeled,1176 strict unlabeled; officialdefaultall1312incllabeled,预期改变,common label visibility adapter
+batch,24input;12GT,4streams6each=24;main6+aux6GT,预期改变,official4x16=64 adapted4x6
+architecture,BCP U-Net+TRC,official UNet default16/32/64/128/256,其他差异,native constructors
+initialization,pretrained shared net/SGDstate,official random+classifierkaiming;pretrain0,其他差异,official initializer
+optimizer,SGD .01 momentum.9 wd1e-4,AdamW1e-4 betas.9/.999 wd.01 constant,其他差异,official definition
+teacher,EMA.99student1,none;2students,其他差异,officialCT
+loss,originalFFT/CPS/ICT+CTW.05,official(loss_s+loss_u)/2;CE+Dice;conf.95,其他差异,literal official step
+augmentation,R1 frozen transforms,official flips/rotation/ColorJitter/autocontrast/equalize/blur;A2fromA1,其他差异,official dataset methods
+input processing,R1 frozen256,official*255 PILL/bilinear;GTnearest;evalcommonnearest,其他差异,"all training range[0,1] verified"
+workers,16,2each4trainloaders=8;2val,其他差异,official defaults
+budget/seed/precision,30000/42/FP32,same,保持一致,locked configs and backend
+curriculum,v2_B teacher margin,AdaMix total_steps7500;cur_step0..29999,其他差异,relative budget adapted
+primary selection,student1 strict valDice every200,same;originalval_loss<=every196also saved,预期改变,common selector + original record
+evaluation,ACDC_v22_grid_directed_ASD,identical;official published eval differs,预期改变,nearest/nativegrid/noLCC/directedASD
+source,R1 frozen,Senyh/AdaMix85361fb exact CTstep explicitwrapper,其他差异,pinned official source
+historical generating logs,NA,fromscratch command saved,无法核验,R1 historical absence retained
+original val-loss input source,R1 validation20 reconstructed frames,official val_slices.list absent; same20frames210 native slices via source H5; unchangedPIL/bilinear andCE/Dice,预期改变,manifests/E5_original_selection_val_slice_mapping.csv

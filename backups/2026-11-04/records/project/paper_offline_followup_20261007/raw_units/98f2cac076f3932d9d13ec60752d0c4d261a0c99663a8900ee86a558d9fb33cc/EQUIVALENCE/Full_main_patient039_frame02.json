@@ -1,0 +1,203 @@
+{
+  "identity": "98f2cac076f3932d9d13ec60752d0c4d261a0c99663a8900ee86a558d9fb33cc",
+  "status": "PASS",
+  "checkpoint_sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+  "branch": "model_1",
+  "load_receipt": {
+    "method_id": "Full_main",
+    "checkpoint_sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+    "global_step": 29600,
+    "branch": "model_1",
+    "strict": true,
+    "state_keys": 234,
+    "parameters": 1827469,
+    "trainable_parameters": 1827469
+  },
+  "model_state_before": "f26262ac454c399efc8569442e847eb3051e12f22951c506947d45ba421adcfd",
+  "model_state_after": "f26262ac454c399efc8569442e847eb3051e12f22951c506947d45ba421adcfd",
+  "source_shape": [
+    9,
+    224,
+    224
+  ],
+  "errors": [
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "slice_index": 0,
+      "input_sha256": "f0331de054d9bb13487ab2acbaa73dab593273b2c5c2b97e99d303a91735130d",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "slice_index": 1,
+      "input_sha256": "eab471f3e1d321bd6142fb29f04329c6042d0b9f74129906577a7f83137ea1e5",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "slice_index": 2,
+      "input_sha256": "bb4a28ea0560f665c9015db35828fbf328da2961add70a7c653832de4d31b181",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "slice_index": 3,
+      "input_sha256": "6f4791c318741397189a0f905868d9635c75d870cbf336e031ba6312f1acbf9b",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "slice_index": 4,
+      "input_sha256": "850846664add7e41570fb2c1bd1abf0d48c786f390046ba22142ea1e0aaef1c2",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "slice_index": 5,
+      "input_sha256": "5099ce758e68c6caf8eb2d7aa7222d93e14625ff0714d782154ec7ede82897de",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "slice_index": 6,
+      "input_sha256": "fc997f853343f112f1af8b4ff0c63fb179cb75ed39d0ac726e4f6a73fd5281c9",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "slice_index": 7,
+      "input_sha256": "d7145b29af97181fdf3e365a64c8304f45951a0d98976c9aaa2ee3b77846dd77",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "slice_index": 8,
+      "input_sha256": "c628eabaf96126d572b3d2f5521858b16746a2e5832e6897aac15f32a5870bc4",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    }
+  ],
+  "metrics": [
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "path": "original_runtime",
+      "class_id": 1,
+      "unit": "native grid pixels",
+      "Dice": 0.7615907685967442,
+      "IoU": 0.6149750415973377,
+      "HD95": 3.0649110640672927,
+      "ASD": 1.0102839212743755
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "path": "original_runtime",
+      "class_id": 2,
+      "unit": "native grid pixels",
+      "Dice": 0.9044711686709836,
+      "IoU": 0.8256023418149065,
+      "HD95": 2.0,
+      "ASD": 1.0301547301995575
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "path": "original_runtime",
+      "class_id": 3,
+      "unit": "native grid pixels",
+      "Dice": 0.8409767718880286,
+      "IoU": 0.7255909558067831,
+      "HD95": 17.697399489667276,
+      "ASD": 2.6106656915334403
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "path": "deployment_no_diagnostics",
+      "class_id": 1,
+      "unit": "native grid pixels",
+      "Dice": 0.7615907685967442,
+      "IoU": 0.6149750415973377,
+      "HD95": 3.0649110640672927,
+      "ASD": 1.0102839212743755
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "path": "deployment_no_diagnostics",
+      "class_id": 2,
+      "unit": "native grid pixels",
+      "Dice": 0.9044711686709836,
+      "IoU": 0.8256023418149065,
+      "HD95": 2.0,
+      "ASD": 1.0301547301995575
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient039_frame02",
+      "path": "deployment_no_diagnostics",
+      "class_id": 3,
+      "unit": "native grid pixels",
+      "Dice": 0.8409767718880286,
+      "IoU": 0.7255909558067831,
+      "HD95": 17.697399489667276,
+      "ASD": 2.6106656915334403
+    }
+  ],
+  "original_prediction_sha256": "d3056e5c10a91529a3e806d25721ffadcd03556f58ff2b026169fc1fe97d3480",
+  "deployment_prediction_sha256": "d3056e5c10a91529a3e806d25721ffadcd03556f58ff2b026169fc1fe97d3480"
+}

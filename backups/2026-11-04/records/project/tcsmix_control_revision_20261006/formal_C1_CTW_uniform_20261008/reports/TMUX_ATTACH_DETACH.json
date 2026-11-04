@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T00:54:27.653295+08:00",
+  "actual_PTY_attach": true,
+  "actual_detach_keys": "Ctrl-b d",
+  "session": "beta_fft_C1_CTW_uniform_20261008",
+  "before_step": 130,
+  "after_step": 184,
+  "before_log_bytes": 23991,
+  "after_log_bytes": 33495,
+  "pipeline_identity": {
+    "pid": 21653,
+    "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/run_pipeline.py --resume ",
+    "start_ticks": "2611687114"
+  },
+  "trainer_identity": {
+    "pid": 22912,
+    "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/train_C1_entry.py ",
+    "start_ticks": "2611693181"
+  },
+  "continued_after_detach": true
+}

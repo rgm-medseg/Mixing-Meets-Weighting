@@ -1,0 +1,71 @@
+{
+  "auxiliary_decoders_at_test": false,
+  "base_lr": 0.01,
+  "batch_size": 24,
+  "checkpoint_cadence": 200,
+  "checkpoint_load": "full_mcnet2d_v2_strict_true",
+  "computed_but_not_optimized": "cross_entropy",
+  "consistency": 0.1,
+  "consistency_rampup": 200.0,
+  "data": {
+    "evaluator": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tools/v22_1_postfull_test_launcher.py",
+    "evaluator_sha256": "2a20e429f54942c5392c57d1469a4edc1d0d93e144de4c3403c4d70407986ad6",
+    "forbidden_during_training": [
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data_staging/promise12/20260624_141558/data_promise12/test.list",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data_staging/promise12/20260624_141558/data_promise12/npy_image/Case40_segmentation.npy"
+    ],
+    "labeled_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/manifests/generated/PROMISE20_labeled.tsv",
+    "labeled_manifest_sha256": "9ea9f17ec88da841f9d4bcaac17f6b588964288d528bc8ebd8a2b6aa72fc4715",
+    "project_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+    "root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data_staging/promise12/20260624_141558/data_promise12",
+    "test_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/manifests/generated/PROMISE_test.list",
+    "test_manifest_sha256": "c981d3a78c3e4bd817438edd159e77361d5dc7f88493f206ccdbfb388f6e35fb",
+    "train_images": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data_staging/promise12/20260624_141558/data_promise12/npy_image/X_train.npy",
+    "train_images_sha256": "10dbb291fb2ec7fe55ba455bf94f4947b72e53897ad2deda110ebeaf2f110eb1",
+    "train_labels": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data_staging/promise12/20260624_141558/data_promise12/npy_image/y_train.npy",
+    "train_labels_sha256": "d3978716c7352ffaa3042bf3b6fefb276b6f54e95621ba5308abcc9ef78f6364",
+    "unlabeled_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/manifests/generated/PROMISE20_unlabeled.tsv",
+    "unlabeled_manifest_sha256": "f43fc51c86f031997d24d6f88ca981ddfa1ef1eb056c1774e816f08024f6332c",
+    "val_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/manifests/generated/PROMISE_val.list",
+    "val_manifest_sha256": "e53753aaa2f41bc4c6d5ea11dce16ab80db44281ec1f1d621a625db5fd7a208b"
+  },
+  "dataset": "PROMISE12",
+  "dataset_contract_sha256": "4424753baa5fdb3e923cf0de5dcdac10a239472d72b198027aa7da1bcee0279d",
+  "device": "cuda:0",
+  "formal_seed": 1337,
+  "inference_size": [
+    224,
+    224
+  ],
+  "input_channels": 1,
+  "job_id": "pmeul_promise12_20p_seed1337",
+  "labeled_batch_size": 12,
+  "lambda": 1.0,
+  "max_iterations": 30000,
+  "method": "PMEUL",
+  "momentum": 0.9,
+  "network": "mcnet2d_v2",
+  "num_classes": 2,
+  "optimized_supervised_loss": "sum_decoder_dice+0.3*sum_decoder_all_foreground_sdf_mse",
+  "optimizer": "SGD",
+  "paper_main_variant": "m=3",
+  "patch_size": [
+    224,
+    224
+  ],
+  "pretraining": {
+    "enabled": false
+  },
+  "ratio": "20p",
+  "schema": "BETA_FFT_2026_COMPARATOR_RUN_CONFIG_V1",
+  "seed": 1337,
+  "selection_rule": "best_validation_mean_dice_earliest_tie",
+  "source_commit": "2232ec0f5f11d8d219604343a427abdd86c25891",
+  "temperature": 0.1,
+  "test_access_during_training": false,
+  "test_output": "decoder1_output_index_0",
+  "test_selection_forbidden": true,
+  "unsupervised_loss": "ramped_ordered_cross_decoder_sharpened_mse",
+  "validation_cadence": 200,
+  "weight_decay": 0.0001
+}

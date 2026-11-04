@@ -1,0 +1,215 @@
+{
+  "identity": "98f2cac076f3932d9d13ec60752d0c4d261a0c99663a8900ee86a558d9fb33cc",
+  "status": "PASS",
+  "checkpoint_sha256": "5df2de9b8df16e4d89df9265f104b4b8c7c321245d9eaa0479971672b4d7a1a9",
+  "branch": "model_1",
+  "load_receipt": {
+    "method_id": "R1_v2_B",
+    "checkpoint_sha256": "5df2de9b8df16e4d89df9265f104b4b8c7c321245d9eaa0479971672b4d7a1a9",
+    "global_step": 29000,
+    "branch": "model_1",
+    "strict": true,
+    "state_keys": 234,
+    "parameters": 1827469,
+    "trainable_parameters": 1827469
+  },
+  "model_state_before": "7da6a7ec08778199ca8e93b0bab8cc32fe6395e70e36ce4b40a430ea151c2485",
+  "model_state_after": "7da6a7ec08778199ca8e93b0bab8cc32fe6395e70e36ce4b40a430ea151c2485",
+  "source_shape": [
+    10,
+    224,
+    224
+  ],
+  "errors": [
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "slice_index": 0,
+      "input_sha256": "3aa3b360874e58a9af4daf6f5ea5d40cf6b373758feea89efc53dd63e5a74c8b",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "slice_index": 1,
+      "input_sha256": "2b1cacc67b6bb59b85f2b34025272b5cc5e2532fa31ae81b621ff4b2bb8da2f1",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "slice_index": 2,
+      "input_sha256": "57ea4e8f0a247ea53157389dc26b226d72772810e4fa1881f62e055494a3712f",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "slice_index": 3,
+      "input_sha256": "bcc7d0c3009975b9303297a769b26ba8445267dd0934a873e5e07f7752b676f0",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "slice_index": 4,
+      "input_sha256": "8845cc9cb863cf57179fab7e6da149323718f69be75378837cce76637629ceb6",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "slice_index": 5,
+      "input_sha256": "476b6e11895331115b63a2780eb444deba547ed36a3b9ebe3213ba1d055154ad",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "slice_index": 6,
+      "input_sha256": "9ce167d0fb8c550b408f41c4e77418146ee81a1799fea37c973c3e736b5fe454",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "slice_index": 7,
+      "input_sha256": "3332525d35b777537f02b2de9b0c0bed56f8b1e05f66756f098b6f4614b40f63",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "slice_index": 8,
+      "input_sha256": "763fc20bd877bb1d57acd8ed420b07abcb098d987634c21b2983c4676da7ecd1",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "slice_index": 9,
+      "input_sha256": "5517c88e9125c5cf2b7ef4dcf5b4fbb003826fc7c9ec70016f72b201ff3d8471",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    }
+  ],
+  "metrics": [
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "path": "original_runtime",
+      "class_id": 1,
+      "unit": "native grid pixels",
+      "Dice": 0.910734149054505,
+      "IoU": 0.8360990553995404,
+      "HD95": 1.0,
+      "ASD": 0.2770490214115151
+    },
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "path": "original_runtime",
+      "class_id": 2,
+      "unit": "native grid pixels",
+      "Dice": 0.8986240238006694,
+      "IoU": 0.8159103187466235,
+      "HD95": 1.4142135623730951,
+      "ASD": 0.43490601816322944
+    },
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "path": "original_runtime",
+      "class_id": 3,
+      "unit": "native grid pixels",
+      "Dice": 0.8991317671092952,
+      "IoU": 0.8167478543261424,
+      "HD95": 1.4142135623730951,
+      "ASD": 0.7836734945762964
+    },
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "path": "deployment_no_diagnostics",
+      "class_id": 1,
+      "unit": "native grid pixels",
+      "Dice": 0.910734149054505,
+      "IoU": 0.8360990553995404,
+      "HD95": 1.0,
+      "ASD": 0.2770490214115151
+    },
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "path": "deployment_no_diagnostics",
+      "class_id": 2,
+      "unit": "native grid pixels",
+      "Dice": 0.8986240238006694,
+      "IoU": 0.8159103187466235,
+      "HD95": 1.4142135623730951,
+      "ASD": 0.43490601816322944
+    },
+    {
+      "method_id": "R1_v2_B",
+      "frame": "patient030_frame01",
+      "path": "deployment_no_diagnostics",
+      "class_id": 3,
+      "unit": "native grid pixels",
+      "Dice": 0.8991317671092952,
+      "IoU": 0.8167478543261424,
+      "HD95": 1.4142135623730951,
+      "ASD": 0.7836734945762964
+    }
+  ],
+  "original_prediction_sha256": "a471e3ae993bb7b80b8b9b74e3427545d3475022fb10cd1687fb0bbdfabd398b",
+  "deployment_prediction_sha256": "a471e3ae993bb7b80b8b9b74e3427545d3475022fb10cd1687fb0bbdfabd398b"
+}

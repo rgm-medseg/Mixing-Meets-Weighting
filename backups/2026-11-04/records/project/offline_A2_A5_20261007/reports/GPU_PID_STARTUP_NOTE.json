@@ -1,0 +1,6 @@
+{
+  "status": "REPAIRED_ENGINEERING_ONLY",
+  "reason": "container PID84556 differs from NVML PID62352; initial CUDA model load succeeded, analysis was awaiting own GPU context",
+  "patient_units_before_fix": 0,
+  "source_training_changes": 0
+}

@@ -1,0 +1,6 @@
+task,status,pid,step,budget_updates,log,reason,time
+E1,INTERRUPTED,28255,3976,30000,/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/E1.log,"Safe stop, full-state checkpoint available",2026-10-27T15:09:38.446546+08:00
+E2,PENDING,,0,30000,/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/E2.log,,2026-10-27T15:09:38.446609+08:00
+E3,PENDING,,0,30000,/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/E3.log,,2026-10-27T15:09:38.446649+08:00
+E4,PENDING,,0,30000,/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/E4.log,,2026-10-27T15:09:38.446683+08:00
+E5,PENDING,,0,30000,/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/E5.log,,2026-10-27T15:09:38.446715+08:00

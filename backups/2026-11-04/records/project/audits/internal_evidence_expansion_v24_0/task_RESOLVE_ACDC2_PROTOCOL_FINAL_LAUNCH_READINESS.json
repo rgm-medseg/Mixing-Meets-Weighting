@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:17:58.547420+00:00",
+  "task_id": "RESOLVE_ACDC2_PROTOCOL",
+  "task_type": "PROTOCOL_GATE",
+  "action": "READ_ONLY_READY",
+  "registry_FinalLaunchReady": "PASS",
+  "registry_Blocker": "",
+  "registry_BlockerCategory": "NONE",
+  "LaunchBlocking": false,
+  "NoncriticalTerminalGap": false,
+  "ProtocolExcluded": false,
+  "FinalLaunchReady": true,
+  "FinalLaunchReady_semantics": "launch permission only; not completion evidence",
+  "PostFullCompletionEvidenceRequired": false,
+  "FormalFullStarted": false,
+  "TmuxStarted": false,
+  "checks": {
+    "StaticPass": true,
+    "ArgvPass": true,
+    "PathPass": true,
+    "ScientificIdentityPass": true,
+    "ImportPass": true,
+    "RoleBindingPass": true,
+    "SmokePass": true,
+    "ClosedLoopPass": true,
+    "FailureInjectionPass": true,
+    "ControllerDryPass": true,
+    "OutputClean": true,
+    "SourceFreezePass": true,
+    "ConfigFreezePass": true
+  },
+  "l1_l10": {
+    "TaskOrder": "14",
+    "TaskID": "RESOLVE_ACDC2_PROTOCOL",
+    "Action": "READ_ONLY_READY",
+    "FinalLaunchReady": "PASS",
+    "Blocker": "",
+    "L1StaticPaths": "PASS",
+    "L2DryRunOrReceiptMode": "NA",
+    "L3Paths": "PASS",
+    "L4ScientificIdentity": "PASS_OR_NA",
+    "L5ImportCompile": "NA",
+    "L6TestFirewall": "PASS",
+    "L7SmokeGate": "PASS_OR_NA",
+    "L8ClosedLoopReceipt": "PASS",
+    "L9FailureInjection": "PASS_OR_NA",
+    "L10ControllerDryConsumption": "PASS_WITH_BLOCKERS"
+  },
+  "freeze_evidence": {
+    "source": {
+      "applicable": false,
+      "pass": true,
+      "path": "",
+      "expected_sha256": "",
+      "current_sha256": ""
+    },
+    "launcher": {
+      "applicable": false,
+      "pass": true,
+      "path": "",
+      "expected_sha256": "",
+      "current_sha256": ""
+    },
+    "config": {
+      "applicable": true,
+      "pass": true,
+      "path": "configs/internal_evidence_expansion_v24_0/ACDC2_SPLIT.json",
+      "exists": true,
+      "expected_sha256": "4aa29e06d3b5bbfcd81331252d3dd7bcd012afb09bf6a88372f659fcf43a124d",
+      "current_sha256": "4aa29e06d3b5bbfcd81331252d3dd7bcd012afb09bf6a88372f659fcf43a124d"
+    },
+    "checkpoint": {
+      "applicable": false,
+      "pass": true,
+      "path": "",
+      "expected_sha256": "",
+      "current_sha256": ""
+    }
+  },
+  "expected_receipt": "audits/internal_evidence_expansion_v24_0/ACDC2_PROTOCOL_DECISION.json",
+  "test_semantics": {
+    "TESTAccessAllowed": "0",
+    "TEST_DATA_READ_FOR_PRE_REGISTERED_EVALUATION": false,
+    "TEST_USED_FOR_TUNING": false,
+    "TEST_USED_FOR_SELECTION": false
+  }
+}

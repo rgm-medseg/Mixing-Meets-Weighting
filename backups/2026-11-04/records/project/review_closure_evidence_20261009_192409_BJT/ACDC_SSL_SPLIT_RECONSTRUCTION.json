@@ -1,0 +1,29 @@
+{
+  "train_slices": 1312,
+  "train_patients": 70,
+  "val_frames": 20,
+  "test_frames": 40,
+  "labeled_prefixes": {
+    "5%": {
+      "slices": 68,
+      "patients": [
+        "patient038",
+        "patient050",
+        "patient099"
+      ]
+    },
+    "10%": {
+      "slices": 136,
+      "patients": [
+        "patient021",
+        "patient038",
+        "patient049",
+        "patient050",
+        "patient058",
+        "patient099",
+        "patient100"
+      ]
+    }
+  },
+  "limitation": "Existing SSL entry defines first68/136 slicing. No pretraining generation log or historical label-subset manifest was located."
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "analysis_identity_preserved": true,
+  "old_controller": 84847,
+  "resumed_controller": 88251,
+  "completed_files_reused_unchanged": 469,
+  "changed_files": [],
+  "A2_patients_reused": 204,
+  "A5_model_blocks_reused": 20,
+  "A5_volume_units_reused": 240,
+  "boundary": "all GPU units completed before review assertion failure; review-selector repair then resume reused identical units",
+  "training_updates": 0
+}

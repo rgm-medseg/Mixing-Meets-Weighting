@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "time": "2026-10-06T21:34:25.462844+08:00",
+  "step": 200,
+  "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E1/checkpoints/last.ckpt",
+  "sha256": "565d509ebf82c5e4b9919fb51d0486a4981983930f9c4b0c1403907135c3cc31",
+  "best_checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E1/checkpoints/best.ckpt",
+  "best_sha256": "51776d84be55208b3c96600eeed0c4e978d1cc30854ba144adab5fc3ff171c56",
+  "required_state_keys_present": true,
+  "first_formal_validation_completed": true,
+  "resume_exact": false
+}

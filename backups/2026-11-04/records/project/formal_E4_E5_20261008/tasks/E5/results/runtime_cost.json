@@ -1,0 +1,60 @@
+{
+  "task": "E5",
+  "training_Popen_seconds": 5607.920556619763,
+  "failed_training_seconds": 0,
+  "peak_cuda_allocated_bytes": 3275748352,
+  "peak_cuda_reserved_bytes": 3384803328,
+  "sampled_peak_NVML_own_process_mib": 3734,
+  "NVML_sampling_interval_seconds": 30,
+  "NVML": "observed sampled process memory; separately whole-card memory; not CUDA allocator values",
+  "short": {
+    "status": "PASS",
+    "time": "2026-10-08T12:40:07.105993+08:00",
+    "task": "E5",
+    "code_identity": "6e61254c3090da812a2befd2ead7c8eb12bafd13ccc7d9b95f706e3f5d7155ad",
+    "physical_joint_updates": 2,
+    "optimizer_success_calls": {
+      "optimizer1": 2,
+      "optimizer2": 2
+    },
+    "failed_attempts": 0,
+    "history": [
+      {
+        "stage": "update",
+        "target": 1,
+        "command": [
+          "/home/renguanming/.conda/envs/beta_fft/bin/python",
+          "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E5_entry.py",
+          "--short-target",
+          "1"
+        ],
+        "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/runs/E5_isolated_short/logs/update_1_1791434361380000867.log",
+        "exit_code": 75,
+        "elapsed_seconds": 19.654202260077
+      },
+      {
+        "stage": "update",
+        "target": 2,
+        "command": [
+          "/home/renguanming/.conda/envs/beta_fft/bin/python",
+          "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E5_entry.py",
+          "--short-target",
+          "2",
+          "--resume"
+        ],
+        "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/runs/E5_isolated_short/logs/update_2_1791434383346811600.log",
+        "exit_code": 75,
+        "elapsed_seconds": 8.960630312561989
+      }
+    ],
+    "short_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/runs/E5_isolated_short",
+    "validation_all20_frames": true,
+    "independent_reload": true,
+    "real_resume": true,
+    "zero_update_probe": true,
+    "worker_resume_exact": false,
+    "formal_reuses_short_state": false,
+    "mean_step_seconds": 0.749178271740675
+  },
+  "validation_seconds": "included in train wall; E5 independent val times in traces; E4 not separately instrumented"
+}

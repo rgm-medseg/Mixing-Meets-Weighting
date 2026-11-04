@@ -1,0 +1,13 @@
+{
+  "audit_id": "V22_0_FORMAL_TRAINER_RESUME_CAPABILITY",
+  "created_at": "2026-08-19T15:10:11.984964+00:00",
+  "tsv": "audits/three_innovation_ablation_transfer_v22_0/FORMAL_TRAINER_RESUME_CAPABILITY.tsv",
+  "TRAINER_RESUME_CAPABILITY_PASS": true,
+  "TRAINER_RESUME_CANARY_PASS": true,
+  "resume_levels": {
+    "ACDC": "SCIENTIFIC_CONTINUATION",
+    "PROMISE_COVID": "BITWISE_EXACT",
+    "MSCMR": "BITWISE_EXACT"
+  },
+  "blocking_rows": []
+}

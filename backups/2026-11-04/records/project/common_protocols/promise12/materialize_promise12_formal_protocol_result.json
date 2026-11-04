@@ -1,0 +1,17 @@
+{
+  "dataset": "PROMISE12",
+  "formal_lock_generated": false,
+  "formal_protocol_status": "FORMAL_PROTOCOL_MATERIALIZED_TEST_ONCE",
+  "internal_test_once_case_count": 10,
+  "labeled_case_count": 7,
+  "outputs": {
+    "common_protocols/promise12/formal_protocol.yaml": "93c25732b1aef7f562634786215f10ade83f913185566da024e9cb813f58b5f5",
+    "common_protocols/promise12/protocol.sha256": "f9e970efca3288aa72b37c1470141f87d963377dc5b9a4393a798e920d430418",
+    "common_protocols/promise12/raw_data_inventory.tsv": "aac907c7583552e084228d9ea08ee0446cc08f794d656a044e197531e86948f2",
+    "common_protocols/promise12/split_registry.tsv": "b7f4fa5063bcdc5c3aef8e977404cbe5ab97a7c804dfe9eddf626f877350d8a6"
+  },
+  "status": "PASS",
+  "training_authorized": false,
+  "training_case_count": 50,
+  "validation_case_count": 5
+}

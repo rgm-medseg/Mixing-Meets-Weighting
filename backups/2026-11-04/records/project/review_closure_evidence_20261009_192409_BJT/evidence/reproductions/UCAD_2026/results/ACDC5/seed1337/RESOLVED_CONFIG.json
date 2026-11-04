@@ -1,0 +1,61 @@
+{
+  "_config_path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/configs/ucad_acdc5.yaml",
+  "_config_sha256": "9a676ee2e60adb84c3324b6720a29210883801fb8c9cce6505d30ede1ae3d84b",
+  "class_mapping": {
+    "0": "background",
+    "1": "RV",
+    "2": "MYO",
+    "3": "LV"
+  },
+  "create_tmux": "NO",
+  "data_root": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC",
+  "dataset": "ACDC",
+  "evaluator": {
+    "name": "beta_fft_acdc_frozen",
+    "sha256": "5958b1a7514415f67beb184676c649867f6aeb15cce8d3ee5ee3fe5517a798f4",
+    "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tools/v22_0_acdc_test_frozen_checkpoint.py"
+  },
+  "identity": "UCAD method under frozen beta-FFT ACDC comparison protocol",
+  "label_ratio": "5%",
+  "labeled_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC5_labeled.list",
+  "num_classes": 4,
+  "output_dir": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/results/ACDC5/seed1337",
+  "patch_size": [
+    256,
+    256
+  ],
+  "resolved_config_status": "PASS",
+  "run_formal_training": "NO",
+  "run_id": "UCAD_FAIR_ACDC5",
+  "schema": "UCAD_2026_CONFIG_V1",
+  "seed": 1337,
+  "superpixel": {
+    "cache": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/superpixels/ACDC",
+    "compactness": 0.1,
+    "n_segments": 40
+  },
+  "test_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC_test.list",
+  "train_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC_train_slices.list",
+  "ucad": {
+    "base_lr": 0.01,
+    "batch_size": 24,
+    "consistency": 0.1,
+    "consistency_rampup": 200.0,
+    "deterministic": 1,
+    "labeled_bs": 12,
+    "magnitude": 6.0,
+    "max_iterations": 30000,
+    "model": "unet",
+    "momentum": 0.9,
+    "num_labels": 20,
+    "optimizer": "SGD",
+    "pre_iterations": 10000,
+    "s_param": 6,
+    "temperature": 1.0,
+    "u_weight": 0.5,
+    "unc_weight": 0.2,
+    "weight_decay": 0.0001
+  },
+  "unlabeled_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC5_unlabeled.list",
+  "val_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC_val.list"
+}

@@ -1,0 +1,25 @@
+{
+  "audit_id": "V22_0_DATASET_EVALUATOR_PROTOCOL_LOCK",
+  "created_at": "2026-08-19T15:32:13.364105+00:00",
+  "lock_tsv": "audits/three_innovation_ablation_transfer_v22_0/DATASET_EVALUATOR_PROTOCOL_LOCK.tsv",
+  "task_count": 14,
+  "protocol_lock_all_pass": true,
+  "transfer_real_test_access_before_formal": 0,
+  "boundary_units_by_dataset": {
+    "ACDC": [
+      "pixel-unit"
+    ],
+    "COVID-19": [
+      "mm"
+    ],
+    "MS-CMRSeg": [
+      "mm"
+    ],
+    "PROMISE12": [
+      "pixel-unit"
+    ]
+  },
+  "cross_dataset_hd95_asd_direct_comparison_allowed": false,
+  "formal_full_started": false,
+  "test_started": false
+}

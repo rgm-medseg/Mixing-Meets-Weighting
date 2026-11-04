@@ -1,0 +1,8 @@
+{
+  "status": "DONE",
+  "identity": "427591ccfd2889887b352f269433290eb5379cec1a11ea6ff80aa1df2c250779",
+  "source_sha256": "25bee199ea79e2df149e727a134e3a99771574807b03c25a31023654e7236a6b",
+  "correlation_rows": 384,
+  "mapping": "NEEDS_MAPPING",
+  "GPU_forwards": 0
+}

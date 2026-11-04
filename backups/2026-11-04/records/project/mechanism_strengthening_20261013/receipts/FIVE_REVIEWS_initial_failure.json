@@ -1,0 +1,48 @@
+[
+  {
+    "review": "1_model_identity_protocol",
+    "status": "PASS",
+    "evidence": "Original X03 student1/student2/EMA strict-loaded; checkpoint/pretrain/splits/source unchanged; fixed args exactly match checkpoint args except new output root."
+  },
+  {
+    "review": "2_controls_stop_gradient_restore",
+    "status": "FAIL",
+    "evidence": "AssertionError()"
+  },
+  {
+    "review": "3_numerics_aggregation",
+    "status": "PASS",
+    "evidence": "Patient sums and equal-patient means independently reaggregated; TRC net error identities hold; normal native-volume Dice exactly reproduces checkpoint validation value; 10 patients,20 frames,210 slices; mixed108 outputs/condition with6 repeated source exposures disclosed."
+  },
+  {
+    "review": "4_coordinates_figure_labels",
+    "status": "PASS",
+    "evidence": {
+      "files": [
+        {
+          "figure": "Fig_joint_TCSMix_CTW",
+          "preview_pixels": [
+            1645,
+            1299
+          ],
+          "svg_text_nodes": 63
+        },
+        {
+          "figure": "Fig_TRC_residual_intervention",
+          "preview_pixels": [
+            1645,
+            1255
+          ],
+          "svg_text_nodes": 48
+        }
+      ],
+      "visual_review": "Real images same256 grid, nearest rendering, shared heatmap limits, fixed case selection, missing/imprecise effects disclosed; text/clipping reviewed on previews.",
+      "journal_final_format_status": "PENDING: Neurocomputing guide403; general artwork sources recorded; no journal-compliance claim"
+    }
+  },
+  {
+    "review": "5_outputs_reproduction_conclusions",
+    "status": "PARTIAL_FIXED_RESULT_PENDING",
+    "evidence": "Diagnostics and executable train/test/report pipeline delivered; fixed run still in progress, final test numbers NA and fixed-results review PENDING."
+  }
+]

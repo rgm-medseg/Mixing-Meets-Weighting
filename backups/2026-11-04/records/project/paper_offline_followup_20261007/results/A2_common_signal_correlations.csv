@@ -1,0 +1,385 @@
+method_id,checkpoint_tag,cohort,mode,prediction_kind,quality,signal,signal_role,level,n,spearman,excluded,p_value
+baseline,best,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.2164218268341787,5,NA: descriptive only
+baseline,best,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,0.22424242424242422,5,NA: descriptive only
+baseline,best,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.21642747399835172,5,NA: descriptive only
+baseline,best,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.22424242424242422,5,NA: descriptive only
+baseline,best,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,205,0.8041670584384154,5,NA: descriptive only
+baseline,best,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.7818181818181817,5,NA: descriptive only
+baseline,best,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.15875738285898833,0,NA: descriptive only
+baseline,best,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,0.05454545454545454,0,NA: descriptive only
+baseline,best,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.15876261780213796,0,NA: descriptive only
+baseline,best,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.05454545454545454,0,NA: descriptive only
+baseline,best,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,210,0.8616689799874355,0,NA: descriptive only
+baseline,best,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.8181818181818182,0,NA: descriptive only
+baseline,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.2282855755052287,5,NA: descriptive only
+baseline,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,0.12727272727272726,5,NA: descriptive only
+baseline,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.22829192327561562,5,NA: descriptive only
+baseline,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.12727272727272726,5,NA: descriptive only
+baseline,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,205,0.8033020264176044,5,NA: descriptive only
+baseline,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.8303030303030302,5,NA: descriptive only
+baseline,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.16162645705853854,0,NA: descriptive only
+baseline,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,0.05454545454545454,0,NA: descriptive only
+baseline,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.1616323408703944,0,NA: descriptive only
+baseline,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.05454545454545454,0,NA: descriptive only
+baseline,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,210,0.8617817234308182,0,NA: descriptive only
+baseline,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.8181818181818182,0,NA: descriptive only
+baseline,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.4347835370736134,5,NA: descriptive only
+baseline,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.14285714285714288,5,NA: descriptive only
+baseline,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.43471205187682427,5,NA: descriptive only
+baseline,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.14285714285714288,5,NA: descriptive only
+baseline,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,131,0.854363956654033,5,NA: descriptive only
+baseline,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.7142857142857144,5,NA: descriptive only
+baseline,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.5292717255388165,0,NA: descriptive only
+baseline,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+baseline,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.5293367637350286,0,NA: descriptive only
+baseline,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+baseline,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,136,0.7967557251908397,0,NA: descriptive only
+baseline,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.6071428571428572,0,NA: descriptive only
+baseline,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.4347835370736134,5,NA: descriptive only
+baseline,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.14285714285714288,5,NA: descriptive only
+baseline,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.43471205187682427,5,NA: descriptive only
+baseline,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.14285714285714288,5,NA: descriptive only
+baseline,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,131,0.854363956654033,5,NA: descriptive only
+baseline,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.7142857142857144,5,NA: descriptive only
+baseline,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.5292717255388165,0,NA: descriptive only
+baseline,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+baseline,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.5293367637350286,0,NA: descriptive only
+baseline,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+baseline,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,136,0.7967557251908397,0,NA: descriptive only
+baseline,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.6071428571428572,0,NA: descriptive only
+baseline,last,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.23024644242540832,5,NA: descriptive only
+baseline,last,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,0.11515151515151514,5,NA: descriptive only
+baseline,last,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.23024644242540832,5,NA: descriptive only
+baseline,last,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.11515151515151514,5,NA: descriptive only
+baseline,last,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,205,0.8120996085001968,5,NA: descriptive only
+baseline,last,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.8181818181818182,5,NA: descriptive only
+baseline,last,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.19959282724039534,0,NA: descriptive only
+baseline,last,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.2121212121212121,0,NA: descriptive only
+baseline,last,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.19959282724039534,0,NA: descriptive only
+baseline,last,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.2121212121212121,0,NA: descriptive only
+baseline,last,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,210,0.8682129835235299,0,NA: descriptive only
+baseline,last,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.7939393939393938,0,NA: descriptive only
+baseline,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.24391416031472068,5,NA: descriptive only
+baseline,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,0.11515151515151514,5,NA: descriptive only
+baseline,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.24391416031472068,5,NA: descriptive only
+baseline,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.11515151515151514,5,NA: descriptive only
+baseline,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,205,0.8091019389373117,5,NA: descriptive only
+baseline,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.8181818181818182,5,NA: descriptive only
+baseline,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.21133114243175935,0,NA: descriptive only
+baseline,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.2121212121212121,0,NA: descriptive only
+baseline,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.21133114243175935,0,NA: descriptive only
+baseline,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.2121212121212121,0,NA: descriptive only
+baseline,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,210,0.8648850595675112,0,NA: descriptive only
+baseline,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.7939393939393938,0,NA: descriptive only
+baseline,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.4745048844285486,5,NA: descriptive only
+baseline,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.14285714285714288,5,NA: descriptive only
+baseline,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.4745048844285486,5,NA: descriptive only
+baseline,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.14285714285714288,5,NA: descriptive only
+baseline,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,131,0.8771579565472695,5,NA: descriptive only
+baseline,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.6071428571428572,5,NA: descriptive only
+baseline,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.5616755327091246,0,NA: descriptive only
+baseline,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+baseline,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.5616755327091246,0,NA: descriptive only
+baseline,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+baseline,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,136,0.7998998091603053,0,NA: descriptive only
+baseline,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.6071428571428572,0,NA: descriptive only
+baseline,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.4745048844285486,5,NA: descriptive only
+baseline,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.14285714285714288,5,NA: descriptive only
+baseline,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.4745048844285486,5,NA: descriptive only
+baseline,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.14285714285714288,5,NA: descriptive only
+baseline,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,131,0.8771579565472695,5,NA: descriptive only
+baseline,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.6071428571428572,5,NA: descriptive only
+baseline,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.5616755327091246,0,NA: descriptive only
+baseline,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+baseline,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.5616755327091246,0,NA: descriptive only
+baseline,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+baseline,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,136,0.7998998091603053,0,NA: descriptive only
+baseline,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.6071428571428572,0,NA: descriptive only
+Full_main,best,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.1889668467732423,5,NA: descriptive only
+Full_main,best,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,0.12727272727272726,5,NA: descriptive only
+Full_main,best,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.1889668467732423,5,NA: descriptive only
+Full_main,best,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.12727272727272726,5,NA: descriptive only
+Full_main,best,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,205,0.812159775347259,5,NA: descriptive only
+Full_main,best,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.8303030303030302,5,NA: descriptive only
+Full_main,best,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.1466480673696084,0,NA: descriptive only
+Full_main,best,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.2121212121212121,0,NA: descriptive only
+Full_main,best,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.1466480673696084,0,NA: descriptive only
+Full_main,best,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.2121212121212121,0,NA: descriptive only
+Full_main,best,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,210,0.8505395170830009,0,NA: descriptive only
+Full_main,best,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.8909090909090909,0,NA: descriptive only
+Full_main,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.2174203137168519,5,NA: descriptive only
+Full_main,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,0.12727272727272726,5,NA: descriptive only
+Full_main,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.2174203137168519,5,NA: descriptive only
+Full_main,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.12727272727272726,5,NA: descriptive only
+Full_main,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,205,0.8075171191851882,5,NA: descriptive only
+Full_main,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.8303030303030302,5,NA: descriptive only
+Full_main,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.16716091447096826,0,NA: descriptive only
+Full_main,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.2121212121212121,0,NA: descriptive only
+Full_main,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.16716091447096826,0,NA: descriptive only
+Full_main,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.2121212121212121,0,NA: descriptive only
+Full_main,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,210,0.8470356056335077,0,NA: descriptive only
+Full_main,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.8909090909090909,0,NA: descriptive only
+Full_main,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.34589761383654516,5,NA: descriptive only
+Full_main,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.21428571428571433,5,NA: descriptive only
+Full_main,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.34589761383654516,5,NA: descriptive only
+Full_main,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.21428571428571433,5,NA: descriptive only
+Full_main,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,131,0.8388512251107673,5,NA: descriptive only
+Full_main,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.5357142857142858,5,NA: descriptive only
+Full_main,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.47771284095555383,0,NA: descriptive only
+Full_main,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+Full_main,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.47771284095555383,0,NA: descriptive only
+Full_main,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+Full_main,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,136,0.7706345419847328,0,NA: descriptive only
+Full_main,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.6071428571428572,0,NA: descriptive only
+Full_main,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.34589761383654516,5,NA: descriptive only
+Full_main,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.21428571428571433,5,NA: descriptive only
+Full_main,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.34589761383654516,5,NA: descriptive only
+Full_main,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.21428571428571433,5,NA: descriptive only
+Full_main,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,131,0.8388512251107673,5,NA: descriptive only
+Full_main,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.5357142857142858,5,NA: descriptive only
+Full_main,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.47771284095555383,0,NA: descriptive only
+Full_main,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+Full_main,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.47771284095555383,0,NA: descriptive only
+Full_main,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+Full_main,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,136,0.7706345419847328,0,NA: descriptive only
+Full_main,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.6071428571428572,0,NA: descriptive only
+Full_main,last,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.2934438765918862,5,NA: descriptive only
+Full_main,last,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,0.09090909090909088,5,NA: descriptive only
+Full_main,last,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.2934438765918862,5,NA: descriptive only
+Full_main,last,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.09090909090909088,5,NA: descriptive only
+Full_main,last,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,205,0.7907475609688149,5,NA: descriptive only
+Full_main,last,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.8545454545454544,5,NA: descriptive only
+Full_main,last,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.1847063313852079,0,NA: descriptive only
+Full_main,last,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.1515151515151515,0,NA: descriptive only
+Full_main,last,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.1847063313852079,0,NA: descriptive only
+Full_main,last,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.1515151515151515,0,NA: descriptive only
+Full_main,last,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,210,0.8312284814409621,0,NA: descriptive only
+Full_main,last,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.7818181818181817,0,NA: descriptive only
+Full_main,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.302851754191981,5,NA: descriptive only
+Full_main,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,0.09090909090909088,5,NA: descriptive only
+Full_main,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.302851754191981,5,NA: descriptive only
+Full_main,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.09090909090909088,5,NA: descriptive only
+Full_main,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,205,0.7894744173348117,5,NA: descriptive only
+Full_main,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.8545454545454544,5,NA: descriptive only
+Full_main,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.18742755557427018,0,NA: descriptive only
+Full_main,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.1515151515151515,0,NA: descriptive only
+Full_main,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.18742755557427018,0,NA: descriptive only
+Full_main,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.1515151515151515,0,NA: descriptive only
+Full_main,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,210,0.8312297772662023,0,NA: descriptive only
+Full_main,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,10,0.7818181818181817,0,NA: descriptive only
+Full_main,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.35638178615277855,5,NA: descriptive only
+Full_main,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.1785714285714286,5,NA: descriptive only
+Full_main,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.35638178615277855,5,NA: descriptive only
+Full_main,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.1785714285714286,5,NA: descriptive only
+Full_main,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,131,0.8209096247264186,5,NA: descriptive only
+Full_main,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.4642857142857144,5,NA: descriptive only
+Full_main,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.4841249017383711,0,NA: descriptive only
+Full_main,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.10714285714285716,0,NA: descriptive only
+Full_main,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.4841249017383711,0,NA: descriptive only
+Full_main,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.10714285714285716,0,NA: descriptive only
+Full_main,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,136,0.7962309160305343,0,NA: descriptive only
+Full_main,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.5714285714285715,0,NA: descriptive only
+Full_main,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.3561095393156462,5,NA: descriptive only
+Full_main,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.1785714285714286,5,NA: descriptive only
+Full_main,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.3561095393156462,5,NA: descriptive only
+Full_main,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.1785714285714286,5,NA: descriptive only
+Full_main,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,slice,131,0.8209309774195271,5,NA: descriptive only
+Full_main,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.4642857142857144,5,NA: descriptive only
+Full_main,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.4841249017383711,0,NA: descriptive only
+Full_main,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.10714285714285716,0,NA: descriptive only
+Full_main,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.4841249017383711,0,NA: descriptive only
+Full_main,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.10714285714285716,0,NA: descriptive only
+Full_main,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,slice,136,0.7962309160305343,0,NA: descriptive only
+Full_main,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,offline auxiliary,patient,7,0.5714285714285715,0,NA: descriptive only
+R1_v2_B,best,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.23400449920821614,5,NA: descriptive only
+R1_v2_B,best,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,0.17575757575757575,5,NA: descriptive only
+R1_v2_B,best,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.23395025594088395,5,NA: descriptive only
+R1_v2_B,best,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.17575757575757575,5,NA: descriptive only
+R1_v2_B,best,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,205,0.8016213957375679,5,NA: descriptive only
+R1_v2_B,best,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,10,0.7454545454545454,5,NA: descriptive only
+R1_v2_B,best,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.15871827000109848,0,NA: descriptive only
+R1_v2_B,best,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.16363636363636364,0,NA: descriptive only
+R1_v2_B,best,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.1586703747650529,0,NA: descriptive only
+R1_v2_B,best,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.16363636363636364,0,NA: descriptive only
+R1_v2_B,best,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,210,0.8482659650575687,0,NA: descriptive only
+R1_v2_B,best,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,10,0.8424242424242423,0,NA: descriptive only
+R1_v2_B,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.2466412686975219,5,NA: descriptive only
+R1_v2_B,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,0.09090909090909088,5,NA: descriptive only
+R1_v2_B,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.24658702983073297,5,NA: descriptive only
+R1_v2_B,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.09090909090909088,5,NA: descriptive only
+R1_v2_B,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,205,0.7991739796629056,5,NA: descriptive only
+R1_v2_B,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,10,0.7696969696969697,5,NA: descriptive only
+R1_v2_B,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.16869376215679915,0,NA: descriptive only
+R1_v2_B,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.19999999999999998,0,NA: descriptive only
+R1_v2_B,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.16864587015228044,0,NA: descriptive only
+R1_v2_B,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.19999999999999998,0,NA: descriptive only
+R1_v2_B,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,210,0.846278100875913,0,NA: descriptive only
+R1_v2_B,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,10,0.8181818181818182,0,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.35024822505738534,5,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.21428571428571433,5,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.3503581251779733,5,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.21428571428571433,5,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,131,0.8399402124592964,5,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,7,0.7142857142857144,5,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.47619570157390523,0,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.4762320511612048,0,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,136,0.7676860687022901,0,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,7,0.6071428571428572,0,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.35024822505738534,5,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.21428571428571433,5,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.3503581251779733,5,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.21428571428571433,5,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,131,0.8399402124592964,5,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,7,0.7142857142857144,5,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.47619570157390523,0,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.4762320511612048,0,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,136,0.7676860687022901,0,NA: descriptive only
+R1_v2_B,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,7,0.6071428571428572,0,NA: descriptive only
+R1_v2_B,last,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.24769851164752,5,NA: descriptive only
+R1_v2_B,last,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,0.13939393939393938,5,NA: descriptive only
+R1_v2_B,last,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.24769851164752,5,NA: descriptive only
+R1_v2_B,last,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.13939393939393938,5,NA: descriptive only
+R1_v2_B,last,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,205,0.7989761805265356,5,NA: descriptive only
+R1_v2_B,last,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,10,0.8545454545454544,5,NA: descriptive only
+R1_v2_B,last,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.1728728946850058,0,NA: descriptive only
+R1_v2_B,last,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.07878787878787878,0,NA: descriptive only
+R1_v2_B,last,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.1728728946850058,0,NA: descriptive only
+R1_v2_B,last,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.07878787878787878,0,NA: descriptive only
+R1_v2_B,last,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,210,0.8490156257023455,0,NA: descriptive only
+R1_v2_B,last,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,10,0.8787878787878788,0,NA: descriptive only
+R1_v2_B,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.25942708297688005,5,NA: descriptive only
+R1_v2_B,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,0.13939393939393938,5,NA: descriptive only
+R1_v2_B,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.25942708297688005,5,NA: descriptive only
+R1_v2_B,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.13939393939393938,5,NA: descriptive only
+R1_v2_B,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,205,0.7973631424989551,5,NA: descriptive only
+R1_v2_B,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,10,0.8545454545454544,5,NA: descriptive only
+R1_v2_B,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.18085277006754735,0,NA: descriptive only
+R1_v2_B,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.07878787878787878,0,NA: descriptive only
+R1_v2_B,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.18085277006754735,0,NA: descriptive only
+R1_v2_B,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.07878787878787878,0,NA: descriptive only
+R1_v2_B,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,210,0.8480864870985338,0,NA: descriptive only
+R1_v2_B,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,10,0.8787878787878788,0,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.35208455666470934,5,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.25,5,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.35208455666470934,5,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.25,5,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,131,0.8225858111354294,5,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,7,0.5357142857142858,5,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.4910522174055217,0,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.4910522174055217,0,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,136,0.7611211832061069,0,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,7,0.6071428571428572,0,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.3504030320824214,5,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.25,5,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.3504030320824214,5,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.25,5,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,131,0.8220039502482251,5,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,7,0.5357142857142858,5,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.4906228383352438,0,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.4906228383352438,0,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,slice,136,0.7609828244274809,0,NA: descriptive only
+R1_v2_B,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,sample control proxy; batch historical NA,patient,7,0.6071428571428572,0,NA: descriptive only
+R2_fixed92,best,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.3114224325576144,5,NA: descriptive only
+R2_fixed92,best,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.18787878787878787,5,NA: descriptive only
+R2_fixed92,best,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.3114224325576144,5,NA: descriptive only
+R2_fixed92,best,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.18787878787878787,5,NA: descriptive only
+R2_fixed92,best,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,205,0.7974383797299086,5,NA: descriptive only
+R2_fixed92,best,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,10,0.7818181818181817,5,NA: descriptive only
+R2_fixed92,best,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.23829195854484633,0,NA: descriptive only
+R2_fixed92,best,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.32121212121212117,0,NA: descriptive only
+R2_fixed92,best,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.23829195854484633,0,NA: descriptive only
+R2_fixed92,best,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.32121212121212117,0,NA: descriptive only
+R2_fixed92,best,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,210,0.8404517318513305,0,NA: descriptive only
+R2_fixed92,best,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,10,0.7696969696969697,0,NA: descriptive only
+R2_fixed92,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.33005296643569915,5,NA: descriptive only
+R2_fixed92,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.17575757575757575,5,NA: descriptive only
+R2_fixed92,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.33005296643569915,5,NA: descriptive only
+R2_fixed92,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.17575757575757575,5,NA: descriptive only
+R2_fixed92,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,205,0.7950285901337921,5,NA: descriptive only
+R2_fixed92,best,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,10,0.8060606060606059,5,NA: descriptive only
+R2_fixed92,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.25440956864640574,0,NA: descriptive only
+R2_fixed92,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.32121212121212117,0,NA: descriptive only
+R2_fixed92,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.25440956864640574,0,NA: descriptive only
+R2_fixed92,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.32121212121212117,0,NA: descriptive only
+R2_fixed92,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,210,0.8376876954236898,0,NA: descriptive only
+R2_fixed92,best,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,10,0.7696969696969697,0,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.32709656755458283,5,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.25,5,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.32709656755458283,5,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.25,5,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,131,0.8142208936102066,5,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,7,0.642857142857143,5,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.4632045992587183,0,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.4632045992587183,0,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,136,0.7614980916030534,0,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,7,0.6071428571428572,0,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.32709656755458283,5,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.25,5,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.32709656755458283,5,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.25,5,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,131,0.8142208936102066,5,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,7,0.642857142857143,5,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.4632045992587183,0,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.4632045992587183,0,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,136,0.7614980916030534,0,NA: descriptive only
+R2_fixed92,best,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,7,0.6071428571428572,0,NA: descriptive only
+R2_fixed92,last,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.2535182231693806,5,NA: descriptive only
+R2_fixed92,last,validation,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,0.01818181818181818,5,NA: descriptive only
+R2_fixed92,last,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.2535182231693806,5,NA: descriptive only
+R2_fixed92,last,validation,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,0.01818181818181818,5,NA: descriptive only
+R2_fixed92,last,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,205,0.8029962390305055,5,NA: descriptive only
+R2_fixed92,last,validation,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,10,0.7818181818181817,5,NA: descriptive only
+R2_fixed92,last,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.17695678186722075,0,NA: descriptive only
+R2_fixed92,last,validation,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.2121212121212121,0,NA: descriptive only
+R2_fixed92,last,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.17695678186722075,0,NA: descriptive only
+R2_fixed92,last,validation,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.2121212121212121,0,NA: descriptive only
+R2_fixed92,last,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,210,0.8445597776002446,0,NA: descriptive only
+R2_fixed92,last,validation,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,10,0.7939393939393938,0,NA: descriptive only
+R2_fixed92,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,205,-0.2805399043116912,5,NA: descriptive only
+R2_fixed92,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.07878787878787878,5,NA: descriptive only
+R2_fixed92,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,205,-0.2805399043116912,5,NA: descriptive only
+R2_fixed92,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.07878787878787878,5,NA: descriptive only
+R2_fixed92,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,205,0.7978339601615824,5,NA: descriptive only
+R2_fixed92,last,validation,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,10,0.8303030303030302,5,NA: descriptive only
+R2_fixed92,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,210,-0.19385602754174572,0,NA: descriptive only
+R2_fixed92,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,10,-0.2121212121212121,0,NA: descriptive only
+R2_fixed92,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,210,-0.19385602754174572,0,NA: descriptive only
+R2_fixed92,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,10,-0.2121212121212121,0,NA: descriptive only
+R2_fixed92,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,210,0.8405503566236852,0,NA: descriptive only
+R2_fixed92,last,validation,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,10,0.7939393939393938,0,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.3558319543052368,5,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.25,5,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.3558319543052368,5,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.25,5,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,131,0.8206480542358406,5,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,raw_argmax,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,7,0.7142857142857144,5,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.49302736112880025,0,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.49302736112880025,0,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,136,0.7836879770992367,0,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,raw_argmax,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,7,0.6071428571428572,0,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,slice,131,-0.3558319543052368,5,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,mean_max_probability,common offline signal,patient,7,0.25,5,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,slice,131,-0.3558319543052368,5,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,old_q_auxiliary,common offline signal,patient,7,0.25,5,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,131,0.8206480542358406,5,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,original_pseudolabel,GT_present_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,7,0.7142857142857144,5,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,slice,136,-0.49302736112880025,0,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,mean_max_probability,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,slice,136,-0.49302736112880025,0,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,old_q_auxiliary,common offline signal,patient,7,-0.03571428571428572,0,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,slice,136,0.7836879770992367,0,NA: descriptive only
+R2_fixed92,last,labeled_train,eval,original_pseudolabel,fixed_three_foreground_macro,q_B_auxiliary,recorded q_B; fixed geometry,patient,7,0.6071428571428572,0,NA: descriptive only

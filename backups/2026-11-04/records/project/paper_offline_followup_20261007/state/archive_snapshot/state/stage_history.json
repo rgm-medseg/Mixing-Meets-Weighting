@@ -1,0 +1,114 @@
+[
+  {
+    "stage": "A2_MAPPING",
+    "start": "2026-10-07T23:03:30.110494+08:00",
+    "end": "2026-10-07T23:03:32.119334+08:00",
+    "seconds": 10.053538411855698,
+    "exit_code": 0,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/A2_MAPPING_1791385402065811546.log"
+  },
+  {
+    "stage": "INPUTS",
+    "start": "2026-10-07T23:03:38.199080+08:00",
+    "end": "2026-10-07T23:03:40.209411+08:00",
+    "seconds": 8.037185303866863,
+    "exit_code": 1,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/INPUTS_1791385412172244130.log"
+  },
+  {
+    "stage": "A2_MAPPING",
+    "start": "2026-10-07T23:04:50.429269+08:00",
+    "end": "2026-10-07T23:04:52.449505+08:00",
+    "seconds": 8.06927614659071,
+    "exit_code": 0,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/A2_MAPPING_1791385484380254916.log"
+  },
+  {
+    "stage": "INPUTS",
+    "start": "2026-10-07T23:05:08.569207+08:00",
+    "end": "2026-10-07T23:05:10.584725+08:00",
+    "seconds": 18.11668309941888,
+    "exit_code": 0,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/INPUTS_1791385492468067833.log"
+  },
+  {
+    "stage": "EQUIVALENCE",
+    "start": "2026-10-07T23:05:48.851751+08:00",
+    "end": "2026-10-07T23:05:50.865207+08:00",
+    "seconds": 40.26396173983812,
+    "exit_code": 1,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/EQUIVALENCE_1791385510601274201.log"
+  },
+  {
+    "stage": "A2_MAPPING",
+    "start": "2026-10-07T23:06:41.890401+08:00",
+    "end": "2026-10-07T23:06:43.901591+08:00",
+    "seconds": 8.040185861289501,
+    "exit_code": 0,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/A2_MAPPING_1791385595861430421.log"
+  },
+  {
+    "stage": "INPUTS",
+    "start": "2026-10-07T23:06:47.940979+08:00",
+    "end": "2026-10-07T23:06:49.952685+08:00",
+    "seconds": 6.032817415893078,
+    "exit_code": 0,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/INPUTS_1791385603919892613.log"
+  },
+  {
+    "stage": "EQUIVALENCE",
+    "start": "2026-10-07T23:07:38.226677+08:00",
+    "end": "2026-10-07T23:07:40.235852+08:00",
+    "seconds": 50.268632501363754,
+    "exit_code": 0,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/EQUIVALENCE_1791385609967255264.log"
+  },
+  {
+    "stage": "TIMING",
+    "start": "2026-10-07T23:11:53.508958+08:00",
+    "end": "2026-10-07T23:11:55.524631+08:00",
+    "seconds": 255.27913507074118,
+    "exit_code": 0,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/TIMING_1791385660245521793.log"
+  },
+  {
+    "stage": "A3",
+    "start": "2026-10-07T23:23:08.681372+08:00",
+    "end": "2026-10-07T23:23:10.695063+08:00",
+    "seconds": 675.1612594872713,
+    "exit_code": 0,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/A3_1791385915533827300.log"
+  },
+  {
+    "stage": "REVIEW",
+    "start": "2026-10-07T23:24:25.026976+08:00",
+    "end": "2026-10-07T23:24:27.036820+08:00",
+    "seconds": 76.33230996504426,
+    "exit_code": 1,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/REVIEW_1791386590704533437.log"
+  },
+  {
+    "stage": "REVIEW",
+    "start": "2026-10-07T23:28:34.075271+08:00",
+    "end": "2026-10-07T23:28:36.090113+08:00",
+    "seconds": 92.46270705014467,
+    "exit_code": 1,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/REVIEW_1791386823627423001.log"
+  },
+  {
+    "stage": "REVIEW",
+    "start": "2026-10-07T23:32:04.425550+08:00",
+    "end": "2026-10-07T23:32:06.436169+08:00",
+    "seconds": 106.56488213315606,
+    "exit_code": 0,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/REVIEW_1791387019871311556.log"
+  },
+  {
+    "stage": "ARCHIVE",
+    "start": "2026-10-07T23:32:58.745129+08:00",
+    "end": "2026-10-07T23:33:00.754337+08:00",
+    "seconds": 54.30211280286312,
+    "exit_code": 1,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/ARCHIVE_1791387126452248022.log"
+  }
+]

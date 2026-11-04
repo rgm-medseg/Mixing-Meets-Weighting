@@ -1,0 +1,43 @@
+{
+  "identity": "9c039632d8918000110d4d8d541296761dd96f663068b817b651dd2940f1b740",
+  "method_id": "Full_main",
+  "checkpoint_sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+  "branch": "model_1",
+  "round": 2,
+  "order_index": 3,
+  "frame": "patient082_frame01",
+  "patient": "patient082",
+  "slices": 16,
+  "seconds": 0.09832048788666725,
+  "ms_per_slice": 6.145030492916703,
+  "valid": true,
+  "input_shape": "(16, 224, 224)",
+  "prediction_sha256": "210df4252a6d1819aaac3e5977687db2066b0c001369f79b8fd208119c30c5f1",
+  "resource_samples": [
+    {
+      "time": "2026-10-07T19:39:36.530570+08:00",
+      "index": 0,
+      "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+      "used_mib": 603,
+      "free_mib": 39723,
+      "utilization": 2,
+      "pids": [
+        76244
+      ]
+    },
+    {
+      "time": "2026-10-07T19:39:36.629090+08:00",
+      "index": 0,
+      "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+      "used_mib": 603,
+      "free_mib": 39723,
+      "utilization": 2,
+      "pids": [
+        76244
+      ]
+    }
+  ],
+  "time_scope": "preloaded CPU image -> native-size mask; order0 resize,H2D,forward,softmax+argmax,D2H,order0 restore; excludes disk IO/save and GT metrics",
+  "batch": 1,
+  "precision": "FP32"
+}

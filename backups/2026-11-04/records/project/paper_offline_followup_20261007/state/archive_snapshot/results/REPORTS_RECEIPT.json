@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "identity": "98f2cac076f3932d9d13ec60752d0c4d261a0c99663a8900ee86a558d9fb33cc",
+  "producer_sha256": "a98c34ffeabf9a2762286f10c5eb8bb088281a3232efdb4df738da703a610ef7",
+  "presentation_sha256": "3445400d3b5eab0c98a2aba4fcf2ce6be3a113d8ac63eda2b60f40bbd3d88e86",
+  "numerical_review": {
+    "source": "PARTIAL: immutable files PASS; Full author/code/trace unique mapping NEEDS_MAPPING",
+    "prediction_alignment": "PASS",
+    "statistics_timing": "PASS",
+    "figure_text": "PASS: automated rendered bounds and CSV checked; all PNG figures visually inspected",
+    "reproduction_archive": "PASS",
+    "A2_independent_checks": 192,
+    "A3_two_patient_checks": 12,
+    "timing_blocks": 80,
+    "volume_units": 480,
+    "uniform_rows": 2080,
+    "training_updates": 0,
+    "archive_verification": "Actual extraction SHA verification occurs immediately after compression; any failure aborts delivery."
+  },
+  "scope": "completed raw regeneration/independent numerical reviews; presentation-only additions require no GPU/statistics rerun"
+}

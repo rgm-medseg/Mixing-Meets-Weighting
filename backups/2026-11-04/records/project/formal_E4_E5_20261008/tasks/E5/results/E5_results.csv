@@ -1,0 +1,2 @@
+run,status,checkpoint,checkpoint_sha256,selected_step,cases,patients,unit,dice,iou,hd95,asd
+E5,EVALUATED,/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E5/runs/E5_AdaMix_CT_common_protocol/checkpoints/best.ckpt,7a124cfe70515de469915ce213feea258114b1398b125345559d1b5761cffd62,27200,40,20,grid,0.8837005603789956,0.7978213943286036,2.0137121900334867,0.8358104425892908

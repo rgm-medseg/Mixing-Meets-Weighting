@@ -1,0 +1,13 @@
+{
+  "time": "2026-10-07T00:00:53.731359+08:00",
+  "status": "VERIFIED",
+  "archive": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/TCSMIX_control_evidence_20261006.tar.gz",
+  "sha256": "0bb1cb135ef9ed3add9b8939e20b4dd42c5fb005afade770fc3005701a783775",
+  "bytes": 1744928,
+  "MiB": 1.664093017578125,
+  "files_verified": 145,
+  "manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/evidence_snapshot_20261006/SHA256SUMS",
+  "formal_training_started": false,
+  "optimizer_calls": 480,
+  "old_queue": "INTERRUPTED"
+}

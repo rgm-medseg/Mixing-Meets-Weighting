@@ -1,0 +1,9 @@
+{
+  "status": "BLOCKED",
+  "created_at": "2026-08-25T18:37:34.644948+00:00",
+  "formal_started": true,
+  "tmux_started": true,
+  "completed_count": 22,
+  "blocked_count": 5,
+  "failed_count": 0
+}

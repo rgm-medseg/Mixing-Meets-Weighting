@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_direction_20261017/scripts/analyze_direction.py", line 263, in <module>
+    primary()
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_direction_20261017/scripts/analyze_direction.py", line 220, in primary
+    assert np.array_equal(labels, lc)
+AssertionError

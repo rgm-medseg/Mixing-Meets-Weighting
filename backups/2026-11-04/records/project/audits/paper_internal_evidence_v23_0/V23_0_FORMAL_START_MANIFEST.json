@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-23T03:41:30.058266+00:00",
+  "V23_0_PRELAUNCH_READY": true,
+  "FORMAL_FULL_STARTED": false,
+  "FORMAL_TMUX_CONTROLLER_STARTED": false,
+  "FORMAL_START_AUTHORIZATION": false,
+  "tmux_session": "paper_internal_evidence_controller_v23_0",
+  "FinalRegistry": "audits/paper_internal_evidence_v23_0/V23_0_MASTER_TASK_REGISTRY_FINAL.tsv",
+  "FinalRegistrySHA256": "6938f4117b3f3107525ffcefe3bc80be9461d39cebf83f448e8f4fd548aa820c",
+  "Controller": "controllers/paper_internal_evidence_controller_v23_0.py",
+  "ControllerSHA256": "34a8c92d3cabda09246caab6c1a83ad4e03cc978f022c742ab14362f526af1f5",
+  "task_count": 13,
+  "launch_task_count": 12,
+  "launch_ready_count": 12,
+  "post_full_waiting_count": 1,
+  "new_full_ready_count": 4,
+  "test_access_allowed_sum": 0,
+  "reviews": [
+    {
+      "Review": "REVIEW_1_SCRIPTS_CONFIGS_RECEIPTS",
+      "Status": "PASS",
+      "Evidence": "all non-blocked launch rows FinalLaunchReady=PASS"
+    },
+    {
+      "Review": "REVIEW_2_ADDED_HARD_GATES",
+      "Status": "PASS",
+      "Evidence": "ARM111 parent identity PASS; training dynamics VAL-only PASS"
+    },
+    {
+      "Review": "REVIEW_3_SENSITIVITY_L1_L10",
+      "Status": "PASS",
+      "Evidence": "audits/paper_internal_evidence_v23_0/V23_0_SENSITIVITY_L1_L10_AUDIT.tsv"
+    },
+    {
+      "Review": "REVIEW_4_CONTROLLER_DRY_CONSUMPTION",
+      "Status": "PASS",
+      "Evidence": "audits/paper_internal_evidence_v23_0/V23_0_CONTROLLER_DRY_CONSUMPTION.tsv"
+    },
+    {
+      "Review": "REVIEW_5_NO_PREMATURE_FORMAL_OR_TEST",
+      "Status": "PASS",
+      "Evidence": "no V23 tmux session; TestAccessAllowed=0 for every registry row"
+    }
+  ]
+}

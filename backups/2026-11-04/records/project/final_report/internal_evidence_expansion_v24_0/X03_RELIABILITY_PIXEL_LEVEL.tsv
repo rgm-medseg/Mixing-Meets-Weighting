@@ -1,0 +1,4 @@
+BandPx	PositiveLabel	ScoreName	HigherScoreMeans	PixelCount	ErrorRate	AUROC	AUPRC	SpearmanRho
+1	ARM111_prediction_error	X03_contour_uncertainty	more_uncertain_or_fragile_boundary	92838	0.229356513497	0.662667723775	0.341221266045	0.236905041287
+2	ARM111_prediction_error	X03_contour_uncertainty	more_uncertain_or_fragile_boundary	154131	0.165949744049	0.727699106190	0.310653436724	0.293451512521
+3	ARM111_prediction_error	X03_contour_uncertainty	more_uncertain_or_fragile_boundary	224720	0.126864542542	0.781302027710	0.299179666115	0.324320520925

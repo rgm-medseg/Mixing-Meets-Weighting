@@ -1,0 +1,157 @@
+请在我的训练服务器上执行下一阶段：启动唯一一项 R2 固定面积对照，并利用已有预测补查 R1 的主要误差病例。准备、核查和正式启动 R2 已获授权；通过启动前检查后直接进入服务器 tmux，不再停在 WAITING_FOR_FULL_APPROVAL。训练、评价、分析和归档由普通 Python/Bash 后台流水线完成，使我关闭电脑、VS Code、SSH 或 Codex 后仍可继续。
+
+本次只授权一项 ACDC 10% 单次完整训练 R2。原 E1–E5 保持暂停，不重新训练 R1，不新增控制器、参数扫描、多随机种子或其他数据集实验。先完成必要分析与接线核查，再启动 R2；不等待论文 PDF 或审查报告。
+
+一、现有项目与证据
+
+论文：Mixing Meets Weighting: Confidence-Modulated Semi-Supervised Medical Image Segmentation。
+框架：β-FFT；模块名称为 TRC（Token-Guided Residual Conditioning）、TCSMix（Teacher-Confidence-Scaled Mixing）、CTW（Confidence-Transition Weighting）。旧代码可能仍用 Mask Token、AdaMix、CRW，保持可运行的内部接口；报告使用当前名称，并区分本文 TCSMix 与外部 AdaMix。
+
+服务器预期：n1 / GPU0 / A100 40GB。
+项目根目录：/home/renguanming/jupyterlab/rgm/beta-FFT-main/
+机制改进根目录：/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/
+R1 根目录：/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/
+旧队列目录：/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/
+旧 E1 暂停在 3976 步，E2–E5 未启动。
+
+优先读取 R1 的 protocol.json、configs/R1_full_v2B.yaml、run_manifest.json、R2_FIXED_AREA_PROPOSAL.md、analysis/R2_area_proposal.json、FINAL_REPORT_R1_CN.md、初始化/检查点选择回执、实际运行源代码和脚本。验证已完成 R1 的轨迹、配置和必要文件哈希，采用真实运行版本，不根据文字摘要重新实现 v2_B。
+
+R1 已完成 30,000 个联合迭代，两学生各更新 30,000 次；验证集选择 student 1 的第 29,000 步检查点。R1 最终 Dice 89.9844521%、IoU 82.3419060%、HD95 2.94213147、ASD 0.76892564；旧 Full 对应 90.3496577%、82.9327295%、1.42336669、0.42902650。数值以原 CSV 和评价回执核实，不手填代替读取。
+
+R1 全程真实矩形为 85–94，共 10 种尺寸、15,784 次相邻尺寸变化；平均交换像素数 8492.1475333，平均实际面积比例 0.129579887898763。v2_B 已产生动态尺度，R1 的分割性能下降。当前任务是获得面积匹配对照、解释已有误差，不以“必须涨点”为执行条件。
+
+二、先锁定 R2 定义与固定面积
+
+R2 = 原 TRC + 固定 92×92 的区域混合 + 原空间 CTW。
+与 R1 相比，唯一方法变化是将每步由 q_B 决定的矩形高宽替换为固定高宽。教师预测、前景支持、互补混合方向、随机位置、批次/视图共享掩码、伪标签处理、CTW 空间权重和其他损失沿用 R1。
+
+固定面积依据已经明确：使用 R1 全部联合步 1–30000 的真实 actual_area_pixels，计算平均像素面积，在原方形比例下选择最接近该均值的整数平方；若距离相同选择较小边长。复核该规则得到 92×92，不按 R1 最优步之前的轨迹、连续 s 的均值或测试成绩重新选择。
+
+锁定参数：
+- image_size = 256×256；rectangle_h = rectangle_w = 92；
+- fixed_side = 92/256 = 0.359375；
+- 实际面积 = 8464/65536 = 0.129150390625，即 12.9150390625%；
+- 相对 R1 平均面积的有符号差 = -0.000429497273763，约 -0.0429497 个面积百分点，相对差约 -0.331454%。
+
+R1 完整控制轨迹 SHA256 应为：
+315139c2d54a89205988e0dd92eb28855ac3c42b84198b216d4c49fe2a35cb95
+
+将轨迹来源、哈希、平均计算、候选整数平方比较和误差写入 R2_AREA_LOCK.json，启动前冻结。若来源不匹配，先查明文件版本；不能静默更换尺寸。旧 97×97 控制不属于本次 R2 定义。
+
+R2 仍复用相同 detached 教师输出和既有伪标签支持，计算并记录 v2_B 的 q_B 及各类统计，但这些值仅用于日志，不控制 R2 实际矩形大小。保持同一 mask 同时用于图像和目标组合。
+
+日志分清：q_B 为前景类别均衡的概率间隔；s_dynamic_B = 0.18+0.20*q_B 为离线参考；s_actual 固定为 0.359375，h/w_actual 固定为 92。若兼容旧字段 s，必须明确其为实际固定边长比例。统计代码不能再对 R2 断言实际 s 等于动态映射。
+
+随机位置继续调用 R1 原有位置采样逻辑，不增加随机调用、不改采样端点。由于矩形大小不同，合法位置范围和后续训练状态可以不同；准确记录实际位置与数据顺序，不宣称两个训练轨迹逐步完全相同。
+
+三、逐项沿用 R1 的完整训练与评价协议
+
+仅 ACDC 10%，70/10/20 个训练/验证/测试病例；7 个标注病例与相同的 136 个标注切片，名单、划分、数据文件索引和哈希沿用 R1。2D 256×256；batch 24，labeled_bs 12；seed 42；num_workers 16；FP32。
+
+从相同原预训练文件重新初始化，半监督 joint_step 从 0 开始：
+/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth
+预训练 SHA256：
+477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3
+
+严格复用 R1 对学生、教师、TRC 和优化器的初始化/加载规则，包括原预训练优化器状态移植、TRC 残差门控 gamma=0。R1、旧 Full、短程模型或暂停 E1 的权重均不作为 R2 起点。不额外训练预训练模型。
+
+优化器 SGD，momentum 0.9、weight_decay 1e-4；学习率按 R1 的真实配置为 0.01 常数，不增加 polynomial decay 或其他调度。EMA 0.99，空间 CTW 系数 0.05，损失及其输入、权重、warmup、增强、双视图与频率分支沿用 R1。CTW 使用原空间版本，不使用 E1 的均匀权重。
+
+预算：30,000 个联合迭代，每学生正常情况下各 30,000 次成功 optimizer.step；不能改成两学生合计 30,000 次。分别记录逻辑步、物理优化器成功调用和恢复重放。
+
+每 200 步验证与按原规则保存；student 1 的验证集前景 macro Dice 严格提高才更新最优，平局处理沿用 R1。先冻结选中检查点和哈希，再最终测试。ACDC 测试未参与此前候选方法选择，沿用作者已更正的事实；本次也不按测试结果选模型或调整固定面积。
+
+评价完全沿用 R1：40 个 ED/ES frame volumes、20 个病例、RV/MYO/LV 三类；相同重建和 nearest resize 规则、空预测处理、无预测后处理及平均方式。HD95/ASD 是原 H5 重建网格单位，spacing=(1,1,1)，不是毫米；ASD 是 MedPy 的 prediction→GT 单向 ASD。不能静默改为双向 ASD、毫米或新后处理。展示 Dice/IoU 百分比时保留原始 fraction CSV。
+
+四、独立目录与实际接线核查
+
+建议 R2 根目录：
+/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/
+tmux 会话：beta_fft_R2_fixed92_20261007
+
+在独立目录内复制并适配 R1 的工程脚本；冻结 R1 源文件，所有 R2 结果、状态、检查点、日志和代码修改写入新目录。不得覆盖 R1、旧 E1–E5 或旧主结果。
+
+特别核查 R1 的硬编码，而不是只改 YAML：
+- controller.py 已有 v2_fixed 分支，可在审查后复用，signal_version=v2_B、fixed_side=0.359375、mix_mode=fixed；
+- control_runtime.py 的 configure 目前限定 controller_version=='v2_B'，轨迹路径和 checkpoint_metadata 也有 R1/v2_B 字样，须正确适配固定版本；
+- common 的工作目录、bootstrap/import 路径、训练入口、builder、预检查、postcheck、evaluator、analyzer、pipeline、打包脚本、恢复脚本逐项核查，确保没有写回 R1 或错误导入旧 runtime；
+- 源代码补丁、有效配置、命令行、检查点元数据与实际掩码都应标识 R2_fixed92/v2_fixed，并能由日志验证。
+
+配置至少明确 task=R2、controller_version=v2_fixed、signal_version=v2_B、fixed_side=0.359375、mix_mode=fixed、weight_mode=spatial、trc=token。新协议使用自己的哈希，并保存 parent R1 protocol/config/code hashes，不冒用 R1 哈希代表 R2。
+
+用合成数据或缓存教师输出检查：q_B 改变而实际矩形始终 92×92；mask 与 target mask 一致，实际面积正确；随机位置调用与互补组合规则正确；模型/损失接线和输出目录正确。尽量不做额外训练；确有需要时 smoke 最多 2 个联合步，独立保存，然后丢弃 smoke 状态，正式训练从原初始化重新开始。
+
+检查 R1 与 R2 的方法差异限定在尺寸控制，其余科学计算保持原样。初始化实际回执应验证公共骨干与原预训练完全匹配、TRC gamma=0、两个优化器加载规则一致，并记录各分支参数数目和版本。若必要源文件、初始化或评价依赖缺失，先修复实际阻塞；历史预训练生成日志缺失可如实记录，不因此新增训练。
+
+五、后台流水线与恢复
+
+预期 GPU0 已空闲，现场核实实际进程、显存、磁盘和环境。不要杀其他任务或恢复旧队列。若资源被占用，由独立后台脚本记录 WAITING_RESOURCE 并有限频率轮询，不能擅自换 GPU 或 batch。
+
+准备实际可执行的 start_tmux.sh、status.sh、stop.sh、resume.sh，以及预检查→R2 训练→最终评价→分析→汇总→归档的一体流水线。普通 Python/Bash 控制器在服务器 detached tmux 内管理全部阶段；不是仅把 Codex 放进 tmux。使用持久磁盘、绝对路径和服务器解释器，不依赖客户端隧道、挂载、代理或在线交互。
+
+用文件锁阻止重复 start/resume。若同定义 R2 已运行或已完成，报告并复用状态，不重复开跑。原子更新阶段、heartbeat、PID、GPU、joint_step、各学生成功更新数、检查点、日志和 ETA；区分 WAITING_RESOURCE、RUNNING、TRAINED、EVALUATED、ANALYZED、DONE、FAILED、INTERRUPTED。
+
+按 R1 保存最优权重、最新完整恢复状态及最终状态。完整状态覆盖两学生、教师、优化器、迭代、主 RNG、可保存的采样器位置等。已知 16 个 worker 增强流不能保证逐位精确恢复，准确记录边界，不改变 dataloader 协议来消除这一限制。stop.sh 只请求 R2 安全保存并退出；resume.sh 从同一 R2 的完整检查点继续，保持代码/配置不变；已完成训练就继续剩余阶段，不重训。
+
+训练错误保留退出码、traceback、轨迹和检查点，归档现有证据；不自动换机制、降 batch、换种子或从零重试。分析或打包错误分阶段记录，可以独立修复并续接后续步骤。
+
+电脑/SSH/Codex 关闭不影响服务器流水线；服务器或容器重启后需要运行恢复脚本，不承诺 tmux 跨重启存活。
+
+R1 实际训练约 7 小时 20 分钟，可作为 R2 时间参考；正式启动后结合完整墙钟时间与验证/保存开销更新 ETA，不只用排除了验证和取数据时间的 step_seconds 外推。
+
+六、已有 R1 病例的误差分析，不新增训练
+
+先定位 R1 和旧 Full 的真实预测、GT、评价回执与病例 CSV；使用已冻结的最优检查点预测。优先核查 patient065、patient075、patient083 的两个 frame volumes，并保留全部病例的总体结果。若预测文件尚未落盘而权重和数据可用，允许用同一冻结检查点、同一评价程序离线重建，明确这是推理，不是训练。
+
+已有独立汇总提示：12/20 个病例 Dice 下降；RV 约 +0.20 个百分点，MYO 约 -0.54，LV 约 -0.75。patient065 和 patient075 贡献了相对旧 Full 的 HD95 净增量约 90%、ASD 净增量约 70%。将这些作为待复核的数值，不把两个病例当成全部性能变化的原因。
+
+复核三维 class mask 与逐 slice 误差：
+1. 各类 TP/FP/FN、Dice/IoU、逐 slice 面积和误差分布、GT/预测覆盖的首末 slice；
+2. 三维连通域数量、最大域占比、远离 GT 的假阳性或孤立域，明确连通邻域；
+3. 按原 directed ASD 和 HD95 定义定位较大的表面距离所对应的区域、slice 和方向，记录用于诊断的距离分布；
+4. 判断距离恶化主要与远端假阳性、漏分割、范围延伸或局部轮廓偏移中的哪些现象相符，以实际 mask 支持判断；
+5. 选择真正出现较大误差的 slice，与原图、GT、旧 Full、R1 对照，保留统一方向、颜色、尺度和标注。示例选择规则、病例/frame/slice ID、类别和该 slice/volume 指标写入 CSV。
+
+这些是最终测试后的误差描述，不能反向用于调固定面积、改控制器、选检查点或加预测后处理。不要只展示最大 GT 前景 slice，也不要删除坏病例或生成“去异常值主结果”。已有预测/GT不可用时，标明具体缺失和 PARTIAL，仍执行定义正确的 R2。
+
+R2 训练期间避免额外 GPU 推理争抢 GPU0；已有数组分析优先在 CPU 上运行，限制线程和内存。需要 GPU 推理就排在 R2 完成后。分析阶段全部由后台脚本安排，不依赖我的后续消息。
+
+七、R2 完成后的评价、对照与交付
+
+完整记录 30,000 步：实际固定 h/w/area/位置、q_B 与各类间隔和支持数、fallback、旧全图 q、数据索引、损失/CTW、LR、优化器成功调用、耗时/显存；诊断信号复用现有 teacher 输出，不增加 teacher forward 或训练随机数消耗。
+
+训练后核查完整预算、验证选择和检查点哈希，再统一评价。保存总体、分类、frame-volume 和 patient 指标及服务器上的预测。并列比较 R2、R1、旧 Full、β-FFT baseline，引用原始来源，缺失参照记 NA，不根据论文表格补写病例值。R1 和旧 Full 已有统一评价结果时可复用已验证 CSV，避免无必要的重复推理。
+
+主要分析：
+- R2 全程尺寸是否确为 92×92，固定实际面积与 R1 全程平均面积匹配误差；
+- R1/R2 各类、各病例和总体 Dice/IoU/HD95/ASD 的配对差值，保留全部改善和下降病例；
+- R1 动态面积按每 5000 步分段的分布与 R2 固定面积对照，注明平均匹配不等于每阶段匹配；
+- R1 的 q_B 与分割质量分析沿用已冻结诊断样本，区分验证诊断和测试误差描述；
+- 主要误差病例在旧 Full/R1/R2 中的几何表现，训练墙钟、阶段耗时、峰值显存与日志开销。
+
+本轮只有一次运行，不报告跨种子稳定性或把病例差值当成训练重复。R1/R2 对照比较的是动态混合策略与平均面积相近的固定策略；即使 R1 更好，也不能单凭该结果将增益拆成置信度信息、尺度波动和课程变化各自的贡献，更不能据此宣称已证明与 CTW 的协同。R2 更好或持平时保留真实结果，不继续自动搜索。
+
+分别保留旧 TCSMix、v2_B R1 和固定 R2 的方法/结果归属。旧 90.35% 仍属于旧机制；当前论文主结果及其他数据集没有自动变成 v2_B。不要在本次任务里修改论文或旧数据。
+
+启动后立即核实 detached tmux、控制器和训练 PID、进度与实际固定 mask；做一次 attach/detach 验证并用不同时间的 step/heartbeat 证明继续推进，不必等待训练完成才回复。
+
+启动交付：START_REPORT_R2_CN.md、启动证据包和真实可复制的 tmux/status/log/stop/resume 命令。说明实际主机/GPU、会话、PID、当前 step、初始化与配置来源、固定面积、ETA、旧队列保持暂停。资源等待时如实报告状态。
+
+最终由后台自动生成：
+- R2_results.csv、R2_class_metrics.csv、R2_case_metrics.csv、R2_patient_metrics.csv、case_class_metrics.csv；
+- R2_control_trace.csv、optimizer_calls.csv、validation_trace.csv、配对差值与原始分析 CSV/图；
+- R2_AREA_LOCK.json、实际协议、冻结配置、初始化回执、检查点选择回执、源代码补丁及有效入口快照；
+- R1_ERROR_ANALYSIS_CN.md、FINAL_REPORT_R2_CN.md、EDITOR_HANDOFF_R2_CN.md；
+- 实际操作脚本、阶段日志、五审记录和 SHA256SUMS；
+- TCSMix_R2_fixed92_final_evidence.tar.gz 及外层 SHA256。
+
+包里放入真实报告、CSV、图、补丁和必要日志，使写作助手不用登录服务器也能审查。大型权重、原始医学影像和全量预测留服务器，提供实际路径、哈希及预测索引；定性图按已有脱敏方式处理。不包含凭据。打包完成后另写完成回执和外层校验，清楚区分归档时快照与最终流水线状态。
+
+五审并修正可修问题：
+第一审：实验定义与范围，只运行 R2，固定 92×92，旧队列与旧结果不受影响。
+第二审：实际接线、初始化、原损失/CTW/TRC、预算、验证选择与测试时序一致。
+第三审：逐步轨迹、面积、各级指标汇总、配对差值、网格单位与单向 ASD 一致。
+第四审：病例误差解释有 mask 证据，结果归属清楚，保留不利结果，不夸大机制结论。
+第五审：脚本可脱离客户端运行，恢复边界准确，文件实际存在，内部和外层 SHA256 均通过，最终包可独立审查。
+
+现在开始：现场读取 R1 证据，冻结固定面积，适配和检查独立 R2 入口，安排已有预测误差分析，在服务器 tmux 启动唯一一项 R2，核验真实推进并交付启动报告。后续评价、分析、五审和打包全部自动完成。

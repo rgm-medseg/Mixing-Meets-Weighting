@@ -1,0 +1,17 @@
+{
+  "stage": "ARCHIVE",
+  "command": [
+    "/home/renguanming/.conda/envs/beta_fft/bin/python",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/finalize.py",
+    "package"
+  ],
+  "start": "2026-10-08T08:14:35.131507+08:00",
+  "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/ARCHIVE_2026-10-08T081435131467+0800.log",
+  "resume_step": 30000,
+  "process_identity": {
+    "pid": 18998,
+    "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/finalize.py package ",
+    "start_ticks": "2614348709"
+  },
+  "process_group": 18998
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "file": "mechanism_strengthening_20261013/figures/Fig_TRC_residual_intervention.pdf",
+    "pages": 1,
+    "width_mm": 190.0000000000161,
+    "height_mm": 144.99999999998442,
+    "fonts": [
+      {
+        "name": "/EVICAO+DejaVuSans-Bold",
+        "subtype": "/CIDFontType2",
+        "embedded_truetype": true
+      },
+      {
+        "name": "/BMQQDV+DejaVuSans",
+        "subtype": "/CIDFontType2",
+        "embedded_truetype": true
+      }
+    ],
+    "text_characters": 658
+  },
+  {
+    "file": "mechanism_strengthening_20261013/figures/Fig_joint_TCSMix_CTW.pdf",
+    "pages": 1,
+    "width_mm": 190.0000000000161,
+    "height_mm": 149.99999999999972,
+    "fonts": [
+      {
+        "name": "/EVICAO+DejaVuSans-Bold",
+        "subtype": "/CIDFontType2",
+        "embedded_truetype": true
+      },
+      {
+        "name": "/BMQQDV+DejaVuSans",
+        "subtype": "/CIDFontType2",
+        "embedded_truetype": true
+      }
+    ],
+    "text_characters": 708
+  },
+  {
+    "file": "mechanism_strengthening_20261013/figures/Table_fixed_control.pdf",
+    "pages": 1,
+    "width_mm": 190.0000000000161,
+    "height_mm": 58.00000000000083,
+    "fonts": [
+      {
+        "name": "/EVICAO+DejaVuSans-Bold",
+        "subtype": "/CIDFontType2",
+        "embedded_truetype": true
+      },
+      {
+        "name": "/BMQQDV+DejaVuSans",
+        "subtype": "/CIDFontType2",
+        "embedded_truetype": true
+      }
+    ],
+    "text_characters": 544
+  },
+  {
+    "file": "mechanism_strengthening_20261013/figures/Table_regions.pdf",
+    "pages": 1,
+    "width_mm": 190.0000000000161,
+    "height_mm": 144.99999999998442,
+    "fonts": [
+      {
+        "name": "/EVICAO+DejaVuSans-Bold",
+        "subtype": "/CIDFontType2",
+        "embedded_truetype": true
+      },
+      {
+        "name": "/BMQQDV+DejaVuSans",
+        "subtype": "/CIDFontType2",
+        "embedded_truetype": true
+      }
+    ],
+    "text_characters": 1217
+  }
+]

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/scripts/pipeline.py", line 21, in <module>
+    try:main()
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/scripts/pipeline.py", line 16, in main
+    if (W/'state/stop_requested').exists():raise InterruptedError('graceful stop; completed units retained')
+InterruptedError: graceful stop; completed units retained
+Traceback (most recent call last):
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/scripts/pipeline.py", line 21, in <module>
+    try:main()
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/scripts/pipeline.py", line 16, in main
+    if (W/'state/stop_requested').exists():raise InterruptedError('graceful stop; completed units retained')
+InterruptedError: graceful stop; completed units retained

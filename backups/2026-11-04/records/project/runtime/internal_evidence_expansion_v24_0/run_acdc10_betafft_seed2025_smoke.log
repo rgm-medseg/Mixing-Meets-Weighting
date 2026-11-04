@@ -1,0 +1,23 @@
+Namespace(root_path='/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC', exp='beta_fft_acdc_official_10pct_seed42', model='unet', pre_iterations=10000, max_iterations=1, batch_size=24, deterministic=1, base_lr=0.01, image_size=[256, 256], seed=2025, num_classes=4, labeled_bs=12, labelnum=7, u_weight=0.5, gpu='0', consistency=0.1, consistency_rampup=200.0, magnitude=6.0, s_param=6, patch_size=64, h_size=4, w_size=4, top_num=4, run_root='/home/renguanming/jupyterlab/rgm/beta-FFT-main/runtime/internal_evidence_expansion_v24_0/smoke/ACDC10_BETAFFT_SEED2025', pretrained_model='/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth', data_manifest_name='official', resume_ckpt='', save_interval=1, split_name='acdc10', labeled_list='', unlabeled_list='', val_list='/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list', test_list='/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/test.list', input_mode='2d', context_slices=1, relation_type='center_anchored_neighbor', relation_stage='x0', relation_dim=8, use_ip_crm_weighting=False, ip_crm_contour_weight=0.5, ip_crm_myo_core_conf_thresh=0.8, ip_crm_contour_conf_thresh=0.7, ip_crm_boundary_width=2, ip_crm_log_interval=20, use_ip_rdc=False, ip_rdc_weight=0.0, ip_rdc_confident_interior_thresh=0.8, ip_rdc_boundary_width=2, ip_rdc_log_interval=200)
+run_root=/home/renguanming/jupyterlab/rgm/beta-FFT-main/runtime/internal_evidence_expansion_v24_0/smoke/ACDC10_BETAFFT_SEED2025
+model_in_channels=1 input_mode=2d use_neighbor_relation=False relation_dim=8
+pretrained_model=/home/renguanming/jupyterlab/rgm/KnowSAM-main/best_results/ACDC_10/unet_best.pth
+/home/renguanming/.conda/envs/beta_fft/lib/python3.10/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 12, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/beta_fft_acdc_repro.py:724: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  load_state = torch.load(pre_model, map_location="cpu")
+Train total 1312 samples
+val total 20 samples from /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list
+test total 40 samples from /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/test.list
+Traceback (most recent call last):
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/beta_fft_acdc_repro.py", line 1177, in <module>
+    train()
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/beta_fft_acdc_repro.py", line 724, in train
+    load_state = torch.load(pre_model, map_location="cpu")
+  File "/home/renguanming/.conda/envs/beta_fft/lib/python3.10/site-packages/torch/serialization.py", line 1065, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/renguanming/.conda/envs/beta_fft/lib/python3.10/site-packages/torch/serialization.py", line 468, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/renguanming/.conda/envs/beta_fft/lib/python3.10/site-packages/torch/serialization.py", line 449, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/renguanming/jupyterlab/rgm/KnowSAM-main/best_results/ACDC_10/unet_best.pth'

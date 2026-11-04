@@ -1,0 +1,48 @@
+{
+  "status": "PASS_WITH_CONTROLLER_RUNTIME_STATE_STALE",
+  "created_at": "2026-08-26T03:22:00+00:00",
+  "scope": "V24.0 post-controller finalization closure after corrected ACDC2 formal scope",
+  "scientific_assets_modified": false,
+  "training_parameters_modified": false,
+  "x03_modified": false,
+  "formal_training_restarted": false,
+  "controller_restarted": false,
+  "frozen_registry_sha256": "1aeb5c3ce40ff74bb7cd2554a54db8d06f22f7eb521fd16d964514af0fa21c16",
+  "postfull_finalization_current_sha256": "b862033e7589bea8d9a50e30d1b66b27539ca751a51588de9a0a43a9a1b05f1e",
+  "postfull_finalization_frozen_registry_sha256": "5b589a5f772b940803eb05fe5b048f0dae5284d515c7d5eb0fdfeed631f20008",
+  "postfull_finalization_drift_classification": "ENGINEERING_CLOSURE_SEMANTICS_ONLY",
+  "drift_reason": "The script was corrected to consume the frozen registry terminal ACDC2 protocol-exclusion semantics and to prevent fake ACDC2 2% metrics after the four active ACDC10 seed tasks completed and frozen TEST receipts existed.",
+  "affected_scientific_training_tasks": [],
+  "affected_checkpoint_selection": false,
+  "affected_test_metrics": false,
+  "active_new_full_formal_test_receipts": [
+    "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2025/TEST_COMPLETION_RECEIPT.json",
+    "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2025/TEST_COMPLETION_RECEIPT.json",
+    "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2026/TEST_COMPLETION_RECEIPT.json",
+    "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2026/TEST_COMPLETION_RECEIPT.json"
+  ],
+  "postfull_and_finalization_status": {
+    "ACDC2_TEST_CLOSURE": "PASS",
+    "SEED_TEST_CLOSURE": "PASS",
+    "BUILD_LABEL_EFFICIENCY": "PASS",
+    "BUILD_SEED_STABILITY": "PASS",
+    "REGENERATE_ALL_TABLES_FIGURES": "PASS",
+    "FINAL_FIVE_REVIEW": "PASS",
+    "FINAL_HANDOFF": "PASS"
+  },
+  "acdc2_closure_semantics": {
+    "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT": true,
+    "ACDC2_rows_are_blocker_records_not_results": true,
+    "fake_results_generated": false
+  },
+  "controller_runtime_state_note": {
+    "runtime_state_path": "runtime/internal_evidence_expansion_v24_0/runtime_state.json",
+    "runtime_state_status": "BLOCKED",
+    "reason_stale": "The controller completed before the corrected terminal-exclusion postfull finalization closure was applied; this stale controller summary must not be interpreted as a scientific task failure.",
+    "failed_count": 0
+  },
+  "handoff": {
+    "path": "final_report/internal_evidence_expansion_v24_0/V24_0_INTERNAL_EVIDENCE_HANDOFF_FOR_CHATGPT.md",
+    "sha256": "bd6dc6cf4ac8b72dd5c941b3494cdee403a16085a161961948de3c2eac17326c"
+  }
+}

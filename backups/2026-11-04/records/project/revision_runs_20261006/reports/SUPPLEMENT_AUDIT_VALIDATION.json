@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "time": "2026-10-06T22:09:17.149855+08:00",
+  "checks": [
+    "original72 locked artifacts unchanged",
+    "all5 configurations unchanged",
+    "150 historical real schedule records and exact integer area matching",
+    "captured E1 raw CSV hash verified",
+    "56 spacing-only cases Dice/IoU exactly unchanged and Z spacing preserved",
+    "16 native-grid rows explicitly separate geometry/GT/prediction changes",
+    "all56 original legacy metrics exactly replayed",
+    "E1/E2/E3/E4 expected change matrix verified",
+    "14 source receipts and2 Full seed configs packaged",
+    "CPU follower matches current script SHA; original training PID/controller unchanged"
+  ],
+  "spacing_only_case_rows": 56,
+  "native_case_rows": 16,
+  "external_missing_rows": 2,
+  "training_added": 0,
+  "extra_seeds_or_searches_added": 0,
+  "GPU_used_for_audits": false,
+  "new_script_sha256": "923cb8a752e804c98b6fcadfc76742d049fc8c3a2dfdd3df02904109b65b9c8c",
+  "new_resume_shell_sha256": "3ee43e0553f725aa4687c1973acfe45cfe74b33dce1166ac680a2c4bb6294c15",
+  "queue_snapshot": [
+    {
+      "task": "E1",
+      "status": "RUNNING",
+      "pid": 28255,
+      "step": 2652,
+      "budget_updates": 30000,
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/E1.log",
+      "reason": "",
+      "time": "2026-10-06T22:09:17.072846+08:00"
+    },
+    {
+      "task": "E2",
+      "status": "PENDING",
+      "pid": null,
+      "step": 0,
+      "budget_updates": 30000,
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/E2.log",
+      "reason": "",
+      "time": "2026-10-06T22:09:17.072970+08:00"
+    },
+    {
+      "task": "E3",
+      "status": "PENDING",
+      "pid": null,
+      "step": 0,
+      "budget_updates": 30000,
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/E3.log",
+      "reason": "",
+      "time": "2026-10-06T22:09:17.073034+08:00"
+    },
+    {
+      "task": "E4",
+      "status": "PENDING",
+      "pid": null,
+      "step": 0,
+      "budget_updates": 30000,
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/E4.log",
+      "reason": "",
+      "time": "2026-10-06T22:09:17.073089+08:00"
+    },
+    {
+      "task": "E5",
+      "status": "PENDING",
+      "pid": null,
+      "step": 0,
+      "budget_updates": 30000,
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/E5.log",
+      "reason": "",
+      "time": "2026-10-06T22:09:17.073140+08:00"
+    }
+  ]
+}

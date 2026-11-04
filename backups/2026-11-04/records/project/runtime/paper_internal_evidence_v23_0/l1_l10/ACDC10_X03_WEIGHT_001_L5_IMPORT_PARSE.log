@@ -1,0 +1,78 @@
+usage: v21_3_acdc10_third_innovation_transfer.py [-h] [--root_path ROOT_PATH]
+                                                 [--exp EXP] [--model MODEL]
+                                                 [--pre_iterations PRE_ITERATIONS]
+                                                 [--max_iterations MAX_ITERATIONS]
+                                                 [--batch_size BATCH_SIZE]
+                                                 [--deterministic DETERMINISTIC]
+                                                 [--base_lr BASE_LR]
+                                                 [--image_size IMAGE_SIZE IMAGE_SIZE]
+                                                 [--seed SEED]
+                                                 [--num_classes NUM_CLASSES]
+                                                 [--labeled_bs LABELED_BS]
+                                                 [--labelnum LABELNUM]
+                                                 [--u_weight U_WEIGHT]
+                                                 [--gpu GPU]
+                                                 [--consistency CONSISTENCY]
+                                                 [--consistency_rampup CONSISTENCY_RAMPUP]
+                                                 [--magnitude MAGNITUDE]
+                                                 [--s_param S_PARAM]
+                                                 [--patch_size PATCH_SIZE]
+                                                 [--h_size H_SIZE]
+                                                 [--w_size W_SIZE]
+                                                 [--top_num TOP_NUM]
+                                                 [--run_root RUN_ROOT]
+                                                 [--pretrained_model PRETRAINED_MODEL]
+                                                 [--data_manifest_name DATA_MANIFEST_NAME]
+                                                 [--resume_ckpt RESUME_CKPT]
+                                                 [--save_interval SAVE_INTERVAL]
+                                                 [--mask_token_enabled MASK_TOKEN_ENABLED]
+                                                 [--adamix_enabled ADAMIX_ENABLED]
+                                                 [--mask_token_num MASK_TOKEN_NUM]
+                                                 [--mask_token_dim MASK_TOKEN_DIM]
+                                                 [--adamix_min_side ADAMIX_MIN_SIDE]
+                                                 [--adamix_max_side ADAMIX_MAX_SIDE]
+                                                 [--mechanism_log_interval MECHANISM_LOG_INTERVAL]
+                                                 [--innovation_x_id INNOVATION_X_ID]
+                                                 [--enable_v21_3_innovation_x ENABLE_V21_3_INNOVATION_X]
+                                                 [--v21_3_innovation_x_weight V21_3_INNOVATION_X_WEIGHT]
+
+options:
+  -h, --help            show this help message and exit
+  --root_path ROOT_PATH
+  --exp EXP
+  --model MODEL
+  --pre_iterations PRE_ITERATIONS
+  --max_iterations MAX_ITERATIONS
+  --batch_size BATCH_SIZE
+  --deterministic DETERMINISTIC
+  --base_lr BASE_LR
+  --image_size IMAGE_SIZE IMAGE_SIZE
+  --seed SEED
+  --num_classes NUM_CLASSES
+  --labeled_bs LABELED_BS
+  --labelnum LABELNUM
+  --u_weight U_WEIGHT
+  --gpu GPU
+  --consistency CONSISTENCY
+  --consistency_rampup CONSISTENCY_RAMPUP
+  --magnitude MAGNITUDE
+  --s_param S_PARAM
+  --patch_size PATCH_SIZE
+  --h_size H_SIZE
+  --w_size W_SIZE
+  --top_num TOP_NUM
+  --run_root RUN_ROOT
+  --pretrained_model PRETRAINED_MODEL
+  --data_manifest_name DATA_MANIFEST_NAME
+  --resume_ckpt RESUME_CKPT
+  --save_interval SAVE_INTERVAL
+  --mask_token_enabled MASK_TOKEN_ENABLED
+  --adamix_enabled ADAMIX_ENABLED
+  --mask_token_num MASK_TOKEN_NUM
+  --mask_token_dim MASK_TOKEN_DIM
+  --adamix_min_side ADAMIX_MIN_SIDE
+  --adamix_max_side ADAMIX_MAX_SIDE
+  --mechanism_log_interval MECHANISM_LOG_INTERVAL
+  --innovation_x_id INNOVATION_X_ID
+  --enable_v21_3_innovation_x ENABLE_V21_3_INNOVATION_X
+  --v21_3_innovation_x_weight V21_3_INNOVATION_X_WEIGHT

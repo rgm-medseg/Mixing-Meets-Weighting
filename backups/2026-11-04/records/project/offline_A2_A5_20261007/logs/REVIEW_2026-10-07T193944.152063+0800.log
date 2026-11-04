@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/scripts/finish.py", line 164, in <module>
+    if __name__=='__main__':main()
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/scripts/finish.py", line 155, in main
+    aggregate();verify_a2();a5review=verify_a5();plots();reports()
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/scripts/finish.py", line 66, in verify_a2
+    assert abs(r['conf_sum']-float(confidence[mask].sum()))<1e-8
+AssertionError

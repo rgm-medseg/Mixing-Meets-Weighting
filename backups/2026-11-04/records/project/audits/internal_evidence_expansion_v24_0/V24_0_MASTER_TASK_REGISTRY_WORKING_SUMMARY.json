@@ -1,0 +1,37 @@
+{
+  "status": "NOT_PRELAUNCH_READY",
+  "created_at": "2026-08-24T15:46:51.399796+00:00",
+  "task_count": 27,
+  "pass_ready_count": 15,
+  "blocked_count": 3,
+  "pending_count": 9,
+  "blocked_or_pending_task_ids": [
+    "PSEUDO_LABEL_EVOLUTION",
+    "PATHOLOGY_SUBGROUP",
+    "STUDENT_DIVERSITY",
+    "ACDC2_BETAFFT_FULL",
+    "ACDC2_OURS_FULL",
+    "ACDC2_TEST_CLOSURE",
+    "SEED_TEST_CLOSURE",
+    "BUILD_LABEL_EFFICIENCY",
+    "BUILD_SEED_STABILITY",
+    "REGENERATE_ALL_TABLES_FIGURES",
+    "FINAL_FIVE_REVIEW",
+    "FINAL_HANDOFF"
+  ],
+  "postfull_closure_hard_gate": "FinalLaunchReady is launch permission only; closure PASS requires FormalFullComplete + BestValSelected + FrozenCheckpointSHA + TEST_COMPLETION_RECEIPT + ResultAsset.",
+  "test_gate_hard_gate": "Per-task TEST remains locked until FormalFullComplete AND BestValSelected AND BestCheckpointSHA256Frozen AND TestProtocolLockPass AND RealTestAccessBeforeCheckpointFreeze==0.",
+  "hard_gate_receipts": {
+    "x03_raw_score_effective_weight": "audits/internal_evidence_expansion_v24_0/X03_RAW_SCORE_EFFECTIVE_WEIGHT_SEMANTIC_AUDIT.json",
+    "acdc2_label1_executability": "audits/internal_evidence_expansion_v24_0/ACDC2_LABEL1_FROZEN_BETAFFT_EXECUTABILITY_AUDIT.json",
+    "test_semantic_split": "audits/internal_evidence_expansion_v24_0/V24_TEST_SEMANTIC_SPLIT_AUDIT.json",
+    "failure_injection": "audits/internal_evidence_expansion_v24_0/V24_FAILURE_INJECTION_AUDIT.json",
+    "prelaunch_l1_l10": "audits/internal_evidence_expansion_v24_0/V24_0_PRELAUNCH_L1_L10_AUDIT_SUMMARY.json"
+  },
+  "required_scripts_pass": true,
+  "controller_dry_run_status": "PASS_WITH_BLOCKERS",
+  "controller_dry_run_failed_count": 0,
+  "registry_sha256": "3d1f2e0aafdc48bf43ccf62a76ef42f3ebcc629ffffc91ef3114e85cc289e8aa",
+  "tmux_start_allowed": false,
+  "formal_started": false
+}

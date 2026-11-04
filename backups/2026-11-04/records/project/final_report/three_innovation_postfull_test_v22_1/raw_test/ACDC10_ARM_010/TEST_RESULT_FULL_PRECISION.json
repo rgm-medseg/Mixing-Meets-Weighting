@@ -1,0 +1,51 @@
+{
+  "ASD": 0.8369085705217402,
+  "Arm": "ARM_010",
+  "BestValDice": 0.9014335770973174,
+  "BestValIter": 22200,
+  "BoundaryUnit": "pixel-unit",
+  "CheckpointPath": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_010/checkpoints/best.ckpt",
+  "CheckpointSHA": "430ed73702d5fa76781de6a878739f863023546e338758ce11ebd05045d93c62",
+  "CheckpointSelectionEndpoint": "VALIDATION_BEST",
+  "Dataset": "ACDC",
+  "Dice": 0.8944393380519765,
+  "EvaluatorPath": "tools/v22_0_acdc_test_frozen_checkpoint.py",
+  "EvaluatorSHA": "5958b1a7514415f67beb184676c649867f6aeb15cce8d3ee5ee3fe5517a798f4",
+  "Finite": true,
+  "HD95": 3.6404427622695974,
+  "IoU": 0.8153195059267717,
+  "PerClassMetrics": {
+    "LV": {
+      "asd": 0.8461721624938846,
+      "dice": 0.9308909453975177,
+      "hd95": 3.7482892414172193,
+      "iou": 0.8761127382047732
+    },
+    "MYO": {
+      "asd": 0.5572018399975145,
+      "dice": 0.8763665154323446,
+      "hd95": 2.106382667832535,
+      "iou": 0.7822890029387851
+    },
+    "RV": {
+      "asd": 1.1073517090738214,
+      "dice": 0.8760605533260671,
+      "hd95": 5.0666563775590365,
+      "iou": 0.7875567766367568
+    }
+  },
+  "Ratio": "10%",
+  "ReturnCode": 0,
+  "TEST_ONLY_MODE": true,
+  "TaskID": "ACDC10_ARM_010",
+  "TestComplete": true,
+  "TestManifest": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/test.list",
+  "TestManifestSHA": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+  "TestTimestamp": "2026-08-22T10:18:36.269792+00:00",
+  "backward_called": false,
+  "checkpoint_reselection_after_test": false,
+  "optimizer_created": false,
+  "optimizer_step_called": false,
+  "schema": "V22_1_POSTFULL_TEST_COMPLETION_RECEIPT",
+  "training_started": false
+}

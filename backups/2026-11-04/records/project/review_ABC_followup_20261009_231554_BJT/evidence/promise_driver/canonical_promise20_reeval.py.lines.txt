@@ -1,0 +1,59 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/paper_blocker_remediation_20260904/scripts/canonical_promise20_reeval.py
+ORIGINAL_SHA256: c49aca7854dfe2949fa71a873a9d9b88439746d5a09a9272f30d55ee43bf80a4
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 30-45 ---
+30:     with temp.open("w", encoding="utf-8") as handle:
+31:         json.dump(payload, handle, indent=2, sort_keys=True)
+32:         handle.write("\n")
+33:         handle.flush()
+34:         os.fsync(handle.fileno())
+35:     os.replace(temp, path)
+36: 
+37: 
+38: def load_launcher(path: Path):
+39:     spec = importlib.util.spec_from_file_location("canonical_promise_evaluator", path)
+40:     if spec is None or spec.loader is None:
+41:         raise RuntimeError(f"cannot import canonical evaluator: {path}")
+42:     module = importlib.util.module_from_spec(spec)
+43:     spec.loader.exec_module(module)
+44:     return module
+45: 
+--- ORIGINAL LINES 68-105 ---
+68:     if checks["training_allowed"]:
+69:         raise RuntimeError("training is forbidden for this remediation")
+70:     if not all(value for key, value in checks.items() if key != "training_allowed"):
+71:         raise RuntimeError(json.dumps({"status": "PRECONDITION_FAIL", "checks": checks}, sort_keys=True))
+72: 
+73:     output.mkdir(parents=True, exist_ok=False)
+74:     start = datetime.now(timezone.utc).isoformat()
+75:     access_log = output / "TEST_ACCESS_LOG.tsv"
+76:     access_log.write_text("timestamp\tstage\tpath\n" + f"{start}\tcanonical_test_only_start\t{manifest}\n", encoding="utf-8")
+77: 
+78:     launcher = load_launcher(evaluator)
+79:     row = {
+80:         "TaskID": config["task_id"],
+81:         "Dataset": "PROMISE12",
+82:         "Ratio": "20%",
+83:         "Arm": "FINAL3",
+84:         "CheckpointSelectionEndpoint": config["selection_endpoint"],
+85:         "BestValDice": str(config["best_val_dice"]),
+86:         "BestValIter": str(config["best_val_iteration"]),
+87:         "CheckpointPath": config["checkpoint"],
+88:         "CheckpointSHA": config["checkpoint_sha256"],
+89:         "TestManifest": config["test_manifest"],
+90:         "TestManifestSHA": config["test_manifest_sha256"],
+91:         "EvaluatorPath": config["canonical_evaluator"],
+92:         "EvaluatorSHA": config["canonical_evaluator_sha256"],
+93:         "BoundaryUnit": "pixel-unit",
+94:     }
+95:     receipt = launcher.promise_run(row, output)
+96:     end = datetime.now(timezone.utc).isoformat()
+97:     with access_log.open("a", encoding="utf-8") as handle:
+98:         handle.write(f"{end}\tcanonical_test_only_complete\t{manifest}\n")
+99: 
+100:     final = {
+101:         "status": "EVALUATION_PASS",
+102:         "operation": "TEST_ONLY_REEVALUATION",
+103:         "training_started": False,
+104:         "optimizer_created": False,
+105:         "backward_called": False,

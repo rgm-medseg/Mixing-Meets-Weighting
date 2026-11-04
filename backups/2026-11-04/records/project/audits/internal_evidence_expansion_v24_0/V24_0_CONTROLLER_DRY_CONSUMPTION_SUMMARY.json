@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:18:05.760540+00:00",
+  "formal_started": false,
+  "tmux_started": false,
+  "dry_consumption": "audits/internal_evidence_expansion_v24_0/V24_0_CONTROLLER_DRY_CONSUMPTION.tsv",
+  "blocked_count": 0,
+  "noncritical_blocked_count": 3,
+  "protocol_excluded_count": 2,
+  "failed_count": 0,
+  "tmux_start_allowed": true
+}

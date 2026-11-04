@@ -1,0 +1,32 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/adapters/evaluate.py
+ORIGINAL_SHA256: a6a247aff6785632bf7a16a0ee1c95a91e14bbf67bf62873910d6d0ddc5015a4
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 13-19 ---
+13: HERE = Path(__file__).resolve().parent
+14: REPRO = HERE.parent
+15: sys.path.insert(0, str(REPRO))
+16: 
+17: from adapters.common.metrics import evaluate  # noqa: E402
+18: from adapters.common.state import atomic_json, seed_everything, sha256  # noqa: E402
+19: 
+--- ORIGINAL LINES 58-77 ---
+58:         np.savez_compressed(predictions / f"{case_id}.npz", prediction=prediction.astype(np.uint8))
+59: 
+60:     metrics = evaluate(model, config, args.split, device, prediction_sink=sink, max_cases=1 if args.smoke else None)
+61:     fields = ["case", "class", "dice", "iou", "hd95", "asd"]
+62:     with (output / "case_metrics.tsv").open("w", newline="", encoding="utf-8") as handle:
+63:         writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t")
+64:         writer.writeheader()
+65:         writer.writerows(metrics["rows"])
+66:     atomic_json(metrics, output / "metrics.json")
+67:     receipt = {
+68:         "status": "SMOKE_EVAL_PASS" if args.smoke else "EVALUATION_PASS",
+69:         "job_id": config["job_id"], "method": config["method"], "dataset": config["dataset"],
+70:         "split": args.split, "checkpoint": str(checkpoint_path), "checkpoint_sha256": sha256(checkpoint_path),
+71:         "config_sha256": sha256(config_path), "evaluator": config["data"]["evaluator"],
+72:         "evaluator_sha256": config["data"]["evaluator_sha256"], "checkpoint_missing_keys": missing,
+73:         "checkpoint_unexpected_keys": unexpected, "prediction_output": "selected_logits" if config["method"] == "HiEn" else "decoder1_index_0",
+74:         "metrics": metrics["macro"], "test_used_for_selection": False,
+75:     }
+76:     atomic_json(receipt, output / "EVALUATION_RECEIPT.json")
+77:     print(json.dumps(receipt, indent=2, sort_keys=True))

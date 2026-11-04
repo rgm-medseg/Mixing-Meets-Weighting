@@ -1,0 +1,16 @@
+{
+  "background_id": 0,
+  "classes": {
+    "0": "background",
+    "1": "RV",
+    "2": "MYO",
+    "3": "LV"
+  },
+  "foreground_ids": [
+    1,
+    2,
+    3
+  ],
+  "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/scripts/evaluate.py",
+  "source_sha256": "871d88323749f910a3d27fbf96dc5112fa7eb69c78fd0ad028533061e2d153cf"
+}

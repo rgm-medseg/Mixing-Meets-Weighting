@@ -1,0 +1,7 @@
+{
+  "archive": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/mechanism_strengthening_evidence.tar.gz",
+  "bytes": 20701479,
+  "sha256": "d45e1fa4746a1dad29ccc5ab55076e5dd8a1c5ada758471b3c84a7dfe224847f",
+  "full_arrays": "all patient/region/feature/logit-gradient arrays retained under arrays/ in the shared workspace",
+  "new_checkpoints": "runs/F97_main_signal_20261013/checkpoints; retained in workspace, excluded from compact archive"
+}

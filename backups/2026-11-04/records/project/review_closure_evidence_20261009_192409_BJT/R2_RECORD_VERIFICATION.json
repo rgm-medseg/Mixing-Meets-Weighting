@@ -1,0 +1,38 @@
+{
+  "class_rows": 120,
+  "unique_case_class_keys": 120,
+  "frames": 40,
+  "patients": 20,
+  "patient_table_rows": 20,
+  "class_ids": {
+    "1": 40,
+    "2": 40,
+    "3": 40
+  },
+  "each_patient_2_frames_6_class_rows": true,
+  "raw_macro": {
+    "dice": 0.9020444131484706,
+    "iou": 0.8270690413278288,
+    "hd95": 1.880012540213665,
+    "asd": 0.5087759056993734
+  },
+  "patient_macro": {
+    "dice": 0.9020444131484705,
+    "iou": 0.8270690413278288,
+    "hd95": 1.8800125402136647,
+    "asd": 0.5087759056993734
+  },
+  "patient_table_max_error": 4.440892098500626e-16,
+  "expected": {
+    "dice": 0.9020444131484706,
+    "iou": 0.8270690413278287,
+    "hd95": 1.880012540213665,
+    "asd": 0.5087759056993733
+  },
+  "all_finite": true,
+  "paired_control_run": "R1_v2_B / 更换混合控制信号",
+  "delta_Dice_pp": 0.21998924676454035,
+  "class_summary_rows": 3,
+  "class_table_max_error": 2.220446049250313e-16,
+  "class_summary_source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/results/R2_class_metrics.csv"
+}

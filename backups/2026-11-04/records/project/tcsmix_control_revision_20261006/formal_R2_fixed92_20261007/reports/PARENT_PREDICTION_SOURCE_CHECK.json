@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "time": "2026-10-07T11:02:58.594253+08:00",
+  "cases": 40,
+  "prediction_file_hashes_match_R1_index": true,
+  "GT_file_hashes_match_R1_index": true,
+  "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/results/prediction_index.csv",
+  "source_sha256": "9e029d6de3f5c53a78a2f58656f37985ad54658f439ce4796e74f9ab5b905a44",
+  "training_updates": 0,
+  "inference_calls": 0
+}

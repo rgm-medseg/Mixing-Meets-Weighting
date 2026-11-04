@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T15:07:56.281157+00:00",
+  "mode": "smoke",
+  "analysis": "all",
+  "training_started": false,
+  "checkpoint_selection_started": false,
+  "checkpoint_reselection_after_test": false,
+  "test_manifest_content_read": true,
+  "test_manifest_sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+  "case_count": 1,
+  "engineering_canary_only": true,
+  "scientific_result": false,
+  "paper_result_eligible": false,
+  "boundary_f1": {
+    "rows": "final_report/internal_evidence_expansion_v24_0/ACDC10_BOUNDARY_F1_SMOKE.tsv",
+    "rows_sha256": "939841e171095bb58460fb6a42c421f6920d66afa2154f1b548979d88eebe1e7",
+    "summary": "final_report/internal_evidence_expansion_v24_0/ACDC10_BOUNDARY_F1_SMOKE_SUMMARY.tsv",
+    "summary_sha256": "c27b89fd5374dee7e55393d15fef5c389e78e31505eb4d07e5d4244c651a57ff"
+  },
+  "corruption_robustness": {
+    "rows": "final_report/internal_evidence_expansion_v24_0/ACDC10_CORRUPTION_ROBUSTNESS_SMOKE.tsv",
+    "rows_sha256": "e32743733b7c0bb3613c972ab8eb39258b53b35a1f22f41fce8a802bac21c722"
+  }
+}

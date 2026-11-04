@@ -1,0 +1,9 @@
+{
+  "BestDiceGain_pp": 0.4840164002,
+  "MeanDiceGain_pp": -0.6016911977999999,
+  "MedianDiceGain_pp": -0.4671427518,
+  "NegativeDiceCount": 4,
+  "PositiveDiceCount": 1,
+  "TransferTargetCount": 5,
+  "WorstDiceGain_pp": -1.7230898325
+}

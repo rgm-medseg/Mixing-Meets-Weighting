@@ -1,0 +1,55 @@
+{
+  "time": "2026-10-07T00:51:43.645151+08:00",
+  "status": "PASS",
+  "archive_sha256": "60654846afe9718d0f1888d04df51c7628e649233234d43824d31348782db56f",
+  "verified_files": 105,
+  "current_state": {
+    "status": "RUNNING",
+    "stage": "TRAIN",
+    "heartbeat": "2026-10-07T00:51:41.431525+08:00",
+    "heartbeat_epoch": 1791305501.431556,
+    "pipeline_pid": 70652,
+    "child_pid": 70675,
+    "host": "n1",
+    "gpu": 0,
+    "started": "2026-10-07T00:40:20.818756+08:00",
+    "joint_step": 771,
+    "budget_joint_iterations": 30000,
+    "optimizer1_calls": 771,
+    "optimizer2_calls": 771,
+    "optimizer_counter_scope": "actual successful physical calls in latest complete trace row; optimizer_events.csv additionally retains partial failure evidence",
+    "ETA_training_finish": "2026-10-07T07:55:11.541576+08:00",
+    "ETA_remaining_hours": 7.058363885929694,
+    "ETA_basis": "current active formal segment elapsed / progressed joint iterations, includes validation/loading",
+    "latest_checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/runs/R1_full_v2B/checkpoints/last.ckpt",
+    "latest_training_log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/runs/R1_full_v2B/train.log",
+    "resource": {
+      "time": "2026-10-07T00:51:26.391719+08:00",
+      "gpu0_name": "NVIDIA A100-SXM4-40GB",
+      "used_mib": 16841,
+      "free_mib": 23485,
+      "utilization": 16,
+      "pids": [
+        4901
+      ],
+      "admission_threshold": "no GPU0 compute PIDs, used<2048MiB, free>=30000MiB, utilization<=10%"
+    },
+    "formal_R1_authorized": true,
+    "R2_started": false,
+    "old_queue": "INTERRUPTED",
+    "stage_errors": [],
+    "archive_status": "PENDING",
+    "resume_step": 0,
+    "current_log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/logs/train_2026-10-07T004031165806+0800.log",
+    "current_command": [
+      "/bin/bash",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/train_R1.sh"
+    ]
+  },
+  "frozen_code_inputs_verified": true,
+  "live_pipeline": true,
+  "live_train": true,
+  "R2_started": false,
+  "old_queue": "INTERRUPTED",
+  "previous_phase_short_optimizer_calls": 480
+}

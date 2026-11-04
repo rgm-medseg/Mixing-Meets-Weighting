@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "time": "2026-10-07T11:13:01.725303+08:00",
+  "current_heartbeat": "2026-10-07T11:12:57.123654+08:00",
+  "current_joint_step": "484",
+  "optimizer1_calls": "484",
+  "optimizer2_calls": "484",
+  "pipeline_pid": 81963,
+  "trainer_pid": 82001,
+  "fixed_rectangle": [
+    "92",
+    "92"
+  ],
+  "current_ETA": "2026-10-07T18:23:48.563245+08:00",
+  "detached": true,
+  "startup_archive_sha256": "63a1315696f8c6cf14b561ecc8b4da58cc226462c122bf2835c483b17a0bdf5d",
+  "startup_archive_files_verified": 200,
+  "startup_snapshot_joint_cutoff": 357,
+  "startup_snapshot_trace_rows": 357,
+  "startup_snapshot_optimizer_success_rows": 714,
+  "old_queue": "INTERRUPTED",
+  "R1_retrained": false
+}

@@ -1,0 +1,27 @@
+{
+  "status": "ANALYZED",
+  "time": "2026-10-07T08:02:02.655451+08:00",
+  "recorded_final_logical_steps": 30000,
+  "predefined_segments": "six5000-step segments plus whole",
+  "details": {
+    "confidence_quality": {
+      "status": "DONE",
+      "rows": 136,
+      "labeled_patients": 7,
+      "validation_patients": 10,
+      "test_inputs": 0,
+      "GT_use": "diagnostic only; never in unlabeled controller",
+      "middle_checkpoints": "NA: only retained selected best and last teachers",
+      "state": "independent process, reset cloned buffers per batch, no optimizer updates; post-step teachers not historical per-step logits"
+    },
+    "historical_comparison": {
+      "status": "DONE",
+      "matched_case_class_rows": 240,
+      "comparison": "same reconstruction-grid evaluation/test list; older imported-source/pretrain-generating details incomplete",
+      "interpretation": "R1-old Full delta alone does not isolate dynamic scheduling benefit; R2 not run"
+    }
+  },
+  "failures": [],
+  "optimizer_updates": 0,
+  "R2_started": false
+}

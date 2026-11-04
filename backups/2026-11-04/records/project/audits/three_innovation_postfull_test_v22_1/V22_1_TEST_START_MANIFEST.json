@@ -1,0 +1,96 @@
+{
+  "AllCheckpointSHA": [
+    {
+      "CheckpointSHA": "a7ba7b80bed8327a4b8c6c07717690148c2120fd78292be4577e459f81ebc867",
+      "TaskID": "ACDC10_ARM_100"
+    },
+    {
+      "CheckpointSHA": "430ed73702d5fa76781de6a878739f863023546e338758ce11ebd05045d93c62",
+      "TaskID": "ACDC10_ARM_010"
+    },
+    {
+      "CheckpointSHA": "8bfa388a3a39f761d4f29db17e477338f514b3cb3f88f60a2a7394757b273900",
+      "TaskID": "ACDC10_ARM_001"
+    },
+    {
+      "CheckpointSHA": "87d7479788cc7399fcc12012ceae6a1bf565fdcb69e5e3a344d9c1c0a440cf9b",
+      "TaskID": "ACDC10_ARM_101"
+    },
+    {
+      "CheckpointSHA": "426ea8f9a41930434d11e2877d8ed07239040f53d401fb27e2941fc27ce7bf45",
+      "TaskID": "ACDC10_ARM_011"
+    },
+    {
+      "CheckpointSHA": "c4df306669f808ad46bed98b666c8e039fe61a5a92d9634255db396892e0bdf3",
+      "TaskID": "ACDC5_FINAL3"
+    },
+    {
+      "CheckpointSHA": "89c670b16b9a5b1da3bdd8f8c19094424fceef84398773d0ec27246475a48f2c",
+      "TaskID": "PROMISE20_FINAL3"
+    },
+    {
+      "CheckpointSHA": "58f29196c36f8f185bbf07302c90b4f425da690fac0c930addd25873af7ba148",
+      "TaskID": "MSCMR5_FINAL3"
+    },
+    {
+      "CheckpointSHA": "b8a0a5eeeefc3b816afcf73fbba16dbc29e9e3c76936a03300fc6bc430cb196b",
+      "TaskID": "COVID5_FINAL3"
+    },
+    {
+      "CheckpointSHA": "8c89fe9238c187e4e387b5cc40b253e11e16b451e2788d6d395f2841274b019a",
+      "TaskID": "COVID10_FINAL3"
+    }
+  ],
+  "AllEvaluatorSHA": [
+    "2a20e429f54942c5392c57d1469a4edc1d0d93e144de4c3403c4d70407986ad6",
+    "5958b1a7514415f67beb184676c649867f6aeb15cce8d3ee5ee3fe5517a798f4",
+    "9eab50ffa14e01629052978ceb2e74ec05c3b875b2ddddc5df728b9a2c9f5194",
+    "ff20153cdbbe9e164bbdbd2348f6799daf0180a5503291177a86a5f9034f560b"
+  ],
+  "AllTestManifestSHA": [
+    "220ae8e36e4016a4b86463487e344f26b6981fe7edff40542acdf8ec6ac19b61",
+    "453312727e51c7830423caa9e06b8cd67ad0ecf5c4f1e6058975cd3c973e73c3",
+    "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+    "c981d3a78c3e4bd817438edd159e77361d5dc7f88493f206ccdbfb388f6e35fb"
+  ],
+  "ControllerPath": "controllers/three_innovation_postfull_test_controller_v22_1.py",
+  "ControllerSHA": "e8b1dda990c4a8fbfecf92183a6fe29fe04bcd1d7cbc297fb70b8588033c0bfa",
+  "ExpectedFirstTask": "ACDC10_ARM_100",
+  "FORMAL_TRAINING_ACTIVE": false,
+  "LauncherPath": "tools/v22_1_postfull_test_launcher.py",
+  "LauncherSHA": "2a20e429f54942c5392c57d1469a4edc1d0d93e144de4c3403c4d70407986ad6",
+  "MSCMR10_FINAL3": "BLOCKED",
+  "PretestReview": {
+    "FORMAL_TEST_START_ALLOWED": true,
+    "PRETEST_REVIEW_1_CHECKPOINT_FREEZE": "PASS",
+    "PRETEST_REVIEW_2_PROTOCOL_PARITY": "PASS",
+    "PRETEST_REVIEW_3_TEST_ONLY": "PASS",
+    "PRETEST_REVIEW_4_CONTROLLER": "PASS",
+    "PRETEST_REVIEW_5_EXPOSURE": "PASS",
+    "counts": {
+      "ACDC_EXACT_TEST_REUSE": 3,
+      "BLOCKED": 1,
+      "EXACT_TEST_REUSE": 3,
+      "NEW_TEST_READY": 10,
+      "TOTAL": 14
+    },
+    "created_at": "2026-08-22T10:17:21.451567+00:00"
+  },
+  "ProtocolLockPath": "audits/three_innovation_postfull_test_v22_1/V22_1_DATASET_EVALUATOR_PROTOCOL_LOCK.tsv",
+  "ProtocolLockSHA": "7648f107473541595c4136877d855a0fe4e1ee5cb20c474f0eb1f09f17e6f1b9",
+  "RegistryPath": "audits/three_innovation_postfull_test_v22_1/V22_1_POSTFULL_TEST_TASK_REGISTRY.tsv",
+  "RegistrySHA": "7648f107473541595c4136877d855a0fe4e1ee5cb20c474f0eb1f09f17e6f1b9",
+  "TEST_CONTROLLER_START_ALLOWED": true,
+  "TaskCounts": {
+    "ACDC_EXACT_TEST_REUSE": 3,
+    "BLOCKED": 1,
+    "EXACT_TEST_REUSE": 3,
+    "NEW_TEST_READY": 10,
+    "TOTAL": 14
+  },
+  "created_at": "2026-08-22T10:17:21.455398+00:00",
+  "schema": "V22_1_TEST_START_MANIFEST",
+  "updated_after_engineering_E1_fix": "2026-08-22T10:21:38.769762+00:00",
+  "updated_after_engineering_E1_fix_2": "2026-08-22T10:23:58.686119+00:00",
+  "updated_after_engineering_E1_fix_3": "2026-08-22T10:26:32.246491+00:00"
+}

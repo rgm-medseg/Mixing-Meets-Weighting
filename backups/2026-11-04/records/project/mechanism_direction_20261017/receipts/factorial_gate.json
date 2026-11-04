@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "reference_table": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/final_report/three_innovation_postfull_test_v22_1/ACDC10_THREE_INNOVATION_8ARM_TEST_FULL_PRECISION.tsv",
+  "reference_table_sha": "396e4062fda419ebac5494817c3a760c4292a0d65dd11c587707160384b104d4",
+  "TRC_off_arms": [
+    "000",
+    "010",
+    "001",
+    "011"
+  ],
+  "complete_same_group": true,
+  "protocol_argument_differences": {
+    "000": {},
+    "010": {},
+    "001": {},
+    "011": {},
+    "100": {},
+    "110": {},
+    "101": {},
+    "111": {}
+  },
+  "manifests": {
+    "train_slices.list": {
+      "path": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/train_slices.list",
+      "sha256": "1b21b2a69d1b28b4dfce6837fdb0572414d337566b51b3dd0e0fda342a6f0648"
+    },
+    "val.list": {
+      "path": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list",
+      "sha256": "61b935c936d8e12f7889e82d954f421fa25fb95305e92a476096b3242de8777d"
+    }
+  },
+  "common_input": "archived main-Full dynamic mixtures, unchanged",
+  "common_stratification": "archived main-Full EMA LCC hard targets, NOT each model own teacher",
+  "comparison": "frozen trained states under common input; within each state apply diagnostic uniform/CTW weights",
+  "own_mixing_rules_replayed": false,
+  "performance_based_substitution": false
+}

@@ -1,0 +1,4 @@
+method_id,weight_bin,patient_equal_pixel_fraction,checkpoint_tag,strategy,scope
+Full_main,"[0.25,0.27)",0.9709960405470982,best,matched92,all image pixels; not exact equality to0.25; no threshold selection
+R1_v2_B,"[0.25,0.27)",0.9697124078621273,best,matched92,all image pixels; not exact equality to0.25; no threshold selection
+R2_fixed92,"[0.25,0.27)",0.9709618095683336,best,matched92,all image pixels; not exact equality to0.25; no threshold selection

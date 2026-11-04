@@ -1,0 +1,39 @@
+{
+  "ASD": 1.4106984188286347,
+  "Arm": "FINAL3",
+  "BestValDice": 0.8912,
+  "BestValIter": 24400,
+  "BoundaryUnit": "pixel-unit",
+  "CheckpointPath": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/self_train/unet_best_model.pth",
+  "CheckpointSHA": "89c670b16b9a5b1da3bdd8f8c19094424fceef84398773d0ec27246475a48f2c",
+  "CheckpointSelectionEndpoint": "VALIDATION_BEST",
+  "Dataset": "PROMISE12",
+  "Dice": 0.8386401640018327,
+  "EvaluatorPath": "tools/v22_1_postfull_test_launcher.py",
+  "EvaluatorSHA": "2a20e429f54942c5392c57d1469a4edc1d0d93e144de4c3403c4d70407986ad6",
+  "Finite": true,
+  "HD95": 2.9863295043764113,
+  "IoU": 0.7237411265148253,
+  "PerClassMetrics": {
+    "foreground": {
+      "asd": 1.4106984188286347,
+      "dice": 0.8386401640018327,
+      "hd95": 2.9863295043764113,
+      "iou": 0.7237411265148253
+    }
+  },
+  "Ratio": "20%",
+  "ReturnCode": 0,
+  "TEST_ONLY_MODE": true,
+  "TaskID": "PROMISE20_FINAL3_CANONICAL_REEVAL",
+  "TestComplete": true,
+  "TestManifest": "external_comparators/2026_reproduction/manifests/generated/PROMISE_test.list",
+  "TestManifestSHA": "c981d3a78c3e4bd817438edd159e77361d5dc7f88493f206ccdbfb388f6e35fb",
+  "TestTimestamp": "2026-09-04T08:52:59.493976+00:00",
+  "backward_called": false,
+  "checkpoint_reselection_after_test": false,
+  "optimizer_created": false,
+  "optimizer_step_called": false,
+  "schema": "V22_1_POSTFULL_TEST_COMPLETION_RECEIPT",
+  "training_started": false
+}

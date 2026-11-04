@@ -1,0 +1,90 @@
+[
+  {
+    "run": "Historical_Full",
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/best.ckpt",
+    "sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+    "step": 29600,
+    "keys": [
+      "args",
+      "best_metrics",
+      "ema_model",
+      "epoch",
+      "global_step",
+      "model_1",
+      "model_2",
+      "optimizer1",
+      "optimizer2",
+      "random_state"
+    ],
+    "teacher_state_digest": "4b9b323e4e12c45702da8603bd6e32806a7a8614634d8a2c1c346897bbc85745",
+    "teacher_state_unchanged_after_diagnostics": true
+  },
+  {
+    "run": "Historical_Full",
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/last.ckpt",
+    "sha256": "1abf5ae770438d871dda4f6afa04dfc3755442a823551787251b1350d9c76c5a",
+    "step": 30000,
+    "keys": [
+      "args",
+      "best_metrics",
+      "ema_model",
+      "epoch",
+      "global_step",
+      "model_1",
+      "model_2",
+      "optimizer1",
+      "optimizer2",
+      "random_state"
+    ],
+    "teacher_state_digest": "29e6250900b00f9a44035759ddf87443a9b14af7e833f51eb1fa1e67ad84558e",
+    "teacher_state_unchanged_after_diagnostics": true
+  },
+  {
+    "run": "E1",
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E1/checkpoints/best.ckpt",
+    "sha256": "f3808c28e98a2930f3f1e9fa758a61d47e292ac583f542dfb9b852f0f84e6268",
+    "step": 3200,
+    "keys": [
+      "amp_state",
+      "args",
+      "best_metrics",
+      "ema_model",
+      "epoch",
+      "global_step",
+      "lr_state",
+      "model_1",
+      "model_2",
+      "optimizer1",
+      "optimizer2",
+      "random_state",
+      "resume_exact",
+      "sampler_state"
+    ],
+    "teacher_state_digest": "f94aff1627ca55d31661e430523b00e0822fbfd09ca8b30e5005ea0e025b0447",
+    "teacher_state_unchanged_after_diagnostics": true
+  },
+  {
+    "run": "E1",
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E1/checkpoints/last.ckpt",
+    "sha256": "72205384a57fb736e6b29bb820a63b2d6eb458702ddcd1fc9c673e185305cc17",
+    "step": 3976,
+    "keys": [
+      "amp_state",
+      "args",
+      "best_metrics",
+      "ema_model",
+      "epoch",
+      "global_step",
+      "lr_state",
+      "model_1",
+      "model_2",
+      "optimizer1",
+      "optimizer2",
+      "random_state",
+      "resume_exact",
+      "sampler_state"
+    ],
+    "teacher_state_digest": "71554113ed21c34f9a18fab0fe9b0dd421c773ebcdbd2cae8957c0c34db137a2",
+    "teacher_state_unchanged_after_diagnostics": true
+  }
+]

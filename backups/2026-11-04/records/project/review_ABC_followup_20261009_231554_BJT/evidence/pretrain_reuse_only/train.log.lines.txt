@@ -1,0 +1,8 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/audit/handoff_packages/beta_fft_acdc10_audit_handoff_20260624_125849/train_logs/beta_fft_acdc_official_full_seed42/train.log
+ORIGINAL_SHA256: 663719295bb8b5bc045b5edd19e66d95a1a4914b3532e50a73ab527e04181ba2
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 1-4 ---
+1: [12:37:09.183] Namespace(root_path='/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC', exp='beta_fft_acdc_official_10pct_seed42', model='unet', pre_iterations=10000, max_iterations=30000, batch_size=24, deterministic=1, base_lr=0.01, image_size=[256, 256], seed=42, num_classes=4, labeled_bs=12, labelnum=7, u_weight=0.5, gpu='0', consistency=0.1, consistency_rampup=200.0, magnitude=6.0, s_param=6, patch_size=64, h_size=4, w_size=4, top_num=4, run_root='/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42', pretrained_model='/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7', data_manifest_name='official')
+2: [12:37:09.183] run_root=/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42
+3: [12:37:09.185] pretrained_model=/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth
+4: [12:37:12.018] iteration 1: loss: 2.287234, model1_loss: 0.966831, model2_loss: 1.121976

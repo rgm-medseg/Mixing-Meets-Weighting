@@ -1,0 +1,12 @@
+{
+  "status": "RUNNING",
+  "pid": 44622,
+  "started": "2026-10-06T22:04:54.870150+08:00",
+  "script_sha256": "923cb8a752e804c98b6fcadfc76742d049fc8c3a2dfdd3df02904109b65b9c8c",
+  "GPU_used": false,
+  "training_configuration_changed": false,
+  "phase": "FOLLOWING_EXISTING_QUEUE",
+  "heartbeat": "2026-10-27T15:19:09.292038+08:00",
+  "initial_reports_complete": true,
+  "initial_reports_completed": "2026-10-06T22:05:14.535173+08:00"
+}

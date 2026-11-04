@@ -1,0 +1,13 @@
+network,line,call,source
+model_1,388,model_1(net_input_unl_1),/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/effective_source.py
+model_1,389,model_1(net_input_l_1),/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/effective_source.py
+model_2,398,model_2(net_input_unl_2),/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/effective_source.py
+model_2,399,model_2(net_input_l_2),/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/effective_source.py
+model_1,413,model_1(input_volume_batch),/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/effective_source.py
+model_1,427,model_1(input_volume_batch_s),/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/effective_source.py
+model_1,439,model_1(image_patch_last_FFT.unsqueeze(1)),/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/effective_source.py
+model_2,442,model_2(image_patch_last_FFT.unsqueeze(1)),/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/effective_source.py
+ema_model,363,ema_model(uimg_a),/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/effective_source.py
+ema_model,364,ema_model(uimg_b),/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/effective_source.py
+ema_model,367,ema_model(uimg_a_s),/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/effective_source.py
+ema_model,368,ema_model(uimg_b_s),/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/effective_source.py

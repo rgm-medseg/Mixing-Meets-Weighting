@@ -1,0 +1,30 @@
+{
+  "AuditID": "PROMISE10_SCOPE_REMOVAL_RECEIPT",
+  "CreatedLocalTime": "2026-08-23 11:12:57 CST",
+  "ControllerSession": "promise10_paper4_formal_controller",
+  "ObservedControllerState": "QUEUE_COMPLETE",
+  "ObservedControllerStatePath": "runtime/promise10_paper4/controller_state.json",
+  "ObservedLedgerPath": "runtime/promise10_paper4/controller_ledger.tsv",
+  "PROMISE10_ACTIVE_PROCESS_COUNT": 0,
+  "PROMISE10_CURRENT_PAPER_IN_SCOPE": false,
+  "EXCLUDED_BY_USER_FROM_CURRENT_PAPER": true,
+  "PAPER_ELIGIBLE": false,
+  "CURRENT_PAPER_TABLE_ELIGIBLE": false,
+  "DO_NOT_CONTINUE_PROMISE10": true,
+  "PROMISE10_ASSET_ACTION": "RETAIN_HISTORICAL_ASSETS_EXCLUDE_FROM_CURRENT_PAPER",
+  "PROMISE10_BETAFFT_STATUS": "COMPLETED_HISTORICAL_EXCLUDED",
+  "PROMISE10_OURS_STATUS": "COMPLETED_HISTORICAL_EXCLUDED",
+  "SignalSent": "NONE",
+  "ReasonSignalNotSent": "controller already naturally completed; no active PROMISE10 process was observed",
+  "CurrentPaperMainDatasets": [
+    "ACDC",
+    "PROMISE12_20P",
+    "COVID19"
+  ],
+  "SafetyLocks": {
+    "PROMISE10_IN_CURRENT_PAPER": false,
+    "MSCMR_IN_CURRENT_PAPER": false,
+    "EXTERNAL_METHOD_REPRODUCTION": false,
+    "FAILURE_CASE_SECTION": false
+  }
+}

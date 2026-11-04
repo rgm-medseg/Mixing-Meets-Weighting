@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T12:55:24.948143+00:00",
+  "generated_after_formal_start_for_objective_name_closure": true,
+  "scientific_assets_modified": false,
+  "source_config_launcher_controller_modified": false,
+  "aliases": [
+    {
+      "src": "audits/paper_internal_evidence_v23_0/V23_0_MASTER_TASK_REGISTRY_FINAL.tsv",
+      "dst": "audits/paper_internal_evidence_v23_0/V23_0_MASTER_TASK_REGISTRY.tsv",
+      "sha256": "6938f4117b3f3107525ffcefe3bc80be9461d39cebf83f448e8f4fd548aa820c",
+      "exact_content_copy": true
+    },
+    {
+      "src": "audits/paper_internal_evidence_v23_0/ACDC10_VAL_MECHANISM_VIS_CASE_SELECTION.json",
+      "dst": "audits/paper_internal_evidence_v23_0/MECHANISM_VIS_CASE_SELECTION.json",
+      "sha256": "743eec1696001fbfad2b204099eae3251cc6c9f873eaf4b64ee24de89355fa1c",
+      "exact_content_copy": true
+    }
+  ]
+}

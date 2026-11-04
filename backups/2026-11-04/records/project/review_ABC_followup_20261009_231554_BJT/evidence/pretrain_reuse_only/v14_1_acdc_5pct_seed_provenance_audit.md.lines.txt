@@ -1,0 +1,30 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/audit/v14_1_acdc_5pct_seed_provenance_audit.md
+ORIGINAL_SHA256: e3fdfcd2d45cd5cfb791522eff04ba90e4a130b36427bbde6719434279be179b
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 16-23 ---
+16: - Split: official ACDC validation-only split, `val.list` SHA256
+17:   `61b935c936d8e12f7889e82d954f421fa25fb95305e92a476096b3242de8777d`
+18: - Label budget: `labelnum=3`
+19: - Seed: `1337`
+20: - Frozen best checkpoint:
+21:   `runs/acdc_5pct_2d_matched_control_seed1337_valonly_20260628_094308/checkpoints/best.ckpt`
+22: - Best checkpoint SHA256:
+23:   `7b73685aee068249c76aa12ae0567373420cdd214a82a3af3e3ab31a6a680e56`
+--- ORIGINAL LINES 32-48 ---
+32: 
+33: The complete preserved command is in
+34: `audit/acdc_5pct_2d_matched_control_preflight_20260628_094308/command_snapshot.txt`:
+35: 
+36: ```text
+37: conda run --no-capture-output -n beta_fft python train_ACDC/beta_fft_acdc_repro.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --exp acdc_5pct_2d_matched_control_seed1337_valonly --model unet --max_iterations 30000 --batch_size 24 --labeled_bs 12 --labelnum 3 --base_lr 0.01 --seed 1337 --gpu 0 --consistency 0.1 --consistency_rampup 200.0 --magnitude 6.0 --s_param 6 --patch_size 64 --h_size 4 --w_size 4 --top_num 4 --data_manifest_name official --pretrained_model train_ACDC/Pre_model/label3 --input_mode 2d --context_slices 1 --save_interval 200 --val_list /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list --test_list /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list --run_root runs/acdc_5pct_2d_matched_control_seed1337_valonly_20260628_094308
+38: ```
+39: 
+40: Raw `train.log:1` evidence:
+41: 
+42: ```text
+43: [09:43:18.160] Namespace(root_path='/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC', exp='acdc_5pct_2d_matched_control_seed1337_valonly', model='unet', pre_iterations=10000, max_iterations=30000, batch_size=24, deterministic=1, base_lr=0.01, image_size=[256, 256], seed=1337, num_classes=4, labeled_bs=12, labelnum=3, u_weight=0.5, gpu='0', consistency=0.1, consistency_rampup=200.0, magnitude=6.0, s_param=6, patch_size=64, h_size=4, w_size=4, top_num=4, run_root='runs/acdc_5pct_2d_matched_control_seed1337_valonly_20260628_094308', pretrained_model='train_ACDC/Pre_model/label3', data_manifest_name='official', resume_ckpt='', save_interval=200, split_name='official', labeled_list='', unlabeled_list='', val_list='/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list', test_list='/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list', input_mode='2d', context_slices=1, relation_type='center_anchored_neighbor', relation_stage='x0', relation_dim=8, use_ip_crm_weighting=False, ip_crm_contour_weight=0.5, ip_crm_myo_core_conf_thresh=0.8, ip_crm_contour_conf_thresh=0.7, ip_crm_boundary_width=2, ip_crm_log_interval=20)
+44: ```
+45: 
+46: ## 3. Checkpoint-contained provenance
+47: 
+48: CPU inspection of the frozen best checkpoint found keys:

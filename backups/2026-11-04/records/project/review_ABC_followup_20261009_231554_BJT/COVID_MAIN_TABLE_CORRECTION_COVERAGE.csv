@@ -1,0 +1,27 @@
+paper_position,method,budget,prior_row_id,raw_result_binding_status,existing_spacing_only_result_status,source_run_label,after_hd95_mm,after_asd_mm,paper_adopted_hd95_mm,source,limitation
+P48,MT,5%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P49,MT,10%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P50,UA-MT,5%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P51,UA-MT,10%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P52,DTC,5%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P53,DTC,10%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P54,MC-Net,5%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P55,MC-Net,10%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P56,MC-Net+,5%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P57,MC-Net+,10%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P58,SS-Net,5%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P59,SS-Net,10%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P60,DC-Net,5%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P61,DC-Net,10%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P62,SAMT-PCL,5%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P63,SAMT-PCL,10%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P64,UniMatch V2,5%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P65,UniMatch V2,10%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P66,HCCP-SAM2,5%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P67,HCCP-SAM2,10%,,NOT_FOUND,NOT_FOUND,,,,,,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P68,UCAD,5%,ROW23,VERIFIED,NOT_FOUND,UCAD_FAIR_COVID5,,,,/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/results/COVID5/seed1337/TEST_RESULT_FULL_PRECISION.json,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P69,UCAD,10%,ROW24,VERIFIED,NOT_FOUND,UCAD_FAIR_COVID10,,,,/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/results/COVID10/seed1337/TEST_RESULT_FULL_PRECISION.json,No existing correction receipt/result located. No metric guessed or re-evaluated.
+P70,β-FFT,5%,ROW07,VERIFIED,VERIFIED,COVID19_5P_BASELINE_CANON1337_R1_CONFIRMATORY_TEST_ONCE,35.761468219124396,6.855459773400048,,revision_runs_20261006/covid_metrics_before_after_macro.csv:L9; SHA256=69131f55634688fb0f61f7ab1194d14d63a419be540d31fe8ebebaa3c041554d,Separate existing spacing-only version; author-adopted Full 22.79/11.88 remain; withdrawn mandatory replacement stays withdrawn
+P71,β-FFT,10%,ROW09,VERIFIED,VERIFIED,COVID19_10P_BASELINE_CANON1337_R1_CONFIRMATORY_TEST_ONCE,23.022861570142222,5.3852991579706755,,revision_runs_20261006/covid_metrics_before_after_macro.csv:L6; SHA256=69131f55634688fb0f61f7ab1194d14d63a419be540d31fe8ebebaa3c041554d,Separate existing spacing-only version; author-adopted Full 22.79/11.88 remain; withdrawn mandatory replacement stays withdrawn
+P72,Full model,5%,ROW08,VERIFIED,VERIFIED,COVID5_FINAL3,33.56438112527303,6.350107949773349,22.79,revision_runs_20261006/covid_metrics_before_after_macro.csv:L16; SHA256=69131f55634688fb0f61f7ab1194d14d63a419be540d31fe8ebebaa3c041554d,Separate existing spacing-only version; author-adopted Full 22.79/11.88 remain; withdrawn mandatory replacement stays withdrawn
+P73,Full model,10%,ROW10,VERIFIED,VERIFIED,COVID10_FINAL3,18.957128805392596,5.008397271886982,11.88,revision_runs_20261006/covid_metrics_before_after_macro.csv:L18; SHA256=69131f55634688fb0f61f7ab1194d14d63a419be540d31fe8ebebaa3c041554d,Separate existing spacing-only version; author-adopted Full 22.79/11.88 remain; withdrawn mandatory replacement stays withdrawn

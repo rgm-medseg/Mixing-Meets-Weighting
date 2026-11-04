@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T00:50:18.672596+08:00",
+  "ctw_maps_file": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/revision_runtime.py",
+  "ctw_maps_line": 153,
+  "compute_file": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/revision_runtime.py",
+  "compute_line": 169,
+  "actual_import": "last binding from revision_runtime overrides historical innovation",
+  "weight_mode": "uniform",
+  "science_change": "spatial to per-image full HxW mean uniform only",
+  "loss_EMA_blocks_identical": true,
+  "teacher_forward_count_unchanged": true
+}

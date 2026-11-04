@@ -1,0 +1,17 @@
+[
+  {
+    "stage": "TRAIN",
+    "command": [
+      "/bin/bash",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/train_R1.sh"
+    ],
+    "start": "2026-10-07T00:40:31.165888+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/logs/train_2026-10-07T004031165806+0800.log",
+    "resume_step": 0,
+    "pid": 70675,
+    "end": "2026-10-07T08:01:11.178843+08:00",
+    "exit_code": 0,
+    "elapsed_seconds": 26440.013047698885,
+    "measurement": "Popen launch to detected subprocess completion; <=5s polling detection lag, imports/validation/checkpoints included"
+  }
+]

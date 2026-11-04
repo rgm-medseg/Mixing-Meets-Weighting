@@ -1,0 +1,44 @@
+item,R1,C1,category,evidence
+task,R1,C1,其他差异,parent/copy configs; engineering paths and identity separated
+model_family,beta_fft,beta_fft,保持一致,parent/copy configs; engineering paths and identity separated
+weight_mode,spatial,uniform,预期改变,parent/copy configs; engineering paths and identity separated
+mix_mode,dynamic,dynamic,保持一致,parent/copy configs; engineering paths and identity separated
+trc,token,token,保持一致,parent/copy configs; engineering paths and identity separated
+fixed_side,,,保持一致,parent/copy configs; engineering paths and identity separated
+bottleneck_width,18,18,保持一致,parent/copy configs; engineering paths and identity separated
+dataset_root,/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC,/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC,保持一致,parent/copy configs; engineering paths and identity separated
+seed,42,42,保持一致,parent/copy configs; engineering paths and identity separated
+max_iterations,30000,30000,保持一致,parent/copy configs; engineering paths and identity separated
+validation_interval,200,200,保持一致,parent/copy configs; engineering paths and identity separated
+save_interval,200,200,保持一致,parent/copy configs; engineering paths and identity separated
+batch_size,24,24,保持一致,parent/copy configs; engineering paths and identity separated
+labeled_bs,12,12,保持一致,parent/copy configs; engineering paths and identity separated
+pretrained_model,/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth,/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth,保持一致,parent/copy configs; engineering paths and identity separated
+run_root,/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/runs/R1_full_v2B,/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/runs/C1_CTW_mean_uniform_v2B,其他差异,parent/copy configs; engineering paths and identity separated
+num_workers,16,16,保持一致,parent/copy configs; engineering paths and identity separated
+protocol_hash,97594183409307f5670adc6211d1cfc9e53d4d3cc3bb93842d940fc372320213,34322801ba094bd7a1627d70bd07648b0553faad57bdf8d4b6d475e14235a420,其他差异,parent/copy configs; engineering paths and identity separated
+precision,fp32,fp32,保持一致,parent/copy configs; engineering paths and identity separated
+official_commit,,,保持一致,parent/copy configs; engineering paths and identity separated
+budget_note,"one authorized formal R1; 30000 joint iterations, each student optimizer step separately recorded","one authorized C1, 30000 joint iterations plus <=2 isolated short joint updates",其他差异,parent/copy configs; engineering paths and identity separated
+estimated_seconds,24156,26440.013047698885,其他差异,parent/copy configs; engineering paths and identity separated
+phase,formal_R1,formal_C1,其他差异,parent/copy configs; engineering paths and identity separated
+controller_version,v2_B,v2_B,保持一致,parent/copy configs; engineering paths and identity separated
+foreground_ids,"[1, 2, 3]","[1, 2, 3]",保持一致,parent/copy configs; engineering paths and identity separated
+background_id,0,0,保持一致,parent/copy configs; engineering paths and identity separated
+formal_authorized,True,True,保持一致,parent/copy configs; engineering paths and identity separated
+controller_source,/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/controller.py,/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/controller.py,其他差异,parent/copy configs; engineering paths and identity separated
+controller_source_sha256,f923e7f9bf0ef9bdae94bbd400d54f52fbbc6064efac9bcece365465657f795c,f923e7f9bf0ef9bdae94bbd400d54f52fbbc6064efac9bcece365465657f795c,保持一致,parent/copy configs; engineering paths and identity separated
+parent_protocol_hash,a4145b4d3fdbecc8cfee53dfc835884f13f342fa20f1be0b8419f36fe1d0b684,97594183409307f5670adc6211d1cfc9e53d4d3cc3bb93842d940fc372320213,其他差异,parent/copy configs; engineering paths and identity separated
+optimizer,"""SGD momentum .9, weight_decay 1e-4; transplant pretrain optimizer state""","""SGD momentum .9, weight_decay 1e-4; transplant pretrain optimizer state""",保持一致,actual effective code and parent protocol
+base_lr,0.01,0.01,保持一致,actual effective code and parent protocol
+lr_schedule,"""constant after pretrain optimizer transplant (historical loop has no LR update)""","""constant after pretrain optimizer transplant (historical loop has no LR update)""",保持一致,actual effective code and parent protocol
+ema,0.99,0.99,保持一致,actual effective code and parent protocol
+ctw_lambda,0.05,0.05,保持一致,actual effective code and parent protocol
+evaluation,"{""id"": ""ACDC_v22_grid_directed_ASD"", ""dice_iou"": ""fractions; macro over RV/MYO/LV and frame volumes"", ""surface_unit"": ""original H5 reconstruction grid, spacing=(1,1,1)"", ""empty_both"": ""all metrics 0"", ""empty_one"": ""Dice/IoU 0, HD95/ASD volume-grid diagonal"", ""asd"": ""MedPy directed prediction-to-GT ASD"", ""resize"": ""nearest order=0 input and output"", ""postprocess"": ""none""}","{""id"": ""ACDC_v22_grid_directed_ASD"", ""dice_iou"": ""fractions; macro over RV/MYO/LV and frame volumes"", ""surface_unit"": ""original H5 reconstruction grid, spacing=(1,1,1)"", ""empty_both"": ""all metrics 0"", ""empty_one"": ""Dice/IoU 0, HD95/ASD volume-grid diagonal"", ""asd"": ""MedPy directed prediction-to-GT ASD"", ""resize"": ""nearest order=0 input and output"", ""postprocess"": ""none""}",保持一致,actual effective code and parent protocol
+labeled_patients,"[""patient021"", ""patient038"", ""patient049"", ""patient050"", ""patient058"", ""patient099"", ""patient100""]","[""patient021"", ""patient038"", ""patient049"", ""patient050"", ""patient058"", ""patient099"", ""patient100""]",保持一致,actual effective code and parent protocol
+labeled_slice_count,136,136,保持一致,actual effective code and parent protocol
+image_size,"[256, 256]","[256, 256]",保持一致,actual effective code and parent protocol
+selection,"""strictly higher foreground macro Dice on val; student 1""","""strictly higher foreground macro Dice on val; student 1""",保持一致,actual effective code and parent protocol
+resume_boundary,"""main RNG and sampled batch IDs recoverable; 16 worker RNG/prefetch not fully recoverable, not bitwise exact""","""main RNG and sampled batch IDs recoverable; 16 worker RNG/prefetch not fully recoverable, not bitwise exact""",保持一致,actual effective code and parent protocol
+original_pretrain_generating_command,NA,current exact file reused; hashes now frozen,无法核验,parent generating logs/per-H5 historical manifests absent; same current asset not retroactive provenance
+historical_training_H5_content_hash,NA,current exact file reused; hashes now frozen,无法核验,parent generating logs/per-H5 historical manifests absent; same current asset not retroactive provenance

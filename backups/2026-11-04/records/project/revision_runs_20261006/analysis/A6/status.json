@@ -1,0 +1,7 @@
+{
+  "task": "A6",
+  "status": "PARTIAL",
+  "reason": "Prespecified extreme/median patient gain selection, same frame/slice/display/colors; lowest gains retained even if adverse. Test used only for final descriptive display.",
+  "time": "2026-10-06T21:27:09.931649+08:00",
+  "rule": "largest/median/smallest patient Dice difference; frame01 if available; middle foreground-bearing slice"
+}

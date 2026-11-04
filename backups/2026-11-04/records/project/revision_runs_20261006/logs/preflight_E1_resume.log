@@ -1,0 +1,19 @@
+Namespace(root_path='/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC', exp='beta_fft_acdc_official_10pct_seed42', model='unet', pre_iterations=10000, max_iterations=3, batch_size=24, deterministic=1, base_lr=0.01, image_size=[256, 256], seed=42, num_classes=4, labeled_bs=12, labelnum=7, u_weight=0.5, gpu='0', consistency=0.1, consistency_rampup=200.0, magnitude=6.0, s_param=6, patch_size=64, h_size=4, w_size=4, top_num=4, run_root='/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/smoke/E1', pretrained_model='/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7', data_manifest_name='official', resume_ckpt='/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/smoke/E1/checkpoints/last.ckpt', save_interval=1, mask_token_enabled=True, adamix_enabled=True, mask_token_num=4, mask_token_dim=16, adamix_min_side=0.18, adamix_max_side=0.38, mechanism_log_interval=200, innovation_x_id='V21_3_X03_CONTOUR_RELIABILITY_WEIGHT', enable_v21_3_innovation_x=True, v21_3_innovation_x_weight=0.05)
+run_root=/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/smoke/E1
+pretrained_model=/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth
+Train total 1312 samples
+Val total 20 samples
+Val total 20 samples
+/home/renguanming/.conda/envs/beta_fft/lib/python3.10/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 12, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+resume_ckpt=/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/smoke/E1/checkpoints/last.ckpt
+/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/smoke/E1/revision_effective_source.py:202: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(path, map_location="cpu")
+strict_resume_loaded epoch=0 global_step=2
+  0%|                                           | 0/1 [00:00<?, ?it/s]/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/smoke/E1/revision_effective_source.py:136: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  return torch.Tensor(batch_list).cuda()
+iteration 3: loss: 2.020303, model1_loss: 0.745919, model2_loss: 1.080741
+iteration 3: loss: 2.020303, ICT_loss: 0.060548, FFT_loss: 0.232697
+checkpoint_saved path=/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/smoke/E1/checkpoints/last.ckpt epoch=0 global_step=3
+  0%|                                           | 0/1 [00:02<?, ?it/s]
+resume_check_ok epoch=0 global_step=3

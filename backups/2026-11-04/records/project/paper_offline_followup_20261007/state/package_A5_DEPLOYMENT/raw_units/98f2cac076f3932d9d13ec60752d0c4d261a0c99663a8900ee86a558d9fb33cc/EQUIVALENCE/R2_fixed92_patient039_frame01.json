@@ -1,0 +1,203 @@
+{
+  "identity": "98f2cac076f3932d9d13ec60752d0c4d261a0c99663a8900ee86a558d9fb33cc",
+  "status": "PASS",
+  "checkpoint_sha256": "b56292a270ccf6679b5597e9d556eda686df91778e496e715174aaa367b710de",
+  "branch": "model_1",
+  "load_receipt": {
+    "method_id": "R2_fixed92",
+    "checkpoint_sha256": "b56292a270ccf6679b5597e9d556eda686df91778e496e715174aaa367b710de",
+    "global_step": 29000,
+    "branch": "model_1",
+    "strict": true,
+    "state_keys": 234,
+    "parameters": 1827469,
+    "trainable_parameters": 1827469
+  },
+  "model_state_before": "2265ff2e25037f0eadf4c13f191aab6a6f541407ba9d83afc4a988b39c165d9f",
+  "model_state_after": "2265ff2e25037f0eadf4c13f191aab6a6f541407ba9d83afc4a988b39c165d9f",
+  "source_shape": [
+    9,
+    224,
+    224
+  ],
+  "errors": [
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "slice_index": 0,
+      "input_sha256": "e2fa9fb80d0be0b48cf7c978a22bb8f37c25105e31b703cf5d7789bb2252f2a1",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "slice_index": 1,
+      "input_sha256": "eba53228e579ef3889ce203b0ab2af572d22b11246e3d004eb2b7d7a752c27db",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "slice_index": 2,
+      "input_sha256": "d127698ef1e9835a6f961abe9fb92e7ec92ec9f9a88087c3fe6155e10d4013d9",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "slice_index": 3,
+      "input_sha256": "0f85cbdd42ec2846739f394cfec11134db290a6459d6fd25dd65331ab5ab9349",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "slice_index": 4,
+      "input_sha256": "2cee5b0b41faf421abba563cf4455481ca3ec46fb0374efcbc20ec3fbc595479",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "slice_index": 5,
+      "input_sha256": "7dbf95e785372950aa5cf43c8934a5752f08314e5895dc0c0c134e2b75c162f0",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "slice_index": 6,
+      "input_sha256": "13a33612110eee9bcb8a148562dd7458a515c6cf4796e03c4e512cee481c87d1",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "slice_index": 7,
+      "input_sha256": "848f0b6404a0fbd3450361b284d1a0a9ab73ba46daeec6c38d5b1023749f0819",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "slice_index": 8,
+      "input_sha256": "2cdc3e702ce2e9800ba2e9042743a567310ed9ad95081e6f920df62c412ea890",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    }
+  ],
+  "metrics": [
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "path": "original_runtime",
+      "class_id": 1,
+      "unit": "native grid pixels",
+      "Dice": 0.95374470089496,
+      "IoU": 0.9115793264901855,
+      "HD95": 1.0,
+      "ASD": 0.09783437799135723
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "path": "original_runtime",
+      "class_id": 2,
+      "unit": "native grid pixels",
+      "Dice": 0.9146471699663189,
+      "IoU": 0.842718740538904,
+      "HD95": 1.0,
+      "ASD": 0.2160602732148359
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "path": "original_runtime",
+      "class_id": 3,
+      "unit": "native grid pixels",
+      "Dice": 0.9507890559342609,
+      "IoU": 0.9061943752224991,
+      "HD95": 1.0,
+      "ASD": 0.17877640312942872
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "path": "deployment_no_diagnostics",
+      "class_id": 1,
+      "unit": "native grid pixels",
+      "Dice": 0.95374470089496,
+      "IoU": 0.9115793264901855,
+      "HD95": 1.0,
+      "ASD": 0.09783437799135723
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "path": "deployment_no_diagnostics",
+      "class_id": 2,
+      "unit": "native grid pixels",
+      "Dice": 0.9146471699663189,
+      "IoU": 0.842718740538904,
+      "HD95": 1.0,
+      "ASD": 0.2160602732148359
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame01",
+      "path": "deployment_no_diagnostics",
+      "class_id": 3,
+      "unit": "native grid pixels",
+      "Dice": 0.9507890559342609,
+      "IoU": 0.9061943752224991,
+      "HD95": 1.0,
+      "ASD": 0.17877640312942872
+    }
+  ],
+  "original_prediction_sha256": "1b8e8cd1a7233ef8b3fa947659b9d69a8670e1ccda5514341fffe76cbc829b73",
+  "deployment_prediction_sha256": "1b8e8cd1a7233ef8b3fa947659b9d69a8670e1ccda5514341fffe76cbc829b73"
+}

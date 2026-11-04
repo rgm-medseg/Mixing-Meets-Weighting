@@ -1,0 +1,99 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_COVID19/covid19_volume_evaluator.py
+ORIGINAL_SHA256: ff20153cdbbe9e164bbdbd2348f6799daf0180a5503291177a86a5f9034f560b
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 14-108 ---
+14: @dataclass(frozen=True)
+15: class SlicePrediction:
+16:     patient_id: str
+17:     slice_idx: int
+18:     pred: np.ndarray
+19:     gt: np.ndarray
+20:     spacing: tuple[float, float, float]
+21: 
+22: 
+23: def _surface(mask: np.ndarray) -> np.ndarray:
+24:     mask = mask.astype(bool)
+25:     if not mask.any():
+26:         return mask
+27:     eroded = binary_erosion(mask)
+28:     return mask ^ eroded
+29: 
+30: 
+31: def surface_distances_mm(pred: np.ndarray, gt: np.ndarray, spacing: tuple[float, float, float]) -> np.ndarray:
+32:     pred = pred.astype(bool)
+33:     gt = gt.astype(bool)
+34:     pred_surface = _surface(pred)
+35:     gt_surface = _surface(gt)
+36:     if not pred_surface.any() and not gt_surface.any():
+37:         return np.array([0.0], dtype=np.float64)
+38:     if not pred_surface.any() or not gt_surface.any():
+39:         return np.array([np.inf], dtype=np.float64)
+40:     dt_gt = distance_transform_edt(~gt_surface, sampling=spacing)
+41:     dt_pred = distance_transform_edt(~pred_surface, sampling=spacing)
+42:     return np.concatenate([dt_gt[pred_surface], dt_pred[gt_surface]]).astype(np.float64)
+43: 
+44: 
+45: def binary_volume_metrics(pred: np.ndarray, gt: np.ndarray, spacing: tuple[float, float, float]) -> dict[str, float]:
+46:     pred = pred.astype(bool)
+47:     gt = gt.astype(bool)
+48:     pred_sum = int(pred.sum())
+49:     gt_sum = int(gt.sum())
+50:     intersection = int(np.logical_and(pred, gt).sum())
+51:     union = int(np.logical_or(pred, gt).sum())
+52:     if pred_sum == 0 and gt_sum == 0:
+53:         dice = 1.0
+54:         iou = 1.0
+55:     else:
+56:         dice = 2.0 * intersection / max(pred_sum + gt_sum, 1)
+57:         iou = intersection / max(union, 1)
+58:     distances = surface_distances_mm(pred, gt, spacing)
+59:     hd95 = float(np.percentile(distances, 95))
+60:     asd = float(np.mean(distances))
+61:     return {"dice": float(dice), "iou": float(iou), "hd95_mm": hd95, "asd_mm": asd}
+62: 
+63: 
+64: def reconstruct_patient_volume(slices: list[SlicePrediction]) -> tuple[np.ndarray, np.ndarray, tuple[float, float, float]]:
+65:     if not slices:
+66:         raise ValueError("missing patient slices")
+67:     patient_ids = {item.patient_id for item in slices}
+68:     if len(patient_ids) != 1:
+69:         raise ValueError(f"mixed patient ids: {sorted(patient_ids)}")
+70:     ordered = sorted(slices, key=lambda item: item.slice_idx)
+71:     expected = list(range(ordered[0].slice_idx, ordered[-1].slice_idx + 1))
+72:     actual = [item.slice_idx for item in ordered]
+73:     if actual != expected or expected[0] != 0:
+74:         raise ValueError(f"missing or non-contiguous slices for {ordered[0].patient_id}")
+75:     if len(set(actual)) != len(actual):
+76:         raise ValueError(f"duplicate slice indices for {ordered[0].patient_id}")
+77:     shape_set = {item.pred.shape for item in ordered} | {item.gt.shape for item in ordered}
+78:     if len(shape_set) != 1:
+79:         raise ValueError(f"inconsistent 2D slice shapes for {ordered[0].patient_id}: {shape_set}")
+80:     spacing_set = {item.spacing for item in ordered}
+81:     if len(spacing_set) != 1:
+82:         raise ValueError(f"inconsistent spacing for {ordered[0].patient_id}: {spacing_set}")
+83:     pred_vol = np.stack([item.pred.astype(bool) for item in ordered], axis=2)
+84:     gt_vol = np.stack([item.gt.astype(bool) for item in ordered], axis=2)
+85:     return pred_vol, gt_vol, ordered[0].spacing
+86: 
+87: 
+88: def patient_volume_macro(slices: Iterable[SlicePrediction]) -> dict[str, object]:
+89:     grouped: dict[str, list[SlicePrediction]] = defaultdict(list)
+90:     for item in slices:
+91:         grouped[item.patient_id].append(item)
+92:     if not grouped:
+93:         raise ValueError("no patient predictions supplied")
+94:     per_patient = {}
+95:     for patient_id, patient_slices in sorted(grouped.items()):
+96:         pred, gt, spacing = reconstruct_patient_volume(patient_slices)
+97:         per_patient[patient_id] = binary_volume_metrics(pred, gt, spacing)
+98:     macro = {
+99:         key: float(np.mean([metrics[key] for metrics in per_patient.values()]))
+100:         for key in ["dice", "iou", "hd95_mm", "asd_mm"]
+101:     }
+102:     return {
+103:         "primary_validation_metric": "PATIENT_VOLUME_MACRO_DICE",
+104:         "aggregation": "PATIENT_VOLUME_MACRO",
+105:         "unit": "mm",
+106:         "per_patient": per_patient,
+107:         "macro": macro,
+108:     }

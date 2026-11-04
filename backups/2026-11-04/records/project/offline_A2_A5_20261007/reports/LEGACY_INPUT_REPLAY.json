@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "all_source_input_hashes_match": true,
+  "all_manifest_samples": 70,
+  "real_GT_analyzed_samples": 34,
+  "original_augmented_input_relation": "14 labeled slices share source IDs with enlarged cohort but use historical seeded weak augmentation;20 validation middle slices are members of enlarged all-slice cohort"
+}

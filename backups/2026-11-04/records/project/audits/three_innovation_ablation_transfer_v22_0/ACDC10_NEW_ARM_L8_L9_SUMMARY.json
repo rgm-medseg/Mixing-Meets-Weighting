@@ -1,0 +1,8 @@
+{
+  "audit_id": "V22_0_ACDC10_NEW_ARM_L8_L9_SUMMARY",
+  "created_at": "2026-08-19T15:29:32.982132+00:00",
+  "L8_ALL_PASS": true,
+  "L9_FAILURE_INJECTION_PASS": true,
+  "formal_training_started": false,
+  "closed_loop_test_metrics_used_for_selection": false
+}

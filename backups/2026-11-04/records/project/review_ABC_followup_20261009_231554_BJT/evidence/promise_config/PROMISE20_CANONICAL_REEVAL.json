@@ -1,0 +1,20 @@
+{
+  "schema": "BETA_FFT_PAPER_BLOCKER_PROMISE20_REEVAL_V1",
+  "task_id": "PROMISE20_FINAL3_CANONICAL_REEVAL",
+  "operation": "TEST_ONLY_REEVALUATION",
+  "training_allowed": false,
+  "checkpoint": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/self_train/unet_best_model.pth",
+  "checkpoint_sha256": "89c670b16b9a5b1da3bdd8f8c19094424fceef84398773d0ec27246475a48f2c",
+  "selection_endpoint": "VALIDATION_BEST",
+  "best_val_dice": 0.8912,
+  "best_val_iteration": 24400,
+  "test_manifest": "external_comparators/2026_reproduction/manifests/generated/PROMISE_test.list",
+  "test_manifest_sha256": "c981d3a78c3e4bd817438edd159e77361d5dc7f88493f206ccdbfb388f6e35fb",
+  "canonical_evaluator": "tools/v22_1_postfull_test_launcher.py",
+  "canonical_evaluator_sha256": "2a20e429f54942c5392c57d1469a4edc1d0d93e144de4c3403c4d70407986ad6",
+  "historical_evaluator_sha256": "e3380e9c4f1fa2853118a6f7437e61c634f29e2a8b8fd80c110b4e6c3cbc7fa1",
+  "output_dir": "external_comparators/2026_reproduction/paper_blocker_remediation_20260904/outputs/promise20_final3_canonical_reeval",
+  "overwrite_allowed": false,
+  "test_used_for_selection": false,
+  "post_processing": "none"
+}

@@ -1,0 +1,17 @@
+{
+  "row_count": 29,
+  "table_candidate_rows": 24,
+  "supplemental_rows": 5,
+  "aggregate_tests": 116,
+  "aggregate_failures": [],
+  "nonfinite_metric_count": 0,
+  "zero_overlap_class_rows": 18,
+  "source_count": 216,
+  "hash_mismatch_sources": [],
+  "mapping_limitation": "Current manuscript Table2-4 row roster is not present in located server tables. The 24 located candidate rows are fully enumerated, not asserted as the final paper roster.",
+  "training_started": false,
+  "gpu_forward": false,
+  "checkpoint_reselected": false,
+  "original_files_written": false,
+  "covid_baseline_case_replay_rows": 8
+}

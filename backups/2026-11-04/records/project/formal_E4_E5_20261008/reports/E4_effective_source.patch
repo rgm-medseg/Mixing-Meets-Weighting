@@ -1,0 +1,19 @@
+--- R1/effective.py
++++ E4/effective.py
+@@ -196,6 +196,8 @@
+         "amp_state": None,
+         "lr_state": [g["lr"] for g in optimizer1.param_groups],
+         "resume_exact": False,
++        "scheduler_state": None,
++        "lr_state_optimizer2": [g["lr"] for g in optimizer2.param_groups],
+         "controller_metadata": control.checkpoint_metadata(),
+     }
+     revision.atomic_torch(ckpt, path)
+@@ -478,6 +480,7 @@
+                 payload["finite"] = bool(torch.isfinite(innovation_x_loss).item())
+                 logging.info("iteration %d : v21_3_innovation_x_endpoint=%s", iter_num, json.dumps(payload, sort_keys=True))
+             update_model_ema(model_1, ema_model, 0.99)
++            control.after_ema(iter_num, model_1, ema_model)
+ 
+             logits_finite = all(torch.isfinite(t).all() for t in [out_1, out_2, outputs, outputs_s, image_output_1_FFT, image_output_2_FFT])
+             loss_finite = torch.isfinite(loss).item()

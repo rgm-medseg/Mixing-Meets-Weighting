@@ -1,0 +1,11 @@
+{
+  "task": "E4",
+  "status": "TRAINED",
+  "global_step": 3,
+  "time": "2026-10-06T20:55:24.520983+08:00",
+  "pid": 23670,
+  "training_seconds": 4.556734777987003,
+  "resume_exact": false,
+  "resume_boundary": "saved IDs and main RNG; worker augmentation streams restart",
+  "test_access_during_training": 0
+}

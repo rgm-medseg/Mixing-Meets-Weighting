@@ -1,0 +1,263 @@
+{
+  "checks": {
+    "ACDC": {
+      "10p_counts": true,
+      "10p_labeled_patients": true,
+      "10p_partition": true,
+      "5p_counts": true,
+      "5p_labeled_patients": true,
+      "5p_partition": true,
+      "duplicates_absent": true,
+      "patient_split_disjoint": true
+    },
+    "COVID19": {
+      "10p_counts": true,
+      "10p_slice_disjoint": true,
+      "10p_train_population": true,
+      "10p_unlabeled_no_gt_fields": true,
+      "5p_counts": true,
+      "5p_slice_disjoint": true,
+      "5p_train_population": true,
+      "5p_unlabeled_no_gt_fields": true,
+      "patient_counts": true,
+      "patient_split_disjoint": true
+    },
+    "PROMISE12": {
+      "cache_partition": true,
+      "counts": true,
+      "duplicates_absent": true,
+      "label_range": true,
+      "patient_counts": true,
+      "patient_disjoint": true,
+      "shape_alignment": true,
+      "val_test_disjoint": true
+    }
+  },
+  "datasets": {
+    "ACDC": {
+      "case_aggregation": "mean_over_20_cases_x_3_foreground_classes",
+      "classes": {
+        "0": "background",
+        "1": "RV",
+        "2": "MYO",
+        "3": "LV"
+      },
+      "empty_foreground": "0_metrics_if_both_empty_else_shape_norm_penalty",
+      "evaluator": {
+        "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tools/v22_0_acdc_test_frozen_checkpoint.py",
+        "sha256": "5958b1a7514415f67beb184676c649867f6aeb15cce8d3ee5ee3fe5517a798f4"
+      },
+      "forbidden_during_training": [
+        "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/data",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC_test.list"
+      ],
+      "inference_size": [
+        256,
+        256
+      ],
+      "input_channels": 1,
+      "normalization": "preprocessed_h5_float_range_0_1",
+      "resize": "scipy_zoom_order0",
+      "root": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC",
+      "settings": {
+        "10p": {
+          "labeled_manifest": {
+            "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC10_labeled.list",
+            "sha256": "21e086cfa888ebc9f8c7d66b4889e43438030e7fc933e8e9afcdd36a72c6d9d4"
+          },
+          "labeled_patients": [
+            "patient021",
+            "patient038",
+            "patient049",
+            "patient050",
+            "patient058",
+            "patient099",
+            "patient100"
+          ],
+          "labeled_slices": 136,
+          "seed": 1337,
+          "unlabeled_manifest": {
+            "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC10_unlabeled.list",
+            "sha256": "7ca61544c7466b86e79688f12ca79cb30d9533bbceeef9b10fae6e1a10ebad50"
+          },
+          "unlabeled_slices": 1176
+        },
+        "5p": {
+          "labeled_manifest": {
+            "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC5_labeled.list",
+            "sha256": "1ef6badf855ec374a6ef8cfb358c6abaa33d8349a67bf892cba668d6e703eb97"
+          },
+          "labeled_patients": [
+            "patient038",
+            "patient050",
+            "patient099"
+          ],
+          "labeled_slices": 68,
+          "seed": 1337,
+          "unlabeled_manifest": {
+            "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC5_unlabeled.list",
+            "sha256": "624b50a01ca843385bb3f36c7aaf925a0d8af11e89e5dc48c9ed391bc9786c59"
+          },
+          "unlabeled_slices": 1244
+        }
+      },
+      "spacing": "pixel_unit_for_frozen_evaluator",
+      "test_manifest": {
+        "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC_test.list",
+        "sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671"
+      },
+      "train_size": [
+        224,
+        224
+      ],
+      "val_manifest": {
+        "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC_val.list",
+        "sha256": "61b935c936d8e12f7889e82d954f421fa25fb95305e92a476096b3242de8777d"
+      }
+    },
+    "COVID19": {
+      "case_aggregation": "patient_volume_macro",
+      "classes": {
+        "0": "background",
+        "1": "infection"
+      },
+      "empty_foreground": "both_empty_1_else_infinite_boundary",
+      "evaluator": {
+        "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_COVID19/covid19_volume_evaluator.py",
+        "sha256": "ff20153cdbbe9e164bbdbd2348f6799daf0180a5503291177a86a5f9034f560b"
+      },
+      "forbidden_during_training": [
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID_test.tsv",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data/COVID19_OFFICIAL20/derived_npz/*TEST*"
+      ],
+      "inference_size": [
+        256,
+        256
+      ],
+      "input_channels": 1,
+      "normalization": "frozen_OFFICIAL20_derived_npz",
+      "project_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+      "resize": "none_after_frozen_preprocessing",
+      "root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data/COVID19_OFFICIAL20",
+      "settings": {
+        "10p": {
+          "labeled_manifest": {
+            "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID10_labeled.tsv",
+            "sha256": "05df744c315693f04d6949bf21d83956c282c868f3a23f1bfc79f6fff3ed3dee"
+          },
+          "labeled_slices": 241,
+          "seed": 1337,
+          "train_patients": 14,
+          "unlabeled_manifest": {
+            "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID10_unlabeled.tsv",
+            "sha256": "2afe89c4d7924e9f9f7eb1bda5e256f763aa491015e37f3706d7638f11dd3ee0"
+          },
+          "unlabeled_slices": 2174
+        },
+        "5p": {
+          "labeled_manifest": {
+            "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID5_labeled.tsv",
+            "sha256": "0689f3efeeeac1a8631540b9718109ba3c3acd9ba61d46cd8dd3ddc8f79fc05d"
+          },
+          "labeled_slices": 120,
+          "seed": 1337,
+          "train_patients": 14,
+          "unlabeled_manifest": {
+            "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID5_unlabeled.tsv",
+            "sha256": "bfd037607ddead4ba4555be15d7464b47790497ae003e70a741fe908917d3107"
+          },
+          "unlabeled_slices": 2295
+        }
+      },
+      "spacing": "per_patient_canonical_mm",
+      "test_manifest": {
+        "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID_test.tsv",
+        "sha256": "453312727e51c7830423caa9e06b8cd67ad0ecf5c4f1e6058975cd3c973e73c3"
+      },
+      "train_size": [
+        256,
+        256
+      ],
+      "val_manifest": {
+        "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID_val.tsv",
+        "sha256": "b586ef2080aaae74634eef4c3a126bf72e3216125bc426c88b82ebbc17efd56e"
+      }
+    },
+    "PROMISE12": {
+      "case_aggregation": "mean_over_10_case_volume_metrics",
+      "classes": {
+        "0": "background",
+        "1": "prostate"
+      },
+      "empty_foreground": "0_metrics_if_both_empty_else_shape_norm_penalty",
+      "evaluator": {
+        "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tools/v22_1_postfull_test_launcher.py",
+        "sha256": "2a20e429f54942c5392c57d1469a4edc1d0d93e144de4c3403c4d70407986ad6"
+      },
+      "forbidden_during_training": [
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data_staging/promise12/20260624_141558/data_promise12/test.list",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data_staging/promise12/20260624_141558/data_promise12/npy_image/Case40_segmentation.npy"
+      ],
+      "inference_size": [
+        224,
+        224
+      ],
+      "input_channels": 1,
+      "normalization": "per_slice_minmax_then_curvature_flow_smoothing",
+      "patient_boundary_ruling": "explicit_Case00_06_299_slices",
+      "raw_root": "/home/renguanming/jupyterlab/rgm/datasets/PROMISE12",
+      "resize": "legacy_nearest_224",
+      "root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data_staging/promise12/20260624_141558/data_promise12",
+      "settings": {
+        "20p": {
+          "labeled_manifest": {
+            "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/manifests/generated/PROMISE20_labeled.tsv",
+            "sha256": "9ea9f17ec88da841f9d4bcaac17f6b588964288d528bc8ebd8a2b6aa72fc4715"
+          },
+          "labeled_patients": [
+            "Case00",
+            "Case01",
+            "Case02",
+            "Case03",
+            "Case04",
+            "Case05",
+            "Case06"
+          ],
+          "labeled_slices": 299,
+          "seed": 1337,
+          "unlabeled_manifest": {
+            "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/manifests/generated/PROMISE20_unlabeled.tsv",
+            "sha256": "f43fc51c86f031997d24d6f88ca981ddfa1ef1eb056c1774e816f08024f6332c"
+          },
+          "unlabeled_slices": 713
+        }
+      },
+      "spacing": "pixel_unit_frozen_internal_test",
+      "test_manifest": {
+        "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/manifests/generated/PROMISE_test.list",
+        "sha256": "c981d3a78c3e4bd817438edd159e77361d5dc7f88493f206ccdbfb388f6e35fb"
+      },
+      "train_images": {
+        "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data_staging/promise12/20260624_141558/data_promise12/npy_image/X_train.npy",
+        "sha256": "10dbb291fb2ec7fe55ba455bf94f4947b72e53897ad2deda110ebeaf2f110eb1"
+      },
+      "train_labels": {
+        "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data_staging/promise12/20260624_141558/data_promise12/npy_image/y_train.npy",
+        "sha256": "d3978716c7352ffaa3042bf3b6fefb276b6f54e95621ba5308abcc9ef78f6364"
+      },
+      "train_size": [
+        224,
+        224
+      ],
+      "val_manifest": {
+        "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/manifests/generated/PROMISE_val.list",
+        "sha256": "e53753aaa2f41bc4c6d5ea11dce16ab80db44281ec1f1d621a625db5fd7a208b"
+      }
+    }
+  },
+  "failed_checks": [],
+  "schema": "BETA_FFT_2026_COMPARATOR_DATASET_CONTRACT_V1",
+  "seed": 1337,
+  "status": "PASS",
+  "test_labels_allowed_only_in_evaluate_process": true
+}

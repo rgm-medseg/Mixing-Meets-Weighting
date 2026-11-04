@@ -1,0 +1,57 @@
+{
+  "time": "2026-10-07T00:42:59.988541+08:00",
+  "state": {
+    "status": "RUNNING",
+    "stage": "TRAIN",
+    "heartbeat": "2026-10-07T00:42:57.259890+08:00",
+    "heartbeat_epoch": 1791304977.2599225,
+    "pipeline_pid": 70652,
+    "child_pid": 70675,
+    "host": "n1",
+    "gpu": 0,
+    "started": "2026-10-07T00:40:20.818756+08:00",
+    "joint_step": 180,
+    "budget_joint_iterations": 30000,
+    "optimizer1_calls": 180,
+    "optimizer2_calls": 180,
+    "optimizer_counter_scope": "actual successful physical calls in latest complete trace row; optimizer_events.csv additionally retains partial failure evidence",
+    "ETA_training_finish": "2026-10-07T07:26:20.167456+08:00",
+    "ETA_remaining_hours": 6.72302986207694,
+    "ETA_basis": "current active formal segment elapsed / progressed joint iterations, includes validation/loading",
+    "latest_checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/runs/R1_full_v2B/checkpoints/last.ckpt",
+    "latest_training_log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/runs/R1_full_v2B/train.log",
+    "resource": {
+      "time": "2026-10-07T00:42:52.248165+08:00",
+      "gpu0_name": "NVIDIA A100-SXM4-40GB",
+      "used_mib": 16841,
+      "free_mib": 23485,
+      "utilization": 90,
+      "pids": [
+        4901
+      ],
+      "admission_threshold": "no GPU0 compute PIDs, used<2048MiB, free>=30000MiB, utilization<=10%"
+    },
+    "formal_R1_authorized": true,
+    "R2_started": false,
+    "old_queue": "INTERRUPTED",
+    "stage_errors": [],
+    "archive_status": "PENDING",
+    "resume_step": 0,
+    "current_log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/logs/train_2026-10-07T004031165806+0800.log",
+    "current_command": [
+      "/bin/bash",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/train_R1.sh"
+    ]
+  },
+  "tmux_monitor": "{\"heartbeat\": null, \"status\": \"PREPARING\", \"stage\": \"SETUP\", \"pipeline_pid\": nul\nl, \"child_pid\": null, \"joint_step\": 0, \"optimizer1_calls\": null, \"optimizer2_cal\nls\": null, \"ETA_remaining_hours\": null, \"ETA_training_finish\": null}\n{\"heartbeat\": \"2026-10-07T00:40:31.177967+08:00\", \"status\": \"RUNNING\", \"stage\":\n\"TRAIN\", \"pipeline_pid\": 70652, \"child_pid\": 70675, \"joint_step\": 0, \"optimizer1\n_calls\": 0, \"optimizer2_calls\": 0, \"ETA_remaining_hours\": 6.71, \"ETA_training_fi\nnish\": \"2026-10-07T07:23:07.177989+08:00\"}\n{\"heartbeat\": \"2026-10-07T00:40:46.213824+08:00\", \"status\": \"RUNNING\", \"stage\":\n\"TRAIN\", \"pipeline_pid\": 70652, \"child_pid\": 70675, \"joint_step\": 9, \"optimizer1\n_calls\": 9, \"optimizer2_calls\": 9, \"ETA_remaining_hours\": 6.707987, \"ETA_trainin\ng_finish\": \"2026-10-07T07:23:14.967097+08:00\"}\n{\"heartbeat\": \"2026-10-07T00:41:01.364957+08:00\", \"status\": \"RUNNING\", \"stage\":\n\"TRAIN\", \"pipeline_pid\": 70652, \"child_pid\": 70675, \"joint_step\": 29, \"optimizer\n1_calls\": 29, \"optimizer2_calls\": 29, \"ETA_remaining_hours\": 6.703513666666667,\n\"ETA_training_finish\": \"2026-10-07T07:23:14.014231+08:00\"}\n{\"heartbeat\": \"2026-10-07T00:41:16.422921+08:00\", \"status\": \"RUNNING\", \"stage\":\n\"TRAIN\", \"pipeline_pid\": 70652, \"child_pid\": 70675, \"joint_step\": 48, \"optimizer\n1_calls\": 48, \"optimizer2_calls\": 48, \"ETA_remaining_hours\": 6.699263999999999,\n\"ETA_training_finish\": \"2026-10-07T07:23:13.773390+08:00\"}\n{\"heartbeat\": \"2026-10-07T00:41:31.587892+08:00\", \"status\": \"RUNNING\", \"stage\":\n\"TRAIN\", \"pipeline_pid\": 70652, \"child_pid\": 70675, \"joint_step\": 68, \"optimizer\n1_calls\": 68, \"optimizer2_calls\": 68, \"ETA_remaining_hours\": 7.387874557874073,\n\"ETA_training_finish\": \"2026-10-07T08:04:47.936366+08:00\"}\n{\"heartbeat\": \"2026-10-07T00:41:46.625166+08:00\", \"status\": \"RUNNING\", \"stage\":\n\"TRAIN\", \"pipeline_pid\": 70652, \"child_pid\": 70675, \"joint_step\": 88, \"optimizer\n1_calls\": 88, \"optimizer2_calls\": 88, \"ETA_remaining_hours\": 7.1248059117858, \"E\nTA_training_finish\": \"2026-10-07T07:49:15.926500+08:00\"}\n{\"heartbeat\": \"2026-10-07T00:42:01.813239+08:00\", \"status\": \"RUNNING\", \"stage\":\n\"TRAIN\", \"pipeline_pid\": 70652, \"child_pid\": 70675, \"joint_step\": 108, \"optimize\nr1_calls\": 108, \"optimizer2_calls\": 108, \"ETA_remaining_hours\": 6.96921572302537\n, \"ETA_training_finish\": \"2026-10-07T07:40:10.989905+08:00\"}\n{\"heartbeat\": \"2026-10-07T00:42:16.850701+08:00\", \"status\": \"RUNNING\", \"stage\":\n\"TRAIN\", \"pipeline_pid\": 70652, \"child_pid\": 70675, \"joint_step\": 127, \"optimize\nr1_calls\": 127, \"optimizer2_calls\": 127, \"ETA_remaining_hours\": 6.90534375871554\n5, \"ETA_training_finish\": \"2026-10-07T07:36:36.088272+08:00\"}\n{\"heartbeat\": \"2026-10-07T00:42:32.018421+08:00\", \"status\": \"RUNNING\", \"stage\":\n\"TRAIN\", \"pipeline_pid\": 70652, \"child_pid\": 70675, \"joint_step\": 147, \"optimize\nr1_calls\": 147, \"optimizer2_calls\": 147, \"ETA_remaining_hours\": 6.81748124958960\n04, \"ETA_training_finish\": \"2026-10-07T07:31:34.950990+08:00\"}\n{\"heartbeat\": \"2026-10-07T00:42:47.063086+08:00\", \"status\": \"RUNNING\", \"stage\":\n\"TRAIN\", \"pipeline_pid\": 70652, \"child_pid\": 70675, \"joint_step\": 166, \"optimize\nr1_calls\": 166, \"optimizer2_calls\": 166, \"ETA_remaining_hours\": 6.78440005783238\n4, \"ETA_training_finish\": \"2026-10-07T07:29:50.903361+08:00\"}\n\n",
+  "clients": "",
+  "GPU": "0, NVIDIA A100-SXM4-40GB, 16841 MiB, 26 %\n",
+  "verified_trace_steps": 184,
+  "method_formula_every_record_verified": true,
+  "mask_area_verified": true,
+  "CTW_lambda_verified": true,
+  "live_pipeline_pid": 70652,
+  "live_train_pid": 70675,
+  "duplicate_start": "live controller reused, no second launch",
+  "interpretation": "after interactive attach and normal detach; steps and heartbeat advanced with no attached clients"
+}

@@ -1,0 +1,51 @@
+{
+  "status": "LOCKED_BEFORE_TRAIN",
+  "parent_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007",
+  "source_trace": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/results/R1_control_trace.csv",
+  "source_sha256": "315139c2d54a89205988e0dd92eb28855ac3c42b84198b216d4c49fe2a35cb95",
+  "source_steps": [
+    1,
+    30000
+  ],
+  "recorded_steps": 30000,
+  "duplicates": 0,
+  "mean_actual_pixels": 8492.147533333333,
+  "mean_actual_area": 0.129579887898763,
+  "candidate_integer_squares": [
+    {
+      "side": 92,
+      "pixels": 8464,
+      "absolute_pixel_error": 28.14753333333283
+    },
+    {
+      "side": 93,
+      "pixels": 8649,
+      "absolute_pixel_error": 156.85246666666717
+    },
+    {
+      "side": 91,
+      "pixels": 8281,
+      "absolute_pixel_error": 211.14753333333283
+    },
+    {
+      "side": 94,
+      "pixels": 8836,
+      "absolute_pixel_error": 343.85246666666717
+    },
+    {
+      "side": 90,
+      "pixels": 8100,
+      "absolute_pixel_error": 392.14753333333283
+    }
+  ],
+  "h": 92,
+  "w": 92,
+  "fixed_side": 0.359375,
+  "fixed_pixels": 8464,
+  "fixed_area": 0.129150390625,
+  "signed_area_error": -0.00042949727376301317,
+  "error_percentage_points": -0.04294972737630132,
+  "relative_error": -0.003314536543653803,
+  "rule": "nearest integer square to mean actual_area_pixels over all R1 steps 1..30000; smaller side wins tie",
+  "no_test_metrics_used": true
+}

@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "time": "2026-10-07T11:05:45.755076+08:00",
+  "cases": [
+    {
+      "logit_magnitude": 0.2,
+      "q_B": 0.05244767293334007,
+      "s_dynamic_B": 0.190489534586668,
+      "s_actual": 0.359375,
+      "h": 92,
+      "w": 92,
+      "pixels": 8464,
+      "y": 85,
+      "x": 158,
+      "fallback": false,
+      "same_image_target_mask": true,
+      "two_original_randint_calls": true
+    },
+    {
+      "logit_magnitude": 2.0,
+      "q_B": 0.6149794658025106,
+      "s_dynamic_B": 0.3029958931605021,
+      "s_actual": 0.359375,
+      "h": 92,
+      "w": 92,
+      "pixels": 8464,
+      "y": 13,
+      "x": 22,
+      "fallback": false,
+      "same_image_target_mask": true,
+      "two_original_randint_calls": true
+    },
+    {
+      "logit_magnitude": 8.0,
+      "q_B": 0.9986591935157776,
+      "s_dynamic_B": 0.3797318387031555,
+      "s_actual": 0.359375,
+      "h": 92,
+      "w": 92,
+      "pixels": 8464,
+      "y": 118,
+      "x": 130,
+      "fallback": false,
+      "same_image_target_mask": true,
+      "two_original_randint_calls": true
+    },
+    {
+      "logit_magnitude": null,
+      "q_B": 0.0,
+      "s_dynamic_B": 0.18,
+      "s_actual": 0.359375,
+      "h": 92,
+      "w": 92,
+      "pixels": 8464,
+      "y": 112,
+      "x": 40,
+      "fallback": true,
+      "same_image_target_mask": true,
+      "two_original_randint_calls": true
+    }
+  ],
+  "device": "CPU",
+  "optimizer_calls": 0,
+  "controller_source_exact_R1": true,
+  "no_extra_random_calls": true,
+  "scientific_loop_same_R1": true
+}

@@ -1,0 +1,20 @@
+{
+  "FINAL_REVIEW_1_COMPLETENESS": "PASS",
+  "FINAL_REVIEW_2_NUMERICAL": "PASS",
+  "FINAL_REVIEW_3_IDENTITY": "PASS",
+  "FINAL_REVIEW_4_GENERALIZATION_INTEGRITY": "PASS",
+  "FINAL_REVIEW_5_HANDOFF": "PASS",
+  "MSCMR10_FINAL3": "BLOCKED_PARENT_IDENTITY",
+  "controller_state": {
+    "completed": [
+      "COVID5_FINAL3",
+      "COVID10_FINAL3"
+    ],
+    "current_task": "COVID10_FINAL3",
+    "finished_at": "2026-08-22T10:27:42.226773+00:00",
+    "mode": "resume",
+    "pid": 81944,
+    "started_at": "2026-08-22T10:26:57.634681+00:00",
+    "status": "ALL_NEW_TESTS_PASS"
+  }
+}

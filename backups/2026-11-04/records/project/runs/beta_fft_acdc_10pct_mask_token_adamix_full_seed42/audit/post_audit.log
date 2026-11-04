@@ -1,0 +1,156 @@
+/home/renguanming/jupyterlab/rgm/beta-FFT-main/scripts/v14_acdc_mask_adamix_post_audit.py:78: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+/home/renguanming/jupyterlab/rgm/beta-FFT-main/scripts/v14_acdc_mask_adamix_post_audit.py:78: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+
+{
+  "status": "ACDC_MASK_ADAMIX_TRANSFER_NEUTRAL",
+  "run": "runs/beta_fft_acdc_10pct_mask_token_adamix_full_seed42",
+  "seed": 42,
+  "split": "official_labelnum7",
+  "best_checkpoint": "runs/beta_fft_acdc_10pct_mask_token_adamix_full_seed42/checkpoints/best.ckpt",
+  "best_checkpoint_sha256": "f10f69989883a423117a53695311b47e01dc65fbc27fbce2d0c666d6fd733514",
+  "best_iteration": 25200,
+  "best_validation_raw": {
+    "dice": 0.9016546176026737,
+    "iou": 0.8300457747002928,
+    "hd95": 1.3590768912676405,
+    "asd": 0.39476279381313495,
+    "RV_Dice": 0.8642177959710858,
+    "MYO_Dice": 0.9060632095526776,
+    "LV_Dice": 0.9346828472842581
+  },
+  "final_validation_raw": {
+    "dice": 0.8938047955591754,
+    "iou": 0.8183873682949668,
+    "hd95": 2.5154737805294403,
+    "asd": 0.6804717655088002,
+    "RV_Dice": 0.858573916993002,
+    "MYO_Dice": 0.9016390256448303,
+    "LV_Dice": 0.9212014440396936
+  },
+  "formal_test_raw_after_freeze": {
+    "dice": 0.8989462872744961,
+    "iou": 0.8218097590865078,
+    "hd95": 3.438713373621556,
+    "asd": 0.7754972915391061,
+    "RV_Dice": 0.8830198634965505,
+    "MYO_Dice": 0.8804392919767,
+    "LV_Dice": 0.9333797063502374
+  },
+  "delta_vs_parent": {
+    "mDice_pp": 0.07319939221491767,
+    "mIoU_pp": 0.2915579113036637,
+    "HD95": -0.8217436400589215,
+    "ASD": -0.10405191222403082,
+    "RV_pp": -1.4081608321670713,
+    "MYO_pp": 0.49449045961866833,
+    "LV_pp": 1.133268549193156
+  },
+  "case_safety": {
+    "positive": 14,
+    "negative": 6,
+    "median_delta": 0.0015929282339961492,
+    "worst": {
+      "case": "patient002_frame02",
+      "parent_Dice": 0.8793001677796242,
+      "candidate_Dice": 0.8187740932483605,
+      "delta_Dice": -0.060526074531263685,
+      "RV_delta": -0.19289799668089147,
+      "MYO_delta": 0.008845387766413637,
+      "LV_delta": 0.0024743853206866673,
+      "HD95_delta": 1.4434496947216446,
+      "ASD_delta": 0.3978897284629939
+    },
+    "best": {
+      "case": "patient028_frame02",
+      "parent_Dice": 0.8121808472082339,
+      "candidate_Dice": 0.8415478031104305,
+      "delta_Dice": 0.029366955902196623,
+      "RV_delta": -0.037196836863989,
+      "MYO_delta": 0.01611046978894959,
+      "LV_delta": 0.10918723478162906,
+      "HD95_delta": -8.809347854215575,
+      "ASD_delta": -1.2974172851826642
+    },
+    "pass": true
+  },
+  "class_safety_pass": false,
+  "mechanism_endpoint": {
+    "mask_token": {
+      "records": 150,
+      "pass": true,
+      "last": {
+        "model1": {
+          "activation_coverage": 1.0,
+          "feature_norm": 3813.404052734375,
+          "finite": true,
+          "gamma": 0.037278056144714355,
+          "gradient_finite": true,
+          "predicted_class_fraction": [
+            0.9611765742301941,
+            0.010192235931754112,
+            0.015949249267578125,
+            0.012681961059570312
+          ],
+          "residual_norm": 618.5158081054688,
+          "residual_to_feature_ratio": 0.16219519078731537,
+          "routing_entropy": 1.3862837553024292,
+          "token_gradient_norm": 0.0007376582361757755,
+          "token_norm": 0.1118389144539833,
+          "token_utilization": [
+            0.2501858174800873,
+            0.2494640350341797,
+            0.2498568743467331,
+            0.25049328804016113
+          ]
+        },
+        "model2": {
+          "activation_coverage": 1.0,
+          "feature_norm": 3699.295166015625,
+          "finite": true,
+          "gamma": 0.10926878452301025,
+          "gradient_finite": true,
+          "predicted_class_fraction": [
+            0.9599050283432007,
+            0.011043548583984375,
+            0.016440710052847862,
+            0.012610753998160362
+          ],
+          "residual_norm": 617.7240600585938,
+          "residual_to_feature_ratio": 0.16698426008224487,
+          "routing_entropy": 1.3862745761871338,
+          "token_gradient_norm": 0.006882150657474995,
+          "token_norm": 0.12327995896339417,
+          "token_utilization": [
+            0.25001969933509827,
+            0.24947291612625122,
+            0.25091230869293213,
+            0.24959509074687958
+          ]
+        }
+      }
+    },
+    "adamix": {
+      "records": 150,
+      "pass": true,
+      "last": {
+        "class_histogram": [
+          0.9979984164237976,
+          0.002001629676669836,
+          0.0,
+          0.0
+        ],
+        "finite": true,
+        "foreground_coverage": 0.0020015835762023926,
+        "mixed_loss_contribution": 1.557137370109558,
+        "model1_total_gradient_norm": 0.944935142993927,
+        "patch_area_ratio": 0.1435699462890625,
+        "side_fraction": 0.37941253662109375,
+        "teacher_conf": 0.9970626831054688
+      }
+    },
+    "pass": true
+  }
+}
+

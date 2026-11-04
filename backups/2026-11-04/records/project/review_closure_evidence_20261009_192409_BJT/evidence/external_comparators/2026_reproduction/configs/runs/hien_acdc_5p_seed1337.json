@@ -1,0 +1,71 @@
+{
+  "base_lr": 0.01,
+  "batch_size": 4,
+  "checkpoint_cadence": 100,
+  "consistency": 0.1,
+  "consistency_rampup": 200.0,
+  "data": {
+    "evaluator": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tools/v22_0_acdc_test_frozen_checkpoint.py",
+    "evaluator_sha256": "5958b1a7514415f67beb184676c649867f6aeb15cce8d3ee5ee3fe5517a798f4",
+    "forbidden_during_training": [
+      "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/data",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC_test.list"
+    ],
+    "labeled_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC5_labeled.list",
+    "labeled_manifest_sha256": "1ef6badf855ec374a6ef8cfb358c6abaa33d8349a67bf892cba668d6e703eb97",
+    "project_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+    "root": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC",
+    "test_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC_test.list",
+    "test_manifest_sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+    "unlabeled_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC5_unlabeled.list",
+    "unlabeled_manifest_sha256": "624b50a01ca843385bb3f36c7aaf925a0d8af11e89e5dc48c9ed391bc9786c59",
+    "val_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC_val.list",
+    "val_manifest_sha256": "61b935c936d8e12f7889e82d954f421fa25fb95305e92a476096b3242de8777d"
+  },
+  "dataset": "ACDC",
+  "dataset_contract_sha256": "4424753baa5fdb3e923cf0de5dcdac10a239472d72b198027aa7da1bcee0279d",
+  "device": "cuda:0",
+  "ema_supervised_alpha": 0.98,
+  "ema_unsupervised_alpha": 0.95,
+  "formal_seed": 1337,
+  "grayscale_adapter": "deterministic_repeat_1_to_3",
+  "inference_size": [
+    256,
+    256
+  ],
+  "input_channels": 3,
+  "job_id": "hien_acdc_5p_seed1337",
+  "labeled_batch_size": 2,
+  "max_iterations": 30000,
+  "method": "HiEn",
+  "momentum": 0.9,
+  "network": "unet_resnet34",
+  "num_classes": 4,
+  "optimizer": "SGD",
+  "patch_size": [
+    224,
+    224
+  ],
+  "pretraining": {
+    "enabled": true,
+    "identity": "torchvision_resnet34_legacy_pretrained_true",
+    "path": "external_comparators/2026_reproduction/pretrained/resnet34-b627a593.pth",
+    "sha256": "b627a593bcbe140c234610266fe4f8ae95ea42fc881d091c9b6052e6b1d0590f"
+  },
+  "ratio": "5p",
+  "schema": "BETA_FFT_2026_COMPARATOR_RUN_CONFIG_V1",
+  "seed": 1337,
+  "selection_rule": "shared_global_best_validation_dice_across_student_then_teacher",
+  "source_commit": "6dfa06f24c5a80223d14ee07183ced713ae8681e",
+  "supervised_loss": "0.5*(cross_entropy+dice)",
+  "supervised_updates_per_iteration": 1,
+  "test_access_during_training": false,
+  "test_output": "selected_model_logits_output_0",
+  "test_selection_forbidden": true,
+  "unsupervised_loss": "ramped_(prediction_consistency_after_iter1000+feature_contrastive)",
+  "unsupervised_updates_per_iteration": 1,
+  "validation_cadence": 100,
+  "vat_epsilon": 2.0,
+  "vat_xi": 1e-06,
+  "weight_decay": 0.0001
+}

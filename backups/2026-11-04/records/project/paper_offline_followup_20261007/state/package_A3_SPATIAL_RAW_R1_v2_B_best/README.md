@@ -1,0 +1,1 @@
+Complete A3 raw units for R1_v2_B best, including every matched/original strategy batch available, with source/config/code identity. 18 units. Summary CSVs, figures, and all unfavorable examples are in A3_SPATIAL_CORE. This archive independently verifies all its files using SHA256SUMS. Full medical arrays remain on server.

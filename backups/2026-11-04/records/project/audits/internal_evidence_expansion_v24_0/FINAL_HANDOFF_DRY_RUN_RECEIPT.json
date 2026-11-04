@@ -1,0 +1,41 @@
+{
+  "status": "DRY_RUN_PASS_WAITING_UPSTREAM",
+  "created_at": "2026-08-24T17:18:05.696426+00:00",
+  "task_id": "FINAL_HANDOFF",
+  "mode": "dry-run",
+  "training_started": false,
+  "inference_started": false,
+  "test_started": false,
+  "formal_started": false,
+  "upstream": {
+    "requires": [
+      {
+        "TaskID": "FINAL_FIVE_REVIEW",
+        "TaskType": "FINALIZATION",
+        "Action": "FINALIZATION_READY",
+        "FinalLaunchReady": "PASS",
+        "Blocker": "",
+        "CompletionAsset": "audits/internal_evidence_expansion_v24_0/FINAL_FIVE_REVIEW.json",
+        "CompletionAssetExists": false,
+        "CompletionAssetPass": false,
+        "CompletionEvidence": null,
+        "Ready": false
+      }
+    ],
+    "blocked": [
+      {
+        "TaskID": "FINAL_FIVE_REVIEW",
+        "Reason": "WAITING_PASS_COMPLETION_ASSET:audits/internal_evidence_expansion_v24_0/FINAL_FIVE_REVIEW.json"
+      }
+    ],
+    "ready": false
+  },
+  "planned_outputs": [
+    "final_report/internal_evidence_expansion_v24_0/V24_0_INTERNAL_EVIDENCE_HANDOFF_FOR_CHATGPT.md"
+  ],
+  "missing_planned_outputs": [
+    "final_report/internal_evidence_expansion_v24_0/V24_0_INTERNAL_EVIDENCE_HANDOFF_FOR_CHATGPT.md"
+  ],
+  "will_generate_fake_results": false,
+  "hard_gate": "FinalLaunchReady means launch-permitted only; PASS requires real completion evidence for FormalFullComplete, BestValSelected, FrozenCheckpointSHA, TEST_COMPLETION_RECEIPT, and ResultAsset."
+}

@@ -1,0 +1,14 @@
+{
+  "url": "https://api.github.com/repos/dcb937/UCAD/git/trees/main?recursive=1",
+  "tree_sha": "7a5361a203e3f2c3406118f854c0582b59bb9e01",
+  "relevant_files": [
+    {
+      "path": "code/train_UCAD.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74f12c08601ae8c2d3ceb66dce7a7f30b2922673",
+      "size": 28585,
+      "url": "https://api.github.com/repos/dcb937/UCAD/git/blobs/74f12c08601ae8c2d3ceb66dce7a7f30b2922673"
+    }
+  ]
+}

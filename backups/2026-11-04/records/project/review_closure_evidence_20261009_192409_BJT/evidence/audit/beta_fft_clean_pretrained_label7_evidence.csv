@@ -1,0 +1,4 @@
+source,path,finding
+checkpoint,/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth,"exists; torch.load keys are net,opt; no args/list/case metadata found"
+directory_inventory,/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7,only unet_best_model.pth found under label7
+code,/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/beta_fft_label7.py,"pre_train would use first patients_to_slices(labelnum) train_slices entries, but local main has pre_train commented and snapshot path label3; not proof this checkpoint came from clean labeled cases"

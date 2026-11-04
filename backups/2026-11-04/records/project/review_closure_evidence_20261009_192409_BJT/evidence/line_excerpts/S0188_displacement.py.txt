@@ -1,0 +1,23 @@
+ORIGINAL: /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_promise12/utils/displacement.py
+SHA256: 7e807dfc8944ed0d683110e4077bb3d355021b5f7b77ab08c9b989176836ff96
+32: def process_image_batches(image_batch_with_labels_tensor, image_batch_without_labels_tensor, threshold):
+48:     
+49:     # 对每张图像进行处理
+50:     for i in range(batch_size):
+51:         # 提取第 i 张图像
+52:         img_with_labels = image_batch_with_labels_tensor[i:i+1]
+53:         img_without_labels = image_batch_without_labels_tensor[i:i+1]
+54:         
+55:         # print("img_with_labels大小",img_with_labels.shape)
+59:         low_freq_without_labels = get_low_freq_component_single(img_without_labels, threshold)
+60:         
+61:         # 交换低频区域
+62:         swapped_img_with_labels = img_with_labels - low_freq_with_labels + low_freq_without_labels
+63:         swapped_img_without_labels = img_without_labels - low_freq_without_labels + low_freq_with_labels
+64:         
+65:         # 将处理后的图像加入新的批次中
+66:         new_batch_with_labels.append(swapped_img_with_labels)
+67:         new_batch_without_labels.append(swapped_img_without_labels)
+68:     
+69:     # 将列表转换为张量
+73:     return last_image.reshape(-1, image_batch_with_labels_tensor.shape[-2], image_batch_with_labels_tensor.shape[-1])

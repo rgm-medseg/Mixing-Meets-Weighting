@@ -1,0 +1,90 @@
+{
+  "time": "2026-10-08T00:46:30.327670+08:00",
+  "joint_step": 0,
+  "pretrain": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth",
+  "sha256": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3",
+  "fresh": true,
+  "checks": [
+    {
+      "branch": "model_1",
+      "exact_pretrained_common_state": true,
+      "gamma": 0.0,
+      "parameters": 1827469,
+      "router_parameters": 641
+    },
+    {
+      "branch": "model_2",
+      "exact_pretrained_common_state": true,
+      "gamma": 0.0,
+      "parameters": 1827469,
+      "router_parameters": 641
+    },
+    {
+      "branch": "ema_model",
+      "exact_pretrained_common_state": true,
+      "gamma": 0.0,
+      "parameters": 1827469,
+      "router_parameters": 641
+    }
+  ],
+  "optimizer_pretrained_state_exact": true,
+  "code_identity": "22f979518334ce64b095c1e143b1cbd4e28a735f6f2f76525887a7f4448acbb9",
+  "backend": {
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cudnn_allow_tf32": true,
+    "matmul_allow_tf32": false,
+    "AMP": false
+  },
+  "optimizer1_groups": [
+    {
+      "lr": 0.01,
+      "momentum": 0.9,
+      "dampening": 0,
+      "weight_decay": 0.0001,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false,
+      "fused": false
+    },
+    {
+      "lr": 0.01,
+      "momentum": 0.9,
+      "dampening": 0,
+      "weight_decay": 0.0001,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false,
+      "fused": null
+    }
+  ],
+  "optimizer2_groups": [
+    {
+      "lr": 0.01,
+      "momentum": 0.9,
+      "dampening": 0,
+      "weight_decay": 0.0001,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false,
+      "fused": false
+    },
+    {
+      "lr": 0.01,
+      "momentum": 0.9,
+      "dampening": 0,
+      "weight_decay": 0.0001,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false,
+      "fused": null
+    }
+  ],
+  "source": "exact parent load_parent_pretrain and transplant_parent_optimizer_state; no short/E1/late weights",
+  "generating_pretrain_history": "NA: no original generating command/log retained; identical file reused",
+  "test_access": false
+}

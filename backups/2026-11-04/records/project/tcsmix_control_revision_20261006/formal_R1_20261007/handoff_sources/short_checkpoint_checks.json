@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "time": "2026-10-06T23:35:28.054686+08:00",
+  "checkpoints": [
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/runs/SHORT_TCSMIX_V2/checkpoints/recovery_boundary_200.ckpt",
+      "sha256": "5451a99c378385e4fdf564f0c42635343fb986fd109c40d5b4e0446de3fe0502",
+      "step": 200,
+      "keys": [
+        "amp_state",
+        "args",
+        "best_metrics",
+        "controller_metadata",
+        "ema_model",
+        "epoch",
+        "global_step",
+        "lr_state",
+        "model_1",
+        "model_2",
+        "optimizer1",
+        "optimizer2",
+        "random_state",
+        "resume_exact",
+        "sampler_state"
+      ],
+      "controller_metadata": {
+        "version": "v2_B",
+        "foreground_ids": [
+          1,
+          2,
+          3
+        ],
+        "background_id": 0,
+        "empty_foreground_fallback": 0.0,
+        "min_side": 0.18,
+        "max_side": 0.38,
+        "stateless": true,
+        "cfg_sha256": "801f9fb7885ac91308f0ab9ef18e25fed3ac27291ebaf592991d63d99669e49b"
+      },
+      "strict_models_and_optimizers_load": true,
+      "parameters_student1": 1827469,
+      "router_parameters": 641,
+      "sampler_plan": 11,
+      "consumed": 2
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/runs/SHORT_TCSMIX_V2/checkpoints/last.ckpt",
+      "sha256": "8137dfde0d6e60b0bd36cc5e2483fe71d9d9f786af43fe97f733f0c1532c3a2e",
+      "step": 240,
+      "keys": [
+        "amp_state",
+        "args",
+        "best_metrics",
+        "controller_metadata",
+        "ema_model",
+        "epoch",
+        "global_step",
+        "lr_state",
+        "model_1",
+        "model_2",
+        "optimizer1",
+        "optimizer2",
+        "random_state",
+        "resume_exact",
+        "sampler_state"
+      ],
+      "controller_metadata": {
+        "version": "v2_B",
+        "foreground_ids": [
+          1,
+          2,
+          3
+        ],
+        "background_id": 0,
+        "empty_foreground_fallback": 0.0,
+        "min_side": 0.18,
+        "max_side": 0.38,
+        "stateless": true,
+        "cfg_sha256": "801f9fb7885ac91308f0ab9ef18e25fed3ac27291ebaf592991d63d99669e49b"
+      },
+      "strict_models_and_optimizers_load": true,
+      "parameters_student1": 1827469,
+      "router_parameters": 641,
+      "sampler_plan": 11,
+      "consumed": 9
+    }
+  ],
+  "actual_resume": "second segment logs strict_resume_loaded step200; trace201..240 confirms same run",
+  "controller_state": "stateless; definition/metadata hash stored and verified",
+  "resume_exact": false,
+  "boundary": "16 worker augmentation RNG/prefetched tensors unavailable, restarted worker streams; not bitwise resume",
+  "optimizer_calls_in_postcheck": 0,
+  "never_formal_initialization": true
+}

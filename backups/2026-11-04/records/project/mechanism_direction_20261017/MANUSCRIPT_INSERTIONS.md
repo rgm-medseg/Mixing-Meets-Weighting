@@ -1,0 +1,11 @@
+# Independent manuscript insertion — 16-page 2026-10-17 revision
+
+For Section 4.4:
+
+We extended the frozen main-Full diagnostic by crossing clean anatomical regions with the correctness of the archived teacher hard targets on pseudo-label source pixels. The original 210 validation slices from 10 patients and the predeclared mixed inputs were retained; six repeated source exposures completed the batch plan. For the 0.05-scaled student-consistency term, we compared spatial CTW with each image’s mean CTW weight and computed a=〈g,p₁−onehot(GT)〉; positive a denotes a local logit direction that reduces GT cross entropy. Within teacher-error boundary regions, CTW increased the patient-equal share of the full consistency-gradient L1 mass from 7.88% to 10.18%. GT-aligned and GT-opposed contributions both increased, from 3.61% to 4.83% and from 4.26% to 5.35%, respectively, in all 10 patients. Across all eligible teacher-error pixels, these shares rose from 4.71% to 5.85% and from 6.37% to 6.97%; the patient-equal regional mean a remained negative (−9.38×10⁻¹¹ versus −1.12×10⁻¹⁰). Thus, boundary emphasis includes contributions in both GT directions.
+
+The archived Baseline, TCSMix, CTW and TCSMix+CTW checkpoints with TRC disabled were all available and identity-verified. On identical mixed images, whole-image student disagreement was 1.296%, 1.210%, 1.273% and 1.177%, respectively. Their within-model weighting responses and common-reference teacher-error strata remained configuration dependent; this comparison does not reconstruct each model’s own input-generation rule.
+
+For Discussion:
+
+At fixed predictions, positive detached CTW weights rescale each pixel’s consistency gradient and cannot reverse its exact direction. The observed redistribution therefore does not establish selective correction of erroneous teacher targets: GT-opposed contributions also receive additional mass. Teacher correctness is an offline stratum, whereas CTW compares student probabilities. These first-order logit diagnostics and common-input checkpoint comparisons do not measure an actual parameter update, establish a training causal chain, or assess variability across training seeds. Prediction errors are unchanged when only the frozen loss weights are switched.

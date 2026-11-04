@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "case_records": 48,
+  "manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data/COVID19_OFFICIAL20/manifests/TEST_ALL_SLICES.tsv",
+  "manifest_sha256": "453312727e51c7830423caa9e06b8cd67ad0ecf5c4f1e6058975cd3c973e73c3",
+  "evaluator": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/source/train_COVID19/covid19_volume_evaluator.py",
+  "evaluator_sha256": "ff20153cdbbe9e164bbdbd2348f6799daf0180a5503291177a86a5f9034f560b",
+  "training_started": false,
+  "legacy_maximum_metric_difference": 0.0,
+  "actual_geometry_problem": "in-plane resize512to256 retained original spacing; axis2 reconstruction correctly restores XYZ",
+  "time": "2026-10-06T21:14:54.761639+08:00",
+  "geometry_policy_version": "resize_spacing_v2_XYZ_reconstruction_verified",
+  "legacy_repair_time": "2026-10-06T21:19:54.932521+08:00",
+  "geometry_audit_source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/reports/covid_geometry_audit.csv",
+  "script_sha256": "b02a246a935a57e58300a7e2bf08ffc25937616a93247940a95c5ac681ca9c36"
+}

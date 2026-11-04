@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "controller_sha256": "f923e7f9bf0ef9bdae94bbd400d54f52fbbc6064efac9bcece365465657f795c",
+  "constructor": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/revision_runtime.py",
+  "plain_class": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/revision_runtime.py",
+  "ctw_ast_identical": true,
+  "loss_EMA_blocks_identical": true,
+  "weight_mode": "spatial",
+  "CTW_lambda": 0.05,
+  "student2_CTWs_stop_gradient": true,
+  "teacher_forward_count_unchanged": true
+}

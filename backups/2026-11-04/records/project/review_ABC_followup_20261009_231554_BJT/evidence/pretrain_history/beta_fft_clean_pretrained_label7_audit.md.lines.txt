@@ -1,0 +1,15 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/audit/beta_fft_clean_pretrained_label7_audit.md
+ORIGINAL_SHA256: 555964debcc2e140c6d0c3acc598d3e1ed535f5f298b38a5e7d71082d0a2664d
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 1-11 ---
+1: # beta-FFT clean pretrained label7 audit
+2: 
+3: generated_at: 2026-06-18 00:37:05 CST
+4: 
+5: ## Conclusion
+6: 
+7: `Pre_model/label7` is **UNPROVEN_NOT_REUSABLE** for clean split full.
+8: 
+9: The local checkpoint contains only `net` and `opt`; no args, split list, case IDs, seed, root path, or training metadata were found. The `label7` directory contains only `unet_best_model.pth`. Therefore the full pretrained frame-volume set cannot be completely recovered from local evidence.
+10: 
+11: Per the requested rule, inability to fully recover the set is not safe by default. The clean full launch script must not use or fall back to official `Pre_model/label7`.

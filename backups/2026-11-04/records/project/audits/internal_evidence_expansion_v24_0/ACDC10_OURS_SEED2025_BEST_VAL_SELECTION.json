@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "task_id": "ACDC10_OURS_SEED2025",
+  "created_at": "2026-08-25T06:02:50.568772+00:00",
+  "BestValSelected": true,
+  "selection_endpoint": "BEST_VAL",
+  "BestCheckpointPath": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025/checkpoints/best.ckpt",
+  "BestCheckpointSHA256": "ffa1912640172caa805d4235c6f552a91a649ffad7626357016a2816c84cbde7",
+  "test_used_for_checkpoint_selection": false,
+  "test_access_before_best_freeze": 0
+}

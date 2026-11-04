@@ -1,0 +1,33 @@
+{
+  "run_id": "COVID19_5P_BASELINE_CANON1337_R1",
+  "ratio": "5P",
+  "arm": "BASELINE",
+  "ratio_config": "configs/covid19_official20/COVID19_5P_FROZEN_CONFIG.yaml",
+  "pretrain_max_iterations": 10000,
+  "self_train_max_iterations": 30000,
+  "protocol_identity": "OFFICIAL20_PATIENTLEVEL_ALLSLICE_V2",
+  "baseline_beta_fft": true,
+  "mask_token_enabled": false,
+  "adamix_enabled": false,
+  "forbidden_modules": [
+    "EEMS",
+    "Foundation Teacher",
+    "EMA Anchor",
+    "PEM",
+    "PDR",
+    "CAT-CRS",
+    "CA-LRF",
+    "Neighbor Relation",
+    "HCCP modules",
+    "DD-Net modules"
+  ],
+  "evaluation_policy": "validation_only",
+  "schema_version": "V19_1_SEED1337_CANONICAL_CONFIG_V1",
+  "source_seed42_config": "configs/covid19_official20/COVID19_5P_BASELINE_R2.yaml",
+  "source_seed42_ratio_config": "configs/covid19_official20/COVID19_5P_FROZEN_CONFIG.yaml",
+  "formal_training_seed": 1337,
+  "split_provenance_seed": 42,
+  "paper_primary_eligible": true,
+  "seed42_status": "VALID_NONCANONICAL_SEED_PROTOCOL",
+  "ratio_config_sha256": "2091b5ced2a9dcf11ff1413b673b2fdfa1004e2fcdb21ce8e38193439088c378"
+}

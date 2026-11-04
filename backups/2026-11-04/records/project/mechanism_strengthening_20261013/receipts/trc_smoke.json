@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "load": {
+    "branch": "model_1",
+    "step": 29600,
+    "strict": true,
+    "checkpoint_sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086"
+  },
+  "gamma": 0.03598789498209953,
+  "slices": 2,
+  "model_hash_before": "f26262ac454c399efc8569442e847eb3051e12f22951c506947d45ba421adcfd",
+  "model_hash_after": "f26262ac454c399efc8569442e847eb3051e12f22951c506947d45ba421adcfd",
+  "gamma_restored": true,
+  "restored_output_bitwise_equal": true,
+  "checkpoint_written": false,
+  "optimizer_steps": 0,
+  "restore_checks": [
+    {
+      "frame": "patient002_frame01",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame02",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    }
+  ]
+}

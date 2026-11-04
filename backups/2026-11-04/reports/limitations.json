@@ -1,0 +1,14 @@
+{
+  "release_upload": "Pending GitHub API login. SSH push works, but no Release or remote asset exists yet. Planned asset URLs are not verified downloads.",
+  "paper_metrics": "No training, inference, validation, or test evaluation was run. Existing result receipts were preserved and five selected checkpoint hashes matched.",
+  "original_git": "Training tree has no .git. Original training commits and historical uncommitted diffs cannot be reconstructed. Publication baseline and current differences, plus per-run source hashes, are saved.",
+  "pretraining": "label3/label7 initialization bytes are saved and bound. Their original generating commands, logs and actual pretraining update counts were not found in the existing confirmed records.",
+  "historical_dependencies": "Current dependency files are archived. Historical Full augmentation/DiceLoss and COVID FINAL3 adapter/FFT dependency bindings remain limited by existing evidence; see retained author review.",
+  "resume": "Main last states are at 30000 completed updates. No original-budget updates remain. ACDC best full states (28400/29600) and binary 25000 full states are also saved for recovery within the original 30000-update budget.",
+  "exactness": "ACDC worker RNG/prefetch was not fully checkpointed; no claim of bitwise exact resumption. Binary sampler/RNG and formula-LR state are present, but no training step was executed in this backup task.",
+  "candidates": "E1 is an interrupted candidate; aborted ARM100 is distinct from the evaluated fresh restart. Both retained as candidates, never promoted to paper results.",
+  "controls": "R1_v2_B/formal_R1 is the independent control-signal replacement (89.98%), separate from original Full/paper R1 (90.35%).",
+  "mechanism": "User-specified 2026-10-17 CTW directional summary differs from retained computed CSV ordering. Both provenance states remain as documented by the author-confirmed file.",
+  "privacy": "No raw images, labels, NIfTI/HDF5/NPY/NPZ data, image figures, event binaries, .env, authentication caches or private keys are included. Public dataset case IDs are retained only for reproducible split/metric joins. Email redaction is documented.",
+  "comparison_rows": "This backup does not invent the missing external-comparator run/checkpoint mappings reported in the historical review."
+}

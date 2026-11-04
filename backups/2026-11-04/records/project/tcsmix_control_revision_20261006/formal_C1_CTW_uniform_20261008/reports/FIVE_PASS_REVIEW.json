@@ -1,0 +1,30 @@
+{
+  "time": "2026-10-08T08:14:34.514566+08:00",
+  "rounds": [
+    {
+      "round": 1,
+      "status": "PASS",
+      "evidence": "C1_PROTOCOL_COMPARISON.csv; FUNCTION_BINDING/INITIALIZATION_ACTUAL/protected files; unique CTW allocation intervention"
+    },
+    {
+      "round": 2,
+      "status": "PASS",
+      "evidence": "TRAIN_POSTCHECK/optimizer_calls/validation/EMA/SHORT_CHECK/isolated controls/zero-update resume/tmux/first200; worker boundary explicitly non-bitwise"
+    },
+    {
+      "round": 3,
+      "status": "PASS",
+      "evidence": "SELECTED_CHECKPOINT; all 40x3 and 20 patient pairs; independent confusion/surface recalculation; grid and delta direction"
+    },
+    {
+      "round": 4,
+      "status": "PASS",
+      "evidence": "ANALYSIS_RECEIPT; deterministic example rules; all unfavorable patients retained; canvas label bounds, PNG/SVG exports with rendered canvas bounds checked"
+    },
+    {
+      "round": 5,
+      "status": "PASS",
+      "evidence": "Preliminary actual extraction/internal SHA PASS; final archive also actually extracted and rechecked; external receipt and sidecar"
+    }
+  ]
+}

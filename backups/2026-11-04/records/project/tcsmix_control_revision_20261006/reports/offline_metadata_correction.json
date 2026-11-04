@@ -1,0 +1,16 @@
+{
+  "time": "2026-10-06T23:56:24.898506+08:00",
+  "single_rows_corrected": 700,
+  "problem": "single response reused signals(l,l,y,y), doubling reported supports while q/margins/background fraction were unchanged",
+  "fix": "divide pixels, foreground_pixels and per-class counts by 2 for single_sample_response only; batch rows unchanged",
+  "probabilities_predictions_sizes_quality_changed": false,
+  "GT_context_changed": false,
+  "min_unique_nonzero_support_train": 1,
+  "min_unique_nonzero_support_eval": 2,
+  "original_csv": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/reports/control_diagnostics_before_unique_pixel_counts.csv",
+  "original_sha256": "094748529cfe857812730fcd3a3f278193ffd46a53d7ae72259cf6105d5a075e",
+  "corrected_csv_sha256": "cdd88c2854565f8a293fe84ab4224b6a8466db7169144501c550017f80e7aafb",
+  "model_forwards": 0,
+  "optimizer_calls": 0,
+  "inventory_scope_fix": "Full explicitly spatial CTW, E1 explicitly uniform CTW; same checkpoint identities"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "actual_attach": true,
+  "actual_select_running_window": true,
+  "actual_ctrl_b_detach": true,
+  "controller_pid": 6782,
+  "stage": "EQUIVALENCE",
+  "completed_units_at_detach": 46
+}

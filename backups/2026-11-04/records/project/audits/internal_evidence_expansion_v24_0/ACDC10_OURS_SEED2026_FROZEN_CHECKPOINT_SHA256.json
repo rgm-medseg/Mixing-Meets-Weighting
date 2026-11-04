@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "task_id": "ACDC10_OURS_SEED2026",
+  "created_at": "2026-08-25T18:37:29.598017+00:00",
+  "BestCheckpointSHA256Frozen": true,
+  "BestCheckpointPath": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026/checkpoints/best.ckpt",
+  "BestCheckpointSHA256": "d4b5789ee2693407ba57c02eae3acb3d1947f4bfa8263ac0d5622c038a7af7b2"
+}

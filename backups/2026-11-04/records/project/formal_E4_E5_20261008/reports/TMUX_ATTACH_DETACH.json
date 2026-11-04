@@ -1,0 +1,208 @@
+{
+  "status": "PASS",
+  "time": 1791434923.6088347,
+  "actual_terminal_attach": true,
+  "detach": "Ctrl-b d through PTY",
+  "before": {
+    "time": 1791434878.7481642,
+    "status": {
+      "status": "RUNNING",
+      "stage": "TRAIN",
+      "task": "E4",
+      "heartbeat": "2026-10-08T12:47:55.987797+08:00",
+      "heartbeat_epoch": 1791434875.9878306,
+      "host": "n1",
+      "GPU": 0,
+      "resource": {
+        "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+        "name": "NVIDIA A100-SXM4-40GB",
+        "total_mib": 40960,
+        "used_mib": 16735,
+        "free_mib": 23591,
+        "utilization": 21,
+        "pids": [
+          10247
+        ]
+      },
+      "tmux_session": "beta_fft_E4_E5_20261008",
+      "pipeline_identity": {
+        "pid": 43469,
+        "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/run_queue.py ",
+        "start_ticks": "2615984625"
+      },
+      "child_identity": {
+        "pid": 43502,
+        "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py ",
+        "start_ticks": "2615986239"
+      },
+      "current_command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py"
+      ],
+      "current_log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E4/logs/TRAIN_2026-10-08T124730432755+0800.log",
+      "tasks": {
+        "E4": {
+          "status": "RUNNING",
+          "step": 20,
+          "time": "2026-10-08T12:47:30.421227+08:00",
+          "stage": "TRAIN",
+          "optimizer_calls": {
+            "optimizer1": 20,
+            "optimizer2": 20
+          }
+        },
+        "E5": {
+          "status": "READY",
+          "step": 0,
+          "time": "2026-10-08T12:47:30.406088+08:00",
+          "optimizer_calls": {
+            "optimizer1": 0,
+            "optimizer2": 0
+          }
+        }
+      },
+      "ETA_current_training_remaining_hours": 7.339551770093018,
+      "ETA_basis": "R1 actual training wall",
+      "formal_budget": 60000,
+      "E5_pretrain_budget": 0,
+      "E3_executed": false,
+      "old_queue": "INTERRUPTED",
+      "automatic_retries": 0,
+      "worker_resume_exact": false
+    },
+    "attached_terminal_session": 97554
+  },
+  "after": {
+    "status": "RUNNING",
+    "stage": "TRAIN",
+    "task": "E4",
+    "heartbeat": "2026-10-08T12:48:41.828120+08:00",
+    "heartbeat_epoch": 1791434921.8281531,
+    "host": "n1",
+    "GPU": 0,
+    "resource": {
+      "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+      "name": "NVIDIA A100-SXM4-40GB",
+      "total_mib": 40960,
+      "used_mib": 16735,
+      "free_mib": 23591,
+      "utilization": 83,
+      "pids": [
+        10247
+      ]
+    },
+    "tmux_session": "beta_fft_E4_E5_20261008",
+    "pipeline_identity": {
+      "pid": 43469,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/run_queue.py ",
+      "start_ticks": "2615984625"
+    },
+    "child_identity": {
+      "pid": 43502,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py ",
+      "start_ticks": "2615986239"
+    },
+    "current_command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py"
+    ],
+    "current_log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E4/logs/TRAIN_2026-10-08T124730432755+0800.log",
+    "tasks": {
+      "E4": {
+        "status": "RUNNING",
+        "step": 77,
+        "time": "2026-10-08T12:47:30.421227+08:00",
+        "stage": "TRAIN",
+        "optimizer_calls": {
+          "optimizer1": 77,
+          "optimizer2": 77
+        }
+      },
+      "E5": {
+        "status": "READY",
+        "step": 0,
+        "time": "2026-10-08T12:47:30.406088+08:00",
+        "optimizer_calls": {
+          "optimizer1": 0,
+          "optimizer2": 0
+        }
+      }
+    },
+    "ETA_current_training_remaining_hours": 7.325597318762288,
+    "ETA_basis": "R1 actual training wall",
+    "formal_budget": 60000,
+    "E5_pretrain_budget": 0,
+    "E3_executed": false,
+    "old_queue": "INTERRUPTED",
+    "automatic_retries": 0,
+    "worker_resume_exact": false
+  },
+  "training_continues": true,
+  "client_dependency": false,
+  "post_detach_later": {
+    "status": "RUNNING",
+    "stage": "TRAIN",
+    "task": "E4",
+    "heartbeat": "2026-10-08T12:51:46.164826+08:00",
+    "heartbeat_epoch": 1791435106.164859,
+    "host": "n1",
+    "GPU": 0,
+    "resource": {
+      "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+      "name": "NVIDIA A100-SXM4-40GB",
+      "total_mib": 40960,
+      "used_mib": 16735,
+      "free_mib": 23591,
+      "utilization": 94,
+      "pids": [
+        10247
+      ]
+    },
+    "tmux_session": "beta_fft_E4_E5_20261008",
+    "pipeline_identity": {
+      "pid": 43469,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/run_queue.py ",
+      "start_ticks": "2615984625"
+    },
+    "child_identity": {
+      "pid": 43502,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py ",
+      "start_ticks": "2615986239"
+    },
+    "current_command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py"
+    ],
+    "current_log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E4/logs/TRAIN_2026-10-08T124730432755+0800.log",
+    "tasks": {
+      "E4": {
+        "status": "RUNNING",
+        "step": 280,
+        "time": "2026-10-08T12:47:30.421227+08:00",
+        "stage": "TRAIN",
+        "optimizer_calls": {
+          "optimizer1": 280,
+          "optimizer2": 280
+        }
+      },
+      "E5": {
+        "status": "READY",
+        "step": 0,
+        "time": "2026-10-08T12:47:30.406088+08:00",
+        "optimizer_calls": {
+          "optimizer1": 0,
+          "optimizer2": 0
+        }
+      }
+    },
+    "ETA_current_training_remaining_hours": 7.540022531036021,
+    "ETA_basis": "current active process wall/progress including validation and IO",
+    "formal_budget": 60000,
+    "E5_pretrain_budget": 0,
+    "E3_executed": false,
+    "old_queue": "INTERRUPTED",
+    "automatic_retries": 0,
+    "worker_resume_exact": false
+  },
+  "heartbeat_after_detach_verified": true
+}

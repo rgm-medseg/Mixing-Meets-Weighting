@@ -1,0 +1,13 @@
+{
+  "status": "PASS_PREFLIGHT_ASSETS_PRESENT",
+  "created_at": "2026-08-24T14:44:42.729151+00:00",
+  "training_started": false,
+  "checkpoint_replay_started": false,
+  "test_manifest_accessed": false,
+  "audit_asset": "audits/internal_evidence_expansion_v24_0/V24_0_FROZEN_REPLAY_PREFLIGHT_AUDIT.tsv",
+  "audit_sha256": "370a012e37e2e129d1456c3d70654dd2a0166336bc43c170c1fdb74f6ec19b71",
+  "missing_assets": [],
+  "boundary_f1_status": "FROZEN_REPLAY_SCRIPT_REQUIRED",
+  "corruption_robustness_status": "FROZEN_REPLAY_SCRIPT_REQUIRED",
+  "hard_medium_easy_status": "DIRECT_READ_READY_AFTER_CASE_METRICS_BINDING_PASS"
+}

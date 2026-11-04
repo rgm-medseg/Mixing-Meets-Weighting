@@ -1,0 +1,31 @@
+{
+  "status": "RUNNING",
+  "controller_pid": 14939,
+  "identity": "98f2cac076f3932d9d13ec60752d0c4d261a0c99663a8900ee86a558d9fb33cc",
+  "start": "2026-10-07T23:43:37.389012+08:00",
+  "training_updates": 0,
+  "optimizer_updates": 0,
+  "EMA_updates": 0,
+  "completed": [
+    "A2_MAPPING",
+    "INPUTS",
+    "EQUIVALENCE",
+    "TIMING",
+    "A3",
+    "REVIEW"
+  ],
+  "reused_stages": [
+    "A2_MAPPING",
+    "INPUTS",
+    "EQUIVALENCE",
+    "TIMING",
+    "A3",
+    "REVIEW"
+  ],
+  "old_queue": "INTERRUPTED/E1=3976 E2-E5=PENDING",
+  "stage": "ARCHIVE",
+  "heartbeat": "2026-10-07T23:43:43.506391+08:00",
+  "child_pid": 14946,
+  "elapsed_stage_seconds": 6.035749960690737,
+  "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/logs/ARCHIVE_1791387817470664990.log"
+}

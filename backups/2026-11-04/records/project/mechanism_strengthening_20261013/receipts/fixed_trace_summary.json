@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "records": 30000,
+  "actual_fixed_side": 97,
+  "q_min": 0.9843923449516296,
+  "q_max": 0.9985742568969727,
+  "q_mean": 0.9959906977176666,
+  "hypothetical_original_side_counts": {
+    "97": 29999,
+    "96": 1
+  },
+  "scope": "recorded new fixed-run teacher signals; cannot reconstruct the original Full closed-loop trajectory"
+}

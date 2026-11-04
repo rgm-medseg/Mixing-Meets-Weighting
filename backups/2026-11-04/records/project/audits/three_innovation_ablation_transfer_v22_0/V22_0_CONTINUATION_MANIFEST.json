@@ -1,0 +1,270 @@
+{
+  "audit_id": "V22_0_CONTINUATION_MANIFEST",
+  "created_at": "2026-08-19T15:19:14.678066+00:00",
+  "FormalQueuePaused": false,
+  "CurrentTaskTerminal": false,
+  "LastCompletedTask": "",
+  "ActiveTask": {
+    "TaskID": "ACDC10_ARM_100",
+    "TaskOrder": 2,
+    "pid": 68017,
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py",
+      "--root_path",
+      "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC",
+      "--labelnum",
+      "7",
+      "--seed",
+      "42",
+      "--gpu",
+      "0",
+      "--max_iterations",
+      "30000",
+      "--save_interval",
+      "200",
+      "--run_root",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100",
+      "--pretrained_model",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7",
+      "--mask_token_enabled",
+      "true",
+      "--adamix_enabled",
+      "false",
+      "--mechanism_log_interval",
+      "200",
+      "--innovation_x_id",
+      "V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+      "--enable_v21_3_innovation_x",
+      "false",
+      "--v21_3_innovation_x_weight",
+      "0.05"
+    ],
+    "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+    "started_at": "2026-08-19T14:57:15.482344+00:00",
+    "created_by": "V22_RUNTIME_HARDENING_EXTERNAL_FREEZE"
+  },
+  "Heartbeat": {
+    "created_at": "2026-08-19T15:11:20.243710+00:00",
+    "task_id": "ACDC10_ARM_100",
+    "status": "RUNNING_EXTERNAL_FREEZE",
+    "pid": 68017
+  },
+  "AlreadyCompletedTasks": [
+    "ACDC10_ARM_000"
+  ],
+  "CurrentRunningTasks": [
+    "ACDC10_ARM_100"
+  ],
+  "RemainingTasks": [
+    "ACDC10_ARM_010",
+    "ACDC10_ARM_001",
+    "ACDC10_ARM_101",
+    "ACDC10_ARM_011",
+    "ACDC5_FINAL3",
+    "PROMISE20_FINAL3",
+    "MSCMR5_FINAL3",
+    "COVID5_FINAL3",
+    "COVID10_FINAL3"
+  ],
+  "BlockedTasks": [
+    "MSCMR10_FINAL3"
+  ],
+  "TaskCounts": {
+    "TOTAL": 14,
+    "EXACT_REUSE": 3,
+    "NEW_FULL_READY": 10,
+    "BLOCKED": 1,
+    "LEDGER_COMPLETED_OR_SKIPPED": 1,
+    "RUNNING": 1,
+    "REMAINING_NEW_FULL_NOT_RUNNING": 9
+  },
+  "RegistrySHA256": "eff1759e02e6a0996236e7e24d0293855fb5bfdc84ef5cbb3a242c088b63baf2",
+  "ControllerSHA256": "eb8684c937ff2d63cab1b8e177037d3e11c0e07afa2abfa6851d12d155c94928",
+  "ActiveTaskLaunchFreeze": {
+    "audit_id": "V22_0_ACTIVE_FORMAL_TASK_SOURCE_FREEZE",
+    "created_at": "2026-08-19T15:03:29.157707+00:00",
+    "STOP_AFTER_CURRENT_REQUESTED": true,
+    "ACTIVE_TASK_KILLED": false,
+    "NEXT_TASK_AUTOSTART_AFTER_CURRENT": false,
+    "TaskID": "ACDC10_ARM_100",
+    "TaskOrder": "2",
+    "TrainerSourcePath": "train_ACDC/v21_3_acdc10_third_innovation_transfer.py",
+    "TrainerSourceSHA256": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+    "ConfigPath": "configs/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100.json",
+    "ConfigSHA256": "90322d1a5cf688313f1d03c3a63fff8807289fb8fa26dea24bfcc1c490a2ffba",
+    "LauncherPath": "scripts/three_innovation_ablation_transfer_v22_0/run_acdc10_arm_100.sh",
+    "LauncherSHA256": "758fe6ec93dc302c13823c7f61b37b6aa8737cb0d2255216991bcb4d5253f5f1",
+    "InitializationCheckpointSHA256": {
+      "train_ACDC/Pre_model/label7/unet_best_model.pth": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3"
+    },
+    "ControllerSHA256": "4990ecb69daaaba2d8b79da79f6a702a64c1e370c1ada5eb853fafc62c8ed754",
+    "RegistrySHA256": "633921c8998a906944cc2437d96ad6f36da315bfa2fca836aab2a9d5e6021939",
+    "PythonInterpreter": "/home/renguanming/.conda/envs/beta_fft/bin/python",
+    "Cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+    "EnvironmentIdentity": {
+      "CONDA_PREFIX": "/opt/conda",
+      "PATH_HEAD": [
+        "/home/renguanming/.codex/tmp/arg0/codex-arg0ZYK443",
+        "/home/renguanming/.vscode-server/cli/servers/Stable-a5b500951314efd502d07465bd138dfbd714a960/server/bin/remote-cli",
+        "/home/renguanming/.local/bin",
+        "/opt/conda/bin",
+        "/opt/conda/condabin"
+      ],
+      "python_version": "Python 3.10.20"
+    },
+    "FormalCommand": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py",
+      "--root_path",
+      "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC",
+      "--labelnum",
+      "7",
+      "--seed",
+      "42",
+      "--gpu",
+      "0",
+      "--max_iterations",
+      "30000",
+      "--save_interval",
+      "200",
+      "--run_root",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100",
+      "--pretrained_model",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7",
+      "--mask_token_enabled",
+      "true",
+      "--adamix_enabled",
+      "false",
+      "--mechanism_log_interval",
+      "200",
+      "--innovation_x_id",
+      "V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+      "--enable_v21_3_innovation_x",
+      "false",
+      "--v21_3_innovation_x_weight",
+      "0.05"
+    ],
+    "MatchingProcessEvidence": "68017 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71759 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71760 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71761 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71762 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71763 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71764 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71765 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71766 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71767 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71768 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71769 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71770 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71771 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71772 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71773 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05\n71774 /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_transfer.py --root_path /home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC --labelnum 7 --seed 42 --gpu 0 --max_iterations 30000 --save_interval 200 --run_root /home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100 --pretrained_model /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7 --mask_token_enabled true --adamix_enabled false --mechanism_log_interval 200 --innovation_x_id V21_3_X03_CONTOUR_RELIABILITY_WEIGHT --enable_v21_3_innovation_x false --v21_3_innovation_x_weight 0.05",
+    "ScientificSourceMutationPolicy": "FORBID_CURRENT_ACDC_FORMAL_FAMILY_SOURCE_CHANGE_UNTIL_USER_DECISION",
+    "IfSharedACDCSourceNeedsChange": "ACDC_FORMAL_SOURCE_DIVERGENCE_BLOCKER"
+  },
+  "ScientificSourceSHAByTask": {
+    "ACDC10_ARM_000": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+    "ACDC10_ARM_100": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+    "ACDC10_ARM_010": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+    "ACDC10_ARM_001": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+    "ACDC10_ARM_110": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+    "ACDC10_ARM_101": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+    "ACDC10_ARM_011": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+    "ACDC10_ARM_111": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+    "ACDC5_FINAL3": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+    "PROMISE20_FINAL3": "e1006ebe9731d7665a886dc5f897f130c5818c132fa575cc16c9ea845cb27386",
+    "MSCMR5_FINAL3": "a4345d91f4161973770020667e29d97b10ebf80ade24a6219d2e365080c5f3cf",
+    "MSCMR10_FINAL3": "a4345d91f4161973770020667e29d97b10ebf80ade24a6219d2e365080c5f3cf",
+    "COVID5_FINAL3": "e1006ebe9731d7665a886dc5f897f130c5818c132fa575cc16c9ea845cb27386",
+    "COVID10_FINAL3": "e1006ebe9731d7665a886dc5f897f130c5818c132fa575cc16c9ea845cb27386"
+  },
+  "DerivedConfigSHAByTask": {
+    "ACDC10_ARM_100": "90322d1a5cf688313f1d03c3a63fff8807289fb8fa26dea24bfcc1c490a2ffba",
+    "ACDC10_ARM_010": "b8e34d1954b46e65a2163154b996800a42bbc9a10573feb656c949c0af20d21f",
+    "ACDC10_ARM_001": "f59916d9dc1e3cbf0ef66c828c16e59012156a653609ab30752427481ca499c8",
+    "ACDC10_ARM_101": "0de8980929a7b3677aeb8e358b14d81f8c56d1618dc4d103ebfc306aac42cd75",
+    "ACDC10_ARM_011": "64d4ac0fa945bbe0f7e9060a097c504b32308a3b9877a5bf196d9f0edffdf64c",
+    "ACDC5_FINAL3": "6161c1625f00792021e93bb34383c1dec36606c62609565d8e587c6c0919cdf5",
+    "PROMISE20_FINAL3": "feacf281cfebd4a926b5eb82663c1fec15f9dd4cd845764246d18c7418c99fcc",
+    "MSCMR5_FINAL3": "9a22847a6dddff53929cbc328dd981a7569b9556aa06c425aba3f403df8ae80e",
+    "MSCMR10_FINAL3": "637d4c0064d4743daba4f0c69d115a840105aae2d3e563f621a7a6b9a55cb62d",
+    "COVID5_FINAL3": "1a65fb61f5dcdbaeda67b278fba4d95794ba2bb1a802f508fa02b6cd64b64cd4",
+    "COVID10_FINAL3": "193a964fba84443cb90249f24a1c5f2bbf408e6dd4da8de5aeeaf28c4b4b8ae6"
+  },
+  "LauncherSHAByTask": {
+    "ACDC10_ARM_100": "758fe6ec93dc302c13823c7f61b37b6aa8737cb0d2255216991bcb4d5253f5f1",
+    "ACDC10_ARM_010": "dc7a3c43f7aff1d727126fb2a1a56325a11a4b59a636dcf11d8a7c7ba95674c6",
+    "ACDC10_ARM_001": "f2c61fc11bbf9128bc82340acd50e876c3d9380abed6807ae8f0b0b223e24f0b",
+    "ACDC10_ARM_101": "25cb6925b2eeb37657f7a54b09fcf357b6a3ab5b4d97b8cc1d2e12bf32c3eac2",
+    "ACDC10_ARM_011": "cff187d3a734482a644962b427c222f40b2001164c879416216bf8f09b5942a7",
+    "ACDC5_FINAL3": "b295024e5c94ef91303d581e943d31ea564fc08a4b55f1bcba9ca03aa16ab9dd",
+    "PROMISE20_FINAL3": "e66be5910260fa5f28cf4ec11f394dde84f09d710b7df2582fe070b0e5ae57ed",
+    "MSCMR5_FINAL3": "9fd0775b27609d645687d0d89f5d0184ab2d7cae0aa4dcba7c17f092dc42203d",
+    "COVID5_FINAL3": "94bf951b2dbe6b303dc136b132d4fbbf7e1c517c5abbc5258ddd233c366d3212",
+    "COVID10_FINAL3": "0ddbf03569e3aa686b92f6219e65171e6b1ab07679c211247b9d588e796b49e4"
+  },
+  "ExpectedBestCheckpointByTask": {
+    "ACDC10_ARM_100": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100/checkpoints/best.ckpt",
+    "ACDC10_ARM_010": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_010/checkpoints/best.ckpt",
+    "ACDC10_ARM_001": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_001/checkpoints/best.ckpt",
+    "ACDC10_ARM_101": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_101/checkpoints/best.ckpt",
+    "ACDC10_ARM_011": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_011/checkpoints/best.ckpt",
+    "ACDC5_FINAL3": "experiments/three_innovation_ablation_transfer_v22_0/ACDC5_FINAL3/BEST_VAL_CHECKPOINT_PENDING_DATASET_FORMAT",
+    "PROMISE20_FINAL3": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/BEST_VAL_CHECKPOINT_PENDING_DATASET_FORMAT",
+    "MSCMR5_FINAL3": "experiments/three_innovation_ablation_transfer_v22_0/MSCMR5_FINAL3/BEST_VAL_CHECKPOINT_PENDING_DATASET_FORMAT",
+    "COVID5_FINAL3": "experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/BEST_VAL_CHECKPOINT_PENDING_DATASET_FORMAT",
+    "COVID10_FINAL3": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/BEST_VAL_CHECKPOINT_PENDING_DATASET_FORMAT"
+  },
+  "ResumeCapabilitySummary": {
+    "audit_id": "V22_0_FORMAL_TRAINER_RESUME_CAPABILITY",
+    "created_at": "2026-08-19T15:10:11.984964+00:00",
+    "tsv": "audits/three_innovation_ablation_transfer_v22_0/FORMAL_TRAINER_RESUME_CAPABILITY.tsv",
+    "TRAINER_RESUME_CAPABILITY_PASS": true,
+    "TRAINER_RESUME_CANARY_PASS": true,
+    "resume_levels": {
+      "ACDC": "SCIENTIFIC_CONTINUATION",
+      "PROMISE_COVID": "BITWISE_EXACT",
+      "MSCMR": "BITWISE_EXACT"
+    },
+    "blocking_rows": []
+  },
+  "ControllerResumeScratchCanary": {
+    "audit_id": "V22_0_CONTROLLER_RESUME_SCRATCH_CANARY",
+    "created_at": "2026-08-19T15:16:25.997448+00:00",
+    "LIVE_FORMAL_RUNTIME_UNTOUCHED": true,
+    "SCIENTIFIC_TRAINER_UNTOUCHED": true,
+    "FORMAL_TASK_USED_FOR_FAULT_EXPERIMENT": false,
+    "canaries": [
+      {
+        "Name": "LIVE_CHILD_REATTACH",
+        "Status": "PASS",
+        "ChildAliveAfterControllerCrash": true,
+        "ResumeReturnCode": 0,
+        "DuplicateRunningTaskRows": 1,
+        "Ledger": "runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/live_child_reattach/runtime/controller_formal_ledger.tsv",
+        "Completed": "runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/live_child_reattach/runtime/completed.tsv",
+        "ResumeStdoutTail": "{\n  \"status\": \"FORMAL_FULL_QUEUE_COMPLETE\",\n  \"created_at\": \"2026-08-19T15:16:25.494125+00:00\",\n  \"formal_full_started\": false,\n  \"formal_tmux_controller_started\": true,\n  \"started_task_count\": 0,\n  \"passed_task_count\": 1,\n  \"skipped_or_reuse_count\": 1,\n  \"failed_task\": \"\",\n  \"ledger\": \"runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/live_child_reattach/runtime/controller_formal_ledger.tsv\",\n  \"test_started\": false,\n  \"real_transfer_test_access\": 0\n}\n{\n  \"status\": \"FORMAL_FULL_QUEUE_COMPLETE\",\n  \"created_at\": \"2026-08-19T15:16:25.494125+00:00\",\n  \"formal_full_started\": false,\n  \"formal_tmux_controller_started\": true,\n  \"started_task_count\": 0,\n  \"passed_task_count\": 1,\n  \"skipped_or_reuse_count\": 1,\n  \"failed_task\": \"\",\n  \"ledger\": \"runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/live_child_reattach/runtime/controller_formal_ledger.tsv\",\n  \"test_started\": false,\n  \"real_transfer_test_access\": 0\n}\n"
+      },
+      {
+        "Name": "CHECKPOINT_RESTART",
+        "Status": "PASS",
+        "ResumeReturnCode": 0,
+        "CheckpointPath": "runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/checkpoint_resume/run/SCRATCH_TASK/checkpoints/last.ckpt",
+        "Receipt": {
+          "status": "PASS",
+          "task_id": "SCRATCH_TASK",
+          "pid": 78609,
+          "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/checkpoint_resume/run/SCRATCH_TASK/checkpoints/last.ckpt",
+          "resumed": true,
+          "resumed_from": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/checkpoint_resume/run/SCRATCH_TASK/checkpoints/last.ckpt",
+          "created_at": "2026-08-19T15:16:25.938836+00:00"
+        },
+        "Ledger": "runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/checkpoint_resume/runtime/controller_formal_ledger.tsv",
+        "ResumeStdoutTail": "{\n  \"status\": \"FORMAL_FULL_QUEUE_COMPLETE\",\n  \"created_at\": \"2026-08-19T15:16:25.979512+00:00\",\n  \"formal_full_started\": true,\n  \"formal_tmux_controller_started\": true,\n  \"started_task_count\": 1,\n  \"passed_task_count\": 1,\n  \"skipped_or_reuse_count\": 1,\n  \"failed_task\": \"\",\n  \"ledger\": \"runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/checkpoint_resume/runtime/controller_formal_ledger.tsv\",\n  \"test_started\": false,\n  \"real_transfer_test_access\": 0\n}\n{\n  \"status\": \"FORMAL_FULL_QUEUE_COMPLETE\",\n  \"created_at\": \"2026-08-19T15:16:25.979512+00:00\",\n  \"formal_full_started\": true,\n  \"formal_tmux_controller_started\": true,\n  \"started_task_count\": 1,\n  \"passed_task_count\": 1,\n  \"skipped_or_reuse_count\": 1,\n  \"failed_task\": \"\",\n  \"ledger\": \"runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/checkpoint_resume/runtime/controller_formal_ledger.tsv\",\n  \"test_started\": false,\n  \"real_transfer_test_access\": 0\n}\n"
+      }
+    ],
+    "CONTROLLER_CRASH_RESUME_CANARY": "PASS"
+  },
+  "AutoRestartMechanism": {
+    "bootstrap_script": "scripts/three_innovation_ablation_transfer_v22_0/resume_formal_controller_v22_0.sh",
+    "systemd_user_unit": "/home/renguanming/.config/systemd/user/three_innovation_ablation_transfer_v22_0.service",
+    "SERVER_REBOOT_AUTO_RESUME_CONFIGURED": false,
+    "SERVER_REBOOT_AUTO_RESUME_PERMISSION_BLOCKER": true,
+    "USER_ACK_REQUIRED": true,
+    "SERVER_POWERED_OFF_CONTINUE_COMPUTE": false
+  },
+  "LocalDisconnectCanary": {
+    "LOCAL_PC_OFF_EXECUTION_SAFE": "PASS",
+    "SSH_DISCONNECTED_CONTINUE": "true_if_server_alive",
+    "VSCODE_CLOSED_CONTINUE": "true_if_server_alive"
+  },
+  "ContinuationReady": false,
+  "NotReadyReason": "PENDING_CURRENT_TASK_TERMINAL_OR_FINAL_PAUSE_RECEIPT_OR_USER_ACK"
+}

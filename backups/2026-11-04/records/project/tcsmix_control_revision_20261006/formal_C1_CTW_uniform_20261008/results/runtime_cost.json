@@ -1,0 +1,96 @@
+{
+  "successful_training_Popen_seconds": 26504.612390317023,
+  "interrupted_training_Popen_seconds": 0,
+  "failed_training_Popen_seconds": 0,
+  "short_check": {
+    "status": "PASS",
+    "time": "2026-10-08T00:51:54.851752+08:00",
+    "code_identity": "d17768f3bfba28aa6fb13622709264d02ac509c8971dccf6aa26c53cd01c1f14",
+    "physical_joint_updates": 2,
+    "optimizer_calls_total": {
+      "optimizer1": 2,
+      "optimizer2": 2
+    },
+    "successful_check_optimizer_calls": {
+      "optimizer1": 1,
+      "optimizer2": 1
+    },
+    "failed_attempt_optimizer_calls": {
+      "optimizer1": 1,
+      "optimizer2": 1
+    },
+    "failed_attempt": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/runs/isolated_short_failed_attempt1",
+    "failed_attempt_history": [
+      {
+        "target": 1,
+        "command": [
+          "/home/renguanming/.conda/envs/beta_fft/bin/python",
+          "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/train_C1_entry.py",
+          "--short-target",
+          "1"
+        ],
+        "exit_code": 1,
+        "elapsed_seconds": 9.650154523551464,
+        "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/runs/isolated_short/logs/update_1_2026-10-08T004624.528878+0800.log"
+      }
+    ],
+    "model_teacher_changes": {
+      "model_1": {
+        "first_update_changed": true,
+        "zero_update_resume_preserved": true
+      },
+      "model_2": {
+        "first_update_changed": true,
+        "zero_update_resume_preserved": true
+      },
+      "ema_model": {
+        "first_update_changed": true,
+        "zero_update_resume_preserved": true
+      }
+    },
+    "actual_EMA_algebra_checked": true,
+    "validation_entry_full_20_frames": true,
+    "stop_step": 1,
+    "resume_probe_step": 1,
+    "resume_probe_optimizer_calls": 0,
+    "independent_reload": true,
+    "segments": [
+      {
+        "target": 1,
+        "command": [
+          "/home/renguanming/.conda/envs/beta_fft/bin/python",
+          "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/train_C1_entry.py",
+          "--short-target",
+          "1"
+        ],
+        "exit_code": 75,
+        "elapsed_seconds": 33.42138824239373,
+        "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/runs/isolated_short/logs/update_1_2026-10-08T005107.264004+0800.log"
+      },
+      {
+        "stage": "zero_update_resume_probe",
+        "command": [
+          "/home/renguanming/.conda/envs/beta_fft/bin/python",
+          "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/train_C1_entry.py",
+          "--resume",
+          "--short-target",
+          "1",
+          "--resume-probe"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 6.837805174291134
+      }
+    ],
+    "wall_seconds_this_short_driver": 49.09710594266653,
+    "worker_resume_exact": false,
+    "formal_reuses_short_state": false
+  },
+  "peak_cuda_allocated_bytes": 16563296256,
+  "peak_cuda_reserved_bytes": 17100177408,
+  "whole_card_process_memory": "NVML resource snapshots, separately state/status and GPU PID binding; not allocated/reserved",
+  "validation_seconds": "NA: included in training wall, no independent timing added",
+  "logging_extra_weight_check_seconds": 5.663848090916872,
+  "logging_cost_receipts": [
+    "reports/logging_cost_2026-10-08T005201082777+0800.json"
+  ]
+}

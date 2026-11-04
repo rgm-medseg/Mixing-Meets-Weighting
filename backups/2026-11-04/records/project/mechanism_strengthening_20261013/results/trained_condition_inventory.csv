@@ -1,0 +1,5 @@
+condition,TRC,status,checkpoint,note
+fixed97_uniform,on,MISSING,,no comparable completed main-signal checkpoint; no new factorial training
+dynamic_uniform,on,MISSING_COMPLETED,,"old E1 only3976 updates, not a completed30000-update model; excluded"
+fixed97_CTW,on,DONE,/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/runs/F97_main_signal_20261013/checkpoints/best.ckpt,sole new condition; final validation selection only after budget complete
+dynamic_CTW,on,EXISTING_MAIN,/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/best.ckpt,original X03 / Full_main; original main mean-max signal

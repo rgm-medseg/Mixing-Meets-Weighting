@@ -1,0 +1,7 @@
+{
+  "samples": 150,
+  "s_min": 0.37774489402770994,
+  "s_max": 0.3795826244354248,
+  "distinct_actual_areas": 1,
+  "coverage": "every 200 updates, not all steps"
+}

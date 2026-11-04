@@ -1,0 +1,12 @@
+{
+  "audit_id": "V22_0_TRANSFER_CANONICAL_PARENT_AND_CONTROL_IDENTITY_AUDIT",
+  "created_at": "2026-08-19T13:43:33.597353+00:00",
+  "formal_full_started": false,
+  "transfer_target_count": 6,
+  "exact_reuse_pass_count": 5,
+  "identity_blocker_count": 1,
+  "identity_blockers": [
+    "MSCMR10"
+  ],
+  "audit_tsv": "audits/three_innovation_ablation_transfer_v22_0/TRANSFER_CANONICAL_PARENT_AND_CONTROL_IDENTITY_AUDIT.tsv"
+}

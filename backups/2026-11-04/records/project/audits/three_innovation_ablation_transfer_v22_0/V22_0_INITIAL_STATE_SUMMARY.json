@@ -1,0 +1,19 @@
+{
+  "audit_id": "V22_0_INITIAL_STATE_SUMMARY",
+  "created_at": "2026-08-19T15:28:48.514887+00:00",
+  "formal_controller_started": false,
+  "tmux_required_but_not_started_yet": true,
+  "acdc10_arm_count": 8,
+  "acdc10_exact_reuse_count": 3,
+  "acdc10_new_full_required_count": 5,
+  "transfer_target_count": 6,
+  "transfer_final3_new_full_required_count": 6,
+  "new_full_total_initial": 11,
+  "prelaunch_status": "V22_0_NOT_READY_L1_L10_NOT_STARTED",
+  "next_required_work": [
+    "derive concrete configs for all NEW_FULL tasks",
+    "implement authoritative launchers and dataset-specific X03 transfer entries",
+    "perform L1-L10 gates",
+    "only then create tmux controller"
+  ]
+}

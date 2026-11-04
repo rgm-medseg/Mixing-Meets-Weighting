@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/scripts/run_R2_pipeline.py", line 109, in main
+    if code!=0:raise RuntimeError(f'Training exited{code}; no automatic retry or parameter change')
+RuntimeError: Training exited1; no automatic retry or parameter change

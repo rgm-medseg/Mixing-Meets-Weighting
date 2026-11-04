@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "literal_aug_comparisons": 216,
+  "outputs_and_rng_exact": true,
+  "shared_geometry": true,
+  "GT_use": "offline statistics only",
+  "unique_slices": 210,
+  "exposures": 216
+}

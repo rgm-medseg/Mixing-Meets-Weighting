@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "event_rows": 60000,
+  "successful_updates_each_optimizer": 30000,
+  "logical_update_ids_unique": true,
+  "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/results/optimizer_calls.csv",
+  "sha256": "eb9183668947dce820e341db05476be40b4fa3a39717aa63de75c1b730d7fe59"
+}

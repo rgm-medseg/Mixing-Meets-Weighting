@@ -1,0 +1,67 @@
+{
+  "commands": [
+    {
+      "phase": "initial_main_precision_check",
+      "command": "PYTHONDONTWRITEBYTECODE=1 /home/renguanming/.conda/envs/beta_fft/bin/python mechanism_direction_20261017/scripts/analyze_direction.py > mechanism_direction_20261017/logs/primary.log 2>&1",
+      "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+      "exit_code": 1,
+      "note": "Strict sign-equality assertion failed at near-zero FP32 gradients; batch0 probability cache retained."
+    },
+    {
+      "phase": "main_roundoff_aware",
+      "command": "PYTHONDONTWRITEBYTECODE=1 /home/renguanming/.conda/envs/beta_fft/bin/python mechanism_direction_20261017/scripts/analyze_direction.py > mechanism_direction_20261017/logs/primary_corrected.log 2>&1",
+      "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+      "exit_code": 0,
+      "note": "Reused batch0 cache; filled batches1-8 once."
+    },
+    {
+      "phase": "trained_inventory",
+      "command": "PYTHONDONTWRITEBYTECODE=1 /home/renguanming/.conda/envs/beta_fft/bin/python mechanism_direction_20261017/scripts/inventory.py > mechanism_direction_20261017/logs/inventory.log 2>&1",
+      "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+      "exit_code": 0,
+      "note": "Read-only eight-arm identities and protocol gate."
+    },
+    {
+      "phase": "main_cached_reporting_fields",
+      "command": "PYTHONDONTWRITEBYTECODE=1 /home/renguanming/.conda/envs/beta_fft/bin/python mechanism_direction_20261017/scripts/analyze_direction.py > mechanism_direction_20261017/logs/primary_cached_aggregate.log 2>&1",
+      "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+      "exit_code": 0,
+      "note": "All9 probability caches reused; no further model forward."
+    },
+    {
+      "phase": "conditional_four_trained_models",
+      "command": "PYTHONDONTWRITEBYTECODE=1 /home/renguanming/.conda/envs/beta_fft/bin/python mechanism_direction_20261017/scripts/factorial_direction.py > mechanism_direction_20261017/logs/factorial.log 2>&1",
+      "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+      "exit_code": 0,
+      "note": "36 frozen paired-student batches; no parameter updates."
+    },
+    {
+      "phase": "CPU_reporting",
+      "command": "PYTHONDONTWRITEBYTECODE=1 /home/renguanming/.conda/envs/beta_fft/bin/python mechanism_direction_20261017/scripts/make_delivery.py > mechanism_direction_20261017/logs/delivery.log 2>&1",
+      "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+      "exit_code": 0,
+      "note": "CPU reaggregation and model-state paired contrasts."
+    },
+    {
+      "phase": "five_reviews",
+      "command": "PYTHONDONTWRITEBYTECODE=1 /home/renguanming/.conda/envs/beta_fft/bin/python mechanism_direction_20261017/scripts/audit_delivery.py > mechanism_direction_20261017/logs/audit.log 2>&1",
+      "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+      "exit_code": 0,
+      "note": "Identity, alignment, numerical, interpretation and writing checks."
+    },
+    {
+      "phase": "final_text_caption",
+      "command": "PYTHONDONTWRITEBYTECODE=1 /home/renguanming/.conda/envs/beta_fft/bin/python mechanism_direction_20261017/scripts/make_delivery.py > mechanism_direction_20261017/logs/delivery_final.log 2>&1",
+      "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+      "exit_code": 0,
+      "note": "CPU-only; added repeat-exposure wording and existing-observation note."
+    },
+    {
+      "phase": "package",
+      "command": "PYTHONDONTWRITEBYTECODE=1 /home/renguanming/.conda/envs/beta_fft/bin/python mechanism_direction_20261017/scripts/package_delivery.py",
+      "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+      "note": "Creates the compact local evidence archive; no model or gradient execution."
+    }
+  ],
+  "additional_reads": "Read-only shell/Python inventory, log inspection and official PyTorch documentation check; no training/test invocation."
+}

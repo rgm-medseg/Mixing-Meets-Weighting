@@ -1,0 +1,16 @@
+{
+  "STARTUP_CANARY_PASS": true,
+  "TEST_ONLY": true,
+  "controller_pid": 80644,
+  "controller_pid_alive": true,
+  "created_at": "2026-08-22T10:19:01.544032+00:00",
+  "first_new_task_checkpoint_sha_matches_registry": true,
+  "first_new_task_identity_matches_final_registry": true,
+  "heartbeat_has_known_task": true,
+  "heartbeat_pid_matches": true,
+  "mscmr10_not_started": true,
+  "no_test_prematurely_unlocked": true,
+  "no_training_process_detected": true,
+  "no_unexpected_task": true,
+  "tmux_session_exists": true
+}

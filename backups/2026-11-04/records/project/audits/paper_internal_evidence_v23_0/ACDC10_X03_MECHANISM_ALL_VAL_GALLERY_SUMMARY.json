@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T12:36:01.785909+00:00",
+  "split": "VAL",
+  "val_case_count": 20,
+  "gallery_pdf": "final_report/paper_internal_evidence_v23_0/figures/X03_MECHANISM_ALL_VAL_GALLERY.pdf",
+  "selection_tsv": "final_report/paper_internal_evidence_v23_0/ACDC10_VAL_MECHANISM_ALL_GALLERY_SELECTION.tsv",
+  "selection_rule": "all VAL volumes; max GT foreground slice per volume; fixed color ranges",
+  "arm110_checkpoint": "runs/beta_fft_acdc_10pct_mask_token_adamix_full_seed42/checkpoints/best.ckpt",
+  "arm110_checkpoint_sha256": "f10f69989883a423117a53695311b47e01dc65fbc27fbce2d0c666d6fd733514",
+  "arm111_checkpoint": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/best.ckpt",
+  "arm111_checkpoint_sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+  "test_access": 0,
+  "new_training_started": false,
+  "rows": [
+    {
+      "CaseID": "patient028_frame01",
+      "SelectedSliceIndex0Based": 0,
+      "ForegroundArea": 3209,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient028_frame02",
+      "SelectedSliceIndex0Based": 1,
+      "ForegroundArea": 2562,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient085_frame01",
+      "SelectedSliceIndex0Based": 3,
+      "ForegroundArea": 4417,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient085_frame02",
+      "SelectedSliceIndex0Based": 3,
+      "ForegroundArea": 3740,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient082_frame01",
+      "SelectedSliceIndex0Based": 1,
+      "ForegroundArea": 2914,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient082_frame02",
+      "SelectedSliceIndex0Based": 2,
+      "ForegroundArea": 2102,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient087_frame01",
+      "SelectedSliceIndex0Based": 0,
+      "ForegroundArea": 4706,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient087_frame02",
+      "SelectedSliceIndex0Based": 1,
+      "ForegroundArea": 3845,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient019_frame01",
+      "SelectedSliceIndex0Based": 1,
+      "ForegroundArea": 4467,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient019_frame02",
+      "SelectedSliceIndex0Based": 1,
+      "ForegroundArea": 3576,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient030_frame01",
+      "SelectedSliceIndex0Based": 2,
+      "ForegroundArea": 2282,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient030_frame02",
+      "SelectedSliceIndex0Based": 2,
+      "ForegroundArea": 1597,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient078_frame01",
+      "SelectedSliceIndex0Based": 0,
+      "ForegroundArea": 4702,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient078_frame02",
+      "SelectedSliceIndex0Based": 1,
+      "ForegroundArea": 3237,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient045_frame01",
+      "SelectedSliceIndex0Based": 1,
+      "ForegroundArea": 3792,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient045_frame02",
+      "SelectedSliceIndex0Based": 1,
+      "ForegroundArea": 2974,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient002_frame01",
+      "SelectedSliceIndex0Based": 1,
+      "ForegroundArea": 4391,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient002_frame02",
+      "SelectedSliceIndex0Based": 1,
+      "ForegroundArea": 3318,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient039_frame01",
+      "SelectedSliceIndex0Based": 1,
+      "ForegroundArea": 3046,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    },
+    {
+      "CaseID": "patient039_frame02",
+      "SelectedSliceIndex0Based": 1,
+      "ForegroundArea": 2194,
+      "Split": "VAL",
+      "SelectionRule": "max_gt_foreground_slice_per_val_volume"
+    }
+  ]
+}

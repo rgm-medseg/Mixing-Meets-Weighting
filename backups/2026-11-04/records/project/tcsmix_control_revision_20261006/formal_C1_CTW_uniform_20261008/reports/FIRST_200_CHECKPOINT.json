@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T00:55:08.974186+08:00",
+  "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/state/first200_snapshot.ckpt",
+  "sha256": "70a560805eb82cab1615c738883332ae753aebf0032bc4579d74d1a342c62876",
+  "step": 200,
+  "keys": [
+    "amp_state",
+    "args",
+    "best_metrics",
+    "controller_metadata",
+    "ema_model",
+    "epoch",
+    "global_step",
+    "lr_state",
+    "lr_state_optimizer2",
+    "model_1",
+    "model_2",
+    "optimizer1",
+    "optimizer2",
+    "random_state",
+    "resume_exact",
+    "sampler_state",
+    "scheduler_state"
+  ],
+  "optimizer_physical_calls": {
+    "optimizer1": 200,
+    "optimizer2": 200
+  },
+  "independent_model_optimizer_reload": false,
+  "worker_resume_exact": false
+}

@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "comparisons": 216,
+  "scope": "replacing validation GT with zeros does not change either augmented image; GT only defines diagnostic statistics"
+}

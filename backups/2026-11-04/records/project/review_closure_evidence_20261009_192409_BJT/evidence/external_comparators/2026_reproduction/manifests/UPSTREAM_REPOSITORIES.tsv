@@ -1,0 +1,13 @@
+method	origin	default_branch	commit	commit_time	worktree_clean	license_file
+DPMS	https://github.com/ZhenZHAO/DPMS.git	main	7a5be2243ed14b986c9cad6fe92fbd0384a2e9dd	2026-07-03T09:46:48+08:00	YES	NONE_FOUND
+RSTAC	https://github.com/beichenii/RSTAC.git	main	468ba955eba83dd51dcbb7764c428828b5cdd201	2025-02-05T16:57:54+08:00	YES	NONE_FOUND
+HiEn	https://github.com/jch3rn/HiEn.git	main	6dfa06f24c5a80223d14ee07183ced713ae8681e	2026-04-13T14:52:44+08:00	YES	LICENSE
+DuCiSC	https://github.com/ShanghaiTech-IMPACT/DuCiSC.git	main	cc77a8308d0aa1c59a7c29556478bfd33d804a1a	2025-08-05T02:15:19+08:00	YES	NONE_FOUND
+AdaMix	https://github.com/Senyh/AdaMix.git	main	85361fb91cf43a69a158d41dfa9e7ee9fce36db9	2025-11-28T11:02:43+11:00	YES	NONE_FOUND
+C3MT	https://github.com/l1654485/C3MT.git	main	dd1611d1f8d9b1fdba4348d5df6370388d04bb61	2026-05-21T20:59:47+08:00	YES	LICENSE
+Endo-SemiS	https://github.com/MedICL-VU/Endo-SemiS.git	main	477d0d0a2555e033294dd1a9eaf5cd8302d08eba	2026-05-04T15:02:50+08:00	YES	LICENSE
+UnCoL	https://github.com/VivienLu/UnCoL.git	main	f9d56ad88b6d77072ab7630fc8cd99e43ea9bfed	2026-07-27T20:27:21+09:00	YES	LICENSE
+CSSML	https://github.com/Mwnic-AI/CSSML.git	master	d6f26f940f56cda74712bdf8f76134bf4b679217	2025-11-30T13:37:01+08:00	YES	NONE_FOUND
+PMEUL	https://github.com/waqasanwaar/SSL4MIS_PMEUL.git	main	2232ec0f5f11d8d219604343a427abdd86c25891	2026-07-27T03:28:58+08:00	YES	NONE_FOUND
+EGCF	https://github.com/lycoris9029/EGCF.git	main	a5b6b7e9224e55fec54d2efafea7bd724ac248cf	2025-06-03T14:47:07+08:00	YES	NONE_FOUND
+CRKD	https://github.com/eeaesa/CRKD.git	main	684b0c3d923871e4366daa851995283640fd0070	2025-06-08T22:36:27+08:00	YES	NONE_FOUND

@@ -1,0 +1,9 @@
+{
+  "time": "2026-10-08T12:37:13.064742+08:00",
+  "step": 2,
+  "alpha": 0.99,
+  "teacher_source": "student1",
+  "student1_gamma": 0.003402682486921549,
+  "teacher_gamma": 5.227464862400666e-05,
+  "teacher_requires_grad": false
+}

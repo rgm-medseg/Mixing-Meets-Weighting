@@ -1,0 +1,14 @@
+{
+  "status": "PARTIAL",
+  "time": "2026-10-07T19:45:31.098113+08:00",
+  "parameters": "DONE",
+  "covered_MACs": "DONE",
+  "complete_FLOPs": "PARTIAL",
+  "inference": "DONE",
+  "volume_runtime": "DONE",
+  "R1_R2_training_cost": "DONE",
+  "historical_training_cost": "NA",
+  "optimizer_updates": 0,
+  "unit_identity": "9c039632d8918000110d4d8d541296761dd96f663068b817b651dd2940f1b740",
+  "invalid_timing_retained": 0
+}

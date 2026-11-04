@@ -1,0 +1,23 @@
+{
+  "task": "A2",
+  "status": "PARTIAL",
+  "reason": "Existing teacher best/last checkpoints on 14 fixed already-labeled slices; new checkpoints DEFERRED. E5 has no EMA teacher by official definition.",
+  "time": "2026-10-06T21:24:18.154903+08:00",
+  "samples": 14,
+  "correlations": [
+    {
+      "run": "Historical_Full",
+      "observations": 28,
+      "patients": 7,
+      "spearman": 0.12096332785987958,
+      "interpretation": "descriptive repeated checkpoints/slices, no independent-sample test or causal conclusion"
+    },
+    {
+      "run": "Historical_baseline",
+      "observations": 28,
+      "patients": 7,
+      "spearman": 0.11877394636015325,
+      "interpretation": "descriptive repeated checkpoints/slices, no independent-sample test or causal conclusion"
+    }
+  ]
+}

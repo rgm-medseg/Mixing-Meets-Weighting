@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "test_frames": 40,
+  "patients": 20,
+  "class_records": 120,
+  "frames_per_patient": 2,
+  "aggregation": "native frame-volume class Dice; average two frames and three classes per patient, then equal-patient mean",
+  "main_source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/final_report/acdc10_top6_all_test_v21_5/raw_test/X03/case_class_metrics.tsv",
+  "main_source_sha256": "835900131a99a9d4c418c2cc60fd83ddc7e3eca2f096ca75d4bf2fe08ef8efae",
+  "main_not_reevaluated": true,
+  "mean_main_dice": 0.9034965765204998,
+  "mean_fixed_dice": 0.8985481319872154,
+  "mean_fixed_minus_main_pp": -0.49484445332844224,
+  "patients_fixed_higher": 9,
+  "scope": "descriptive single-run comparison; no new training, reselection, or test evaluation"
+}

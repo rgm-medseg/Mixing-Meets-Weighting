@@ -1,0 +1,12 @@
+{
+  "status": "FROZEN_BEFORE_TEST",
+  "time": "2026-10-08T22:00:48.684811+08:00",
+  "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E5/runs/E5_AdaMix_CT_common_protocol/checkpoints/best.ckpt",
+  "sha256": "7a124cfe70515de469915ce213feea258114b1398b125345559d1b5761cffd62",
+  "student": "model_1",
+  "selected_step": 27200,
+  "selected_val_macro_dice": 0.8868680583490207,
+  "selection": "own strict student1 validation foreground macro Dice every200",
+  "test_metrics_consulted": false,
+  "validation_records": 150
+}

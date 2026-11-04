@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "loads": [
+    {
+      "arm": "000",
+      "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/checkpoints/best.ckpt",
+      "checkpoint_sha_before": "825da2e9a944c930fa54cb9b7abc843345e4a7cde851d34c390739acaa0d5dbf",
+      "checkpoint_sha_after": "825da2e9a944c930fa54cb9b7abc843345e4a7cde851d34c390739acaa0d5dbf",
+      "strict_student_branches": [
+        "model_1",
+        "model_2"
+      ],
+      "selected_step": 21200,
+      "model_hash_before": [
+        "5f3a881419d8883b2faf44bff5f5b00a3984d92fa16c0633ad350e1768e118e8",
+        "15487d74703c1e79f78f4322f1bd12631cde673226d5b4a9fe8d76cda7e04435"
+      ],
+      "model_hash_after": [
+        "5f3a881419d8883b2faf44bff5f5b00a3984d92fa16c0633ad350e1768e118e8",
+        "15487d74703c1e79f78f4322f1bd12631cde673226d5b4a9fe8d76cda7e04435"
+      ]
+    },
+    {
+      "arm": "010",
+      "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_010/checkpoints/best.ckpt",
+      "checkpoint_sha_before": "430ed73702d5fa76781de6a878739f863023546e338758ce11ebd05045d93c62",
+      "checkpoint_sha_after": "430ed73702d5fa76781de6a878739f863023546e338758ce11ebd05045d93c62",
+      "strict_student_branches": [
+        "model_1",
+        "model_2"
+      ],
+      "selected_step": 22200,
+      "model_hash_before": [
+        "d83489e520484ed68aad9ccb7c2b5e1df88e38318e944c13810970e45471cb8e",
+        "54828d19481944d6a5c02a4f306eeda20a6fc078ca841e17d125d8ca35e8b492"
+      ],
+      "model_hash_after": [
+        "d83489e520484ed68aad9ccb7c2b5e1df88e38318e944c13810970e45471cb8e",
+        "54828d19481944d6a5c02a4f306eeda20a6fc078ca841e17d125d8ca35e8b492"
+      ]
+    },
+    {
+      "arm": "001",
+      "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_001/checkpoints/best.ckpt",
+      "checkpoint_sha_before": "8bfa388a3a39f761d4f29db17e477338f514b3cb3f88f60a2a7394757b273900",
+      "checkpoint_sha_after": "8bfa388a3a39f761d4f29db17e477338f514b3cb3f88f60a2a7394757b273900",
+      "strict_student_branches": [
+        "model_1",
+        "model_2"
+      ],
+      "selected_step": 25200,
+      "model_hash_before": [
+        "8e58fd6546e2354099c0c1e616f4af7b6a152fd9e3733d16eb29a62437fa2895",
+        "abed215e4c66094bf761a612d154202c1825668f23a5533507678ea759720f11"
+      ],
+      "model_hash_after": [
+        "8e58fd6546e2354099c0c1e616f4af7b6a152fd9e3733d16eb29a62437fa2895",
+        "abed215e4c66094bf761a612d154202c1825668f23a5533507678ea759720f11"
+      ]
+    },
+    {
+      "arm": "011",
+      "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_011/checkpoints/best.ckpt",
+      "checkpoint_sha_before": "426ea8f9a41930434d11e2877d8ed07239040f53d401fb27e2941fc27ce7bf45",
+      "checkpoint_sha_after": "426ea8f9a41930434d11e2877d8ed07239040f53d401fb27e2941fc27ce7bf45",
+      "strict_student_branches": [
+        "model_1",
+        "model_2"
+      ],
+      "selected_step": 26600,
+      "model_hash_before": [
+        "e9de3cb7732f44460a91dc16fc53747659487b846c7db76492924cc5947c567c",
+        "395104bfa7b9870bfb68346a1be8e28af747888fc874680d25c4dbf90032dd22"
+      ],
+      "model_hash_after": [
+        "e9de3cb7732f44460a91dc16fc53747659487b846c7db76492924cc5947c567c",
+        "395104bfa7b9870bfb68346a1be8e28af747888fc874680d25c4dbf90032dd22"
+      ]
+    }
+  ],
+  "optimizer_steps": 0,
+  "parameter_gradients_none": true,
+  "batch_norm_and_parameters_unchanged": true,
+  "common_input_images": 108,
+  "common_source_patients": 10,
+  "common_target": "archived main-Full EMA LCC hard target",
+  "own_teacher_targets_used": false,
+  "own_mixing_rules_replayed": false,
+  "interpretation": "common-input trained-state comparison and within-state loss probe; not a training causal chain",
+  "robust_direction_flips": 0
+}

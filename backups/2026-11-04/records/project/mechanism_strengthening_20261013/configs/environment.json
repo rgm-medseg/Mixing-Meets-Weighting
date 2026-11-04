@@ -1,0 +1,15 @@
+{
+  "python": "3.10.20",
+  "executable": "/home/renguanming/.conda/envs/beta_fft/bin/python",
+  "torch_cuda": "12.1",
+  "cudnn": 90100,
+  "CPU_threads_training": 4,
+  "torch": "2.4.1+cu121",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "skimage": "0.25.2",
+  "h5py": "3.16.0",
+  "torchvision": "0.19.1+cu121",
+  "matplotlib": "3.10.9",
+  "PIL": "12.2.0"
+}

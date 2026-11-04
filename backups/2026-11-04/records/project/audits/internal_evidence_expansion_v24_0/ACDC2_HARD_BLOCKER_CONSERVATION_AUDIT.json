@@ -1,0 +1,81 @@
+{
+  "status": "BLOCKED",
+  "created_at": "2026-08-24T16:25:03.880004+00:00",
+  "task_id": "ACDC2_HARD_BLOCKER_CONSERVATION_AUDIT",
+  "FormalStartImpact": "HARD_BLOCKER_FOR_ACDC2_LABEL_EFFICIENCY_AND_GLOBAL_PRELAUNCH",
+  "training_started": false,
+  "formal_started": false,
+  "tmux_started": false,
+  "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT": true,
+  "CanonicalProtocol": {
+    "Labelnum": 1,
+    "LabeledCountPatients": 1,
+    "LabeledPatientIDs": [
+      "patient099"
+    ],
+    "LabeledFrameCount": 2,
+    "LabeledSliceCount": 32,
+    "NestedWith5P": true,
+    "NestedWith10P": true,
+    "SplitAsset": "configs/internal_evidence_expansion_v24_0/ACDC2_SPLIT.json",
+    "SplitSHA256": "4aa29e06d3b5bbfcd81331252d3dd7bcd012afb09bf6a88372f659fcf43a124d"
+  },
+  "PretrainEvidence": {
+    "RequiredLabel1Path": "train_ACDC/Pre_model/label1/unet_best_model.pth",
+    "RequiredLabel1Exists": false,
+    "Label1OrACDC2PathSearchHits": [],
+    "Label1OrACDC2PathSearchHitCount": 0
+  },
+  "FrozenBetaFFTSemanticEvidence": {
+    "Source": "train_ACDC/beta_fft_acdc_repro.py",
+    "SourceSHA256": "18b128da9429211059eed2e36290964439449b52e6e7de621609170a92bed316",
+    "Anchors": {
+      "labeled_sub_bs": [
+        "667:    labeled_sub_bs = int(args.labeled_bs / 2)",
+        "668:    unlabeled_sub_bs = int((args.batch_size - args.labeled_bs) / 2)",
+        "769:            img_a, img_b = volume_batch[:labeled_sub_bs], volume_batch[labeled_sub_bs:args.labeled_bs]",
+        "770:            uimg_a, uimg_b = volume_batch[args.labeled_bs:args.labeled_bs + unlabeled_sub_bs], volume_batch[args.labeled_bs + unlabeled_sub_bs:]",
+        "771:            lab_a, lab_b = label_batch[:labeled_sub_bs], label_batch[labeled_sub_bs:args.labeled_bs]",
+        "772:            lab_a_s, lab_b_s = label_batch_strong[:labeled_sub_bs], label_batch_strong[labeled_sub_bs:args.labeled_bs]",
+        "773:            img_a_s, img_b_s = volume_batch_strong[:labeled_sub_bs], volume_batch_strong[labeled_sub_bs:args.labeled_bs]",
+        "774:            uimg_a_s, uimg_b_s = volume_batch_strong[args.labeled_bs:args.labeled_bs + unlabeled_sub_bs], volume_batch_strong[args.labeled_bs + unlabeled_sub_bs:]",
+        "778:                valid_a, valid_b = validity_batch[:labeled_sub_bs], validity_batch[labeled_sub_bs:args.labeled_bs]",
+        "779:                uvalid_a, uvalid_b = validity_batch[args.labeled_bs:args.labeled_bs + unlabeled_sub_bs], validity_batch[args.labeled_bs + unlabeled_sub_bs:]",
+        "780:                valid_a_s, valid_b_s = validity_batch_strong[:labeled_sub_bs], validity_batch_strong[labeled_sub_bs:args.labeled_bs]",
+        "781:                uvalid_a_s, uvalid_b_s = validity_batch_strong[args.labeled_bs:args.labeled_bs + unlabeled_sub_bs], validity_batch_strong[args.labeled_bs + unlabeled_sub_bs:]"
+      ],
+      "dual_labeled_branch_split": [
+        "769:            img_a, img_b = volume_batch[:labeled_sub_bs], volume_batch[labeled_sub_bs:args.labeled_bs]",
+        "771:            lab_a, lab_b = label_batch[:labeled_sub_bs], label_batch[labeled_sub_bs:args.labeled_bs]"
+      ],
+      "two_stream_sampler": [
+        "21:from dataloaders.dataset import BaseDataSets, TwoStreamBatchSampler, WeakStrongAugment",
+        "691:        batch_sampler=TwoStreamBatchSampler(list(range(0, labeled_slice)), list(range(labeled_slice, len(db_train))), args.batch_size, args.batch_size - args.labeled_bs),"
+      ],
+      "mixed_labeled_unlabeled_inputs": [
+        "827:            net_input_l_1 = img_b * img_mask.unsqueeze(1) + uimg_b * (1 - img_mask.unsqueeze(1))",
+        "830:            net_input_1 = torch.cat([net_input_unl_1, net_input_l_1], dim=0)",
+        "833:            net_input_l_2 = img_b_s * img_mask.unsqueeze(1) + uimg_b_s * (1 - img_mask.unsqueeze(1))",
+        "836:            net_input_2 = torch.cat([net_input_unl_2, net_input_l_2], dim=0)",
+        "841:            out_l_1 = forward_model(model_1, net_input_l_1, net_validity_l_1)",
+        "862:            out_l_2 = forward_model(model_2, net_input_l_2, net_validity_l_2)"
+      ]
+    },
+    "Conclusion": "frozen beta-FFT training uses two labeled sub-batches/branches; one distinct labeled patient is not a valid frozen protocol execution target without changing protocol or algorithm semantics."
+  },
+  "ForbiddenWorkarounds": [
+    "do_not_duplicate_single_patient_as_two_cases",
+    "do_not_raise_labeled_count_without_new_protocol_decision",
+    "do_not_modify_beta_fft_or_algorithm"
+  ],
+  "OnlyLegalUnblockEvents": [
+    "USER_AND_CHATGPT_APPROVE_NEW_ACDC2_PROTOCOL_WITH_AT_LEAST_TWO_DISTINCT_LABELED_CASES",
+    "AUTHORITATIVE_EXISTING_PROJECT_PRIMARY_EVIDENCE_SHOWS_CANONICAL_ACDC2_IS_NOT_LABELNUM_1",
+    "VALID_FROZEN_LABEL1_PRETRAIN_AND_BETAFFT_PROTOCOL_EVIDENCE_APPEARS_WITHOUT_ALGORITHM_CHANGE"
+  ],
+  "CurrentDecision": "DO_NOT_START_ACDC2_FULL_OR_TEST",
+  "RegistryTasksBlocked": [
+    "ACDC2_BETAFFT_FULL",
+    "ACDC2_OURS_FULL"
+  ]
+}

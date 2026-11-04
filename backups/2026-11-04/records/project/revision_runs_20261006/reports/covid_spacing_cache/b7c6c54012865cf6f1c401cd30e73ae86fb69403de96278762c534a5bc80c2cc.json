@@ -1,0 +1,21 @@
+{
+  "before": {
+    "dice": 0.6590178615851535,
+    "iou": 0.4914441756578264,
+    "hd95_mm": 30.867539320995903,
+    "asd_mm": 5.601263594080546
+  },
+  "after": {
+    "dice": 0.6590178615851535,
+    "iou": 0.4914441756578264,
+    "hd95_mm": 47.006261615738325,
+    "asd_mm": 9.740117499166365
+  },
+  "time": "2026-10-06T22:05:05.303884+08:00",
+  "prediction_sha256": "320c4a33002c31f52af2c734eab65dd6933e155f8e0770cc83cd2e47f8511636",
+  "derived_GT_sha256": "34d5418b868f9540a4881fd7ffd7edd28535d2fe2c9f6e3e9a7c97bf2c89f10e",
+  "origin": "own immutable case cache",
+  "initial_calculation_origin": "same evaluator, direct old/corrected-spacing recomputation",
+  "actual_corrected_call_axis_order": "XYZ",
+  "calculation_script_sha256": "2eea13acd478ce05b7108a76ba4f5e573e7a891f72eefa8e1d0302d7c59e4b08"
+}

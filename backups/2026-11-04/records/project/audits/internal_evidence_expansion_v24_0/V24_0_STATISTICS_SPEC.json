@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T14:19:16.442164+00:00",
+  "paired_unit": "patient/case/volume",
+  "slice_as_independent_sample": false,
+  "primary_family": "Dice across ACDC5, ACDC10, PROMISE20, COVID5, COVID10",
+  "bootstrap_iterations": 10000,
+  "bootstrap_seed": 2026,
+  "pvalue_adjustment": "Holm for primary Dice p-values",
+  "wilcoxon": "two-sided signed-rank; all-zero diffs => p=1 effect=0",
+  "effect_size": "rank-biserial"
+}

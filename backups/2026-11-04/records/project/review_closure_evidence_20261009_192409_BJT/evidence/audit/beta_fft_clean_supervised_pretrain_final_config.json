@@ -1,0 +1,23 @@
+{
+  "final_status": "READY_FOR_CLEAN_SUPERVISED_PRETRAIN_MANUAL_LAUNCH",
+  "entry": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/pretrain_acdc_clean_supervised.py",
+  "root_path": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC",
+  "labeled_list": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data/acdc/splits_clean_beta_fft/labeled_clean_beta_fft.list",
+  "val_list": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data/acdc/splits_clean_beta_fft/val_clean_beta_fft.list",
+  "test_list_not_used_for_model_selection": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data/acdc/splits_clean_beta_fft/test_clean_beta_fft.list",
+  "output_dir": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/clean_label12_seed42",
+  "target_weight": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/clean_label12_seed42/unet_best_model.pth",
+  "run_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_clean_supervised_pretrain_seed42",
+  "model": "BCP_net/UNet_2d",
+  "loss": "official mix_loss, (loss_dice + loss_ce) / 2",
+  "optimizer": "SGD momentum=0.9 weight_decay=0.0001",
+  "base_lr": 0.01,
+  "pre_iterations": 10000,
+  "batch_size": 24,
+  "labeled_bs": 12,
+  "seed": 42,
+  "validation_interval": 200,
+  "best_checkpoint_criterion": "clean val mean Dice",
+  "checkpoint_format": "dict with net,opt",
+  "training_started": false
+}

@@ -1,0 +1,20 @@
+{
+  "status": "EVALUATED",
+  "run": "Historical_baseline",
+  "split": "test",
+  "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/checkpoints/best.ckpt",
+  "checkpoint_sha256": "825da2e9a944c930fa54cb9b7abc843345e4a7cde851d34c390739acaa0d5dbf",
+  "checkpoint_step": 21200,
+  "manifest": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/test.list",
+  "manifest_sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+  "protocol": "ACDC_v22_grid_directed_ASD",
+  "smoke": false,
+  "cases": 40,
+  "time": "2026-10-06T21:04:35.777448+08:00",
+  "metrics": {
+    "dice": 0.8966063409597648,
+    "iou": 0.8182007425305878,
+    "hd95": 1.7618789072469767,
+    "asd": 0.5722597264440701
+  }
+}

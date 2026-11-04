@@ -1,0 +1,13 @@
+{
+  "status": "TRAINED",
+  "task": "E5",
+  "global_step": 30000,
+  "optimizer_success_calls": {
+    "optimizer1": 30000,
+    "optimizer2": 30000
+  },
+  "time": "2026-10-08T22:00:40.240030+08:00",
+  "segment_seconds": 5599.220242526382,
+  "resume_exact": false,
+  "test_access_during_training": 0
+}

@@ -1,0 +1,8 @@
+{
+  "task": "A4",
+  "status": "PARTIAL",
+  "reason": "ACDC frame/class raw records aggregated by patient for paired differences; COVID shown individually with n=4 per run. No slicing/checkpoint pseudo-replication.",
+  "time": "2026-10-06T21:24:21.568811+08:00",
+  "patients": 20,
+  "covid_records": 16
+}

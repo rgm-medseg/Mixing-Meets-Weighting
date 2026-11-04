@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-23T03:27:26.505148+00:00",
+  "gate": "TRAINING_DYNAMICS_VAL_ONLY",
+  "audit_tsv": "audits/paper_internal_evidence_v23_0/TRAINING_DYNAMICS_VAL_ONLY_GATE.tsv",
+  "method_count": 3,
+  "consumed_val_point_count": 900,
+  "consumed_test_point_count": 0,
+  "TEST_POINT_COUNT": 0,
+  "historical_test_alias_policy": "QUARANTINED_NOT_CONSUMED",
+  "curve_output_allowed": true,
+  "new_training_started": false,
+  "formal_started": false
+}

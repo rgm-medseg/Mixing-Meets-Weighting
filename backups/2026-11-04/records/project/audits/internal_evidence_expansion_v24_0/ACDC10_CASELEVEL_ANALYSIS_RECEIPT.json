@@ -1,0 +1,28 @@
+{
+  "status": "PASS_ACDC10_PARTIAL_A1_AND_A4",
+  "created_at": "2026-08-24T14:42:24.517870+00:00",
+  "training_started": false,
+  "inference_started": false,
+  "checkpoint_replay_started": false,
+  "test_manifest_content_read": false,
+  "paired_metrics": "final_report/internal_evidence_expansion_v24_0/PATIENT_LEVEL_PAIRED_METRICS_ACDC10.tsv",
+  "paired_metrics_sha256": "e8d1bbc4443189f1b266946e94463d544d3831694363f4c9ddf1ff3a4cc19481",
+  "statistical_summary": "final_report/internal_evidence_expansion_v24_0/PATIENT_LEVEL_STATISTICAL_SUMMARY_ACDC10.tsv",
+  "statistical_summary_sha256": "4222f389074a987e1a660b4eda886cd1d5a667e2a0da6d65c9a374045cd209f2",
+  "difficulty_binding": "audits/internal_evidence_expansion_v24_0/ACDC10_DIFFICULTY_STRATA_BINDING.json",
+  "difficulty_table": "final_report/internal_evidence_expansion_v24_0/ACDC10_HARD_MEDIUM_EASY.tsv",
+  "difficulty_table_sha256": "ce34003145a2c68827072fe462d906a0493116fd2a3cbcb2143ad7a3cb73cb65",
+  "figures": [
+    "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_DIFFICULTY_GAIN.png",
+    "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_DIFFICULTY_GAIN.pdf",
+    "final_report/internal_evidence_expansion_v24_0/figures/PATIENT_LEVEL_DELTA_DISTRIBUTION_ACDC10.png",
+    "final_report/internal_evidence_expansion_v24_0/figures/PATIENT_LEVEL_DELTA_DISTRIBUTION_ACDC10.pdf"
+  ],
+  "global_patient_level_stats_complete": false,
+  "global_patient_level_stats_missing_settings": [
+    "ACDC5",
+    "PROMISE20",
+    "COVID5",
+    "COVID10"
+  ]
+}

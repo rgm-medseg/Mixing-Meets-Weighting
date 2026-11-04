@@ -1,0 +1,139 @@
+{
+  "status": "SELECTED",
+  "controller_version": "v2_B",
+  "formula": "equal foreground-class mean of (P_c - max other P) on existing per-class LCC support",
+  "fallback": 0.0,
+  "mapping": "unchanged .18+.20*q",
+  "B_evaluated": true,
+  "mapping_adjusted": false,
+  "B_trigger": "A fixed train-snapshot batch geometry at E1 steps3200 and3976; one offline comparison permitted",
+  "basis": "Use B only where actual same-checkpoint batch replay shows it resolves A remaining integer no-response; no GT/test score selection",
+  "same_checkpoint_response": [
+    {
+      "run": "initial_pretrain_reconstruction",
+      "step": 0,
+      "A_sizes": [
+        91,
+        92,
+        93
+      ],
+      "B_sizes": [
+        86,
+        88,
+        89,
+        90
+      ]
+    },
+    {
+      "run": "E1_uniform",
+      "step": 3200,
+      "A_sizes": [
+        94
+      ],
+      "B_sizes": [
+        91,
+        92
+      ]
+    },
+    {
+      "run": "E1_uniform",
+      "step": 3976,
+      "A_sizes": [
+        94
+      ],
+      "B_sizes": [
+        91,
+        92
+      ]
+    },
+    {
+      "run": "Historical_Full",
+      "step": 29600,
+      "A_sizes": [
+        95
+      ],
+      "B_sizes": [
+        92,
+        93
+      ]
+    },
+    {
+      "run": "Historical_Full",
+      "step": 30000,
+      "A_sizes": [
+        95
+      ],
+      "B_sizes": [
+        93
+      ]
+    }
+  ],
+  "where_B_resolves_A_constant": [
+    {
+      "run": "E1_uniform",
+      "step": 3200,
+      "A_sizes": [
+        94
+      ],
+      "B_sizes": [
+        91,
+        92
+      ]
+    },
+    {
+      "run": "E1_uniform",
+      "step": 3976,
+      "A_sizes": [
+        94
+      ],
+      "B_sizes": [
+        91,
+        92
+      ]
+    },
+    {
+      "run": "Historical_Full",
+      "step": 29600,
+      "A_sizes": [
+        95
+      ],
+      "B_sizes": [
+        92,
+        93
+      ]
+    }
+  ],
+  "n_batches": 70,
+  "old_sizes": [
+    97
+  ],
+  "A_sizes": [
+    91,
+    92,
+    93,
+    94,
+    95
+  ],
+  "A_nonfallback_sizes": [
+    91,
+    92,
+    93,
+    94,
+    95
+  ],
+  "A_fallback_batches": 0,
+  "B_sizes": [
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94
+  ],
+  "formal_benefit": "NA; replay uses historical teachers, not v2 training",
+  "test_access": false,
+  "time": "2026-10-06T23:26:15.535366+08:00"
+}

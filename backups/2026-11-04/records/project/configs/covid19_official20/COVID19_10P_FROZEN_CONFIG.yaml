@@ -1,0 +1,46 @@
+protocol_identity: "OFFICIAL20_PATIENTLEVEL_ALLSLICE_V2"
+protocol_type: "OUR_REPRODUCIBLE_OFFICIAL_PROTOCOL"
+dataset: "COVID19_OFFICIAL20"
+task: "binary_infection_segmentation"
+seed: 42
+input_size:
+  - 256
+  - 256
+batch_size: 24
+labeled_batch_size: 12
+unlabeled_batch_size: 12
+optimizer:
+  name: "SGD"
+  lr: 0.01
+  momentum: 0.9
+  weight_decay: 0.0001
+ssl_updates: 30000
+pretrain_updates: 10000
+self_train_updates: 30000
+validation_cadence:
+  - 1
+  - 500
+  - "every_500_until_30000"
+primary_validation_metric: "PATIENT_VOLUME_MACRO_DICE"
+evaluation_policy: "validation_only"
+formal_test_policy: "formal_test_once_after_4_full_and_freeze"
+manifests:
+  train_all: "data/COVID19_OFFICIAL20/manifests/TRAIN_ALL_SLICES.tsv"
+  val_all: "data/COVID19_OFFICIAL20/manifests/VAL_ALL_SLICES.tsv"
+  test_identity_hash_only: "data/COVID19_OFFICIAL20/manifests/TEST_ALL_SLICES.tsv"
+  labeled: "data/COVID19_OFFICIAL20/manifests/COVID19_10P_LABELED.tsv"
+  unlabeled: "data/COVID19_OFFICIAL20/manifests/COVID19_10P_UNLABELED.tsv"
+training_core_args:
+  dataset_name: "covid19_official20"
+  covid19_labeled_manifest: "data/COVID19_OFFICIAL20/manifests/COVID19_10P_LABELED.tsv"
+  covid19_unlabeled_manifest: "data/COVID19_OFFICIAL20/manifests/COVID19_10P_UNLABELED.tsv"
+  covid19_val_manifest: "data/COVID19_OFFICIAL20/manifests/VAL_ALL_SLICES.tsv"
+  evaluation_policy: "validation_only"
+label_budget:
+  tag: "10P"
+  labeled_count: 241
+  actual_percentage: 9.979296066252589
+method:
+  baseline: "beta-FFT"
+  ours: "beta-FFT + Mask Token + AdaMix"
+full_authorization: false

@@ -1,0 +1,2 @@
+run,status,checkpoint,checkpoint_sha256,selected_step,cases,patients,unit,dice,iou,hd95,asd
+R2_fixed92,EVALUATED,/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/checkpoints/best.ckpt,b56292a270ccf6679b5597e9d556eda686df91778e496e715174aaa367b710de,29000,40,20,grid,0.9020444131484706,0.8270690413278287,1.880012540213665,0.5087759056993733

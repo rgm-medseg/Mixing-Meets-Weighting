@@ -1,0 +1,4 @@
+MethodID	RunRoot	RunRootExists	CheckpointCount	CheckpointIterations	ScoreMapCount	PseudoOutputCount	BranchOutputCount	ExistingAssetsEnoughForA2PixelFaithfulness	ExistingAssetsEnoughForA3PseudoEvolution	ExistingAssetsEnoughForA10StudentDiversity
+ACDC10_ARM_000	runs/beta_fft_acdc_official_full_seed42_fresh_ckpt	True	2	BEST,LAST	0	0	0	False	False	False
+ACDC10_ARM_110	runs/beta_fft_acdc_10pct_mask_token_adamix_full_seed42	True	2	BEST,LAST	0	0	0	False	False	False
+ACDC10_ARM_111	runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT	True	2	BEST,LAST	0	0	0	False	False	False

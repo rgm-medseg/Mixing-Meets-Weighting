@@ -1,0 +1,40 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/effective_source.py
+ORIGINAL_SHA256: d3959d5baf54727db740f3ece79608292b396d3f0f49b7b97743398bda42ad00
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 18-27 ---
+18: from torchvision import transforms
+19: from tqdm import tqdm
+20: 
+21: from dataloaders.dataset import BaseDataSets, TwoStreamBatchSampler, WeakStrongAugment
+22: from v14_mask_adamix_components import (v14_bcp_net as BCP_net, generate_adamix_bcp_lite_v1_mask, load_parent_pretrain, transplant_parent_optimizer_state, make_optimizer, mask_token_endpoint, process_image_batches_parent_2d)
+23: from v21_3_acdc10_third_innovation_components import compute_v21_3_innovation_x
+24: from utils import ramps, losses
+25: process_image_batches = process_image_batches_parent_2d
+26: from val_2D import test_single_volume
+27: 
+--- ORIGINAL LINES 70-75 ---
+70: parser.add_argument("--enable_v21_3_innovation_x", type=str2bool, default=False)
+71: parser.add_argument("--v21_3_innovation_x_weight", type=float, default=0.05)
+72: args = parser.parse_args()
+73: 
+74: dice_loss = losses.DiceLoss(n_classes=4)
+75: ce_loss = nn.CrossEntropyLoss()
+--- ORIGINAL LINES 167-178 ---
+167: def make_run_dirs():
+168:     run_root = Path(args.run_root)
+169:     run_root.mkdir(parents=True, exist_ok=True)
+170:     (run_root / "checkpoints").mkdir(exist_ok=True)
+171:     (run_root / "logs").mkdir(exist_ok=True)
+172:     (run_root / "audit").mkdir(exist_ok=True)
+173:     shutil.copy(__file__, run_root / "source_snapshot.py")
+174:     (run_root / "effective_source.py").write_text(V21_3_EFFECTIVE_SOURCE)
+175:     return run_root
+176: 
+177: 
+178: def save_full_ckpt(path, model_1, model_2, ema_model, optimizer1, optimizer2, epoch, global_step, best_metrics):
+--- ORIGINAL LINES 273-277 ---
+273:     model_2 = BCP_net(in_chns=1, class_num=args.num_classes, ema=False, mask_token_enabled=args.mask_token_enabled, mask_token_num=args.mask_token_num, mask_token_dim=args.mask_token_dim)
+274:     ema_model = BCP_net(in_chns=1, class_num=args.num_classes, ema=True, mask_token_enabled=args.mask_token_enabled, mask_token_num=args.mask_token_num, mask_token_dim=args.mask_token_dim)
+275: 
+276:     db_train = BaseDataSets(base_dir=args.root_path, split="train", num=None, transform=transforms.Compose([WeakStrongAugment(args.image_size)]))
+277:     db_val = BaseDataSets(base_dir=args.root_path, split="val")

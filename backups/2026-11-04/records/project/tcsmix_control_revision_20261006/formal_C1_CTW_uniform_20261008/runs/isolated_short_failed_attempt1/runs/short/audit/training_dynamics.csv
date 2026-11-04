@@ -1,0 +1,1 @@
+iter,global_step,total_loss,loss_1,loss_2,consistency_weight,repair_triggered,fft_triggered,pred_fg_ratio_1,pred_fg_ratio_2,pseudo_fg_ratio_1,pseudo_fg_ratio_2,branch_disagreement_ratio,branch_agreement_ratio,fft_mixing_triggered,fft_threshold,loss_finite,grad_finite,logits_finite,checkpoint_saved

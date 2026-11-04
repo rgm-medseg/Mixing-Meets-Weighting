@@ -1,0 +1,25 @@
+{
+  "source_files": [
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/arrays/trc/patient002_frame01_z5.npz",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/results/trc_patient_dice.csv",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/results/trc_patient_region.csv"
+  ],
+  "source_sha256": {
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/arrays/trc/patient002_frame01_z5.npz": "f1706c07b68fde2cd2ee7f90757413495cbd6df5957d0bea521b6ced71fe9b2f",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/results/trc_patient_dice.csv": "416b25f6f0a4ac7be148a1a192a2cf116fc715d12a41895e890c6cf6808cff3e",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/results/trc_patient_region.csv": "f110213ae9868c8e0792829ea6566f9d317353aa1601ca9062c8986514cb780f"
+  },
+  "case_selection": "fixed before outputs; not selected by Dice, error, or visual appearance",
+  "transforms": "nearest-neighbor display; no smoothing; full image; common image contrast; no data edits",
+  "width_mm": 190,
+  "height_mm": 145.0,
+  "vector_text": true,
+  "raster_native_grid": [
+    256,
+    256
+  ],
+  "png_dpi": 220,
+  "embedded_raster_export_dpi": 500,
+  "description": "Same-checkpoint TRC intervention with real feature/residual responses, predictions and errors; all restored outputs were bitwise identical.",
+  "manuscript_phase": "Neurocomputing draft; journal-specific guide returned403, final production choices pending verification"
+}

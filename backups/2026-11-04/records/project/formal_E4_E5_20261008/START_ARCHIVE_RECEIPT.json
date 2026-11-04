@@ -1,0 +1,12 @@
+{
+  "status": "VERIFIED",
+  "time": "2026-10-08T13:12:03.838017+08:00",
+  "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/E4_E5_start_evidence_20261008.tar.gz",
+  "sha256": "b9db25f1b84a6a0cdb30a116d3020a4964eea203e38fa5d61ecfcd7e88338b34",
+  "bytes": 1578313,
+  "internal_files_verified": 323,
+  "actual_extract": true,
+  "snapshot": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/archives/start_snapshot_2026-10-08T131153328550+0800",
+  "build_and_check_seconds": 3.7600635029375553,
+  "logical_parts": []
+}

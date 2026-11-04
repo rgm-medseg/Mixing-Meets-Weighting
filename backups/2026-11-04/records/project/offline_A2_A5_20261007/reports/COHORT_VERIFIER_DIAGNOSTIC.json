@@ -1,0 +1,9 @@
+{
+  "status": "REPAIRED_REPORT_ONLY",
+  "cause": "filename prefix glob matched both validation and validation_legacy patient units; two middle slices accidentally paired legacy batch logits with main single-slice probability cache",
+  "cache_repeated_forward_matches": true,
+  "expanded_A2_outputs_changed": false,
+  "completed_GPU_units_retained": true,
+  "failure_log": "logs/REVIEW_2026-10-07T193944.152063+0800.log",
+  "stop_status_note": "stop request arrived during REVIEW; actual AssertionError also present in retained stage log; no claim of clean uninterrupted initial audit"
+}

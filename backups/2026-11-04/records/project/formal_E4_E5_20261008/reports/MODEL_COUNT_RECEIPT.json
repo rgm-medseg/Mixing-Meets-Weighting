@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T12:32:07.964088+08:00",
+  "actual_instances": true,
+  "training_updates": 0,
+  "models": [
+    {
+      "task": "E4",
+      "parameters": 1827475,
+      "adapter_parameters": 647,
+      "covered_MACs": 2987393024,
+      "conv_linear_MACs": 2987393024,
+      "TRC_einsum_MACs": 0,
+      "input": "1x1x256x256",
+      "precision": "FP32",
+      "full_FLOPs": "NA",
+      "coverage": "conv/transpose-conv/linear output-grid convention + R1 two token einsums; excludes LN/BN/GELU/softmax/interpolate/pooling/additions",
+      "structure": "16->18 Conv1x1bias/LN18/GELU/Conv1x1bias16 + gamma0 residual"
+    },
+    {
+      "task": "R1",
+      "parameters": 1827469,
+      "adapter_parameters": 641,
+      "covered_MACs": 2991587328,
+      "conv_linear_MACs": 2983198720,
+      "TRC_einsum_MACs": 8388608,
+      "input": "1x1x256x256",
+      "precision": "FP32",
+      "full_FLOPs": "NA",
+      "coverage": "conv/transpose-conv/linear output-grid convention + R1 two token einsums; excludes LN/BN/GELU/softmax/interpolate/pooling/additions",
+      "structure": "token residual"
+    },
+    {
+      "task": "E5",
+      "parameters": 1813764,
+      "adapter_parameters": 0,
+      "covered_MACs": 2949644288,
+      "conv_linear_MACs": 2949644288,
+      "TRC_einsum_MACs": 0,
+      "input": "1x1x256x256",
+      "precision": "FP32",
+      "full_FLOPs": "NA",
+      "coverage": "conv/transpose-conv/linear output-grid convention + R1 two token einsums; excludes LN/BN/GELU/softmax/interpolate/pooling/additions",
+      "structure": "native official UNet; no added adapters"
+    }
+  ]
+}

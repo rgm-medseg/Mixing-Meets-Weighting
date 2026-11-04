@@ -1,0 +1,55 @@
+ORIGINAL: /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v21_3_acdc10_third_innovation_components.py
+SHA256: f28abc48fedff330f9aa7470072ebc16a607c6c59fd14942c2adb111b8ce748a
+15:     "V21_3_X01_CLASS_DISTRIBUTION_GUARD",
+16:     "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER",
+17:     "V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+18:     "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN",
+19:     "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT",
+26: 
+27: 
+28: def _norm01(x: torch.Tensor) -> torch.Tensor:
+29:     flat = x.flatten(1)
+30:     lo = flat.min(dim=1).values.view(-1, 1, 1)
+32:     return ((x - lo) / (hi - lo).clamp_min(1e-6)).clamp(0.0, 1.0)
+33: 
+34: 
+35: def _spatial_gradient(x: torch.Tensor) -> torch.Tensor:
+36:     dx = torch.zeros_like(x)
+37:     dy = torch.zeros_like(x)
+38:     dx[..., 1:, :] = (x[..., 1:, :] - x[..., :-1, :]).abs()
+39:     dy[..., :, 1:] = (x[..., :, 1:] - x[..., :, :-1]).abs()
+67:     t1 = torch.softmax(pre_a.detach(), dim=1)
+68:     t2 = torch.softmax(pre_b.detach(), dim=1)
+86: 
+87:     if candidate_id == "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER":
+88:         mean_prob = 0.5 * (p1.detach() + p2.detach())
+89:         reliability = (1.0 - _entropy(mean_prob) / torch.log(torch.tensor(float(p1.shape[1]), device=p1.device))).clamp(0.0, 1.0)
+90:         loss = ((p1 - p2.detach()).pow(2).mean(dim=1) * reliability).mean()
+91:         endpoint = {
+92:             "uncertainty_reliability_mean": _safe_scalar(reliability.mean()),
+96:         return loss, endpoint
+97: 
+98:     if candidate_id == "V21_3_X03_CONTOUR_RELIABILITY_WEIGHT":
+99:         contour = _norm01(_spatial_gradient(0.5 * (p1.detach().max(1).values + p2.detach().max(1).values)))
+100:         boundary_weight = (0.25 + contour).clamp(0.25, 1.25)
+101:         loss = ((p1 - p2.detach()).abs().mean(dim=1) * boundary_weight).mean()
+102:         endpoint = {
+103:             "contour_uncertainty_mean": _safe_scalar(contour.mean()),
+104:             "boundary_weight_mean": _safe_scalar(boundary_weight.mean()),
+105:             "rv_boundary_pixel_ratio": _safe_scalar(((p1.argmax(1) == 1).float() * (contour > 0.5).float()).mean()),
+106:         }
+127: 
+128:     if candidate_id == "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT":
+129:         mean_prob = 0.5 * (p1.detach() + p2.detach())
+130:         entropy = _entropy(mean_prob) / torch.log(torch.tensor(float(p1.shape[1]), device=p1.device))
+131:         boundary = _norm01(_spatial_gradient(mean_prob.max(1).values))
+132:         weight = (entropy * boundary).clamp(0.0, 1.0)
+133:         pseudo = mean_prob.argmax(dim=1)
+144:         progress = torch.tensor(float(iter_num) / max(float(max_iterations), 1.0), device=p1.device)
+145:         late_weight = torch.sigmoid((progress - 0.65) * 12.0)
+146:         variance_proxy = (p1.detach() - p2.detach()).pow(2).mean(dim=1)
+147:         fft_variance_proxy = (f1.detach() - f2.detach()).pow(2).mean()
+148:         reliability = (variance_proxy + fft_variance_proxy).clamp(0.0, 1.0)
+149:         loss = late_weight * ((p1 - p2.detach()).pow(2).mean(dim=1) * reliability).mean()
+150:         endpoint = {
+151:             "late_reliability_weight": _safe_scalar(late_weight),

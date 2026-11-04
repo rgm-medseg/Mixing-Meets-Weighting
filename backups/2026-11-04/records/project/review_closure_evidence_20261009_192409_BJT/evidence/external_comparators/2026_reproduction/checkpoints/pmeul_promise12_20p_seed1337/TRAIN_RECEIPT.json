@@ -1,0 +1,16 @@
+{
+  "best_checkpoint_sha256": "38160ba30c453f0cf5ceac2c3ee48b8624c56042d08655b27321fbddf561b17d",
+  "best_validation_dice": 0.7264375361952636,
+  "ce_in_optimized_loss": false,
+  "checkpoint_missing_keys": [],
+  "checkpoint_unexpected_keys": [],
+  "config_sha256": "f3dd71cc0aa6550a736e12e6553d908a5a6ee99b5d8a73402a287cded5f0cb2e",
+  "dataset": "PROMISE12",
+  "iteration": 30000,
+  "job_id": "pmeul_promise12_20p_seed1337",
+  "latest_checkpoint_sha256": "5b266344e4e941a75de18d062e9a778b745d05ad825e3e03c6fb65d0823e0e7d",
+  "method": "PMEUL",
+  "nan_detected": false,
+  "status": "TRAIN_PASS",
+  "test_manifest_accessed": false
+}

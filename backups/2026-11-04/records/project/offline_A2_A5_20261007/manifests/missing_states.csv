@@ -1,0 +1,13 @@
+method_id,requested_step,status,reason
+baseline,6000,NA,only best and last retained in this run; no complete teacher state at requested step
+baseline,15000,NA,only best and last retained in this run; no complete teacher state at requested step
+baseline,24000,NA,only best and last retained in this run; no complete teacher state at requested step
+Full_main,6000,NA,only best and last retained in this run; no complete teacher state at requested step
+Full_main,15000,NA,only best and last retained in this run; no complete teacher state at requested step
+Full_main,24000,NA,only best and last retained in this run; no complete teacher state at requested step
+R1_v2_B,6000,NA,only best and last retained in this run; no complete teacher state at requested step
+R1_v2_B,15000,NA,only best and last retained in this run; no complete teacher state at requested step
+R1_v2_B,24000,NA,only best and last retained in this run; no complete teacher state at requested step
+R2_fixed92,6000,NA,only best and last retained in this run; no complete teacher state at requested step
+R2_fixed92,15000,NA,only best and last retained in this run; no complete teacher state at requested step
+R2_fixed92,24000,NA,only best and last retained in this run; no complete teacher state at requested step

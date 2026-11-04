@@ -1,0 +1,21 @@
+{
+  "time_bjt": "2026-10-09T23:37:48.758711+08:00",
+  "source_records_checked": 41,
+  "source_sha_all_match": true,
+  "export_sha_all_match": true,
+  "paper_rows": 73,
+  "mapped_rows": 20,
+  "missing_rows": 53,
+  "field_records": 1168,
+  "promise_four_scalar_differences_zero": true,
+  "b_generation_missing_fields": 14,
+  "c_target_binding_missing_rows": 6,
+  "paper_covid_full_hd95_mm": {
+    "5%": "22.79",
+    "10%": "11.88"
+  },
+  "only_small_text_files": true,
+  "original_files_modified": false,
+  "validation_scope": "This new package only; previous 237-file/116-mean audit not repeated",
+  "status": "PASS"
+}

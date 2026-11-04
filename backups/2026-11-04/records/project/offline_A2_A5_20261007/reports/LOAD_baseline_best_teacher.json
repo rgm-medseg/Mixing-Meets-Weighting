@@ -1,0 +1,10 @@
+{
+  "method_id": "baseline",
+  "checkpoint_sha256": "825da2e9a944c930fa54cb9b7abc843345e4a7cde851d34c390739acaa0d5dbf",
+  "global_step": 21200,
+  "branch": "ema_model",
+  "strict": true,
+  "state_keys": 226,
+  "parameters": 1826828,
+  "trainable_parameters": 0
+}

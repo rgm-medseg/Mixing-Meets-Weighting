@@ -1,0 +1,11 @@
+{
+  "status": "VERIFIED_START_ONLY",
+  "time": "2026-10-08T00:57:50.559594+08:00",
+  "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/C1_CTW_uniform_v2B_start_evidence.tar.gz",
+  "sha256": "345bf94cf547f5ce99594ce6dc17f56b4b17aec7ac90762a1529440c224e967c",
+  "bytes": 793220,
+  "internal_files": 159,
+  "actual_extract": true,
+  "iteration_cutoff": 400,
+  "final": false
+}

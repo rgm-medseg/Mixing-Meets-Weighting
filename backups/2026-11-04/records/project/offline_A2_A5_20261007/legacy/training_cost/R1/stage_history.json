@@ -1,0 +1,107 @@
+[
+  {
+    "stage": "PREFLIGHT",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/preflight.py"
+    ],
+    "start": "2026-10-07T00:40:20.828663+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/logs/preflight_2026-10-07T004020828135+0800.log",
+    "resume_step": 0,
+    "pid": 70662,
+    "end": "2026-10-07T00:40:31.149735+08:00",
+    "exit_code": 0,
+    "elapsed_seconds": 10.321618985384703,
+    "measurement": "Popen launch to detected subprocess completion; <=5s polling detection lag, imports/validation/checkpoints included"
+  },
+  {
+    "stage": "TRAIN",
+    "command": [
+      "/bin/bash",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/train_R1.sh"
+    ],
+    "start": "2026-10-07T00:40:31.165888+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/logs/train_2026-10-07T004031165806+0800.log",
+    "resume_step": 0,
+    "pid": 70675,
+    "end": "2026-10-07T08:01:11.178843+08:00",
+    "exit_code": 0,
+    "elapsed_seconds": 26440.013047698885,
+    "measurement": "Popen launch to detected subprocess completion; <=5s polling detection lag, imports/validation/checkpoints included"
+  },
+  {
+    "stage": "POSTCHECK",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/train_postcheck.py"
+    ],
+    "start": "2026-10-07T08:01:11.210851+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/logs/postcheck_2026-10-07T080111210089+0800.log",
+    "resume_step": 30000,
+    "pid": 66039,
+    "end": "2026-10-07T08:01:16.235062+08:00",
+    "exit_code": 0,
+    "elapsed_seconds": 5.024995539337397,
+    "measurement": "Popen launch to detected subprocess completion; <=5s polling detection lag, imports/validation/checkpoints included"
+  },
+  {
+    "stage": "EVALUATE",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/evaluate_R1.py"
+    ],
+    "start": "2026-10-07T08:01:16.424304+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/logs/evaluate_2026-10-07T080116423523+0800.log",
+    "resume_step": 30000,
+    "pid": 66042,
+    "end": "2026-10-07T08:01:41.495567+08:00",
+    "exit_code": 0,
+    "elapsed_seconds": 25.07206778600812,
+    "measurement": "Popen launch to detected subprocess completion; <=5s polling detection lag, imports/validation/checkpoints included"
+  },
+  {
+    "stage": "ANALYSIS",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/analyze_R1.py"
+    ],
+    "start": "2026-10-07T08:01:41.511454+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/logs/analysis_2026-10-07T080141510900+0800.log",
+    "resume_step": 30000,
+    "pid": 66080,
+    "end": "2026-10-07T08:02:06.763183+08:00",
+    "exit_code": 0,
+    "elapsed_seconds": 25.252298582345247,
+    "measurement": "Popen launch to detected subprocess completion; <=5s polling detection lag, imports/validation/checkpoints included"
+  },
+  {
+    "stage": "SUMMARY",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/summarize_R1.py"
+    ],
+    "start": "2026-10-07T08:02:06.780223+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/logs/summary_2026-10-07T080206779664+0800.log",
+    "resume_step": 30000,
+    "pid": 66118,
+    "end": "2026-10-07T08:02:11.801027+08:00",
+    "exit_code": 0,
+    "elapsed_seconds": 5.021369576454163,
+    "measurement": "Popen launch to detected subprocess completion; <=5s polling detection lag, imports/validation/checkpoints included"
+  },
+  {
+    "stage": "PACKAGE",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/package_R1.py"
+    ],
+    "start": "2026-10-07T08:02:11.810053+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/logs/package_2026-10-07T080211808979+0800.log",
+    "resume_step": 30000,
+    "pid": 66122,
+    "end": "2026-10-07T08:02:21.918268+08:00",
+    "exit_code": 0,
+    "elapsed_seconds": 10.109284657984972,
+    "measurement": "Popen launch to detected subprocess completion; <=5s polling detection lag, imports/validation/checkpoints included"
+  }
+]

@@ -1,0 +1,78 @@
+            consistency_weight = get_current_consistency_weight(iter_num // 150)
+            net_input_unl_1 = uimg_a * img_mask.unsqueeze(1) + img_a * (1 - img_mask.unsqueeze(1))
+            net_input_l_1 = img_b * img_mask.unsqueeze(1) + uimg_b * (1 - img_mask.unsqueeze(1))
+            net_input_1 = torch.cat([net_input_unl_1, net_input_l_1], dim=0)
+            net_input_unl_2 = uimg_a_s * img_mask.unsqueeze(1) + img_a_s * (1 - img_mask.unsqueeze(1))
+            net_input_l_2 = img_b_s * img_mask.unsqueeze(1) + uimg_b_s * (1 - img_mask.unsqueeze(1))
+            net_input_2 = torch.cat([net_input_unl_2, net_input_l_2], dim=0)
+
+            out_unl_1 = model_1(net_input_unl_1)
+            out_l_1 = model_1(net_input_l_1)
+            out_1 = torch.cat([out_unl_1, out_l_1], dim=0)
+            out_soft_1 = torch.softmax(out_1, dim=1)
+            out_pseudo_1 = torch.argmax(out_soft_1.detach(), dim=1, keepdim=False)
+            unl_dice_1, unl_ce_1 = mix_loss(out_unl_1, plab_a, lab_a, loss_mask, u_weight=args.u_weight, unlab=True)
+            l_dice_1, l_ce_1 = mix_loss(out_l_1, lab_b, plab_b, loss_mask, u_weight=args.u_weight)
+            loss_ce_1 = unl_ce_1 + l_ce_1
+            loss_dice_1 = unl_dice_1 + l_dice_1
+
+            out_unl_2 = model_2(net_input_unl_2)
+            out_l_2 = model_2(net_input_l_2)
+            out_2 = torch.cat([out_unl_2, out_l_2], dim=0)
+            out_soft_2 = torch.softmax(out_2, dim=1)
+            out_pseudo_2 = torch.argmax(out_soft_2.detach(), dim=1, keepdim=False)
+            unl_dice_2, unl_ce_2 = mix_loss(out_unl_2, plab_a_s, lab_a_s, loss_mask, u_weight=args.u_weight, unlab=True)
+            l_dice_2, l_ce_2 = mix_loss(out_l_2, lab_b_s, plab_b_s, loss_mask, u_weight=args.u_weight)
+            loss_ce_2 = unl_ce_2 + l_ce_2
+            loss_dice_2 = unl_dice_2 + l_dice_2
+
+            pseudo_supervision1 = dice_loss(out_soft_1, out_pseudo_2.unsqueeze(1))
+            pseudo_supervision2 = dice_loss(out_soft_2, out_pseudo_1.unsqueeze(1))
+            mix_factors = torch.tensor(np.random.beta(0.1, 0.1, size=(args.labeled_bs // 2, 1, 1, 1)), dtype=torch.float).cuda()
+            batch_ux_mixed = uimg_a * (1.0 - mix_factors) + uimg_b * mix_factors
+            input_volume_batch = torch.cat([labeled_volume_batch, batch_ux_mixed], dim=0)
+            outputs = model_1(input_volume_batch)
+            outputs_soft = torch.softmax(outputs, dim=1)
+            with torch.no_grad():
+                ema_output_ux0 = torch.softmax(pre_a, dim=1)
+                ema_output_ux1 = torch.softmax(pre_b, dim=1)
+                batch_pred_mixed = ema_output_ux0 * (1.0 - mix_factors) + ema_output_ux1 * mix_factors
+            loss_ce_mix = ce_loss(outputs[:args.labeled_bs], label_batch[:args.labeled_bs].long())
+            loss_dice_mix = dice_loss(outputs_soft[:args.labeled_bs], label_batch[:args.labeled_bs].unsqueeze(1))
+            supervised_loss_mix = 0.5 * (loss_dice_mix + loss_ce_mix)
+            consistency_loss = torch.mean((outputs_soft[args.labeled_bs:] - batch_pred_mixed) ** 2) * consistency_weight
+
+            mix_factors_s = torch.tensor(np.random.beta(0.1, 0.1, size=(args.labeled_bs // 2, 1, 1, 1)), dtype=torch.float).cuda()
+            batch_ux_mixed_s = uimg_a_s * (1.0 - mix_factors_s) + uimg_b_s * mix_factors_s
+            input_volume_batch_s = torch.cat([labeled_volume_batch_s, batch_ux_mixed_s], dim=0)
+            outputs_s = model_1(input_volume_batch_s)
+            outputs_soft_s = torch.softmax(outputs_s, dim=1)
+            with torch.no_grad():
+                ema_output_ux0_s = torch.softmax(pre_a_s, dim=1)
+                ema_output_ux1_s = torch.softmax(pre_b_s, dim=1)
+                batch_pred_mixed_s = ema_output_ux0_s * (1.0 - mix_factors_s) + ema_output_ux1_s * mix_factors_s
+            loss_ce_mix_s = ce_loss(outputs_s[:args.labeled_bs], label_batch_strong[:args.labeled_bs].long())
+            loss_dice_mix_s = dice_loss(outputs_soft_s[:args.labeled_bs], label_batch_strong[:args.labeled_bs].unsqueeze(1))
+            supervised_loss_mix_s = 0.5 * (loss_dice_mix_s + loss_ce_mix_s)
+            consistency_loss_s = torch.mean((outputs_soft_s[args.labeled_bs:] - batch_pred_mixed_s) ** 2) * consistency_weight
+
+            image_patch_last_FFT = process_image_batches(net_input_1, net_input_2, 30)
+            image_output_1_FFT = model_1(image_patch_last_FFT.unsqueeze(1))
+            image_output_soft_1_FFT = torch.softmax(image_output_1_FFT, dim=1)
+            pseudo_image_output_1_FFT = torch.argmax(image_output_soft_1_FFT.detach(), dim=1, keepdim=False)
+            image_output_2_FFT = model_2(image_patch_last_FFT.unsqueeze(1))
+            image_output_soft_2_FFT = torch.softmax(image_output_2_FFT, dim=1)
+            pseudo_image_output_2_FFT = torch.argmax(image_output_soft_2_FFT.detach(), dim=1, keepdim=False)
+            pseudo_supervision5 = dice_loss(image_output_soft_1_FFT, pseudo_image_output_2_FFT.unsqueeze(1))
+            pseudo_supervision6 = dice_loss(image_output_soft_2_FFT, pseudo_image_output_1_FFT.unsqueeze(1))
+
+            loss_1 = (loss_dice_1 + loss_ce_1) / 2 + pseudo_supervision1 + pseudo_supervision5
+            loss_2 = (loss_dice_2 + loss_ce_2) / 2 + pseudo_supervision2 + pseudo_supervision6
+            innovation_x_loss = loss_1 * 0.0
+            innovation_x_endpoint = None
+            if args.enable_v21_3_innovation_x:
+                innovation_x_loss, innovation_x_endpoint = compute_v21_3_innovation_x(
+                    args.innovation_x_id, out_1, out_2, pre_a, pre_b,
+                    image_output_1_FFT, image_output_2_FFT, iter_num, args.max_iterations)
+            loss = loss_1 + loss_2 + consistency_loss + supervised_loss_mix + consistency_loss_s + supervised_loss_mix_s + args.v21_3_innovation_x_weight * innovation_x_loss
+

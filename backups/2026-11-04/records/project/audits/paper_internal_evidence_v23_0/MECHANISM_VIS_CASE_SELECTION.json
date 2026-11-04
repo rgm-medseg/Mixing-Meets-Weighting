@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-23T03:30:04.953853+00:00",
+  "selection_tsv": "final_report/paper_internal_evidence_v23_0/ACDC10_VAL_MECHANISM_VIS_CASE_SELECTION.tsv",
+  "case_count": 4,
+  "split": "VAL",
+  "test_access": 0,
+  "selection_rule": "val.list sorted ascending; first four volumes; slice=max_GT_foreground",
+  "cases": [
+    {
+      "CaseOrder": 1,
+      "CaseID": "patient002_frame01",
+      "Split": "VAL",
+      "VolumePath": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/data/patient002_frame01.h5",
+      "ImageShape": "10x224x224",
+      "SelectedSliceIndex0Based": 1,
+      "SelectedSliceForegroundPixels": 4391,
+      "SelectionRule": "val.list sorted ascending; first four volumes; slice=max_GT_foreground",
+      "TestAccess": 0
+    },
+    {
+      "CaseOrder": 2,
+      "CaseID": "patient002_frame02",
+      "Split": "VAL",
+      "VolumePath": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/data/patient002_frame02.h5",
+      "ImageShape": "10x224x224",
+      "SelectedSliceIndex0Based": 1,
+      "SelectedSliceForegroundPixels": 3318,
+      "SelectionRule": "val.list sorted ascending; first four volumes; slice=max_GT_foreground",
+      "TestAccess": 0
+    },
+    {
+      "CaseOrder": 3,
+      "CaseID": "patient019_frame01",
+      "Split": "VAL",
+      "VolumePath": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/data/patient019_frame01.h5",
+      "ImageShape": "11x224x224",
+      "SelectedSliceIndex0Based": 1,
+      "SelectedSliceForegroundPixels": 4467,
+      "SelectionRule": "val.list sorted ascending; first four volumes; slice=max_GT_foreground",
+      "TestAccess": 0
+    },
+    {
+      "CaseOrder": 4,
+      "CaseID": "patient019_frame02",
+      "Split": "VAL",
+      "VolumePath": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/data/patient019_frame02.h5",
+      "ImageShape": "11x224x224",
+      "SelectedSliceIndex0Based": 1,
+      "SelectedSliceForegroundPixels": 3576,
+      "SelectionRule": "val.list sorted ascending; first four volumes; slice=max_GT_foreground",
+      "TestAccess": 0
+    }
+  ]
+}

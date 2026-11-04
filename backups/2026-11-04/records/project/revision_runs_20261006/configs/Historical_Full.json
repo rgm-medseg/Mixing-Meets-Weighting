@@ -1,0 +1,11 @@
+{
+  "task": "Historical_Full",
+  "model_family": "beta_fft",
+  "trc": "token",
+  "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/best.ckpt",
+  "dataset_root": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC",
+  "prediction_dir": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/Historical_Full/evaluation/predictions",
+  "evaluation_dir": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/Historical_Full/evaluation",
+  "seed": 42,
+  "max_iterations": 30000
+}

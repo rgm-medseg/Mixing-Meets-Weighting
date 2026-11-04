@@ -1,0 +1,43 @@
+equivalence baseline patient028_frame01
+equivalence baseline patient028_frame02
+equivalence baseline patient085_frame01
+equivalence baseline patient085_frame02
+equivalence baseline patient082_frame01
+equivalence baseline patient082_frame02
+equivalence baseline patient087_frame01
+equivalence baseline patient087_frame02
+equivalence baseline patient019_frame01
+equivalence baseline patient019_frame02
+equivalence baseline patient030_frame01
+equivalence baseline patient030_frame02
+equivalence baseline patient078_frame01
+equivalence baseline patient078_frame02
+equivalence baseline patient045_frame01
+equivalence baseline patient045_frame02
+equivalence baseline patient002_frame01
+equivalence baseline patient002_frame02
+equivalence baseline patient039_frame01
+equivalence baseline patient039_frame02
+equivalence Full_main patient028_frame01
+equivalence Full_main patient028_frame02
+equivalence Full_main patient085_frame01
+equivalence Full_main patient085_frame02
+equivalence Full_main patient082_frame01
+equivalence Full_main patient082_frame02
+equivalence Full_main patient087_frame01
+equivalence Full_main patient087_frame02
+equivalence Full_main patient019_frame01
+equivalence Full_main patient019_frame02
+equivalence Full_main patient030_frame01
+equivalence Full_main patient030_frame02
+equivalence Full_main patient078_frame01
+equivalence Full_main patient078_frame02
+equivalence Full_main patient045_frame01
+Traceback (most recent call last):
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/scripts/measurement.py", line 134, in <module>
+    if sys.argv[1]=='equivalence':equivalence()
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/scripts/measurement.py", line 38, in equivalence
+    stopped();wait_gpu(own=True);image,gt=data[frame];orig=[];pred0=np.zeros(image.shape,np.uint8);pred1=pred0.copy();errs=[]
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/scripts/common.py", line 35, in stopped
+    if (W/'state/stop_requested').exists():raise InterruptedError('stop requested; completed units retained')
+InterruptedError: stop requested; completed units retained

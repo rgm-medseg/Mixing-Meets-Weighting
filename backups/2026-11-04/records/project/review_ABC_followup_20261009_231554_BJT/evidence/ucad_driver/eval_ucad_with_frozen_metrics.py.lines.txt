@@ -1,0 +1,30 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/scripts/eval_ucad_with_frozen_metrics.py
+ORIGINAL_SHA256: e5d23fb3716db381a5b64d8333932566c8ca538c01a2660a676bc0359c47dcf7
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 21-26 ---
+21: 
+22: 
+23: ROOT = Path("/home/renguanming/jupyterlab/rgm/beta-FFT-main")
+24: sys.path.insert(0, str(ROOT / "train_COVID19"))
+25: from covid19_volume_evaluator import SlicePrediction, patient_volume_macro  # noqa: E402
+26: 
+--- ORIGINAL LINES 113-131 ---
+113:     items: list[SlicePrediction] = []
+114:     with manifest.open(newline="", encoding="utf-8") as f:
+115:         for row in csv.DictReader(f, delimiter="\t"):
+116:             gt_npz = np.load(ROOT / row["derived_path"])
+117:             pred_npz = np.load(pred_dir / f"{row['sample_id']}.npz")
+118:             items.append(
+119:                 SlicePrediction(
+120:                     patient_id=row["patient_id"],
+121:                     slice_idx=int(row["slice_idx"]),
+122:                     pred=pred_npz["pred"].astype(bool),
+123:                     gt=gt_npz["mask"].astype(bool),
+124:                     spacing=tuple(float(x) for x in np.asarray(gt_npz["spacing"]).reshape(-1)),
+125:                 )
+126:             )
+127:     return patient_volume_macro(items)
+128: 
+129: 
+130: def synthetic_tests() -> dict[str, Any]:
+131:     acdc_perfect = acdc_safe_metrics(np.array([[1, 0], [0, 0]]), np.array([[1, 0], [0, 0]]))

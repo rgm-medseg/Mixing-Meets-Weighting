@@ -1,0 +1,13 @@
+{
+  "figure": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/analysis/A6/Historical_Full_smallest_gain_or_worsening_patient008_frame01_slice5",
+  "analysis": "A6",
+  "identity_tables": [
+    "confidence_proxy.csv",
+    "spatial_response.csv",
+    "selection_and_provenance.csv",
+    "../A4/paired_patient_differences.csv",
+    "../../case_metrics.csv"
+  ],
+  "run_case_checkpoint_scope": "See the applicable table in this analysis directory; multiple checkpoints are never treated as independent patients",
+  "time": "2026-10-06T21:27:05.518683+08:00"
+}

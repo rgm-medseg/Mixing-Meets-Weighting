@@ -1,0 +1,57 @@
+{
+  "status": "DRY_RUN_PASS_WAITING_UPSTREAM",
+  "created_at": "2026-08-24T17:18:04.441088+00:00",
+  "task_id": "REGENERATE_ALL_TABLES_FIGURES",
+  "mode": "dry-run",
+  "training_started": false,
+  "inference_started": false,
+  "test_started": false,
+  "formal_started": false,
+  "upstream": {
+    "requires": [
+      {
+        "TaskID": "BUILD_LABEL_EFFICIENCY",
+        "TaskType": "POST_FULL",
+        "Action": "POST_FULL_READY",
+        "FinalLaunchReady": "PASS",
+        "Blocker": "",
+        "CompletionAsset": "audits/internal_evidence_expansion_v24_0/BUILD_LABEL_EFFICIENCY.json",
+        "CompletionAssetExists": false,
+        "CompletionAssetPass": false,
+        "CompletionEvidence": null,
+        "Ready": false
+      },
+      {
+        "TaskID": "BUILD_SEED_STABILITY",
+        "TaskType": "POST_FULL",
+        "Action": "POST_FULL_READY",
+        "FinalLaunchReady": "PASS",
+        "Blocker": "",
+        "CompletionAsset": "audits/internal_evidence_expansion_v24_0/BUILD_SEED_STABILITY.json",
+        "CompletionAssetExists": false,
+        "CompletionAssetPass": false,
+        "CompletionEvidence": null,
+        "Ready": false
+      }
+    ],
+    "blocked": [
+      {
+        "TaskID": "BUILD_LABEL_EFFICIENCY",
+        "Reason": "WAITING_PASS_COMPLETION_ASSET:audits/internal_evidence_expansion_v24_0/BUILD_LABEL_EFFICIENCY.json"
+      },
+      {
+        "TaskID": "BUILD_SEED_STABILITY",
+        "Reason": "WAITING_PASS_COMPLETION_ASSET:audits/internal_evidence_expansion_v24_0/BUILD_SEED_STABILITY.json"
+      }
+    ],
+    "ready": false
+  },
+  "planned_outputs": [
+    "audits/internal_evidence_expansion_v24_0/REGENERATE_ALL_TABLES_FIGURES.json"
+  ],
+  "missing_planned_outputs": [
+    "audits/internal_evidence_expansion_v24_0/REGENERATE_ALL_TABLES_FIGURES.json"
+  ],
+  "will_generate_fake_results": false,
+  "hard_gate": "FinalLaunchReady means launch-permitted only; PASS requires real completion evidence for FormalFullComplete, BestValSelected, FrozenCheckpointSHA, TEST_COMPLETION_RECEIPT, and ResultAsset."
+}

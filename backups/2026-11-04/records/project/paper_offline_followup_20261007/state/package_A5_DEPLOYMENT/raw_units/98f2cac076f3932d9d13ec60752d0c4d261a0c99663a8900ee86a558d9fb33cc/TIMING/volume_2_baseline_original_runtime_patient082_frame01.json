@@ -1,0 +1,46 @@
+{
+  "identity": "98f2cac076f3932d9d13ec60752d0c4d261a0c99663a8900ee86a558d9fb33cc",
+  "method_id": "baseline",
+  "checkpoint_sha256": "825da2e9a944c930fa54cb9b7abc843345e4a7cde851d34c390739acaa0d5dbf",
+  "path": "original_runtime",
+  "round": 2,
+  "order_index": 6,
+  "frame": "patient082_frame01",
+  "patient": "patient082",
+  "slices": 16,
+  "seconds": 0.06563903391361237,
+  "ms_per_slice": 4.102439619600773,
+  "prediction_sha256": "6a58e98570cd7ad028202e75bce90262bcf92a81637dbac8d660deda7dcc6acf",
+  "valid": true,
+  "attempt": 0,
+  "warmup_on_load": 50,
+  "memory": {
+    "peak_allocated": 56820224,
+    "peak_reserved": 83886080
+  },
+  "resource_samples": [
+    {
+      "time": "2026-10-07T23:11:40.179694+08:00",
+      "index": 0,
+      "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+      "used_mib": 591,
+      "free_mib": 39735,
+      "utilization": 8,
+      "pids": [
+        36499
+      ]
+    },
+    {
+      "time": "2026-10-07T23:11:40.331098+08:00",
+      "index": 0,
+      "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+      "used_mib": 591,
+      "free_mib": 39735,
+      "utilization": 9,
+      "pids": [
+        36499
+      ]
+    }
+  ],
+  "scope": "preloaded CPU native image -> native mask; order0 in-plane resize/H2D/model/softmax argmax/D2H/order0 restore; no file IO/save/GT metrics; z unchanged"
+}

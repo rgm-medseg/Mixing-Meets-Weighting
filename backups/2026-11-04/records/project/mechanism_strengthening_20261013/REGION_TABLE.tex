@@ -1,0 +1,33 @@
+% One primary regional table. Fixed/dynamic values identical on all frozen batches.
+\begin{tabular}{lrrrrrrrr}
+\hline
+Region & Pixels & Mean $e$ & CTW $w$ & CTW $we$ & $G_U$ & $G_C$ & U share (\%) & C share (\%) \\
+\hline
+anatomy & 152965 & 0.03532 & 0.399 & 0.01764 & 0.8898 & 1.9850 & 46.60 & 56.02 \\
+seam & 194236 & 0.01101 & 0.269 & 0.00445 & 0.1525 & 0.2659 & 9.98 & 9.47 \\
+cutout & 683847 & 0.04260 & 0.261 & 0.01347 & 0.0765 & 0.1259 & 18.01 & 16.11 \\
+other valid & 5923617 & 0.00126 & 0.251 & 0.00040 & 0.0131 & 0.0174 & 25.28 & 18.32 \\
+invalid & 123223 & 0.00019 & 0.250 & 0.00005 & 0.0030 & 0.0030 & 0.13 & 0.07 \\
+pseudo correct & 3177833 & 0.00216 & 0.255 & 0.00084 & 0.0322 & 0.0586 & 32.46 & 32.17 \\
+pseudo error & 17357 & 0.09680 & 0.476 & 0.04234 & 1.8948 & 4.1654 & 11.08 & 12.82 \\
+\hline
+\end{tabular}
+% Pixel counts are pooled supports; means and shares are equal-patient aggregates.
+% First five rows partition full support; pseudo rows overlap that partition.
+% G_U / G_C are patient-mean L1 logit gradients of .05*mean(w*e), multiplied by1e9 for display; original mean-we is unscaled.
+
+% Panel B: TRC gamma0 -> normal error changes; diagnostic256-grid pixels.
+\begin{tabular}{lrrrrr}
+\hline
+Region & Pixels & Changed & Corrected & Introduced & Both wrong \\
+\hline
+RV & 197352 & 34 & 33 & 0 & 1 \\
+MYO & 199583 & 18 & 10 & 7 & 1 \\
+LV & 181805 & 4 & 0 & 3 & 1 \\
+anatomy & 361096 & 62 & 31 & 27 & 4 \\
+organ interior & 331262 & 12 & 12 & 0 & 0 \\
+background & 13070202 & 12 & 3 & 9 & 0 \\
+all & 13762560 & 86 & 46 & 36 & 4 \\
+\hline
+\end{tabular}
+% B counts are pooled; equal-patient rates and class one-vs-rest results remain in CSV.

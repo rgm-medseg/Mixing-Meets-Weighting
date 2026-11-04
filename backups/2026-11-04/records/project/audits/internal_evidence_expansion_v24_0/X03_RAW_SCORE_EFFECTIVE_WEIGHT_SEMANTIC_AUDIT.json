@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:17:43.263735+00:00",
+  "task_id": "X03_RAW_SCORE_EFFECTIVE_WEIGHT_SEMANTIC_AUDIT",
+  "training_started": false,
+  "inference_started": false,
+  "test_data_read": false,
+  "source": "train_ACDC/v21_3_acdc10_third_innovation_components.py",
+  "source_sha256": "f28abc48fedff330f9aa7470072ebc16a607c6c59fd14942c2adb111b8ce748a",
+  "frozen_candidate_id": "V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+  "RAW_SCORE_NAME": "contour",
+  "RAW_SCORE_HIGHER_MEANS": "higher normalized spatial gradient of branch confidence; stronger contour uncertainty / boundary fragility proxy",
+  "RAW_SCORE_RANGE": "[0.0, 1.0]",
+  "EFFECTIVE_WEIGHT_NAME": "boundary_weight",
+  "EFFECTIVE_WEIGHT_FORMULA": "boundary_weight = clamp(0.25 + contour, 0.25, 1.25)",
+  "EFFECTIVE_WEIGHT_HIGHER_MEANS": "larger consistency-loss weight on predicted boundary/fragile pixels, not higher reliability",
+  "LOSS_APPLICATION": "mean(abs(p1 - stopgrad(p2)) * boundary_weight)",
+  "RAW_SCORE_IS_NOT_EFFECTIVE_WEIGHT": true,
+  "RELIABILITY_NAMING_REQUIRES_DIRECTION_NOTE": true,
+  "SEMANTIC_DISTINCTION_PASS": true,
+  "semantic_evidence": {
+    "contour_formula_found": true,
+    "effective_weight_formula_found": true,
+    "weighted_loss_application_found": true
+  }
+}

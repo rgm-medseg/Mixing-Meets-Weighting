@@ -1,0 +1,50 @@
+{
+  "time": "2026-10-07T00:48:19.246896+08:00",
+  "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/runs/R1_full_v2B/checkpoints/last.ckpt",
+  "sha256": "a2e93fbdd0438bede8e22f02f4dbf4fe6f6288021193c45e9f2485d86931d7f4",
+  "global_step": 400,
+  "keys": [
+    "amp_state",
+    "args",
+    "best_metrics",
+    "controller_metadata",
+    "ema_model",
+    "epoch",
+    "global_step",
+    "lr_state",
+    "model_1",
+    "model_2",
+    "optimizer1",
+    "optimizer2",
+    "random_state",
+    "resume_exact",
+    "sampler_state"
+  ],
+  "controller_metadata": {
+    "version": "v2_B",
+    "foreground_ids": [
+      1,
+      2,
+      3
+    ],
+    "background_id": 0,
+    "empty_foreground_fallback": 0.0,
+    "min_side": 0.18,
+    "max_side": 0.38,
+    "stateless": true,
+    "cfg_sha256": "e9d6af11c56e8b1b8439fbbd6bb3d3d51681c79eaea43b4064bc78907dc35b66",
+    "controller_sha256": "f923e7f9bf0ef9bdae94bbd400d54f52fbbc6064efac9bcece365465657f795c",
+    "optimizer_success_calls": {
+      "optimizer1": 400,
+      "optimizer2": 400
+    },
+    "segment": "2026-10-07T004032930258+0800",
+    "AMP_enabled": false
+  },
+  "sampler_consumed": 4,
+  "sampler_saved_batches": 11,
+  "FP32_no_AMP": true,
+  "read_only": true,
+  "optimizer_calls_added": 0,
+  "worker_resume_exact": false
+}

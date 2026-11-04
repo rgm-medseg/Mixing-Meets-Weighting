@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/scripts/a2.py", line 194, in <module>
+    if __name__=='__main__':main()
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/scripts/a2.py", line 162, in main
+    wait_gpu(own=True);out=[]
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/scripts/common.py", line 42, in wait_gpu
+    stopped();g=gpu();others=[p for p in g['pids'] if not(own and p==os.getpid())]
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/scripts/common.py", line 34, in stopped
+    if (W/'state/stop_requested').exists():raise InterruptedError('stop requested; completed units retained')
+InterruptedError: stop requested; completed units retained

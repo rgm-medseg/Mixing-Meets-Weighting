@@ -1,0 +1,319 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T14:58:03.426170+00:00",
+  "settings": [
+    {
+      "SettingID": "ACDC5",
+      "Dataset": "ACDC",
+      "Ratio": "5%",
+      "UnitCount": 40,
+      "UnitIDs": [
+        "patient001_frame01",
+        "patient001_frame02",
+        "patient007_frame01",
+        "patient007_frame02",
+        "patient008_frame01",
+        "patient008_frame02",
+        "patient011_frame01",
+        "patient011_frame02",
+        "patient013_frame01",
+        "patient013_frame02",
+        "patient022_frame01",
+        "patient022_frame02",
+        "patient024_frame01",
+        "patient024_frame02",
+        "patient033_frame01",
+        "patient033_frame02",
+        "patient052_frame01",
+        "patient052_frame02",
+        "patient059_frame01",
+        "patient059_frame02",
+        "patient064_frame01",
+        "patient064_frame02",
+        "patient065_frame01",
+        "patient065_frame02",
+        "patient066_frame01",
+        "patient066_frame02",
+        "patient068_frame01",
+        "patient068_frame02",
+        "patient075_frame01",
+        "patient075_frame02",
+        "patient080_frame01",
+        "patient080_frame02",
+        "patient081_frame01",
+        "patient081_frame02",
+        "patient083_frame01",
+        "patient083_frame02",
+        "patient084_frame01",
+        "patient084_frame02",
+        "patient093_frame01",
+        "patient093_frame02"
+      ],
+      "BaselineSourceAsset": "formal_test/acdc_v19_4/ACDC_5P_BASELINE_CONFIRMATORY_TEST/case_class_metrics.tsv",
+      "BaselineSourceSHA256": "4960e0afc80869fb6211dee52bdf63be9b9dd6623b3b5f3fbc238610759243f8",
+      "BaselineReceipt": "formal_test/acdc_v19_4/ACDC_5P_BASELINE_CONFIRMATORY_TEST/FORMAL_TEST_RECEIPT.json",
+      "BaselineReceiptSHA256": "d3712d65eadbe9b978216fbc02e9ef160d36cd6cd6740f20ae04c2bb7eabc011",
+      "OursSourceAsset": "final_report/three_innovation_postfull_test_v22_1/raw_test/ACDC5_FINAL3/case_class_metrics.tsv",
+      "OursSourceSHA256": "a7008c52dff4bba616b59c0b61ef92916132c69aa20f064835829ca408934525",
+      "OursReceipt": "final_report/three_innovation_postfull_test_v22_1/raw_test/ACDC5_FINAL3/TEST_COMPLETION_RECEIPT.json",
+      "OursReceiptSHA256": "c9c2077bee834581d17257caa74054c99950d99f8086a2d8721b976655540454",
+      "BaselineMacroFromUnits": {
+        "dice": 0.8854931093772528,
+        "iou": 0.8007279410036044,
+        "hd95": 1.464528286576662,
+        "asd": 0.39901075666660246
+      },
+      "OursMacroFromUnits": {
+        "dice": 0.8876738495748693,
+        "iou": 0.8050873304905565,
+        "hd95": 2.2996755439113774,
+        "asd": 0.7381392779338374
+      },
+      "ReceiptMacroChecks": [
+        {
+          "Side": "Baseline",
+          "ReceiptMacroAvailable": true,
+          "MaxAbsDelta": 2.220446049250313e-16,
+          "Status": "PASS"
+        },
+        {
+          "Side": "Ours",
+          "ReceiptMacroAvailable": true,
+          "MaxAbsDelta": 4.440892098500626e-16,
+          "Status": "PASS"
+        }
+      ],
+      "Status": "PASS"
+    },
+    {
+      "SettingID": "ACDC10",
+      "Dataset": "ACDC",
+      "Ratio": "10%",
+      "UnitCount": 40,
+      "UnitIDs": [
+        "patient001_frame01",
+        "patient001_frame02",
+        "patient007_frame01",
+        "patient007_frame02",
+        "patient008_frame01",
+        "patient008_frame02",
+        "patient011_frame01",
+        "patient011_frame02",
+        "patient013_frame01",
+        "patient013_frame02",
+        "patient022_frame01",
+        "patient022_frame02",
+        "patient024_frame01",
+        "patient024_frame02",
+        "patient033_frame01",
+        "patient033_frame02",
+        "patient052_frame01",
+        "patient052_frame02",
+        "patient059_frame01",
+        "patient059_frame02",
+        "patient064_frame01",
+        "patient064_frame02",
+        "patient065_frame01",
+        "patient065_frame02",
+        "patient066_frame01",
+        "patient066_frame02",
+        "patient068_frame01",
+        "patient068_frame02",
+        "patient075_frame01",
+        "patient075_frame02",
+        "patient080_frame01",
+        "patient080_frame02",
+        "patient081_frame01",
+        "patient081_frame02",
+        "patient083_frame01",
+        "patient083_frame02",
+        "patient084_frame01",
+        "patient084_frame02",
+        "patient093_frame01",
+        "patient093_frame02"
+      ],
+      "BaselineSourceAsset": "final_report/paper_internal_evidence_v23_0/raw_test_replay/ACDC10_ARM_000/case_class_metrics.tsv",
+      "BaselineSourceSHA256": "abf1fb40805224d768e8787e2be35e49873fda4a1928ad728241db6db56d37c4",
+      "BaselineReceipt": "final_report/paper_internal_evidence_v23_0/raw_test_replay/ACDC10_ARM_000/TEST_REPLAY_RECEIPT.json",
+      "BaselineReceiptSHA256": "e269d65ea54da83c57070bd18c4515690437ea79765c6687866198f8a60a6a05",
+      "OursSourceAsset": "final_report/acdc10_top6_all_test_v21_5/raw_test/X03/case_class_metrics.tsv",
+      "OursSourceSHA256": "835900131a99a9d4c418c2cc60fd83ddc7e3eca2f096ca75d4bf2fe08ef8efae",
+      "OursReceipt": "final_report/acdc10_top6_all_test_v21_5/raw_test/X03/TEST_RECEIPT.json",
+      "OursReceiptSHA256": "73c1c4ee5b5033d8c24f0e151fc737605d01924f65ed728481057ad02664927c",
+      "BaselineMacroFromUnits": {
+        "dice": 0.8966063409597647,
+        "iou": 0.8182007425305879,
+        "hd95": 1.7618789072469767,
+        "asd": 0.5722597264440701
+      },
+      "OursMacroFromUnits": {
+        "dice": 0.9034965765204998,
+        "iou": 0.8293272953910554,
+        "hd95": 1.4233666940334322,
+        "asd": 0.4290264993301964
+      },
+      "ReceiptMacroChecks": [
+        {
+          "Side": "Baseline",
+          "ReceiptMacroAvailable": false,
+          "MaxAbsDelta": "",
+          "Status": "NO_JSON_MACRO"
+        },
+        {
+          "Side": "Ours",
+          "ReceiptMacroAvailable": true,
+          "MaxAbsDelta": 1.1102230246251565e-16,
+          "Status": "PASS"
+        }
+      ],
+      "Status": "PASS"
+    },
+    {
+      "SettingID": "PROMISE20",
+      "Dataset": "PROMISE12",
+      "Ratio": "20%",
+      "UnitCount": 10,
+      "UnitIDs": [
+        "Case40",
+        "Case41",
+        "Case42",
+        "Case43",
+        "Case44",
+        "Case45",
+        "Case46",
+        "Case47",
+        "Case48",
+        "Case49"
+      ],
+      "BaselineSourceAsset": "final_report/PROMISE20_TEST_CASE_METRICS.tsv",
+      "BaselineSourceSHA256": "7f2abdbe73ff33038ad154655e7cec12a2bfc9f2071a20f6aa1d215dcdb6d94f",
+      "BaselineReceipt": "final_report/PROMISE20_TEST_CASE_METRICS.tsv",
+      "BaselineReceiptSHA256": "7f2abdbe73ff33038ad154655e7cec12a2bfc9f2071a20f6aa1d215dcdb6d94f",
+      "OursSourceAsset": "final_report/three_innovation_postfull_test_v22_1/raw_test/PROMISE20_FINAL3/case_metrics.tsv",
+      "OursSourceSHA256": "033c2250de9e059757142002ba40aaf7d8f8a406c340070b76648f0102347008",
+      "OursReceipt": "final_report/three_innovation_postfull_test_v22_1/raw_test/PROMISE20_FINAL3/TEST_COMPLETION_RECEIPT.json",
+      "OursReceiptSHA256": "2c3c1e8e220d1fe8ef2026bcfb2dacc95a89ce9c0352c12fcceb63230a12182b",
+      "BaselineMacroFromUnits": {
+        "dice": 0.8110316082469234,
+        "iou": 0.6843582268075924,
+        "hd95": 3.669142478708649,
+        "asd": 1.5342924140259098
+      },
+      "OursMacroFromUnits": {
+        "dice": 0.8386401640018327,
+        "iou": 0.7237411265148253,
+        "hd95": 2.9863295043764113,
+        "asd": 1.4106984188286347
+      },
+      "ReceiptMacroChecks": [
+        {
+          "Side": "Baseline",
+          "ReceiptMacroAvailable": false,
+          "MaxAbsDelta": "",
+          "Status": "NO_JSON_MACRO"
+        },
+        {
+          "Side": "Ours",
+          "ReceiptMacroAvailable": true,
+          "MaxAbsDelta": 0.0,
+          "Status": "PASS"
+        }
+      ],
+      "Status": "PASS"
+    },
+    {
+      "SettingID": "COVID5",
+      "Dataset": "COVID-19",
+      "Ratio": "5%",
+      "UnitCount": 4,
+      "UnitIDs": [
+        "coronacases_002",
+        "coronacases_009",
+        "radiopaedia_27_86410_0",
+        "radiopaedia_40_86625_0"
+      ],
+      "BaselineSourceAsset": "formal_test/covid19_seed1337/COVID19_5P_BASELINE_CANON1337_R1_CONFIRMATORY_TEST_ONCE/FORMAL_TEST_RECEIPT.json",
+      "BaselineSourceSHA256": "3cca5e35ccd5d673e067ddd45592747d66e68665992f3db67770d0cd886f2a47",
+      "BaselineReceipt": "formal_test/covid19_seed1337/COVID19_5P_BASELINE_CANON1337_R1_CONFIRMATORY_TEST_ONCE/FORMAL_TEST_RECEIPT.json",
+      "BaselineReceiptSHA256": "3cca5e35ccd5d673e067ddd45592747d66e68665992f3db67770d0cd886f2a47",
+      "OursSourceAsset": "final_report/three_innovation_postfull_test_v22_1/raw_test/COVID5_FINAL3/patient_metrics.json",
+      "OursSourceSHA256": "8039915ef4153d3a6e9d9d87ddd36660aaffff9a1eae54ca4cef66891c88da4d",
+      "OursReceipt": "final_report/three_innovation_postfull_test_v22_1/raw_test/COVID5_FINAL3/TEST_COMPLETION_RECEIPT.json",
+      "OursReceiptSHA256": "2ee30f2e5b7703601e20946af3c164175d7b783c7bf339bff30864bf35fc5a5c",
+      "BaselineMacroFromUnits": {
+        "dice": 0.6367743321888475,
+        "iou": 0.478921765140088,
+        "hd95": 23.51210872051254,
+        "asd": 4.262073756032653
+      },
+      "OursMacroFromUnits": {
+        "dice": 0.6731436651428726,
+        "iou": 0.5144970547308458,
+        "hd95": 22.791388468075546,
+        "asd": 4.058622711161191
+      },
+      "ReceiptMacroChecks": [
+        {
+          "Side": "Baseline",
+          "ReceiptMacroAvailable": true,
+          "MaxAbsDelta": 8.881784197001252e-16,
+          "Status": "PASS"
+        },
+        {
+          "Side": "Ours",
+          "ReceiptMacroAvailable": true,
+          "MaxAbsDelta": 1.1102230246251565e-16,
+          "Status": "PASS"
+        }
+      ],
+      "Status": "PASS"
+    },
+    {
+      "SettingID": "COVID10",
+      "Dataset": "COVID-19",
+      "Ratio": "10%",
+      "UnitCount": 4,
+      "UnitIDs": [
+        "coronacases_002",
+        "coronacases_009",
+        "radiopaedia_27_86410_0",
+        "radiopaedia_40_86625_0"
+      ],
+      "BaselineSourceAsset": "formal_test/covid19_seed1337/COVID19_10P_BASELINE_CANON1337_R1_CONFIRMATORY_TEST_ONCE/FORMAL_TEST_RECEIPT.json",
+      "BaselineSourceSHA256": "3a5ef2db6e4192aa5fc4e698d82b00648bca20ef9784801af041e4ed82c417e5",
+      "BaselineReceipt": "formal_test/covid19_seed1337/COVID19_10P_BASELINE_CANON1337_R1_CONFIRMATORY_TEST_ONCE/FORMAL_TEST_RECEIPT.json",
+      "BaselineReceiptSHA256": "3a5ef2db6e4192aa5fc4e698d82b00648bca20ef9784801af041e4ed82c417e5",
+      "OursSourceAsset": "final_report/three_innovation_postfull_test_v22_1/raw_test/COVID10_FINAL3/patient_metrics.json",
+      "OursSourceSHA256": "a2dc91dce0981b7af7db2100bdb636e77ba9d3ce17a36fc37ea6e9aab6f59407",
+      "OursReceipt": "final_report/three_innovation_postfull_test_v22_1/raw_test/COVID10_FINAL3/TEST_COMPLETION_RECEIPT.json",
+      "OursReceiptSHA256": "5bbf4ad07ed23bb30d9e4e911bfd36eab8ccb622c55caef4c08d5be766b1f3d1",
+      "BaselineMacroFromUnits": {
+        "dice": 0.6550316795817169,
+        "iou": 0.49643596448627825,
+        "hd95": 13.891287168761057,
+        "asd": 3.179163544242115
+      },
+      "OursMacroFromUnits": {
+        "dice": 0.6794082017690448,
+        "iou": 0.5237523299362863,
+        "hd95": 11.877109828896513,
+        "asd": 3.0315494897283286
+      },
+      "ReceiptMacroChecks": [
+        {
+          "Side": "Baseline",
+          "ReceiptMacroAvailable": true,
+          "MaxAbsDelta": 1.7763568394002505e-15,
+          "Status": "PASS"
+        },
+        {
+          "Side": "Ours",
+          "ReceiptMacroAvailable": true,
+          "MaxAbsDelta": 1.7763568394002505e-15,
+          "Status": "PASS"
+        }
+      ],
+      "Status": "PASS"
+    }
+  ]
+}

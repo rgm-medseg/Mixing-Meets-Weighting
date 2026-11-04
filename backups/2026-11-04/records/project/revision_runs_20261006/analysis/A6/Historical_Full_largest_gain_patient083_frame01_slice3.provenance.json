@@ -1,0 +1,13 @@
+{
+  "figure": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/analysis/A6/Historical_Full_largest_gain_patient083_frame01_slice3",
+  "analysis": "A6",
+  "identity_tables": [
+    "confidence_proxy.csv",
+    "spatial_response.csv",
+    "selection_and_provenance.csv",
+    "../A4/paired_patient_differences.csv",
+    "../../case_metrics.csv"
+  ],
+  "run_case_checkpoint_scope": "See the applicable table in this analysis directory; multiple checkpoints are never treated as independent patients",
+  "time": "2026-10-06T21:27:06.606656+08:00"
+}

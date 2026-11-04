@@ -1,0 +1,38 @@
+{
+  "status": "BLOCKED",
+  "created_at": "2026-08-24T17:17:43.268613+00:00",
+  "task_id": "ACDC2_LABEL1_FROZEN_BETAFFT_EXECUTABILITY_AUDIT",
+  "training_started": false,
+  "inference_started": false,
+  "test_started": false,
+  "split_asset": "configs/internal_evidence_expansion_v24_0/ACDC2_SPLIT.json",
+  "split_sha256": "4aa29e06d3b5bbfcd81331252d3dd7bcd012afb09bf6a88372f659fcf43a124d",
+  "Labelnum": 1,
+  "LabeledCountPatients": 1,
+  "LabeledPatientIDs": [
+    "patient099"
+  ],
+  "LabeledFrameCount": 2,
+  "LabeledFrameIDs": [
+    "patient099_frame01",
+    "patient099_frame02"
+  ],
+  "LabeledSliceCount": 32,
+  "PretrainedLabel1Path": "train_ACDC/Pre_model/label1/unet_best_model.pth",
+  "PretrainedLabel1Exists": false,
+  "FrozenBetaFFTRequires": "at least two distinct labeled patients/cases for beta-FFT labeled a/b branch semantics",
+  "Evidence": {
+    "labeled_bs_default": 12,
+    "labeled_sub_bs_is_half_labeled_bs": true,
+    "dual_labeled_branch_code_present": true,
+    "two_stream_primary_batch_assert_present": true,
+    "primary_batch_formula_present": true
+  },
+  "ForbiddenWorkarounds": [
+    "do_not_duplicate_single_patient_as_two_cases",
+    "do_not_raise_labeled_count_without_new_protocol_decision",
+    "do_not_modify_beta_fft_or_algorithm"
+  ],
+  "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT": true,
+  "Blocker": "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT"
+}

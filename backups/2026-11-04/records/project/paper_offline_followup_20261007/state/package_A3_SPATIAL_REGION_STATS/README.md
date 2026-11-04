@@ -1,0 +1,1 @@
+Complete A3_region_statistics.csv, every method/checkpoint/strategy/width/patient/region, including NA and unfavorable cases. This archive complements A3_SPATIAL_CORE and is independently SHA verified. No rows are filtered.

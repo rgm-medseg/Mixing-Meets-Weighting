@@ -1,0 +1,287 @@
+--- /dev/null
++++ scripts/controller.py
+@@ -0,0 +1,77 @@
++"""Stateless TCSMix control. Pseudolabel supports must be provided by the caller.
++
++No GT, trainable parameters, temporal state, confidence threshold or added
++postprocessing. Old mode is the literal old generator.
++"""
++import numpy as np
++import torch
++from common import bootstrap
++bootstrap()
++import v14_mask_adamix_components as parent
++
++@torch.no_grad()
++def signals(logits_a, logits_b, labels_a, labels_b, foreground_ids, background_id=0):
++    for x,y in [(logits_a,labels_a),(logits_b,labels_b)]:
++        if x.ndim!=4 or y.shape!=(x.shape[0],*x.shape[2:]): raise ValueError('Logit/support shape mismatch')
++        if not torch.isfinite(x).all(): raise ValueError('Nonfinite teacher logits: fail before optimizer update')
++        if not torch.isfinite(y).all(): raise ValueError('Nonfinite pseudolabel support')
++        if y.min()<0 or y.max()>=x.shape[1]: raise ValueError('Support category outside model class axis')
++    if logits_a.shape[1:]!=logits_b.shape[1:]: raise ValueError('Mismatched class/grid dimensions')
++    C=logits_a.shape[1]; fg=tuple(int(c) for c in foreground_ids)
++    if len(set(fg))!=len(fg) or not fg or background_id in fg or any(c<0 or c>=C for c in fg):
++        raise ValueError('Invalid foreground class mapping')
++    pa=logits_a.detach().softmax(1); pb=logits_b.detach().softmax(1)
++    old=(.5*(pa.max(1).values.mean()+pb.max(1).values.mean())).clamp(0,1).item()
++    p=torch.cat([pa,pb]); labels=torch.cat([labels_a,labels_b]).long()
++    qcs=[]; mcs=[]; counts={}; q_by_class={}; margin_by_class={}
++    for c in fg:
++        support=labels==c; n=int(support.sum()); counts[str(c)]=n
++        if n:
++            qc=p[:,c][support].mean().item()
++            other=p[:,[k for k in range(C) if k!=c]].max(1).values
++            margin=(p[:,c]-other)[support].mean().item()
++            if margin < -1e-6: raise ValueError('Processed support is not an argmax category')
++            q_by_class[str(c)]=qc; margin_by_class[str(c)]=max(0.,margin)
++            qcs.append(qc); mcs.append(max(0.,margin))
++        else: q_by_class[str(c)]=None; margin_by_class[str(c)]=None
++    # Class means combine BOTH groups by pixels before taking equal class mean.
++    q_fg=float(np.mean(qcs)) if qcs else 0.
++    q_margin=float(np.mean(mcs)) if mcs else 0.
++    background=labels==background_id
++    bg_conf=p.max(1).values[background].mean().item() if background.any() else None
++    return dict(old_q=old,q_fg=q_fg,q_margin=q_margin,foreground_counts=counts,
++                q_by_class=q_by_class,margin_by_class=margin_by_class,active_classes=len(qcs),
++                foreground_pixels=sum(counts.values()),pixels=int(labels.numel()),background_confidence=bg_conf,
++                predicted_background_fraction=float(background.float().mean()),fallback=not bool(qcs))
++
++def geometry(q,h,w,min_side=.18,max_side=.38):
++    min_side=max(.05,min(.75,float(min_side))); max_side=max(min_side,min(.90,float(max_side)))
++    s=min_side+(max_side-min_side)*float(q)
++    ph=max(1,min(h-1,int(round(h*s)))); pw=max(1,min(w-1,int(round(w*s))))
++    return s,ph,pw
++
++@torch.no_grad()
++def generate_mask(img, logits_a, logits_b, labels_a, labels_b, cfg, min_side=.18,max_side=.38):
++    version=cfg.get('controller_version','old')
++    if version=='old': return parent.generate_adamix_bcp_lite_v1_mask(img,logits_a,logits_b,min_side,max_side)
++    st=signals(logits_a,logits_b,labels_a,labels_b,cfg['foreground_ids'],cfg['background_id'])
++    if version=='v2_A': q=st['q_fg']
++    elif version=='v2_B': q=st['q_margin']
++    elif version=='v2_fixed':
++        if cfg.get('fixed_side') is None: raise ValueError('R2 fixed side not locked from R1 full trace')
++        # Fixed geometry keeps the selected v2 signal definition for comparable logs.
++        q=st['q_margin'] if cfg.get('signal_version','v2_B')=='v2_B' else st['q_fg']
++    else: raise ValueError('Unknown controller version')
++    b,_,h,w=img.shape; s,ph,pw=geometry(q,h,w,min_side,max_side)
++    if version=='v2_fixed':
++        s=float(cfg['fixed_side']); ph=max(1,min(h-1,round(h*s))); pw=max(1,min(w-1,round(w*s)))
++    y=np.random.randint(0,max(1,h-ph)); x=np.random.randint(0,max(1,w-pw))
++    mask=torch.ones(h,w,device=img.device)
++    mask[y:y+ph,x:x+pw]=0
++    batch=mask.unsqueeze(0).expand(b,-1,-1).long(); loss=batch.clone()
++    patch=logits_a.argmax(1)[:,y:y+ph,x:x+pw]
++    hist=[float((patch==c).float().mean()) for c in range(logits_a.shape[1])]
++    st.update(teacher_conf=q,side_fraction=s,patch_area_ratio=ph*pw/(h*w),rectangle_h=ph,rectangle_w=pw,
++              rectangle_y=int(y),rectangle_x=int(x),controller_version=version,
++              class_histogram=hist,foreground_coverage=1-hist[cfg['background_id']],finite=True)
++    return batch,loss,st
+--- /dev/null
++++ scripts/control_runtime.py
+@@ -0,0 +1,73 @@
++"""Control logging, scope assertions and durable 500 optimizer-call guard."""
++import csv
++import json
++import os
++import time
++from pathlib import Path
++import torch
++from common import WORK,read_json,atomic_json,sha,now
++import revision_runtime as r
++from controller import generate_mask
++
++CFG={};LATEST={};STEP_START=0.;STOP_AT=None;CALLS_START=0;CONTROLLER_MS=0.
++
++def configure(cfg,stop_after=None):
++    global CFG,STOP_AT,CALLS_START
++    CFG=cfg;STOP_AT=stop_after
++    CALLS_START=read_json(WORK/'state/update_budget.json')['optimizer_step_calls']
++
++def generate_adamix_bcp_lite_v1_mask(img,la,lb,min_side=.18,max_side=.38,plab_a=None,plab_b=None):
++    global LATEST,CONTROLLER_MS
++    if plab_a is None or plab_b is None: raise RuntimeError('Reuse existing teacher LCC labels, do not regenerate')
++    start=time.perf_counter()
++    mm,ll,st=generate_mask(img,la,lb,plab_a,plab_b,CFG,min_side,max_side)
++    assert torch.equal(mm,ll) and torch.equal(mm[0].expand_as(mm),mm)
++    assert int((mm[0]==0).sum())==st['rectangle_h']*st['rectangle_w']
++    CONTROLLER_MS=(time.perf_counter()-start)*1000
++    LATEST=st
++    r.LATEST.update(q=st['teacher_conf'],s=st['side_fraction'],actual_area=st['patch_area_ratio'])
++    return mm,ll,st
++
++def guarded_optimizer(optimizer,name):
++    original=optimizer.step
++    def step(*args,**kwargs):
++        path=WORK/'state/update_budget.json'; budget=read_json(path)
++        if budget['optimizer_step_calls']>=budget['limit_optimizer_step_calls']:
++            raise RuntimeError('Hard cumulative limit500 optimizer.step calls reached; no formal handoff')
++        # Reserve BEFORE step, so failure never permits uncounted retries beyond the limit.
++        budget['optimizer_step_calls']+=1
++        budget['last_call']=dict(optimizer=name,pid=os.getpid(),time=now(),run=CFG['task'])
++        atomic_json(path,budget)
++        return original(*args,**kwargs)
++    optimizer.step=step
++    return optimizer
++
++def start_step(step):
++    global STEP_START
++    torch.cuda.synchronize();STEP_START=time.perf_counter()
++
++def record_step(run,step,optimizer,loss):
++    torch.cuda.synchronize();elapsed=time.perf_counter()-STEP_START
++    st=LATEST; row=dict(step=step,controller_version=CFG['controller_version'],old_q=st['old_q'],q_A=st['q_fg'],q_B=st['q_margin'],q=st['teacher_conf'],
++        s=st['side_fraction'],rectangle_h=st['rectangle_h'],rectangle_w=st['rectangle_w'],actual_area=st['patch_area_ratio'],
++        y=st['rectangle_y'],x=st['rectangle_x'],fallback=st['fallback'],active_classes=st['active_classes'],
++        predicted_background_fraction=st['predicted_background_fraction'],background_confidence=st['background_confidence'],
++        loss=float(loss.detach()),ctw_loss=r.LATEST.get('ctw_loss'),weighted_ctw_loss=r.LATEST.get('weighted_ctw_loss'),
++        lr=optimizer.param_groups[0]['lr'],step_seconds=elapsed,controller_ms=CONTROLLER_MS,
++        cumulative_active_seconds=r.PREVIOUS_SECONDS+time.monotonic()-r.START,peak_cuda_bytes=torch.cuda.max_memory_allocated(),
++        shared_mask_and_target_identical=True)
++    for c in CFG['foreground_ids']:row.update({f'n_{c}':st['foreground_counts'][str(c)],f'q_class{c}':st['q_by_class'][str(c)],f'margin_class{c}':st['margin_by_class'][str(c)]})
++    path=WORK/'short_trace.csv'
++    with path.open('a',newline='') as f:
++        wr=csv.DictWriter(f,fieldnames=list(row))
++        if f.tell()==0:wr.writeheader()
++        wr.writerow(row);f.flush();os.fsync(f.fileno())
++    budget=read_json(WORK/'state/update_budget.json');budget['joint_SSL_updates']=step
++    atomic_json(WORK/'state/update_budget.json',budget)
++    atomic_json(WORK/'state/short_progress.json',dict(pid=os.getpid(),time=now(),**row))
++    if STOP_AT is not None and step>=STOP_AT:r.STOP=True
++
++def checkpoint_metadata():
++    return dict(version=CFG['controller_version'],foreground_ids=CFG['foreground_ids'],background_id=CFG['background_id'],
++        empty_foreground_fallback=0.,min_side=.18,max_side=.38,stateless=True,
++        cfg_sha256=CFG['config_sha256'])
+--- /dev/null
++++ scripts/train_control_entry.py
+@@ -0,0 +1,64 @@
++"""Bounded short-run entry. Formal configs are always refused in this phase."""
++import argparse
++import difflib
++import fcntl
++import os
++import sys
++from pathlib import Path
++from common import *
++from legacy_train_builder import build_beta_source,replace
++
++def build_source(cfg):
++    s=build_beta_source(cfg)
++    s=replace(s,'from revision_runtime import BCP_net, generate_adamix_bcp_lite_v1_mask, compute_v21_3_innovation_x, mask_token_endpoint',
++        'from revision_runtime import BCP_net, compute_v21_3_innovation_x, mask_token_endpoint\nimport control_runtime as control\nfrom control_runtime import generate_adamix_bcp_lite_v1_mask')
++    s=replace(s,'                        img_a, pre_a, pre_b, args.adamix_min_side, args.adamix_max_side)',
++        '                        img_a, pre_a, pre_b, args.adamix_min_side, args.adamix_max_side, plab_a=plab_a, plab_b=plab_b)')
++    s=replace(s,'            volume_batch = sampled_batch["image"].cuda()',
++        '            control.start_step(iter_num + 1)\n            volume_batch = sampled_batch["image"].cuda()')
++    s=replace(s,'            revision.record_step(run_root, iter_num, optimizer1, loss)',
++        '            revision.record_step(run_root, iter_num, optimizer1, loss)\n            control.record_step(run_root, iter_num, optimizer1, loss)')
++    for name in ['optimizer1','optimizer2']:
++        idx='1' if name=='optimizer1' else '2'
++        anchor=f'    {name} = make_optimizer(model_{idx}, args.base_lr, args.mask_token_enabled)'
++        s=replace(s,anchor,anchor+f'\n    control.guarded_optimizer({name}, "{name}")')
++    s=replace(s,'        "resume_exact": False,','        "resume_exact": False,\n        "controller_metadata": control.checkpoint_metadata(),')
++    return s
++
++def main():
++    p=argparse.ArgumentParser();p.add_argument('--config',required=True);p.add_argument('--resume',action='store_true');p.add_argument('--stop-after',type=int)
++    a=p.parse_args();cfg=read_json(a.config)
++    if cfg.get('phase')!='short' or cfg.get('max_iterations',30000)>250:
++        raise SystemExit('WAITING_FOR_FULL_APPROVAL: this entry refuses formal training; no tmux or queue handoff')
++    if cfg['weight_mode']!='spatial' or cfg['trc']!='token':raise RuntimeError('Short check must use original Full spatial CTW/TRC')
++    if cfg['controller_version']!=read_json(WORK/'reports/controller_selection.json')['controller_version']:raise RuntimeError('Selected version mismatch')
++    lock=(WORK/'state/short_training.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
++    assert read_json(PROJECT/'revision_runs_20261006/state/queue.json')['status']=='INTERRUPTED'
++    assert (PROJECT/'revision_runs_20261006/state/stop_requested').exists()
++    cfg=dict(cfg,_resume=a.resume,config_sha256=sha(a.config));run=Path(cfg['run_root'])
++    if run.exists() and not a.resume:raise RuntimeError('Refusing to overwrite existing short run')
++    if a.resume:
++        cp=run/'checkpoints/last.ckpt'
++        import torch
++        ck=torch.load(cp,map_location='cpu',weights_only=False)
++        assert ck['controller_metadata']['cfg_sha256']==cfg['config_sha256'] and ck['controller_metadata']['stateless']
++        assert ck['global_step']<cfg['max_iterations']
++        del ck
++    run.mkdir(parents=True,exist_ok=True)
++    os.environ['CUDA_VISIBLE_DEVICES']='0';os.environ['WANDB_MODE']='disabled';bootstrap()
++    import revision_runtime as r
++    import control_runtime as c
++    r.configure(cfg);c.configure(cfg,a.stop_after)
++    source=build_source(cfg);(run/'v2_effective_source.py').write_text(source)
++    old=build_beta_source(cfg)
++    (WORK/'reports/control_loop.patch').write_text(''.join(difflib.unified_diff(old.splitlines(True),source.splitlines(True),fromfile='frozen_Full_with_durable_state.py',tofile='v2_Full_control_only.py')))
++    argv=[str(WORK/'source/historical_full.py'),'--root_path',cfg['dataset_root'],'--run_root',str(run),'--pretrained_model',str(Path(cfg['pretrained_model']).parent),
++        '--seed','42','--labelnum','7','--gpu','0','--max_iterations',str(cfg['max_iterations']),'--save_interval','200',
++        '--mask_token_enabled','true','--adamix_enabled','true','--innovation_x_id','V21_3_X03_CONTOUR_RELIABILITY_WEIGHT',
++        '--enable_v21_3_innovation_x','true','--v21_3_innovation_x_weight','0.05','--mechanism_log_interval','200']
++    if a.resume:argv+=['--resume_ckpt',str(run/'checkpoints/last.ckpt')]
++    atomic_json(WORK/f'reports/short_command_{"resume" if a.resume else "fresh"}.json',dict(time=now(),actual_wrapper_command=sys.argv,compiled_parser_argv=argv,cfg_sha256=cfg['config_sha256'],stop_after=a.stop_after))
++    sys.argv=argv
++    exec(compile(source,str(run/'v2_effective_source.py'),'exec'),{'__name__':'__main__','__file__':str(WORK/'source/historical_full.py'),'V21_3_EFFECTIVE_SOURCE':source})
++
++if __name__=='__main__':main()
+--- /dev/null
++++ scripts/run_short_check.py
+@@ -0,0 +1,29 @@
++"""One bounded short run, interrupted once to verify same-run recovery."""
++import os
++import subprocess
++from common import *
++
++def main():
++    # This phase permits one bounded run only. Refuse before touching status/logs.
++    if (WORK/'short_trace.csv').exists() or read_json(WORK/'state/update_budget.json').get('optimizer_step_calls',0):
++        raise SystemExit('Short run already executed; preserve its artifacts and WAITING_FOR_FULL_APPROVAL. No restart permitted.')
++    cfg=WORK/'configs/short_selected.yaml'
++    env=os.environ.copy();env.update(OMP_NUM_THREADS='1',MKL_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',CUDA_VISIBLE_DEVICES='0',PYTHONUNBUFFERED='1')
++    commands=[('fresh',[str(PYTHON),str(WORK/'scripts/train_control_entry.py'),'--config',str(cfg),'--stop-after','200'],75),
++              ('resume',[str(PYTHON),str(WORK/'scripts/train_control_entry.py'),'--config',str(cfg),'--resume'],0)]
++    atomic_json(WORK/'state/status.json',dict(status='SHORT_RUN_RUNNING',pid=os.getpid(),formal_training_authorized=False,time=now()))
++    receipts=[]
++    for name,cmd,expected in commands:
++        with (WORK/f'logs/short_{name}.log').open('x') as f:
++            res=subprocess.run(cmd,cwd=WORK,env=env,stdout=f,stderr=subprocess.STDOUT)
++        receipts.append(dict(segment=name,command=cmd,exit_code=res.returncode,expected_exit_code=expected,time=now()))
++        atomic_json(WORK/'reports/short_segments.json',receipts)
++        if res.returncode!=expected:
++            atomic_json(WORK/'state/status.json',dict(status='SHORT_FAILED',segment=name,exit_code=res.returncode,time=now(),formal_training_authorized=False))
++            raise SystemExit(res.returncode or 1)
++    budget=read_json(WORK/'state/update_budget.json');assert budget['optimizer_step_calls']==480 and budget['joint_SSL_updates']==240
++    atomic_json(WORK/'state/status.json',dict(status='SHORT_CHECK_FINISHED',time=now(),optimizer_step_calls=480,joint_SSL_updates=240,formal_training_authorized=False,
++        old_queue='INTERRUPTED',next='reports and five review rounds, then WAITING_FOR_FULL_APPROVAL; no training handoff'))
++    print('Short check finished: 240 joint updates / 480 optimizer calls. No formal training launched.')
++
++if __name__=='__main__':main()
+--- /dev/null
++++ scripts/lock_R2_from_R1.py
+@@ -0,0 +1,29 @@
++"""Future area-matched fixed config; training trajectory only, never test scores."""
++import argparse
++import math
++from common import *
++
++def main():
++    p=argparse.ArgumentParser();p.add_argument('--run',default=str(WORK/'runs/R1'));a=p.parse_args();run=Path(a.run)
++    receipt=read_json(run/'TRAIN_RECEIPT.json')
++    if receipt.get('task')!='R1' or receipt.get('status')!='TRAINED' or receipt.get('global_step')!=30000:raise RuntimeError('Require complete R1 run; offline/short estimate forbidden')
++    trace=run/'control_trace.csv';rows=read_table(trace)
++    latest={int(r['step']):r for r in rows};assert set(latest)==set(range(1,30001))
++    assert all(r['controller_version']=='v2_B' for r in latest.values()), 'R1 must use selected v2_B controller'
++    mean_area=sum(float(latest[i]['actual_area']) for i in range(1,30001))/30000
++    target_pixels=mean_area*256*256
++    # Original square aspect ratio. Pick nearest representable square area, not round(mean(s)).
++    best=min(range(1,256),key=lambda d:(abs(d*d-target_pixels),d))
++    cfg=read_json(WORK/'configs/R2_planned.yaml');cfg.update(fixed_side=best/256,run_root=str(WORK/'runs/R2'),phase='formal',
++        fixed_scale_source=str(trace),fixed_scale_source_sha256=sha(trace),fixed_scale_locked=True)
++    dst=WORK/'configs/R2_fixed_locked.yaml';assert not dst.exists();atomic_json(dst,cfg)
++    actual=best*best/(256*256)
++    atomic_json(WORK/'reports/R2_area_lock.json',dict(source_run=str(run),trace_sha256=sha(trace),source_receipt_sha256=sha(run/'TRAIN_RECEIPT.json'),
++        n_raw_records=len(rows),n_final_logical_steps=30000,duplicate_records=len(rows)-30000,
++        duplicate_policy='retain all raw rows; latest occurrence per logical step belongs to final resumed trajectory',
++        mean_actual_area=mean_area,fixed_h=best,fixed_w=best,fixed_area=actual,absolute_area_error=actual-mean_area,
++        relative_area_error=(actual-mean_area)/mean_area,area_percentage_point_error=100*(actual-mean_area),
++        config=str(dst),config_sha256=sha(dst),test_metrics_read=False,time=now()))
++    print('R2 locked from complete R1 trace; no training started')
++
++if __name__=='__main__':main()

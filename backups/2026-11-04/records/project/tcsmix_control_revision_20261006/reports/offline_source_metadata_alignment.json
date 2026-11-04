@@ -1,0 +1,14 @@
+{
+  "time": "2026-10-07T00:00:52.169445+08:00",
+  "executed_source": "reports/offline_diagnostics_executed.py",
+  "executed_sha256": "226fd1ef7e9d4faec8f2cde028157e43d0302cc796243fd287eaf740ee3eb8dd",
+  "prepared_source": "scripts/offline_diagnostics.py",
+  "prepared_sha256": "2d449cd36e36f2d28ef3e7489d4a1a980d283404124cccea0f7a06b07785f9a8",
+  "changes": [
+    "unique-pixel support counts in single response",
+    "explicit Full versus E1 inventory scope"
+  ],
+  "teacher_predictions_probabilities_geometry_quality_changed": false,
+  "new_model_forwards": 0,
+  "new_optimizer_calls": 0
+}

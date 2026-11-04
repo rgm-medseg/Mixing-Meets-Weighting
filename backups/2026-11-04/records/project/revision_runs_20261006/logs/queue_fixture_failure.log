@@ -1,0 +1,10 @@
+
+2026-10-06T20:57:21.547541+08:00 command=["/home/renguanming/.conda/envs/beta_fft/bin/python", "-c", "raise RuntimeError(\"intentional queue capture fixture\")"]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+RuntimeError: intentional queue capture fixture
+
+2026-10-06T21:26:47.594875+08:00 command=["/home/renguanming/.conda/envs/beta_fft/bin/python", "-c", "raise RuntimeError(\"intentional queue capture fixture\")"]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+RuntimeError: intentional queue capture fixture

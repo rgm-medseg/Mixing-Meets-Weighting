@@ -1,0 +1,438 @@
+task,path,class_name,own_params,detail
+E4,,networks.unet.UNet_2d,0,UNet_2d(
+E4,encoder,networks.unet.Encoder,0,Encoder(
+E4,encoder.in_conv,networks.unet.ConvBlock,0,ConvBlock(
+E4,encoder.in_conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E4,encoder.in_conv.conv_conv.0,torch.nn.modules.conv.Conv2d,160,"Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,encoder.in_conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,32,"BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,encoder.in_conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,encoder.in_conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.05, inplace=False)"
+E4,encoder.in_conv.conv_conv.4,torch.nn.modules.conv.Conv2d,2320,"Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,encoder.in_conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,32,"BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,encoder.in_conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,encoder.down1,networks.unet.DownBlock,0,DownBlock(
+E4,encoder.down1.maxpool_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E4,encoder.down1.maxpool_conv.0,torch.nn.modules.pooling.MaxPool2d,0,"MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)"
+E4,encoder.down1.maxpool_conv.1,networks.unet.ConvBlock,0,ConvBlock(
+E4,encoder.down1.maxpool_conv.1.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E4,encoder.down1.maxpool_conv.1.conv_conv.0,torch.nn.modules.conv.Conv2d,4640,"Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,encoder.down1.maxpool_conv.1.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,64,"BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,encoder.down1.maxpool_conv.1.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,encoder.down1.maxpool_conv.1.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.1, inplace=False)"
+E4,encoder.down1.maxpool_conv.1.conv_conv.4,torch.nn.modules.conv.Conv2d,9248,"Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,encoder.down1.maxpool_conv.1.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,64,"BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,encoder.down1.maxpool_conv.1.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,encoder.down2,networks.unet.DownBlock,0,DownBlock(
+E4,encoder.down2.maxpool_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E4,encoder.down2.maxpool_conv.0,torch.nn.modules.pooling.MaxPool2d,0,"MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)"
+E4,encoder.down2.maxpool_conv.1,networks.unet.ConvBlock,0,ConvBlock(
+E4,encoder.down2.maxpool_conv.1.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E4,encoder.down2.maxpool_conv.1.conv_conv.0,torch.nn.modules.conv.Conv2d,18496,"Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,encoder.down2.maxpool_conv.1.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,128,"BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,encoder.down2.maxpool_conv.1.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,encoder.down2.maxpool_conv.1.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.2, inplace=False)"
+E4,encoder.down2.maxpool_conv.1.conv_conv.4,torch.nn.modules.conv.Conv2d,36928,"Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,encoder.down2.maxpool_conv.1.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,128,"BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,encoder.down2.maxpool_conv.1.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,encoder.down3,networks.unet.DownBlock,0,DownBlock(
+E4,encoder.down3.maxpool_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E4,encoder.down3.maxpool_conv.0,torch.nn.modules.pooling.MaxPool2d,0,"MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)"
+E4,encoder.down3.maxpool_conv.1,networks.unet.ConvBlock,0,ConvBlock(
+E4,encoder.down3.maxpool_conv.1.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E4,encoder.down3.maxpool_conv.1.conv_conv.0,torch.nn.modules.conv.Conv2d,73856,"Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,encoder.down3.maxpool_conv.1.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,256,"BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,encoder.down3.maxpool_conv.1.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,encoder.down3.maxpool_conv.1.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.3, inplace=False)"
+E4,encoder.down3.maxpool_conv.1.conv_conv.4,torch.nn.modules.conv.Conv2d,147584,"Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,encoder.down3.maxpool_conv.1.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,256,"BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,encoder.down3.maxpool_conv.1.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,encoder.down4,networks.unet.DownBlock,0,DownBlock(
+E4,encoder.down4.maxpool_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E4,encoder.down4.maxpool_conv.0,torch.nn.modules.pooling.MaxPool2d,0,"MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)"
+E4,encoder.down4.maxpool_conv.1,networks.unet.ConvBlock,0,ConvBlock(
+E4,encoder.down4.maxpool_conv.1.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E4,encoder.down4.maxpool_conv.1.conv_conv.0,torch.nn.modules.conv.Conv2d,295168,"Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,encoder.down4.maxpool_conv.1.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,512,"BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,encoder.down4.maxpool_conv.1.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,encoder.down4.maxpool_conv.1.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.5, inplace=False)"
+E4,encoder.down4.maxpool_conv.1.conv_conv.4,torch.nn.modules.conv.Conv2d,590080,"Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,encoder.down4.maxpool_conv.1.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,512,"BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,encoder.down4.maxpool_conv.1.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,decoder,networks.unet.Decoder,0,Decoder(
+E4,decoder.up1,networks.unet.UpBlock,0,UpBlock(
+E4,decoder.up1.conv1x1,torch.nn.modules.conv.Conv2d,32896,"Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))"
+E4,decoder.up1.up,torch.nn.modules.upsampling.Upsample,0,"Upsample(scale_factor=2.0, mode='bilinear')"
+E4,decoder.up1.conv,networks.unet.ConvBlock,0,ConvBlock(
+E4,decoder.up1.conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E4,decoder.up1.conv.conv_conv.0,torch.nn.modules.conv.Conv2d,295040,"Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,decoder.up1.conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,256,"BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,decoder.up1.conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,decoder.up1.conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.0, inplace=False)"
+E4,decoder.up1.conv.conv_conv.4,torch.nn.modules.conv.Conv2d,147584,"Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,decoder.up1.conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,256,"BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,decoder.up1.conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,decoder.up2,networks.unet.UpBlock,0,UpBlock(
+E4,decoder.up2.conv1x1,torch.nn.modules.conv.Conv2d,8256,"Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))"
+E4,decoder.up2.up,torch.nn.modules.upsampling.Upsample,0,"Upsample(scale_factor=2.0, mode='bilinear')"
+E4,decoder.up2.conv,networks.unet.ConvBlock,0,ConvBlock(
+E4,decoder.up2.conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E4,decoder.up2.conv.conv_conv.0,torch.nn.modules.conv.Conv2d,73792,"Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,decoder.up2.conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,128,"BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,decoder.up2.conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,decoder.up2.conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.0, inplace=False)"
+E4,decoder.up2.conv.conv_conv.4,torch.nn.modules.conv.Conv2d,36928,"Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,decoder.up2.conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,128,"BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,decoder.up2.conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,decoder.up3,networks.unet.UpBlock,0,UpBlock(
+E4,decoder.up3.conv1x1,torch.nn.modules.conv.Conv2d,2080,"Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))"
+E4,decoder.up3.up,torch.nn.modules.upsampling.Upsample,0,"Upsample(scale_factor=2.0, mode='bilinear')"
+E4,decoder.up3.conv,networks.unet.ConvBlock,0,ConvBlock(
+E4,decoder.up3.conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E4,decoder.up3.conv.conv_conv.0,torch.nn.modules.conv.Conv2d,18464,"Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,decoder.up3.conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,64,"BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,decoder.up3.conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,decoder.up3.conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.0, inplace=False)"
+E4,decoder.up3.conv.conv_conv.4,torch.nn.modules.conv.Conv2d,9248,"Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,decoder.up3.conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,64,"BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,decoder.up3.conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,decoder.up4,networks.unet.UpBlock,0,UpBlock(
+E4,decoder.up4.conv1x1,torch.nn.modules.conv.Conv2d,528,"Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))"
+E4,decoder.up4.up,torch.nn.modules.upsampling.Upsample,0,"Upsample(scale_factor=2.0, mode='bilinear')"
+E4,decoder.up4.conv,networks.unet.ConvBlock,0,ConvBlock(
+E4,decoder.up4.conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E4,decoder.up4.conv.conv_conv.0,torch.nn.modules.conv.Conv2d,4624,"Conv2d(32, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,decoder.up4.conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,32,"BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,decoder.up4.conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,decoder.up4.conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.0, inplace=False)"
+E4,decoder.up4.conv.conv_conv.4,torch.nn.modules.conv.Conv2d,2320,"Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,decoder.up4.conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,32,"BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,decoder.up4.conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E4,decoder.out_conv,torch.nn.modules.conv.Conv2d,580,"Conv2d(16, 4, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E4,decoder.mask_token_router,revision_runtime.BottleneckResidual,1,BottleneckResidual(
+E4,decoder.mask_token_router.project,torch.nn.modules.conv.Conv2d,306,"Conv2d(16, 18, kernel_size=(1, 1), stride=(1, 1))"
+E4,decoder.mask_token_router.norm,torch.nn.modules.normalization.LayerNorm,36,"LayerNorm((18,), eps=1e-05, elementwise_affine=True)"
+E4,decoder.mask_token_router.activation,torch.nn.modules.activation.GELU,0,GELU(approximate='none')
+E4,decoder.mask_token_router.inverse_project,torch.nn.modules.conv.Conv2d,304,"Conv2d(18, 16, kernel_size=(1, 1), stride=(1, 1))"
+E4,projection_head,torch.nn.modules.container.Sequential,0,Sequential(
+E4,projection_head.0,torch.nn.modules.linear.Linear,544,"Linear(in_features=16, out_features=32, bias=True)"
+E4,projection_head.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,projection_head.2,torch.nn.modules.activation.ReLU,0,ReLU(inplace=True)
+E4,projection_head.3,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+E4,prediction_head,torch.nn.modules.container.Sequential,0,Sequential(
+E4,prediction_head.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+E4,prediction_head.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,prediction_head.2,torch.nn.modules.activation.ReLU,0,ReLU(inplace=True)
+E4,prediction_head.3,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+E4,contrastive_class_selector_0,torch.nn.modules.container.Sequential,0,Sequential(
+E4,contrastive_class_selector_0.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+E4,contrastive_class_selector_0.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,contrastive_class_selector_0.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+E4,contrastive_class_selector_0.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+E4,contrastive_class_selector_1,torch.nn.modules.container.Sequential,0,Sequential(
+E4,contrastive_class_selector_1.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+E4,contrastive_class_selector_1.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,contrastive_class_selector_1.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+E4,contrastive_class_selector_1.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+E4,contrastive_class_selector_2,torch.nn.modules.container.Sequential,0,Sequential(
+E4,contrastive_class_selector_2.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+E4,contrastive_class_selector_2.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,contrastive_class_selector_2.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+E4,contrastive_class_selector_2.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+E4,contrastive_class_selector_3,torch.nn.modules.container.Sequential,0,Sequential(
+E4,contrastive_class_selector_3.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+E4,contrastive_class_selector_3.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,contrastive_class_selector_3.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+E4,contrastive_class_selector_3.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+E4,contrastive_class_selector_memory0,torch.nn.modules.container.Sequential,0,Sequential(
+E4,contrastive_class_selector_memory0.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+E4,contrastive_class_selector_memory0.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,contrastive_class_selector_memory0.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+E4,contrastive_class_selector_memory0.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+E4,contrastive_class_selector_memory1,torch.nn.modules.container.Sequential,0,Sequential(
+E4,contrastive_class_selector_memory1.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+E4,contrastive_class_selector_memory1.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,contrastive_class_selector_memory1.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+E4,contrastive_class_selector_memory1.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+E4,contrastive_class_selector_memory2,torch.nn.modules.container.Sequential,0,Sequential(
+E4,contrastive_class_selector_memory2.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+E4,contrastive_class_selector_memory2.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,contrastive_class_selector_memory2.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+E4,contrastive_class_selector_memory2.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+E4,contrastive_class_selector_memory3,torch.nn.modules.container.Sequential,0,Sequential(
+E4,contrastive_class_selector_memory3.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+E4,contrastive_class_selector_memory3.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E4,contrastive_class_selector_memory3.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+E4,contrastive_class_selector_memory3.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+R1,,networks.unet.UNet_2d,0,UNet_2d(
+R1,encoder,networks.unet.Encoder,0,Encoder(
+R1,encoder.in_conv,networks.unet.ConvBlock,0,ConvBlock(
+R1,encoder.in_conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+R1,encoder.in_conv.conv_conv.0,torch.nn.modules.conv.Conv2d,160,"Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,encoder.in_conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,32,"BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,encoder.in_conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,encoder.in_conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.05, inplace=False)"
+R1,encoder.in_conv.conv_conv.4,torch.nn.modules.conv.Conv2d,2320,"Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,encoder.in_conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,32,"BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,encoder.in_conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,encoder.down1,networks.unet.DownBlock,0,DownBlock(
+R1,encoder.down1.maxpool_conv,torch.nn.modules.container.Sequential,0,Sequential(
+R1,encoder.down1.maxpool_conv.0,torch.nn.modules.pooling.MaxPool2d,0,"MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)"
+R1,encoder.down1.maxpool_conv.1,networks.unet.ConvBlock,0,ConvBlock(
+R1,encoder.down1.maxpool_conv.1.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+R1,encoder.down1.maxpool_conv.1.conv_conv.0,torch.nn.modules.conv.Conv2d,4640,"Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,encoder.down1.maxpool_conv.1.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,64,"BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,encoder.down1.maxpool_conv.1.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,encoder.down1.maxpool_conv.1.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.1, inplace=False)"
+R1,encoder.down1.maxpool_conv.1.conv_conv.4,torch.nn.modules.conv.Conv2d,9248,"Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,encoder.down1.maxpool_conv.1.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,64,"BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,encoder.down1.maxpool_conv.1.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,encoder.down2,networks.unet.DownBlock,0,DownBlock(
+R1,encoder.down2.maxpool_conv,torch.nn.modules.container.Sequential,0,Sequential(
+R1,encoder.down2.maxpool_conv.0,torch.nn.modules.pooling.MaxPool2d,0,"MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)"
+R1,encoder.down2.maxpool_conv.1,networks.unet.ConvBlock,0,ConvBlock(
+R1,encoder.down2.maxpool_conv.1.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+R1,encoder.down2.maxpool_conv.1.conv_conv.0,torch.nn.modules.conv.Conv2d,18496,"Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,encoder.down2.maxpool_conv.1.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,128,"BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,encoder.down2.maxpool_conv.1.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,encoder.down2.maxpool_conv.1.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.2, inplace=False)"
+R1,encoder.down2.maxpool_conv.1.conv_conv.4,torch.nn.modules.conv.Conv2d,36928,"Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,encoder.down2.maxpool_conv.1.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,128,"BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,encoder.down2.maxpool_conv.1.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,encoder.down3,networks.unet.DownBlock,0,DownBlock(
+R1,encoder.down3.maxpool_conv,torch.nn.modules.container.Sequential,0,Sequential(
+R1,encoder.down3.maxpool_conv.0,torch.nn.modules.pooling.MaxPool2d,0,"MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)"
+R1,encoder.down3.maxpool_conv.1,networks.unet.ConvBlock,0,ConvBlock(
+R1,encoder.down3.maxpool_conv.1.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+R1,encoder.down3.maxpool_conv.1.conv_conv.0,torch.nn.modules.conv.Conv2d,73856,"Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,encoder.down3.maxpool_conv.1.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,256,"BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,encoder.down3.maxpool_conv.1.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,encoder.down3.maxpool_conv.1.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.3, inplace=False)"
+R1,encoder.down3.maxpool_conv.1.conv_conv.4,torch.nn.modules.conv.Conv2d,147584,"Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,encoder.down3.maxpool_conv.1.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,256,"BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,encoder.down3.maxpool_conv.1.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,encoder.down4,networks.unet.DownBlock,0,DownBlock(
+R1,encoder.down4.maxpool_conv,torch.nn.modules.container.Sequential,0,Sequential(
+R1,encoder.down4.maxpool_conv.0,torch.nn.modules.pooling.MaxPool2d,0,"MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)"
+R1,encoder.down4.maxpool_conv.1,networks.unet.ConvBlock,0,ConvBlock(
+R1,encoder.down4.maxpool_conv.1.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+R1,encoder.down4.maxpool_conv.1.conv_conv.0,torch.nn.modules.conv.Conv2d,295168,"Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,encoder.down4.maxpool_conv.1.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,512,"BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,encoder.down4.maxpool_conv.1.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,encoder.down4.maxpool_conv.1.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.5, inplace=False)"
+R1,encoder.down4.maxpool_conv.1.conv_conv.4,torch.nn.modules.conv.Conv2d,590080,"Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,encoder.down4.maxpool_conv.1.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,512,"BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,encoder.down4.maxpool_conv.1.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,decoder,networks.unet.Decoder,0,Decoder(
+R1,decoder.up1,networks.unet.UpBlock,0,UpBlock(
+R1,decoder.up1.conv1x1,torch.nn.modules.conv.Conv2d,32896,"Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))"
+R1,decoder.up1.up,torch.nn.modules.upsampling.Upsample,0,"Upsample(scale_factor=2.0, mode='bilinear')"
+R1,decoder.up1.conv,networks.unet.ConvBlock,0,ConvBlock(
+R1,decoder.up1.conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+R1,decoder.up1.conv.conv_conv.0,torch.nn.modules.conv.Conv2d,295040,"Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,decoder.up1.conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,256,"BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,decoder.up1.conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,decoder.up1.conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.0, inplace=False)"
+R1,decoder.up1.conv.conv_conv.4,torch.nn.modules.conv.Conv2d,147584,"Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,decoder.up1.conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,256,"BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,decoder.up1.conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,decoder.up2,networks.unet.UpBlock,0,UpBlock(
+R1,decoder.up2.conv1x1,torch.nn.modules.conv.Conv2d,8256,"Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))"
+R1,decoder.up2.up,torch.nn.modules.upsampling.Upsample,0,"Upsample(scale_factor=2.0, mode='bilinear')"
+R1,decoder.up2.conv,networks.unet.ConvBlock,0,ConvBlock(
+R1,decoder.up2.conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+R1,decoder.up2.conv.conv_conv.0,torch.nn.modules.conv.Conv2d,73792,"Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,decoder.up2.conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,128,"BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,decoder.up2.conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,decoder.up2.conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.0, inplace=False)"
+R1,decoder.up2.conv.conv_conv.4,torch.nn.modules.conv.Conv2d,36928,"Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,decoder.up2.conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,128,"BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,decoder.up2.conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,decoder.up3,networks.unet.UpBlock,0,UpBlock(
+R1,decoder.up3.conv1x1,torch.nn.modules.conv.Conv2d,2080,"Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))"
+R1,decoder.up3.up,torch.nn.modules.upsampling.Upsample,0,"Upsample(scale_factor=2.0, mode='bilinear')"
+R1,decoder.up3.conv,networks.unet.ConvBlock,0,ConvBlock(
+R1,decoder.up3.conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+R1,decoder.up3.conv.conv_conv.0,torch.nn.modules.conv.Conv2d,18464,"Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,decoder.up3.conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,64,"BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,decoder.up3.conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,decoder.up3.conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.0, inplace=False)"
+R1,decoder.up3.conv.conv_conv.4,torch.nn.modules.conv.Conv2d,9248,"Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,decoder.up3.conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,64,"BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,decoder.up3.conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,decoder.up4,networks.unet.UpBlock,0,UpBlock(
+R1,decoder.up4.conv1x1,torch.nn.modules.conv.Conv2d,528,"Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))"
+R1,decoder.up4.up,torch.nn.modules.upsampling.Upsample,0,"Upsample(scale_factor=2.0, mode='bilinear')"
+R1,decoder.up4.conv,networks.unet.ConvBlock,0,ConvBlock(
+R1,decoder.up4.conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+R1,decoder.up4.conv.conv_conv.0,torch.nn.modules.conv.Conv2d,4624,"Conv2d(32, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,decoder.up4.conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,32,"BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,decoder.up4.conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,decoder.up4.conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.0, inplace=False)"
+R1,decoder.up4.conv.conv_conv.4,torch.nn.modules.conv.Conv2d,2320,"Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,decoder.up4.conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,32,"BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,decoder.up4.conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+R1,decoder.out_conv,torch.nn.modules.conv.Conv2d,580,"Conv2d(16, 4, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+R1,decoder.mask_token_router,v14_mask_adamix_components.SpatialMaskTokenRouter,65,SpatialMaskTokenRouter(
+R1,decoder.mask_token_router.project,torch.nn.modules.conv.Conv2d,272,"Conv2d(16, 16, kernel_size=(1, 1), stride=(1, 1))"
+R1,decoder.mask_token_router.norm,torch.nn.modules.normalization.LayerNorm,32,"LayerNorm((16,), eps=1e-05, elementwise_affine=True)"
+R1,decoder.mask_token_router.inverse_project,torch.nn.modules.conv.Conv2d,272,"Conv2d(16, 16, kernel_size=(1, 1), stride=(1, 1))"
+R1,projection_head,torch.nn.modules.container.Sequential,0,Sequential(
+R1,projection_head.0,torch.nn.modules.linear.Linear,544,"Linear(in_features=16, out_features=32, bias=True)"
+R1,projection_head.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,projection_head.2,torch.nn.modules.activation.ReLU,0,ReLU(inplace=True)
+R1,projection_head.3,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+R1,prediction_head,torch.nn.modules.container.Sequential,0,Sequential(
+R1,prediction_head.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+R1,prediction_head.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,prediction_head.2,torch.nn.modules.activation.ReLU,0,ReLU(inplace=True)
+R1,prediction_head.3,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+R1,contrastive_class_selector_0,torch.nn.modules.container.Sequential,0,Sequential(
+R1,contrastive_class_selector_0.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+R1,contrastive_class_selector_0.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,contrastive_class_selector_0.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+R1,contrastive_class_selector_0.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+R1,contrastive_class_selector_1,torch.nn.modules.container.Sequential,0,Sequential(
+R1,contrastive_class_selector_1.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+R1,contrastive_class_selector_1.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,contrastive_class_selector_1.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+R1,contrastive_class_selector_1.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+R1,contrastive_class_selector_2,torch.nn.modules.container.Sequential,0,Sequential(
+R1,contrastive_class_selector_2.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+R1,contrastive_class_selector_2.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,contrastive_class_selector_2.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+R1,contrastive_class_selector_2.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+R1,contrastive_class_selector_3,torch.nn.modules.container.Sequential,0,Sequential(
+R1,contrastive_class_selector_3.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+R1,contrastive_class_selector_3.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,contrastive_class_selector_3.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+R1,contrastive_class_selector_3.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+R1,contrastive_class_selector_memory0,torch.nn.modules.container.Sequential,0,Sequential(
+R1,contrastive_class_selector_memory0.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+R1,contrastive_class_selector_memory0.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,contrastive_class_selector_memory0.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+R1,contrastive_class_selector_memory0.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+R1,contrastive_class_selector_memory1,torch.nn.modules.container.Sequential,0,Sequential(
+R1,contrastive_class_selector_memory1.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+R1,contrastive_class_selector_memory1.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,contrastive_class_selector_memory1.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+R1,contrastive_class_selector_memory1.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+R1,contrastive_class_selector_memory2,torch.nn.modules.container.Sequential,0,Sequential(
+R1,contrastive_class_selector_memory2.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+R1,contrastive_class_selector_memory2.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,contrastive_class_selector_memory2.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+R1,contrastive_class_selector_memory2.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+R1,contrastive_class_selector_memory3,torch.nn.modules.container.Sequential,0,Sequential(
+R1,contrastive_class_selector_memory3.0,torch.nn.modules.linear.Linear,1056,"Linear(in_features=32, out_features=32, bias=True)"
+R1,contrastive_class_selector_memory3.1,torch.nn.modules.batchnorm.BatchNorm1d,64,"BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+R1,contrastive_class_selector_memory3.2,torch.nn.modules.activation.LeakyReLU,0,"LeakyReLU(negative_slope=0.2, inplace=True)"
+R1,contrastive_class_selector_memory3.3,torch.nn.modules.linear.Linear,33,"Linear(in_features=32, out_features=1, bias=True)"
+E5,,models.networks.UNet,0,UNet(
+E5,net,models.unet.UNetorg,0,UNetorg(
+E5,net.backbone,models.unet.Encoder,0,Encoder(
+E5,net.backbone.in_conv,models.unet.ConvBlock,0,ConvBlock(
+E5,net.backbone.in_conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E5,net.backbone.in_conv.conv_conv.0,torch.nn.modules.conv.Conv2d,160,"Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.backbone.in_conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,32,"BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.backbone.in_conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.backbone.in_conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.05, inplace=False)"
+E5,net.backbone.in_conv.conv_conv.4,torch.nn.modules.conv.Conv2d,2320,"Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.backbone.in_conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,32,"BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.backbone.in_conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.backbone.down1,models.unet.DownBlock,0,DownBlock(
+E5,net.backbone.down1.maxpool_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E5,net.backbone.down1.maxpool_conv.0,torch.nn.modules.pooling.MaxPool2d,0,"MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)"
+E5,net.backbone.down1.maxpool_conv.1,models.unet.ConvBlock,0,ConvBlock(
+E5,net.backbone.down1.maxpool_conv.1.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.0,torch.nn.modules.conv.Conv2d,4640,"Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,64,"BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.1, inplace=False)"
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.4,torch.nn.modules.conv.Conv2d,9248,"Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,64,"BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.backbone.down2,models.unet.DownBlock,0,DownBlock(
+E5,net.backbone.down2.maxpool_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E5,net.backbone.down2.maxpool_conv.0,torch.nn.modules.pooling.MaxPool2d,0,"MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)"
+E5,net.backbone.down2.maxpool_conv.1,models.unet.ConvBlock,0,ConvBlock(
+E5,net.backbone.down2.maxpool_conv.1.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.0,torch.nn.modules.conv.Conv2d,18496,"Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,128,"BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.2, inplace=False)"
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.4,torch.nn.modules.conv.Conv2d,36928,"Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,128,"BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.backbone.down3,models.unet.DownBlock,0,DownBlock(
+E5,net.backbone.down3.maxpool_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E5,net.backbone.down3.maxpool_conv.0,torch.nn.modules.pooling.MaxPool2d,0,"MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)"
+E5,net.backbone.down3.maxpool_conv.1,models.unet.ConvBlock,0,ConvBlock(
+E5,net.backbone.down3.maxpool_conv.1.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.0,torch.nn.modules.conv.Conv2d,73856,"Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,256,"BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.3, inplace=False)"
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.4,torch.nn.modules.conv.Conv2d,147584,"Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,256,"BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.backbone.down4,models.unet.DownBlock,0,DownBlock(
+E5,net.backbone.down4.maxpool_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E5,net.backbone.down4.maxpool_conv.0,torch.nn.modules.pooling.MaxPool2d,0,"MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)"
+E5,net.backbone.down4.maxpool_conv.1,models.unet.ConvBlock,0,ConvBlock(
+E5,net.backbone.down4.maxpool_conv.1.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.0,torch.nn.modules.conv.Conv2d,295168,"Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,512,"BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.5, inplace=False)"
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.4,torch.nn.modules.conv.Conv2d,590080,"Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,512,"BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.classifier,models.unet.Decoder,0,Decoder(
+E5,net.classifier.up1,models.unet.UpBlock,0,UpBlock(
+E5,net.classifier.up1.conv1x1,torch.nn.modules.conv.Conv2d,32896,"Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))"
+E5,net.classifier.up1.up,torch.nn.modules.upsampling.Upsample,0,"Upsample(scale_factor=2.0, mode='bilinear')"
+E5,net.classifier.up1.conv,models.unet.ConvBlock,0,ConvBlock(
+E5,net.classifier.up1.conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E5,net.classifier.up1.conv.conv_conv.0,torch.nn.modules.conv.Conv2d,295040,"Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.classifier.up1.conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,256,"BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.classifier.up1.conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.classifier.up1.conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.0, inplace=False)"
+E5,net.classifier.up1.conv.conv_conv.4,torch.nn.modules.conv.Conv2d,147584,"Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.classifier.up1.conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,256,"BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.classifier.up1.conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.classifier.up2,models.unet.UpBlock,0,UpBlock(
+E5,net.classifier.up2.conv1x1,torch.nn.modules.conv.Conv2d,8256,"Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))"
+E5,net.classifier.up2.up,torch.nn.modules.upsampling.Upsample,0,"Upsample(scale_factor=2.0, mode='bilinear')"
+E5,net.classifier.up2.conv,models.unet.ConvBlock,0,ConvBlock(
+E5,net.classifier.up2.conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E5,net.classifier.up2.conv.conv_conv.0,torch.nn.modules.conv.Conv2d,73792,"Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.classifier.up2.conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,128,"BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.classifier.up2.conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.classifier.up2.conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.0, inplace=False)"
+E5,net.classifier.up2.conv.conv_conv.4,torch.nn.modules.conv.Conv2d,36928,"Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.classifier.up2.conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,128,"BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.classifier.up2.conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.classifier.up3,models.unet.UpBlock,0,UpBlock(
+E5,net.classifier.up3.conv1x1,torch.nn.modules.conv.Conv2d,2080,"Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))"
+E5,net.classifier.up3.up,torch.nn.modules.upsampling.Upsample,0,"Upsample(scale_factor=2.0, mode='bilinear')"
+E5,net.classifier.up3.conv,models.unet.ConvBlock,0,ConvBlock(
+E5,net.classifier.up3.conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E5,net.classifier.up3.conv.conv_conv.0,torch.nn.modules.conv.Conv2d,18464,"Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.classifier.up3.conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,64,"BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.classifier.up3.conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.classifier.up3.conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.0, inplace=False)"
+E5,net.classifier.up3.conv.conv_conv.4,torch.nn.modules.conv.Conv2d,9248,"Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.classifier.up3.conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,64,"BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.classifier.up3.conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.classifier.up4,models.unet.UpBlock,0,UpBlock(
+E5,net.classifier.up4.conv1x1,torch.nn.modules.conv.Conv2d,528,"Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))"
+E5,net.classifier.up4.up,torch.nn.modules.upsampling.Upsample,0,"Upsample(scale_factor=2.0, mode='bilinear')"
+E5,net.classifier.up4.conv,models.unet.ConvBlock,0,ConvBlock(
+E5,net.classifier.up4.conv.conv_conv,torch.nn.modules.container.Sequential,0,Sequential(
+E5,net.classifier.up4.conv.conv_conv.0,torch.nn.modules.conv.Conv2d,4624,"Conv2d(32, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.classifier.up4.conv.conv_conv.1,torch.nn.modules.batchnorm.BatchNorm2d,32,"BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.classifier.up4.conv.conv_conv.2,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.classifier.up4.conv.conv_conv.3,torch.nn.modules.dropout.Dropout,0,"Dropout(p=0.0, inplace=False)"
+E5,net.classifier.up4.conv.conv_conv.4,torch.nn.modules.conv.Conv2d,2320,"Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"
+E5,net.classifier.up4.conv.conv_conv.5,torch.nn.modules.batchnorm.BatchNorm2d,32,"BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)"
+E5,net.classifier.up4.conv.conv_conv.6,torch.nn.modules.activation.LeakyReLU,0,LeakyReLU(negative_slope=0.01)
+E5,net.classifier.out_conv,torch.nn.modules.conv.Conv2d,580,"Conv2d(16, 4, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))"

@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T12:37:30.595207+08:00",
+  "task": "E4",
+  "code_identity": "116c77d5ab15de0fd4345a835382cbc0e8f34cf885b34467574861db0200580e",
+  "physical_joint_updates": 2,
+  "optimizer_success_calls": {
+    "optimizer1": 2,
+    "optimizer2": 2
+  },
+  "failed_attempts": 0,
+  "history": [
+    {
+      "stage": "update",
+      "target": 1,
+      "command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py",
+        "--short-target",
+        "1"
+      ],
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/runs/E4_isolated_short/logs/update_1_1791434184616817913.log",
+      "exit_code": 75,
+      "elapsed_seconds": 36.22531993687153
+    },
+    {
+      "stage": "update",
+      "target": 2,
+      "command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py",
+        "--short-target",
+        "2",
+        "--resume"
+      ],
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/runs/E4_isolated_short/logs/update_2_1791434223175652844.log",
+      "exit_code": 75,
+      "elapsed_seconds": 11.274288538843393
+    }
+  ],
+  "short_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/runs/E4_isolated_short",
+  "validation_all20_frames": true,
+  "independent_reload": true,
+  "real_resume": true,
+  "zero_update_probe": true,
+  "worker_resume_exact": false,
+  "formal_reuses_short_state": false,
+  "mean_step_seconds": 1.277014384046197
+}

@@ -1,0 +1,13 @@
+{
+  "status": "INTERRUPTED",
+  "task": "E5",
+  "global_step": 2,
+  "optimizer_success_calls": {
+    "optimizer1": 2,
+    "optimizer2": 2
+  },
+  "time": "2026-10-08T12:39:51.176348+08:00",
+  "segment_seconds": 1.2131034471094608,
+  "resume_exact": false,
+  "test_access_during_training": 0
+}

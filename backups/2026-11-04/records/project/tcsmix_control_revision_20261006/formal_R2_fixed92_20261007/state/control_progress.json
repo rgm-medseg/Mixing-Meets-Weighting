@@ -1,0 +1,18 @@
+{
+  "pid": 82001,
+  "time": "2026-10-07T18:24:50.936299+08:00",
+  "joint_step": 30000,
+  "segment": "2026-10-07T110601169385+0800",
+  "optimizer_calls": {
+    "optimizer1": 30000,
+    "optimizer2": 30000
+  },
+  "trace_write_seconds": 10.536830939352512,
+  "q": 0.9222899278004965,
+  "s": 0.359375,
+  "rectangle_h": 92,
+  "rectangle_w": 92,
+  "actual_area": 0.129150390625,
+  "step_seconds": 0.6840986460447311,
+  "peak_cuda_bytes": 16564344832
+}

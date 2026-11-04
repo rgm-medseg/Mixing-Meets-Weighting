@@ -1,0 +1,11 @@
+--- prior offline verifier
++++ corrected offline verifier
+@@ -48,7 +48,7 @@
+  figsave(fig,'A2_class_confidence','Best EMA teachers, raw argmax, each foreground class separately on GT-present validation slices with nonempty predicted support. Scatter exclusions are conditional plotting only: all GT-absent slices, false positives and missed predictions remain in raw quality/correctness tables. Class precision/recall are NA for GT-absent classes, with false-positive counts preserved.')
+ def verify_a2():
+  cfg=config();q=rows(W/'results/A2_sample_class_quality.csv');by={(r['sample'],r['prediction_kind'],r['class_id']):r for r in q if r['method_id']=='R1_v2_B' and r['checkpoint_tag']=='best' and r['mode']=='eval' and r['cohort']=='validation'}
+- uu=[read(p) for p in unitdir('A2').glob('R1_v2_B_best_eval_validation_*.json')];lookup={d['quality'][0]['sample']:d for u in uu for d in u['slices']};checks=[]
++ uu=[read(p) for p in unitdir('A2').glob('R1_v2_B_best_eval_validation_*.json')];uu=[u for u in uu if u['cohort']=='validation'];lookup={d['quality'][0]['sample']:d for u in uu for d in u['slices']};checks=[]
+  for pat in cfg['verification_patients']:
+   ss=[s for s in rows(W/'manifests/fixed_samples.csv') if s['patient']==pat and s['cohort']=='validation']
+   for s in ss:

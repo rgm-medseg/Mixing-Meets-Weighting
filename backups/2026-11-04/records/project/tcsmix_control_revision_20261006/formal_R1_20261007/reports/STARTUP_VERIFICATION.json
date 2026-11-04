@@ -1,0 +1,70 @@
+{
+  "time": "2026-10-07T00:48:19.545688+08:00",
+  "status": "RUNNING",
+  "stage": "TRAIN",
+  "host": "n1",
+  "gpu0": "NVIDIA A100-SXM4-40GB",
+  "tmux": "beta_fft_R1_v2B_20261007",
+  "pipeline_pid": 70652,
+  "train_pid": 70675,
+  "latest_heartbeat": "2026-10-07T00:48:14.697294+08:00",
+  "joint_step": 532,
+  "actual_trace_through": 539,
+  "optimizer1_calls": 539,
+  "optimizer2_calls": 539,
+  "budget_joint_iterations": 30000,
+  "observations": [
+    {
+      "time": "2026-10-07T00:41:40.049674+08:00",
+      "heartbeat": "2026-10-07T00:41:36.600487+08:00",
+      "joint_step": 75
+    },
+    {
+      "time": "2026-10-07T00:42:59.988541+08:00",
+      "heartbeat": "2026-10-07T00:42:57.259890+08:00",
+      "joint_step": 180
+    }
+  ],
+  "attach_detach_verified": true,
+  "duplicate_start_reused": true,
+  "accepted_controller_sha256": "f923e7f9bf0ef9bdae94bbd400d54f52fbbc6064efac9bcece365465657f795c",
+  "config": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/configs/R1_full_v2B.yaml",
+  "config_sha256": "e9d6af11c56e8b1b8439fbbd6bb3d3d51681c79eaea43b4064bc78907dc35b66",
+  "protocol_sha256": "97594183409307f5670adc6211d1cfc9e53d4d3cc3bb93842d940fc372320213",
+  "initializer": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth",
+  "initializer_sha256": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3",
+  "fresh_initial_step": 0,
+  "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/runs/R1_full_v2B/checkpoints/last.ckpt",
+  "checkpoint_step": 400,
+  "checkpoint_sha256": "a2e93fbdd0438bede8e22f02f4dbf4fe6f6288021193c45e9f2485d86931d7f4",
+  "expected_effective_source_equals_executed": true,
+  "formal_metrics": {
+    "dice": "NA",
+    "iou": "NA",
+    "hd95": "NA",
+    "asd": "NA"
+  },
+  "initial_recorded_sizes": [
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91
+  ],
+  "old_queue": "INTERRUPTED",
+  "old_E1_checkpoint_step": 3976,
+  "old_E2_E5": "PENDING",
+  "R2_started": false,
+  "current_ETA_remaining_hours": 7.1320718369041485,
+  "current_ETA_training_finish": "2026-10-07T07:56:10.155971+08:00",
+  "ETA_basis": "current active formal segment elapsed / progressed joint iterations, includes validation/loading",
+  "tmux_panes": "beta_fft_R1_v2B_20261007:pipeline|70649|0|/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007\nbeta_fft_R1_v2B_20261007:monitor|70653|0|/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007\nbeta_fft_R1_v2B_20261007:results|70656|0|/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007\nbeta_fft_revision_20261006:queue|28224|1|\nbeta_fft_revision_20261006:monitor|28234|0|/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006\nbeta_fft_revision_20261006:audits|44622|0|/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006\n",
+  "start_command": "bash /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/start_tmux.sh",
+  "training_command": [
+    "/bin/bash",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/train_R1.sh"
+  ],
+  "local_process_parent": "training PPID equals pipeline PID; pipeline parent is this tmux pane bash"
+}

@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-08-24T14:14:00.001769+00:00",
+  "tmux_session": "paper_internal_evidence_controller_v23_0",
+  "tmux_session_exists": true,
+  "controller_pid_alive": true,
+  "controller_processes": [
+    "48379 tmux new-session -d -s paper_internal_evidence_controller_v23_0 cd /home/renguanming/jupyterlab/rgm/beta-FFT-main && python controllers/paper_internal_evidence_controller_v23_0.py --mode run"
+  ],
+  "launcher_processes": [],
+  "trainer_processes": [],
+  "active_task_inferred": "",
+  "active_x03_weight_inferred": "",
+  "unexpected_test_process_count": 0,
+  "unexpected_test_processes": [],
+  "formal_started": false,
+  "test_access": 0
+}

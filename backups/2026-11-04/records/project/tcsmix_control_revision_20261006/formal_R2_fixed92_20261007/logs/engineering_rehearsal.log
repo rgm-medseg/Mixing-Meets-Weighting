@@ -1,0 +1,11 @@
+R2 report/handoff written; all actual or NA results retained.
+{
+  "status": "VERIFIED",
+  "time": "2026-10-07T11:01:39.077193+08:00",
+  "archive": "/tmp/R2_engineering_fixture_k5mh4zlr/TCSMix_R2_fixed92_start_evidence.tar.gz",
+  "sha256": "471ad98c87f58a3cdb75ba9c1faab551e684d6074bdf7cb49ab34ff120063692",
+  "bytes": 7712129,
+  "files_verified": 30,
+  "snapshot": "/tmp/R2_engineering_fixture_k5mh4zlr/archives/startup_snapshot_2026-10-07T110136718945+0800"
+}
+CPU metadata rehearsal PASS; no formal training/inference or fabricated result persisted.

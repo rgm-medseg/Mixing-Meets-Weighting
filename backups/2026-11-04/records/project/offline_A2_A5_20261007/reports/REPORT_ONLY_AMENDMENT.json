@@ -1,0 +1,8 @@
+{
+  "time": "2026-10-07T19:44:50.655600+08:00",
+  "reason": "verification cohort selector only; source/input/config/checkpoint and all GPU analysis scripts byte-identical; completed GPU units retained",
+  "analysis_identity": "9c039632d8918000110d4d8d541296761dd96f663068b817b651dd2940f1b740",
+  "previous_finish_sha256": "4e4e30266d6ffb31000bea6e610350cde0dbdba112c53509ce59d31c3009f57e",
+  "active_finish_sha256": "7a12f7c362ebbd3fcdba49cf7670f476fe797de67399fad1edddc7ae4ce3b66e",
+  "report_fingerprint": "1a37d2fc6dc1a75ac1b5221b4a358bb396ab09e2d23336326f08e06cbccc654e"
+}

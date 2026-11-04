@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:17:43.284258+00:00",
+  "task_id": "V24_HARD_GATE_REGISTRY_SEMANTIC_UPDATE",
+  "training_started": false,
+  "formal_started": false,
+  "changed_task_ids": [
+    "X03_RELIABILITY_FAITHFULNESS",
+    "BOUNDARY_F1",
+    "CORRUPTION_ROBUSTNESS",
+    "ACDC2_BETAFFT_FULL",
+    "ACDC2_OURS_FULL",
+    "ACDC2_TEST_CLOSURE",
+    "SEED_TEST_CLOSURE"
+  ],
+  "registry": "audits/internal_evidence_expansion_v24_0/V24_0_MASTER_TASK_REGISTRY_WORKING.tsv",
+  "registry_sha256": "0d3725c7931236742f6800fbc445ea43d47f074d7855136204b17ed6c90d92fc",
+  "hard_gate_script": "scripts/internal_evidence_expansion_v24_0/v24_hard_gate_semantic_audits.py",
+  "hard_gate_script_sha256": "e62078a0fc8914545dfeaf9b678c65c3a3dbcb5dc3035bcb3cfdedc565db86a8"
+}

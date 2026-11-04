@@ -1,0 +1,1166 @@
+[
+  {
+    "source": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025/checkpoints/best.ckpt",
+    "sha256": "18db038e6937975063f6b759884fc470212f2f7d013bf3763236821de6e4b5c9",
+    "size": 36737514,
+    "object": "objects/18db038e6937975063f6b759884fc470212f2f7d013bf3763236821de6e4b5c9.bin",
+    "experiment_ids": [
+      "ACDC10_BETAFFT_SEED2025"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-25T06:05:29.464757+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-seeds.tar.gz"
+  },
+  {
+    "source": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025/checkpoints/last.ckpt",
+    "sha256": "fc02e3ac4714f4fa1c30b681e62655f3e36d2d012dbf36c117f2ab9cae8afc1d",
+    "size": 36737578,
+    "object": "objects/fc02e3ac4714f4fa1c30b681e62655f3e36d2d012dbf36c117f2ab9cae8afc1d.bin",
+    "experiment_ids": [
+      "ACDC10_BETAFFT_SEED2025"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-25T06:53:59.133223+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-seeds.tar.gz"
+  },
+  {
+    "source": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026/checkpoints/best.ckpt",
+    "sha256": "aecbdeb0cb54a098058c7f8d8e67c832c048f2b835313b8a815a3222301bc30c",
+    "size": 36737514,
+    "object": "objects/aecbdeb0cb54a098058c7f8d8e67c832c048f2b835313b8a815a3222301bc30c.bin",
+    "experiment_ids": [
+      "ACDC10_BETAFFT_SEED2026"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-25T17:55:35.459240+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-seeds.tar.gz"
+  },
+  {
+    "source": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026/checkpoints/last.ckpt",
+    "sha256": "4ce1e9c3dfe9eeffcebf10e75c9ce65134e43ba22b6869750101ed1cfa3482ce",
+    "size": 36737578,
+    "object": "objects/4ce1e9c3dfe9eeffcebf10e75c9ce65134e43ba22b6869750101ed1cfa3482ce.bin",
+    "experiment_ids": [
+      "ACDC10_BETAFFT_SEED2026"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-25T19:30:02.445570+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-seeds.tar.gz"
+  },
+  {
+    "source": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025/checkpoints/best.ckpt",
+    "sha256": "ffa1912640172caa805d4235c6f552a91a649ffad7626357016a2816c84cbde7",
+    "size": 36761058,
+    "object": "objects/ffa1912640172caa805d4235c6f552a91a649ffad7626357016a2816c84cbde7.bin",
+    "experiment_ids": [
+      "ACDC10_OURS_SEED2025"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-25T13:20:31.781037+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-seeds.tar.gz"
+  },
+  {
+    "source": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025/checkpoints/last.ckpt",
+    "sha256": "f578ffefe228f6501e716a85125d30160b3aa51e8663f8b3fb2e2d312ba369dd",
+    "size": 36761058,
+    "object": "objects/f578ffefe228f6501e716a85125d30160b3aa51e8663f8b3fb2e2d312ba369dd.bin",
+    "experiment_ids": [
+      "ACDC10_OURS_SEED2025"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-25T14:00:39.709775+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-seeds.tar.gz"
+  },
+  {
+    "source": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026/checkpoints/best.ckpt",
+    "sha256": "d4b5789ee2693407ba57c02eae3acb3d1947f4bfa8263ac0d5622c038a7af7b2",
+    "size": 36761058,
+    "object": "objects/d4b5789ee2693407ba57c02eae3acb3d1947f4bfa8263ac0d5622c038a7af7b2.bin",
+    "experiment_ids": [
+      "ACDC10_OURS_SEED2026"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-26T02:06:49.108006+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-seeds.tar.gz"
+  },
+  {
+    "source": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026/checkpoints/last.ckpt",
+    "sha256": "cec1c8cfde710ce269d1859fa1886ec6f7750853e858b046bf7066fbdb748a24",
+    "size": 36761058,
+    "object": "objects/cec1c8cfde710ce269d1859fa1886ec6f7750853e858b046bf7066fbdb748a24.bin",
+    "experiment_ids": [
+      "ACDC10_OURS_SEED2026"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-26T02:35:19.060763+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-seeds.tar.gz"
+  },
+  {
+    "source": "experiments/paper_internal_evidence_v23_0/ACDC10_X03_WEIGHT_001/checkpoints/best.ckpt",
+    "sha256": "383ea1787a5cf77f685badae098949a93da59194aacccba92395824abf5fc685",
+    "size": 36761122,
+    "object": "objects/383ea1787a5cf77f685badae098949a93da59194aacccba92395824abf5fc685.bin",
+    "experiment_ids": [
+      "ACDC10_X03_WEIGHT_001"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-23T18:28:53.405087+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-coefficients.tar.gz"
+  },
+  {
+    "source": "experiments/paper_internal_evidence_v23_0/ACDC10_X03_WEIGHT_001/checkpoints/last.ckpt",
+    "sha256": "e9b5f21809bbc0391471064cd48d23f295f1ecf32d3f2a2f4557eaa908ff77d3",
+    "size": 36761122,
+    "object": "objects/e9b5f21809bbc0391471064cd48d23f295f1ecf32d3f2a2f4557eaa908ff77d3.bin",
+    "experiment_ids": [
+      "ACDC10_X03_WEIGHT_001"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-23T18:46:08.807966+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-coefficients.tar.gz"
+  },
+  {
+    "source": "experiments/paper_internal_evidence_v23_0/ACDC10_X03_WEIGHT_003/checkpoints/best.ckpt",
+    "sha256": "c79ab259f6254d40639af39e155d18a7cc662b9a4c54819895613025795f7f9a",
+    "size": 36761122,
+    "object": "objects/c79ab259f6254d40639af39e155d18a7cc662b9a4c54819895613025795f7f9a.bin",
+    "experiment_ids": [
+      "ACDC10_X03_WEIGHT_003"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-24T00:20:39.420291+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-coefficients.tar.gz"
+  },
+  {
+    "source": "experiments/paper_internal_evidence_v23_0/ACDC10_X03_WEIGHT_003/checkpoints/last.ckpt",
+    "sha256": "9447a484e165f5f972d8897a78963f273cf46d439321b9717eea992a7602201c",
+    "size": 36761122,
+    "object": "objects/9447a484e165f5f972d8897a78963f273cf46d439321b9717eea992a7602201c.bin",
+    "experiment_ids": [
+      "ACDC10_X03_WEIGHT_003"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-24T01:51:38.096669+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-coefficients.tar.gz"
+  },
+  {
+    "source": "experiments/paper_internal_evidence_v23_0/ACDC10_X03_WEIGHT_007/checkpoints/best.ckpt",
+    "sha256": "0b0db9b3130cca8d843620496a50a2d6bdf8b3c3572009e3be2e60c2e98fab5e",
+    "size": 36761122,
+    "object": "objects/0b0db9b3130cca8d843620496a50a2d6bdf8b3c3572009e3be2e60c2e98fab5e.bin",
+    "experiment_ids": [
+      "ACDC10_X03_WEIGHT_007"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-24T08:25:30.632355+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-coefficients.tar.gz"
+  },
+  {
+    "source": "experiments/paper_internal_evidence_v23_0/ACDC10_X03_WEIGHT_007/checkpoints/last.ckpt",
+    "sha256": "45bb9363bfe6b338d2187726e4a5ce891883766c6776c20b791d41d780cfa994",
+    "size": 36761122,
+    "object": "objects/45bb9363bfe6b338d2187726e4a5ce891883766c6776c20b791d41d780cfa994.bin",
+    "experiment_ids": [
+      "ACDC10_X03_WEIGHT_007"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-24T08:56:53.456482+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-coefficients.tar.gz"
+  },
+  {
+    "source": "experiments/paper_internal_evidence_v23_0/ACDC10_X03_WEIGHT_010/checkpoints/best.ckpt",
+    "sha256": "7885180a250c0fceff06a008d50046525d0a14b817b4182a82c28203c03ea3aa",
+    "size": 36761122,
+    "object": "objects/7885180a250c0fceff06a008d50046525d0a14b817b4182a82c28203c03ea3aa.bin",
+    "experiment_ids": [
+      "ACDC10_X03_WEIGHT_010"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-24T15:25:44.889096+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-coefficients.tar.gz"
+  },
+  {
+    "source": "experiments/paper_internal_evidence_v23_0/ACDC10_X03_WEIGHT_010/checkpoints/last.ckpt",
+    "sha256": "b0a7adf94475874b00be490273b86b76cb431d288e680a38e4a2302d37e470e2",
+    "size": 36761122,
+    "object": "objects/b0a7adf94475874b00be490273b86b76cb431d288e680a38e4a2302d37e470e2.bin",
+    "experiment_ids": [
+      "ACDC10_X03_WEIGHT_010"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-24T16:02:57.010221+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-coefficients.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_001/checkpoints/best.ckpt",
+    "sha256": "8bfa388a3a39f761d4f29db17e477338f514b3cb3f88f60a2a7394757b273900",
+    "size": 36737130,
+    "object": "objects/8bfa388a3a39f761d4f29db17e477338f514b3cb3f88f60a2a7394757b273900.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_001"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-20T17:24:49.845112+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_001/checkpoints/last.ckpt",
+    "sha256": "58d3a9d641f584b97339b6f7f018f733f1135a6c3f23a0dbeaf542f317abe5bb",
+    "size": 36737194,
+    "object": "objects/58d3a9d641f584b97339b6f7f018f733f1135a6c3f23a0dbeaf542f317abe5bb.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_001"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-20T18:21:33.242451+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_010/checkpoints/best.ckpt",
+    "sha256": "430ed73702d5fa76781de6a878739f863023546e338758ce11ebd05045d93c62",
+    "size": 36737130,
+    "object": "objects/430ed73702d5fa76781de6a878739f863023546e338758ce11ebd05045d93c62.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_010"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-20T10:51:52.060626+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_010/checkpoints/last.ckpt",
+    "sha256": "9f7024a6cca7b8cff071fd375072c4e6cfa953e0c819de61982c5392120aaa3a",
+    "size": 36737194,
+    "object": "objects/9f7024a6cca7b8cff071fd375072c4e6cfa953e0c819de61982c5392120aaa3a.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_010"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-20T12:23:41.399547+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_011/checkpoints/best.ckpt",
+    "sha256": "426ea8f9a41930434d11e2877d8ed07239040f53d401fb27e2941fc27ce7bf45",
+    "size": 36737194,
+    "object": "objects/426ea8f9a41930434d11e2877d8ed07239040f53d401fb27e2941fc27ce7bf45.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_011"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T06:37:38.726291+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_011/checkpoints/last.ckpt",
+    "sha256": "d0cc76c625a4c01f0168a16bb4f2d05a69da7e4090a72cd1a366aac0898a23cd",
+    "size": 36737194,
+    "object": "objects/d0cc76c625a4c01f0168a16bb4f2d05a69da7e4090a72cd1a366aac0898a23cd.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_011"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T07:17:50.727384+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100/checkpoints/best.ckpt",
+    "sha256": "ef3a08f1623c34af8c2e6910aba78f9a269b9ba017f2a1cc7aa3f97a61abda2e",
+    "size": 36761122,
+    "object": "objects/ef3a08f1623c34af8c2e6910aba78f9a269b9ba017f2a1cc7aa3f97a61abda2e.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_100_aborted_candidate"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-19T23:23:08.221282+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100/checkpoints/last.ckpt",
+    "sha256": "38f7db4a74847dcceb54186b8882593a22277c57fc8913743c912de74b3b614d",
+    "size": 36761122,
+    "object": "objects/38f7db4a74847dcceb54186b8882593a22277c57fc8913743c912de74b3b614d.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_100_aborted_candidate"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-19T23:22:56.755992+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100_fresh_restart_after_prelaunch_hardening/checkpoints/best.ckpt",
+    "sha256": "a7ba7b80bed8327a4b8c6c07717690148c2120fd78292be4577e459f81ebc867",
+    "size": 36761186,
+    "object": "objects/a7ba7b80bed8327a4b8c6c07717690148c2120fd78292be4577e459f81ebc867.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_100"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-20T05:57:58.994662+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100_fresh_restart_after_prelaunch_hardening/checkpoints/last.ckpt",
+    "sha256": "c047127c93e85b9ecbe2159a5ab9d326d56c4fc2858a15d827ef1bdb169eacf5",
+    "size": 36761186,
+    "object": "objects/c047127c93e85b9ecbe2159a5ab9d326d56c4fc2858a15d827ef1bdb169eacf5.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_100"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-20T06:31:37.591918+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_101/checkpoints/best.ckpt",
+    "sha256": "87d7479788cc7399fcc12012ceae6a1bf565fdcb69e5e3a344d9c1c0a440cf9b",
+    "size": 36761122,
+    "object": "objects/87d7479788cc7399fcc12012ceae6a1bf565fdcb69e5e3a344d9c1c0a440cf9b.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_101"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T00:49:36.130523+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_101/checkpoints/last.ckpt",
+    "sha256": "c84c64dc0ef6c5b8ca0bc3b8980144c455b611f8b4926a7674e39f4f1c3edfb7",
+    "size": 36761186,
+    "object": "objects/c84c64dc0ef6c5b8ca0bc3b8980144c455b611f8b4926a7674e39f4f1c3edfb7.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_101"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T01:23:39.468228+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC5_FINAL3/checkpoints/best.ckpt",
+    "sha256": "c4df306669f808ad46bed98b666c8e039fe61a5a92d9634255db396892e0bdf3",
+    "size": 36761122,
+    "object": "objects/c4df306669f808ad46bed98b666c8e039fe61a5a92d9634255db396892e0bdf3.bin",
+    "experiment_ids": [
+      "acdc5"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T14:24:15.358197+08:00",
+    "stable_copy": true,
+    "asset": "P0-acdc5.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC5_FINAL3/checkpoints/last.ckpt",
+    "sha256": "73a56425c5d9acbf69c941a7011ef80a18357968145e2c4dc7fe40630da204ab",
+    "size": 36761058,
+    "object": "objects/73a56425c5d9acbf69c941a7011ef80a18357968145e2c4dc7fe40630da204ab.bin",
+    "experiment_ids": [
+      "acdc5"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T14:48:28.430257+08:00",
+    "stable_copy": true,
+    "asset": "P0-acdc5.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/pre_train/unet_best_model.pth",
+    "sha256": "5d2590953fbe8a4a1a5ac2a6d31ec9176443b7f59e4b6b274a9cd6ac800200f7",
+    "size": 14601886,
+    "object": "objects/5d2590953fbe8a4a1a5ac2a6d31ec9176443b7f59e4b6b274a9cd6ac800200f7.bin",
+    "experiment_ids": [
+      "covid10"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-22T00:56:32.620899+08:00",
+    "stable_copy": true,
+    "asset": "P0-covid10.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/self_train/model1_iter_30000_final.pth",
+    "sha256": "b25c0468e14ce7779360ebbb5653eb3b4bb70e54314916d76403e0920d44eaa7",
+    "size": 7323922,
+    "object": "objects/b25c0468e14ce7779360ebbb5653eb3b4bb70e54314916d76403e0920d44eaa7.bin",
+    "experiment_ids": [
+      "covid10"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-22T05:05:21.220463+08:00",
+    "stable_copy": true,
+    "asset": "P0-covid10.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/self_train/self_train_full_state_final.pth",
+    "sha256": "60c681082133456f1ee85abea52b17439d2a2ae45f528aedb74afbe61b5946cb",
+    "size": 36568726,
+    "object": "objects/60c681082133456f1ee85abea52b17439d2a2ae45f528aedb74afbe61b5946cb.bin",
+    "experiment_ids": [
+      "covid10"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-22T05:05:21.349215+08:00",
+    "stable_copy": true,
+    "asset": "P0-covid10.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/self_train/self_train_full_state_iter_30000.pth",
+    "sha256": "b0dbb0eb4d540378e0d2d7025f7d5c867f2c7c50e673ce016df2613c5e9b3b43",
+    "size": 36571816,
+    "object": "objects/b0dbb0eb4d540378e0d2d7025f7d5c867f2c7c50e673ce016df2613c5e9b3b43.bin",
+    "experiment_ids": [
+      "covid10"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-22T05:05:07.368759+08:00",
+    "stable_copy": true,
+    "asset": "P0-covid10.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/self_train/self_train_full_state_latest.pth",
+    "sha256": "3beb521ecf71456321349e7580ec52e663224832b5fcf5c31fe045c0e8c743da",
+    "size": 36569344,
+    "object": "objects/3beb521ecf71456321349e7580ec52e663224832b5fcf5c31fe045c0e8c743da.bin",
+    "experiment_ids": [
+      "covid10"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-22T05:05:07.775383+08:00",
+    "stable_copy": true,
+    "asset": "P0-covid10.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/self_train/unet_best_model.pth",
+    "sha256": "8c89fe9238c187e4e387b5cc40b253e11e16b451e2788d6d395f2841274b019a",
+    "size": 7322674,
+    "object": "objects/8c89fe9238c187e4e387b5cc40b253e11e16b451e2788d6d395f2841274b019a.bin",
+    "experiment_ids": [
+      "covid10"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-22T02:16:57.084602+08:00",
+    "stable_copy": true,
+    "asset": "P0-covid10.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/self_train/unet_final_model.pth",
+    "sha256": "7add9aea56da90cb626372bc23d16cb50cc0f9b7021adb8186a5be1ba228bfa9",
+    "size": 7322822,
+    "object": "objects/7add9aea56da90cb626372bc23d16cb50cc0f9b7021adb8186a5be1ba228bfa9.bin",
+    "experiment_ids": [
+      "covid10"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-22T05:05:21.244774+08:00",
+    "stable_copy": true,
+    "asset": "P0-covid10.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/pre_train/unet_best_model.pth",
+    "sha256": "12026becdce40e349d48d05de964fd8d0dc692716c3c65c5ecc1ad28f2f08504",
+    "size": 14601886,
+    "object": "objects/12026becdce40e349d48d05de964fd8d0dc692716c3c65c5ecc1ad28f2f08504.bin",
+    "experiment_ids": [
+      "covid5"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T20:27:13.102283+08:00",
+    "stable_copy": true,
+    "asset": "P0-covid5.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/self_train/model1_iter_30000_final.pth",
+    "sha256": "656a023b0c842630f0626b1a7bda979cd535b5d5cdae0fcb94565d0c5c646e16",
+    "size": 7323922,
+    "object": "objects/656a023b0c842630f0626b1a7bda979cd535b5d5cdae0fcb94565d0c5c646e16.bin",
+    "experiment_ids": [
+      "covid5"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-22T00:42:25.071919+08:00",
+    "stable_copy": true,
+    "asset": "P0-covid5.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/self_train/self_train_full_state_final.pth",
+    "sha256": "de3742c1e66749a3135abbb9423d3a7ea3da931abafb39a5713fafc95961cb94",
+    "size": 36568726,
+    "object": "objects/de3742c1e66749a3135abbb9423d3a7ea3da931abafb39a5713fafc95961cb94.bin",
+    "experiment_ids": [
+      "covid5"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-22T00:42:25.428363+08:00",
+    "stable_copy": true,
+    "asset": "P0-covid5.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/self_train/self_train_full_state_iter_30000.pth",
+    "sha256": "08178819c8754eca225e2345503649490651ec27216dfacf80b67d7b37ed3cf3",
+    "size": 36571816,
+    "object": "objects/08178819c8754eca225e2345503649490651ec27216dfacf80b67d7b37ed3cf3.bin",
+    "experiment_ids": [
+      "covid5"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-22T00:42:14.128916+08:00",
+    "stable_copy": true,
+    "asset": "P0-covid5.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/self_train/self_train_full_state_latest.pth",
+    "sha256": "a21b5091bdacda6a613a72ab7084bafc6d04e49211f103c7646d603687729b0c",
+    "size": 36569344,
+    "object": "objects/a21b5091bdacda6a613a72ab7084bafc6d04e49211f103c7646d603687729b0c.bin",
+    "experiment_ids": [
+      "covid5"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-22T00:42:14.415382+08:00",
+    "stable_copy": true,
+    "asset": "P0-covid5.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/self_train/unet_best_model.pth",
+    "sha256": "b8a0a5eeeefc3b816afcf73fbba16dbc29e9e3c76936a03300fc6bc430cb196b",
+    "size": 7322674,
+    "object": "objects/b8a0a5eeeefc3b816afcf73fbba16dbc29e9e3c76936a03300fc6bc430cb196b.bin",
+    "experiment_ids": [
+      "covid5"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T23:42:31.441555+08:00",
+    "stable_copy": true,
+    "asset": "P0-covid5.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/self_train/unet_final_model.pth",
+    "sha256": "9febde11b0a12381706107ef5cbdcaf7c706b078c2d3320639c11e9f4c7d656b",
+    "size": 7322822,
+    "object": "objects/9febde11b0a12381706107ef5cbdcaf7c706b078c2d3320639c11e9f4c7d656b.bin",
+    "experiment_ids": [
+      "covid5"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-22T00:42:25.096115+08:00",
+    "stable_copy": true,
+    "asset": "P0-covid5.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/pre_train/unet_best_model.pth",
+    "sha256": "ec720ac4bc5f8c31e760a1e40d29528f7a3954a63d16b8192220232c0c47f4a7",
+    "size": 14601886,
+    "object": "objects/ec720ac4bc5f8c31e760a1e40d29528f7a3954a63d16b8192220232c0c47f4a7.bin",
+    "experiment_ids": [
+      "promise20"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T14:54:01.729600+08:00",
+    "stable_copy": true,
+    "asset": "P0-promise20.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/self_train/model1_iter_30000_final.pth",
+    "sha256": "785c3c6360f3862b5f7c3c9520721430c16cf4834132819df59c44c866deddc3",
+    "size": 7323922,
+    "object": "objects/785c3c6360f3862b5f7c3c9520721430c16cf4834132819df59c44c866deddc3.bin",
+    "experiment_ids": [
+      "promise20"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T16:48:50.876601+08:00",
+    "stable_copy": true,
+    "asset": "P0-promise20.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/self_train/self_train_full_state_final.pth",
+    "sha256": "51071c2210a09c67aca814f308295f86a44ad9efad418caf76c1ed8f5608a5d7",
+    "size": 36564246,
+    "object": "objects/51071c2210a09c67aca814f308295f86a44ad9efad418caf76c1ed8f5608a5d7.bin",
+    "experiment_ids": [
+      "promise20"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T16:48:50.998204+08:00",
+    "stable_copy": true,
+    "asset": "P0-promise20.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/self_train/self_train_full_state_iter_30000.pth",
+    "sha256": "4ea69eb9a4972c799cdc2a4dde46859321c4a05dd0ddb7f6449ee39850cb77b5",
+    "size": 36567336,
+    "object": "objects/4ea69eb9a4972c799cdc2a4dde46859321c4a05dd0ddb7f6449ee39850cb77b5.bin",
+    "experiment_ids": [
+      "promise20"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T16:48:50.007631+08:00",
+    "stable_copy": true,
+    "asset": "P0-promise20.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/self_train/self_train_full_state_latest.pth",
+    "sha256": "5e0c3892d5f3681a4e98bb082d0cf79f96a826c893a127936606d42774ce391a",
+    "size": 36564864,
+    "object": "objects/5e0c3892d5f3681a4e98bb082d0cf79f96a826c893a127936606d42774ce391a.bin",
+    "experiment_ids": [
+      "promise20"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T16:48:50.304048+08:00",
+    "stable_copy": true,
+    "asset": "P0-promise20.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/self_train/unet_best_model.pth",
+    "sha256": "89c670b16b9a5b1da3bdd8f8c19094424fceef84398773d0ec27246475a48f2c",
+    "size": 7322674,
+    "object": "objects/89c670b16b9a5b1da3bdd8f8c19094424fceef84398773d0ec27246475a48f2c.bin",
+    "experiment_ids": [
+      "promise20"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T16:27:45.239299+08:00",
+    "stable_copy": true,
+    "asset": "P0-promise20.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/self_train/unet_final_model.pth",
+    "sha256": "5b394ec2ebea7350003496afcadcbdfdac6871136e416537e144049b3dadf52d",
+    "size": 7322822,
+    "object": "objects/5b394ec2ebea7350003496afcadcbdfdac6871136e416537e144049b3dadf52d.bin",
+    "experiment_ids": [
+      "promise20"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-21T16:48:50.900391+08:00",
+    "stable_copy": true,
+    "asset": "P0-promise20.tar.gz"
+  },
+  {
+    "source": "formal_E4_E5_20261008/tasks/E4/runs/E4_plain_residual_v2B/checkpoints/best.ckpt",
+    "sha256": "99870732812a306db14ea9d662759368932513ba91867a807dd600b8d402d876",
+    "size": 36818438,
+    "object": "objects/99870732812a306db14ea9d662759368932513ba91867a807dd600b8d402d876.bin",
+    "experiment_ids": [
+      "E4_plain_residual"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-08T20:05:09.555119+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "formal_E4_E5_20261008/tasks/E4/runs/E4_plain_residual_v2B/checkpoints/last.ckpt",
+    "sha256": "1a2b3ddc92890cd8b00be473933f1022fdd223a7ee5f2f1834bc7f7cc12c3aa2",
+    "size": 36818438,
+    "object": "objects/1a2b3ddc92890cd8b00be473933f1022fdd223a7ee5f2f1834bc7f7cc12c3aa2.bin",
+    "experiment_ids": [
+      "E4_plain_residual"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-08T20:23:58.098939+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "formal_E4_E5_20261008/tasks/E5/runs/E5_AdaMix_CT_common_protocol/checkpoints/best.ckpt",
+    "sha256": "7a124cfe70515de469915ce213feea258114b1398b125345559d1b5761cffd62",
+    "size": 43835714,
+    "object": "objects/7a124cfe70515de469915ce213feea258114b1398b125345559d1b5761cffd62.bin",
+    "experiment_ids": [
+      "E5_AdaMix_common_protocol"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-08T21:49:32.881783+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "formal_E4_E5_20261008/tasks/E5/runs/E5_AdaMix_CT_common_protocol/checkpoints/last.ckpt",
+    "sha256": "a826ef72323a029088b5d3b922a45d448dec7008057590af6e94ce15e954fbcd",
+    "size": 43835714,
+    "object": "objects/a826ef72323a029088b5d3b922a45d448dec7008057590af6e94ce15e954fbcd.bin",
+    "experiment_ids": [
+      "E5_AdaMix_common_protocol"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-08T21:58:14.085322+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "formal_E4_E5_20261008/tasks/E5/runs/E5_AdaMix_CT_common_protocol/checkpoints/official_val_loss_best.ckpt",
+    "sha256": "7e7981d2b43b7a0f9dcc8c756411e6ceb9b7053354704073181d82b6c5c10c49",
+    "size": 43849638,
+    "object": "objects/7e7981d2b43b7a0f9dcc8c756411e6ceb9b7053354704073181d82b6c5c10c49.bin",
+    "experiment_ids": [
+      "E5_AdaMix_common_protocol"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-08T21:42:17.929327+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "mechanism_strengthening_20261013/runs/F97_main_signal_20261013/checkpoints/best.ckpt",
+    "sha256": "a234794d53a3247b9504fd1a1ebc051686eed4495f0417866120941ddcf4b6d3",
+    "size": 36761122,
+    "object": "objects/a234794d53a3247b9504fd1a1ebc051686eed4495f0417866120941ddcf4b6d3.bin",
+    "experiment_ids": [
+      "F97_main_signal"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-14T06:59:39.943483+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "mechanism_strengthening_20261013/runs/F97_main_signal_20261013/checkpoints/last.ckpt",
+    "sha256": "08aa3751af49b44ca0ecce6dfbd85b68c497512edcf7cd5d20079464c94b9b79",
+    "size": 36761122,
+    "object": "objects/08aa3751af49b44ca0ecce6dfbd85b68c497512edcf7cd5d20079464c94b9b79.bin",
+    "experiment_ids": [
+      "F97_main_signal"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-14T07:14:24.498369+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "revision_runs_20261006/runs/E1/checkpoints/best.ckpt",
+    "sha256": "f3808c28e98a2930f3f1e9fa758a61d47e292ac583f542dfb9b852f0f84e6268",
+    "size": 36819034,
+    "object": "objects/f3808c28e98a2930f3f1e9fa758a61d47e292ac583f542dfb9b852f0f84e6268.bin",
+    "experiment_ids": [
+      "E1_interrupted_candidate"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-06T22:14:48.011958+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "revision_runs_20261006/runs/E1/checkpoints/last.ckpt",
+    "sha256": "72205384a57fb736e6b29bb820a63b2d6eb458702ddcd1fc9c673e185305cc17",
+    "size": 36819034,
+    "object": "objects/72205384a57fb736e6b29bb820a63b2d6eb458702ddcd1fc9c673e185305cc17.bin",
+    "experiment_ids": [
+      "E1_interrupted_candidate"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-06T22:26:01.600755+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X01_CLASS_DISTRIBUTION_GUARD/checkpoints/best.ckpt",
+    "sha256": "5aa44c3635b1c249b897a2e4562cd1440a22387c23c3e0d53155fc04db9d6387",
+    "size": 36761122,
+    "object": "objects/5aa44c3635b1c249b897a2e4562cd1440a22387c23c3e0d53155fc04db9d6387.bin",
+    "experiment_ids": [
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-18T06:18:34.926001+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-module-replacements.tar.gz"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X01_CLASS_DISTRIBUTION_GUARD/checkpoints/last.ckpt",
+    "sha256": "544488b7b0932c29064be14d67a08e6fe6db3cb1b6e6776b965ade0666f3426d",
+    "size": 36761122,
+    "object": "objects/544488b7b0932c29064be14d67a08e6fe6db3cb1b6e6776b965ade0666f3426d.bin",
+    "experiment_ids": [
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-18T06:44:15.507419+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-module-replacements.tar.gz"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER/checkpoints/best.ckpt",
+    "sha256": "0b8f0f4e8f8ed2334b5d84d024a6d08b05aab759d0984499dd404a6a64f1c0b9",
+    "size": 36761186,
+    "object": "objects/0b8f0f4e8f8ed2334b5d84d024a6d08b05aab759d0984499dd404a6a64f1c0b9.bin",
+    "experiment_ids": [
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-18T13:59:55.241469+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-module-replacements.tar.gz"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER/checkpoints/last.ckpt",
+    "sha256": "75ac9d17bc2e9fcc9f167ef1e36ea9ebf23890c30e85acb54f5de7aa129a52bb",
+    "size": 36761186,
+    "object": "objects/75ac9d17bc2e9fcc9f167ef1e36ea9ebf23890c30e85acb54f5de7aa129a52bb.bin",
+    "experiment_ids": [
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-18T14:14:17.000287+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-module-replacements.tar.gz"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/best.ckpt",
+    "sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+    "size": 36761122,
+    "object": "objects/c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_111",
+      "acdc10"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-18T21:38:05.295084+08:00",
+    "stable_copy": true,
+    "asset": "P0-acdc10.tar.gz"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/last.ckpt",
+    "sha256": "1abf5ae770438d871dda4f6afa04dfc3755442a823551787251b1350d9c76c5a",
+    "size": 36761186,
+    "object": "objects/1abf5ae770438d871dda4f6afa04dfc3755442a823551787251b1350d9c76c5a.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_111",
+      "acdc10"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-18T21:43:56.585533+08:00",
+    "stable_copy": true,
+    "asset": "P0-acdc10.tar.gz"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN/checkpoints/best.ckpt",
+    "sha256": "9d3d24fcc0d9f59c48e92ac84fea8533534125440945b852fd094899b8eac833",
+    "size": 36761186,
+    "object": "objects/9d3d24fcc0d9f59c48e92ac84fea8533534125440945b852fd094899b8eac833.bin",
+    "experiment_ids": [
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-19T04:59:37.048748+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-module-replacements.tar.gz"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN/checkpoints/last.ckpt",
+    "sha256": "70653b35a3bb829edfac9d3b95d28ffa29d6a2186c645ab1eafb7af9b1e06b3d",
+    "size": 36761186,
+    "object": "objects/70653b35a3bb829edfac9d3b95d28ffa29d6a2186c645ab1eafb7af9b1e06b3d.bin",
+    "experiment_ids": [
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-19T05:13:56.383836+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-module-replacements.tar.gz"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT/checkpoints/best.ckpt",
+    "sha256": "7d81ece1e1c825620d93aa19369d93d75eb140990ad9b0d6f6531b33334cc5f4",
+    "size": 36761186,
+    "object": "objects/7d81ece1e1c825620d93aa19369d93d75eb140990ad9b0d6f6531b33334cc5f4.bin",
+    "experiment_ids": [
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-19T12:27:05.686353+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-module-replacements.tar.gz"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT/checkpoints/last.ckpt",
+    "sha256": "704bd18122471dcd8a7ddb9a6753b6593412764e411e52eeb5d5a4ddbcfb5bf0",
+    "size": 36761186,
+    "object": "objects/704bd18122471dcd8a7ddb9a6753b6593412764e411e52eeb5d5a4ddbcfb5bf0.bin",
+    "experiment_ids": [
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-19T12:44:14.403539+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-module-replacements.tar.gz"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP/checkpoints/best.ckpt",
+    "sha256": "71811f69eee30075e38f061ebacaa524653ee3967f60a1f653b902c8ad83ee91",
+    "size": 36761186,
+    "object": "objects/71811f69eee30075e38f061ebacaa524653ee3967f60a1f653b902c8ad83ee91.bin",
+    "experiment_ids": [
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-19T20:00:09.410200+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-module-replacements.tar.gz"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP/checkpoints/last.ckpt",
+    "sha256": "4cd7951872c7e135224d457cba3ca81e9fd56593f6e03781b2aa850174a6ce6f",
+    "size": 36761186,
+    "object": "objects/4cd7951872c7e135224d457cba3ca81e9fd56593f6e03781b2aa850174a6ce6f.bin",
+    "experiment_ids": [
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-08-19T20:14:29.746746+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-module-replacements.tar.gz"
+  },
+  {
+    "source": "runs/beta_fft_acdc_10pct_mask_token_adamix_full_seed42/checkpoints/best.ckpt",
+    "sha256": "f10f69989883a423117a53695311b47e01dc65fbc27fbce2d0c666d6fd733514",
+    "size": 36760994,
+    "object": "objects/f10f69989883a423117a53695311b47e01dc65fbc27fbce2d0c666d6fd733514.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_110"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-07-19T01:04:16.994154+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "runs/beta_fft_acdc_10pct_mask_token_adamix_full_seed42/checkpoints/last.ckpt",
+    "sha256": "da7c6f8a41456f60b00071741166e4dd13223d15aa78d3b720574711a7749ae0",
+    "size": 36760994,
+    "object": "objects/da7c6f8a41456f60b00071741166e4dd13223d15aa78d3b720574711a7749ae0.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_110"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-07-19T02:16:30.586534+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/checkpoints/best.ckpt",
+    "sha256": "825da2e9a944c930fa54cb9b7abc843345e4a7cde851d34c390739acaa0d5dbf",
+    "size": 36736810,
+    "object": "objects/825da2e9a944c930fa54cb9b7abc843345e4a7cde851d34c390739acaa0d5dbf.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_000"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-06-17T21:25:34.485869+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/checkpoints/last.ckpt",
+    "sha256": "6c61a723b361b2cb262dcf4966f8606fbe5a2c121234be44d346ce99e564560e",
+    "size": 36736810,
+    "object": "objects/6c61a723b361b2cb262dcf4966f8606fbe5a2c121234be44d346ce99e564560e.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_000"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-06-17T23:13:39.179459+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-factorial.tar.gz"
+  },
+  {
+    "source": "tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/runs/C1_CTW_mean_uniform_v2B/checkpoints/best.ckpt",
+    "sha256": "d37c9a8f6f28e3be0ce1b7041b9092044160011de10441f8eaea62b13c6517c7",
+    "size": 36819930,
+    "object": "objects/d37c9a8f6f28e3be0ce1b7041b9092044160011de10441f8eaea62b13c6517c7.bin",
+    "experiment_ids": [
+      "C1_CTW_uniform"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-08T07:38:05.460090+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/runs/C1_CTW_mean_uniform_v2B/checkpoints/last.ckpt",
+    "sha256": "51d13da07bd6540d872ccd79a7bedc1763792bc2e451c0edd39b341efd1c5593",
+    "size": 36819866,
+    "object": "objects/51d13da07bd6540d872ccd79a7bedc1763792bc2e451c0edd39b341efd1c5593.bin",
+    "experiment_ids": [
+      "C1_CTW_uniform"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-08T08:11:14.574769+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "tcsmix_control_revision_20261006/formal_R1_20261007/runs/R1_full_v2B/checkpoints/best.ckpt",
+    "sha256": "5df2de9b8df16e4d89df9265f104b4b8c7c321245d9eaa0479971672b4d7a1a9",
+    "size": 36819610,
+    "object": "objects/5df2de9b8df16e4d89df9265f104b4b8c7c321245d9eaa0479971672b4d7a1a9.bin",
+    "experiment_ids": [
+      "R1_v2_B_control_signal"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-07T07:43:51.667396+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "tcsmix_control_revision_20261006/formal_R1_20261007/runs/R1_full_v2B/checkpoints/last.ckpt",
+    "sha256": "8a181d99a316692565e9f4b4662d85d6d6f44e783a7ab6184e3c64466479d9d7",
+    "size": 36819610,
+    "object": "objects/8a181d99a316692565e9f4b4662d85d6d6f44e783a7ab6184e3c64466479d9d7.bin",
+    "experiment_ids": [
+      "R1_v2_B_control_signal"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-07T07:58:40.818346+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/checkpoints/best.ckpt",
+    "sha256": "b56292a270ccf6679b5597e9d556eda686df91778e496e715174aaa367b710de",
+    "size": 36820058,
+    "object": "objects/b56292a270ccf6679b5597e9d556eda686df91778e496e715174aaa367b710de.bin",
+    "experiment_ids": [
+      "R2_fixed92"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-07T18:07:56.328675+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/checkpoints/last.ckpt",
+    "sha256": "6a74c2bf2e9fa7dfbb26f7ca13511976dc2626152576d1d6d4e2f8543782ac01",
+    "size": 36820058,
+    "object": "objects/6a74c2bf2e9fa7dfbb26f7ca13511976dc2626152576d1d6d4e2f8543782ac01.bin",
+    "experiment_ids": [
+      "R2_fixed92"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-10-07T18:22:48.751936+08:00",
+    "stable_copy": true,
+    "asset": "P1-acdc-controls.tar.gz"
+  },
+  {
+    "source": "train_ACDC/Pre_model/label3/unet_best_model.pth",
+    "sha256": "3486fd3aecf5f30e77e7e15bec0841f56c87db6246a6dc50cc4dc6f2ee2087e0",
+    "size": 14685705,
+    "object": "objects/3486fd3aecf5f30e77e7e15bec0841f56c87db6246a6dc50cc4dc6f2ee2087e0.bin",
+    "experiment_ids": [
+      "acdc5"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-06-17T11:43:41.165827+08:00",
+    "stable_copy": true,
+    "asset": "P0-acdc5.tar.gz"
+  },
+  {
+    "source": "train_ACDC/Pre_model/label7/unet_best_model.pth",
+    "sha256": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3",
+    "size": 14685705,
+    "object": "objects/477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3.bin",
+    "experiment_ids": [
+      "ACDC10_ARM_000",
+      "ACDC10_ARM_001",
+      "ACDC10_ARM_010",
+      "ACDC10_ARM_011",
+      "ACDC10_ARM_100",
+      "ACDC10_ARM_100_aborted_candidate",
+      "ACDC10_ARM_101",
+      "ACDC10_ARM_110",
+      "ACDC10_ARM_111",
+      "ACDC10_BETAFFT_SEED2025",
+      "ACDC10_BETAFFT_SEED2026",
+      "ACDC10_OURS_SEED2025",
+      "ACDC10_OURS_SEED2026",
+      "ACDC10_X03_WEIGHT_001",
+      "ACDC10_X03_WEIGHT_003",
+      "ACDC10_X03_WEIGHT_007",
+      "ACDC10_X03_WEIGHT_010",
+      "C1_CTW_uniform",
+      "E1_interrupted_candidate",
+      "E4_plain_residual",
+      "F97_main_signal",
+      "R1_v2_B_control_signal",
+      "R2_fixed92",
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD",
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER",
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN",
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT",
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP",
+      "acdc10"
+    ],
+    "backup_time": "2026-11-04T14:35:00.737136+08:00",
+    "source_mtime": "2026-06-17T11:43:41.298999+08:00",
+    "stable_copy": true,
+    "asset": "P0-acdc10.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/self_train/self_train_full_state_iter_25000.pth",
+    "sha256": "bd7022223a36c05851ace0a1af4e80d388767ef4901270fdcb4a0d52ef7c740b",
+    "size": 36567336,
+    "object": "objects/bd7022223a36c05851ace0a1af4e80d388767ef4901270fdcb4a0d52ef7c740b.bin",
+    "experiment_ids": [
+      "promise20"
+    ],
+    "backup_time": "2026-11-04T14:42:30.510660+08:00",
+    "source_mtime": "2026-08-21T16:30:00.218880+08:00",
+    "stable_copy": true,
+    "role": "penultimate full-state checkpoint, enables resuming remaining original-budget updates",
+    "asset": "P0-promise20.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/self_train/self_train_full_state_iter_25000.pth",
+    "sha256": "c15deaa9021ea88c147051c160ee2e0edcbc1f62deb11de67606fd5c46d53a0a",
+    "size": 36571816,
+    "object": "objects/c15deaa9021ea88c147051c160ee2e0edcbc1f62deb11de67606fd5c46d53a0a.bin",
+    "experiment_ids": [
+      "covid5"
+    ],
+    "backup_time": "2026-11-04T14:42:30.861717+08:00",
+    "source_mtime": "2026-08-22T00:02:15.925691+08:00",
+    "stable_copy": true,
+    "role": "penultimate full-state checkpoint, enables resuming remaining original-budget updates",
+    "asset": "P0-covid5.tar.gz"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/self_train/self_train_full_state_iter_25000.pth",
+    "sha256": "330a22f199979e20bbe9789ddd94552827671cb489f22af2f1049afa22629589",
+    "size": 36571816,
+    "object": "objects/330a22f199979e20bbe9789ddd94552827671cb489f22af2f1049afa22629589.bin",
+    "experiment_ids": [
+      "covid10"
+    ],
+    "backup_time": "2026-11-04T14:42:31.177311+08:00",
+    "source_mtime": "2026-08-22T04:24:45.378317+08:00",
+    "stable_copy": true,
+    "role": "penultimate full-state checkpoint, enables resuming remaining original-budget updates",
+    "asset": "P0-covid10.tar.gz"
+  }
+]

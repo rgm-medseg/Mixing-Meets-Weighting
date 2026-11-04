@@ -1,0 +1,29 @@
+[
+  {
+    "segment": "fresh",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/train_control_entry.py",
+      "--config",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/configs/short_selected.yaml",
+      "--stop-after",
+      "200"
+    ],
+    "exit_code": 75,
+    "expected_exit_code": 75,
+    "time": "2026-10-06T23:31:57.419759+08:00"
+  },
+  {
+    "segment": "resume",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/train_control_entry.py",
+      "--config",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/configs/short_selected.yaml",
+      "--resume"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "time": "2026-10-06T23:32:38.370014+08:00"
+  }
+]

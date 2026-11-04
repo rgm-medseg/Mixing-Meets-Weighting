@@ -1,0 +1,2 @@
+run,status,checkpoint,checkpoint_sha256,selected_step,cases,patients,unit,dice,iou,hd95,asd
+C1_CTW_mean_uniform_v2B,EVALUATED,/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/runs/C1_CTW_mean_uniform_v2B/checkpoints/best.ckpt,d37c9a8f6f28e3be0ce1b7041b9092044160011de10441f8eaea62b13c6517c7,27800,40,20,grid,0.8965431116643965,0.8185149190106303,1.548304888339121,0.49454106974328754

@@ -1,0 +1,21 @@
+{
+  "FinalLaunchReady": "PASS",
+  "L10_SOURCE_CONFIG_LAUNCHER_SHA_FREEZE_PASS": true,
+  "L1_L5_PASS": true,
+  "L6_L8_PASS": true,
+  "L9_CONTROLLER_DRY_CONSUMPTION_PASS": true,
+  "candidate_id": "V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+  "controller_script": "controllers/acdc10_third_innovation_top6_full_controller.py",
+  "controller_sha256": "5027d86cd83f417af0b7bb92001d47861c89cdb3ba1939fdba0fe5a43d1c86ae",
+  "created_at": "2026-08-17T15:41:48.499004+00:00",
+  "derived_config": "configs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT.json",
+  "derived_config_sha256": "f267a1c9ea0545d60b94d3005b061f7dbe4ffe7c355df09f751f35ab2424afe2",
+  "dry_consumption_sha256": "e526f294cb02a2ef382e7dddc9985b72c3d0d9b24b5ed5c1033a09255ff4d572",
+  "formal_launcher": "scripts/acdc10_third_innovation_codex_prep_top6_v21_3/run_V21_3_X03_CONTOUR_RELIABILITY_WEIGHT_full.sh",
+  "init_checkpoint_sha256": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3",
+  "launcher_sha256": "b5d787501e4f74e6b8cd4c05578d6a23ad7e4976c18a9e33a3998f4203af542a",
+  "monitor_interval_seconds": 1800,
+  "output_dir_absent": true,
+  "registry_sha256": "1f34a5c7d8680320cfef69616ccba0c2533e2d9c4f4723b83a8344336bd212af",
+  "test_access_count": 0
+}

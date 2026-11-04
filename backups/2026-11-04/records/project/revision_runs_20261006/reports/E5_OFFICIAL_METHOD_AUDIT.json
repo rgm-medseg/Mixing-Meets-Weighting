@@ -1,0 +1,15 @@
+{
+  "status": "PENDING",
+  "repository": "https://github.com/Senyh/AdaMix",
+  "commit": "85361fb91cf43a69a158d41dfa9e7ee9fce36db9",
+  "source_recipe": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/external/AdaMix/exp_acdc/train_adamix_ct.py",
+  "source_sha256": "c47fbdba2fa503eb5c8e0767238079db1a1fa3437ded697ddec43d98dac1c773",
+  "actual_entry": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/scripts/train_entry.py → official_adapter.run_official",
+  "adapter": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/scripts/official_adapter.py",
+  "adapter_sha256": "fcf8d669df2a631e7e96b40479090753d88f4446dc8829e420686e194d5befe7",
+  "complete_command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/scripts/train_entry.py --config /home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/configs/E5_adamix_ct.yaml",
+  "upstream_main_executed_directly": false,
+  "literal_upstream_training_step_compiled": true,
+  "budget": "30000updates,scratch,no pretrain; native four loaders B16 each",
+  "differences": "official native U-Net/two students(no EMA),AdamW1e-4 wd.01,DSCLossH(confidence.95),four native AdaMix modules patch8/topk16/hard/p.5,age curriculum7500; no betaFFT/TRC/CTW; upstream200epochs adapted to30000updates, val-loss selection changed to common every200 val student1 macroDice; same7cases136slices; retain official PIL quantization/augmentation"
+}

@@ -1,0 +1,31 @@
+{
+  "recorded_logical_steps": 30000,
+  "raw_trace_rows": 30000,
+  "training_active_segment_seconds": 26370.910072822124,
+  "stable_timer_median_seconds": 0.6817651335150003,
+  "timer_scope": "step_seconds excludes batch waiting, following validation/EMA/checkpoint; end-to-end active segments include all of them",
+  "peak_allocated_bytes": 16564344832,
+  "median_controller_wall_ms": 2.8101839125156403,
+  "host": "n1",
+  "gpu": "GPU0 A10040GB",
+  "precision": "FP32",
+  "batch24": 24,
+  "R1_runtime": {
+    "recorded_logical_steps": 30000,
+    "raw_trace_rows": 30000,
+    "training_active_segment_seconds": 26440.013047698885,
+    "stable_timer_median_seconds": 0.6821030508726835,
+    "stable_recorded_steps": 28310,
+    "timer_scope": "start after loader yields to control trace after optimizer; excludes validation/EMA/checkpoints following record and batch waiting",
+    "peak_allocated_bytes": 16563296256,
+    "median_controller_wall_ms": 2.804674208164215,
+    "host": "n1",
+    "gpu": "GPU0 A10040GB",
+    "precision": "FP32",
+    "batch24": 24,
+    "original_teacher_forward_count": 4,
+    "log_overhead": "append optimizer events/step trace and inherited revision telemetry; no duplicate old-teacher forward; no claim of paired full training overhead delta"
+  },
+  "log_overhead": "new trace/event/progress costs in reports/logging_cost_*.json; no paired claim about inherited logging overhead",
+  "stage_history": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/state/stage_history.json"
+}

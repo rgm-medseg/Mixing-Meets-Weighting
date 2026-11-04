@@ -1,0 +1,9 @@
+{
+  "audit_id": "V22_0_ACDC10_NEW_ARM_L6_L7_SMOKE_SUMMARY",
+  "created_at": "2026-08-19T15:29:23.397880+00:00",
+  "task_count": 5,
+  "L6_ALL_PASS": true,
+  "L7_ALL_PASS": true,
+  "formal_training_started": false,
+  "smoke_metrics_used_for_selection": false
+}

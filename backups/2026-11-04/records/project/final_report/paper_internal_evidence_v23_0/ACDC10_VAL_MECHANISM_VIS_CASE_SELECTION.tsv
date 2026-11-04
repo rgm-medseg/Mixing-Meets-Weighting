@@ -1,0 +1,5 @@
+CaseOrder	CaseID	Split	VolumePath	ImageShape	SelectedSliceIndex0Based	SelectedSliceForegroundPixels	SelectionRule	TestAccess
+1	patient002_frame01	VAL	/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/data/patient002_frame01.h5	10x224x224	1	4391	val.list sorted ascending; first four volumes; slice=max_GT_foreground	0
+2	patient002_frame02	VAL	/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/data/patient002_frame02.h5	10x224x224	1	3318	val.list sorted ascending; first four volumes; slice=max_GT_foreground	0
+3	patient019_frame01	VAL	/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/data/patient019_frame01.h5	11x224x224	1	4467	val.list sorted ascending; first four volumes; slice=max_GT_foreground	0
+4	patient019_frame02	VAL	/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/data/patient019_frame02.h5	11x224x224	1	3576	val.list sorted ascending; first four volumes; slice=max_GT_foreground	0

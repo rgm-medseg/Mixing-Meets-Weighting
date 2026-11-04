@@ -1,0 +1,24 @@
+{
+  "status": "EVALUATED",
+  "time": "2026-10-08T20:27:01.903566+08:00",
+  "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E4/runs/E4_plain_residual_v2B/checkpoints/best.ckpt",
+  "checkpoint_sha256": "99870732812a306db14ea9d662759368932513ba91867a807dd600b8d402d876",
+  "selected_step": 28800,
+  "test_manifest": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/test.list",
+  "test_manifest_sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+  "metrics": {
+    "dice": 0.8980993794963656,
+    "iou": 0.820830969507593,
+    "hd95": 1.674988734126525,
+    "asd": 0.5066578721770992
+  },
+  "protocol": "ACDC_v22_grid_directed_ASD",
+  "average": "mean RV/MYO/LV and 40 reconstructed ED/ES frame volumes; 20-patient paired results separately",
+  "unit": "HD95 and directed pred-to-GT ASD are reconstruction grid distances, not mm",
+  "postprocessing": "none",
+  "empty_both": "all four0",
+  "empty_one": "Dice/IoU0,HD95/ASD sqrt(Nz²+Ny²+Nx²)",
+  "resize": "nearest order0 to256² and back to native in-plane grid",
+  "case_axis": "z untouched",
+  "test_selection": false
+}

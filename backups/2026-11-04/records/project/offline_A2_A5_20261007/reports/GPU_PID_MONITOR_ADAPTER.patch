@@ -1,0 +1,31 @@
+--- previous offline common.py
++++ new offline common.py
+@@ -7,6 +7,7 @@
+ PY='/home/renguanming/.conda/envs/beta_fft/bin/python'
+ R1=ROOT/'tcsmix_control_revision_20261006/formal_R1_20261007'
+ R2=ROOT/'tcsmix_control_revision_20261006/formal_R2_fixed92_20261007'
++OWN_GPU_PIDS={os.getpid()}
+ def now():return datetime.now(timezone(timedelta(hours=8))).isoformat()
+ def sha(p):
+  h=hashlib.sha256()
+@@ -39,8 +40,19 @@
+  return dict(index=int(s[0]),uuid=s[1].strip(),used_mib=int(s[2]),free_mib=int(s[3]),utilization=int(s[4]),pids=pids)
+ def wait_gpu(own=False):
+  while True:
+-  stopped();g=gpu();others=[p for p in g['pids'] if not(own and p==os.getpid())]
++  stopped();g=gpu();others=[p for p in g['pids'] if p not in OWN_GPU_PIDS]
+   if not others and (own or (g['used_mib']<2048 and g['free_mib']>30000 and g['utilization']<=10)):return g
+   progress('WAIT_GPU',resource=g);time.sleep(5)
++def bind_gpu_pid():
++ import torch
++ if torch.cuda.is_initialized():
++  if len(OWN_GPU_PIDS)>1 or os.getpid() in gpu()['pids']:return
++  raise RuntimeError('CUDA was initialized before validated GPU PID binding')
++ before=wait_gpu();assert not(set(before['pids'])-OWN_GPU_PIDS)
++ torch.cuda.init();x=torch.empty(1,device='cuda');torch.cuda.synchronize();after=gpu();del x
++ added=set(after['pids'])-set(before['pids'])
++ if len(added)!=1:raise RuntimeError('Cannot uniquely bind own GPU PID; no other process is terminated')
++ OWN_GPU_PIDS.update(added)
++ js(W/'reports'/f'GPU_PID_BINDING_{os.getpid()}.json',dict(status='PASS',time=now(),container_pid=os.getpid(),NVML_pid=list(added)[0],GPU_uuid=after['uuid'],before=before,after=after,basis='exclusive GPU admission with zero foreign PIDs, isolated CUDA context initialization, exactly one newly appearing NVML PID; subsequent foreign PID monitoring retained'))
+ def protected():
+  return {p:sha(p) for p in read(W/'manifests/protected.json')}

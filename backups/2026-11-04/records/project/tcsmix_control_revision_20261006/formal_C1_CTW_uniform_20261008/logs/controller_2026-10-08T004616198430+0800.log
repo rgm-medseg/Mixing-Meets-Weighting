@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/run_pipeline.py", line 83, in main
+    run('PREFLIGHT','preflight.py');run('SHORT_CHECK','short_check.py')
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/run_pipeline.py", line 70, in run
+    if code!=0:raise RuntimeError(f'{stage} exit {code}; see {log}; no automatic retry')
+RuntimeError: SHORT_CHECK exit 1; see /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/SHORT_CHECK_2026-10-08T004621515379+0800.log; no automatic retry
+

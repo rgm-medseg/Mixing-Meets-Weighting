@@ -1,0 +1,22 @@
+[
+  {
+    "stage": "TRAIN",
+    "command": [
+      "/bin/bash",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/scripts/train_R2.sh"
+    ],
+    "start": "2026-10-07T11:03:10.072726+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/logs/train_2026-10-07T110310072633+0800.log",
+    "resume_step": 0,
+    "pid": 81682,
+    "end": "2026-10-07T11:03:20.112001+08:00",
+    "exit_code": 1,
+    "elapsed_seconds": 10.03934931755066,
+    "measurement": "Popen launch to detected subprocess completion; <=5s polling detection lag, imports/validation/checkpoints included"
+  },
+  {
+    "stage": "PIPELINE",
+    "time": "2026-10-07T11:03:20.140066+08:00",
+    "error": "Training exited1; no automatic retry or parameter change"
+  }
+]

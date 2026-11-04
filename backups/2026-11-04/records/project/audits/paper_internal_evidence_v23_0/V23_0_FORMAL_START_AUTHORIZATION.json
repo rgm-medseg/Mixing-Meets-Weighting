@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-23T03:41:30.108172+00:00",
+  "FORMAL_START_AUTHORIZATION": true,
+  "USER_AUTHORIZED_FORMAL_START": true,
+  "V23_0_PRELAUNCH_READY_EVIDENCE": "audits/paper_internal_evidence_v23_0/V23_0_PRELAUNCH_FIVE_REVIEW_SUMMARY.json",
+  "tmux_session": "paper_internal_evidence_controller_v23_0",
+  "controller_mode": "run",
+  "formal_full_started_before_authorization": false,
+  "test_access_allowed_sum": 0
+}

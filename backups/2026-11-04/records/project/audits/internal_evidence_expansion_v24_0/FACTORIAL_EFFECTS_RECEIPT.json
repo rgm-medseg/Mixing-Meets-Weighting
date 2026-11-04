@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T14:30:52.539587+00:00",
+  "task_id": "FACTORIAL_EFFECTS",
+  "training_started": false,
+  "checkpoint_replay_started": false,
+  "test_manifest_accessed": false,
+  "input_asset": "final_report/paper_internal_evidence_v23_0/tables/TABLE4_ACDC10_8ARM_FULL_PRECISION.tsv",
+  "input_sha256": "5cb39eec601182edfe1df2a4024583b6ca8878e25ab5a2a50bd815476a373e46",
+  "output_asset": "final_report/internal_evidence_expansion_v24_0/ACDC10_FACTORIAL_EFFECTS_FULL.tsv",
+  "output_sha256": "469fc3f591210d13586b72b407cb664e8a3ab09487c7b51ed4471db8f01ed5a7",
+  "markdown_table": "final_report/internal_evidence_expansion_v24_0/tables/TABLE_S_ACDC10_FACTORIAL_EFFECTS.md",
+  "tex_table": "final_report/internal_evidence_expansion_v24_0/tables/TABLE_S_ACDC10_FACTORIAL_EFFECTS.tex",
+  "figure_assets": [
+    "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_FACTORIAL_MAIN_EFFECTS.png",
+    "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_FACTORIAL_MAIN_EFFECTS.pdf",
+    "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_FACTORIAL_INTERACTIONS.png",
+    "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_FACTORIAL_INTERACTIONS.pdf"
+  ],
+  "exact_formula": "For contrast sign s in {-1,+1}, RawEffect = mean(y | s=+1) - mean(y | s=-1). Main-effect signs use the target factor; interaction signs use the product of coded factors with OFF=-1 and ON=+1. ImprovementEffect equals RawEffect for Dice/IoU and -RawEffect for HD95/ASD.",
+  "DESCRIPTIVE_FACTORIAL_ONLY": true,
+  "anova_or_p_value_computed": false,
+  "arm_count": 8,
+  "effect_row_count": 28
+}

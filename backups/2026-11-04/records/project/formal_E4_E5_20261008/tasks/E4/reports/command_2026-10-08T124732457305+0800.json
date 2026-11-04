@@ -1,0 +1,43 @@
+{
+  "time": "2026-10-08T12:47:37.593777+08:00",
+  "pid": 43502,
+  "resume": false,
+  "actual_entry": [
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py"
+  ],
+  "compiled_parser_argv": [
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/source/historical_full.py",
+    "--root_path",
+    "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC",
+    "--run_root",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E4/runs/E4_plain_residual_v2B",
+    "--pretrained_model",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7",
+    "--seed",
+    "42",
+    "--labelnum",
+    "7",
+    "--gpu",
+    "0",
+    "--max_iterations",
+    "30000",
+    "--save_interval",
+    "200",
+    "--mask_token_enabled",
+    "true",
+    "--adamix_enabled",
+    "true",
+    "--innovation_x_id",
+    "V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+    "--enable_v21_3_innovation_x",
+    "true",
+    "--v21_3_innovation_x_weight",
+    "0.05",
+    "--mechanism_log_interval",
+    "200"
+  ],
+  "cfg_sha256": "5082b3eadc46e13891b67ca86ec19af5920576067edd301bb162d6f211693bae",
+  "initializer": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth",
+  "initializer_sha256": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3",
+  "short_target": null
+}

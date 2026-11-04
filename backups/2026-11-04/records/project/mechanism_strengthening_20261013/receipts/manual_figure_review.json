@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "reviewer": "Codex primary agent, manual visual inspection",
+  "figures": [
+    "Fig_joint_TCSMix_CTW",
+    "Fig_TRC_residual_intervention"
+  ],
+  "checks": [
+    "Same full256 image coordinates and nearest display",
+    "Fixed predeclared cases, including sparse1-pixel TRC response",
+    "Shared gradient scales, whole-image common intensity limits",
+    "No title/legend clipping after layout correction",
+    "Bars start at zero; patient points and semantics/units explicit",
+    "TRC applied residual nearly spatially constant is preserved, not enhanced"
+  ],
+  "pending": [
+    "Neurocomputing journal-specific production format verification: official guide403"
+  ],
+  "source_data_preserved": true,
+  "table_review_status": "PASS",
+  "table_figures": [
+    "Table_regions",
+    "Table_fixed_control"
+  ],
+  "table_checks": [
+    "Native vector text, values match CSV, percentages/grid units declared",
+    "Paired patient/class results and selected29000-step model labeled",
+    "Full image and table previews reviewed; no text clipping",
+    "Initial unsupported Unicode header replaced with plain G(CTW); no missing-font warnings in final table render"
+  ],
+  "resolved_table_font_issue": "Initial table header used an unsupported character. Replaced with plain G(U)/G(CTW); original report log warning retained until final refresh, issue recorded here."
+}

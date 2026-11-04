@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T14:32:25.745953+00:00",
+  "task_id": "X03_RELIABILITY_FAITHFULNESS",
+  "source": "train_ACDC/v21_3_acdc10_third_innovation_components.py",
+  "source_sha256": "f28abc48fedff330f9aa7470072ebc16a607c6c59fd14942c2adb111b8ce748a",
+  "frozen_candidate_id": "V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+  "score_name": "contour_uncertainty_or_boundary_weight",
+  "score_semantics": "higher score means stronger contour uncertainty / stronger boundary consistency weight, not lower risk reliability",
+  "higher_score_means_more_reliable": false,
+  "higher_score_means_less_reliable_or_more_fragile_boundary": true,
+  "direction_fixed_before_result_reading": true,
+  "gt_used_to_generate_score": false,
+  "semantic_evidence_tokens": [
+    "contour",
+    "boundary_weight",
+    "contour_uncertainty_mean",
+    "boundary_weight_mean"
+  ],
+  "renaming_to_reliability_without_direction_note_allowed": false
+}

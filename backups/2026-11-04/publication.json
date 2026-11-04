@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/rgm-medseg/Mixing-Meets-Weighting",
+  "branch": "backup/comixw-critical-2026-11-04",
+  "tag": "comixw-critical-backup-2026-11-04",
+  "backup_commit_ref": "refs/tags/comixw-critical-backup-2026-11-04",
+  "backup_commit": null,
+  "commit_note": "Resolve the immutable lightweight backup tag after SSH push; a commit cannot embed its own hash.",
+  "release_upload_status": "BLOCKED_GITHUB_API_LOGIN",
+  "release_url": null,
+  "planned_release_url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/tag/comixw-critical-backup-2026-11-04"
+}

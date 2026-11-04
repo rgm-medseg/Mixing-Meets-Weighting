@@ -1,0 +1,61 @@
+{
+  "audit_id": "V22_0_FINAL_PRESTART_HARD_GATE",
+  "created_at": "2026-08-19T15:34:26.048118+00:00",
+  "TRANSFER_REAL_TRAIN_VAL_SMOKE_PASS": true,
+  "TRANSFER_REAL_TRAIN_VAL_SMOKE_EVIDENCE": {
+    "audit_id": "V22_0_TRANSFER_REAL_TRAIN_VAL_SMOKE",
+    "created_at": "2026-08-19T15:32:12.961172+00:00",
+    "tsv": "audits/three_innovation_ablation_transfer_v22_0/TRANSFER_REAL_TRAIN_VAL_SMOKE.tsv",
+    "summary_tsv": "audits/three_innovation_ablation_transfer_v22_0/TRANSFER_REAL_TRAIN_VAL_SMOKE_SUMMARY.tsv",
+    "covered_tasks": [
+      "ACDC5_FINAL3",
+      "PROMISE20_FINAL3",
+      "MSCMR5_FINAL3",
+      "COVID5_FINAL3",
+      "COVID10_FINAL3"
+    ],
+    "pass_count": 5,
+    "task_count": 5,
+    "TRANSFER_REAL_TRAIN_VAL_SMOKE_PASS": true,
+    "TRANSFER_REAL_TEST_ACCESS_BEFORE_FORMAL": 0,
+    "blocking_rows": []
+  },
+  "TRANSFER_REAL_TRAIN_VAL_SMOKE_TASK_STATUS": {
+    "ACDC5_FINAL3": "PASS",
+    "PROMISE20_FINAL3": "PASS",
+    "MSCMR5_FINAL3": "PASS",
+    "COVID5_FINAL3": "PASS",
+    "COVID10_FINAL3": "PASS"
+  },
+  "TRANSFER_X03_DEFAULT_OFF_EQUIVALENCE": "PASS",
+  "TRANSFER_X03_DEFAULT_OFF_EQUIVALENCE_EVIDENCE": {
+    "audit_id": "V22_0_TRANSFER_X03_DEFAULT_OFF_EQUIVALENCE",
+    "created_at": "2026-08-19T15:32:13.037765+00:00",
+    "tsv": "audits/three_innovation_ablation_transfer_v22_0/TRANSFER_X03_DEFAULT_OFF_EQUIVALENCE.tsv",
+    "TRANSFER_X03_DEFAULT_OFF_EQUIVALENCE": "PASS",
+    "family_count": 4,
+    "pass_count": 4,
+    "blocking_rows": []
+  },
+  "TRANSFER_X03_TENSOR_ROLE_PARITY": "PASS",
+  "TRANSFER_X03_TENSOR_ROLE_PARITY_EVIDENCE": {
+    "audit_id": "V22_0_TRANSFER_X03_TENSOR_ROLE_PARITY",
+    "created_at": "2026-08-19T15:32:13.096545+00:00",
+    "tsv": "audits/three_innovation_ablation_transfer_v22_0/TRANSFER_X03_TENSOR_ROLE_PARITY.tsv",
+    "TRANSFER_X03_TENSOR_ROLE_PARITY": "PASS",
+    "row_count": 30,
+    "pass_count": 30,
+    "ACDC10_reference_call_site": "compute_v21_3_innovation_x(candidate_id, out_1, out_2, pre_a, pre_b, image_output_1_FFT, image_output_2_FFT, iter_num, max_iterations)",
+    "blocked_reason": null
+  },
+  "TRANSFER_REAL_TEST_ACCESS_BEFORE_FORMAL": 0,
+  "MSCMR10_BLOCKED_GATE": true,
+  "POST_FULL_CHECKPOINT_TEST_GATE_PER_TASK_PASS": true,
+  "HARD_GATE_PASS": true,
+  "V22_0_PRELAUNCH_READY": true,
+  "FORMAL_START_AUTHORIZATION": false,
+  "FORMAL_RUN_ENABLED": false,
+  "FORMAL_FULL_STARTED": false,
+  "FORMAL_TMUX_CONTROLLER_STARTED": false,
+  "blocking_reasons": []
+}

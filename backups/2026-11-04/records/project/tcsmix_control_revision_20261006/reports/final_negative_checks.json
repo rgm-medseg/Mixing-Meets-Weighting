@@ -1,0 +1,52 @@
+[
+  {
+    "task": "R1_formal",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/train_control_entry.py",
+      "--config",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/configs/R1_planned.yaml"
+    ],
+    "exit_code": 1,
+    "stderr": "WAITING_FOR_FULL_APPROVAL: this entry refuses formal training; no tmux or queue handoff",
+    "stdout": "",
+    "optimizer_updates": 0
+  },
+  {
+    "task": "R2_formal",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/train_control_entry.py",
+      "--config",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/configs/R2_planned.yaml"
+    ],
+    "exit_code": 1,
+    "stderr": "WAITING_FOR_FULL_APPROVAL: this entry refuses formal training; no tmux or queue handoff",
+    "stdout": "",
+    "optimizer_updates": 0
+  },
+  {
+    "task": "repeat_short",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/run_short_check.py"
+    ],
+    "exit_code": 1,
+    "stderr": "Short run already executed; preserve its artifacts and WAITING_FOR_FULL_APPROVAL. No restart permitted.",
+    "stdout": "",
+    "optimizer_updates": 0
+  },
+  {
+    "task": "lock_R2_from_short",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/lock_R2_from_R1.py",
+      "--run",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/runs/SHORT_TCSMIX_V2"
+    ],
+    "exit_code": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/lock_R2_from_R1.py\", line 29, in <module>\n    if __name__=='__main__':main()\n  File \"/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/lock_R2_from_R1.py\", line 9, in main\n    if receipt.get('task')!='R1' or receipt.get('status')!='TRAINED' or receipt.get('global_step')!=30000:raise RuntimeError('Require complete R1 run; offline/short estimate forbidden')\nRuntimeError: Require complete R1 run; offline/short estimate forbidden",
+    "stdout": "",
+    "optimizer_updates": 0
+  }
+]

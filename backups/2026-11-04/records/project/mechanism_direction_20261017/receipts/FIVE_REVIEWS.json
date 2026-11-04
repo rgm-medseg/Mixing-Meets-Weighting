@@ -1,0 +1,33 @@
+{
+  "status": "PASS_WITH_MIXED_FINDINGS",
+  "reviews": [
+    {
+      "review": "1_identity_configuration",
+      "status": "PASS",
+      "evidence": "8 historical arm SHAs and selected steps match; all budgets 30000; actual TRC-off four used; main X03 retained; both student branches strict; frozen state/checkpoint hashes unchanged"
+    },
+    {
+      "review": "2_alignment_and_groups",
+      "status": "PASS",
+      "evidence": "216 source hashes; all108 GT/image/geometry/occlusion/source-patient compositions exact; teacher strata exclude annotated sources; identical input hashes across four models; original exclusions preserved; 210 unique slices plus6 repeats"
+    },
+    {
+      "review": "3_numerics_and_gradients",
+      "status": "PASS",
+      "evidence": "108 main and432 factorial scaling/direction checks; no robust flips; explicit FP32 cancellation handling; class/batch/lambda reductions checked; independent GT CE derivative max error 5.960e-08; L1/signed sums reconcile; weight-switch predictions/errors identical; optimizer steps0"
+    },
+    {
+      "review": "4_claims_and_evidence",
+      "status": "PASS_WITH_MIXED_FINDINGS",
+      "evidence": "Both GT-aligned and GT-opposed mass rise in teacher-error boundary support; original existing shares identified; raw mean-a remains negative on teacher-error pixels; no selective-correction, no-error-amplification, training-stability or complete-causal-synergy claim; no PROMISE computation"
+    },
+    {
+      "review": "5_table_and_english",
+      "status": "PASS",
+      "evidence": "One 12-row table in Markdown/CSV with full denominator/support/paired-probe caption; independent 4.4 and Discussion prose retains negative result and scope; no PDF replacement or Appendix"
+    }
+  ],
+  "method": "five sequential evidence reviews by this execution; not five independent reviewers",
+  "GT_reference_autograd_max_error": 5.960464477539063e-08,
+  "original_source_record_hashes_unchanged": true
+}

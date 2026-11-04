@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-23T03:27:26.334892+00:00",
+  "parent_config": "configs/paper_internal_evidence_v23_0/ACDC10_ARM_111_CANONICAL_PARENT_RECONSTRUCTED.json",
+  "parent_config_sha256": "19bc401c3c3f2a56a42836d7ed954dd52808ad64b66d7d11c1d88abf8fdb1399",
+  "runtime_run_root": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+  "runtime_best_checkpoint": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/best.ckpt",
+  "runtime_best_checkpoint_sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+  "field_audit_tsv": "audits/paper_internal_evidence_v23_0/ACDC10_ARM_111_CANONICAL_PARENT_IDENTITY_AUDIT.tsv",
+  "checked_field_count": 34,
+  "unexpected_scientific_difference_count": 0,
+  "UnexpectedScientificDifferenceCount": 0,
+  "sensitivity_parent_allowed": true,
+  "new_training_started": false,
+  "formal_started": false
+}

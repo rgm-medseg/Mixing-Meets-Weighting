@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T12:34:54.781303+08:00",
+  "commit": "85361fb91cf43a69a158d41dfa9e7ee9fce36db9",
+  "repository": "https://github.com/Senyh/AdaMix",
+  "entry": "exp_acdc/train_adamix_ct.py",
+  "entry_sha256": "c47fbdba2fa503eb5c8e0767238079db1a1fa3437ded697ddec43d98dac1c773",
+  "method_files_byte_identical": true,
+  "pretrain_budget": 0,
+  "batch_streams": [
+    6,
+    6,
+    6,
+    6
+  ],
+  "total_images": 24,
+  "GT_images": 12,
+  "pseudo_pool": "1176 slices;63 strictly unlabeled patients; GT unread",
+  "epoch_batches": 196,
+  "val_slices": 210,
+  "dependencies_local": true
+}

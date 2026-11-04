@@ -1,0 +1,41 @@
+{
+  "status": "DONE",
+  "stage": "FINISHED",
+  "heartbeat": "2026-10-08T08:15:20.648877+08:00",
+  "heartbeat_epoch": 1791418520.6489081,
+  "pipeline_identity": {
+    "pid": 21653,
+    "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/run_pipeline.py --resume ",
+    "start_ticks": "2611687114"
+  },
+  "child_identity": null,
+  "host": "n1",
+  "GPU": 0,
+  "resource": {
+    "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+    "name": "NVIDIA A100-SXM4-40GB",
+    "total_mib": 40960,
+    "used_mib": 0,
+    "free_mib": 40326,
+    "utilization": 0,
+    "pids": []
+  },
+  "task": "C1_CTW_mean_uniform_v2B",
+  "tmux_session": "beta_fft_C1_CTW_uniform_20261008",
+  "joint_step": 30000,
+  "optimizer1_calls": 30000,
+  "optimizer2_calls": 30000,
+  "ETA_remaining_hours": 0.0,
+  "ETA_training_finish": null,
+  "ETA_basis": "R1 actual successful Popen segment 26440.013s",
+  "latest_checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/runs/C1_CTW_mean_uniform_v2B/checkpoints/last.ckpt",
+  "budget_joint": 30000,
+  "current_command": null,
+  "current_log": null,
+  "old_queue": "INTERRUPTED",
+  "automatic_retries": 0,
+  "worker_resume_exact": false,
+  "archive": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/C1_CTW_uniform_v2B_final_evidence.tar.gz",
+  "archive_status": "VERIFIED",
+  "training_queue_stopped": true
+}

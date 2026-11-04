@@ -1,0 +1,16 @@
+task,stage,start,end,seconds,exit_code,scope
+queue,PREFLIGHT,2026-10-08T12:47:14.369985+08:00,2026-10-08T12:47:19.860281+08:00,5.490338746458292,0,Completed server Popen stages before summary snapshot; imports/validation/IO included
+E4,SHORT_CHECK,2026-10-08T12:47:19.868758+08:00,2026-10-08T12:47:25.096309+08:00,5.227595683187246,0,Completed server Popen stages before summary snapshot; imports/validation/IO included
+E5,SHORT_CHECK,2026-10-08T12:47:25.135455+08:00,2026-10-08T12:47:30.372694+08:00,5.237282939255238,0,Completed server Popen stages before summary snapshot; imports/validation/IO included
+E4,TRAIN,2026-10-08T12:47:30.432798+08:00,2026-10-08T20:26:27.347326+08:00,27536.914573486894,0,Completed server Popen stages before summary snapshot; imports/validation/IO included
+E4,POSTCHECK,2026-10-08T20:26:27.434786+08:00,2026-10-08T20:26:37.695985+08:00,10.261246275156736,0,Completed server Popen stages before summary snapshot; imports/validation/IO included
+E4,EVALUATE,2026-10-08T20:26:37.726147+08:00,2026-10-08T20:27:03.268324+08:00,25.54222732037306,0,Completed server Popen stages before summary snapshot; imports/validation/IO included
+E4,ANALYSIS,2026-10-08T20:27:03.313869+08:00,2026-10-08T20:27:13.827173+08:00,10.513350948691368,0,Completed server Popen stages before summary snapshot; imports/validation/IO included
+E5,TRAIN,2026-10-08T20:27:13.888668+08:00,2026-10-08T22:00:41.809184+08:00,5607.920556619763,0,Completed server Popen stages before summary snapshot; imports/validation/IO included
+E5,POSTCHECK,2026-10-08T22:00:41.857127+08:00,2026-10-08T22:00:52.131379+08:00,10.27429899200797,0,Completed server Popen stages before summary snapshot; imports/validation/IO included
+E5,EVALUATE,2026-10-08T22:00:52.165992+08:00,2026-10-08T22:01:17.770377+08:00,25.604433823376894,0,Completed server Popen stages before summary snapshot; imports/validation/IO included
+E5,ANALYSIS,2026-10-08T22:01:17.855738+08:00,2026-10-08T22:01:28.351980+08:00,10.496289074420929,0,Completed server Popen stages before summary snapshot; imports/validation/IO included
+E4,ISOLATED_SHORT_UPDATE_1,NA: exact cold launch wall recorded as duration,NA,36.22531993687153,75,original 1+1 smoke process wall; successful intentional safe stop75; no formal updates; zero-probe/reload ancillary time not separately instrumented
+E4,ISOLATED_SHORT_UPDATE_2,NA: exact cold launch wall recorded as duration,NA,11.274288538843393,75,original 1+1 smoke process wall; successful intentional safe stop75; no formal updates; zero-probe/reload ancillary time not separately instrumented
+E5,ISOLATED_SHORT_UPDATE_1,NA: exact cold launch wall recorded as duration,NA,19.654202260077,75,original 1+1 smoke process wall; successful intentional safe stop75; no formal updates; zero-probe/reload ancillary time not separately instrumented
+E5,ISOLATED_SHORT_UPDATE_2,NA: exact cold launch wall recorded as duration,NA,8.960630312561989,75,original 1+1 smoke process wall; successful intentional safe stop75; no formal updates; zero-probe/reload ancillary time not separately instrumented

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T14:44:42.598043+00:00",
+  "training_started": false,
+  "checkpoint_replay_started": false,
+  "test_manifest_accessed": false,
+  "audit_asset": "audits/internal_evidence_expansion_v24_0/V24_0_CANONICAL_ACDC10_CASE_METRICS_AUDIT.tsv",
+  "audit_sha256": "66a6ab79dc480e6cbced93b4ba914fae15cf49f85bbd7da93f44b7f6939513e5",
+  "missing_methods": [],
+  "affected_tasks": [
+    "PATIENT_LEVEL_STATS",
+    "HARD_MEDIUM_EASY",
+    "BOUNDARY_F1"
+  ],
+  "identity_binding": "ACDC10_ARM_110 uses V21.5 raw_test/OURS; ACDC10_ARM_111 uses V21.5 raw_test/X03. See ACDC10_ARM_000_110_111_CASE_METRICS_BINDING.json."
+}

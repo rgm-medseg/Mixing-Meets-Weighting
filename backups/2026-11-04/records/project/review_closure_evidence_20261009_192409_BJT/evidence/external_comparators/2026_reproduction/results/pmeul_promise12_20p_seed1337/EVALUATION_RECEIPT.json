@@ -1,0 +1,22 @@
+{
+  "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/checkpoints/pmeul_promise12_20p_seed1337/best_model.pt",
+  "checkpoint_missing_keys": [],
+  "checkpoint_sha256": "38160ba30c453f0cf5ceac2c3ee48b8624c56042d08655b27321fbddf561b17d",
+  "checkpoint_unexpected_keys": [],
+  "config_sha256": "f3dd71cc0aa6550a736e12e6553d908a5a6ee99b5d8a73402a287cded5f0cb2e",
+  "dataset": "PROMISE12",
+  "evaluator": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tools/v22_1_postfull_test_launcher.py",
+  "evaluator_sha256": "2a20e429f54942c5392c57d1469a4edc1d0d93e144de4c3403c4d70407986ad6",
+  "job_id": "pmeul_promise12_20p_seed1337",
+  "method": "PMEUL",
+  "metrics": {
+    "asd": 2.494385677061076,
+    "dice": 0.6621849399382629,
+    "hd95": 8.884716192328572,
+    "iou": 0.5121589747668986
+  },
+  "prediction_output": "decoder1_index_0",
+  "split": "test",
+  "status": "EVALUATION_PASS",
+  "test_used_for_selection": false
+}

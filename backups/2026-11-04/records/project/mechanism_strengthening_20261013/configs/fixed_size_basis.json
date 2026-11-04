@@ -1,0 +1,22 @@
+{
+  "locked": true,
+  "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/train.log",
+  "source_sha256": "50a8922dfc74495006fb5f77f249b4d94347ab84900c570b952726dd6b098d9f",
+  "coverage": "sparse historical training endpoints, every 200 updates; not all-step mean",
+  "samples": 150,
+  "first_step": 200,
+  "last_step": 30000,
+  "observed_mean_actual_area": 0.1435699462890625,
+  "rms_side": 0.3791893842760617,
+  "fixed_side": 0.37890625,
+  "rectangle": [
+    97,
+    97
+  ],
+  "fixed_area": 0.1435699462890625,
+  "absolute_area_error": 0.0,
+  "relative_area_error": 0.0,
+  "rounding": "Python round, clamp [1,H-1]/[1,W-1]",
+  "position": "historical np.random.randint(0,max(1,H-patch_h)); same for W",
+  "selection": "nearest representable actual area; no test access"
+}

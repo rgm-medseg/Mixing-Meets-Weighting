@@ -1,0 +1,26 @@
+method_id,module,type,input_shape,output_shape,MACs,MAC_FLOPs,formula,bias_elementwise_adds
+Full_main,encoder.in_conv.conv_conv.0,Conv2d,"(1, 1, 256, 256)","(1, 16, 256, 256)",9437184,18874368,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,1048576
+Full_main,encoder.in_conv.conv_conv.4,Conv2d,"(1, 16, 256, 256)","(1, 16, 256, 256)",150994944,301989888,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,1048576
+Full_main,encoder.down1.maxpool_conv.1.conv_conv.0,Conv2d,"(1, 16, 128, 128)","(1, 32, 128, 128)",75497472,150994944,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,524288
+Full_main,encoder.down1.maxpool_conv.1.conv_conv.4,Conv2d,"(1, 32, 128, 128)","(1, 32, 128, 128)",150994944,301989888,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,524288
+Full_main,encoder.down2.maxpool_conv.1.conv_conv.0,Conv2d,"(1, 32, 64, 64)","(1, 64, 64, 64)",75497472,150994944,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,262144
+Full_main,encoder.down2.maxpool_conv.1.conv_conv.4,Conv2d,"(1, 64, 64, 64)","(1, 64, 64, 64)",150994944,301989888,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,262144
+Full_main,encoder.down3.maxpool_conv.1.conv_conv.0,Conv2d,"(1, 64, 32, 32)","(1, 128, 32, 32)",75497472,150994944,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,131072
+Full_main,encoder.down3.maxpool_conv.1.conv_conv.4,Conv2d,"(1, 128, 32, 32)","(1, 128, 32, 32)",150994944,301989888,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,131072
+Full_main,encoder.down4.maxpool_conv.1.conv_conv.0,Conv2d,"(1, 128, 16, 16)","(1, 256, 16, 16)",75497472,150994944,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,65536
+Full_main,encoder.down4.maxpool_conv.1.conv_conv.4,Conv2d,"(1, 256, 16, 16)","(1, 256, 16, 16)",150994944,301989888,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,65536
+Full_main,decoder.up1.conv1x1,Conv2d,"(1, 256, 16, 16)","(1, 128, 16, 16)",8388608,16777216,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,32768
+Full_main,decoder.up1.conv.conv_conv.0,Conv2d,"(1, 256, 32, 32)","(1, 128, 32, 32)",301989888,603979776,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,131072
+Full_main,decoder.up1.conv.conv_conv.4,Conv2d,"(1, 128, 32, 32)","(1, 128, 32, 32)",150994944,301989888,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,131072
+Full_main,decoder.up2.conv1x1,Conv2d,"(1, 128, 32, 32)","(1, 64, 32, 32)",8388608,16777216,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,65536
+Full_main,decoder.up2.conv.conv_conv.0,Conv2d,"(1, 128, 64, 64)","(1, 64, 64, 64)",301989888,603979776,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,262144
+Full_main,decoder.up2.conv.conv_conv.4,Conv2d,"(1, 64, 64, 64)","(1, 64, 64, 64)",150994944,301989888,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,262144
+Full_main,decoder.up3.conv1x1,Conv2d,"(1, 64, 64, 64)","(1, 32, 64, 64)",8388608,16777216,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,131072
+Full_main,decoder.up3.conv.conv_conv.0,Conv2d,"(1, 64, 128, 128)","(1, 32, 128, 128)",301989888,603979776,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,524288
+Full_main,decoder.up3.conv.conv_conv.4,Conv2d,"(1, 32, 128, 128)","(1, 32, 128, 128)",150994944,301989888,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,524288
+Full_main,decoder.up4.conv1x1,Conv2d,"(1, 32, 128, 128)","(1, 16, 128, 128)",8388608,16777216,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,262144
+Full_main,decoder.up4.conv.conv_conv.0,Conv2d,"(1, 32, 256, 256)","(1, 16, 256, 256)",301989888,603979776,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,1048576
+Full_main,decoder.up4.conv.conv_conv.4,Conv2d,"(1, 16, 256, 256)","(1, 16, 256, 256)",150994944,301989888,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,1048576
+Full_main,decoder.mask_token_router.project,Conv2d,"(1, 16, 256, 256)","(1, 16, 256, 256)",16777216,33554432,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,1048576
+Full_main,decoder.mask_token_router.inverse_project,Conv2d,"(1, 16, 256, 256)","(1, 16, 256, 256)",16777216,33554432,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,1048576
+Full_main,decoder.out_conv,Conv2d,"(1, 16, 256, 256)","(1, 4, 256, 256)",37748736,75497472,N*Cout*Hout*Wout*(Cin/groups)*Kh*Kw,262144

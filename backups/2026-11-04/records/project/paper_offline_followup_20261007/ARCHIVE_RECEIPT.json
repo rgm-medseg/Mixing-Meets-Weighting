@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "time": "2026-10-07T23:44:52.918575+08:00",
+  "archives": [
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/paper_offline_followup_20261007.tar.gz",
+      "sha256": "cbfcc686b8157548ccebb3f73759d903463cea0fc5b6a319dd3b8a97bd3ec645",
+      "bytes": 65722719,
+      "files": 937,
+      "actual_extraction_verified": true
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/paper_offline_A2_MAPPING_20261007.tar.gz",
+      "sha256": "5f8ebace5ec91c068ce88a18ef7af020865eeb15a3762c0dbe4c74b74c3213f2",
+      "bytes": 2066829,
+      "files": 110,
+      "actual_extraction_verified": true
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/paper_offline_A5_DEPLOYMENT_20261007.tar.gz",
+      "sha256": "5b2a95b311580dc81468ed531b089fdbed9e6f085c5149db2c20582ff4fefcff",
+      "bytes": 734277,
+      "files": 753,
+      "actual_extraction_verified": true
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/paper_offline_A3_SPATIAL_REGION_STATS_20261007.tar.gz",
+      "sha256": "2e07464e9b2d91f9929b3c675faa2b7fcd052f9cc338f1621b8d44fac1a0861f",
+      "bytes": 20547877,
+      "files": 91,
+      "actual_extraction_verified": true
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/paper_offline_A3_SPATIAL_CORE_20261007.tar.gz",
+      "sha256": "1c22e8d588143dc15f68d626a26ab24f7cb1c6a068b400f5a1df5785acf4d275",
+      "bytes": 12856498,
+      "files": 152,
+      "actual_extraction_verified": true
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/paper_offline_A3_SPATIAL_RAW_Full_main_best_20261007.tar.gz",
+      "sha256": "edad993722241baff1861b4aee2453ceaaef13565fabd191a0d785c191a2b9eb",
+      "bytes": 3409050,
+      "files": 109,
+      "actual_extraction_verified": true
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/paper_offline_A3_SPATIAL_RAW_Full_main_last_20261007.tar.gz",
+      "sha256": "ac766800ccbb4d9fc8b60b81c527c0693ec1363bc1de4ac32fcf9c5c3b0beff0",
+      "bytes": 3411332,
+      "files": 109,
+      "actual_extraction_verified": true
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/paper_offline_A3_SPATIAL_RAW_R1_v2_B_best_20261007.tar.gz",
+      "sha256": "8a478bdddf0d81be980cfc31e8c7e1769d94b48d3c885a4f3b8dc35fd53257d6",
+      "bytes": 6433194,
+      "files": 118,
+      "actual_extraction_verified": true
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/paper_offline_A3_SPATIAL_RAW_R1_v2_B_last_20261007.tar.gz",
+      "sha256": "3c9007bd6e7aecba4ce31d7e536b2c948d4947d1736aafdaad1de7d8dabfaa4a",
+      "bytes": 6467207,
+      "files": 118,
+      "actual_extraction_verified": true
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/paper_offline_A3_SPATIAL_RAW_R2_fixed92_best_20261007.tar.gz",
+      "sha256": "4bc8b924fc6f7f664f17698a17e5be2a1c8db9b197622befa5f70903c09220ee",
+      "bytes": 6414375,
+      "files": 118,
+      "actual_extraction_verified": true
+    },
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/paper_offline_A3_SPATIAL_RAW_R2_fixed92_last_20261007.tar.gz",
+      "sha256": "1fae61be6ce9f986510ea87279ee406909953a9e28495cd1368faaed7ed3ccc0",
+      "bytes": 6481043,
+      "files": 118,
+      "actual_extraction_verified": true
+    }
+  ],
+  "identity": "98f2cac076f3932d9d13ec60752d0c4d261a0c99663a8900ee86a558d9fb33cc",
+  "all_actual_extraction_verified": true,
+  "protected_sources": "PASS",
+  "training_updates": 0
+}

@@ -1,0 +1,26 @@
+{
+  "time": "2026-10-06T22:48:38.270956+08:00",
+  "selection": "unlabeled24 index-spaced; previously locked14 labeled slices; middle slice of all20 validation frames",
+  "seed": 4261006,
+  "grouping": "contiguous chunks of12; two equal subgroups, six+six except final short chunks",
+  "samples": {
+    "unlabeled_train": 24,
+    "labeled_train": 14,
+    "validation": 20
+  },
+  "image_size": [
+    256,
+    256
+  ],
+  "label_access": "only previously labeled training slices and validation; unlabeled GT not retained or scored",
+  "test_access": false,
+  "parameter_updates": 0,
+  "optimizer_steps": 0,
+  "modes": [
+    "eval",
+    "train_snapshot"
+  ],
+  "train_snapshot": "training-mode dropout/BN; checkpoint buffers restored before and after each diagnostic batch; parameters never updated",
+  "continuation_state": "independent process RNG/model copies, checkpoint files and queue unchanged",
+  "dice_definition": "per-slice or pooled diagnostic all3 foreground classes; double-empty class0; present-GT-class score also provided; not final test-volume Dice"
+}

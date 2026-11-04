@@ -1,0 +1,13 @@
+{
+  "audit_id": "V22_0_TRANSFER_X03_SEMANTIC_PARITY",
+  "created_at": "2026-08-19T13:44:28.042538+00:00",
+  "x03_source": "train_ACDC/v21_3_acdc10_third_innovation_components.py",
+  "x03_source_sha256": "f28abc48fedff330f9aa7470072ebc16a607c6c59fd14942c2adb111b8ce748a",
+  "candidate_id": "V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+  "frozen_weight": 0.05,
+  "synthetic_only_no_data_access": true,
+  "all_transfer_targets_pass": true,
+  "dataset_specific_tuning": false,
+  "test_driven_tuning": false,
+  "parity_tsv": "audits/three_innovation_ablation_transfer_v22_0/TRANSFER_X03_HYPERPARAMETER_PARITY.tsv"
+}

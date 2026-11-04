@@ -1,0 +1,10 @@
+{
+  "method_id": "R1_v2_B",
+  "checkpoint_sha256": "5df2de9b8df16e4d89df9265f104b4b8c7c321245d9eaa0479971672b4d7a1a9",
+  "global_step": 29000,
+  "branch": "ema_model",
+  "strict": true,
+  "state_keys": 234,
+  "parameters": 1827469,
+  "trainable_parameters": 0
+}

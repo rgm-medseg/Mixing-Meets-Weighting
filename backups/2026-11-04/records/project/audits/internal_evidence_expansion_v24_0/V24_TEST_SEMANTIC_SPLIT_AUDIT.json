@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:17:43.274190+00:00",
+  "task_id": "V24_TEST_SEMANTIC_SPLIT_AUDIT",
+  "training_started": false,
+  "formal_started": false,
+  "A2_X03_RELIABILITY_FAITHFULNESS": {
+    "split": "VAL",
+    "VAL_ONLY": true,
+    "TEST_DATA_READ": false,
+    "TEST_USED_FOR_TUNING": false,
+    "TEST_USED_FOR_SELECTION": false,
+    "source_receipt": "audits/internal_evidence_expansion_v24_0/X03_RELIABILITY_FAITHFULNESS_RECEIPT.json",
+    "source_receipt_sha256": "73ce467a68f9a4f324675781d963f73e42a423b7618ac01c0e8a1a3d2bcc4bb9"
+  },
+  "A6_A9_FROZEN_TEST_REPLAY": {
+    "tasks": [
+      "BOUNDARY_F1",
+      "CORRUPTION_ROBUSTNESS"
+    ],
+    "TEST_DATA_READ_FOR_PRE_REGISTERED_EVALUATION": true,
+    "TEST_USED_FOR_TUNING": false,
+    "TEST_USED_FOR_SELECTION": false,
+    "CHECKPOINT_SELECTION_STARTED": false,
+    "CHECKPOINT_RESELECTION_AFTER_TEST": false,
+    "analysis_mode": "FULL_FROZEN_CHECKPOINT_REPLAY",
+    "case_count": 40,
+    "test_manifest_sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+    "source_receipt": "audits/internal_evidence_expansion_v24_0/ACDC10_FROZEN_REPLAY_ANALYSIS_FINAL_RECEIPT.json",
+    "source_receipt_sha256": "0f4eb16f69b9ce827357ad6ac3f7e5bcd46b09ba54d034c470606652f366e90d"
+  }
+}

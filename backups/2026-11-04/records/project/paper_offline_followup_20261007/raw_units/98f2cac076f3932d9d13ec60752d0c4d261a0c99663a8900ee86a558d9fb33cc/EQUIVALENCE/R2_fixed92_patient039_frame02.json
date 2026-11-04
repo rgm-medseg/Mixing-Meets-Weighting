@@ -1,0 +1,203 @@
+{
+  "identity": "98f2cac076f3932d9d13ec60752d0c4d261a0c99663a8900ee86a558d9fb33cc",
+  "status": "PASS",
+  "checkpoint_sha256": "b56292a270ccf6679b5597e9d556eda686df91778e496e715174aaa367b710de",
+  "branch": "model_1",
+  "load_receipt": {
+    "method_id": "R2_fixed92",
+    "checkpoint_sha256": "b56292a270ccf6679b5597e9d556eda686df91778e496e715174aaa367b710de",
+    "global_step": 29000,
+    "branch": "model_1",
+    "strict": true,
+    "state_keys": 234,
+    "parameters": 1827469,
+    "trainable_parameters": 1827469
+  },
+  "model_state_before": "2265ff2e25037f0eadf4c13f191aab6a6f541407ba9d83afc4a988b39c165d9f",
+  "model_state_after": "2265ff2e25037f0eadf4c13f191aab6a6f541407ba9d83afc4a988b39c165d9f",
+  "source_shape": [
+    9,
+    224,
+    224
+  ],
+  "errors": [
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "slice_index": 0,
+      "input_sha256": "f0331de054d9bb13487ab2acbaa73dab593273b2c5c2b97e99d303a91735130d",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "slice_index": 1,
+      "input_sha256": "eab471f3e1d321bd6142fb29f04329c6042d0b9f74129906577a7f83137ea1e5",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "slice_index": 2,
+      "input_sha256": "bb4a28ea0560f665c9015db35828fbf328da2961add70a7c653832de4d31b181",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "slice_index": 3,
+      "input_sha256": "6f4791c318741397189a0f905868d9635c75d870cbf336e031ba6312f1acbf9b",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "slice_index": 4,
+      "input_sha256": "850846664add7e41570fb2c1bd1abf0d48c786f390046ba22142ea1e0aaef1c2",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "slice_index": 5,
+      "input_sha256": "5099ce758e68c6caf8eb2d7aa7222d93e14625ff0714d782154ec7ede82897de",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "slice_index": 6,
+      "input_sha256": "fc997f853343f112f1af8b4ff0c63fb179cb75ed39d0ac726e4f6a73fd5281c9",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "slice_index": 7,
+      "input_sha256": "d7145b29af97181fdf3e365a64c8304f45951a0d98976c9aaa2ee3b77846dd77",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "slice_index": 8,
+      "input_sha256": "c628eabaf96126d572b3d2f5521858b16746a2e5832e6897aac15f32a5870bc4",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    }
+  ],
+  "metrics": [
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "path": "original_runtime",
+      "class_id": 1,
+      "unit": "native grid pixels",
+      "Dice": 0.7671002937473772,
+      "IoU": 0.6221919673247107,
+      "HD95": 3.0,
+      "ASD": 0.9503176882235971
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "path": "original_runtime",
+      "class_id": 2,
+      "unit": "native grid pixels",
+      "Dice": 0.9240678805896198,
+      "IoU": 0.8588533271931844,
+      "HD95": 1.0,
+      "ASD": 0.4396544003707708
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "path": "original_runtime",
+      "class_id": 3,
+      "unit": "native grid pixels",
+      "Dice": 0.8944658944658944,
+      "IoU": 0.8090803259604191,
+      "HD95": 1.0,
+      "ASD": 0.31843672842207665
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "path": "deployment_no_diagnostics",
+      "class_id": 1,
+      "unit": "native grid pixels",
+      "Dice": 0.7671002937473772,
+      "IoU": 0.6221919673247107,
+      "HD95": 3.0,
+      "ASD": 0.9503176882235971
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "path": "deployment_no_diagnostics",
+      "class_id": 2,
+      "unit": "native grid pixels",
+      "Dice": 0.9240678805896198,
+      "IoU": 0.8588533271931844,
+      "HD95": 1.0,
+      "ASD": 0.4396544003707708
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient039_frame02",
+      "path": "deployment_no_diagnostics",
+      "class_id": 3,
+      "unit": "native grid pixels",
+      "Dice": 0.8944658944658944,
+      "IoU": 0.8090803259604191,
+      "HD95": 1.0,
+      "ASD": 0.31843672842207665
+    }
+  ],
+  "original_prediction_sha256": "38e2efa277ccfb85db517fd42a0ebebd59d48d46744aec85bcbb8ab6c8dd6ed3",
+  "deployment_prediction_sha256": "38e2efa277ccfb85db517fd42a0ebebd59d48d46744aec85bcbb8ab6c8dd6ed3"
+}

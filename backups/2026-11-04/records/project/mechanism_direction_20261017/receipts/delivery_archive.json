@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "archive": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_direction_20261017/mechanism_direction_evidence_20261017.tar.gz",
+  "sha256": "56b926023b0a89ba563a30937e96952a4454d0675bd5981fcd3faf0037c32937",
+  "bytes": 2946772,
+  "included_files": 59,
+  "large_arrays_included": false,
+  "full_array_index": "receipts/new_array_manifest.csv",
+  "original_array_index": "receipts/main_source_arrays.csv",
+  "note": "Large original inputs/checkpoints and new cached arrays remain in the workspace; package contains complete statistical CSVs and reproducible scripts with indexes."
+}

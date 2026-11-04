@@ -1,0 +1,29 @@
+[
+  {
+    "stage": "update",
+    "target": 1,
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py",
+      "--short-target",
+      "1"
+    ],
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/runs/E4_isolated_short/logs/update_1_1791434184616817913.log",
+    "exit_code": 75,
+    "elapsed_seconds": 36.22531993687153
+  },
+  {
+    "stage": "update",
+    "target": 2,
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py",
+      "--short-target",
+      "2",
+      "--resume"
+    ],
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/runs/E4_isolated_short/logs/update_2_1791434223175652844.log",
+    "exit_code": 75,
+    "elapsed_seconds": 11.274288538843393
+  }
+]

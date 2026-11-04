@@ -1,0 +1,4 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/audits/HIEN_PROTOCOL_AUDIT.md
+ORIGINAL_SHA256: 4180162c2f4b6e8af276afc76e00846541eb97b8dd995d6056a3dc7be362cd09
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 82-41 ---

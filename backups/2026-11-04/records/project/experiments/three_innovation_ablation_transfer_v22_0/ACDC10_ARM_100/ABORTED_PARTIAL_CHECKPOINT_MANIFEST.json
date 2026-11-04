@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-08-19T15:27:11.583361+00:00",
+  "TaskID": "ACDC10_ARM_100",
+  "checkpoints": [
+    {
+      "path": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100/checkpoints/best.ckpt",
+      "sha256": "ef3a08f1623c34af8c2e6910aba78f9a269b9ba017f2a1cc7aa3f97a61abda2e",
+      "ABORTED_PARTIAL_CHECKPOINT": true,
+      "NOT_FOR_FORMAL_RESUME": true,
+      "NOT_FOR_PAPER": true
+    },
+    {
+      "path": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100/checkpoints/last.ckpt",
+      "sha256": "38f7db4a74847dcceb54186b8882593a22277c57fc8913743c912de74b3b614d",
+      "ABORTED_PARTIAL_CHECKPOINT": true,
+      "NOT_FOR_FORMAL_RESUME": true,
+      "NOT_FOR_PAPER": true
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "audit_id": "V22_0_CONTROLLER_RESUME_SCRATCH_CANARY",
+  "created_at": "2026-08-19T15:33:38.502612+00:00",
+  "LIVE_FORMAL_RUNTIME_UNTOUCHED": true,
+  "SCIENTIFIC_TRAINER_UNTOUCHED": true,
+  "FORMAL_TASK_USED_FOR_FAULT_EXPERIMENT": false,
+  "canaries": [
+    {
+      "Name": "LIVE_CHILD_REATTACH",
+      "Status": "PASS",
+      "ChildAliveAfterControllerCrash": true,
+      "ResumeReturnCode": 0,
+      "DuplicateRunningTaskRows": 1,
+      "Ledger": "runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/live_child_reattach/runtime/controller_formal_ledger.tsv",
+      "Completed": "runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/live_child_reattach/runtime/completed.tsv",
+      "ResumeStdoutTail": "{\n  \"status\": \"FORMAL_FULL_QUEUE_COMPLETE\",\n  \"created_at\": \"2026-08-19T15:33:38.124009+00:00\",\n  \"formal_full_started\": false,\n  \"formal_tmux_controller_started\": true,\n  \"started_task_count\": 0,\n  \"passed_task_count\": 1,\n  \"skipped_or_reuse_count\": 1,\n  \"failed_task\": \"\",\n  \"ledger\": \"runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/live_child_reattach/runtime/controller_formal_ledger.tsv\",\n  \"test_started\": false,\n  \"real_transfer_test_access\": 0\n}\n{\n  \"status\": \"FORMAL_FULL_QUEUE_COMPLETE\",\n  \"created_at\": \"2026-08-19T15:33:38.124009+00:00\",\n  \"formal_full_started\": false,\n  \"formal_tmux_controller_started\": true,\n  \"started_task_count\": 0,\n  \"passed_task_count\": 1,\n  \"skipped_or_reuse_count\": 1,\n  \"failed_task\": \"\",\n  \"ledger\": \"runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/live_child_reattach/runtime/controller_formal_ledger.tsv\",\n  \"test_started\": false,\n  \"real_transfer_test_access\": 0\n}\n"
+    },
+    {
+      "Name": "CHECKPOINT_RESTART",
+      "Status": "PASS",
+      "ResumeReturnCode": 0,
+      "CheckpointPath": "runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/checkpoint_resume/run/SCRATCH_TASK/checkpoints/last.ckpt",
+      "Receipt": {
+        "status": "PASS",
+        "task_id": "SCRATCH_TASK",
+        "pid": 84634,
+        "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/checkpoint_resume/run/SCRATCH_TASK/checkpoints/last.ckpt",
+        "resumed": true,
+        "resumed_from": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/checkpoint_resume/run/SCRATCH_TASK/checkpoints/last.ckpt",
+        "created_at": "2026-08-19T15:33:38.457487+00:00"
+      },
+      "Ledger": "runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/checkpoint_resume/runtime/controller_formal_ledger.tsv",
+      "ResumeStdoutTail": "{\n  \"status\": \"FORMAL_FULL_QUEUE_COMPLETE\",\n  \"created_at\": \"2026-08-19T15:33:38.482189+00:00\",\n  \"formal_full_started\": true,\n  \"formal_tmux_controller_started\": true,\n  \"started_task_count\": 1,\n  \"passed_task_count\": 1,\n  \"skipped_or_reuse_count\": 1,\n  \"failed_task\": \"\",\n  \"ledger\": \"runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/checkpoint_resume/runtime/controller_formal_ledger.tsv\",\n  \"test_started\": false,\n  \"real_transfer_test_access\": 0\n}\n{\n  \"status\": \"FORMAL_FULL_QUEUE_COMPLETE\",\n  \"created_at\": \"2026-08-19T15:33:38.482189+00:00\",\n  \"formal_full_started\": true,\n  \"formal_tmux_controller_started\": true,\n  \"started_task_count\": 1,\n  \"passed_task_count\": 1,\n  \"skipped_or_reuse_count\": 1,\n  \"failed_task\": \"\",\n  \"ledger\": \"runtime/three_innovation_ablation_transfer_v22_0/scratch_resume_canary/checkpoint_resume/runtime/controller_formal_ledger.tsv\",\n  \"test_started\": false,\n  \"real_transfer_test_access\": 0\n}\n"
+    }
+  ],
+  "CONTROLLER_CRASH_RESUME_CANARY": "PASS"
+}

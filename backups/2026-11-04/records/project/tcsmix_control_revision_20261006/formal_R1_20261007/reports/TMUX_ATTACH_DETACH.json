@@ -1,0 +1,10 @@
+{
+  "time": "2026-10-07T00:41:51.872899+08:00",
+  "attach_command": "TERM=xterm-256color tmux attach-session -t beta_fft_R1_v2B_20261007",
+  "interactive_terminal": true,
+  "detach_keys": "Ctrl-b then d",
+  "attach_exit_code": 0,
+  "remaining_clients": "",
+  "observation": "interactive client terminated normally after detach; ordinary server pipeline continues",
+  "GPU_PID_note": "NVML reported compute PID4901, /proc-visible training PID70675; namespaces differ or driver reports host PID, mapping not established; use verified pipeline-child PPID for local controls, never signal NVIDIA-reported PID"
+}

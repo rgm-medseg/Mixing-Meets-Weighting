@@ -1,0 +1,14 @@
+{
+  "time": "2026-10-06T23:39:12.307544+08:00",
+  "figures": {
+    "short_control_trace": "short_trace.csv",
+    "control_replay": "control_diagnostics.csv",
+    "controlled_signal_response": "analysis/controlled_probability_checks.csv"
+  },
+  "version": "v2_B",
+  "official_metrics": "NA",
+  "medical_images_exported": false,
+  "plotting": "Matplotlib real statistics, editable SVG text",
+  "checkpoint_inventory": "reports/offline_checkpoint_inventory.json",
+  "teacher_for_short": "new evolving v2_B teacher, no old-teacher trajectory substitution"
+}

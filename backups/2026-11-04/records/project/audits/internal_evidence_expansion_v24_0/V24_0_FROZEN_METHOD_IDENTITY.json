@@ -1,0 +1,204 @@
+{
+  "AuditID": "V24_0_FROZEN_METHOD_IDENTITY",
+  "created_at": "2026-08-24T14:18:19.752080+00:00",
+  "BASELINE_DISPLAY_NAME": "β-FFT",
+  "INTERMEDIATE_DISPLAY_NAME": "Mask Token + AdaMix",
+  "FINAL_DISPLAY_NAME": "Ours",
+  "INNOVATION_1": "Mask Token",
+  "INNOVATION_2": "AdaMix",
+  "INNOVATION_3": "X03 Contour Reliability Weight",
+  "X03_WEIGHT": 0.05,
+  "X03_WEIGHT_RESELECTION_ALLOWED": false,
+  "DATASET_SPECIFIC_X03_TUNING": false,
+  "TEST_DRIVEN_TUNING": false,
+  "assets": {
+    "sources": {
+      "beta_fft_training_entry": {
+        "path": "train_promise12/train_promise12_bcp_fft.py",
+        "exists": true,
+        "sha256": "e1006ebe9731d7665a886dc5f897f130c5818c132fa575cc16c9ea845cb27386",
+        "bytes": 180273
+      },
+      "acdc_mask_adamix_components": {
+        "path": "train_ACDC/v14_mask_adamix_components.py",
+        "exists": true,
+        "sha256": "75754fa75e6fd6fc01c97682262895998799c7ce3c0bc2dcbe058ef4c63dcaee",
+        "bytes": 9763
+      },
+      "x03_components": {
+        "path": "train_ACDC/v21_3_acdc10_third_innovation_components.py",
+        "exists": true,
+        "sha256": "f28abc48fedff330f9aa7470072ebc16a607c6c59fd14942c2adb111b8ce748a",
+        "bytes": 6739
+      },
+      "x03_transfer_entry": {
+        "path": "train_ACDC/v21_3_acdc10_third_innovation_transfer.py",
+        "exists": true,
+        "sha256": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+        "bytes": 5747
+      },
+      "acdc_val_evaluator": {
+        "path": "train_ACDC/val_2D.py",
+        "exists": true,
+        "sha256": "8724f0ce4d3497f29415055ffd7f575bc0943d448705fd53a660ba9089ad70b4",
+        "bytes": 4696
+      }
+    },
+    "acdc_manifests": {
+      "train_list": {
+        "path": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/train.list",
+        "exists": true,
+        "sha256": "97a399f7bdbfe96b93cf8731a4bf3dd78562269bada57464fdc0dbc3f0f45746",
+        "bytes": 2660
+      },
+      "val_list": {
+        "path": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list",
+        "exists": true,
+        "sha256": "61b935c936d8e12f7889e82d954f421fa25fb95305e92a476096b3242de8777d",
+        "bytes": 380
+      },
+      "test_list": {
+        "path": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/test.list",
+        "exists": true,
+        "sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+        "bytes": 760
+      },
+      "train_slices_list": {
+        "path": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/train_slices.list",
+        "exists": true,
+        "sha256": "1b21b2a69d1b28b4dfce6837fdb0572414d337566b51b3dd0e0fda342a6f0648",
+        "bytes": 35556
+      },
+      "all_slices_list": {
+        "path": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/all_slices.list",
+        "exists": true,
+        "sha256": "30542ca264d0d4ed03d4efa170e298d06607e26090a1d96e73793c49da1ca70e",
+        "bytes": 51568
+      }
+    },
+    "acdc10_arms": {
+      "ARM_000_beta_fft": {
+        "display": "β-FFT",
+        "mask_token": false,
+        "adamix": false,
+        "x03": false,
+        "run_root": "runs/beta_fft_acdc_official_full_seed42_fresh_ckpt",
+        "train_log": {
+          "path": "runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/train.log",
+          "exists": true,
+          "sha256": "be4a597472d93f0834d597fd32b921f4d5a460afa2f566d14f2858754c5fda07",
+          "bytes": 5447600
+        },
+        "best_checkpoint": {
+          "path": "runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/checkpoints/best.ckpt",
+          "exists": true,
+          "sha256": "825da2e9a944c930fa54cb9b7abc843345e4a7cde851d34c390739acaa0d5dbf",
+          "bytes": 36736810
+        },
+        "test_metrics": {
+          "path": "final_report/paper_internal_evidence_v23_0/tables/TABLE4_ACDC10_8ARM_FULL_PRECISION.tsv",
+          "exists": true,
+          "sha256": "5cb39eec601182edfe1df2a4024583b6ca8878e25ab5a2a50bd815476a373e46",
+          "bytes": 1479
+        }
+      },
+      "ARM_110_mask_adamix": {
+        "display": "Mask Token + AdaMix",
+        "mask_token": true,
+        "adamix": true,
+        "x03": false,
+        "run_root": "runs/beta_fft_acdc_10pct_mask_token_adamix_full_seed42",
+        "train_log": {
+          "path": "runs/beta_fft_acdc_10pct_mask_token_adamix_full_seed42/train.log",
+          "exists": true,
+          "sha256": "4ddfab8668f2f7d2a24cf8cc0b758925b626939c2edcd045e1ecc83c8ac5b32e",
+          "bytes": 5692197
+        },
+        "best_checkpoint": {
+          "path": "runs/beta_fft_acdc_10pct_mask_token_adamix_full_seed42/checkpoints/best.ckpt",
+          "exists": true,
+          "sha256": "f10f69989883a423117a53695311b47e01dc65fbc27fbce2d0c666d6fd733514",
+          "bytes": 36760994
+        },
+        "test_metrics": {
+          "path": "final_report/paper_internal_evidence_v23_0/tables/TABLE4_ACDC10_8ARM_FULL_PRECISION.tsv",
+          "exists": true,
+          "sha256": "5cb39eec601182edfe1df2a4024583b6ca8878e25ab5a2a50bd815476a373e46",
+          "bytes": 1479
+        }
+      },
+      "ARM_111_ours": {
+        "display": "Ours",
+        "mask_token": true,
+        "adamix": true,
+        "x03": true,
+        "x03_weight": 0.05,
+        "run_root": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+        "train_log": {
+          "path": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/train.log",
+          "exists": true,
+          "sha256": "50a8922dfc74495006fb5f77f249b4d94347ab84900c570b952726dd6b098d9f",
+          "bytes": 5753728
+        },
+        "best_checkpoint": {
+          "path": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/best.ckpt",
+          "exists": true,
+          "sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+          "bytes": 36761122
+        },
+        "canonical_parent_config": {
+          "path": "configs/paper_internal_evidence_v23_0/ACDC10_ARM_111_CANONICAL_PARENT_RECONSTRUCTED.json",
+          "exists": true,
+          "sha256": "19bc401c3c3f2a56a42836d7ed954dd52808ad64b66d7d11c1d88abf8fdb1399",
+          "bytes": 2444
+        },
+        "parent_identity_audit": {
+          "path": "audits/paper_internal_evidence_v23_0/ACDC10_ARM_111_CANONICAL_PARENT_IDENTITY_AUDIT.json",
+          "exists": true,
+          "sha256": "99569f9eb262e9db8774f5a6294aa857c7c4f60d2a2aac2a1d3364bbbf30baa7",
+          "bytes": 969
+        },
+        "test_metrics": {
+          "path": "final_report/paper_internal_evidence_v23_0/tables/TABLE4_ACDC10_8ARM_FULL_PRECISION.tsv",
+          "exists": true,
+          "sha256": "5cb39eec601182edfe1df2a4024583b6ca8878e25ab5a2a50bd815476a373e46",
+          "bytes": 1479
+        }
+      }
+    },
+    "v22_v23_result_assets": {
+      "acdc10_8arm_test": {
+        "path": "final_report/paper_internal_evidence_v23_0/tables/TABLE4_ACDC10_8ARM_FULL_PRECISION.tsv",
+        "exists": true,
+        "sha256": "5cb39eec601182edfe1df2a4024583b6ca8878e25ab5a2a50bd815476a373e46",
+        "bytes": 1479
+      },
+      "classwise_all_metrics": {
+        "path": "final_report/paper_internal_evidence_v23_0/ACDC10_8ARM_CLASSWISE_ALL_METRICS.tsv",
+        "exists": true,
+        "sha256": "ede7d98fb315dbb5ac4304e4e87b922d968bc9f0e5013c8c464f4eabb8f6ab6c",
+        "bytes": 4780
+      },
+      "training_dynamics_raw": {
+        "path": "final_report/paper_internal_evidence_v23_0/TRAINING_DYNAMICS_RAW.tsv",
+        "exists": true,
+        "sha256": "fa630736fd580c21ed2c65765cf916a34b741488c27b78de3af9c4f5bea0b144",
+        "bytes": 126090
+      },
+      "x03_sensitivity": {
+        "path": "final_report/paper_internal_evidence_v23_0/X03_WEIGHT_SENSITIVITY_FULL_PRECISION.tsv",
+        "exists": true,
+        "sha256": "67f22c7d75fc39d0ef472a2e3613445060e559c2764f5b1d2b730a847c2cde29",
+        "bytes": 1224
+      },
+      "v23_handoff": {
+        "path": "final_report/paper_internal_evidence_v23_0/V23_0_PAPER_INTERNAL_EVIDENCE_HANDOFF_FOR_CHATGPT.md",
+        "exists": true,
+        "sha256": "8901c1fa520fcd0c0bd639abb13bc614c1dc94391da3b5267ba38bdbc158e4d5",
+        "bytes": 15700
+      }
+    }
+  },
+  "missing_assets": [],
+  "status": "PASS"
+}

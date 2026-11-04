@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "initial_controller_pid": 84553,
+  "initial_child_pid": 84556,
+  "actual_attach_then_detach": true,
+  "duplicate_start_reused_pid": 84553,
+  "initial_GPU_PID_wait_preserved": true,
+  "current_controller": 84847,
+  "current_progress": {
+    "stage": "A2",
+    "time": "2026-10-07T19:34:28.731316+08:00",
+    "method": "baseline",
+    "checkpoint": "last",
+    "cohort": "labeled_train",
+    "patient": "patient021",
+    "completed_units": 33
+  },
+  "no_training_updates": true
+}

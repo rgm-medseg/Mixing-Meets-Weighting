@@ -1,0 +1,9 @@
+{
+  "time": "2026-10-07T00:00:52.164306+08:00",
+  "executed_source": "reports/run_short_check_executed.py",
+  "executed_sha256": "423de78d280d67b81a426c1ed0246acd2e6aae74a17ef1ba88df8a2376fca8d0",
+  "prepared_source": "scripts/run_short_check.py",
+  "prepared_sha256": "552b05d1ff9685ef737a7ed85f7ff4ccc7a3e94726a0b4d6bd9f9f4f91bcfe82",
+  "change": "after run, refuse repeat before status/log writes; negative check passed without updates",
+  "optimizer_calls_after_change": 0
+}

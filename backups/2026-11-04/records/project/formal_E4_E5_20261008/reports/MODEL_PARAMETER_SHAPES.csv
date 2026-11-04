@@ -1,0 +1,382 @@
+task,name,shape,numel,requires_grad
+E4,encoder.in_conv.conv_conv.0.weight,"[16, 1, 3, 3]",144,True
+E4,encoder.in_conv.conv_conv.0.bias,[16],16,True
+E4,encoder.in_conv.conv_conv.1.weight,[16],16,True
+E4,encoder.in_conv.conv_conv.1.bias,[16],16,True
+E4,encoder.in_conv.conv_conv.4.weight,"[16, 16, 3, 3]",2304,True
+E4,encoder.in_conv.conv_conv.4.bias,[16],16,True
+E4,encoder.in_conv.conv_conv.5.weight,[16],16,True
+E4,encoder.in_conv.conv_conv.5.bias,[16],16,True
+E4,encoder.down1.maxpool_conv.1.conv_conv.0.weight,"[32, 16, 3, 3]",4608,True
+E4,encoder.down1.maxpool_conv.1.conv_conv.0.bias,[32],32,True
+E4,encoder.down1.maxpool_conv.1.conv_conv.1.weight,[32],32,True
+E4,encoder.down1.maxpool_conv.1.conv_conv.1.bias,[32],32,True
+E4,encoder.down1.maxpool_conv.1.conv_conv.4.weight,"[32, 32, 3, 3]",9216,True
+E4,encoder.down1.maxpool_conv.1.conv_conv.4.bias,[32],32,True
+E4,encoder.down1.maxpool_conv.1.conv_conv.5.weight,[32],32,True
+E4,encoder.down1.maxpool_conv.1.conv_conv.5.bias,[32],32,True
+E4,encoder.down2.maxpool_conv.1.conv_conv.0.weight,"[64, 32, 3, 3]",18432,True
+E4,encoder.down2.maxpool_conv.1.conv_conv.0.bias,[64],64,True
+E4,encoder.down2.maxpool_conv.1.conv_conv.1.weight,[64],64,True
+E4,encoder.down2.maxpool_conv.1.conv_conv.1.bias,[64],64,True
+E4,encoder.down2.maxpool_conv.1.conv_conv.4.weight,"[64, 64, 3, 3]",36864,True
+E4,encoder.down2.maxpool_conv.1.conv_conv.4.bias,[64],64,True
+E4,encoder.down2.maxpool_conv.1.conv_conv.5.weight,[64],64,True
+E4,encoder.down2.maxpool_conv.1.conv_conv.5.bias,[64],64,True
+E4,encoder.down3.maxpool_conv.1.conv_conv.0.weight,"[128, 64, 3, 3]",73728,True
+E4,encoder.down3.maxpool_conv.1.conv_conv.0.bias,[128],128,True
+E4,encoder.down3.maxpool_conv.1.conv_conv.1.weight,[128],128,True
+E4,encoder.down3.maxpool_conv.1.conv_conv.1.bias,[128],128,True
+E4,encoder.down3.maxpool_conv.1.conv_conv.4.weight,"[128, 128, 3, 3]",147456,True
+E4,encoder.down3.maxpool_conv.1.conv_conv.4.bias,[128],128,True
+E4,encoder.down3.maxpool_conv.1.conv_conv.5.weight,[128],128,True
+E4,encoder.down3.maxpool_conv.1.conv_conv.5.bias,[128],128,True
+E4,encoder.down4.maxpool_conv.1.conv_conv.0.weight,"[256, 128, 3, 3]",294912,True
+E4,encoder.down4.maxpool_conv.1.conv_conv.0.bias,[256],256,True
+E4,encoder.down4.maxpool_conv.1.conv_conv.1.weight,[256],256,True
+E4,encoder.down4.maxpool_conv.1.conv_conv.1.bias,[256],256,True
+E4,encoder.down4.maxpool_conv.1.conv_conv.4.weight,"[256, 256, 3, 3]",589824,True
+E4,encoder.down4.maxpool_conv.1.conv_conv.4.bias,[256],256,True
+E4,encoder.down4.maxpool_conv.1.conv_conv.5.weight,[256],256,True
+E4,encoder.down4.maxpool_conv.1.conv_conv.5.bias,[256],256,True
+E4,decoder.up1.conv1x1.weight,"[128, 256, 1, 1]",32768,True
+E4,decoder.up1.conv1x1.bias,[128],128,True
+E4,decoder.up1.conv.conv_conv.0.weight,"[128, 256, 3, 3]",294912,True
+E4,decoder.up1.conv.conv_conv.0.bias,[128],128,True
+E4,decoder.up1.conv.conv_conv.1.weight,[128],128,True
+E4,decoder.up1.conv.conv_conv.1.bias,[128],128,True
+E4,decoder.up1.conv.conv_conv.4.weight,"[128, 128, 3, 3]",147456,True
+E4,decoder.up1.conv.conv_conv.4.bias,[128],128,True
+E4,decoder.up1.conv.conv_conv.5.weight,[128],128,True
+E4,decoder.up1.conv.conv_conv.5.bias,[128],128,True
+E4,decoder.up2.conv1x1.weight,"[64, 128, 1, 1]",8192,True
+E4,decoder.up2.conv1x1.bias,[64],64,True
+E4,decoder.up2.conv.conv_conv.0.weight,"[64, 128, 3, 3]",73728,True
+E4,decoder.up2.conv.conv_conv.0.bias,[64],64,True
+E4,decoder.up2.conv.conv_conv.1.weight,[64],64,True
+E4,decoder.up2.conv.conv_conv.1.bias,[64],64,True
+E4,decoder.up2.conv.conv_conv.4.weight,"[64, 64, 3, 3]",36864,True
+E4,decoder.up2.conv.conv_conv.4.bias,[64],64,True
+E4,decoder.up2.conv.conv_conv.5.weight,[64],64,True
+E4,decoder.up2.conv.conv_conv.5.bias,[64],64,True
+E4,decoder.up3.conv1x1.weight,"[32, 64, 1, 1]",2048,True
+E4,decoder.up3.conv1x1.bias,[32],32,True
+E4,decoder.up3.conv.conv_conv.0.weight,"[32, 64, 3, 3]",18432,True
+E4,decoder.up3.conv.conv_conv.0.bias,[32],32,True
+E4,decoder.up3.conv.conv_conv.1.weight,[32],32,True
+E4,decoder.up3.conv.conv_conv.1.bias,[32],32,True
+E4,decoder.up3.conv.conv_conv.4.weight,"[32, 32, 3, 3]",9216,True
+E4,decoder.up3.conv.conv_conv.4.bias,[32],32,True
+E4,decoder.up3.conv.conv_conv.5.weight,[32],32,True
+E4,decoder.up3.conv.conv_conv.5.bias,[32],32,True
+E4,decoder.up4.conv1x1.weight,"[16, 32, 1, 1]",512,True
+E4,decoder.up4.conv1x1.bias,[16],16,True
+E4,decoder.up4.conv.conv_conv.0.weight,"[16, 32, 3, 3]",4608,True
+E4,decoder.up4.conv.conv_conv.0.bias,[16],16,True
+E4,decoder.up4.conv.conv_conv.1.weight,[16],16,True
+E4,decoder.up4.conv.conv_conv.1.bias,[16],16,True
+E4,decoder.up4.conv.conv_conv.4.weight,"[16, 16, 3, 3]",2304,True
+E4,decoder.up4.conv.conv_conv.4.bias,[16],16,True
+E4,decoder.up4.conv.conv_conv.5.weight,[16],16,True
+E4,decoder.up4.conv.conv_conv.5.bias,[16],16,True
+E4,decoder.out_conv.weight,"[4, 16, 3, 3]",576,True
+E4,decoder.out_conv.bias,[4],4,True
+E4,decoder.mask_token_router.gamma,[1],1,True
+E4,decoder.mask_token_router.project.weight,"[18, 16, 1, 1]",288,True
+E4,decoder.mask_token_router.project.bias,[18],18,True
+E4,decoder.mask_token_router.norm.weight,[18],18,True
+E4,decoder.mask_token_router.norm.bias,[18],18,True
+E4,decoder.mask_token_router.inverse_project.weight,"[16, 18, 1, 1]",288,True
+E4,decoder.mask_token_router.inverse_project.bias,[16],16,True
+E4,projection_head.0.weight,"[32, 16]",512,True
+E4,projection_head.0.bias,[32],32,True
+E4,projection_head.1.weight,[32],32,True
+E4,projection_head.1.bias,[32],32,True
+E4,projection_head.3.weight,"[32, 32]",1024,True
+E4,projection_head.3.bias,[32],32,True
+E4,prediction_head.0.weight,"[32, 32]",1024,True
+E4,prediction_head.0.bias,[32],32,True
+E4,prediction_head.1.weight,[32],32,True
+E4,prediction_head.1.bias,[32],32,True
+E4,prediction_head.3.weight,"[32, 32]",1024,True
+E4,prediction_head.3.bias,[32],32,True
+E4,contrastive_class_selector_0.0.weight,"[32, 32]",1024,True
+E4,contrastive_class_selector_0.0.bias,[32],32,True
+E4,contrastive_class_selector_0.1.weight,[32],32,True
+E4,contrastive_class_selector_0.1.bias,[32],32,True
+E4,contrastive_class_selector_0.3.weight,"[1, 32]",32,True
+E4,contrastive_class_selector_0.3.bias,[1],1,True
+E4,contrastive_class_selector_1.0.weight,"[32, 32]",1024,True
+E4,contrastive_class_selector_1.0.bias,[32],32,True
+E4,contrastive_class_selector_1.1.weight,[32],32,True
+E4,contrastive_class_selector_1.1.bias,[32],32,True
+E4,contrastive_class_selector_1.3.weight,"[1, 32]",32,True
+E4,contrastive_class_selector_1.3.bias,[1],1,True
+E4,contrastive_class_selector_2.0.weight,"[32, 32]",1024,True
+E4,contrastive_class_selector_2.0.bias,[32],32,True
+E4,contrastive_class_selector_2.1.weight,[32],32,True
+E4,contrastive_class_selector_2.1.bias,[32],32,True
+E4,contrastive_class_selector_2.3.weight,"[1, 32]",32,True
+E4,contrastive_class_selector_2.3.bias,[1],1,True
+E4,contrastive_class_selector_3.0.weight,"[32, 32]",1024,True
+E4,contrastive_class_selector_3.0.bias,[32],32,True
+E4,contrastive_class_selector_3.1.weight,[32],32,True
+E4,contrastive_class_selector_3.1.bias,[32],32,True
+E4,contrastive_class_selector_3.3.weight,"[1, 32]",32,True
+E4,contrastive_class_selector_3.3.bias,[1],1,True
+E4,contrastive_class_selector_memory0.0.weight,"[32, 32]",1024,True
+E4,contrastive_class_selector_memory0.0.bias,[32],32,True
+E4,contrastive_class_selector_memory0.1.weight,[32],32,True
+E4,contrastive_class_selector_memory0.1.bias,[32],32,True
+E4,contrastive_class_selector_memory0.3.weight,"[1, 32]",32,True
+E4,contrastive_class_selector_memory0.3.bias,[1],1,True
+E4,contrastive_class_selector_memory1.0.weight,"[32, 32]",1024,True
+E4,contrastive_class_selector_memory1.0.bias,[32],32,True
+E4,contrastive_class_selector_memory1.1.weight,[32],32,True
+E4,contrastive_class_selector_memory1.1.bias,[32],32,True
+E4,contrastive_class_selector_memory1.3.weight,"[1, 32]",32,True
+E4,contrastive_class_selector_memory1.3.bias,[1],1,True
+E4,contrastive_class_selector_memory2.0.weight,"[32, 32]",1024,True
+E4,contrastive_class_selector_memory2.0.bias,[32],32,True
+E4,contrastive_class_selector_memory2.1.weight,[32],32,True
+E4,contrastive_class_selector_memory2.1.bias,[32],32,True
+E4,contrastive_class_selector_memory2.3.weight,"[1, 32]",32,True
+E4,contrastive_class_selector_memory2.3.bias,[1],1,True
+E4,contrastive_class_selector_memory3.0.weight,"[32, 32]",1024,True
+E4,contrastive_class_selector_memory3.0.bias,[32],32,True
+E4,contrastive_class_selector_memory3.1.weight,[32],32,True
+E4,contrastive_class_selector_memory3.1.bias,[32],32,True
+E4,contrastive_class_selector_memory3.3.weight,"[1, 32]",32,True
+E4,contrastive_class_selector_memory3.3.bias,[1],1,True
+R1,encoder.in_conv.conv_conv.0.weight,"[16, 1, 3, 3]",144,True
+R1,encoder.in_conv.conv_conv.0.bias,[16],16,True
+R1,encoder.in_conv.conv_conv.1.weight,[16],16,True
+R1,encoder.in_conv.conv_conv.1.bias,[16],16,True
+R1,encoder.in_conv.conv_conv.4.weight,"[16, 16, 3, 3]",2304,True
+R1,encoder.in_conv.conv_conv.4.bias,[16],16,True
+R1,encoder.in_conv.conv_conv.5.weight,[16],16,True
+R1,encoder.in_conv.conv_conv.5.bias,[16],16,True
+R1,encoder.down1.maxpool_conv.1.conv_conv.0.weight,"[32, 16, 3, 3]",4608,True
+R1,encoder.down1.maxpool_conv.1.conv_conv.0.bias,[32],32,True
+R1,encoder.down1.maxpool_conv.1.conv_conv.1.weight,[32],32,True
+R1,encoder.down1.maxpool_conv.1.conv_conv.1.bias,[32],32,True
+R1,encoder.down1.maxpool_conv.1.conv_conv.4.weight,"[32, 32, 3, 3]",9216,True
+R1,encoder.down1.maxpool_conv.1.conv_conv.4.bias,[32],32,True
+R1,encoder.down1.maxpool_conv.1.conv_conv.5.weight,[32],32,True
+R1,encoder.down1.maxpool_conv.1.conv_conv.5.bias,[32],32,True
+R1,encoder.down2.maxpool_conv.1.conv_conv.0.weight,"[64, 32, 3, 3]",18432,True
+R1,encoder.down2.maxpool_conv.1.conv_conv.0.bias,[64],64,True
+R1,encoder.down2.maxpool_conv.1.conv_conv.1.weight,[64],64,True
+R1,encoder.down2.maxpool_conv.1.conv_conv.1.bias,[64],64,True
+R1,encoder.down2.maxpool_conv.1.conv_conv.4.weight,"[64, 64, 3, 3]",36864,True
+R1,encoder.down2.maxpool_conv.1.conv_conv.4.bias,[64],64,True
+R1,encoder.down2.maxpool_conv.1.conv_conv.5.weight,[64],64,True
+R1,encoder.down2.maxpool_conv.1.conv_conv.5.bias,[64],64,True
+R1,encoder.down3.maxpool_conv.1.conv_conv.0.weight,"[128, 64, 3, 3]",73728,True
+R1,encoder.down3.maxpool_conv.1.conv_conv.0.bias,[128],128,True
+R1,encoder.down3.maxpool_conv.1.conv_conv.1.weight,[128],128,True
+R1,encoder.down3.maxpool_conv.1.conv_conv.1.bias,[128],128,True
+R1,encoder.down3.maxpool_conv.1.conv_conv.4.weight,"[128, 128, 3, 3]",147456,True
+R1,encoder.down3.maxpool_conv.1.conv_conv.4.bias,[128],128,True
+R1,encoder.down3.maxpool_conv.1.conv_conv.5.weight,[128],128,True
+R1,encoder.down3.maxpool_conv.1.conv_conv.5.bias,[128],128,True
+R1,encoder.down4.maxpool_conv.1.conv_conv.0.weight,"[256, 128, 3, 3]",294912,True
+R1,encoder.down4.maxpool_conv.1.conv_conv.0.bias,[256],256,True
+R1,encoder.down4.maxpool_conv.1.conv_conv.1.weight,[256],256,True
+R1,encoder.down4.maxpool_conv.1.conv_conv.1.bias,[256],256,True
+R1,encoder.down4.maxpool_conv.1.conv_conv.4.weight,"[256, 256, 3, 3]",589824,True
+R1,encoder.down4.maxpool_conv.1.conv_conv.4.bias,[256],256,True
+R1,encoder.down4.maxpool_conv.1.conv_conv.5.weight,[256],256,True
+R1,encoder.down4.maxpool_conv.1.conv_conv.5.bias,[256],256,True
+R1,decoder.up1.conv1x1.weight,"[128, 256, 1, 1]",32768,True
+R1,decoder.up1.conv1x1.bias,[128],128,True
+R1,decoder.up1.conv.conv_conv.0.weight,"[128, 256, 3, 3]",294912,True
+R1,decoder.up1.conv.conv_conv.0.bias,[128],128,True
+R1,decoder.up1.conv.conv_conv.1.weight,[128],128,True
+R1,decoder.up1.conv.conv_conv.1.bias,[128],128,True
+R1,decoder.up1.conv.conv_conv.4.weight,"[128, 128, 3, 3]",147456,True
+R1,decoder.up1.conv.conv_conv.4.bias,[128],128,True
+R1,decoder.up1.conv.conv_conv.5.weight,[128],128,True
+R1,decoder.up1.conv.conv_conv.5.bias,[128],128,True
+R1,decoder.up2.conv1x1.weight,"[64, 128, 1, 1]",8192,True
+R1,decoder.up2.conv1x1.bias,[64],64,True
+R1,decoder.up2.conv.conv_conv.0.weight,"[64, 128, 3, 3]",73728,True
+R1,decoder.up2.conv.conv_conv.0.bias,[64],64,True
+R1,decoder.up2.conv.conv_conv.1.weight,[64],64,True
+R1,decoder.up2.conv.conv_conv.1.bias,[64],64,True
+R1,decoder.up2.conv.conv_conv.4.weight,"[64, 64, 3, 3]",36864,True
+R1,decoder.up2.conv.conv_conv.4.bias,[64],64,True
+R1,decoder.up2.conv.conv_conv.5.weight,[64],64,True
+R1,decoder.up2.conv.conv_conv.5.bias,[64],64,True
+R1,decoder.up3.conv1x1.weight,"[32, 64, 1, 1]",2048,True
+R1,decoder.up3.conv1x1.bias,[32],32,True
+R1,decoder.up3.conv.conv_conv.0.weight,"[32, 64, 3, 3]",18432,True
+R1,decoder.up3.conv.conv_conv.0.bias,[32],32,True
+R1,decoder.up3.conv.conv_conv.1.weight,[32],32,True
+R1,decoder.up3.conv.conv_conv.1.bias,[32],32,True
+R1,decoder.up3.conv.conv_conv.4.weight,"[32, 32, 3, 3]",9216,True
+R1,decoder.up3.conv.conv_conv.4.bias,[32],32,True
+R1,decoder.up3.conv.conv_conv.5.weight,[32],32,True
+R1,decoder.up3.conv.conv_conv.5.bias,[32],32,True
+R1,decoder.up4.conv1x1.weight,"[16, 32, 1, 1]",512,True
+R1,decoder.up4.conv1x1.bias,[16],16,True
+R1,decoder.up4.conv.conv_conv.0.weight,"[16, 32, 3, 3]",4608,True
+R1,decoder.up4.conv.conv_conv.0.bias,[16],16,True
+R1,decoder.up4.conv.conv_conv.1.weight,[16],16,True
+R1,decoder.up4.conv.conv_conv.1.bias,[16],16,True
+R1,decoder.up4.conv.conv_conv.4.weight,"[16, 16, 3, 3]",2304,True
+R1,decoder.up4.conv.conv_conv.4.bias,[16],16,True
+R1,decoder.up4.conv.conv_conv.5.weight,[16],16,True
+R1,decoder.up4.conv.conv_conv.5.bias,[16],16,True
+R1,decoder.out_conv.weight,"[4, 16, 3, 3]",576,True
+R1,decoder.out_conv.bias,[4],4,True
+R1,decoder.mask_token_router.tokens,"[4, 16]",64,True
+R1,decoder.mask_token_router.gamma,[1],1,True
+R1,decoder.mask_token_router.project.weight,"[16, 16, 1, 1]",256,True
+R1,decoder.mask_token_router.project.bias,[16],16,True
+R1,decoder.mask_token_router.norm.weight,[16],16,True
+R1,decoder.mask_token_router.norm.bias,[16],16,True
+R1,decoder.mask_token_router.inverse_project.weight,"[16, 16, 1, 1]",256,True
+R1,decoder.mask_token_router.inverse_project.bias,[16],16,True
+R1,projection_head.0.weight,"[32, 16]",512,True
+R1,projection_head.0.bias,[32],32,True
+R1,projection_head.1.weight,[32],32,True
+R1,projection_head.1.bias,[32],32,True
+R1,projection_head.3.weight,"[32, 32]",1024,True
+R1,projection_head.3.bias,[32],32,True
+R1,prediction_head.0.weight,"[32, 32]",1024,True
+R1,prediction_head.0.bias,[32],32,True
+R1,prediction_head.1.weight,[32],32,True
+R1,prediction_head.1.bias,[32],32,True
+R1,prediction_head.3.weight,"[32, 32]",1024,True
+R1,prediction_head.3.bias,[32],32,True
+R1,contrastive_class_selector_0.0.weight,"[32, 32]",1024,True
+R1,contrastive_class_selector_0.0.bias,[32],32,True
+R1,contrastive_class_selector_0.1.weight,[32],32,True
+R1,contrastive_class_selector_0.1.bias,[32],32,True
+R1,contrastive_class_selector_0.3.weight,"[1, 32]",32,True
+R1,contrastive_class_selector_0.3.bias,[1],1,True
+R1,contrastive_class_selector_1.0.weight,"[32, 32]",1024,True
+R1,contrastive_class_selector_1.0.bias,[32],32,True
+R1,contrastive_class_selector_1.1.weight,[32],32,True
+R1,contrastive_class_selector_1.1.bias,[32],32,True
+R1,contrastive_class_selector_1.3.weight,"[1, 32]",32,True
+R1,contrastive_class_selector_1.3.bias,[1],1,True
+R1,contrastive_class_selector_2.0.weight,"[32, 32]",1024,True
+R1,contrastive_class_selector_2.0.bias,[32],32,True
+R1,contrastive_class_selector_2.1.weight,[32],32,True
+R1,contrastive_class_selector_2.1.bias,[32],32,True
+R1,contrastive_class_selector_2.3.weight,"[1, 32]",32,True
+R1,contrastive_class_selector_2.3.bias,[1],1,True
+R1,contrastive_class_selector_3.0.weight,"[32, 32]",1024,True
+R1,contrastive_class_selector_3.0.bias,[32],32,True
+R1,contrastive_class_selector_3.1.weight,[32],32,True
+R1,contrastive_class_selector_3.1.bias,[32],32,True
+R1,contrastive_class_selector_3.3.weight,"[1, 32]",32,True
+R1,contrastive_class_selector_3.3.bias,[1],1,True
+R1,contrastive_class_selector_memory0.0.weight,"[32, 32]",1024,True
+R1,contrastive_class_selector_memory0.0.bias,[32],32,True
+R1,contrastive_class_selector_memory0.1.weight,[32],32,True
+R1,contrastive_class_selector_memory0.1.bias,[32],32,True
+R1,contrastive_class_selector_memory0.3.weight,"[1, 32]",32,True
+R1,contrastive_class_selector_memory0.3.bias,[1],1,True
+R1,contrastive_class_selector_memory1.0.weight,"[32, 32]",1024,True
+R1,contrastive_class_selector_memory1.0.bias,[32],32,True
+R1,contrastive_class_selector_memory1.1.weight,[32],32,True
+R1,contrastive_class_selector_memory1.1.bias,[32],32,True
+R1,contrastive_class_selector_memory1.3.weight,"[1, 32]",32,True
+R1,contrastive_class_selector_memory1.3.bias,[1],1,True
+R1,contrastive_class_selector_memory2.0.weight,"[32, 32]",1024,True
+R1,contrastive_class_selector_memory2.0.bias,[32],32,True
+R1,contrastive_class_selector_memory2.1.weight,[32],32,True
+R1,contrastive_class_selector_memory2.1.bias,[32],32,True
+R1,contrastive_class_selector_memory2.3.weight,"[1, 32]",32,True
+R1,contrastive_class_selector_memory2.3.bias,[1],1,True
+R1,contrastive_class_selector_memory3.0.weight,"[32, 32]",1024,True
+R1,contrastive_class_selector_memory3.0.bias,[32],32,True
+R1,contrastive_class_selector_memory3.1.weight,[32],32,True
+R1,contrastive_class_selector_memory3.1.bias,[32],32,True
+R1,contrastive_class_selector_memory3.3.weight,"[1, 32]",32,True
+R1,contrastive_class_selector_memory3.3.bias,[1],1,True
+E5,net.backbone.in_conv.conv_conv.0.weight,"[16, 1, 3, 3]",144,True
+E5,net.backbone.in_conv.conv_conv.0.bias,[16],16,True
+E5,net.backbone.in_conv.conv_conv.1.weight,[16],16,True
+E5,net.backbone.in_conv.conv_conv.1.bias,[16],16,True
+E5,net.backbone.in_conv.conv_conv.4.weight,"[16, 16, 3, 3]",2304,True
+E5,net.backbone.in_conv.conv_conv.4.bias,[16],16,True
+E5,net.backbone.in_conv.conv_conv.5.weight,[16],16,True
+E5,net.backbone.in_conv.conv_conv.5.bias,[16],16,True
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.0.weight,"[32, 16, 3, 3]",4608,True
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.0.bias,[32],32,True
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.1.weight,[32],32,True
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.1.bias,[32],32,True
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.4.weight,"[32, 32, 3, 3]",9216,True
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.4.bias,[32],32,True
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.5.weight,[32],32,True
+E5,net.backbone.down1.maxpool_conv.1.conv_conv.5.bias,[32],32,True
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.0.weight,"[64, 32, 3, 3]",18432,True
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.0.bias,[64],64,True
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.1.weight,[64],64,True
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.1.bias,[64],64,True
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.4.weight,"[64, 64, 3, 3]",36864,True
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.4.bias,[64],64,True
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.5.weight,[64],64,True
+E5,net.backbone.down2.maxpool_conv.1.conv_conv.5.bias,[64],64,True
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.0.weight,"[128, 64, 3, 3]",73728,True
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.0.bias,[128],128,True
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.1.weight,[128],128,True
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.1.bias,[128],128,True
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.4.weight,"[128, 128, 3, 3]",147456,True
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.4.bias,[128],128,True
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.5.weight,[128],128,True
+E5,net.backbone.down3.maxpool_conv.1.conv_conv.5.bias,[128],128,True
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.0.weight,"[256, 128, 3, 3]",294912,True
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.0.bias,[256],256,True
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.1.weight,[256],256,True
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.1.bias,[256],256,True
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.4.weight,"[256, 256, 3, 3]",589824,True
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.4.bias,[256],256,True
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.5.weight,[256],256,True
+E5,net.backbone.down4.maxpool_conv.1.conv_conv.5.bias,[256],256,True
+E5,net.classifier.up1.conv1x1.weight,"[128, 256, 1, 1]",32768,True
+E5,net.classifier.up1.conv1x1.bias,[128],128,True
+E5,net.classifier.up1.conv.conv_conv.0.weight,"[128, 256, 3, 3]",294912,True
+E5,net.classifier.up1.conv.conv_conv.0.bias,[128],128,True
+E5,net.classifier.up1.conv.conv_conv.1.weight,[128],128,True
+E5,net.classifier.up1.conv.conv_conv.1.bias,[128],128,True
+E5,net.classifier.up1.conv.conv_conv.4.weight,"[128, 128, 3, 3]",147456,True
+E5,net.classifier.up1.conv.conv_conv.4.bias,[128],128,True
+E5,net.classifier.up1.conv.conv_conv.5.weight,[128],128,True
+E5,net.classifier.up1.conv.conv_conv.5.bias,[128],128,True
+E5,net.classifier.up2.conv1x1.weight,"[64, 128, 1, 1]",8192,True
+E5,net.classifier.up2.conv1x1.bias,[64],64,True
+E5,net.classifier.up2.conv.conv_conv.0.weight,"[64, 128, 3, 3]",73728,True
+E5,net.classifier.up2.conv.conv_conv.0.bias,[64],64,True
+E5,net.classifier.up2.conv.conv_conv.1.weight,[64],64,True
+E5,net.classifier.up2.conv.conv_conv.1.bias,[64],64,True
+E5,net.classifier.up2.conv.conv_conv.4.weight,"[64, 64, 3, 3]",36864,True
+E5,net.classifier.up2.conv.conv_conv.4.bias,[64],64,True
+E5,net.classifier.up2.conv.conv_conv.5.weight,[64],64,True
+E5,net.classifier.up2.conv.conv_conv.5.bias,[64],64,True
+E5,net.classifier.up3.conv1x1.weight,"[32, 64, 1, 1]",2048,True
+E5,net.classifier.up3.conv1x1.bias,[32],32,True
+E5,net.classifier.up3.conv.conv_conv.0.weight,"[32, 64, 3, 3]",18432,True
+E5,net.classifier.up3.conv.conv_conv.0.bias,[32],32,True
+E5,net.classifier.up3.conv.conv_conv.1.weight,[32],32,True
+E5,net.classifier.up3.conv.conv_conv.1.bias,[32],32,True
+E5,net.classifier.up3.conv.conv_conv.4.weight,"[32, 32, 3, 3]",9216,True
+E5,net.classifier.up3.conv.conv_conv.4.bias,[32],32,True
+E5,net.classifier.up3.conv.conv_conv.5.weight,[32],32,True
+E5,net.classifier.up3.conv.conv_conv.5.bias,[32],32,True
+E5,net.classifier.up4.conv1x1.weight,"[16, 32, 1, 1]",512,True
+E5,net.classifier.up4.conv1x1.bias,[16],16,True
+E5,net.classifier.up4.conv.conv_conv.0.weight,"[16, 32, 3, 3]",4608,True
+E5,net.classifier.up4.conv.conv_conv.0.bias,[16],16,True
+E5,net.classifier.up4.conv.conv_conv.1.weight,[16],16,True
+E5,net.classifier.up4.conv.conv_conv.1.bias,[16],16,True
+E5,net.classifier.up4.conv.conv_conv.4.weight,"[16, 16, 3, 3]",2304,True
+E5,net.classifier.up4.conv.conv_conv.4.bias,[16],16,True
+E5,net.classifier.up4.conv.conv_conv.5.weight,[16],16,True
+E5,net.classifier.up4.conv.conv_conv.5.bias,[16],16,True
+E5,net.classifier.out_conv.weight,"[4, 16, 3, 3]",576,True
+E5,net.classifier.out_conv.bias,[4],4,True

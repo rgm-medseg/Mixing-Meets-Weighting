@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:17:58.598573+00:00",
+  "task_id": "ACDC10_OURS_SEED2025",
+  "task_type": "NEW_FULL",
+  "action": "NEW_FULL_READY",
+  "registry_FinalLaunchReady": "PASS",
+  "registry_Blocker": "",
+  "registry_BlockerCategory": "NONE",
+  "LaunchBlocking": false,
+  "NoncriticalTerminalGap": false,
+  "ProtocolExcluded": false,
+  "FinalLaunchReady": true,
+  "FinalLaunchReady_semantics": "launch permission only; not completion evidence",
+  "PostFullCompletionEvidenceRequired": false,
+  "FormalFullStarted": false,
+  "TmuxStarted": false,
+  "checks": {
+    "StaticPass": true,
+    "ArgvPass": true,
+    "PathPass": true,
+    "ScientificIdentityPass": true,
+    "ImportPass": true,
+    "RoleBindingPass": true,
+    "SmokePass": true,
+    "ClosedLoopPass": true,
+    "FailureInjectionPass": true,
+    "ControllerDryPass": true,
+    "OutputClean": true,
+    "SourceFreezePass": true,
+    "ConfigFreezePass": true
+  },
+  "l1_l10": {
+    "TaskOrder": "18",
+    "TaskID": "ACDC10_OURS_SEED2025",
+    "Action": "NEW_FULL_READY",
+    "FinalLaunchReady": "PASS",
+    "Blocker": "",
+    "L1StaticPaths": "PASS",
+    "L2DryRunOrReceiptMode": "PASS",
+    "L3Paths": "PASS",
+    "L4ScientificIdentity": "PASS",
+    "L5ImportCompile": "PASS",
+    "L6TestFirewall": "PASS",
+    "L7SmokeGate": "PASS",
+    "L8ClosedLoopReceipt": "PASS",
+    "L9FailureInjection": "PASS_OR_NA",
+    "L10ControllerDryConsumption": "PASS_WITH_BLOCKERS"
+  },
+  "freeze_evidence": {
+    "source": {
+      "applicable": true,
+      "pass": true,
+      "path": "train_ACDC/v21_3_acdc10_third_innovation_transfer.py",
+      "exists": true,
+      "expected_sha256": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+      "current_sha256": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15"
+    },
+    "launcher": {
+      "applicable": true,
+      "pass": true,
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc10_ours_seed2025.sh",
+      "exists": true,
+      "expected_sha256": "7a83cdb7c9c64acf4de9a50dfb5763467710a2a72b90b322be322287af8b9d81",
+      "current_sha256": "7a83cdb7c9c64acf4de9a50dfb5763467710a2a72b90b322be322287af8b9d81"
+    },
+    "config": {
+      "applicable": true,
+      "pass": true,
+      "path": "configs/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025.json",
+      "exists": true,
+      "expected_sha256": "76c3284f4dd28d49cb841c52a83b00fa5904750a6badaa30e69480b73f0bed9f",
+      "current_sha256": "76c3284f4dd28d49cb841c52a83b00fa5904750a6badaa30e69480b73f0bed9f"
+    },
+    "checkpoint": {
+      "applicable": true,
+      "pass": true,
+      "path": "train_ACDC/Pre_model/label7/unet_best_model.pth",
+      "exists": true,
+      "expected_sha256": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3",
+      "current_sha256": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3"
+    }
+  },
+  "expected_receipt": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025/train.log",
+  "test_semantics": {
+    "TESTAccessAllowed": "0",
+    "TEST_DATA_READ_FOR_PRE_REGISTERED_EVALUATION": false,
+    "TEST_USED_FOR_TUNING": false,
+    "TEST_USED_FOR_SELECTION": false
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "status": "REFUSE_RUN_WAITING_UPSTREAM",
+  "created_at": "2026-08-25T18:37:31.320633+00:00",
+  "task_id": "SEED_TEST_CLOSURE",
+  "training_started": false,
+  "inference_started": false,
+  "test_started": false,
+  "formal_started": false,
+  "upstream": {
+    "requires": [
+      {
+        "TaskID": "ACDC10_BETAFFT_SEED2025",
+        "TaskType": "NEW_FULL",
+        "Action": "NEW_FULL_READY",
+        "FinalLaunchReady": "PASS",
+        "Blocker": "",
+        "CompletionAsset": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025/train.log",
+        "CompletionAssetExists": true,
+        "CompletionAssetPass": true,
+        "CompletionEvidence": {
+          "FormalFullComplete": true,
+          "BestValSelected": true,
+          "FrozenCheckpointSHA": true,
+          "TEST_COMPLETION_RECEIPT": false,
+          "ResultAsset": false,
+          "evidence": {
+            "FormalFullComplete": {
+              "present": true,
+              "selected_asset": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025/FORMAL_FULL_COMPLETION_RECEIPT.json",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025/FORMAL_FULL_COMPLETION_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025_FORMAL_FULL_COMPLETION_RECEIPT.json"
+              ]
+            },
+            "BestValSelected": {
+              "present": true,
+              "selected_asset": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025/BEST_VAL_SELECTION.json",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025/BEST_VAL_SELECTION.json",
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025/best_val_selection.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025_BEST_VAL_SELECTION.json"
+              ]
+            },
+            "FrozenCheckpointSHA": {
+              "present": true,
+              "selected_asset": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025/FROZEN_CHECKPOINT_SHA256.json",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025/FROZEN_CHECKPOINT_SHA256.json",
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025/frozen_checkpoint_sha256.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025_FROZEN_CHECKPOINT_SHA256.json"
+              ]
+            },
+            "TEST_COMPLETION_RECEIPT": {
+              "present": true,
+              "selected_asset": "audits/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025_TEST_GATE_LOCKED_RECEIPT.json",
+              "candidate_assets": [
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2025/TEST_COMPLETION_RECEIPT.json",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2025/TEST_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025_TEST_COMPLETION_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025_TEST_GATE_LOCKED_RECEIPT.json"
+              ]
+            },
+            "ResultAsset": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2025/aggregate_metrics.tsv",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2025/case_class_metrics.tsv",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2025/TEST_FULL_PRECISION.tsv",
+                "final_report/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025_TEST_FULL_PRECISION.tsv"
+              ]
+            }
+          },
+          "missing_evidence": [
+            "ResultAsset",
+            "TEST_COMPLETION_RECEIPT_UNLOCKED_PASS",
+            "TEST_COMPLETION_RECEIPT_NOT_PASS"
+          ],
+          "CompletionEvidencePASS": false
+        },
+        "Ready": false
+      },
+      {
+        "TaskID": "ACDC10_OURS_SEED2025",
+        "TaskType": "NEW_FULL",
+        "Action": "NEW_FULL_READY",
+        "FinalLaunchReady": "PASS",
+        "Blocker": "",
+        "CompletionAsset": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025/train.log",
+        "CompletionAssetExists": true,
+        "CompletionAssetPass": true,
+        "CompletionEvidence": {
+          "FormalFullComplete": true,
+          "BestValSelected": true,
+          "FrozenCheckpointSHA": true,
+          "TEST_COMPLETION_RECEIPT": false,
+          "ResultAsset": false,
+          "evidence": {
+            "FormalFullComplete": {
+              "present": true,
+              "selected_asset": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025/FORMAL_FULL_COMPLETION_RECEIPT.json",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025/FORMAL_FULL_COMPLETION_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025_FORMAL_FULL_COMPLETION_RECEIPT.json"
+              ]
+            },
+            "BestValSelected": {
+              "present": true,
+              "selected_asset": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025/BEST_VAL_SELECTION.json",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025/BEST_VAL_SELECTION.json",
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025/best_val_selection.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025_BEST_VAL_SELECTION.json"
+              ]
+            },
+            "FrozenCheckpointSHA": {
+              "present": true,
+              "selected_asset": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025/FROZEN_CHECKPOINT_SHA256.json",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025/FROZEN_CHECKPOINT_SHA256.json",
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025/frozen_checkpoint_sha256.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025_FROZEN_CHECKPOINT_SHA256.json"
+              ]
+            },
+            "TEST_COMPLETION_RECEIPT": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2025/TEST_COMPLETION_RECEIPT.json",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2025/TEST_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025_TEST_COMPLETION_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025_TEST_GATE_LOCKED_RECEIPT.json"
+              ]
+            },
+            "ResultAsset": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2025/aggregate_metrics.tsv",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2025/case_class_metrics.tsv",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2025/TEST_FULL_PRECISION.tsv",
+                "final_report/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025_TEST_FULL_PRECISION.tsv"
+              ]
+            }
+          },
+          "missing_evidence": [
+            "TEST_COMPLETION_RECEIPT",
+            "ResultAsset"
+          ],
+          "CompletionEvidencePASS": false
+        },
+        "Ready": false
+      },
+      {
+        "TaskID": "ACDC10_BETAFFT_SEED2026",
+        "TaskType": "NEW_FULL",
+        "Action": "NEW_FULL_READY",
+        "FinalLaunchReady": "PASS",
+        "Blocker": "",
+        "CompletionAsset": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026/train.log",
+        "CompletionAssetExists": true,
+        "CompletionAssetPass": true,
+        "CompletionEvidence": {
+          "FormalFullComplete": true,
+          "BestValSelected": true,
+          "FrozenCheckpointSHA": true,
+          "TEST_COMPLETION_RECEIPT": false,
+          "ResultAsset": false,
+          "evidence": {
+            "FormalFullComplete": {
+              "present": true,
+              "selected_asset": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026/FORMAL_FULL_COMPLETION_RECEIPT.json",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026/FORMAL_FULL_COMPLETION_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026_FORMAL_FULL_COMPLETION_RECEIPT.json"
+              ]
+            },
+            "BestValSelected": {
+              "present": true,
+              "selected_asset": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026/BEST_VAL_SELECTION.json",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026/BEST_VAL_SELECTION.json",
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026/best_val_selection.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026_BEST_VAL_SELECTION.json"
+              ]
+            },
+            "FrozenCheckpointSHA": {
+              "present": true,
+              "selected_asset": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026/FROZEN_CHECKPOINT_SHA256.json",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026/FROZEN_CHECKPOINT_SHA256.json",
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026/frozen_checkpoint_sha256.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026_FROZEN_CHECKPOINT_SHA256.json"
+              ]
+            },
+            "TEST_COMPLETION_RECEIPT": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2026/TEST_COMPLETION_RECEIPT.json",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2026/TEST_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026_TEST_COMPLETION_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026_TEST_GATE_LOCKED_RECEIPT.json"
+              ]
+            },
+            "ResultAsset": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2026/aggregate_metrics.tsv",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2026/case_class_metrics.tsv",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_BETAFFT_SEED2026/TEST_FULL_PRECISION.tsv",
+                "final_report/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026_TEST_FULL_PRECISION.tsv"
+              ]
+            }
+          },
+          "missing_evidence": [
+            "TEST_COMPLETION_RECEIPT",
+            "ResultAsset"
+          ],
+          "CompletionEvidencePASS": false
+        },
+        "Ready": false
+      },
+      {
+        "TaskID": "ACDC10_OURS_SEED2026",
+        "TaskType": "NEW_FULL",
+        "Action": "NEW_FULL_READY",
+        "FinalLaunchReady": "PASS",
+        "Blocker": "",
+        "CompletionAsset": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026/train.log",
+        "CompletionAssetExists": true,
+        "CompletionAssetPass": true,
+        "CompletionEvidence": {
+          "FormalFullComplete": true,
+          "BestValSelected": true,
+          "FrozenCheckpointSHA": true,
+          "TEST_COMPLETION_RECEIPT": false,
+          "ResultAsset": false,
+          "evidence": {
+            "FormalFullComplete": {
+              "present": true,
+              "selected_asset": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026/FORMAL_FULL_COMPLETION_RECEIPT.json",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026/FORMAL_FULL_COMPLETION_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026_FORMAL_FULL_COMPLETION_RECEIPT.json"
+              ]
+            },
+            "BestValSelected": {
+              "present": true,
+              "selected_asset": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026/BEST_VAL_SELECTION.json",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026/BEST_VAL_SELECTION.json",
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026/best_val_selection.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026_BEST_VAL_SELECTION.json"
+              ]
+            },
+            "FrozenCheckpointSHA": {
+              "present": true,
+              "selected_asset": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026/FROZEN_CHECKPOINT_SHA256.json",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026/FROZEN_CHECKPOINT_SHA256.json",
+                "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026/frozen_checkpoint_sha256.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026_FROZEN_CHECKPOINT_SHA256.json"
+              ]
+            },
+            "TEST_COMPLETION_RECEIPT": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2026/TEST_COMPLETION_RECEIPT.json",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2026/TEST_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026_TEST_COMPLETION_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026_TEST_GATE_LOCKED_RECEIPT.json"
+              ]
+            },
+            "ResultAsset": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2026/aggregate_metrics.tsv",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2026/case_class_metrics.tsv",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2026/TEST_FULL_PRECISION.tsv",
+                "final_report/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026_TEST_FULL_PRECISION.tsv"
+              ]
+            }
+          },
+          "missing_evidence": [
+            "TEST_COMPLETION_RECEIPT",
+            "ResultAsset"
+          ],
+          "CompletionEvidencePASS": false
+        },
+        "Ready": false
+      }
+    ],
+    "blocked": [
+      {
+        "TaskID": "ACDC10_BETAFFT_SEED2025",
+        "Reason": "WAITING_FORMAL_FULL_BESTVAL_FROZEN_TEST_RESULT_EVIDENCE:ResultAsset,TEST_COMPLETION_RECEIPT_UNLOCKED_PASS,TEST_COMPLETION_RECEIPT_NOT_PASS"
+      },
+      {
+        "TaskID": "ACDC10_OURS_SEED2025",
+        "Reason": "WAITING_FORMAL_FULL_BESTVAL_FROZEN_TEST_RESULT_EVIDENCE:TEST_COMPLETION_RECEIPT,ResultAsset"
+      },
+      {
+        "TaskID": "ACDC10_BETAFFT_SEED2026",
+        "Reason": "WAITING_FORMAL_FULL_BESTVAL_FROZEN_TEST_RESULT_EVIDENCE:TEST_COMPLETION_RECEIPT,ResultAsset"
+      },
+      {
+        "TaskID": "ACDC10_OURS_SEED2026",
+        "Reason": "WAITING_FORMAL_FULL_BESTVAL_FROZEN_TEST_RESULT_EVIDENCE:TEST_COMPLETION_RECEIPT,ResultAsset"
+      }
+    ],
+    "ready": false
+  },
+  "hard_gate": "Refused because required upstream completion evidence is absent; launch readiness was not treated as completion."
+}

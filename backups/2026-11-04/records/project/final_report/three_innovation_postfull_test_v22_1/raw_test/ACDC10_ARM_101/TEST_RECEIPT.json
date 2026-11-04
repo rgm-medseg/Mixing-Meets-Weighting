@@ -1,0 +1,33 @@
+{
+  "status": "TEST_PASS",
+  "created_at": "2026-08-22T10:19:18.775421+00:00",
+  "task_id": "ACDC10_ARM_101",
+  "checkpoint": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_101/checkpoints/best.ckpt",
+  "checkpoint_sha256": "87d7479788cc7399fcc12012ceae6a1bf565fdcb69e5e3a344d9c1c0a440cf9b",
+  "test_manifest": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/test.list",
+  "test_manifest_sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+  "mask_token_enabled": true,
+  "boundary_unit": "pixel-unit",
+  "TEST_ONLY_MODE": true,
+  "training_started": false,
+  "optimizer_created": false,
+  "backward_called": false,
+  "metrics": {
+    "dice": 0.9015156481562214,
+    "iou": 0.8253107330759811,
+    "hd95": 1.4195291409042445,
+    "asd": 0.39396788969447544,
+    "RV_dice": 0.8911351221388341,
+    "RV_iou": 0.8091191624615867,
+    "RV_hd95": 1.612110046789637,
+    "RV_asd": 0.5212838552814814,
+    "MYO_dice": 0.8816193020265665,
+    "MYO_iou": 0.7903405342483858,
+    "MYO_hd95": 1.1054333045451863,
+    "MYO_asd": 0.30255943295984056,
+    "LV_dice": 0.9317925203032636,
+    "LV_iou": 0.8764725025179713,
+    "LV_hd95": 1.5410440713779099,
+    "LV_asd": 0.3580603808421045
+  }
+}

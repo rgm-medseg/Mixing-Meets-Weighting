@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "units": 90,
+  "maps": 1080,
+  "checkpoints": 6,
+  "mode": "eval",
+  "patient_count": 10,
+  "matched_mask": true,
+  "Full_original_strategy": "NA: NEEDS_MAPPING",
+  "R1_R2_original_strategy": true,
+  "training_updates": 0,
+  "model_BN_states_unchanged": true,
+  "identity": "98f2cac076f3932d9d13ec60752d0c4d261a0c99663a8900ee86a558d9fb33cc"
+}

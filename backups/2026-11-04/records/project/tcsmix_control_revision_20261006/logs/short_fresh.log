@@ -1,0 +1,422 @@
+Namespace(root_path='/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC', exp='beta_fft_acdc_official_10pct_seed42', model='unet', pre_iterations=10000, max_iterations=240, batch_size=24, deterministic=1, base_lr=0.01, image_size=[256, 256], seed=42, num_classes=4, labeled_bs=12, labelnum=7, u_weight=0.5, gpu='0', consistency=0.1, consistency_rampup=200.0, magnitude=6.0, s_param=6, patch_size=64, h_size=4, w_size=4, top_num=4, run_root='/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/runs/SHORT_TCSMIX_V2', pretrained_model='/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7', data_manifest_name='official', resume_ckpt='', save_interval=200, mask_token_enabled=True, adamix_enabled=True, mask_token_num=4, mask_token_dim=16, adamix_min_side=0.18, adamix_max_side=0.38, mechanism_log_interval=200, innovation_x_id='V21_3_X03_CONTOUR_RELIABILITY_WEIGHT', enable_v21_3_innovation_x=True, v21_3_innovation_x_weight=0.05)
+run_root=/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/runs/SHORT_TCSMIX_V2
+pretrained_model=/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth
+Train total 1312 samples
+Val total 20 samples
+Val total 20 samples
+/home/renguanming/.conda/envs/beta_fft/lib/python3.10/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 12, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/runs/SHORT_TCSMIX_V2/v2_effective_source.py:328: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  load_state = torch.load(pre_model, map_location="cpu")
+  0%|                                          | 0/22 [00:00<?, ?it/s]/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/runs/SHORT_TCSMIX_V2/v2_effective_source.py:138: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  return torch.Tensor(batch_list).cuda()
+iteration 1: loss: 2.871276, model1_loss: 1.039964, model2_loss: 1.254865
+iteration 1: loss: 2.871276, ICT_loss: 0.232491, FFT_loss: 0.226699
+iteration 2: loss: 3.279053, model1_loss: 1.503284, model2_loss: 1.531032
+iteration 2: loss: 3.279053, ICT_loss: 0.064992, FFT_loss: 0.219593
+iteration 3: loss: 2.427966, model1_loss: 1.004243, model2_loss: 1.255210
+iteration 3: loss: 2.427966, ICT_loss: 0.074819, FFT_loss: 0.252031
+iteration 4: loss: 1.890117, model1_loss: 0.816208, model2_loss: 0.886136
+iteration 4: loss: 1.890117, ICT_loss: 0.063551, FFT_loss: 0.228485
+iteration 5: loss: 2.946333, model1_loss: 1.250633, model2_loss: 1.405337
+iteration 5: loss: 2.946333, ICT_loss: 0.115825, FFT_loss: 0.265785
+iteration 6: loss: 1.941076, model1_loss: 0.665695, model2_loss: 1.036945
+iteration 6: loss: 1.941076, ICT_loss: 0.093790, FFT_loss: 0.180796
+iteration 7: loss: 2.730198, model1_loss: 1.156875, model2_loss: 1.252946
+iteration 7: loss: 2.730198, ICT_loss: 0.115296, FFT_loss: 0.372711
+iteration 8: loss: 2.754014, model1_loss: 1.198410, model2_loss: 1.349138
+iteration 8: loss: 2.754014, ICT_loss: 0.094083, FFT_loss: 0.362052
+iteration 9: loss: 2.283134, model1_loss: 0.887744, model2_loss: 1.108771
+iteration 9: loss: 2.283134, ICT_loss: 0.105788, FFT_loss: 0.348402
+iteration 10: loss: 2.512017, model1_loss: 1.015994, model2_loss: 1.235239
+iteration 10: loss: 2.512017, ICT_loss: 0.086272, FFT_loss: 0.343395
+iteration 11: loss: 2.907331, model1_loss: 1.189900, model2_loss: 1.521931
+iteration 11: loss: 2.907331, ICT_loss: 0.072089, FFT_loss: 0.477713
+  5%|█▌                                | 1/22 [00:09<03:26,  9.83s/it]iteration 12: loss: 2.172367, model1_loss: 0.837615, model2_loss: 1.042541
+iteration 12: loss: 2.172367, ICT_loss: 0.084231, FFT_loss: 0.279610
+iteration 13: loss: 2.577568, model1_loss: 1.106931, model2_loss: 1.253460
+iteration 13: loss: 2.577568, ICT_loss: 0.062143, FFT_loss: 0.343501
+iteration 14: loss: 2.282266, model1_loss: 1.045320, model2_loss: 1.042446
+iteration 14: loss: 2.282266, ICT_loss: 0.067056, FFT_loss: 0.332031
+iteration 15: loss: 1.914475, model1_loss: 0.727619, model2_loss: 1.035728
+iteration 15: loss: 1.914475, ICT_loss: 0.059265, FFT_loss: 0.235108
+iteration 16: loss: 2.475375, model1_loss: 1.099056, model2_loss: 1.137206
+iteration 16: loss: 2.475375, ICT_loss: 0.103831, FFT_loss: 0.325321
+iteration 17: loss: 2.284483, model1_loss: 1.054690, model2_loss: 1.055414
+iteration 17: loss: 2.284483, ICT_loss: 0.083171, FFT_loss: 0.266327
+iteration 18: loss: 2.421507, model1_loss: 0.977867, model2_loss: 1.186116
+iteration 18: loss: 2.421507, ICT_loss: 0.095111, FFT_loss: 0.341986
+iteration 19: loss: 2.945826, model1_loss: 1.146401, model2_loss: 1.550709
+iteration 19: loss: 2.945826, ICT_loss: 0.072322, FFT_loss: 0.365068
+iteration 20: loss: 2.172411, model1_loss: 0.899857, model2_loss: 1.120762
+iteration 20: loss: 2.172411, ICT_loss: 0.064090, FFT_loss: 0.306519
+iteration 21: loss: 3.075016, model1_loss: 1.195641, model2_loss: 1.627257
+iteration 21: loss: 3.075016, ICT_loss: 0.093962, FFT_loss: 0.468524
+iteration 22: loss: 2.381481, model1_loss: 1.030835, model2_loss: 1.143082
+iteration 22: loss: 2.381481, ICT_loss: 0.074830, FFT_loss: 0.391785
+  9%|███                               | 2/22 [00:18<03:03,  9.19s/it]iteration 23: loss: 1.709611, model1_loss: 0.700657, model2_loss: 0.849761
+iteration 23: loss: 1.709611, ICT_loss: 0.058004, FFT_loss: 0.296082
+iteration 24: loss: 2.156856, model1_loss: 0.951938, model2_loss: 0.945840
+iteration 24: loss: 2.156856, ICT_loss: 0.108805, FFT_loss: 0.248468
+iteration 25: loss: 2.194295, model1_loss: 0.987087, model2_loss: 1.067532
+iteration 25: loss: 2.194295, ICT_loss: 0.059842, FFT_loss: 0.320804
+iteration 26: loss: 2.820452, model1_loss: 1.189554, model2_loss: 1.406477
+iteration 26: loss: 2.820452, ICT_loss: 0.097887, FFT_loss: 0.393002
+iteration 27: loss: 1.668138, model1_loss: 0.685929, model2_loss: 0.764977
+iteration 27: loss: 1.668138, ICT_loss: 0.089790, FFT_loss: 0.216458
+iteration 28: loss: 2.553892, model1_loss: 0.989836, model2_loss: 1.385943
+iteration 28: loss: 2.553892, ICT_loss: 0.063891, FFT_loss: 0.457611
+iteration 29: loss: 2.179703, model1_loss: 0.939484, model2_loss: 1.018156
+iteration 29: loss: 2.179703, ICT_loss: 0.091136, FFT_loss: 0.289063
+iteration 30: loss: 2.278553, model1_loss: 0.984267, model2_loss: 1.172040
+iteration 30: loss: 2.278553, ICT_loss: 0.045044, FFT_loss: 0.363005
+iteration 31: loss: 2.587561, model1_loss: 1.099934, model2_loss: 1.261456
+iteration 31: loss: 2.587561, ICT_loss: 0.080338, FFT_loss: 0.326584
+iteration 32: loss: 3.441232, model1_loss: 1.430428, model2_loss: 1.693009
+iteration 32: loss: 3.441232, ICT_loss: 0.095243, FFT_loss: 0.439440
+iteration 33: loss: 1.943348, model1_loss: 0.769769, model2_loss: 1.005972
+iteration 33: loss: 1.943348, ICT_loss: 0.076615, FFT_loss: 0.315354
+ 14%|████▋                             | 3/22 [00:27<02:49,  8.94s/it]iteration 34: loss: 2.649055, model1_loss: 1.083370, model2_loss: 1.359578
+iteration 34: loss: 2.649055, ICT_loss: 0.071433, FFT_loss: 0.475317
+iteration 35: loss: 1.802257, model1_loss: 0.725980, model2_loss: 0.880879
+iteration 35: loss: 1.802257, ICT_loss: 0.063378, FFT_loss: 0.249943
+iteration 36: loss: 2.738426, model1_loss: 1.149142, model2_loss: 1.387181
+iteration 36: loss: 2.738426, ICT_loss: 0.073040, FFT_loss: 0.315777
+iteration 37: loss: 2.120305, model1_loss: 1.014634, model2_loss: 0.957642
+iteration 37: loss: 2.120305, ICT_loss: 0.053630, FFT_loss: 0.220324
+iteration 38: loss: 2.502744, model1_loss: 0.865046, model2_loss: 1.359924
+iteration 38: loss: 2.502744, ICT_loss: 0.099657, FFT_loss: 0.287240
+iteration 39: loss: 1.842974, model1_loss: 0.766643, model2_loss: 0.951259
+iteration 39: loss: 1.842974, ICT_loss: 0.053131, FFT_loss: 0.308496
+iteration 40: loss: 2.638062, model1_loss: 1.075732, model2_loss: 1.332760
+iteration 40: loss: 2.638062, ICT_loss: 0.087109, FFT_loss: 0.373866
+iteration 41: loss: 2.069372, model1_loss: 0.850037, model2_loss: 1.017689
+iteration 41: loss: 2.069372, ICT_loss: 0.065788, FFT_loss: 0.299804
+iteration 42: loss: 2.407669, model1_loss: 1.074546, model2_loss: 1.166264
+iteration 42: loss: 2.407669, ICT_loss: 0.069778, FFT_loss: 0.335744
+iteration 43: loss: 2.405164, model1_loss: 0.937664, model2_loss: 1.244819
+iteration 43: loss: 2.405164, ICT_loss: 0.089405, FFT_loss: 0.356511
+iteration 44: loss: 2.292390, model1_loss: 1.105416, model2_loss: 1.034502
+iteration 44: loss: 2.292390, ICT_loss: 0.057800, FFT_loss: 0.243143
+ 18%|██████▏                           | 4/22 [00:35<02:38,  8.78s/it]iteration 45: loss: 1.919178, model1_loss: 0.725576, model2_loss: 1.008822
+iteration 45: loss: 1.919178, ICT_loss: 0.069970, FFT_loss: 0.291711
+iteration 46: loss: 2.597999, model1_loss: 1.130645, model2_loss: 1.310578
+iteration 46: loss: 2.597999, ICT_loss: 0.061603, FFT_loss: 0.329511
+iteration 47: loss: 1.938379, model1_loss: 0.895403, model2_loss: 0.913088
+iteration 47: loss: 1.938379, ICT_loss: 0.054112, FFT_loss: 0.250628
+iteration 48: loss: 1.450361, model1_loss: 0.589690, model2_loss: 0.731053
+iteration 48: loss: 1.450361, ICT_loss: 0.045015, FFT_loss: 0.156545
+iteration 49: loss: 1.749881, model1_loss: 0.774271, model2_loss: 0.845380
+iteration 49: loss: 1.749881, ICT_loss: 0.054873, FFT_loss: 0.171152
+iteration 50: loss: 2.404233, model1_loss: 1.094215, model2_loss: 1.190963
+iteration 50: loss: 2.404233, ICT_loss: 0.048014, FFT_loss: 0.360723
+iteration 51: loss: 2.533914, model1_loss: 1.094870, model2_loss: 1.252391
+iteration 51: loss: 2.533914, ICT_loss: 0.057588, FFT_loss: 0.268182
+iteration 52: loss: 2.220606, model1_loss: 0.996199, model2_loss: 1.100979
+iteration 52: loss: 2.220606, ICT_loss: 0.046401, FFT_loss: 0.404581
+iteration 53: loss: 1.952518, model1_loss: 0.874320, model2_loss: 0.936758
+iteration 53: loss: 1.952518, ICT_loss: 0.060176, FFT_loss: 0.213449
+iteration 54: loss: 2.747868, model1_loss: 1.156330, model2_loss: 1.319887
+iteration 54: loss: 2.747868, ICT_loss: 0.111657, FFT_loss: 0.344088
+iteration 55: loss: 2.704915, model1_loss: 0.996533, model2_loss: 1.448534
+iteration 55: loss: 2.704915, ICT_loss: 0.098596, FFT_loss: 0.426139
+ 23%|███████▋                          | 5/22 [00:44<02:27,  8.70s/it]iteration 56: loss: 2.000654, model1_loss: 0.853814, model2_loss: 0.950082
+iteration 56: loss: 2.000654, ICT_loss: 0.063852, FFT_loss: 0.223171
+iteration 57: loss: 1.848242, model1_loss: 0.721497, model2_loss: 0.952682
+iteration 57: loss: 1.848242, ICT_loss: 0.046075, FFT_loss: 0.311969
+iteration 58: loss: 2.079246, model1_loss: 0.813509, model2_loss: 1.106520
+iteration 58: loss: 2.079246, ICT_loss: 0.054369, FFT_loss: 0.299247
+iteration 59: loss: 2.094547, model1_loss: 0.880542, model2_loss: 1.002215
+iteration 59: loss: 2.094547, ICT_loss: 0.083916, FFT_loss: 0.256294
+iteration 60: loss: 1.992417, model1_loss: 0.888391, model2_loss: 0.955796
+iteration 60: loss: 1.992417, ICT_loss: 0.066766, FFT_loss: 0.355872
+iteration 61: loss: 2.468528, model1_loss: 0.965839, model2_loss: 1.358919
+iteration 61: loss: 2.468528, ICT_loss: 0.048293, FFT_loss: 0.402759
+iteration 62: loss: 2.560365, model1_loss: 0.870076, model2_loss: 1.474313
+iteration 62: loss: 2.560365, ICT_loss: 0.070496, FFT_loss: 0.346917
+iteration 63: loss: 2.120137, model1_loss: 0.880523, model2_loss: 1.096713
+iteration 63: loss: 2.120137, ICT_loss: 0.059667, FFT_loss: 0.360569
+iteration 64: loss: 1.941194, model1_loss: 0.794897, model2_loss: 1.016574
+iteration 64: loss: 1.941194, ICT_loss: 0.046772, FFT_loss: 0.276830
+iteration 65: loss: 1.907309, model1_loss: 0.841654, model2_loss: 0.914125
+iteration 65: loss: 1.907309, ICT_loss: 0.044149, FFT_loss: 0.224588
+iteration 66: loss: 1.989239, model1_loss: 0.835631, model2_loss: 0.940987
+iteration 66: loss: 1.989239, ICT_loss: 0.077748, FFT_loss: 0.380672
+ 27%|█████████▎                        | 6/22 [00:52<02:18,  8.64s/it]iteration 67: loss: 1.950403, model1_loss: 0.815793, model2_loss: 0.990170
+iteration 67: loss: 1.950403, ICT_loss: 0.061321, FFT_loss: 0.262047
+iteration 68: loss: 1.891269, model1_loss: 0.861408, model2_loss: 0.867083
+iteration 68: loss: 1.891269, ICT_loss: 0.066864, FFT_loss: 0.190801
+iteration 69: loss: 1.874627, model1_loss: 0.741588, model2_loss: 0.946177
+iteration 69: loss: 1.874627, ICT_loss: 0.071473, FFT_loss: 0.315171
+iteration 70: loss: 1.974559, model1_loss: 0.785508, model2_loss: 1.032788
+iteration 70: loss: 1.974559, ICT_loss: 0.055594, FFT_loss: 0.255872
+iteration 71: loss: 2.067186, model1_loss: 0.945263, model2_loss: 0.978146
+iteration 71: loss: 2.067186, ICT_loss: 0.049742, FFT_loss: 0.237301
+iteration 72: loss: 1.697681, model1_loss: 0.657094, model2_loss: 0.883570
+iteration 72: loss: 1.697681, ICT_loss: 0.066356, FFT_loss: 0.271270
+iteration 73: loss: 1.770334, model1_loss: 0.780456, model2_loss: 0.853537
+iteration 73: loss: 1.770334, ICT_loss: 0.050165, FFT_loss: 0.208737
+iteration 74: loss: 2.117685, model1_loss: 0.784294, model2_loss: 1.196928
+iteration 74: loss: 2.117685, ICT_loss: 0.056978, FFT_loss: 0.357189
+iteration 75: loss: 2.229877, model1_loss: 0.974036, model2_loss: 1.053847
+iteration 75: loss: 2.229877, ICT_loss: 0.083899, FFT_loss: 0.239896
+iteration 76: loss: 2.245492, model1_loss: 0.923695, model2_loss: 1.117525
+iteration 76: loss: 2.245492, ICT_loss: 0.084983, FFT_loss: 0.291374
+iteration 77: loss: 2.563488, model1_loss: 1.000502, model2_loss: 1.296269
+iteration 77: loss: 2.563488, ICT_loss: 0.093533, FFT_loss: 0.354580
+ 32%|██████████▊                       | 7/22 [01:01<02:08,  8.59s/it]iteration 78: loss: 2.239925, model1_loss: 0.955964, model2_loss: 1.115663
+iteration 78: loss: 2.239925, ICT_loss: 0.070000, FFT_loss: 0.397029
+iteration 79: loss: 2.427072, model1_loss: 1.020651, model2_loss: 1.198725
+iteration 79: loss: 2.427072, ICT_loss: 0.046752, FFT_loss: 0.338300
+iteration 80: loss: 1.660123, model1_loss: 0.704727, model2_loss: 0.812839
+iteration 80: loss: 1.660123, ICT_loss: 0.049385, FFT_loss: 0.241829
+iteration 81: loss: 1.927737, model1_loss: 0.804306, model2_loss: 1.007753
+iteration 81: loss: 1.927737, ICT_loss: 0.044972, FFT_loss: 0.287657
+iteration 82: loss: 1.675480, model1_loss: 0.676673, model2_loss: 0.846982
+iteration 82: loss: 1.675480, ICT_loss: 0.054060, FFT_loss: 0.182757
+iteration 83: loss: 2.008903, model1_loss: 0.904840, model2_loss: 0.967670
+iteration 83: loss: 2.008903, ICT_loss: 0.043520, FFT_loss: 0.178776
+iteration 84: loss: 2.420539, model1_loss: 0.990746, model2_loss: 1.297595
+iteration 84: loss: 2.420539, ICT_loss: 0.057137, FFT_loss: 0.304799
+iteration 85: loss: 2.036864, model1_loss: 0.881319, model2_loss: 1.048499
+iteration 85: loss: 2.036864, ICT_loss: 0.046538, FFT_loss: 0.248781
+iteration 86: loss: 1.733708, model1_loss: 0.705390, model2_loss: 0.901779
+iteration 86: loss: 1.733708, ICT_loss: 0.047763, FFT_loss: 0.239267
+iteration 87: loss: 2.426998, model1_loss: 0.987548, model2_loss: 1.231678
+iteration 87: loss: 2.426998, ICT_loss: 0.086920, FFT_loss: 0.308754
+iteration 88: loss: 2.563016, model1_loss: 0.993054, model2_loss: 1.393586
+iteration 88: loss: 2.563016, ICT_loss: 0.047303, FFT_loss: 0.421524
+ 36%|████████████▎                     | 8/22 [01:09<02:00,  8.60s/it]iteration 89: loss: 1.805145, model1_loss: 0.753658, model2_loss: 0.930179
+iteration 89: loss: 1.805145, ICT_loss: 0.043139, FFT_loss: 0.230770
+iteration 90: loss: 2.023087, model1_loss: 0.899364, model2_loss: 0.930117
+iteration 90: loss: 2.023087, ICT_loss: 0.062810, FFT_loss: 0.259142
+iteration 91: loss: 1.743163, model1_loss: 0.639462, model2_loss: 0.878932
+iteration 91: loss: 1.743163, ICT_loss: 0.065787, FFT_loss: 0.180622
+iteration 92: loss: 2.010911, model1_loss: 0.887242, model2_loss: 0.968113
+iteration 92: loss: 2.010911, ICT_loss: 0.052303, FFT_loss: 0.210673
+iteration 93: loss: 1.941781, model1_loss: 0.790521, model2_loss: 0.978582
+iteration 93: loss: 1.941781, ICT_loss: 0.062937, FFT_loss: 0.231767
+iteration 94: loss: 2.309138, model1_loss: 0.857699, model2_loss: 1.240738
+iteration 94: loss: 2.309138, ICT_loss: 0.072620, FFT_loss: 0.232081
+iteration 95: loss: 2.312082, model1_loss: 0.992596, model2_loss: 1.076082
+iteration 95: loss: 2.312082, ICT_loss: 0.096831, FFT_loss: 0.214262
+iteration 96: loss: 2.637560, model1_loss: 1.129190, model2_loss: 1.364644
+iteration 96: loss: 2.637560, ICT_loss: 0.057112, FFT_loss: 0.469548
+iteration 97: loss: 1.649713, model1_loss: 0.661161, model2_loss: 0.862576
+iteration 97: loss: 1.649713, ICT_loss: 0.046342, FFT_loss: 0.254227
+iteration 98: loss: 1.727093, model1_loss: 0.763385, model2_loss: 0.810795
+iteration 98: loss: 1.727093, ICT_loss: 0.061361, FFT_loss: 0.205116
+iteration 99: loss: 2.201556, model1_loss: 0.891688, model2_loss: 1.174482
+iteration 99: loss: 2.201556, ICT_loss: 0.039128, FFT_loss: 0.302440
+ 41%|█████████████▉                    | 9/22 [01:18<01:51,  8.57s/it]iteration 100: loss: 1.315731, model1_loss: 0.528046, model2_loss: 0.646690
+iteration 100: loss: 1.315731, ICT_loss: 0.060762, FFT_loss: 0.198094
+iteration 101: loss: 2.623665, model1_loss: 1.098151, model2_loss: 1.362230
+iteration 101: loss: 2.623665, ICT_loss: 0.059456, FFT_loss: 0.434847
+iteration 102: loss: 1.853008, model1_loss: 0.800231, model2_loss: 0.927000
+iteration 102: loss: 1.853008, ICT_loss: 0.040662, FFT_loss: 0.181969
+iteration 103: loss: 1.883636, model1_loss: 0.870094, model2_loss: 0.899891
+iteration 103: loss: 1.883636, ICT_loss: 0.044132, FFT_loss: 0.211084
+iteration 104: loss: 1.496047, model1_loss: 0.614043, model2_loss: 0.768524
+iteration 104: loss: 1.496047, ICT_loss: 0.042398, FFT_loss: 0.233541
+iteration 105: loss: 2.163829, model1_loss: 0.897480, model2_loss: 1.049260
+iteration 105: loss: 2.163829, ICT_loss: 0.092809, FFT_loss: 0.325025
+iteration 106: loss: 1.667625, model1_loss: 0.710920, model2_loss: 0.839911
+iteration 106: loss: 1.667625, ICT_loss: 0.048262, FFT_loss: 0.146059
+iteration 107: loss: 2.006251, model1_loss: 0.904947, model2_loss: 0.988168
+iteration 107: loss: 2.006251, ICT_loss: 0.042947, FFT_loss: 0.230249
+iteration 108: loss: 2.443284, model1_loss: 1.052763, model2_loss: 1.209574
+iteration 108: loss: 2.443284, ICT_loss: 0.064021, FFT_loss: 0.350730
+iteration 109: loss: 2.349827, model1_loss: 0.976626, model2_loss: 1.189993
+iteration 109: loss: 2.349827, ICT_loss: 0.080733, FFT_loss: 0.393120
+iteration 110: loss: 2.131739, model1_loss: 0.886145, model2_loss: 1.053113
+iteration 110: loss: 2.131739, ICT_loss: 0.077403, FFT_loss: 0.269731
+ 45%|███████████████                  | 10/22 [01:27<01:43,  8.60s/it]iteration 111: loss: 1.915127, model1_loss: 0.844943, model2_loss: 0.914055
+iteration 111: loss: 1.915127, ICT_loss: 0.055934, FFT_loss: 0.230127
+iteration 112: loss: 2.027829, model1_loss: 0.840018, model2_loss: 1.054561
+iteration 112: loss: 2.027829, ICT_loss: 0.060034, FFT_loss: 0.231667
+iteration 113: loss: 2.167093, model1_loss: 0.894057, model2_loss: 1.070918
+iteration 113: loss: 2.167093, ICT_loss: 0.062576, FFT_loss: 0.321661
+iteration 114: loss: 1.782333, model1_loss: 0.775393, model2_loss: 0.892128
+iteration 114: loss: 1.782333, ICT_loss: 0.045968, FFT_loss: 0.290180
+iteration 115: loss: 1.750856, model1_loss: 0.734921, model2_loss: 0.870186
+iteration 115: loss: 1.750856, ICT_loss: 0.060241, FFT_loss: 0.255853
+iteration 116: loss: 1.648512, model1_loss: 0.706162, model2_loss: 0.819065
+iteration 116: loss: 1.648512, ICT_loss: 0.048419, FFT_loss: 0.292099
+iteration 117: loss: 2.095716, model1_loss: 0.942234, model2_loss: 1.037178
+iteration 117: loss: 2.095716, ICT_loss: 0.040810, FFT_loss: 0.207250
+iteration 118: loss: 1.699998, model1_loss: 0.723578, model2_loss: 0.840348
+iteration 118: loss: 1.699998, ICT_loss: 0.051446, FFT_loss: 0.215066
+iteration 119: loss: 1.638745, model1_loss: 0.647456, model2_loss: 0.834391
+iteration 119: loss: 1.638745, ICT_loss: 0.040332, FFT_loss: 0.181179
+iteration 120: loss: 2.166383, model1_loss: 0.932020, model2_loss: 1.023214
+iteration 120: loss: 2.166383, ICT_loss: 0.055502, FFT_loss: 0.308617
+iteration 121: loss: 1.608318, model1_loss: 0.700924, model2_loss: 0.799895
+iteration 121: loss: 1.608318, ICT_loss: 0.037388, FFT_loss: 0.277299
+ 50%|████████████████▌                | 11/22 [01:35<01:34,  8.61s/it]iteration 122: loss: 1.684626, model1_loss: 0.698366, model2_loss: 0.841053
+iteration 122: loss: 1.684626, ICT_loss: 0.067755, FFT_loss: 0.224287
+iteration 123: loss: 2.000308, model1_loss: 0.868507, model2_loss: 0.992557
+iteration 123: loss: 2.000308, ICT_loss: 0.046669, FFT_loss: 0.305803
+iteration 124: loss: 1.853093, model1_loss: 0.808019, model2_loss: 0.873407
+iteration 124: loss: 1.853093, ICT_loss: 0.066464, FFT_loss: 0.142184
+iteration 125: loss: 1.218999, model1_loss: 0.530830, model2_loss: 0.564631
+iteration 125: loss: 1.218999, ICT_loss: 0.038648, FFT_loss: 0.198221
+iteration 126: loss: 1.844046, model1_loss: 0.824183, model2_loss: 0.894173
+iteration 126: loss: 1.844046, ICT_loss: 0.053796, FFT_loss: 0.228078
+iteration 127: loss: 1.496539, model1_loss: 0.615612, model2_loss: 0.781592
+iteration 127: loss: 1.496539, ICT_loss: 0.026713, FFT_loss: 0.267988
+iteration 128: loss: 2.116652, model1_loss: 0.902460, model2_loss: 1.064566
+iteration 128: loss: 2.116652, ICT_loss: 0.048878, FFT_loss: 0.207708
+iteration 129: loss: 1.753489, model1_loss: 0.758459, model2_loss: 0.873249
+iteration 129: loss: 1.753489, ICT_loss: 0.042351, FFT_loss: 0.203397
+iteration 130: loss: 1.212349, model1_loss: 0.516903, model2_loss: 0.587999
+iteration 130: loss: 1.212349, ICT_loss: 0.050199, FFT_loss: 0.230188
+iteration 131: loss: 2.301789, model1_loss: 0.999509, model2_loss: 1.134242
+iteration 131: loss: 2.301789, ICT_loss: 0.065379, FFT_loss: 0.350164
+iteration 132: loss: 2.128908, model1_loss: 0.946863, model2_loss: 1.064285
+iteration 132: loss: 2.128908, ICT_loss: 0.041891, FFT_loss: 0.240492
+ 55%|██████████████████               | 12/22 [01:44<01:26,  8.63s/it]iteration 133: loss: 1.608929, model1_loss: 0.743052, model2_loss: 0.758099
+iteration 133: loss: 1.608929, ICT_loss: 0.055411, FFT_loss: 0.100764
+iteration 134: loss: 2.012228, model1_loss: 0.924601, model2_loss: 0.926418
+iteration 134: loss: 2.012228, ICT_loss: 0.061254, FFT_loss: 0.178781
+iteration 135: loss: 1.935613, model1_loss: 0.856722, model2_loss: 0.897125
+iteration 135: loss: 1.935613, ICT_loss: 0.052611, FFT_loss: 0.233036
+iteration 136: loss: 2.138633, model1_loss: 0.930426, model2_loss: 1.035490
+iteration 136: loss: 2.138633, ICT_loss: 0.062537, FFT_loss: 0.348593
+iteration 137: loss: 1.739055, model1_loss: 0.702151, model2_loss: 0.896323
+iteration 137: loss: 1.739055, ICT_loss: 0.054955, FFT_loss: 0.295352
+iteration 138: loss: 1.892682, model1_loss: 0.849120, model2_loss: 0.943314
+iteration 138: loss: 1.892682, ICT_loss: 0.040133, FFT_loss: 0.240641
+iteration 139: loss: 2.355305, model1_loss: 0.921540, model2_loss: 1.281038
+iteration 139: loss: 2.355305, ICT_loss: 0.053785, FFT_loss: 0.366115
+iteration 140: loss: 2.048202, model1_loss: 0.910715, model2_loss: 1.032310
+iteration 140: loss: 2.048202, ICT_loss: 0.040554, FFT_loss: 0.306742
+iteration 141: loss: 2.752150, model1_loss: 1.260007, model2_loss: 1.306186
+iteration 141: loss: 2.752150, ICT_loss: 0.057926, FFT_loss: 0.435391
+iteration 142: loss: 1.715639, model1_loss: 0.702597, model2_loss: 0.883499
+iteration 142: loss: 1.715639, ICT_loss: 0.045302, FFT_loss: 0.299124
+iteration 143: loss: 2.665204, model1_loss: 1.170581, model2_loss: 1.309679
+iteration 143: loss: 2.665204, ICT_loss: 0.068049, FFT_loss: 0.400343
+ 59%|███████████████████▌             | 13/22 [01:52<01:17,  8.62s/it]iteration 144: loss: 2.057453, model1_loss: 0.770279, model2_loss: 1.141834
+iteration 144: loss: 2.057453, ICT_loss: 0.046469, FFT_loss: 0.263480
+iteration 145: loss: 1.685891, model1_loss: 0.677219, model2_loss: 0.866785
+iteration 145: loss: 1.685891, ICT_loss: 0.044674, FFT_loss: 0.274896
+iteration 146: loss: 1.477908, model1_loss: 0.577630, model2_loss: 0.752172
+iteration 146: loss: 1.477908, ICT_loss: 0.056516, FFT_loss: 0.240174
+iteration 147: loss: 1.566169, model1_loss: 0.565500, model2_loss: 0.864172
+iteration 147: loss: 1.566169, ICT_loss: 0.039253, FFT_loss: 0.216048
+iteration 148: loss: 2.085691, model1_loss: 0.936308, model2_loss: 1.058971
+iteration 148: loss: 2.085691, ICT_loss: 0.033435, FFT_loss: 0.263724
+iteration 149: loss: 2.330269, model1_loss: 0.975549, model2_loss: 1.193469
+iteration 149: loss: 2.330269, ICT_loss: 0.063670, FFT_loss: 0.358708
+iteration 150: loss: 2.214057, model1_loss: 0.878344, model2_loss: 1.168352
+iteration 150: loss: 2.214057, ICT_loss: 0.055507, FFT_loss: 0.287313
+iteration 151: loss: 1.684695, model1_loss: 0.736965, model2_loss: 0.823779
+iteration 151: loss: 1.684695, ICT_loss: 0.046437, FFT_loss: 0.144104
+iteration 152: loss: 1.682227, model1_loss: 0.764426, model2_loss: 0.799323
+iteration 152: loss: 1.682227, ICT_loss: 0.042867, FFT_loss: 0.294639
+iteration 153: loss: 1.747159, model1_loss: 0.725739, model2_loss: 0.882643
+iteration 153: loss: 1.747159, ICT_loss: 0.051403, FFT_loss: 0.257166
+iteration 154: loss: 2.226501, model1_loss: 0.986014, model2_loss: 1.021065
+iteration 154: loss: 2.226501, ICT_loss: 0.085389, FFT_loss: 0.399970
+ 64%|█████████████████████            | 14/22 [02:01<01:08,  8.60s/it]iteration 155: loss: 1.946518, model1_loss: 0.882948, model2_loss: 0.888143
+iteration 155: loss: 1.946518, ICT_loss: 0.063412, FFT_loss: 0.343630
+iteration 156: loss: 2.261433, model1_loss: 0.950863, model2_loss: 1.157333
+iteration 156: loss: 2.261433, ICT_loss: 0.065309, FFT_loss: 0.311776
+iteration 157: loss: 2.630207, model1_loss: 0.902189, model2_loss: 1.525749
+iteration 157: loss: 2.630207, ICT_loss: 0.053949, FFT_loss: 0.316438
+iteration 158: loss: 2.177583, model1_loss: 0.842166, model2_loss: 1.194186
+iteration 158: loss: 2.177583, ICT_loss: 0.057792, FFT_loss: 0.320236
+iteration 159: loss: 1.806925, model1_loss: 0.781361, model2_loss: 0.900885
+iteration 159: loss: 1.806925, ICT_loss: 0.046769, FFT_loss: 0.239832
+iteration 160: loss: 1.861183, model1_loss: 0.733262, model2_loss: 1.017380
+iteration 160: loss: 1.861183, ICT_loss: 0.038997, FFT_loss: 0.273156
+iteration 161: loss: 1.787404, model1_loss: 0.667775, model2_loss: 0.961448
+iteration 161: loss: 1.787404, ICT_loss: 0.048433, FFT_loss: 0.273687
+iteration 162: loss: 1.583917, model1_loss: 0.614355, model2_loss: 0.782121
+iteration 162: loss: 1.583917, ICT_loss: 0.063132, FFT_loss: 0.236995
+iteration 163: loss: 2.158631, model1_loss: 0.971058, model2_loss: 1.069082
+iteration 163: loss: 2.158631, ICT_loss: 0.044133, FFT_loss: 0.260695
+iteration 164: loss: 1.448931, model1_loss: 0.579881, model2_loss: 0.763211
+iteration 164: loss: 1.448931, ICT_loss: 0.034157, FFT_loss: 0.261605
+iteration 165: loss: 1.883735, model1_loss: 0.817969, model2_loss: 0.936382
+iteration 165: loss: 1.883735, ICT_loss: 0.047237, FFT_loss: 0.292109
+ 68%|██████████████████████▌          | 15/22 [02:10<01:00,  8.59s/it]iteration 166: loss: 1.773006, model1_loss: 0.682391, model2_loss: 0.974349
+iteration 166: loss: 1.773006, ICT_loss: 0.046762, FFT_loss: 0.284141
+iteration 167: loss: 1.355847, model1_loss: 0.531987, model2_loss: 0.703604
+iteration 167: loss: 1.355847, ICT_loss: 0.045422, FFT_loss: 0.146827
+iteration 168: loss: 1.550790, model1_loss: 0.671402, model2_loss: 0.751914
+iteration 168: loss: 1.550790, ICT_loss: 0.048778, FFT_loss: 0.238405
+iteration 169: loss: 1.807592, model1_loss: 0.795644, model2_loss: 0.832851
+iteration 169: loss: 1.807592, ICT_loss: 0.085775, FFT_loss: 0.260489
+iteration 170: loss: 1.899076, model1_loss: 0.762911, model2_loss: 0.968011
+iteration 170: loss: 1.899076, ICT_loss: 0.057911, FFT_loss: 0.247430
+iteration 171: loss: 1.996799, model1_loss: 0.814384, model2_loss: 1.003815
+iteration 171: loss: 1.996799, ICT_loss: 0.041061, FFT_loss: 0.186804
+iteration 172: loss: 2.230193, model1_loss: 0.914789, model2_loss: 1.154849
+iteration 172: loss: 2.230193, ICT_loss: 0.052304, FFT_loss: 0.329827
+iteration 173: loss: 1.189672, model1_loss: 0.508708, model2_loss: 0.577938
+iteration 173: loss: 1.189672, ICT_loss: 0.046927, FFT_loss: 0.203697
+iteration 174: loss: 1.727985, model1_loss: 0.635670, model2_loss: 0.940415
+iteration 174: loss: 1.727985, ICT_loss: 0.060023, FFT_loss: 0.273728
+iteration 175: loss: 1.849481, model1_loss: 0.748855, model2_loss: 0.976481
+iteration 175: loss: 1.849481, ICT_loss: 0.050668, FFT_loss: 0.212300
+iteration 176: loss: 1.877103, model1_loss: 0.706819, model2_loss: 0.996788
+iteration 176: loss: 1.877103, ICT_loss: 0.064758, FFT_loss: 0.266235
+ 73%|████████████████████████         | 16/22 [02:18<00:51,  8.58s/it]iteration 177: loss: 1.842489, model1_loss: 0.842721, model2_loss: 0.861284
+iteration 177: loss: 1.842489, ICT_loss: 0.057979, FFT_loss: 0.233626
+iteration 178: loss: 1.859597, model1_loss: 0.778503, model2_loss: 0.917981
+iteration 178: loss: 1.859597, ICT_loss: 0.069298, FFT_loss: 0.208782
+iteration 179: loss: 1.564577, model1_loss: 0.670436, model2_loss: 0.788314
+iteration 179: loss: 1.564577, ICT_loss: 0.039166, FFT_loss: 0.255778
+iteration 180: loss: 1.901801, model1_loss: 0.811715, model2_loss: 0.986498
+iteration 180: loss: 1.901801, ICT_loss: 0.053205, FFT_loss: 0.239634
+iteration 181: loss: 1.809870, model1_loss: 0.824131, model2_loss: 0.852115
+iteration 181: loss: 1.809870, ICT_loss: 0.047998, FFT_loss: 0.219586
+iteration 182: loss: 1.993272, model1_loss: 0.893901, model2_loss: 0.975256
+iteration 182: loss: 1.993272, ICT_loss: 0.045631, FFT_loss: 0.179413
+iteration 183: loss: 1.193667, model1_loss: 0.514868, model2_loss: 0.573639
+iteration 183: loss: 1.193667, ICT_loss: 0.047091, FFT_loss: 0.222458
+iteration 184: loss: 2.246784, model1_loss: 0.877293, model2_loss: 1.164177
+iteration 184: loss: 2.246784, ICT_loss: 0.076036, FFT_loss: 0.242800
+iteration 185: loss: 1.915664, model1_loss: 0.771141, model2_loss: 1.023086
+iteration 185: loss: 1.915664, ICT_loss: 0.046008, FFT_loss: 0.301504
+iteration 186: loss: 1.818910, model1_loss: 0.689752, model2_loss: 1.006132
+iteration 186: loss: 1.818910, ICT_loss: 0.049863, FFT_loss: 0.167315
+iteration 187: loss: 2.114696, model1_loss: 0.884686, model2_loss: 1.092746
+iteration 187: loss: 2.114696, ICT_loss: 0.045481, FFT_loss: 0.271531
+ 77%|█████████████████████████▌       | 17/22 [02:27<00:42,  8.58s/it]iteration 188: loss: 1.775824, model1_loss: 0.758960, model2_loss: 0.896466
+iteration 188: loss: 1.775824, ICT_loss: 0.047035, FFT_loss: 0.292183
+iteration 189: loss: 2.030534, model1_loss: 0.902230, model2_loss: 0.995815
+iteration 189: loss: 2.030534, ICT_loss: 0.042660, FFT_loss: 0.200141
+iteration 190: loss: 2.291699, model1_loss: 1.054108, model2_loss: 1.123303
+iteration 190: loss: 2.291699, ICT_loss: 0.048697, FFT_loss: 0.275234
+iteration 191: loss: 2.476423, model1_loss: 1.090974, model2_loss: 1.190674
+iteration 191: loss: 2.476423, ICT_loss: 0.091910, FFT_loss: 0.378593
+iteration 192: loss: 1.499844, model1_loss: 0.595324, model2_loss: 0.771228
+iteration 192: loss: 1.499844, ICT_loss: 0.057206, FFT_loss: 0.237500
+iteration 193: loss: 1.765111, model1_loss: 0.779115, model2_loss: 0.877942
+iteration 193: loss: 1.765111, ICT_loss: 0.038738, FFT_loss: 0.178988
+iteration 194: loss: 1.678778, model1_loss: 0.676974, model2_loss: 0.879843
+iteration 194: loss: 1.678778, ICT_loss: 0.048917, FFT_loss: 0.306770
+iteration 195: loss: 1.871328, model1_loss: 0.859988, model2_loss: 0.909197
+iteration 195: loss: 1.871328, ICT_loss: 0.043338, FFT_loss: 0.200024
+iteration 196: loss: 2.422676, model1_loss: 1.083330, model2_loss: 1.210398
+iteration 196: loss: 2.422676, ICT_loss: 0.041959, FFT_loss: 0.231257
+iteration 197: loss: 1.835855, model1_loss: 0.825503, model2_loss: 0.867680
+iteration 197: loss: 1.835855, ICT_loss: 0.056318, FFT_loss: 0.306755
+iteration 198: loss: 1.811822, model1_loss: 0.808231, model2_loss: 0.814411
+iteration 198: loss: 1.811822, ICT_loss: 0.077948, FFT_loss: 0.173404
+ 82%|███████████████████████████      | 18/22 [02:35<00:34,  8.60s/it]iteration 199: loss: 1.730126, model1_loss: 0.808797, model2_loss: 0.804278
+iteration 199: loss: 1.730126, ICT_loss: 0.052054, FFT_loss: 0.215100
+iteration 200 : mask_token_endpoint={"model1": {"activation_coverage": 1.0, "feature_norm": 3390.79638671875, "finite": true, "gamma": -0.004407122731208801, "gradient_finite": true, "predicted_class_fraction": [0.9666957855224609, 0.008258184418082237, 0.012620290741324425, 0.01242574118077755], "residual_norm": 839.0972290039062, "residual_to_feature_ratio": 0.2474631667137146, "routing_entropy": 1.3862684965133667, "token_gradient_norm": 0.0001611571351531893, "token_norm": 0.14855897426605225, "token_utilization": [0.2496069073677063, 0.24942836165428162, 0.24977979063987732, 0.25118499994277954]}, "model2": {"activation_coverage": 1.0, "feature_norm": 3417.1806640625, "finite": true, "gamma": 0.030972324311733246, "gradient_finite": true, "predicted_class_fraction": [0.9700362086296082, 0.0065981550142169, 0.012954076752066612, 0.01041158102452755], "residual_norm": 814.2012329101562, "residual_to_feature_ratio": 0.2382669597864151, "routing_entropy": 1.3862314224243164, "token_gradient_norm": 0.001359279383905232, "token_norm": 0.1529901921749115, "token_utilization": [0.25035643577575684, 0.24900683760643005, 0.2509574592113495, 0.24967925250530243]}}
+iteration 200 : adamix_endpoint={"active_classes": 3, "background_confidence": 0.9947184920310974, "class_histogram": [0.9881094098091125, 0.010965781286358833, 0.00092482496984303, 0.0], "controller_version": "v2_B", "fallback": false, "finite": true, "foreground_counts": {"1": 9191, "2": 13567, "3": 9998}, "foreground_coverage": 0.011890590190887451, "foreground_pixels": 32756, "margin_by_class": {"1": 0.7934530377388, "2": 0.7583258152008057, "3": 0.8537076711654663}, "mixed_loss_contribution": 2.6607449054718018, "model1_total_gradient_norm": 1.432296633720398, "old_q": 0.9901995658874512, "patch_area_ratio": 0.1154937744140625, "pixels": 786432, "predicted_background_fraction": 0.9583486318588257, "q_by_class": {"1": 0.883425772190094, "2": 0.8663833141326904, "3": 0.9157224297523499}, "q_fg": 0.888510505358378, "q_margin": 0.8018288413683573, "rectangle_h": 87, "rectangle_w": 87, "rectangle_x": 18, "rectangle_y": 142, "side_fraction": 0.3403657682736715, "teacher_conf": 0.8018288413683573}
+iteration 200 : v21_3_innovation_x_endpoint={"candidate_id": "V21_3_X03_CONTOUR_RELIABILITY_WEIGHT", "ctw_loss": 0.004472335800528526, "finite": true, "innovation_x_loss": 0.004472335800528526, "max_per_image_mean_error": 0.0, "raw_weight_max": 1.25, "raw_weight_mean": 0.26064908504486084, "raw_weight_min": 0.25, "used_weight_max": 1.25, "used_weight_mean": 0.26064908504486084, "used_weight_min": 0.25, "weighted_ctw_loss": 0.00022361679002642633, "weighted_innovation_x_loss": 0.00022361679293680936}
+iteration 200: loss: 2.105077, model1_loss: 0.918589, model2_loss: 1.025270
+iteration 200: loss: 2.105077, ICT_loss: 0.055612, FFT_loss: 0.171945
+checkpoint_saved path=/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/runs/SHORT_TCSMIX_V2/checkpoints/last.ckpt epoch=18 global_step=200
+best_checkpoint_updated path=/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/runs/SHORT_TCSMIX_V2/checkpoints/best.ckpt epoch=18 global_step=200 metric=0.809367
+iteration 200 : model1_mean_dice : 0.809367
+iteration 200 : model1_mean_dice_test : 0.809367
+iteration 200 : model2_mean_dice : 0.796553
+iteration 200 : model2_mean_dice_test : 0.796553
+ 82%|███████████████████████████      | 18/22 [03:02<00:40, 10.12s/it]

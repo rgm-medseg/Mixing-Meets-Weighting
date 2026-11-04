@@ -1,0 +1,21 @@
+{
+  "rule": "two fixed index quartiles of each of the seven already labeled patients",
+  "slices": [
+    "patient021_frame01_slice_5",
+    "patient021_frame02_slice_5",
+    "patient038_frame01_slice_5",
+    "patient038_frame02_slice_5",
+    "patient049_frame01_slice_4",
+    "patient049_frame02_slice_4",
+    "patient050_frame01_slice_5",
+    "patient050_frame02_slice_5",
+    "patient058_frame01_slice_5",
+    "patient058_frame02_slice_5",
+    "patient099_frame01_slice_2",
+    "patient099_frame02_slice_2",
+    "patient100_frame01_slice_5",
+    "patient100_frame02_slice_5"
+  ],
+  "test_access": false,
+  "qualitative_rule": "largest/median/smallest patient Dice difference; frame01 if available; middle foreground-bearing slice"
+}

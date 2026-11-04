@@ -1,0 +1,11 @@
+{
+  "time": "2026-10-08T00:50:59.196700+08:00",
+  "session": "beta_fft_C1_CTW_uniform_20261008",
+  "command": "exec /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/run_pipeline.py --resume >>/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/controller_2026-10-08T005059168055+0800.log 2>&1",
+  "host": "n1",
+  "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008",
+  "python": "/home/renguanming/.conda/envs/beta_fft/bin/python",
+  "resume": true,
+  "client_independent": true,
+  "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/controller_2026-10-08T005059168055+0800.log"
+}

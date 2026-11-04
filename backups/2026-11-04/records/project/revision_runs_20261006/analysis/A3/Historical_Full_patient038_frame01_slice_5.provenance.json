@@ -1,0 +1,13 @@
+{
+  "figure": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/analysis/A3/Historical_Full_patient038_frame01_slice_5",
+  "analysis": "A3",
+  "identity_tables": [
+    "confidence_proxy.csv",
+    "spatial_response.csv",
+    "selection_and_provenance.csv",
+    "../A4/paired_patient_differences.csv",
+    "../../case_metrics.csv"
+  ],
+  "run_case_checkpoint_scope": "See the applicable table in this analysis directory; multiple checkpoints are never treated as independent patients",
+  "time": "2026-10-06T21:05:21.698666+08:00"
+}

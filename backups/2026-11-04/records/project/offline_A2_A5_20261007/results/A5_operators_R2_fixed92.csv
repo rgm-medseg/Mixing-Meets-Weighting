@@ -1,0 +1,325 @@
+method_id,operator,calls,native_FLOPs,input_shapes,native_coverage
+R2_fixed92,aten::conv2d,1,18874368,"[[1, 1, 256, 256], [16, 1, 3, 3], [16], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 1, 256, 256], [16, 1, 3, 3], [16], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 1, 256, 256], [16, 1, 3, 3], [16], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 1, 256, 256], [16, 1, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaStreamIsCapturing,49,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaMalloc,6,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaEventRecord,43,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaStreamGetPriority,43,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaDeviceGetStreamPriorityRange,43,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaLaunchKernel,173,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void cask__5x_cudnn::computeOffsetsKernel<false, false>(cask__5x_cudnn::ComputeOffsetsParams)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaPeekAtLastError,38,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaMemsetAsync,7,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,_5x_cudnn_ampere_scudnn_128x32_relu_small_nn_v1,1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::reshape,7,0,"[[16], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::view,11,0,"[[16], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::add_,6,0,"[[1, 16, 256, 256], [1, 16, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1})",25,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::batch_norm,4,0,"[[1, 16, 256, 256], [16], [16], [16], [16], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_batch_norm_impl_index,4,0,"[[1, 16, 256, 256], [16], [16], [16], [16], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_batch_norm,4,0,"[[1, 16, 256, 256], [16], [16], [16], [16], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::empty_like,5,0,"[[1, 16, 256, 256], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::empty,79,0,"[[], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void cudnn::bn_fw_inf_1C11_kernel_NCHW<float, float, true, 1>(float, float, cudnnTensorStruct, float const*, cudnnTensorStruct, float*, cudnnTensorStruct, float const*, float const*, float const*, float const*, float)",18,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::leaky_relu,4,0,"[[1, 16, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::leaky_relu_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::(anonymous namespace)::leaky_relu_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)",18,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::dropout,2,0,"[[1, 16, 256, 256], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,2,603979776,"[[1, 16, 256, 256], [16, 16, 3, 3], [16], [], [], [], []]",reported
+R2_fixed92,aten::convolution,2,0,"[[1, 16, 256, 256], [16, 16, 3, 3], [16], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,2,0,"[[1, 16, 256, 256], [16, 16, 3, 3], [16], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,2,0,"[[1, 16, 256, 256], [16, 16, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void cudnn::engines_precompiled::nchwToNhwcKernel<float, float, float, false, true, (cudnnKernelDataType_t)2>(cudnn::engines_precompiled::nchw2nhwc_params_t<float>, float const*, float*)",28,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaLaunchKernelExC,11,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,sm80_xmma_fprop_implicit_gemm_indexed_wo_smem_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x16x64_stage1_warpsize4x1x1_g1_tensor16x8x8_alignc4_execute_kernel__5x_cudnn,3,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void cudnn::engines_precompiled::nhwcToNchwKernel<float, float, float, true, false, (cudnnKernelDataType_t)0>(cudnn::engines_precompiled::nhwc2nchw_params_t<float>, float const*, float*)",7,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::max_pool2d,1,0,"[[1, 16, 256, 256], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::max_pool2d_with_indices,1,0,"[[1, 16, 256, 256], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::(anonymous namespace)::max_pool_forward_nchw<float, float>(int, float const*, long, long, long, int, int, int, int, int, int, int, int, int, int, float*, long*)",4,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,1,150994944,"[[1, 16, 128, 128], [32, 16, 3, 3], [32], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 16, 128, 128], [32, 16, 3, 3], [32], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 16, 128, 128], [32, 16, 3, 3], [32], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 16, 128, 128], [32, 16, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void cudnn::winograd::generateWinogradTilesKernel<0, float, float>(cudnn::winograd::GenerateWinogradTilesParams<float, float>)",4,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,_5x_cudnn_ampere_scudnn_winograd_128x128_ldg1_ldg4_relu_tile148t_nt_v1,4,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::reshape,5,0,"[[32], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::view,9,0,"[[32], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::add_,4,0,"[[1, 32, 128, 128], [1, 32, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::batch_norm,4,0,"[[1, 32, 128, 128], [32], [32], [32], [32], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_batch_norm_impl_index,4,0,"[[1, 32, 128, 128], [32], [32], [32], [32], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_batch_norm,4,0,"[[1, 32, 128, 128], [32], [32], [32], [32], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::empty_like,4,0,"[[1, 32, 128, 128], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::leaky_relu,4,0,"[[1, 32, 128, 128], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::dropout,2,0,"[[1, 32, 128, 128], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,2,603979776,"[[1, 32, 128, 128], [32, 32, 3, 3], [32], [], [], [], []]",reported
+R2_fixed92,aten::convolution,2,0,"[[1, 32, 128, 128], [32, 32, 3, 3], [32], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,2,0,"[[1, 32, 128, 128], [32, 32, 3, 3], [32], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,2,0,"[[1, 32, 128, 128], [32, 32, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::max_pool2d,1,0,"[[1, 32, 128, 128], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::max_pool2d_with_indices,1,0,"[[1, 32, 128, 128], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,1,150994944,"[[1, 32, 64, 64], [64, 32, 3, 3], [64], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 32, 64, 64], [64, 32, 3, 3], [64], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 32, 64, 64], [64, 32, 3, 3], [64], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 32, 64, 64], [64, 32, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::reshape,5,0,"[[64], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::view,9,0,"[[64], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::add_,4,0,"[[1, 64, 64, 64], [1, 64, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::batch_norm,4,0,"[[1, 64, 64, 64], [64], [64], [64], [64], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_batch_norm_impl_index,4,0,"[[1, 64, 64, 64], [64], [64], [64], [64], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_batch_norm,4,0,"[[1, 64, 64, 64], [64], [64], [64], [64], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::empty_like,4,0,"[[1, 64, 64, 64], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::leaky_relu,4,0,"[[1, 64, 64, 64], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::dropout,2,0,"[[1, 64, 64, 64], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,2,603979776,"[[1, 64, 64, 64], [64, 64, 3, 3], [64], [], [], [], []]",reported
+R2_fixed92,aten::convolution,2,0,"[[1, 64, 64, 64], [64, 64, 3, 3], [64], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,2,0,"[[1, 64, 64, 64], [64, 64, 3, 3], [64], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,2,0,"[[1, 64, 64, 64], [64, 64, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaFuncSetAttribute,21,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688fprop_optimized_tf32_64x64_32x5_nhwc_align4>(cutlass_tensorop_s1688fprop_optimized_tf32_64x64_32x5_nhwc_align4::Params),3,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::max_pool2d,1,0,"[[1, 64, 64, 64], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::max_pool2d_with_indices,1,0,"[[1, 64, 64, 64], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,1,150994944,"[[1, 64, 32, 32], [128, 64, 3, 3], [128], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 64, 32, 32], [128, 64, 3, 3], [128], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 64, 32, 32], [128, 64, 3, 3], [128], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 64, 32, 32], [128, 64, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,sm80_xmma_fprop_implicit_gemm_tf32f32_tf32f32_f32_nhwckrsc_nchw_tilesize64x32x64_stage5_warpsize2x2x1_g1_tensor16x8x8_alignc4_execute_kernel__5x_cudnn,6,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::reshape,5,0,"[[128], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::view,9,0,"[[128], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::add_,4,0,"[[1, 128, 32, 32], [1, 128, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::batch_norm,4,0,"[[1, 128, 32, 32], [128], [128], [128], [128], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_batch_norm_impl_index,4,0,"[[1, 128, 32, 32], [128], [128], [128], [128], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_batch_norm,4,0,"[[1, 128, 32, 32], [128], [128], [128], [128], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::empty_like,4,0,"[[1, 128, 32, 32], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::leaky_relu,4,0,"[[1, 128, 32, 32], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::dropout,2,0,"[[1, 128, 32, 32], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,2,603979776,"[[1, 128, 32, 32], [128, 128, 3, 3], [128], [], [], [], []]",reported
+R2_fixed92,aten::convolution,2,0,"[[1, 128, 32, 32], [128, 128, 3, 3], [128], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,2,0,"[[1, 128, 32, 32], [128, 128, 3, 3], [128], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,2,0,"[[1, 128, 32, 32], [128, 128, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::max_pool2d,1,0,"[[1, 128, 32, 32], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::max_pool2d_with_indices,1,0,"[[1, 128, 32, 32], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,1,150994944,"[[1, 128, 16, 16], [256, 128, 3, 3], [256], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 128, 16, 16], [256, 128, 3, 3], [256], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 128, 16, 16], [256, 128, 3, 3], [256], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 128, 16, 16], [256, 128, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::reshape,2,0,"[[256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::view,4,0,"[[256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::add_,2,0,"[[1, 256, 16, 16], [1, 256, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::batch_norm,2,0,"[[1, 256, 16, 16], [256], [256], [256], [256], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_batch_norm_impl_index,2,0,"[[1, 256, 16, 16], [256], [256], [256], [256], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_batch_norm,2,0,"[[1, 256, 16, 16], [256], [256], [256], [256], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::empty_like,2,0,"[[1, 256, 16, 16], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::leaky_relu,2,0,"[[1, 256, 16, 16], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::dropout,1,0,"[[1, 256, 16, 16], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,1,301989888,"[[1, 256, 16, 16], [256, 256, 3, 3], [256], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 256, 16, 16], [256, 256, 3, 3], [256], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 256, 16, 16], [256, 256, 3, 3], [256], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 256, 16, 16], [256, 256, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,Memset (Device),6,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,1,16777216,"[[1, 256, 16, 16], [128, 256, 1, 1], [128], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 256, 16, 16], [128, 256, 1, 1], [128], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 256, 16, 16], [128, 256, 1, 1], [128], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 256, 16, 16], [128, 256, 1, 1], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags,5,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,void cutlass::Kernel<cutlass_80_tensorop_s1688gemm_64x64_32x6_nn_align4>(cutlass_80_tensorop_s1688gemm_64x64_32x6_nn_align4::Params),2,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::add_,1,0,"[[1, 128, 16, 16], [1, 128, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::upsample_bilinear2d,1,0,"[[1, 128, 16, 16], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::(anonymous namespace)::upsample_bilinear2d_out_frame<float, float>(int, float, float, bool, at::GenericPackedTensorAccessor<float const, 4ul, at::DefaultPtrTraits, long>, at::GenericPackedTensorAccessor<float, 4ul, at::DefaultPtrTraits, long>)",4,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cat,4,0,"[[], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::(anonymous namespace)::CatArrayBatchedCopy_aligned16_contig<at::native::(anonymous namespace)::OpaqueType<4u>, unsigned int, 4, 128, 1>(at::native::(anonymous namespace)::OpaqueType<4u>*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<4u>, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",4,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,1,603979776,"[[1, 256, 32, 32], [128, 256, 3, 3], [128], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 256, 32, 32], [128, 256, 3, 3], [128], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 256, 32, 32], [128, 256, 3, 3], [128], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 256, 32, 32], [128, 256, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,1,16777216,"[[1, 128, 32, 32], [64, 128, 1, 1], [64], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 128, 32, 32], [64, 128, 1, 1], [64], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 128, 32, 32], [64, 128, 1, 1], [64], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 128, 32, 32], [64, 128, 1, 1], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::add_,1,0,"[[1, 64, 32, 32], [1, 64, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::upsample_bilinear2d,1,0,"[[1, 64, 32, 32], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,1,603979776,"[[1, 128, 64, 64], [64, 128, 3, 3], [64], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 128, 64, 64], [64, 128, 3, 3], [64], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 128, 64, 64], [64, 128, 3, 3], [64], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 128, 64, 64], [64, 128, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,1,16777216,"[[1, 64, 64, 64], [32, 64, 1, 1], [32], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 64, 64, 64], [32, 64, 1, 1], [32], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 64, 64, 64], [32, 64, 1, 1], [32], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 64, 64, 64], [32, 64, 1, 1], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,void cutlass::Kernel<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4::Params),1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::add_,1,0,"[[1, 32, 64, 64], [1, 32, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::upsample_bilinear2d,1,0,"[[1, 32, 64, 64], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,1,603979776,"[[1, 64, 128, 128], [32, 64, 3, 3], [32], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 64, 128, 128], [32, 64, 3, 3], [32], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 64, 128, 128], [32, 64, 3, 3], [32], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 64, 128, 128], [32, 64, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,sm80_xmma_fprop_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nchw_tilesize256x64x32_stage3_warpsize4x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn,1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,1,16777216,"[[1, 32, 128, 128], [16, 32, 1, 1], [16], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 32, 128, 128], [16, 32, 1, 1], [16], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 32, 128, 128], [16, 32, 1, 1], [16], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 32, 128, 128], [16, 32, 1, 1], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,void cutlass::Kernel<cutlass_80_tensorop_s1688gemm_128x64_16x6_nn_align4>(cutlass_80_tensorop_s1688gemm_128x64_16x6_nn_align4::Params),1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::add_,1,0,"[[1, 16, 128, 128], [1, 16, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::upsample_bilinear2d,1,0,"[[1, 16, 128, 128], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,1,603979776,"[[1, 32, 256, 256], [16, 32, 3, 3], [16], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 32, 256, 256], [16, 32, 3, 3], [16], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 32, 256, 256], [16, 32, 3, 3], [16], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 32, 256, 256], [16, 32, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,2,67108864,"[[1, 16, 256, 256], [16, 16, 1, 1], [16], [], [], [], []]",reported
+R2_fixed92,aten::convolution,2,0,"[[1, 16, 256, 256], [16, 16, 1, 1], [16], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,2,0,"[[1, 16, 256, 256], [16, 16, 1, 1], [16], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,2,0,"[[1, 16, 256, 256], [16, 16, 1, 1], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaOccupancyMaxActiveBlocksPerMultiprocessor,2,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,ampere_sgemm_128x32_nn,2,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::permute,1,0,"[[1, 16, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,2,0,"[[1, 16, 256, 256], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::layer_norm,1,0,"[[1, 256, 256, 16], [], [16], [16], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::native_layer_norm,1,0,"[[1, 256, 256, 16], [], [16], [16], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::contiguous,1,0,"[[1, 256, 256, 16], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::clone,1,0,"[[1, 256, 256, 16], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::empty_like,1,0,"[[1, 256, 256, 16], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::copy_,1,0,"[[1, 256, 256, 16], [1, 256, 256, 16], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1} const&)::{lambda(int)#1})",3,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<float, float>(int, float, float const*, float const*, float const*, float*, float*, float*)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::view,2,0,"[[65536], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::permute,1,0,"[[1, 256, 256, 16], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,1,0,"[[1, 256, 256, 16], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::einsum,2,0,"[[], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::unsqueeze,1,0,"[[1, 16, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::permute,1,0,"[[1, 16, 256, 256, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,1,0,"[[1, 16, 256, 256, 1], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::unsqueeze,2,0,"[[4, 16], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,2,0,"[[4, 16], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::unsqueeze,2,0,"[[4, 16, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,2,0,"[[4, 16, 1], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::unsqueeze,2,0,"[[4, 16, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,2,0,"[[4, 16, 1, 1], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::permute,2,0,"[[4, 16, 1, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,2,0,"[[4, 16, 1, 1, 1], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::permute,1,0,"[[1, 1, 256, 256, 16], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,1,0,"[[1, 1, 256, 256, 16], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::reshape,1,0,"[[256, 256, 16, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::view,1,0,"[[256, 256, 16, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::permute,1,0,"[[1, 4, 1, 1, 16], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,1,0,"[[1, 4, 1, 1, 16], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::reshape,1,0,"[[16, 1, 4, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_reshape_alias,1,0,"[[16, 1, 4, 1, 1], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::bmm,1,8388608,"[[1, 65536, 16], [1, 16, 4]]",reported
+R2_fixed92,aten::view,1,0,"[[1, 65536, 4], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::permute,1,0,"[[256, 256, 1, 1, 4], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,1,0,"[[256, 256, 1, 1, 4], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::view,1,0,"[[1, 4, 256, 256, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::mul,1,262144,"[[1, 4, 256, 256], []]",reported
+R2_fixed92,ampere_sgemm_32x128_tn,1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 2> >(int, at::native::AUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 2>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::softmax,1,0,"[[1, 4, 256, 256], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_softmax,1,0,"[[1, 4, 256, 256], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::contiguous,1,0,"[[1, 4, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::clone,1,0,"[[1, 4, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::empty_like,1,0,"[[1, 4, 256, 256], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::copy_,1,0,"[[1, 4, 256, 256], [1, 4, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::(anonymous namespace)::cunn_SpatialSoftMaxForward<float, float, float, int, at::native::(anonymous namespace)::SoftMaxForwardEpilogue>(float*, float const*, int, int, int)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::unsqueeze,1,0,"[[1, 4, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,1,0,"[[1, 4, 256, 256], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::permute,1,0,"[[1, 4, 256, 256, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,1,0,"[[1, 4, 256, 256, 1], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::permute,1,0,"[[1, 1, 256, 256, 4], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,1,0,"[[1, 1, 256, 256, 4], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::reshape,1,0,"[[256, 256, 4, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_reshape_alias,1,0,"[[256, 256, 4, 1, 1], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::permute,1,0,"[[1, 16, 1, 1, 4], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,1,0,"[[1, 16, 1, 1, 4], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::reshape,1,0,"[[4, 1, 16, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::view,1,0,"[[4, 1, 16, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::bmm,1,8388608,"[[1, 65536, 4], [1, 4, 16]]",reported
+R2_fixed92,ampere_sgemm_32x128_nt,1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::view,1,0,"[[1, 65536, 16], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::permute,1,0,"[[256, 256, 1, 1, 16], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,1,0,"[[256, 256, 1, 1, 16], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::view,1,0,"[[1, 16, 256, 256, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::contiguous,1,0,"[[1, 16, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::clone,1,0,"[[1, 16, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::copy_,1,0,"[[1, 16, 256, 256], [1, 16, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::mul,1,1,"[[1], [1, 16, 256, 256]]",reported
+R2_fixed92,"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1})",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::add,1,1048576,"[[1, 16, 256, 256], [1, 16, 256, 256], []]",reported
+R2_fixed92,"void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::clamp_min,1,0,"[[1, 4, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::launch_clamp_scalar(at::TensorIteratorBase&, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::(anonymous namespace)::launch_clamp_scalar(at::TensorIteratorBase&, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)",2,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::log,1,0,"[[1, 4, 256, 256]]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::vectorized_elementwise_kernel<4, at::native::log_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::log_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::mul,1,262144,"[[1, 4, 256, 256], [1, 4, 256, 256]]",reported
+R2_fixed92,"void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::sum,1,0,"[[1, 4, 256, 256], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,4,0,"[[1, 256, 256], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::reduce_kernel<128, 4, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::mean,6,0,"[[1, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,12,0,"[[], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, float, float, float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MeanOps<float, float, float, float>, unsigned int, float, 4>)",7,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::neg,1,0,[[]],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::vectorized_elementwise_kernel<4, at::native::neg_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::neg_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::max,1,0,"[[1, 4, 256, 256], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::reduce_kernel<128, 4, at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::mean,1,0,"[[1, 4, 256, 256], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::as_strided,1,0,"[[4], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::detach,1,0,[[4]],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::to,1,0,"[[4], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_to_copy,1,0,"[[4], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::empty_strided,17,0,"[[], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::copy_,1,0,"[[4], [4], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaMemcpyAsync,13,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,Memcpy DtoH (Device -> Pageable),12,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaStreamSynchronize,13,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::resolve_conj,1,0,[[4]],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::resolve_neg,1,0,[[4]],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::detach,10,0,[[]],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::to,10,0,"[[], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_to_copy,10,0,"[[], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::copy_,10,0,"[[], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::item,11,0,[[]],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_local_scalar_dense,11,0,[[]],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::gt,1,0,"[[1, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::vectorized_elementwise_kernel<4, at::native::compare_scalar_kernel<float>(at::TensorIteratorBase&, at::native::(anonymous namespace)::OpType, float)::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::compare_scalar_kernel<float>(at::TensorIteratorBase&, at::native::(anonymous namespace)::OpType, float)::{lambda(float)#1}, at::detail::Array<char*, 2>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::to,5,0,"[[1, 256, 256], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_to_copy,5,0,"[[1, 256, 256], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::copy_,5,0,"[[1, 256, 256], [1, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",5,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::detach,1,0,[[1]],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::to,1,0,"[[1], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_to_copy,1,0,"[[1], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::copy_,1,0,"[[1], [1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::item,1,0,[[1]],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_local_scalar_dense,1,0,[[1]],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::linalg_vector_norm,1,0,"[[4, 16], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::NormTwoOps<float, float, float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::NormTwoOps<float, float, float>, unsigned int, float, 4>)",5,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::linalg_vector_norm,4,0,"[[1, 16, 256, 256], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::clamp_min,1,0,"[[], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::div,1,0,"[[], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> >, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> >, at::detail::Array<char*, 3>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::isfinite,1,0,"[[1, 16, 256, 256]]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::abs,1,0,"[[1, 16, 256, 256]]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::abs,1,0,"[[1, 16, 256, 256], [0]]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::resize_,1,0,"[[0], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::vectorized_elementwise_kernel<4, at::native::AbsFunctor<float>, at::detail::Array<char*, 2> >(int, at::native::AbsFunctor<float>, at::detail::Array<char*, 2>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::ne,1,0,"[[1, 16, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<float, float, bool, at::native::(anonymous namespace)::CompareEqFunctor<float> >, at::detail::Array<char*, 2> >(int, at::native::AUnaryFunctor<float, float, bool, at::native::(anonymous namespace)::CompareEqFunctor<float> >, at::detail::Array<char*, 2>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::eq,1,0,"[[1, 16, 256, 256], [1, 16, 256, 256]]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, bool, at::native::(anonymous namespace)::CompareEqFunctor<float> >, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<float, float, bool, at::native::(anonymous namespace)::CompareEqFunctor<float> >, at::detail::Array<char*, 3>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::mul,1,1048576,"[[1, 16, 256, 256], [1, 16, 256, 256]]",reported
+R2_fixed92,"void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<bool, bool, bool, at::native::binary_internal::MulFunctor<bool> >, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<bool, bool, bool, at::native::binary_internal::MulFunctor<bool> >, at::detail::Array<char*, 3>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::all,1,0,"[[1, 16, 256, 256]]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<bool, at::native::func_wrapper_t<bool, at::native::and_kernel_cuda(at::TensorIterator&)::{lambda()#1}::operator()() const::{lambda()#12}::operator()() const::{lambda(bool, bool)#1}>, unsigned int, bool, 4> >(at::native::ReduceOp<bool, at::native::func_wrapper_t<bool, at::native::and_kernel_cuda(at::TensorIterator&)::{lambda()#1}::operator()() const::{lambda()#12}::operator()() const::{lambda(bool, bool)#1}>, unsigned int, bool, 4>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,Memcpy DtoH (Device -> Pinned),1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::conv2d,1,75497472,"[[1, 16, 256, 256], [4, 16, 3, 3], [4], [], [], [], []]",reported
+R2_fixed92,aten::convolution,1,0,"[[1, 16, 256, 256], [4, 16, 3, 3], [4], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::_convolution,1,0,"[[1, 16, 256, 256], [4, 16, 3, 3], [4], [], [], [], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::cudnn_convolution,1,0,"[[1, 16, 256, 256], [4, 16, 3, 3], [], [], [], [], [], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,sm80_xmma_fprop_implicit_gemm_indexed_wo_smem_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x32x16_stage1_warpsize4x1x1_g1_tensor16x8x8_aligna4_execute_kernel__5x_cudnn,1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::reshape,1,0,"[[4], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::view,1,0,"[[4], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::add_,1,0,"[[1, 4, 256, 256], [1, 4, 1, 1], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::argmax,1,0,"[[1, 4, 256, 256], [], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::reduce_kernel<128, 4, at::native::ReduceOp<float, at::native::ArgMaxOps<float>, unsigned int, long, 4> >(at::native::ReduceOp<float, at::native::ArgMaxOps<float>, unsigned int, long, 4>)",1,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,aten::eq,4,0,"[[1, 256, 256], []]",zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,"void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<long, long, bool, at::native::(anonymous namespace)::CompareEqFunctor<long> >, at::detail::Array<char*, 2> >(int, at::native::AUnaryFunctor<long, long, bool, at::native::(anonymous namespace)::CompareEqFunctor<long> >, at::detail::Array<char*, 2>)",4,0,[],zero/uncovered/nonarithmetic; inspect definition
+R2_fixed92,cudaDeviceSynchronize,2,0,[],zero/uncovered/nonarithmetic; inspect definition

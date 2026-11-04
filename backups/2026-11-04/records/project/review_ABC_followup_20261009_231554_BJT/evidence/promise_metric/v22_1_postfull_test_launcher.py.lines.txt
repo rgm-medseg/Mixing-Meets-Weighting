@@ -1,0 +1,58 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/tools/v22_1_postfull_test_launcher.py
+ORIGINAL_SHA256: 2a20e429f54942c5392c57d1469a4edc1d0d93e144de4c3403c4d70407986ad6
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 172-225 ---
+172: def promise_binary_metrics(pred: np.ndarray, target: np.ndarray) -> dict[str, float]:
+173:     from medpy import metric
+174: 
+175:     pred = pred.astype(bool)
+176:     target = target.astype(bool)
+177:     inter = int(np.logical_and(pred, target).sum())
+178:     union = int(np.logical_or(pred, target).sum())
+179:     denom = int(pred.sum() + target.sum())
+180:     if pred.any() and target.any():
+181:         hd95 = float(metric.binary.hd95(pred, target))
+182:         asd = float(metric.binary.asd(pred, target))
+183:     elif not pred.any() and not target.any():
+184:         hd95 = asd = 0.0
+185:     else:
+186:         hd95 = asd = float(np.linalg.norm(pred.shape))
+187:     return {
+188:         "dice": 0.0 if denom == 0 else float(2.0 * inter / denom),
+189:         "iou": 0.0 if union == 0 else float(inter / union),
+190:         "hd95": hd95,
+191:         "asd": asd,
+192:     }
+193: 
+194: 
+195: @torch.inference_mode()
+196: def promise_run(row: dict[str, str], output_dir: Path) -> dict[str, Any]:
+197:     sys.path.insert(0, str(ROOT / "train_promise12"))
+198:     from networks.net_factory import net_factory  # type: ignore
+199: 
+200:     data_root = ROOT / "data_staging/promise12/20260624_141558/data_promise12"
+201:     cases = [line.strip().split(".")[0] for line in (data_root / "test.list").read_text().splitlines() if line.strip()]
+202:     model = net_factory(net_type="unet", in_chns=1, class_num=2, use_mask_token_prehead_router=True, mask_token_num=4, mask_token_dim=16)
+203:     model.load_state_dict(torch.load(ROOT / row["CheckpointPath"], map_location="cpu"))
+204:     model.eval()
+205:     rows = []
+206:     for case in cases:
+207:         image = np.load(data_root / "npy_image" / f"{case}.npy")
+208:         target = np.load(data_root / "npy_image" / f"{case}_segmentation.npy")
+209:         pred = np.zeros_like(target, dtype=np.uint8)
+210:         for idx in range(image.shape[0]):
+211:             tensor = torch.from_numpy(image[idx]).unsqueeze(0).unsqueeze(0).float().cuda()
+212:             pred[idx] = torch.softmax(model(tensor), dim=1).argmax(dim=1).squeeze(0).cpu().numpy().astype(np.uint8)
+213:         metrics = promise_binary_metrics(pred == 1, target == 1)
+214:         rows.append({"case": case, **metrics})
+215:     macro = {key: float(np.mean([r[key] for r in rows])) for key in ("dice", "iou", "hd95", "asd")}
+216:     with (output_dir / "case_metrics.tsv").open("w", encoding="utf-8", newline="") as handle:
+217:         writer = csv.DictWriter(handle, fieldnames=["case", "dice", "iou", "hd95", "asd"], delimiter="\t")
+218:         writer.writeheader()
+219:         writer.writerows(rows)
+220:     return make_receipt(row, output_dir, macro, {"foreground": macro})
+221: 
+222: 
+223: @torch.inference_mode()
+224: def covid_run(row: dict[str, str], output_dir: Path) -> dict[str, Any]:
+225:     sys.path.insert(0, str(ROOT))

@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "method_frame_identities": 80,
+  "rounds_each": 3,
+  "all_prediction_hashes_equal": true
+}

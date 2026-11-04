@@ -1,0 +1,43 @@
+item,R1,E4,category,evidence
+task,"""R1""","""E4""",其他差异,config + E4 effective source + function binding
+model_family,"""beta_fft""","""beta_fft""",保持一致,config + E4 effective source + function binding
+weight_mode,"""spatial""","""spatial""",保持一致,config + E4 effective source + function binding
+mix_mode,"""dynamic""","""dynamic""",保持一致,config + E4 effective source + function binding
+trc,"""token""","""bottleneck""",预期改变,config + E4 effective source + function binding
+fixed_side,null,null,保持一致,config + E4 effective source + function binding
+bottleneck_width,18,18,保持一致,config + E4 effective source + function binding
+dataset_root,"""/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC""","""/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC""",保持一致,config + E4 effective source + function binding
+seed,42,42,保持一致,config + E4 effective source + function binding
+max_iterations,30000,30000,保持一致,config + E4 effective source + function binding
+validation_interval,200,200,保持一致,config + E4 effective source + function binding
+save_interval,200,200,保持一致,config + E4 effective source + function binding
+batch_size,24,24,保持一致,config + E4 effective source + function binding
+labeled_bs,12,12,保持一致,config + E4 effective source + function binding
+pretrained_model,"""/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth""","""/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth""",保持一致,config + E4 effective source + function binding
+run_root,"""/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/runs/R1_full_v2B""","""/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E4/runs/E4_plain_residual_v2B""",其他差异,config + E4 effective source + function binding
+num_workers,16,16,保持一致,config + E4 effective source + function binding
+protocol_hash,"""97594183409307f5670adc6211d1cfc9e53d4d3cc3bb93842d940fc372320213""","""0d9c538c81622a1cbbdb1dd2b3180b667d04b10321cfc362ddafc6a5549548fd""",其他差异,config + E4 effective source + function binding
+precision,"""fp32""","""fp32""",保持一致,config + E4 effective source + function binding
+official_commit,null,null,保持一致,config + E4 effective source + function binding
+budget_note,"""one authorized formal R1; 30000 joint iterations, each student optimizer step separately recorded""","""one seed42 E4 plain residual, 30000 joint, no E3""",其他差异,config + E4 effective source + function binding
+estimated_seconds,24156,26440.0130477,其他差异,config + E4 effective source + function binding
+phase,"""formal_R1""","""formal_E4""",其他差异,config + E4 effective source + function binding
+controller_version,"""v2_B""","""v2_B""",保持一致,config + E4 effective source + function binding
+foreground_ids,"[1, 2, 3]","[1, 2, 3]",保持一致,config + E4 effective source + function binding
+background_id,0,0,保持一致,config + E4 effective source + function binding
+formal_authorized,true,true,保持一致,config + E4 effective source + function binding
+controller_source,"""/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/controller.py""","""/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/controller.py""",其他差异,config + E4 effective source + function binding
+controller_source_sha256,"""f923e7f9bf0ef9bdae94bbd400d54f52fbbc6064efac9bcece365465657f795c""","""f923e7f9bf0ef9bdae94bbd400d54f52fbbc6064efac9bcece365465657f795c""",保持一致,config + E4 effective source + function binding
+parent_protocol_hash,"""a4145b4d3fdbecc8cfee53dfc835884f13f342fa20f1be0b8419f36fe1d0b684""","""97594183409307f5670adc6211d1cfc9e53d4d3cc3bb93842d940fc372320213""",其他差异,config + E4 effective source + function binding
+optimizer,"""SGD momentum .9, weight_decay 1e-4; transplant pretrain optimizer state""","""SGD momentum .9, weight_decay 1e-4; transplant pretrain optimizer state""",保持一致,identical scientific source and inherited protocol
+base_lr,0.01,0.01,保持一致,identical scientific source and inherited protocol
+lr_schedule,"""constant after pretrain optimizer transplant (historical loop has no LR update)""","""constant after pretrain optimizer transplant (historical loop has no LR update)""",保持一致,identical scientific source and inherited protocol
+ema,0.99,0.99,保持一致,identical scientific source and inherited protocol
+ctw_lambda,0.05,0.05,保持一致,identical scientific source and inherited protocol
+evaluation,"{""id"": ""ACDC_v22_grid_directed_ASD"", ""dice_iou"": ""fractions; macro over RV/MYO/LV and frame volumes"", ""surface_unit"": ""original H5 reconstruction grid, spacing=(1,1,1)"", ""empty_both"": ""all metrics 0"", ""empty_one"": ""Dice/IoU 0, HD95/ASD volume-grid diagonal"", ""asd"": ""MedPy directed prediction-to-GT ASD"", ""resize"": ""nearest order=0 input and output"", ""postprocess"": ""none""}","{""id"": ""ACDC_v22_grid_directed_ASD"", ""dice_iou"": ""fractions; macro over RV/MYO/LV and frame volumes"", ""surface_unit"": ""original H5 reconstruction grid, spacing=(1,1,1)"", ""empty_both"": ""all metrics 0"", ""empty_one"": ""Dice/IoU 0, HD95/ASD volume-grid diagonal"", ""asd"": ""MedPy directed prediction-to-GT ASD"", ""resize"": ""nearest order=0 input and output"", ""postprocess"": ""none""}",保持一致,identical scientific source and inherited protocol
+labeled_patients,"[""patient021"", ""patient038"", ""patient049"", ""patient050"", ""patient058"", ""patient099"", ""patient100""]","[""patient021"", ""patient038"", ""patient049"", ""patient050"", ""patient058"", ""patient099"", ""patient100""]",保持一致,identical scientific source and inherited protocol
+image_size,"[256, 256]","[256, 256]",保持一致,identical scientific source and inherited protocol
+selection,"""strictly higher foreground macro Dice on val; student 1""","""strictly higher foreground macro Dice on val; student 1""",保持一致,identical scientific source and inherited protocol
+resume_boundary,"""main RNG and sampled batch IDs recoverable; 16 worker RNG/prefetch not fully recoverable, not bitwise exact""","""main RNG and sampled batch IDs recoverable; 16 worker RNG/prefetch not fully recoverable, not bitwise exact""",保持一致,identical scientific source and inherited protocol
+pretrain generating history / original per-training-H5 hash,NA,same asset; current hashes frozen,无法核验,historical provenance absent
+all base losses and coefficients,R1 effective loss block,identical AST/text; exact snippet archived,保持一致,reports/E4_BASE_OBJECTIVE_SNIPPET.txt and E4_effective_source.patch

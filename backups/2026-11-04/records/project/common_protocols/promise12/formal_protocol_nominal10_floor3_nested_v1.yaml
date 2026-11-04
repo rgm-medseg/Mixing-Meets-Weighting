@@ -1,0 +1,71 @@
+schema_version: V18_7_PROMISE12_NOMINAL10_FLOOR3_NESTED_PROTOCOL_V1
+protocol: V18.7-P0-CLOSURE-PROMISE10-FLOOR3-AND-FORMAL-CONTROLLER-LAUNCH-V2
+dataset: PROMISE12
+status: FORMAL_PROTOCOL_MATERIALIZED_RATIO_AND_NESTED_GATE_PASS
+protocol_identity: PROMISE12_NOMINAL10_FLOOR3_NESTED_V1
+construction_time: 2026-08-10T05:05:02.968318+00:00
+construction_code_sha: NO_GIT_REPOSITORY_SCRIPT_SHA256:6fc847e7168981366383b4aa8b473eb7b45e3eaa84ea4550ec28147ddb63b716
+parent_20p_protocol_sha: 93c25732b1aef7f562634786215f10ade83f913185566da024e9cb813f58b5f5
+split:
+  train_pool_size: 35
+  nominal_ratio: 0.10
+  integer_policy: floor
+  labeled_count: 3
+  unlabeled_count: 32
+  actual_ratio: 0.085714285714
+  seed: 42
+  selection_policy: DETERMINISTIC_SEED42_SUBSET_OF_FROZEN_20P
+  labeled_cases:
+    - Case00
+    - Case01
+    - Case05
+  unlabeled_cases:
+    - Case02
+    - Case03
+    - Case04
+    - Case06
+    - Case07
+    - Case08
+    - Case09
+    - Case10
+    - Case11
+    - Case12
+    - Case13
+    - Case14
+    - Case15
+    - Case16
+    - Case17
+    - Case18
+    - Case19
+    - Case20
+    - Case21
+    - Case22
+    - Case23
+    - Case24
+    - Case25
+    - Case26
+    - Case27
+    - Case28
+    - Case29
+    - Case30
+    - Case31
+    - Case32
+    - Case33
+    - Case34
+budget:
+  full_optimizer_update_count: 30000
+  full_iterations: 30000
+  validation_cadence: 200
+  checkpoint_cadence: 200
+  canonical_effective_batch: 16
+  labeled_samples_per_update: 8
+  unlabeled_samples_per_update: 8
+  seed: 42
+endpoint_policy:
+  primary_endpoint: FORMAL_BEST_VAL
+  formal_test_eligible: false
+guards:
+  PROMISE12_10P_RATIO_GATE: PASS
+  PROMISE12_10P_NESTED_GATE: PASS
+  PROMISE12_10P_TEST_ACCESS_BEFORE_PROTOCOL_FREEZE: 0
+  PROMISE12_10P_RESULT_ACCESS_BEFORE_PROTOCOL_FREEZE: 0

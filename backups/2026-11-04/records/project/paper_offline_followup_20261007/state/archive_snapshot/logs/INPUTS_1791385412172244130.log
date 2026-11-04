@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/scripts/a3_inputs.py", line 64, in <module>
+    if __name__=='__main__':main()
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/scripts/a3_inputs.py", line 52, in main
+    exact=all(torch.equal(out[k],literal[k]) for k in ['image','image_strong','label','label_strong']);rngexact=pickle.dumps(after)==pickle.dumps(instrumented_after);assert exact and rngexact
+AssertionError

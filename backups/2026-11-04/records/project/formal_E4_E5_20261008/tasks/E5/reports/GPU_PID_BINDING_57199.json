@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T22:00:56.398835+08:00",
+  "container_pid": 57199,
+  "NVML_pid": 42147,
+  "GPU_uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+  "before": {
+    "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+    "name": "NVIDIA A100-SXM4-40GB",
+    "total_mib": 40960,
+    "used_mib": 0,
+    "free_mib": 40326,
+    "utilization": 0,
+    "pids": []
+  },
+  "after": {
+    "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+    "name": "NVIDIA A100-SXM4-40GB",
+    "total_mib": 40960,
+    "used_mib": 425,
+    "free_mib": 39901,
+    "utilization": 0,
+    "pids": [
+      42147
+    ]
+  }
+}

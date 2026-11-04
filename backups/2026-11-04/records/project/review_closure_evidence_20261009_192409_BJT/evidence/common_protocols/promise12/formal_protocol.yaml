@@ -1,0 +1,107 @@
+schema_version: V17_3_PROMISE12_FORMAL_PROTOCOL_V1
+protocol: V17.3-E2E-R8
+dataset: PROMISE12
+status: FORMAL_PROTOCOL_MATERIALIZED_TEST_ONCE
+track: TRACK_B_COMMON_PROTOCOL_MAIN
+dataset_version: PROMISE12_RAW_EXTRACTED_MHD_RAW
+authorized_data_root: /home/renguanming/jupyterlab/rgm/datasets/PROMISE12
+source_evidence:
+  raw_training_zip: /home/renguanming/jupyterlab/rgm/datasets/PROMISE12/raw/training_data.zip
+  raw_training_zip_sha256: 150287d0c74cd0105d8b70b43af4a7bf4f1fd3e1748829779177a0ccaf948f45
+  raw_livechallenge_zip: /home/renguanming/jupyterlab/rgm/datasets/PROMISE12/raw/livechallenge_test_data.zip
+  raw_livechallenge_zip_sha256: ee1f9136e34f27838c1f1e140d9a1bbbddbd1fa1ec55097f5ab2209ea8800c2e
+  legacy_loader: train_promise12/dataloaders/promise12.py
+  legacy_training_entrypoint: train_promise12/train_promise12_bcp_fft.py
+  raw_data_inventory: common_protocols/promise12/raw_data_inventory.tsv
+split:
+  split_registry: common_protocols/promise12/split_registry.tsv
+  training_case_count: 50
+  train_case_count: 35
+  labeled_case_count: 7
+  unlabeled_case_count: 28
+  validation_case_count: 5
+  internal_test_once_case_count: 10
+  livechallenge_test_reference_case_count: 20
+  labeled_cases:
+    - Case00
+    - Case01
+    - Case02
+    - Case03
+    - Case04
+    - Case05
+    - Case06
+  validation_cases:
+    - Case35
+    - Case36
+    - Case37
+    - Case38
+    - Case39
+  internal_test_once_cases:
+    - Case40
+    - Case41
+    - Case42
+    - Case43
+    - Case44
+    - Case45
+    - Case46
+    - Case47
+    - Case48
+    - Case49
+endpoint_policy:
+  test_endpoint_type: INTERNAL_HELD_OUT_TEST_ONCE_AFTER_FORMAL_RELEASE
+  test_case_ids_or_external_endpoint: Case40-Case49
+  external_submission_limit_and_identity: livechallenge_test_data recorded as external reference; not used for training or checkpoint selection
+  test_once_policy: PROMISE12_TEST_ONCE_AFTER_FORMAL_LOCK_AND_RELEASE_AUDIT_ONLY
+data_and_model:
+  modality_and_channel_order: single_channel_3d_mri_resampled_to_2d_slices_by_legacy_loader
+  class_mapping:
+    0: background
+    1: prostate
+  slice_axis_or_volume_mode: 2d_slice_from_3d_volume
+  input_dimensionality: 2d
+  input_size:
+    - 224
+    - 224
+  crop_and_resampling: legacy Promise12 img_resize to 224x224 with nearest interpolation
+  normalization: per_slice_min_max_then_curvature_flow_smoothing
+  common_backbone: UNet_2D
+  pretraining_profile: NO_EXTRA_METHOD_SPECIFIC_PRETRAINING_ALLOWED
+budget:
+  seed: 1337
+  full_optimizer_update_count: 30000
+  full_iterations: 30000
+  smoke_iterations: 20
+  short_iterations: 3000
+  validation_cadence: 200
+  checkpoint_cadence: 200
+  canonical_effective_batch: 16
+  labeled_samples_per_update: 8
+  unlabeled_samples_per_update: 8
+  labeled_slice_count: 202
+  precision_profile: fp32
+  tf32_determinism_policy: tf32_matmul_false_cudnn_true
+  checkpoint_retention_policy: best_model1_and_final_model1
+  default_concurrency: ONE_FORMAL_GPU_PROCESS_AFTER_LOCK
+  gpu_process_count: 1
+optimization:
+  primary_model_optimizer: SGD
+  primary_model_scheduler: existing_train_promise12_schedule
+  primary_model_learning_rate: 0.01
+  primary_model_weight_decay: 0.0001
+evaluation:
+  common_supervised_base_loss: CrossEntropyLoss_plus_DiceLoss
+  common_supervised_loss_reduction: mean
+  common_ignore_index: none
+  common_class_weighting: none
+  augmentation: random_rot_flip_or_random_rotate_plus_method_views
+  checkpoint_primary_metric: validation_dice
+  checkpoint_tiebreak: earliest_iteration
+  inference_discretization: argmax
+  empty_class_policy: metric_contract_policy
+  3d_reconstruction: case_volume_from_saved_case_npy
+  post_processing: none
+guards:
+  formal_lock_generated: false
+  training_authorized: false
+  final_test_release_authorized: false
+  test_labels_for_internal_test_once_not_for_training_or_checkpoint_selection: true

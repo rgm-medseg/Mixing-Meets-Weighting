@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T12:58:26.460017+08:00",
+  "formal_initial_joint_step": 0,
+  "fresh_seed42_recreates_original_initial_RNG": true,
+  "formal_initial_RNG_sha256": "8600aad0a392c558c6c6a3fa3e55406f16eb19be7943b84a77cbdb64e9c67d91",
+  "smoke_last_step": 2,
+  "smoke_last_RNG_sha256": "a1d3bc16f477cc3c0b260f608e98a205b4679431ed855a862ba3d67244d73967",
+  "smoke_final_RNG_not_reused": true,
+  "shared_pretrained_state_exact": true,
+  "new_plain_optimizer_state_empty": true
+}

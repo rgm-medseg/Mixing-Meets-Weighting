@@ -1,0 +1,1 @@
+独立离线队列，tmux beta_fft_paper_offline_followup_20261007。已读取来源、代码与旧完整报告，GPU0 A100空闲；预设方案和任务清单已落盘。执行顺序A2映射/重算、固定输入、部署等价、每次加载预热测速、A3、五轮复核、实际解包SHA交付。训练/优化器/EMA更新0，旧队列E1=3976 INTERRUPTED；不修改原源码/配置/成绩。预计计算10–50分钟，报告/核验另需时间；GPU忙则等待。start/status/stop/resume脚本在scripts，重启需要resume。

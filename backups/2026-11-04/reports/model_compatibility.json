@@ -1,0 +1,222 @@
+[
+  {
+    "experiment": "acdc5",
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC5_FINAL3/checkpoints/best.ckpt",
+    "sha256": "c4df306669f808ad46bed98b666c8e039fe61a5a92d9634255db396892e0bdf3",
+    "device": "cpu",
+    "strict": true,
+    "status": "PASS",
+    "models": {
+      "model_1": {
+        "status": "PASS",
+        "keys": 234,
+        "parameters": 1827469
+      },
+      "model_2": {
+        "status": "PASS",
+        "keys": 234,
+        "parameters": 1827469
+      },
+      "ema_model": {
+        "status": "PASS",
+        "keys": 234,
+        "parameters": 1827469
+      }
+    }
+  },
+  {
+    "experiment": "acdc5",
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC5_FINAL3/checkpoints/last.ckpt",
+    "sha256": "73a56425c5d9acbf69c941a7011ef80a18357968145e2c4dc7fe40630da204ab",
+    "device": "cpu",
+    "strict": true,
+    "status": "PASS",
+    "models": {
+      "model_1": {
+        "status": "PASS",
+        "keys": 234,
+        "parameters": 1827469
+      },
+      "model_2": {
+        "status": "PASS",
+        "keys": 234,
+        "parameters": 1827469
+      },
+      "ema_model": {
+        "status": "PASS",
+        "keys": 234,
+        "parameters": 1827469
+      }
+    }
+  },
+  {
+    "experiment": "acdc10",
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/best.ckpt",
+    "sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+    "device": "cpu",
+    "strict": true,
+    "status": "PASS",
+    "models": {
+      "model_1": {
+        "status": "PASS",
+        "keys": 234,
+        "parameters": 1827469
+      },
+      "model_2": {
+        "status": "PASS",
+        "keys": 234,
+        "parameters": 1827469
+      },
+      "ema_model": {
+        "status": "PASS",
+        "keys": 234,
+        "parameters": 1827469
+      }
+    }
+  },
+  {
+    "experiment": "acdc10",
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/last.ckpt",
+    "sha256": "1abf5ae770438d871dda4f6afa04dfc3755442a823551787251b1350d9c76c5a",
+    "device": "cpu",
+    "strict": true,
+    "status": "PASS",
+    "models": {
+      "model_1": {
+        "status": "PASS",
+        "keys": 234,
+        "parameters": 1827469
+      },
+      "model_2": {
+        "status": "PASS",
+        "keys": 234,
+        "parameters": 1827469
+      },
+      "ema_model": {
+        "status": "PASS",
+        "keys": 234,
+        "parameters": 1827469
+      }
+    }
+  },
+  {
+    "experiment": "promise20",
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/self_train/self_train_full_state_final.pth",
+    "sha256": "51071c2210a09c67aca814f308295f86a44ad9efad418caf76c1ed8f5608a5d7",
+    "device": "cpu",
+    "strict": true,
+    "status": "PASS",
+    "models": {
+      "model1": {
+        "status": "PASS",
+        "keys": 144,
+        "parameters": 1814115
+      },
+      "model2": {
+        "status": "PASS",
+        "keys": 144,
+        "parameters": 1814115
+      },
+      "ema_model": {
+        "status": "PASS",
+        "keys": 144,
+        "parameters": 1814115
+      }
+    }
+  },
+  {
+    "experiment": "promise20",
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/self_train/unet_best_model.pth",
+    "sha256": "89c670b16b9a5b1da3bdd8f8c19094424fceef84398773d0ec27246475a48f2c",
+    "device": "cpu",
+    "strict": true,
+    "status": "PASS",
+    "models": {
+      "state_dict": {
+        "status": "PASS",
+        "keys": 144,
+        "parameters": 1814115
+      }
+    }
+  },
+  {
+    "experiment": "covid5",
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/self_train/self_train_full_state_final.pth",
+    "sha256": "de3742c1e66749a3135abbb9423d3a7ea3da931abafb39a5713fafc95961cb94",
+    "device": "cpu",
+    "strict": true,
+    "status": "PASS",
+    "models": {
+      "model1": {
+        "status": "PASS",
+        "keys": 144,
+        "parameters": 1814115
+      },
+      "model2": {
+        "status": "PASS",
+        "keys": 144,
+        "parameters": 1814115
+      },
+      "ema_model": {
+        "status": "PASS",
+        "keys": 144,
+        "parameters": 1814115
+      }
+    }
+  },
+  {
+    "experiment": "covid5",
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/self_train/unet_best_model.pth",
+    "sha256": "b8a0a5eeeefc3b816afcf73fbba16dbc29e9e3c76936a03300fc6bc430cb196b",
+    "device": "cpu",
+    "strict": true,
+    "status": "PASS",
+    "models": {
+      "state_dict": {
+        "status": "PASS",
+        "keys": 144,
+        "parameters": 1814115
+      }
+    }
+  },
+  {
+    "experiment": "covid10",
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/self_train/self_train_full_state_final.pth",
+    "sha256": "60c681082133456f1ee85abea52b17439d2a2ae45f528aedb74afbe61b5946cb",
+    "device": "cpu",
+    "strict": true,
+    "status": "PASS",
+    "models": {
+      "model1": {
+        "status": "PASS",
+        "keys": 144,
+        "parameters": 1814115
+      },
+      "model2": {
+        "status": "PASS",
+        "keys": 144,
+        "parameters": 1814115
+      },
+      "ema_model": {
+        "status": "PASS",
+        "keys": 144,
+        "parameters": 1814115
+      }
+    }
+  },
+  {
+    "experiment": "covid10",
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/self_train/unet_best_model.pth",
+    "sha256": "8c89fe9238c187e4e387b5cc40b253e11e16b451e2788d6d395f2841274b019a",
+    "device": "cpu",
+    "strict": true,
+    "status": "PASS",
+    "models": {
+      "state_dict": {
+        "status": "PASS",
+        "keys": 144,
+        "parameters": 1814115
+      }
+    }
+  }
+]

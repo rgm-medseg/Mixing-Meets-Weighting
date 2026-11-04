@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-10-09T23:35:07.932815+08:00",
+  "host": "n1",
+  "paper_positions": 73,
+  "carried_mapped_positions": 20,
+  "missing_positions": 53,
+  "table_counts": {
+    "Table2": 32,
+    "Table3": 15,
+    "Table4": 26
+  },
+  "missing_counts": {
+    "ACDC": 22,
+    "PROMISE12": 11,
+    "COVID-19": 20
+  },
+  "excluded_covid_external_runs": 4,
+  "excluded_supplementary_runs": 5,
+  "promise_four_metrics_exact_equal": true,
+  "promise_checkpoint_split_exact_equal": true,
+  "promise_receipt_expected_sha_match": true,
+  "promise_archive_byte_identical": true,
+  "covid_existing_spacing_only_records": 4,
+  "covid_main_table_correction_NOT_FOUND": 22,
+  "b_generation_fields_NOT_FOUND": 14,
+  "c_import_target_rows": 6,
+  "c_historical_bindings_NOT_FOUND": 6,
+  "models_loaded": false,
+  "weights_read": false,
+  "prediction_arrays_read": false,
+  "distance_reevaluation": false,
+  "training_commands_executed": false,
+  "process_control_commands_executed": false,
+  "original_artifacts_modified": false,
+  "execution_scope": "stdlib text parsing + four receipt scalar differences + project-scoped rg metadata search",
+  "checked_at_build": "CSV cardinality, exact existing receipt SHA, same checkpoint/split, 4 exact scalar equalities; archive checks follow separately"
+}

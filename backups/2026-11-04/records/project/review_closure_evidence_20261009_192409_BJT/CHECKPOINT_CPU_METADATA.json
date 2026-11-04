@@ -1,0 +1,448 @@
+[
+  {
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label3/unet_best_model.pth",
+    "sha256": "3486fd3aecf5f30e77e7e15bec0841f56c87db6246a6dc50cc4dc6f2ee2087e0",
+    "bytes": 14685705,
+    "keys": [
+      "net",
+      "opt"
+    ],
+    "loaded_device": "CPU",
+    "cuda_visible_devices": "",
+    "model_created": false,
+    "forward_called": false,
+    "parameters_updated": false,
+    "state_dicts": {
+      "net": {
+        "tensor_keys": 226,
+        "tensor_numel": 1830440,
+        "all_cpu": true,
+        "TRC_tensor_keys": []
+      }
+    },
+    "opt": {
+      "groups": [
+        {
+          "lr": 0.01,
+          "momentum": 0.9,
+          "dampening": 0,
+          "weight_decay": 0.0001,
+          "nesterov": false,
+          "maximize": false,
+          "foreach": null,
+          "differentiable": false,
+          "parameter_count": 142
+        }
+      ],
+      "state_parameter_count": 82,
+      "momentum_buffer_count": 82,
+      "explicit_step_values": [],
+      "note": "SGD momentum has no step counter; update counts require training trace/source, not momentum contents."
+    }
+  },
+  {
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth",
+    "sha256": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3",
+    "bytes": 14685705,
+    "keys": [
+      "net",
+      "opt"
+    ],
+    "loaded_device": "CPU",
+    "cuda_visible_devices": "",
+    "model_created": false,
+    "forward_called": false,
+    "parameters_updated": false,
+    "state_dicts": {
+      "net": {
+        "tensor_keys": 226,
+        "tensor_numel": 1830440,
+        "all_cpu": true,
+        "TRC_tensor_keys": []
+      }
+    },
+    "opt": {
+      "groups": [
+        {
+          "lr": 0.01,
+          "momentum": 0.9,
+          "dampening": 0,
+          "weight_decay": 0.0001,
+          "nesterov": false,
+          "maximize": false,
+          "foreach": null,
+          "differentiable": false,
+          "parameter_count": 142
+        }
+      ],
+      "state_parameter_count": 82,
+      "momentum_buffer_count": 82,
+      "explicit_step_values": [],
+      "note": "SGD momentum has no step counter; update counts require training trace/source, not momentum contents."
+    }
+  },
+  {
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC5_FINAL3/checkpoints/last.ckpt",
+    "sha256": "73a56425c5d9acbf69c941a7011ef80a18357968145e2c4dc7fe40630da204ab",
+    "bytes": 36761058,
+    "keys": [
+      "model_1",
+      "model_2",
+      "ema_model",
+      "optimizer1",
+      "optimizer2",
+      "epoch",
+      "global_step",
+      "best_metrics",
+      "random_state",
+      "args"
+    ],
+    "loaded_device": "CPU",
+    "cuda_visible_devices": "",
+    "model_created": false,
+    "forward_called": false,
+    "parameters_updated": false,
+    "args": {
+      "root_path": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC",
+      "exp": "beta_fft_acdc_official_10pct_seed42",
+      "model": "unet",
+      "pre_iterations": 10000,
+      "max_iterations": 30000,
+      "batch_size": 24,
+      "deterministic": 1,
+      "base_lr": 0.01,
+      "image_size": [
+        256,
+        256
+      ],
+      "seed": 1337,
+      "num_classes": 4,
+      "labeled_bs": 12,
+      "labelnum": 3,
+      "u_weight": 0.5,
+      "gpu": "0",
+      "consistency": 0.1,
+      "consistency_rampup": 200.0,
+      "magnitude": 6.0,
+      "s_param": 6,
+      "patch_size": 64,
+      "h_size": 4,
+      "w_size": 4,
+      "top_num": 4,
+      "run_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/experiments/three_innovation_ablation_transfer_v22_0/ACDC5_FINAL3",
+      "pretrained_model": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label3",
+      "data_manifest_name": "official",
+      "resume_ckpt": "",
+      "save_interval": 200,
+      "mask_token_enabled": true,
+      "adamix_enabled": true,
+      "mask_token_num": 4,
+      "mask_token_dim": 16,
+      "adamix_min_side": 0.18,
+      "adamix_max_side": 0.38,
+      "mechanism_log_interval": 200,
+      "innovation_x_id": "V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+      "enable_v21_3_innovation_x": true,
+      "v21_3_innovation_x_weight": 0.05
+    },
+    "global_step": 30000,
+    "epoch": 5999,
+    "best_metrics": {
+      "model1_best_val_dice": 0.8892521589382639,
+      "model2_best_val_dice": 0.8848055228255333
+    },
+    "state_dicts": {
+      "model_1": {
+        "tensor_keys": 234,
+        "tensor_numel": 1831081,
+        "all_cpu": true,
+        "TRC_tensor_keys": [
+          "decoder.mask_token_router.tokens",
+          "decoder.mask_token_router.gamma",
+          "decoder.mask_token_router.project.weight",
+          "decoder.mask_token_router.project.bias",
+          "decoder.mask_token_router.norm.weight",
+          "decoder.mask_token_router.norm.bias",
+          "decoder.mask_token_router.inverse_project.weight",
+          "decoder.mask_token_router.inverse_project.bias"
+        ]
+      },
+      "model_2": {
+        "tensor_keys": 234,
+        "tensor_numel": 1831081,
+        "all_cpu": true,
+        "TRC_tensor_keys": [
+          "decoder.mask_token_router.tokens",
+          "decoder.mask_token_router.gamma",
+          "decoder.mask_token_router.project.weight",
+          "decoder.mask_token_router.project.bias",
+          "decoder.mask_token_router.norm.weight",
+          "decoder.mask_token_router.norm.bias",
+          "decoder.mask_token_router.inverse_project.weight",
+          "decoder.mask_token_router.inverse_project.bias"
+        ]
+      },
+      "ema_model": {
+        "tensor_keys": 234,
+        "tensor_numel": 1831081,
+        "all_cpu": true,
+        "TRC_tensor_keys": [
+          "decoder.mask_token_router.tokens",
+          "decoder.mask_token_router.gamma",
+          "decoder.mask_token_router.project.weight",
+          "decoder.mask_token_router.project.bias",
+          "decoder.mask_token_router.norm.weight",
+          "decoder.mask_token_router.norm.bias",
+          "decoder.mask_token_router.inverse_project.weight",
+          "decoder.mask_token_router.inverse_project.bias"
+        ]
+      }
+    },
+    "optimizer1": {
+      "groups": [
+        {
+          "lr": 0.01,
+          "momentum": 0.9,
+          "dampening": 0,
+          "weight_decay": 0.0001,
+          "nesterov": false,
+          "maximize": false,
+          "foreach": null,
+          "differentiable": false,
+          "fused": false,
+          "parameter_count": 142
+        },
+        {
+          "lr": 0.01,
+          "momentum": 0.9,
+          "dampening": 0,
+          "weight_decay": 0.0001,
+          "nesterov": false,
+          "maximize": false,
+          "foreach": null,
+          "differentiable": false,
+          "fused": null,
+          "parameter_count": 8
+        }
+      ],
+      "state_parameter_count": 90,
+      "momentum_buffer_count": 90,
+      "explicit_step_values": [],
+      "note": "SGD momentum has no step counter; update counts require training trace/source, not momentum contents."
+    },
+    "optimizer2": {
+      "groups": [
+        {
+          "lr": 0.01,
+          "momentum": 0.9,
+          "dampening": 0,
+          "weight_decay": 0.0001,
+          "nesterov": false,
+          "maximize": false,
+          "foreach": null,
+          "differentiable": false,
+          "fused": false,
+          "parameter_count": 142
+        },
+        {
+          "lr": 0.01,
+          "momentum": 0.9,
+          "dampening": 0,
+          "weight_decay": 0.0001,
+          "nesterov": false,
+          "maximize": false,
+          "foreach": null,
+          "differentiable": false,
+          "fused": null,
+          "parameter_count": 8
+        }
+      ],
+      "state_parameter_count": 90,
+      "momentum_buffer_count": 90,
+      "explicit_step_values": [],
+      "note": "SGD momentum has no step counter; update counts require training trace/source, not momentum contents."
+    }
+  },
+  {
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/last.ckpt",
+    "sha256": "1abf5ae770438d871dda4f6afa04dfc3755442a823551787251b1350d9c76c5a",
+    "bytes": 36761186,
+    "keys": [
+      "model_1",
+      "model_2",
+      "ema_model",
+      "optimizer1",
+      "optimizer2",
+      "epoch",
+      "global_step",
+      "best_metrics",
+      "random_state",
+      "args"
+    ],
+    "loaded_device": "CPU",
+    "cuda_visible_devices": "",
+    "model_created": false,
+    "forward_called": false,
+    "parameters_updated": false,
+    "args": {
+      "root_path": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC",
+      "exp": "beta_fft_acdc_official_10pct_seed42",
+      "model": "unet",
+      "pre_iterations": 10000,
+      "max_iterations": 30000,
+      "batch_size": 24,
+      "deterministic": 1,
+      "base_lr": 0.01,
+      "image_size": [
+        256,
+        256
+      ],
+      "seed": 42,
+      "num_classes": 4,
+      "labeled_bs": 12,
+      "labelnum": 7,
+      "u_weight": 0.5,
+      "gpu": "0",
+      "consistency": 0.1,
+      "consistency_rampup": 200.0,
+      "magnitude": 6.0,
+      "s_param": 6,
+      "patch_size": 64,
+      "h_size": 4,
+      "w_size": 4,
+      "top_num": 4,
+      "run_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+      "pretrained_model": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7",
+      "data_manifest_name": "official",
+      "resume_ckpt": "",
+      "save_interval": 200,
+      "mask_token_enabled": true,
+      "adamix_enabled": true,
+      "mask_token_num": 4,
+      "mask_token_dim": 16,
+      "adamix_min_side": 0.18,
+      "adamix_max_side": 0.38,
+      "mechanism_log_interval": 200,
+      "innovation_x_id": "V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+      "enable_v21_3_innovation_x": true,
+      "v21_3_innovation_x_weight": 0.05
+    },
+    "global_step": 30000,
+    "epoch": 2727,
+    "best_metrics": {
+      "model1_best_val_dice": 0.8999080952059592,
+      "model2_best_val_dice": 0.89818059307934
+    },
+    "state_dicts": {
+      "model_1": {
+        "tensor_keys": 234,
+        "tensor_numel": 1831081,
+        "all_cpu": true,
+        "TRC_tensor_keys": [
+          "decoder.mask_token_router.tokens",
+          "decoder.mask_token_router.gamma",
+          "decoder.mask_token_router.project.weight",
+          "decoder.mask_token_router.project.bias",
+          "decoder.mask_token_router.norm.weight",
+          "decoder.mask_token_router.norm.bias",
+          "decoder.mask_token_router.inverse_project.weight",
+          "decoder.mask_token_router.inverse_project.bias"
+        ]
+      },
+      "model_2": {
+        "tensor_keys": 234,
+        "tensor_numel": 1831081,
+        "all_cpu": true,
+        "TRC_tensor_keys": [
+          "decoder.mask_token_router.tokens",
+          "decoder.mask_token_router.gamma",
+          "decoder.mask_token_router.project.weight",
+          "decoder.mask_token_router.project.bias",
+          "decoder.mask_token_router.norm.weight",
+          "decoder.mask_token_router.norm.bias",
+          "decoder.mask_token_router.inverse_project.weight",
+          "decoder.mask_token_router.inverse_project.bias"
+        ]
+      },
+      "ema_model": {
+        "tensor_keys": 234,
+        "tensor_numel": 1831081,
+        "all_cpu": true,
+        "TRC_tensor_keys": [
+          "decoder.mask_token_router.tokens",
+          "decoder.mask_token_router.gamma",
+          "decoder.mask_token_router.project.weight",
+          "decoder.mask_token_router.project.bias",
+          "decoder.mask_token_router.norm.weight",
+          "decoder.mask_token_router.norm.bias",
+          "decoder.mask_token_router.inverse_project.weight",
+          "decoder.mask_token_router.inverse_project.bias"
+        ]
+      }
+    },
+    "optimizer1": {
+      "groups": [
+        {
+          "lr": 0.01,
+          "momentum": 0.9,
+          "dampening": 0,
+          "weight_decay": 0.0001,
+          "nesterov": false,
+          "maximize": false,
+          "foreach": null,
+          "differentiable": false,
+          "fused": false,
+          "parameter_count": 142
+        },
+        {
+          "lr": 0.01,
+          "momentum": 0.9,
+          "dampening": 0,
+          "weight_decay": 0.0001,
+          "nesterov": false,
+          "maximize": false,
+          "foreach": null,
+          "differentiable": false,
+          "fused": null,
+          "parameter_count": 8
+        }
+      ],
+      "state_parameter_count": 90,
+      "momentum_buffer_count": 90,
+      "explicit_step_values": [],
+      "note": "SGD momentum has no step counter; update counts require training trace/source, not momentum contents."
+    },
+    "optimizer2": {
+      "groups": [
+        {
+          "lr": 0.01,
+          "momentum": 0.9,
+          "dampening": 0,
+          "weight_decay": 0.0001,
+          "nesterov": false,
+          "maximize": false,
+          "foreach": null,
+          "differentiable": false,
+          "fused": false,
+          "parameter_count": 142
+        },
+        {
+          "lr": 0.01,
+          "momentum": 0.9,
+          "dampening": 0,
+          "weight_decay": 0.0001,
+          "nesterov": false,
+          "maximize": false,
+          "foreach": null,
+          "differentiable": false,
+          "fused": null,
+          "parameter_count": 8
+        }
+      ],
+      "state_parameter_count": 90,
+      "momentum_buffer_count": 90,
+      "explicit_step_values": [],
+      "note": "SGD momentum has no step counter; update counts require training trace/source, not momentum contents."
+    }
+  }
+]

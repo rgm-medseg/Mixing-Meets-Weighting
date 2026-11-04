@@ -1,0 +1,81 @@
+{
+  "adamix": true,
+  "arm": "ARM2_ADAMIX",
+  "best_iter": 3000,
+  "best_val_dice": 0.842778,
+  "checkpoint_path": "train_promise12/beta_FFT/PROMISE12_bcp_fft_test_seed_V19_8_COVID19_10P_ADAMIX_CANON1337_R1_241/self_train/unet_best_model.pth",
+  "checkpoint_sha256": "59e24a7e734935912d520e6785616028b211fc3746ef25a5bd636b81beb00dd5",
+  "created_utc": "2026-08-13T17:02:22.404175+00:00",
+  "formal_training_seed": 1337,
+  "mask_token": false,
+  "metric_result": {
+    "aggregation": "PATIENT_VOLUME_MACRO",
+    "macro": {
+      "asd_mm": 3.4411243526878277,
+      "dice": 0.6655931748426555,
+      "hd95_mm": 16.571001932279195,
+      "iou": 0.5064883836598066
+    },
+    "per_patient": {
+      "coronacases_002": {
+        "asd_mm": 0.8419474252213336,
+        "dice": 0.8142956873004792,
+        "hd95_mm": 2.029581646585387,
+        "iou": 0.6867611752600892
+      },
+      "coronacases_009": {
+        "asd_mm": 5.752707553380082,
+        "dice": 0.669315957104871,
+        "hd95_mm": 36.1546206567935,
+        "iou": 0.5029863855950812
+      },
+      "radiopaedia_27_86410_0": {
+        "asd_mm": 4.905157554006931,
+        "dice": 0.6094194155299699,
+        "hd95_mm": 20.07065224865864,
+        "iou": 0.4382481837701109
+      },
+      "radiopaedia_40_86625_0": {
+        "asd_mm": 2.2646848781429627,
+        "dice": 0.5693416394353016,
+        "hd95_mm": 8.029153177079262,
+        "iou": 0.3979577900139454
+      }
+    },
+    "primary_validation_metric": "PATIENT_VOLUME_MACRO_DICE",
+    "unit": "mm"
+  },
+  "prediction_paths": [
+    {
+      "output_sha256": "edb7ae2a857d1a5cf169576da3b09b8f5de67a8af7245a896fdace58084a7a03",
+      "path": "formal_test/cross_dataset_ablation_v19_8/covid19/V19_8_COVID19_10P_ADAMIX_CANON1337_R1_CONFIRMATORY_TEST_ONCE/predictions/coronacases_002_prediction.npz",
+      "patient_id": "coronacases_002"
+    },
+    {
+      "output_sha256": "2da089752cfdc71568892bfc2aaab02e97a1072a3bd69579fcd631cc83949f1b",
+      "path": "formal_test/cross_dataset_ablation_v19_8/covid19/V19_8_COVID19_10P_ADAMIX_CANON1337_R1_CONFIRMATORY_TEST_ONCE/predictions/coronacases_009_prediction.npz",
+      "patient_id": "coronacases_009"
+    },
+    {
+      "output_sha256": "a18a441d66a9b6ba5cf97cb09387c2b528c21c1187313dca097997cd9e5a84c5",
+      "path": "formal_test/cross_dataset_ablation_v19_8/covid19/V19_8_COVID19_10P_ADAMIX_CANON1337_R1_CONFIRMATORY_TEST_ONCE/predictions/radiopaedia_27_86410_0_prediction.npz",
+      "patient_id": "radiopaedia_27_86410_0"
+    },
+    {
+      "output_sha256": "9b8f3d2e9d68cc6fdb74ea0be16a8da1566b3b26b4597c75880b676cdc610efd",
+      "path": "formal_test/cross_dataset_ablation_v19_8/covid19/V19_8_COVID19_10P_ADAMIX_CANON1337_R1_CONFIRMATORY_TEST_ONCE/predictions/radiopaedia_40_86625_0_prediction.npz",
+      "patient_id": "radiopaedia_40_86625_0"
+    }
+  ],
+  "receipt_path": "formal_test/cross_dataset_ablation_v19_8/covid19/V19_8_COVID19_10P_ADAMIX_CANON1337_R1_CONFIRMATORY_TEST_ONCE/FORMAL_TEST_RECEIPT.json",
+  "schema": "V19_8_CROSS_ABLATION_COVID19_FORMAL_TEST_ONCE_RECEIPT",
+  "setting": "COVID10",
+  "source_training_run": "V19_8_COVID19_10P_ADAMIX_CANON1337_R1",
+  "split_provenance_seed": 42,
+  "test_all_slices_sha256": "453312727e51c7830423caa9e06b8cd67ad0ecf5c4f1e6058975cd3c973e73c3",
+  "test_patient_sha256": "ae0a393ff7c72ecc15a678d3795fa4c8edc986a5ef1085007ba50d8ad3d10794",
+  "test_run_id": "V19_8_COVID19_10P_ADAMIX_CANON1337_R1_CONFIRMATORY_TEST_ONCE",
+  "test_used_for_selection": false,
+  "training_executed": false,
+  "validation_curve_points": 61
+}

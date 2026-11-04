@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "failed_child_status": "FAILED",
+  "exit_code": 1,
+  "dependent_status": "BLOCKED",
+  "independent_task_exit": 0,
+  "time": "2026-10-06T21:26:51.654775+08:00"
+}

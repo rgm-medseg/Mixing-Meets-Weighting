@@ -1,0 +1,67 @@
+{
+  "auxiliary_decoders_at_test": false,
+  "base_lr": 0.01,
+  "batch_size": 24,
+  "checkpoint_cadence": 200,
+  "checkpoint_load": "full_mcnet2d_v2_strict_true",
+  "computed_but_not_optimized": "cross_entropy",
+  "consistency": 0.1,
+  "consistency_rampup": 200.0,
+  "data": {
+    "evaluator": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tools/v22_0_acdc_test_frozen_checkpoint.py",
+    "evaluator_sha256": "5958b1a7514415f67beb184676c649867f6aeb15cce8d3ee5ee3fe5517a798f4",
+    "forbidden_during_training": [
+      "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/data",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC_test.list"
+    ],
+    "labeled_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC10_labeled.list",
+    "labeled_manifest_sha256": "21e086cfa888ebc9f8c7d66b4889e43438030e7fc933e8e9afcdd36a72c6d9d4",
+    "project_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+    "root": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC",
+    "test_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC_test.list",
+    "test_manifest_sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+    "unlabeled_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC10_unlabeled.list",
+    "unlabeled_manifest_sha256": "7ca61544c7466b86e79688f12ca79cb30d9533bbceeef9b10fae6e1a10ebad50",
+    "val_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/ACDC_val.list",
+    "val_manifest_sha256": "61b935c936d8e12f7889e82d954f421fa25fb95305e92a476096b3242de8777d"
+  },
+  "dataset": "ACDC",
+  "dataset_contract_sha256": "4424753baa5fdb3e923cf0de5dcdac10a239472d72b198027aa7da1bcee0279d",
+  "device": "cuda:0",
+  "formal_seed": 1337,
+  "inference_size": [
+    256,
+    256
+  ],
+  "input_channels": 1,
+  "job_id": "pmeul_acdc_10p_seed1337",
+  "labeled_batch_size": 12,
+  "lambda": 1.0,
+  "max_iterations": 30000,
+  "method": "PMEUL",
+  "momentum": 0.9,
+  "network": "mcnet2d_v2",
+  "num_classes": 4,
+  "optimized_supervised_loss": "sum_decoder_dice+0.3*sum_decoder_all_foreground_sdf_mse",
+  "optimizer": "SGD",
+  "paper_main_variant": "m=3",
+  "patch_size": [
+    224,
+    224
+  ],
+  "pretraining": {
+    "enabled": false
+  },
+  "ratio": "10p",
+  "schema": "BETA_FFT_2026_COMPARATOR_RUN_CONFIG_V1",
+  "seed": 1337,
+  "selection_rule": "best_validation_mean_dice_earliest_tie",
+  "source_commit": "2232ec0f5f11d8d219604343a427abdd86c25891",
+  "temperature": 0.1,
+  "test_access_during_training": false,
+  "test_output": "decoder1_output_index_0",
+  "test_selection_forbidden": true,
+  "unsupervised_loss": "ramped_ordered_cross_decoder_sharpened_mse",
+  "validation_cadence": 200,
+  "weight_decay": 0.0001
+}

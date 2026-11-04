@@ -1,0 +1,11 @@
+{
+  "time": "2026-10-08T12:47:14.303764+08:00",
+  "session": "beta_fft_E4_E5_20261008",
+  "command": "exec /home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/run_queue.py >>/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/logs/controller_2026-10-08T124714283349+0800.log 2>&1",
+  "host": "n1",
+  "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008",
+  "python": "/home/renguanming/.conda/envs/beta_fft/bin/python",
+  "resume": false,
+  "client_independent": true,
+  "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/logs/controller_2026-10-08T124714283349+0800.log"
+}

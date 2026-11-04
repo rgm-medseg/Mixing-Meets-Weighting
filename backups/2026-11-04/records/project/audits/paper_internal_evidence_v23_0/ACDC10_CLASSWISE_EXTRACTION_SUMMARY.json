@@ -1,0 +1,8 @@
+{
+  "ACDC10_TEST_SELECTION_EXPOSED": true,
+  "all_metrics_output": "final_report/paper_internal_evidence_v23_0/ACDC10_8ARM_CLASSWISE_ALL_METRICS.tsv",
+  "dice_output": "final_report/paper_internal_evidence_v23_0/ACDC10_8ARM_CLASSWISE_DICE_FULL_PRECISION.tsv",
+  "mean_aggregation_all_simple_class_average": true,
+  "note": "V22.1 full precision table provides class Dice for all arms; IoU/HD95/ASD per class require raw class_metrics files if needed later.",
+  "source_asset": "final_report/three_innovation_postfull_test_v22_1/ACDC10_THREE_INNOVATION_8ARM_TEST_FULL_PRECISION.tsv"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "copies": [
+    {
+      "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/configs/R2_fixed92_checkpoint_args.json",
+      "package_path": "configs/source_configs/offline_A2_A5_20261007/R2_fixed92_checkpoint_args.json",
+      "sha256": "59240209c331091eca12c9dc9de733687c6bed3655362f081227c59a53dd166b"
+    },
+    {
+      "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/configs/baseline_checkpoint_args.json",
+      "package_path": "configs/source_configs/offline_A2_A5_20261007/baseline_checkpoint_args.json",
+      "sha256": "1db6321f478c7053b42fa65f9e5efb77c5c21bf99b302dd2ffb710bdf8688221"
+    },
+    {
+      "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/configs/Full_main_checkpoint_args.json",
+      "package_path": "configs/source_configs/offline_A2_A5_20261007/Full_main_checkpoint_args.json",
+      "sha256": "3a52844fc3a97ee2efd336f5fe950ede4742cd3e5ddc1c722b36cf4af7919e16"
+    },
+    {
+      "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/configs/R1_v2_B_checkpoint_args.json",
+      "package_path": "configs/source_configs/offline_A2_A5_20261007/R1_v2_B_checkpoint_args.json",
+      "sha256": "4ab0d840cfc96cff14aae2f168af28a5350dc53bb25ef4b2465fac790a71d2e4"
+    },
+    {
+      "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/configs/R1_full_v2B.yaml",
+      "package_path": "configs/source_configs/formal_R1_20261007/R1_full_v2B.yaml",
+      "sha256": "e9d6af11c56e8b1b8439fbbd6bb3d3d51681c79eaea43b4064bc78907dc35b66"
+    },
+    {
+      "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/configs/R2_fixed92.yaml",
+      "package_path": "configs/source_configs/formal_R2_fixed92_20261007/R2_fixed92.yaml",
+      "sha256": "002b456d2a45b06c4df558ef1e8b326e9a690db590527827ee8848667e5bcf1d"
+    }
+  ],
+  "existing_original_sources_read_only": true
+}

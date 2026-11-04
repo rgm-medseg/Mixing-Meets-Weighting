@@ -1,0 +1,10 @@
+{
+  "status": "DONE",
+  "archive": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/revision_evidence_20261006.tar.gz",
+  "sha256": "a226c2d2c4f90424b35eb609c1f46e1ed1ec867f3f3808f75e5581c8d7136c70",
+  "members": 412,
+  "time": "2026-10-06T22:09:24.296367+08:00",
+  "raw_medical_arrays": false,
+  "weights": false,
+  "all_internal_sha256_verified": true
+}

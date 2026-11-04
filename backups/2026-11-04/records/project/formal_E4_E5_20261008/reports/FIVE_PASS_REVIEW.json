@@ -1,0 +1,35 @@
+{
+  "time": "2026-10-08T22:01:32.508812+08:00",
+  "rounds": [
+    {
+      "round": 1,
+      "status": "PASS",
+      "evidence": "protocol CSV; frozen scientific AST/binding; actual model counts; official commit/GT scope; C1 supplement"
+    },
+    {
+      "round": 2,
+      "status": "PASS",
+      "evidence": "physical ledgers/full30k; all segments/failed preparation retained; initialization, real short resume, tmux detached progress, first200"
+    },
+    {
+      "round": 3,
+      "status": "PASS",
+      "evidence": "complete40x3/20patients/3classes; independent aggregation/pp/directions; separate surface/EDT recomputation and hashes"
+    },
+    {
+      "round": 4,
+      "status": "PASS",
+      "evidence": "predeclared examples incl decline; same coordinates/colors and visible targets; PNG rendering/readback and bounds; machine visual scope, human review NA"
+    },
+    {
+      "round": 5,
+      "status": "PASS",
+      "evidence": "actual preliminary extraction SHA and required-files PASS; final archive extracted and SHA verified again; external receipt"
+    }
+  ],
+  "completed_tasks": [
+    "E4",
+    "E5"
+  ],
+  "failed_tasks": {}
+}

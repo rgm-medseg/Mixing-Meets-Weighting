@@ -1,0 +1,14 @@
+# 小型机制证据包
+
+先读TCSMIX_MECHANISM_AUDIT.md、EXPERIMENT_DECISION_TABLE.md和NEXT_STEP_PLAN_CN.md。
+scale_distribution.csv是按run/尺寸聚合的真实记录；scale_records.csv为逐step的原始来源映射。
+confidence_diagnostics.csv按offline batch、sample、region分别记录；scope=batch时无样本Dice，未标注域没有GT指标。
+confidence_pooled_statistics.csv按固定诊断域汇总；confidence_probability_histograms.csv和softmax_probability_statistics.csv给出原始4类概率与最大概率分布。
+batch_confidence_distribution.csv描述固定批次间分布，不是训练时间序列；所有概率/Dice为0–1，面积fraction亦0–1，尺寸单位pixel。
+gt_present_macro_dice仅平均GT存在的前景类；fg_macro_dice固定3类且双空记0。切片诊断分数不能当正式整卷测试结果。
+offline_mask_comparison.csv固定同一checkpoint/输入/随机状态比较真实输出mask；不能替代历史mask记录。
+E1_checkpoint_restoration_check.json只有独立加载/状态重放检查，不执行续训；CTW_actual_difference.csv只有同输出前向损失比较。
+sources/保存实际代码、5份锁定配置、Full原始endpoint摘录、E1完整trace、队列暂停快照、既有smoke/官方方法来源与哈希。
+prior_diagnostic_v1/保留本轮首版诊断和原脚本；v2补齐四类softmax原始统计，未改算法、样本或原状态。两版数据不得当独立运行/种子。
+诊断图为Matplotlib实测数据图（PNG/SVG），图例run/step对应teacher_checkpoint_inventory.json。无生成影像、原始患者数组或大型权重入包。
+SHA256SUMS只校验这个静态快照里的文件，不要求继续刷新的服务器其他报告一致。归档外部另有sha256与receipt。

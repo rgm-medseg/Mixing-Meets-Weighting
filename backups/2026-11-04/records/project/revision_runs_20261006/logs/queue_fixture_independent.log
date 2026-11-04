@@ -1,0 +1,6 @@
+
+2026-10-06T20:57:23.580600+08:00 command=["/home/renguanming/.conda/envs/beta_fft/bin/python", "-c", "print(\"independent fixture executed\")"]
+independent fixture executed
+
+2026-10-06T21:26:49.625915+08:00 command=["/home/renguanming/.conda/envs/beta_fft/bin/python", "-c", "print(\"independent fixture executed\")"]
+independent fixture executed

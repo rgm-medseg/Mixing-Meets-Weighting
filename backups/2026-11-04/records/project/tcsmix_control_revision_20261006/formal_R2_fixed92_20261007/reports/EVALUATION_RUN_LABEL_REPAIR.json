@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "time": "2026-10-07T18:24:30.603861+08:00",
+  "old_label": "R2_v2_B",
+  "new_label": "R2_fixed92",
+  "constants_changed": 6,
+  "AST_equivalent_after_label_normalization": true,
+  "source_old_sha256": "29766f393eb014a735130df5d1f28097bc42a5378cfdf95a8938bad214e43559",
+  "source_new_sha256": "0f81bda86a4b862fa4a6d899a956e7439d534f8df80796828730eef37e3c2a65",
+  "previous_manifest_sha256": "452e4742bb903273f0d60c9c0a0a040d629e38f6c7d8784a9016d5e6aebbe05f",
+  "manifest_sha256": "56c7a4b07d16a65846eccc462e7930d921ddcdf71c2729c2b61436a0bf4325ab",
+  "evaluation_not_started": true,
+  "training_sources_and_config_unchanged": true,
+  "prediction_GT_resize_postprocess_or_metrics_changed": false
+}

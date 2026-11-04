@@ -1,0 +1,139 @@
+{
+  "adamix": true,
+  "best_iter": 15000,
+  "best_val_dice": 0.830956,
+  "checkpoint_path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_promise12/beta_FFT/PROMISE12_bcp_fft_test_seed_COVID19_5P_MASK_TOKEN_ADAMIX_CANON1337_R1_120/self_train/unet_best_model.pth",
+  "checkpoint_sha256": "548e644b61a06835cf18251d8c910b4a3d7bea569adceb9da046b4772cc51235",
+  "end_time_utc": "2026-08-11T23:55:39.727232+00:00",
+  "evaluator_path": "train_COVID19/covid19_volume_evaluator.py",
+  "evaluator_sha256": "ff20153cdbbe9e164bbdbd2348f6799daf0180a5503291177a86a5f9034f560b",
+  "exit_code": 0,
+  "formal_training_seed": 1337,
+  "historical_test_set_exposure": true,
+  "inference_mode": {
+    "ensemble": false,
+    "model_eval": true,
+    "threshold_search": false,
+    "torch_no_grad": true,
+    "tta": false
+  },
+  "mask_token": true,
+  "method_identity": "OURS",
+  "metric_result": {
+    "aggregation": "PATIENT_VOLUME_MACRO",
+    "macro": {
+      "asd_mm": 4.608154159130948,
+      "dice": 0.6740606414609067,
+      "hd95_mm": 25.407801306708397,
+      "iou": 0.5127728686522308
+    },
+    "per_patient": {
+      "coronacases_002": {
+        "asd_mm": 1.385574540648753,
+        "dice": 0.7886550526474747,
+        "hd95_mm": 3.0,
+        "iou": 0.6510573675740611
+      },
+      "coronacases_009": {
+        "asd_mm": 9.385826380382962,
+        "dice": 0.649937582897714,
+        "hd95_mm": 60.62673513909906,
+        "iou": 0.4814129885140504
+      },
+      "radiopaedia_27_86410_0": {
+        "asd_mm": 5.601263594080546,
+        "dice": 0.6590178615851535,
+        "hd95_mm": 30.867539320995903,
+        "iou": 0.4914441756578264
+      },
+      "radiopaedia_40_86625_0": {
+        "asd_mm": 2.0599521214115306,
+        "dice": 0.5986320687132849,
+        "hd95_mm": 7.136930766738614,
+        "iou": 0.42717694286298524
+      }
+    },
+    "primary_validation_metric": "PATIENT_VOLUME_MACRO_DICE",
+    "unit": "mm"
+  },
+  "prediction_paths": [
+    {
+      "config_sha256": "5ed883701c1df405c1d47d1f82a193d11edb0903a07b78f8c487dd19e6bf5c96",
+      "output_sha256": "4f4e9c00ca2276bab0e443883a2f155d312b71471788e30bd0b088b7de473b3e",
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_test/covid19_seed1337/COVID19_5P_MASK_TOKEN_ADAMIX_CANON1337_R1_CONFIRMATORY_TEST_ONCE/predictions/coronacases_002_prediction.npz",
+      "patient_id": "coronacases_002",
+      "shape": [
+        200,
+        256,
+        256
+      ],
+      "source_checkpoint_sha256": "548e644b61a06835cf18251d8c910b4a3d7bea569adceb9da046b4772cc51235",
+      "spacing": [
+        0.68359375,
+        0.68359375,
+        1.5
+      ]
+    },
+    {
+      "config_sha256": "5ed883701c1df405c1d47d1f82a193d11edb0903a07b78f8c487dd19e6bf5c96",
+      "output_sha256": "7a368388922ea04ade6c5fbbf5625dd42162ea83afa3b06fcf9529cb69101fdc",
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_test/covid19_seed1337/COVID19_5P_MASK_TOKEN_ADAMIX_CANON1337_R1_CONFIRMATORY_TEST_ONCE/predictions/coronacases_009_prediction.npz",
+      "patient_id": "coronacases_009",
+      "shape": [
+        256,
+        256,
+        256
+      ],
+      "source_checkpoint_sha256": "548e644b61a06835cf18251d8c910b4a3d7bea569adceb9da046b4772cc51235",
+      "spacing": [
+        0.6835939884185791,
+        0.6835939884185791,
+        1.0
+      ]
+    },
+    {
+      "config_sha256": "5ed883701c1df405c1d47d1f82a193d11edb0903a07b78f8c487dd19e6bf5c96",
+      "output_sha256": "320c4a33002c31f52af2c734eab65dd6933e155f8e0770cc83cd2e47f8511636",
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_test/covid19_seed1337/COVID19_5P_MASK_TOKEN_ADAMIX_CANON1337_R1_CONFIRMATORY_TEST_ONCE/predictions/radiopaedia_27_86410_0_prediction.npz",
+      "patient_id": "radiopaedia_27_86410_0",
+      "shape": [
+        66,
+        256,
+        256
+      ],
+      "source_checkpoint_sha256": "548e644b61a06835cf18251d8c910b4a3d7bea569adceb9da046b4772cc51235",
+      "spacing": [
+        0.6835939884185791,
+        0.6835939884185791,
+        6.0
+      ]
+    },
+    {
+      "config_sha256": "5ed883701c1df405c1d47d1f82a193d11edb0903a07b78f8c487dd19e6bf5c96",
+      "output_sha256": "dc4f362352cc58296cdb78134642697bfdef956cc5e590f00a1d18cfb5ed804c",
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_test/covid19_seed1337/COVID19_5P_MASK_TOKEN_ADAMIX_CANON1337_R1_CONFIRMATORY_TEST_ONCE/predictions/radiopaedia_40_86625_0_prediction.npz",
+      "patient_id": "radiopaedia_40_86625_0",
+      "shape": [
+        93,
+        256,
+        256
+      ],
+      "source_checkpoint_sha256": "548e644b61a06835cf18251d8c910b4a3d7bea569adceb9da046b4772cc51235",
+      "spacing": [
+        0.6835939884185791,
+        0.6835939884185791,
+        4.0
+      ]
+    }
+  ],
+  "protocol_identity": "OFFICIAL20_PATIENTLEVEL_ALLSLICE_V2",
+  "schema": "V19_1_COVID19_SEED1337_FORMAL_TEST_RECEIPT",
+  "source_training_run": "COVID19_5P_MASK_TOKEN_ADAMIX_CANON1337_R1",
+  "split_provenance_seed": 42,
+  "start_time_utc": "2026-08-11T23:55:25.019408+00:00",
+  "test_all_slices_sha256": "453312727e51c7830423caa9e06b8cd67ad0ecf5c4f1e6058975cd3c973e73c3",
+  "test_patient_sha256": "ae0a393ff7c72ecc15a678d3795fa4c8edc986a5ef1085007ba50d8ad3d10794",
+  "test_run_id": "COVID19_5P_MASK_TOKEN_ADAMIX_CANON1337_R1_CONFIRMATORY_TEST_ONCE",
+  "test_stage_label": "CANONICAL_SEED1337_CONFIRMATORY_FORMAL_TEST",
+  "validation_curve_points": 61
+}

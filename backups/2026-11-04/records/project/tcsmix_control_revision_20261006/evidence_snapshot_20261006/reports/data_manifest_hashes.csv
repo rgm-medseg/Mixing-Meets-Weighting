@@ -1,0 +1,4 @@
+split,path,sha256,entries
+train_slices,/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/train_slices.list,1b21b2a69d1b28b4dfce6837fdb0572414d337566b51b3dd0e0fda342a6f0648,1312
+val,/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/val.list,61b935c936d8e12f7889e82d954f421fa25fb95305e92a476096b3242de8777d,20
+test,/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/test.list,98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671,40

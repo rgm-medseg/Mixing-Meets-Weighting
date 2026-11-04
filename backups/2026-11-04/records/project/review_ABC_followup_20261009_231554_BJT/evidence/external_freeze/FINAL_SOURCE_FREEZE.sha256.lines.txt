@@ -1,0 +1,9 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/manifests/FINAL_SOURCE_FREEZE.sha256
+ORIGINAL_SHA256: 8221ca04d142e3ac2db2f3baa311024b6cca35c79cbe7d412c5b498e26f03149
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 5-5 ---
+5: a6a247aff6785632bf7a16a0ee1c95a91e14bbf67bf62873910d6d0ddc5015a4  external_comparators/2026_reproduction/adapters/evaluate.py
+--- ORIGINAL LINES 3-3 ---
+3: 7d3402a95f857bb018798c774319a45b4ea0e26018c502b450538d0694f73a71  external_comparators/2026_reproduction/adapters/common/metrics.py
+--- ORIGINAL LINES 1-1 ---
+1: 4634f60a6e1267d5d045923c07047c90a869947921c4e308d168861670cd425a  external_comparators/2026_reproduction/adapters/common/data.py

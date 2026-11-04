@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T14:42:24.002064+00:00",
+  "training_started": false,
+  "inference_started": false,
+  "checkpoint_replay_started": false,
+  "test_manifest_content_read": false,
+  "binding_table": "audits/internal_evidence_expansion_v24_0/ACDC10_ARM_000_110_111_CASE_METRICS_BINDING.tsv",
+  "binding_table_sha256": "5c8dec71ee462a2c6ff6df0d881ee78e164b1243c0f861da6701872f43a9ec96",
+  "source_checkpoint_binding": "audits/acdc10_top6_all_test_v21_5/ACDC10_TOP6_TEST_CHECKPOINT_BINDING.tsv",
+  "source_checkpoint_binding_sha256": "0d4b8f290be3eaec66729629bf2d6dfc6d6e4c6166afbc03f33a5be81cef3601",
+  "v23_table4": "final_report/paper_internal_evidence_v23_0/tables/TABLE4_ACDC10_8ARM_FULL_PRECISION.tsv",
+  "v23_table4_sha256": "5cb39eec601182edfe1df2a4024583b6ca8878e25ab5a2a50bd815476a373e46",
+  "failed_arms": [],
+  "identity_note": "V21.5 raw_test/OURS binds to ACDC10_ARM_110; V21.5 raw_test/X03 binds to ACDC10_ARM_111."
+}

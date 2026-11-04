@@ -1,0 +1,10 @@
+{
+  "status": "VERIFIED",
+  "time": "2026-10-07T20:03:15.706426+08:00",
+  "archive": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/A2_A5_offline_evidence_20261007.tar.gz",
+  "sha256": "3cb9dabc6b60602e03c3643dde85ee2b9cd3505002bde470634f18a85aa2b7f0",
+  "bytes": 32314150,
+  "files_verified": 652,
+  "verification": "actual extraction and every file SHA256 match",
+  "snapshot": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/archives/snapshot_2026-10-07T200238.030382+0800"
+}

@@ -1,0 +1,21 @@
+ORIGINAL: /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_COVID19/covid19_dataset_adapter.py
+SHA256: a6031696e9a63888c385cfe735bc010e73f5bad5cdf80e1cb6ed264e812d4ba1
+125:             slice_indices.append(int(row["slice_idx"]))
+126:             if "spacing" in payload.files:
+127:                 spacing = tuple(float(item) for item in payload["spacing"].tolist())
+128:             else:
+129:                 spacing = tuple(float(item) for item in row["canonical_spacing"].split(","))
+130:             spacings.append(spacing)
+131:         expected = list(range(len(rows)))
+135:             raise ValueError(f"inconsistent patient volume spacing for {patient_id}: {sorted(set(spacings))}")
+136:         return {
+137:             "image": torch.from_numpy(np.stack(images, axis=0).astype(np.float32)),
+138:             "mask": torch.from_numpy(np.stack(masks, axis=0).astype(np.uint8)).long(),
+139:             "patient_id": patient_id,
+167:         images.append(image)
+174:     image_batch = torch.stack(images, dim=0)
+175:     return {
+176:         "image": image_batch,
+177:         "image_strong": image_batch.clone(),
+178:         "mask": torch.stack(masks, dim=0),
+179:         "mask_strong": torch.stack(mask_strong, dim=0),

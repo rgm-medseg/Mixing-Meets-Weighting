@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "global_step": 2,
+  "optimizer_calls": 0,
+  "models_exact": true,
+  "sampler_replay_loaded": true,
+  "main_RNG_loaded": true,
+  "worker_exact": false
+}

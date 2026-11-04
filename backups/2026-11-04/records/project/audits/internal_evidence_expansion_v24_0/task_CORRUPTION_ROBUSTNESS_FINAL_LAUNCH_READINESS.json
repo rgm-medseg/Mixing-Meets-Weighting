@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:17:58.540398+00:00",
+  "task_id": "CORRUPTION_ROBUSTNESS",
+  "task_type": "ANALYSIS",
+  "action": "READ_ONLY_READY",
+  "registry_FinalLaunchReady": "PASS",
+  "registry_Blocker": "",
+  "registry_BlockerCategory": "NONE",
+  "LaunchBlocking": false,
+  "NoncriticalTerminalGap": false,
+  "ProtocolExcluded": false,
+  "FinalLaunchReady": true,
+  "FinalLaunchReady_semantics": "launch permission only; not completion evidence",
+  "PostFullCompletionEvidenceRequired": false,
+  "FormalFullStarted": false,
+  "TmuxStarted": false,
+  "checks": {
+    "StaticPass": true,
+    "ArgvPass": true,
+    "PathPass": true,
+    "ScientificIdentityPass": true,
+    "ImportPass": true,
+    "RoleBindingPass": true,
+    "SmokePass": true,
+    "ClosedLoopPass": true,
+    "FailureInjectionPass": true,
+    "ControllerDryPass": true,
+    "OutputClean": true,
+    "SourceFreezePass": true,
+    "ConfigFreezePass": true
+  },
+  "l1_l10": {
+    "TaskOrder": "12",
+    "TaskID": "CORRUPTION_ROBUSTNESS",
+    "Action": "READ_ONLY_READY",
+    "FinalLaunchReady": "PASS",
+    "Blocker": "",
+    "L1StaticPaths": "PASS",
+    "L2DryRunOrReceiptMode": "NA_RECEIPT_CHECK_ONLY",
+    "L3Paths": "PASS",
+    "L4ScientificIdentity": "PASS_OR_NA",
+    "L5ImportCompile": "PASS",
+    "L6TestFirewall": "PASS",
+    "L7SmokeGate": "PASS_OR_NA",
+    "L8ClosedLoopReceipt": "PASS",
+    "L9FailureInjection": "PASS_OR_NA",
+    "L10ControllerDryConsumption": "PASS_WITH_BLOCKERS"
+  },
+  "freeze_evidence": {
+    "source": {
+      "applicable": true,
+      "pass": true,
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_acdc10_frozen_replay_analyses.py",
+      "exists": true,
+      "expected_sha256": "23d8eb3a5c2ef9dd71e773b197982fd59a6f525c0be78b5948dd42c4e4c2c02b",
+      "current_sha256": "23d8eb3a5c2ef9dd71e773b197982fd59a6f525c0be78b5948dd42c4e4c2c02b"
+    },
+    "launcher": {
+      "applicable": true,
+      "pass": true,
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc10_frozen_replay_analyses.sh",
+      "exists": true,
+      "expected_sha256": "aa3e7af48f202099a681f47c952cd57d3aa1b82295e098457873cd465b9f3939",
+      "current_sha256": "aa3e7af48f202099a681f47c952cd57d3aa1b82295e098457873cd465b9f3939"
+    },
+    "config": {
+      "applicable": true,
+      "pass": true,
+      "path": "audits/internal_evidence_expansion_v24_0/V24_0_CORRUPTION_SPEC.json",
+      "exists": true,
+      "expected_sha256": "bcf5aacafcaa8db73f53fa4ce5ea9932becc876a08853850c245b28357d60c8c",
+      "current_sha256": "bcf5aacafcaa8db73f53fa4ce5ea9932becc876a08853850c245b28357d60c8c"
+    },
+    "checkpoint": {
+      "applicable": false,
+      "pass": true,
+      "path": "ACDC10_ARM_000/111 frozen checkpoints",
+      "expected_sha256": "see V24_0_ACDC10_FROZEN_REPLAY_ANALYSIS_DRY_RUN_RECEIPT.json",
+      "current_sha256": "",
+      "reason": "descriptive_non_sha_field"
+    }
+  },
+  "expected_receipt": "audits/internal_evidence_expansion_v24_0/ACDC10_FROZEN_REPLAY_ANALYSIS_FINAL_RECEIPT.json",
+  "test_semantics": {
+    "TESTAccessAllowed": "PRE_REGISTERED_EVALUATION_ONLY",
+    "TEST_DATA_READ_FOR_PRE_REGISTERED_EVALUATION": true,
+    "TEST_USED_FOR_TUNING": false,
+    "TEST_USED_FOR_SELECTION": false
+  }
+}

@@ -1,0 +1,29 @@
+run_id: "COVID19_5P_MASK_TOKEN_ADAMIX_R1"
+ratio: "5P"
+arm: "MASK_TOKEN_ADAMIX"
+ratio_config: "configs/covid19_official20/COVID19_5P_FROZEN_CONFIG.yaml"
+pretrain_max_iterations: 10000
+self_train_max_iterations: 30000
+protocol_identity: "OFFICIAL20_PATIENTLEVEL_ALLSLICE_V2"
+baseline_beta_fft: true
+mask_token_enabled: true
+adamix_enabled: true
+forbidden_modules:
+  - "EEMS"
+  - "Foundation Teacher"
+  - "EMA Anchor"
+  - "PEM"
+  - "PDR"
+  - "CAT-CRS"
+  - "CA-LRF"
+  - "Neighbor Relation"
+  - "HCCP modules"
+  - "DD-Net modules"
+evaluation_policy: "validation_only"
+training_core_method_args:
+  use_mask_token_prehead_router: true
+  use_adamix_bcp_lite_v1: true
+  adamix_bcp_lite_v1_min_side: 0.18
+  adamix_bcp_lite_v1_max_side: 0.38
+  adamix_bcp_lite_v1_log_interval: 200
+formal_result_eligible: false

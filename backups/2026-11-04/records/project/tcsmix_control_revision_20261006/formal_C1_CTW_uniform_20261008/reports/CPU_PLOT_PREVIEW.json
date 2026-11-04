@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T00:55:19.119021+08:00",
+  "scope": "human visual check of isolated CPU fixture only, not C1 experiment figures",
+  "checked": [
+    "patient_Dice_spatial_advantage.png",
+    "validation_and_geometry.png"
+  ],
+  "labels_unclipped": true,
+  "legends_readable": true,
+  "final_visual_review": "automated rendered canvas bound checks; actual data not yet available"
+}

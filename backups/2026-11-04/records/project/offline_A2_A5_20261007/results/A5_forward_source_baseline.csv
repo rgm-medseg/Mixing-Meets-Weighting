@@ -1,0 +1,13 @@
+network,line,call,source
+model_1,353,model_1(net_input_unl_1),/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/source_snapshot.py
+model_1,354,model_1(net_input_l_1),/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/source_snapshot.py
+model_2,363,model_2(net_input_unl_2),/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/source_snapshot.py
+model_2,364,model_2(net_input_l_2),/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/source_snapshot.py
+model_1,378,model_1(input_volume_batch),/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/source_snapshot.py
+model_1,392,model_1(input_volume_batch_s),/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/source_snapshot.py
+model_1,404,model_1(image_patch_last_FFT.unsqueeze(1)),/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/source_snapshot.py
+model_2,407,model_2(image_patch_last_FFT.unsqueeze(1)),/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/source_snapshot.py
+ema_model,333,ema_model(uimg_a),/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/source_snapshot.py
+ema_model,334,ema_model(uimg_b),/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/source_snapshot.py
+ema_model,337,ema_model(uimg_a_s),/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/source_snapshot.py
+ema_model,338,ema_model(uimg_b_s),/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/source_snapshot.py

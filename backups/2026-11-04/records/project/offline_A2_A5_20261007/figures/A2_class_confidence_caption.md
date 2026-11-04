@@ -1,0 +1,1 @@
+Best EMA teachers, raw argmax, each foreground class separately on GT-present validation slices with nonempty predicted support. Scatter exclusions are conditional plotting only: all GT-absent slices, false positives and missed predictions remain in raw quality/correctness tables. Class precision/recall are NA for GT-absent classes, with false-positive counts preserved.

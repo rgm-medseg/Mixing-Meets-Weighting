@@ -1,0 +1,14 @@
+{
+  "ArgvPass": true,
+  "CheckpointIdentityPass": true,
+  "ClosedLoopPass": true,
+  "ControllerDryConsumptionPass": true,
+  "FailureInjectionPass": true,
+  "FinalTestReady": "PASS",
+  "OutputClean": true,
+  "ProtocolIdentityPass": true,
+  "StaticPass": true,
+  "TaskID": "COVID5_FINAL3",
+  "TestOnlyPass": true,
+  "TestUnlocked": true
+}

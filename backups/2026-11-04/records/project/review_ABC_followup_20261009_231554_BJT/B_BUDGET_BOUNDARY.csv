@@ -1,0 +1,3 @@
+setting,ssl_per_student_updates,ssl_status,pretrain_updates,pretrain_status,total_pretrain_plus_ssl_updates,total_status,lr,lr_status,source,note
+ACDC5%,30000,VERIFIED,,NOT_FOUND,,PARTIAL,0.01,VERIFIED,review_closure_evidence_20261009_192409_BJT/ACDC_TRAINING_BUDGET_RECOMPUTATION.json,Unknown pretrain count prevents total budget; confirmed SSL 30000 is not pending.
+ACDC10%,30000,VERIFIED,,NOT_FOUND,,PARTIAL,0.01,VERIFIED,review_closure_evidence_20261009_192409_BJT/ACDC_TRAINING_BUDGET_RECOMPUTATION.json,Only pretrain generation missing; initialization/SGD inheritance and SSL budget are carried as closed.

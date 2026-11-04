@@ -1,0 +1,14 @@
+[
+  {
+    "target": 1,
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/train_C1_entry.py",
+      "--short-target",
+      "1"
+    ],
+    "exit_code": 1,
+    "elapsed_seconds": 9.650154523551464,
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/runs/isolated_short/logs/update_1_2026-10-08T004624.528878+0800.log"
+  }
+]

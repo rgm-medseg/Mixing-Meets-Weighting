@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "preselected_patients": [
+    "patient002",
+    "patient019"
+  ],
+  "slices_checked": 42,
+  "duplicates": 0,
+  "legacy_records_compared": 136,
+  "legacy_max_absolute_difference": 0.0,
+  "legacy_tolerance": 1e-05,
+  "NA_empty_bins_and_missing_GT_classes_verified": true,
+  "sample_and_batch_control_distinct": true
+}

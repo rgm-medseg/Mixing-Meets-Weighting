@@ -1,0 +1,14 @@
+{
+  "best_checkpoint_sha256": "53f3ca99ad03f6c3467008af424236a3556e31f0d61fe93c5b95a06edc445295",
+  "best_validation_dice": 0.8658578039659258,
+  "config_sha256": "b64dba39f627a17ae5da7f30341b1a7fc766e4a9f2497581c2fa0e2de7f17b90",
+  "dataset": "ACDC",
+  "iteration": 30000,
+  "job_id": "hien_acdc_10p_seed1337",
+  "latest_checkpoint_sha256": "055d1bd95917433bce9e9f49227d1bcac96b7491f42ade8b2c46f8110ded304f",
+  "method": "HiEn",
+  "nan_detected": false,
+  "selected_model_role": "student",
+  "status": "TRAIN_PASS",
+  "test_manifest_accessed": false
+}

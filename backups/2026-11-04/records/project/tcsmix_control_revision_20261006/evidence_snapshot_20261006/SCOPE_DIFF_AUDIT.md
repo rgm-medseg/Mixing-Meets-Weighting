@@ -1,0 +1,32 @@
+# 改动范围逐项核查
+
+|项目|分类|实际行为|证据|
+|---|---|---|---|
+|教师控制统计|预期改变|旧全图平均最大概率→原LCC支持上类别平衡概率间隔；背景不参与；没有前景时0|scripts/controller.py;control_diagnostics.csv;short_trace.csv|
+|尺度映射与取整|保持一致|.18+.20q；Python round ties-even；尺寸clamp[1,H−1]；边长比例，面积约s²|controller.py:geometry;逐step反算PASS|
+|单矩形与位置采样|保持一致|一个批次共享矩形；np.random.randint(0,max(1,H−ph))原exclusive约定；不改选区/方向|controller.py:generate_mask;control_loop.patch|
+|混合图与目标/双视图|保持一致|同一个image mask/loss mask；互补混合；weak/strong空间对应；图/目标同步|preflight loss块逐字一致;short_trace mask检查|
+|教师伪标签后处理|保持一致|复用本来已生成的plab_a/plab_b：argmax+每前景类LCC；不新增阈值或LCC调用|control_loop.patch;source/historical_full.py:get_ACDC_masks|
+|有效像素|保持一致|weak参考视图的全部像素；前景支持按原pseudo；不读无标注GT、不新设过滤阈值|controller.py:signals;offline样本清单|
+|TRC|保持一致|4token、dim16、原decoder接口、gamma0；641参数/router|source/train_ACDC/v14_mask_adamix_components.py;checkpoint strictload|
+|模型和参数|保持一致|原两个UNet学生和EMA教师；student1参数1827469；新增可学习参数0|source/train_ACDC/networks/unet.py;short_checkpoint_checks.json|
+|CTW|保持一致|空间权重.25+r；原差分/minmax/floor1e−6；概率类别均L1、student2 detach、只student1、lambda.05|control_preflight.json真实张量与原CTW逐值一致;short_trace逐step系数|
+|全部其他loss|保持一致|mixed CE/Dice、CPS、FFT、student1 supervised/ICT；ICT最大系数.5、u_weight.5、原ramp|preflight从consistency_weight到zero_grad块逐字一致|
+|EMA|保持一致|.99从student1整个state_dict，包括TRC与buffers；每步教师原4次前向，无新增|source historical loop;preflight forward count|
+|split和标注病例|保持一致|ACDC70/10/20；原7标注patient021/038/049/050/058/099/100，136切片|protocol.json;data_manifest_hashes.csv|
+|初始化|保持一致|复用精确相同pretrain net与opt；正式R1/R2重新从该源开始；短程不继承E1|short初始log;protocol pretrain hash477a666…|
+|batch/增强|保持一致|B24/12 labeled；6+6 unlabeled weak两组；256²；16workers；原WeakStrongAugment cutout/ColorJitter|copied dataset source hash;actualNamespace|
+|随机性和优化器|保持一致|seed42；SGD.01/momentum.9/wd1e−4；恒定LR；移植原预训练opt|full有效循环/short Namespace/LR每step|
+|验证与选择|保持一致|每200步原student1/2 val程序；严格提高student1前景macroDice选best；历史名testloader仍val|source loop;short200日志|
+|最终评价|保持一致/本阶段未执行|保持原ACDC nearest回原体积、grid单位、无预测LCC、原空例/类frame均值；正式指标NA|scripts/evaluate.py与旧程序同SHA；本阶段未调用|
+|运行预算|短程检查差异|正式配置仍30000联合步/单次；本阶段240联合步=480 optimizer调用，500调用硬上限|update_budget.json;short_segments.json|
+|耐久状态/恢复|工程差异|复用已审计原子checkpoint/sampler IDs/main RNG；加入无状态controller版本/config SHA；worker增强流非精确|checkpoint metadata;short_checkpoint_checks.json|
+|必要日志/安全|工程差异|逐step支持数量/margin/尺寸/面积/fallback；调用计数和正式phase拒绝；NaN/Inf控制输入失败退出|control_runtime.py;formal_refusal_checks.json|
+|正式R2|预期改变/尚未执行|同B信号仍记录，仅固定几何；尺度NA，必须由R1全轨迹面积另锁定|R2_planned.yaml;lock_R2_from_R1.py|
+|历史完整源码版本|无法核验|旧run有效循环可核验，但当时每个import/预训练生成预算未完整保留；不补造|原mechanism audit、protocol.json|
+
+旧工程耐久层被独立复制到新目录；历史入口和全部旧锁定文件仍原SHA。相对历史Full的工程差异包括原子存盘、保存采样ID/主RNG、16worker非位级恢复和日志；科学loss块、EMA、混合方向保持一致。控制前NaN/Inf拒绝是本轮数值检查，不能在异常输入上制造高置信fallback。
+
+短程真实执行的controller原文件保存在reports/controller_executed_short.py。完成后仅修正尚未运行的R2固定分支日志，使其继续记录B信号；B动态执行路径逐字未改，补充CPU检查已通过。R2_logging_alignment.json记录两个源hash，不能把未运行R2写成已验完整训练。
+
+短程只是max_iterations从30000缩为240并在200处保存/恢复；一轮联合训练调用两个optimizer.step，实际480次调用已累计计数。所有Tensor代码验证、离线前向及成本重复计时为0次优化器调用。

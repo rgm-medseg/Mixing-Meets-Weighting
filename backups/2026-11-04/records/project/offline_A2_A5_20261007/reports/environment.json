@@ -1,0 +1,26 @@
+{
+  "time": "2026-10-07T19:31:31.756584+08:00",
+  "host": "n1",
+  "python": "3.10.20 (main, Jun 11 2026, 15:17:37) [GCC 14.3.0]",
+  "torch": "2.4.1+cu121",
+  "cuda": "12.1",
+  "cudnn": 90100,
+  "GPU": {
+    "index": 0,
+    "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+    "used_mib": 0,
+    "free_mib": 40326,
+    "utilization": 0,
+    "pids": []
+  },
+  "packages": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "h5py": "3.16.0",
+    "matplotlib": "3.10.9",
+    "medpy": "0.5.2"
+  },
+  "count_tool": "torch.profiler with_flops + exact module hooks and TRC einsum formulas; no package installation",
+  "AGENTS": "No AGENTS.md in project or ancestor directories",
+  "old_queue": "INTERRUPTED"
+}

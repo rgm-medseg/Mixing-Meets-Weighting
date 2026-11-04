@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:17:58.722773+00:00",
+  "task_id": "BUILD_LABEL_EFFICIENCY",
+  "task_type": "POST_FULL",
+  "action": "POST_FULL_READY",
+  "registry_FinalLaunchReady": "PASS",
+  "registry_Blocker": "",
+  "registry_BlockerCategory": "NONE",
+  "LaunchBlocking": false,
+  "NoncriticalTerminalGap": false,
+  "ProtocolExcluded": false,
+  "FinalLaunchReady": true,
+  "FinalLaunchReady_semantics": "launch permission only; not completion evidence",
+  "PostFullCompletionEvidenceRequired": true,
+  "FormalFullStarted": false,
+  "TmuxStarted": false,
+  "checks": {
+    "StaticPass": true,
+    "ArgvPass": true,
+    "PathPass": true,
+    "ScientificIdentityPass": true,
+    "ImportPass": true,
+    "RoleBindingPass": true,
+    "SmokePass": true,
+    "ClosedLoopPass": true,
+    "FailureInjectionPass": true,
+    "ControllerDryPass": true,
+    "OutputClean": true,
+    "SourceFreezePass": true,
+    "ConfigFreezePass": true
+  },
+  "l1_l10": {
+    "TaskOrder": "23",
+    "TaskID": "BUILD_LABEL_EFFICIENCY",
+    "Action": "POST_FULL_READY",
+    "FinalLaunchReady": "PASS",
+    "Blocker": "",
+    "L1StaticPaths": "PASS",
+    "L2DryRunOrReceiptMode": "NA_RECEIPT_CHECK_ONLY",
+    "L3Paths": "PASS",
+    "L4ScientificIdentity": "PASS_OR_NA",
+    "L5ImportCompile": "PASS",
+    "L6TestFirewall": "PASS",
+    "L7SmokeGate": "PASS_OR_NA",
+    "L8ClosedLoopReceipt": "PASS",
+    "L9FailureInjection": "PASS_OR_NA",
+    "L10ControllerDryConsumption": "PASS_WITH_BLOCKERS"
+  },
+  "freeze_evidence": {
+    "source": {
+      "applicable": true,
+      "pass": true,
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_postfull_and_finalization.py",
+      "exists": true,
+      "expected_sha256": "5b589a5f772b940803eb05fe5b048f0dae5284d515c7d5eb0fdfeed631f20008",
+      "current_sha256": "5b589a5f772b940803eb05fe5b048f0dae5284d515c7d5eb0fdfeed631f20008"
+    },
+    "launcher": {
+      "applicable": true,
+      "pass": true,
+      "path": "scripts/internal_evidence_expansion_v24_0/run_build_label_efficiency.sh",
+      "exists": true,
+      "expected_sha256": "723b879c3d22bda79507d9f668d388667279d70de581dc7063c30d3c6fcae8f8",
+      "current_sha256": "723b879c3d22bda79507d9f668d388667279d70de581dc7063c30d3c6fcae8f8"
+    },
+    "config": {
+      "applicable": false,
+      "pass": true,
+      "path": "",
+      "expected_sha256": "",
+      "current_sha256": ""
+    },
+    "checkpoint": {
+      "applicable": false,
+      "pass": true,
+      "path": "",
+      "expected_sha256": "",
+      "current_sha256": ""
+    }
+  },
+  "expected_receipt": "audits/internal_evidence_expansion_v24_0/BUILD_LABEL_EFFICIENCY.json",
+  "test_semantics": {
+    "TESTAccessAllowed": "0",
+    "TEST_DATA_READ_FOR_PRE_REGISTERED_EVALUATION": false,
+    "TEST_USED_FOR_TUNING": false,
+    "TEST_USED_FOR_SELECTION": false
+  }
+}

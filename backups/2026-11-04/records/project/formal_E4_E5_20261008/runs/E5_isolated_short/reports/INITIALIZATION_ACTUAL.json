@@ -1,0 +1,707 @@
+{
+  "time": "2026-10-08T12:39:28.764338+08:00",
+  "joint_step": 0,
+  "fresh": true,
+  "random_seed": 42,
+  "pretrain": "none: official CT random initialization",
+  "pretrain_budget": 0,
+  "teacher": "none",
+  "smoke_state_reused": false,
+  "code_identity": "6e61254c3090da812a2befd2ead7c8eb12bafd13ccc7d9b95f706e3f5d7155ad",
+  "official_commit": "85361fb91cf43a69a158d41dfa9e7ee9fce36db9",
+  "official_entry": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/external/AdaMix/exp_acdc/train_adamix_ct.py",
+  "official_entry_sha256": "c47fbdba2fa503eb5c8e0767238079db1a1fa3437ded697ddec43d98dac1c773",
+  "literal_step_sha256": "be0a52d74a654c392fef4b0689f641e600dd006969f73975747d52da1e0e3592",
+  "rng_sha256": "fa7706c5dbb2b1bb1f69081013a9ff30a9101827e3e35d5398ac05d578c614b1",
+  "data_manifest_sha256": "7bcbeeed6765e46f713cd992696324714442cb9dd1eb1f2592883ab8aa9f7b46",
+  "models": [
+    {
+      "branch": "model_1",
+      "parameters": 1813764,
+      "shapes": {
+        "net.backbone.in_conv.conv_conv.0.weight": [
+          16,
+          1,
+          3,
+          3
+        ],
+        "net.backbone.in_conv.conv_conv.0.bias": [
+          16
+        ],
+        "net.backbone.in_conv.conv_conv.1.weight": [
+          16
+        ],
+        "net.backbone.in_conv.conv_conv.1.bias": [
+          16
+        ],
+        "net.backbone.in_conv.conv_conv.4.weight": [
+          16,
+          16,
+          3,
+          3
+        ],
+        "net.backbone.in_conv.conv_conv.4.bias": [
+          16
+        ],
+        "net.backbone.in_conv.conv_conv.5.weight": [
+          16
+        ],
+        "net.backbone.in_conv.conv_conv.5.bias": [
+          16
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.0.weight": [
+          32,
+          16,
+          3,
+          3
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.0.bias": [
+          32
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.1.weight": [
+          32
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.1.bias": [
+          32
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.4.weight": [
+          32,
+          32,
+          3,
+          3
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.4.bias": [
+          32
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.5.weight": [
+          32
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.5.bias": [
+          32
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.0.weight": [
+          64,
+          32,
+          3,
+          3
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.0.bias": [
+          64
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.1.weight": [
+          64
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.1.bias": [
+          64
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.4.weight": [
+          64,
+          64,
+          3,
+          3
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.4.bias": [
+          64
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.5.weight": [
+          64
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.5.bias": [
+          64
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.0.weight": [
+          128,
+          64,
+          3,
+          3
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.0.bias": [
+          128
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.1.weight": [
+          128
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.1.bias": [
+          128
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.4.weight": [
+          128,
+          128,
+          3,
+          3
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.4.bias": [
+          128
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.5.weight": [
+          128
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.5.bias": [
+          128
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.0.weight": [
+          256,
+          128,
+          3,
+          3
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.0.bias": [
+          256
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.1.weight": [
+          256
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.1.bias": [
+          256
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.4.weight": [
+          256,
+          256,
+          3,
+          3
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.4.bias": [
+          256
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.5.weight": [
+          256
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.5.bias": [
+          256
+        ],
+        "net.classifier.up1.conv1x1.weight": [
+          128,
+          256,
+          1,
+          1
+        ],
+        "net.classifier.up1.conv1x1.bias": [
+          128
+        ],
+        "net.classifier.up1.conv.conv_conv.0.weight": [
+          128,
+          256,
+          3,
+          3
+        ],
+        "net.classifier.up1.conv.conv_conv.0.bias": [
+          128
+        ],
+        "net.classifier.up1.conv.conv_conv.1.weight": [
+          128
+        ],
+        "net.classifier.up1.conv.conv_conv.1.bias": [
+          128
+        ],
+        "net.classifier.up1.conv.conv_conv.4.weight": [
+          128,
+          128,
+          3,
+          3
+        ],
+        "net.classifier.up1.conv.conv_conv.4.bias": [
+          128
+        ],
+        "net.classifier.up1.conv.conv_conv.5.weight": [
+          128
+        ],
+        "net.classifier.up1.conv.conv_conv.5.bias": [
+          128
+        ],
+        "net.classifier.up2.conv1x1.weight": [
+          64,
+          128,
+          1,
+          1
+        ],
+        "net.classifier.up2.conv1x1.bias": [
+          64
+        ],
+        "net.classifier.up2.conv.conv_conv.0.weight": [
+          64,
+          128,
+          3,
+          3
+        ],
+        "net.classifier.up2.conv.conv_conv.0.bias": [
+          64
+        ],
+        "net.classifier.up2.conv.conv_conv.1.weight": [
+          64
+        ],
+        "net.classifier.up2.conv.conv_conv.1.bias": [
+          64
+        ],
+        "net.classifier.up2.conv.conv_conv.4.weight": [
+          64,
+          64,
+          3,
+          3
+        ],
+        "net.classifier.up2.conv.conv_conv.4.bias": [
+          64
+        ],
+        "net.classifier.up2.conv.conv_conv.5.weight": [
+          64
+        ],
+        "net.classifier.up2.conv.conv_conv.5.bias": [
+          64
+        ],
+        "net.classifier.up3.conv1x1.weight": [
+          32,
+          64,
+          1,
+          1
+        ],
+        "net.classifier.up3.conv1x1.bias": [
+          32
+        ],
+        "net.classifier.up3.conv.conv_conv.0.weight": [
+          32,
+          64,
+          3,
+          3
+        ],
+        "net.classifier.up3.conv.conv_conv.0.bias": [
+          32
+        ],
+        "net.classifier.up3.conv.conv_conv.1.weight": [
+          32
+        ],
+        "net.classifier.up3.conv.conv_conv.1.bias": [
+          32
+        ],
+        "net.classifier.up3.conv.conv_conv.4.weight": [
+          32,
+          32,
+          3,
+          3
+        ],
+        "net.classifier.up3.conv.conv_conv.4.bias": [
+          32
+        ],
+        "net.classifier.up3.conv.conv_conv.5.weight": [
+          32
+        ],
+        "net.classifier.up3.conv.conv_conv.5.bias": [
+          32
+        ],
+        "net.classifier.up4.conv1x1.weight": [
+          16,
+          32,
+          1,
+          1
+        ],
+        "net.classifier.up4.conv1x1.bias": [
+          16
+        ],
+        "net.classifier.up4.conv.conv_conv.0.weight": [
+          16,
+          32,
+          3,
+          3
+        ],
+        "net.classifier.up4.conv.conv_conv.0.bias": [
+          16
+        ],
+        "net.classifier.up4.conv.conv_conv.1.weight": [
+          16
+        ],
+        "net.classifier.up4.conv.conv_conv.1.bias": [
+          16
+        ],
+        "net.classifier.up4.conv.conv_conv.4.weight": [
+          16,
+          16,
+          3,
+          3
+        ],
+        "net.classifier.up4.conv.conv_conv.4.bias": [
+          16
+        ],
+        "net.classifier.up4.conv.conv_conv.5.weight": [
+          16
+        ],
+        "net.classifier.up4.conv.conv_conv.5.bias": [
+          16
+        ],
+        "net.classifier.out_conv.weight": [
+          4,
+          16,
+          3,
+          3
+        ],
+        "net.classifier.out_conv.bias": [
+          4
+        ]
+      }
+    },
+    {
+      "branch": "model_2",
+      "parameters": 1813764,
+      "shapes": {
+        "net.backbone.in_conv.conv_conv.0.weight": [
+          16,
+          1,
+          3,
+          3
+        ],
+        "net.backbone.in_conv.conv_conv.0.bias": [
+          16
+        ],
+        "net.backbone.in_conv.conv_conv.1.weight": [
+          16
+        ],
+        "net.backbone.in_conv.conv_conv.1.bias": [
+          16
+        ],
+        "net.backbone.in_conv.conv_conv.4.weight": [
+          16,
+          16,
+          3,
+          3
+        ],
+        "net.backbone.in_conv.conv_conv.4.bias": [
+          16
+        ],
+        "net.backbone.in_conv.conv_conv.5.weight": [
+          16
+        ],
+        "net.backbone.in_conv.conv_conv.5.bias": [
+          16
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.0.weight": [
+          32,
+          16,
+          3,
+          3
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.0.bias": [
+          32
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.1.weight": [
+          32
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.1.bias": [
+          32
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.4.weight": [
+          32,
+          32,
+          3,
+          3
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.4.bias": [
+          32
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.5.weight": [
+          32
+        ],
+        "net.backbone.down1.maxpool_conv.1.conv_conv.5.bias": [
+          32
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.0.weight": [
+          64,
+          32,
+          3,
+          3
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.0.bias": [
+          64
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.1.weight": [
+          64
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.1.bias": [
+          64
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.4.weight": [
+          64,
+          64,
+          3,
+          3
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.4.bias": [
+          64
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.5.weight": [
+          64
+        ],
+        "net.backbone.down2.maxpool_conv.1.conv_conv.5.bias": [
+          64
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.0.weight": [
+          128,
+          64,
+          3,
+          3
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.0.bias": [
+          128
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.1.weight": [
+          128
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.1.bias": [
+          128
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.4.weight": [
+          128,
+          128,
+          3,
+          3
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.4.bias": [
+          128
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.5.weight": [
+          128
+        ],
+        "net.backbone.down3.maxpool_conv.1.conv_conv.5.bias": [
+          128
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.0.weight": [
+          256,
+          128,
+          3,
+          3
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.0.bias": [
+          256
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.1.weight": [
+          256
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.1.bias": [
+          256
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.4.weight": [
+          256,
+          256,
+          3,
+          3
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.4.bias": [
+          256
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.5.weight": [
+          256
+        ],
+        "net.backbone.down4.maxpool_conv.1.conv_conv.5.bias": [
+          256
+        ],
+        "net.classifier.up1.conv1x1.weight": [
+          128,
+          256,
+          1,
+          1
+        ],
+        "net.classifier.up1.conv1x1.bias": [
+          128
+        ],
+        "net.classifier.up1.conv.conv_conv.0.weight": [
+          128,
+          256,
+          3,
+          3
+        ],
+        "net.classifier.up1.conv.conv_conv.0.bias": [
+          128
+        ],
+        "net.classifier.up1.conv.conv_conv.1.weight": [
+          128
+        ],
+        "net.classifier.up1.conv.conv_conv.1.bias": [
+          128
+        ],
+        "net.classifier.up1.conv.conv_conv.4.weight": [
+          128,
+          128,
+          3,
+          3
+        ],
+        "net.classifier.up1.conv.conv_conv.4.bias": [
+          128
+        ],
+        "net.classifier.up1.conv.conv_conv.5.weight": [
+          128
+        ],
+        "net.classifier.up1.conv.conv_conv.5.bias": [
+          128
+        ],
+        "net.classifier.up2.conv1x1.weight": [
+          64,
+          128,
+          1,
+          1
+        ],
+        "net.classifier.up2.conv1x1.bias": [
+          64
+        ],
+        "net.classifier.up2.conv.conv_conv.0.weight": [
+          64,
+          128,
+          3,
+          3
+        ],
+        "net.classifier.up2.conv.conv_conv.0.bias": [
+          64
+        ],
+        "net.classifier.up2.conv.conv_conv.1.weight": [
+          64
+        ],
+        "net.classifier.up2.conv.conv_conv.1.bias": [
+          64
+        ],
+        "net.classifier.up2.conv.conv_conv.4.weight": [
+          64,
+          64,
+          3,
+          3
+        ],
+        "net.classifier.up2.conv.conv_conv.4.bias": [
+          64
+        ],
+        "net.classifier.up2.conv.conv_conv.5.weight": [
+          64
+        ],
+        "net.classifier.up2.conv.conv_conv.5.bias": [
+          64
+        ],
+        "net.classifier.up3.conv1x1.weight": [
+          32,
+          64,
+          1,
+          1
+        ],
+        "net.classifier.up3.conv1x1.bias": [
+          32
+        ],
+        "net.classifier.up3.conv.conv_conv.0.weight": [
+          32,
+          64,
+          3,
+          3
+        ],
+        "net.classifier.up3.conv.conv_conv.0.bias": [
+          32
+        ],
+        "net.classifier.up3.conv.conv_conv.1.weight": [
+          32
+        ],
+        "net.classifier.up3.conv.conv_conv.1.bias": [
+          32
+        ],
+        "net.classifier.up3.conv.conv_conv.4.weight": [
+          32,
+          32,
+          3,
+          3
+        ],
+        "net.classifier.up3.conv.conv_conv.4.bias": [
+          32
+        ],
+        "net.classifier.up3.conv.conv_conv.5.weight": [
+          32
+        ],
+        "net.classifier.up3.conv.conv_conv.5.bias": [
+          32
+        ],
+        "net.classifier.up4.conv1x1.weight": [
+          16,
+          32,
+          1,
+          1
+        ],
+        "net.classifier.up4.conv1x1.bias": [
+          16
+        ],
+        "net.classifier.up4.conv.conv_conv.0.weight": [
+          16,
+          32,
+          3,
+          3
+        ],
+        "net.classifier.up4.conv.conv_conv.0.bias": [
+          16
+        ],
+        "net.classifier.up4.conv.conv_conv.1.weight": [
+          16
+        ],
+        "net.classifier.up4.conv.conv_conv.1.bias": [
+          16
+        ],
+        "net.classifier.up4.conv.conv_conv.4.weight": [
+          16,
+          16,
+          3,
+          3
+        ],
+        "net.classifier.up4.conv.conv_conv.4.bias": [
+          16
+        ],
+        "net.classifier.up4.conv.conv_conv.5.weight": [
+          16
+        ],
+        "net.classifier.up4.conv.conv_conv.5.bias": [
+          16
+        ],
+        "net.classifier.out_conv.weight": [
+          4,
+          16,
+          3,
+          3
+        ],
+        "net.classifier.out_conv.bias": [
+          4
+        ]
+      }
+    }
+  ],
+  "optimizer_groups": [
+    [
+      {
+        "lr": 0.0001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.01,
+        "amsgrad": false,
+        "foreach": null,
+        "maximize": false,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null
+      }
+    ],
+    [
+      {
+        "lr": 0.0001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.01,
+        "amsgrad": false,
+        "foreach": null,
+        "maximize": false,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null
+      }
+    ]
+  ],
+  "backend": {
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "cudnn_allow_tf32": true,
+    "matmul_allow_tf32": false,
+    "AMP": false
+  },
+  "batch_definition": "4 streams x6 =24 images; main6+aux6 GT=12; other12 strict unlabeled",
+  "curriculum_total_steps": 7500,
+  "test_access": false
+}

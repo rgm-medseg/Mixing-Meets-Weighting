@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:17:27.889036+00:00",
+  "task_id": "V24_0_MASTER_TASK_REGISTRY_FREEZE",
+  "formal_started": false,
+  "tmux_started": false,
+  "working_registry": "audits/internal_evidence_expansion_v24_0/V24_0_MASTER_TASK_REGISTRY_WORKING.tsv",
+  "working_registry_sha256": "1aeb5c3ce40ff74bb7cd2554a54db8d06f22f7eb521fd16d964514af0fa21c16",
+  "frozen_registry": "audits/internal_evidence_expansion_v24_0/V24_0_MASTER_TASK_REGISTRY.tsv",
+  "frozen_registry_sha256": "1aeb5c3ce40ff74bb7cd2554a54db8d06f22f7eb521fd16d964514af0fa21c16",
+  "note": "This freezes the current scripts-first registry state; it does not authorize formal start."
+}

@@ -1,0 +1,8 @@
+{
+  "python": "3.10.20",
+  "torch": "2.4.1+cu121",
+  "numpy": "2.2.6",
+  "CUDA": "12.1",
+  "cudnn": 90100,
+  "executable": "/home/renguanming/.conda/envs/beta_fft/bin/python"
+}

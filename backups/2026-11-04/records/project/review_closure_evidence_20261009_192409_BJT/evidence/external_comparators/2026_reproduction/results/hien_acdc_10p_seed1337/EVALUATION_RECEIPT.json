@@ -1,0 +1,22 @@
+{
+  "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/checkpoints/hien_acdc_10p_seed1337/best_model.pt",
+  "checkpoint_missing_keys": [],
+  "checkpoint_sha256": "53f3ca99ad03f6c3467008af424236a3556e31f0d61fe93c5b95a06edc445295",
+  "checkpoint_unexpected_keys": [],
+  "config_sha256": "b64dba39f627a17ae5da7f30341b1a7fc766e4a9f2497581c2fa0e2de7f17b90",
+  "dataset": "ACDC",
+  "evaluator": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tools/v22_0_acdc_test_frozen_checkpoint.py",
+  "evaluator_sha256": "5958b1a7514415f67beb184676c649867f6aeb15cce8d3ee5ee3fe5517a798f4",
+  "job_id": "hien_acdc_10p_seed1337",
+  "method": "HiEn",
+  "metrics": {
+    "asd": 1.002625267027374,
+    "dice": 0.8522202646227632,
+    "hd95": 3.3927492656336047,
+    "iou": 0.7521079210625701
+  },
+  "prediction_output": "selected_logits",
+  "split": "test",
+  "status": "EVALUATION_PASS",
+  "test_used_for_selection": false
+}

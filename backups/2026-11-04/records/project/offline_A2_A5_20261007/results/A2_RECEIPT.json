@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "time": "2026-10-07T19:46:00.281633+08:00",
+  "teacher_checkpoints": 8,
+  "primary_samples_per_checkpoint": 346,
+  "primary_validation_slices": 210,
+  "primary_validation_frames": 20,
+  "primary_validation_patients": 10,
+  "labeled_train_slices": 136,
+  "labeled_train_patients": 7,
+  "legacy_unique_samples": 34,
+  "quality_rows": 29040,
+  "optimizer_updates": 0,
+  "EMA_updates": 0,
+  "test_inputs": 0,
+  "early_middle_states": "NA",
+  "mode": "eval main; legacy train_snapshot separate",
+  "unit_identity": "9c039632d8918000110d4d8d541296761dd96f663068b817b651dd2940f1b740"
+}

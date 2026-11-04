@@ -1,0 +1,17 @@
+{
+  "AuditID": "V23_RUNTIME_ARCHIVE_RECEIPT",
+  "created_at": "2026-08-24T14:17:20.222897+00:00",
+  "V23_0_COMPLETE": true,
+  "pre_tmux_sessions": "paper_internal_evidence_controller_v23_0: 1 windows (created Sun Aug 23 11:41:39 2026)\n",
+  "pre_panes": "50618\tpython\tcd /home/renguanming/jupyterlab/rgm/beta-FFT-main && python scripts/paper_internal_evidence_v23_0/monitor_v23_controller_heartbeat.py --interval 1800\n",
+  "real_v23_trainer_process_scan": "",
+  "observed_only_heartbeat_monitor": true,
+  "SignalSent": "TMUX_KILL_SESSION_IDLE_MONITOR_ONLY",
+  "kill_session_return_code": 0,
+  "kill_session_stderr": "",
+  "post_tmux_sessions": "",
+  "V23_LOGS_RECEIPTS_OUTPUTS_DELETED": false,
+  "V24_START_BLOCKED_BY_ACTIVE_V23_PROCESS": false,
+  "CONFLICTING_CONTROLLER_COUNT": 0,
+  "status": "PASS"
+}

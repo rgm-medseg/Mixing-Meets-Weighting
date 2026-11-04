@@ -1,0 +1,4 @@
+TrainerFamily	CheckpointPath	CheckpointExists	ModelState	OptimizerState	SchedulerState	IterationOrGlobalStep	BestMetricState	MaskTokenState	AdaMixState	X03State	RNGState	SamplerState	RESUME_LEVEL	Status
+ACDC	runtime/three_innovation_ablation_transfer_v22_0/smoke/ACDC5_FINAL3/checkpoints/last.ckpt	True	True	True	False	True	True	False	STATELESS_AUGMENTATION	STATELESS_NO_LEARNABLE_PARAMETER	True	False	SCIENTIFIC_CONTINUATION	PASS
+PROMISE_COVID	runtime/three_innovation_ablation_transfer_v22_0/smoke/PROMISE20_FINAL3/self_train/self_train_full_state_latest.pth	True	True	True	True	True	True	True	STATELESS_AUGMENTATION	STATELESS_NO_LEARNABLE_PARAMETER	True	True	BITWISE_EXACT	PASS
+MSCMR	runtime/three_innovation_ablation_transfer_v22_0/smoke/MSCMR5_FINAL3/checkpoints/last.ckpt	True	True	True	True	True	True	True	STATELESS_AUGMENTATION	STATELESS_NO_LEARNABLE_PARAMETER	True	True	BITWISE_EXACT	PASS

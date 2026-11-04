@@ -1,0 +1,57 @@
+[
+  {
+    "setting": "acdc5",
+    "command_build": "PASS",
+    "training_started": false,
+    "evaluation_started": false,
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/comixw_backup_20261104/verification_local/project/experiments/three_innovation_ablation_transfer_v22_0/ACDC5_FINAL3/checkpoints/best.ckpt",
+    "completed_updates": 28400,
+    "parser_check": "PASS",
+    "parser_exit_code": 0,
+    "parser_error": ""
+  },
+  {
+    "setting": "acdc10",
+    "command_build": "PASS",
+    "training_started": false,
+    "evaluation_started": false,
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/comixw_backup_20261104/verification_local/project/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/best.ckpt",
+    "completed_updates": 29600,
+    "parser_check": "PASS",
+    "parser_exit_code": 0,
+    "parser_error": ""
+  },
+  {
+    "setting": "promise20",
+    "command_build": "PASS",
+    "training_started": false,
+    "evaluation_started": false,
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/comixw_backup_20261104/verification_local/project/experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/self_train/self_train_full_state_iter_25000.pth",
+    "completed_updates": 25000,
+    "parser_check": "PASS",
+    "parser_exit_code": 0,
+    "parser_error": ""
+  },
+  {
+    "setting": "covid5",
+    "command_build": "PASS",
+    "training_started": false,
+    "evaluation_started": false,
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/comixw_backup_20261104/verification_local/project/experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/self_train/self_train_full_state_iter_25000.pth",
+    "completed_updates": 25000,
+    "parser_check": "PASS",
+    "parser_exit_code": 0,
+    "parser_error": ""
+  },
+  {
+    "setting": "covid10",
+    "command_build": "PASS",
+    "training_started": false,
+    "evaluation_started": false,
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/comixw_backup_20261104/verification_local/project/experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/self_train/self_train_full_state_iter_25000.pth",
+    "completed_updates": 25000,
+    "parser_check": "PASS",
+    "parser_exit_code": 0,
+    "parser_error": ""
+  }
+]

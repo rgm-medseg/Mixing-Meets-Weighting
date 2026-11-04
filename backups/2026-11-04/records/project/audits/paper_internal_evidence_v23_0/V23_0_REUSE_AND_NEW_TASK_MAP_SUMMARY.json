@@ -1,0 +1,23 @@
+{
+  "EXTERNAL_METHOD_REPRODUCTION": false,
+  "FAILURE_CASE_SECTION": false,
+  "MAIN_DATASETS": [
+    "ACDC",
+    "PROMISE20",
+    "COVID"
+  ],
+  "MAIN_DATASET_COUNT": 3,
+  "MSCMR_IN_CURRENT_PAPER": false,
+  "PROMISE10_IN_CURRENT_PAPER": false,
+  "actions": {
+    "EXACT_REUSE": 3,
+    "NEW_BENCHMARK": 1,
+    "NEW_FULL": 4,
+    "NEW_VISUALIZATION": 1,
+    "READ_ONLY_EXTRACTION": 3
+  },
+  "blocked_items": [],
+  "created_at": "2026-08-23T03:16:52.109863+00:00",
+  "map_path": "audits/paper_internal_evidence_v23_0/V23_0_REUSE_AND_NEW_TASK_MAP.tsv",
+  "schema": "V23_0_REUSE_AND_NEW_TASK_MAP_SUMMARY_V1"
+}

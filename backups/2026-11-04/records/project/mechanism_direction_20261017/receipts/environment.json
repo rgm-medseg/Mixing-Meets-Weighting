@@ -1,0 +1,9 @@
+{
+  "python": "3.10.20 (main, Jun 11 2026, 15:17:37) [GCC 14.3.0]",
+  "torch": "2.4.1+cu121",
+  "numpy": "2.2.6",
+  "platform": "Linux-4.18.0-553.el8_10.x86_64-x86_64-with-glibc2.31",
+  "cpu_threads": 4,
+  "cuda": "12.1",
+  "reporting": "CPU aggregation only; no model instantiated by this script"
+}

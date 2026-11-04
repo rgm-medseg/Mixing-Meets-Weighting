@@ -1,0 +1,32 @@
+{
+  "status": "SELECTED",
+  "controller_version": "v2_A",
+  "formula": "equal foreground-class mean of P_c on existing per-class LCC pseudolabel support",
+  "fallback": 0.0,
+  "mapping": "unchanged .18+.20*q",
+  "B_evaluated": false,
+  "mapping_adjusted": false,
+  "basis": "A removes background multiplicity and class-count weighting; genuine teacher batch responses cross original integer bins, no additional signal definition needed",
+  "n_batches": 70,
+  "old_sizes": [
+    97
+  ],
+  "A_sizes": [
+    91,
+    92,
+    93,
+    94,
+    95
+  ],
+  "A_nonfallback_sizes": [
+    91,
+    92,
+    93,
+    94,
+    95
+  ],
+  "A_fallback_batches": 0,
+  "formal_benefit": "NA; replay uses historical teachers, not v2 training",
+  "test_access": false,
+  "time": "2026-10-06T23:22:47.674196+08:00"
+}

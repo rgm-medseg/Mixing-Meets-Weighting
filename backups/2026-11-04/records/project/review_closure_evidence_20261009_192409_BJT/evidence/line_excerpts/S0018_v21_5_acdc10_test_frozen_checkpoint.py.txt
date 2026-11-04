@@ -1,0 +1,21 @@
+ORIGINAL: /home/renguanming/jupyterlab/rgm/beta-FFT-main/tools/v21_5_acdc10_test_frozen_checkpoint.py
+SHA256: f49d5e5e284ffcc5093e337c3826d58a3e27b789f13d398d4588185cfab8734e
+131:         "OutputDir": str(outdir.relative_to(ROOT)),
+132:         "ReceiptPath": str((outdir / "TEST_RECEIPT.json").relative_to(ROOT)),
+133:         "SelectionEndpoint": row["SelectionEndpoint"],
+134:         "CheckpointFrozen": row["CheckpointFrozen"],
+135:         "TrainingEntryStarted": False,
+143:     if protocol.get("checkpoint_selection_endpoint") != "VALIDATION_BEST":
+144:         raise RuntimeError("protocol endpoint is not VALIDATION_BEST")
+145:     if row["SelectionEndpoint"] != "VALIDATION_BEST" or row["CheckpointFrozen"] != "true":
+146:         raise RuntimeError(f"unfrozen or non-best checkpoint row: {args.method_id}")
+147: 
+201:         "created_at": datetime.now(timezone.utc).isoformat(),
+202:         "TEST_ONLY_MODE": True,
+203:         "TEST_SELECTION_EXPOSURE": True,
+204:         "BLIND_TEST_CLAIM_ALLOWED": False,
+205:         "UNTOUCHED_TEST_CLAIM_ALLOWED": False,
+206:         "FIRST_EVER_TEST_CLAIM_ALLOWED": False,
+207:         "SelectionEndpoint": "VALIDATION_BEST",
+208:         "CheckpointPath": row["BestCheckpointPath"],
+209:         "CheckpointSHA": row["BestCheckpointSHA256"],

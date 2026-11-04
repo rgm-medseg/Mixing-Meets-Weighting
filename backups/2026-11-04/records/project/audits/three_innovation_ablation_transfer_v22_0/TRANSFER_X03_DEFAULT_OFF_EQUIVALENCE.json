@@ -1,0 +1,9 @@
+{
+  "audit_id": "V22_0_TRANSFER_X03_DEFAULT_OFF_EQUIVALENCE",
+  "created_at": "2026-08-19T15:32:13.037765+00:00",
+  "tsv": "audits/three_innovation_ablation_transfer_v22_0/TRANSFER_X03_DEFAULT_OFF_EQUIVALENCE.tsv",
+  "TRANSFER_X03_DEFAULT_OFF_EQUIVALENCE": "PASS",
+  "family_count": 4,
+  "pass_count": 4,
+  "blocking_rows": []
+}

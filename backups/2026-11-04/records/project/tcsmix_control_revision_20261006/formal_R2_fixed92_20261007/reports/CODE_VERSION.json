@@ -1,0 +1,5 @@
+{
+  "git_commit": "NA: workspace has no Git repository",
+  "source_identity": "R1 frozen run_manifest hashes and identical source snapshots; R2 engineering patch and own frozen manifest",
+  "all_R1_core_files_preserved": true
+}

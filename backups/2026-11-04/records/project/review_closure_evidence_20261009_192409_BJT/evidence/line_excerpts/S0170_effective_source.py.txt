@@ -1,0 +1,72 @@
+ORIGINAL: /home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/effective_source.py
+SHA256: d3959d5baf54727db740f3ece79608292b396d3f0f49b7b97743398bda42ad00
+19: from tqdm import tqdm
+20: 
+21: from dataloaders.dataset import BaseDataSets, TwoStreamBatchSampler, WeakStrongAugment
+22: from v14_mask_adamix_components import (v14_bcp_net as BCP_net, generate_adamix_bcp_lite_v1_mask, load_parent_pretrain, transplant_parent_optimizer_state, make_optimizer, mask_token_endpoint, process_image_batches_parent_2d)
+23: from v21_3_acdc10_third_innovation_components import compute_v21_3_innovation_x
+24: from utils import ramps, losses
+25: process_image_batches = process_image_batches_parent_2d
+26: from val_2D import test_single_volume
+67: parser.add_argument("--adamix_max_side", type=float, default=0.38)
+68: parser.add_argument("--mechanism_log_interval", type=int, default=200)
+69: parser.add_argument("--innovation_x_id", type=str, default="")
+70: parser.add_argument("--enable_v21_3_innovation_x", type=str2bool, default=False)
+71: parser.add_argument("--v21_3_innovation_x_weight", type=float, default=0.05)
+72: args = parser.parse_args()
+73: 
+105: 
+106: 
+107: def update_model_ema(model, ema_model, alpha):
+108:     model_state = model.state_dict()
+109:     model_ema_state = ema_model.state_dict()
+274:     ema_model = BCP_net(in_chns=1, class_num=args.num_classes, ema=True, mask_token_enabled=args.mask_token_enabled, mask_token_num=args.mask_token_num, mask_token_dim=args.mask_token_dim)
+275: 
+276:     db_train = BaseDataSets(base_dir=args.root_path, split="train", num=None, transform=transforms.Compose([WeakStrongAugment(args.image_size)]))
+277:     db_val = BaseDataSets(base_dir=args.root_path, split="val")
+278:     # True test access is deferred until validation-best identity is frozen.
+279:     db_test = BaseDataSets(base_dir=args.root_path, split="val")
+280:     labeled_slice = patients_to_slices(args.root_path, args.labelnum)
+281:     trainloader = DataLoader(
+291:     optimizer1 = make_optimizer(model_1, args.base_lr, args.mask_token_enabled)
+292:     optimizer2 = make_optimizer(model_2, args.base_lr, args.mask_token_enabled)
+314:     else:
+315:         load_state = torch.load(pre_model, map_location="cpu")
+316:         load_parent_pretrain(ema_model, load_state["net"], args.mask_token_enabled)
+317:         load_parent_pretrain(model_1, load_state["net"], args.mask_token_enabled)
+318:         load_parent_pretrain(model_2, load_state["net"], args.mask_token_enabled)
+319:         if "opt" in load_state:
+320:             transplant_parent_optimizer_state(optimizer1, load_state["opt"], args.mask_token_enabled)
+321:             transplant_parent_optimizer_state(optimizer2, load_state["opt"], args.mask_token_enabled)
+322: 
+323:     start_batch_offset = iter_num % len(trainloader) if args.resume_ckpt else 0
+431:             loss_1 = (loss_dice_1 + loss_ce_1) / 2 + pseudo_supervision1 + pseudo_supervision5
+432:             loss_2 = (loss_dice_2 + loss_ce_2) / 2 + pseudo_supervision2 + pseudo_supervision6
+433:             innovation_x_loss = loss_1 * 0.0
+434:             innovation_x_endpoint = None
+435:             if args.enable_v21_3_innovation_x:
+436:                 innovation_x_loss, innovation_x_endpoint = compute_v21_3_innovation_x(
+437:                     args.innovation_x_id, out_1, out_2, pre_a, pre_b,
+438:                     image_output_1_FFT, image_output_2_FFT, iter_num, args.max_iterations)
+439:             loss = loss_1 + loss_2 + consistency_loss + supervised_loss_mix + consistency_loss_s + supervised_loss_mix_s + args.v21_3_innovation_x_weight * innovation_x_loss
+440: 
+441:             optimizer1.zero_grad()
+442:             optimizer2.zero_grad()
+443:             loss.backward()
+444:             optimizer1.step()
+445:             optimizer2.step()
+446: 
+447:             iter_num += 1
+452:                 adamix_stats["model1_total_gradient_norm"] = float(torch.sqrt(sum((p.grad.detach() ** 2).sum() for p in model_1.parameters() if p.grad is not None)).cpu())
+453:                 logging.info("iteration %d : adamix_endpoint=%s", iter_num, json.dumps(adamix_stats, sort_keys=True))
+454:             if args.enable_v21_3_innovation_x and iter_num % args.mechanism_log_interval == 0:
+455:                 payload = dict(innovation_x_endpoint or {})
+456:                 payload["candidate_id"] = args.innovation_x_id
+457:                 payload["innovation_x_loss"] = float(innovation_x_loss.detach().cpu())
+458:                 payload["weighted_innovation_x_loss"] = float((args.v21_3_innovation_x_weight * innovation_x_loss).detach().cpu())
+459:                 payload["finite"] = bool(torch.isfinite(innovation_x_loss).item())
+460:                 logging.info("iteration %d : v21_3_innovation_x_endpoint=%s", iter_num, json.dumps(payload, sort_keys=True))
+461:             update_model_ema(model_1, ema_model, 0.99)
+462: 
+463:             logits_finite = all(torch.isfinite(t).all() for t in [out_1, out_2, outputs, outputs_s, image_output_1_FFT, image_output_2_FFT])
+549:     append_dynamics(dynamics_csv, [iter_num, iter_num, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1])

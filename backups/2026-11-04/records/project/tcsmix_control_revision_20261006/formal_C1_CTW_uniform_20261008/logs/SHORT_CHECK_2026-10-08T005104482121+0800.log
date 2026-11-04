@@ -1,0 +1,3 @@
+checkpoint PASS 1
+checkpoint PASS 1
+Short check PASS: 1 failed + 1 successful physical step; zero-update real resume probe; formal uses none of this state

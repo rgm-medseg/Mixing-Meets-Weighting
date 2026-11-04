@@ -1,0 +1,110 @@
+{
+  "status_before_analysis": "FULL_ARCHIVE_PRESENT_WITH_MISSING_PROBABILITY_FIELD",
+  "original_source_arrays": 216,
+  "joint_arrays": 432,
+  "joint_arrays_by_frozen_condition": {
+    "fixed_uniform": 108,
+    "fixed_CTW": 108,
+    "dynamic_uniform": 108,
+    "dynamic_CTW": 108
+  },
+  "existing_pseudo_statistics": [
+    {
+      "condition": "dynamic_CTW",
+      "region": "pseudo_correct",
+      "pixels": "3177833",
+      "support_patients": "10",
+      "aggregation": "patient_equal",
+      "mean_w": "0.2546763807817568",
+      "mean_e": "0.0021581356119594565",
+      "mean_we": "0.0008420416919401447",
+      "mean_grad": "5.862282163834508e-11",
+      "gradient_fraction": "0.32168638285714246",
+      "loss_fraction": "0.18748993352619198",
+      "disagreement_rate": "0.0031260339588972397",
+      "student1_error_rate": "0.0018516624032165175",
+      "student2_error_rate": "0.003252653956746091"
+    },
+    {
+      "condition": "dynamic_CTW",
+      "region": "pseudo_error",
+      "pixels": "17357",
+      "support_patients": "10",
+      "aggregation": "patient_equal",
+      "mean_w": "0.4760717869319572",
+      "mean_e": "0.09679935235260452",
+      "mean_we": "0.042336282371835066",
+      "mean_grad": "4.165404155511923e-09",
+      "gradient_fraction": "0.12818296207600494",
+      "loss_fraction": "0.05336917243189684",
+      "disagreement_rate": "0.23152690401283968",
+      "student1_error_rate": "0.8078001223800205",
+      "student2_error_rate": "0.8052625881065681"
+    },
+    {
+      "condition": "dynamic_uniform",
+      "region": "pseudo_correct",
+      "pixels": "3177833",
+      "support_patients": "10",
+      "aggregation": "patient_equal",
+      "mean_w": "0.25562867313342014",
+      "mean_e": "0.0021581356119594565",
+      "mean_we": "0.0005533875198144622",
+      "mean_grad": "3.222897395649263e-11",
+      "gradient_fraction": "0.3245551540321945",
+      "loss_fraction": "0.17022641907225225",
+      "disagreement_rate": "0.0031260339588972397",
+      "student1_error_rate": "0.0018516624032165175",
+      "student2_error_rate": "0.003252653956746091"
+    },
+    {
+      "condition": "dynamic_uniform",
+      "region": "pseudo_error",
+      "pixels": "17357",
+      "support_patients": "10",
+      "aggregation": "patient_equal",
+      "mean_w": "0.2567026741436912",
+      "mean_e": "0.09679935235260452",
+      "mean_we": "0.024836270766719695",
+      "mean_grad": "1.8948417550650876e-09",
+      "gradient_fraction": "0.11077188533123657",
+      "loss_fraction": "0.043648594828775034",
+      "disagreement_rate": "0.23152690401283968",
+      "student1_error_rate": "0.8078001223800205",
+      "student2_error_rate": "0.8052625881065681"
+    }
+  ],
+  "fields_before": [
+    "image1",
+    "image2",
+    "gt",
+    "anatomy",
+    "geom_valid",
+    "occlusion",
+    "outside",
+    "pseudo_source",
+    "pseudo",
+    "pseudo_strong",
+    "patient_ids",
+    "w",
+    "e",
+    "we",
+    "grad",
+    "grad_logits",
+    "pred1",
+    "pred2",
+    "disagree"
+  ],
+  "missing_before": [
+    "student1_probability_or_logits",
+    "GT_direction_dot_product",
+    "spatial_by_teacher_correctness_aggregates"
+  ],
+  "solution": "One cached frozen student1 pass for main probabilities; archived gradients/masks/targets reused. New cross masks and direction summaries derived offline.",
+  "original_directories_checked": [
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/arrays/inputs",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/arrays/joint"
+  ],
+  "examples_not_substituted_for_full_dataset": true,
+  "four_frozen_conditions_are_not_four_trained_models": true
+}

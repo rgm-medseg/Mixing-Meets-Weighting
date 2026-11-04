@@ -1,0 +1,1279 @@
+{
+  "status": "PASS",
+  "load": {
+    "branch": "model_1",
+    "step": 29600,
+    "strict": true,
+    "checkpoint_sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086"
+  },
+  "gamma": 0.03598789498209953,
+  "slices": 210,
+  "model_hash_before": "f26262ac454c399efc8569442e847eb3051e12f22951c506947d45ba421adcfd",
+  "model_hash_after": "f26262ac454c399efc8569442e847eb3051e12f22951c506947d45ba421adcfd",
+  "gamma_restored": true,
+  "restored_output_bitwise_equal": true,
+  "checkpoint_written": false,
+  "optimizer_steps": 0,
+  "restore_checks": [
+    {
+      "frame": "patient002_frame01",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame01",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame01",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame01",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame01",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame01",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame01",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame01",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame01",
+      "z": 8,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame01",
+      "z": 9,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame02",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame02",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame02",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame02",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame02",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame02",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame02",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame02",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame02",
+      "z": 8,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient002_frame02",
+      "z": 9,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame01",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame01",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame01",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame01",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame01",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame01",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame01",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame01",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame01",
+      "z": 8,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame01",
+      "z": 9,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame01",
+      "z": 10,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame02",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame02",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame02",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame02",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame02",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame02",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame02",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame02",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame02",
+      "z": 8,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame02",
+      "z": 9,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient019_frame02",
+      "z": 10,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame01",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame01",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame01",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame01",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame01",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame01",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame01",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame01",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame01",
+      "z": 8,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame01",
+      "z": 9,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame02",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame02",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame02",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame02",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame02",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame02",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame02",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame02",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame02",
+      "z": 8,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient028_frame02",
+      "z": 9,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame01",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame01",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame01",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame01",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame01",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame01",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame01",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame01",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame01",
+      "z": 8,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame01",
+      "z": 9,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame02",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame02",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame02",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame02",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame02",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame02",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame02",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame02",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame02",
+      "z": 8,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient030_frame02",
+      "z": 9,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame01",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame01",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame01",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame01",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame01",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame01",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame01",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame01",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame01",
+      "z": 8,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame02",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame02",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame02",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame02",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame02",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame02",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame02",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame02",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient039_frame02",
+      "z": 8,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame01",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame01",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame01",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame01",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame01",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame01",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame01",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame01",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame02",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame02",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame02",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame02",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame02",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame02",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame02",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient045_frame02",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame01",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame01",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame01",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame01",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame01",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame01",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame01",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame01",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame02",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame02",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame02",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame02",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame02",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame02",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame02",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient078_frame02",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 8,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 9,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 10,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 11,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 12,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 13,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 14,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame01",
+      "z": 15,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 8,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 9,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 10,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 11,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 12,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 13,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 14,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient082_frame02",
+      "z": 15,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 8,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 9,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 10,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 11,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 12,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 13,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame01",
+      "z": 14,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 8,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 9,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 10,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 11,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 12,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 13,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient085_frame02",
+      "z": 14,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame01",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame01",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame01",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame01",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame01",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame01",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame01",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame01",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame02",
+      "z": 0,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame02",
+      "z": 1,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame02",
+      "z": 2,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame02",
+      "z": 3,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame02",
+      "z": 4,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame02",
+      "z": 5,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame02",
+      "z": 6,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "frame": "patient087_frame02",
+      "z": 7,
+      "max_abs_restore_difference": 0.0,
+      "bitwise_equal": true
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:17:58.515676+00:00",
+  "task_id": "PATIENT_LEVEL_STATS",
+  "task_type": "ANALYSIS",
+  "action": "READ_ONLY_READY",
+  "registry_FinalLaunchReady": "PASS",
+  "registry_Blocker": "",
+  "registry_BlockerCategory": "NONE",
+  "LaunchBlocking": false,
+  "NoncriticalTerminalGap": false,
+  "ProtocolExcluded": false,
+  "FinalLaunchReady": true,
+  "FinalLaunchReady_semantics": "launch permission only; not completion evidence",
+  "PostFullCompletionEvidenceRequired": false,
+  "FormalFullStarted": false,
+  "TmuxStarted": false,
+  "checks": {
+    "StaticPass": true,
+    "ArgvPass": true,
+    "PathPass": true,
+    "ScientificIdentityPass": true,
+    "ImportPass": true,
+    "RoleBindingPass": true,
+    "SmokePass": true,
+    "ClosedLoopPass": true,
+    "FailureInjectionPass": true,
+    "ControllerDryPass": true,
+    "OutputClean": true,
+    "SourceFreezePass": true,
+    "ConfigFreezePass": true
+  },
+  "l1_l10": {
+    "TaskOrder": "4",
+    "TaskID": "PATIENT_LEVEL_STATS",
+    "Action": "READ_ONLY_READY",
+    "FinalLaunchReady": "PASS",
+    "Blocker": "",
+    "L1StaticPaths": "PASS",
+    "L2DryRunOrReceiptMode": "NA",
+    "L3Paths": "PASS",
+    "L4ScientificIdentity": "PASS_OR_NA",
+    "L5ImportCompile": "PASS",
+    "L6TestFirewall": "PASS",
+    "L7SmokeGate": "PASS_OR_NA",
+    "L8ClosedLoopReceipt": "PASS",
+    "L9FailureInjection": "PASS_OR_NA",
+    "L10ControllerDryConsumption": "PASS_WITH_BLOCKERS"
+  },
+  "freeze_evidence": {
+    "source": {
+      "applicable": true,
+      "pass": true,
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_patient_level_statistics.py",
+      "exists": true,
+      "expected_sha256": "175e24ac64621008829bf9ddf14591715442f66fbc730a3a82b8cc31823f691a",
+      "current_sha256": "175e24ac64621008829bf9ddf14591715442f66fbc730a3a82b8cc31823f691a"
+    },
+    "launcher": {
+      "applicable": false,
+      "pass": true,
+      "path": "",
+      "expected_sha256": "",
+      "current_sha256": ""
+    },
+    "config": {
+      "applicable": false,
+      "pass": true,
+      "path": "",
+      "expected_sha256": "",
+      "current_sha256": ""
+    },
+    "checkpoint": {
+      "applicable": false,
+      "pass": true,
+      "path": "",
+      "expected_sha256": "",
+      "current_sha256": ""
+    }
+  },
+  "expected_receipt": "audits/internal_evidence_expansion_v24_0/PATIENT_LEVEL_STATS_RECEIPT.json",
+  "test_semantics": {
+    "TESTAccessAllowed": "0",
+    "TEST_DATA_READ_FOR_PRE_REGISTERED_EVALUATION": false,
+    "TEST_USED_FOR_TUNING": false,
+    "TEST_USED_FOR_SELECTION": false
+  }
+}

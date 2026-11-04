@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T15:16:42.311170+00:00",
+  "task_ids": [
+    "BOUNDARY_F1",
+    "CORRUPTION_ROBUSTNESS"
+  ],
+  "training_started": false,
+  "checkpoint_selection_started": false,
+  "checkpoint_reselection_after_test": false,
+  "formal_tmx_started": false,
+  "analysis_mode": "FULL_FROZEN_CHECKPOINT_REPLAY",
+  "source_run_receipt": "audits/internal_evidence_expansion_v24_0/ACDC10_FROZEN_REPLAY_ANALYSIS_RECEIPT.json",
+  "postprocess_receipt": "audits/internal_evidence_expansion_v24_0/ACDC10_FROZEN_REPLAY_POSTPROCESS_RECEIPT.json",
+  "test_manifest_sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+  "case_count": 40,
+  "boundary_row_count": 1080,
+  "boundary_summary_row_count": 36,
+  "boundary_methods": [
+    "ACDC10_ARM_000",
+    "ACDC10_ARM_110",
+    "ACDC10_ARM_111"
+  ],
+  "boundary_tolerances_px": [
+    1,
+    2,
+    3
+  ],
+  "boundary_classes": [
+    "LV",
+    "MYO",
+    "RV"
+  ],
+  "corruption_row_count": 18,
+  "corruption_methods": [
+    "ACDC10_ARM_000",
+    "ACDC10_ARM_111"
+  ],
+  "corruption_labels": [
+    "clean",
+    "gamma_intensity_shift_0.7",
+    "gamma_intensity_shift_1.3",
+    "gaussian_blur_0.5",
+    "gaussian_blur_1.0",
+    "gaussian_blur_1.5",
+    "gaussian_noise_0.02",
+    "gaussian_noise_0.05",
+    "gaussian_noise_0.1"
+  ],
+  "engineering_canary_values": {
+    "boundary": [
+      "False"
+    ],
+    "corruption": [
+      "False"
+    ]
+  },
+  "missing_outputs": [],
+  "outputs": {
+    "boundary_rows": {
+      "path": "final_report/internal_evidence_expansion_v24_0/ACDC10_BOUNDARY_F1_FULL_PRECISION.tsv",
+      "sha256": "509f5d7c18a43f9353ee978f1c4f7bfed1cfd933931a087e83fe7a6f8f8e7db1"
+    },
+    "boundary_summary": {
+      "path": "final_report/internal_evidence_expansion_v24_0/ACDC10_BOUNDARY_F1_FULL_PRECISION_SUMMARY.tsv",
+      "sha256": "3538e941c288987f20035d359ed89861e23f43138fa050f68ae876d41a57d581"
+    },
+    "boundary_table_md": {
+      "path": "final_report/internal_evidence_expansion_v24_0/tables/TABLE_S_ACDC10_BOUNDARY_F1.md",
+      "sha256": "dfea0c37ef974698ac8334aa641d3ba4bb4f6771f058b5c57f7dda03715dc986"
+    },
+    "boundary_table_tex": {
+      "path": "final_report/internal_evidence_expansion_v24_0/tables/TABLE_S_ACDC10_BOUNDARY_F1.tex",
+      "sha256": "5167d1eb8936d7a6931cf43863bf09bd2f7b0f7a6b06e29b236c25304f9b83d7"
+    },
+    "boundary_fig_png": {
+      "path": "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_BOUNDARY_F1_TOLERANCE.png",
+      "sha256": "4da3eee5859d71d54d6ba355b060c8c05d151078167a7f264d931523e6c91998"
+    },
+    "boundary_fig_pdf": {
+      "path": "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_BOUNDARY_F1_TOLERANCE.pdf",
+      "sha256": "33dc57a57bdcc186e5f98bb36c2b0650df9a39d98b11a8e00afadbb1e3ff40d6"
+    },
+    "corruption_rows": {
+      "path": "final_report/internal_evidence_expansion_v24_0/ACDC10_CORRUPTION_ROBUSTNESS.tsv",
+      "sha256": "7f47b074d3027da4747ef444852eb5cae8ab405bc1842bafadaa6f2377d03b0c"
+    },
+    "corruption_table_md": {
+      "path": "final_report/internal_evidence_expansion_v24_0/tables/TABLE_S_ACDC10_CORRUPTION.md",
+      "sha256": "bb2822382dc1f9d3bb29b359844c06d8dff643d6ee04012ed494a633a992309e"
+    },
+    "corruption_table_tex": {
+      "path": "final_report/internal_evidence_expansion_v24_0/tables/TABLE_S_ACDC10_CORRUPTION.tex",
+      "sha256": "53166daf8bd31f4d10ab1d801b427aaa5c7f942f30237da523be10710b8bd478"
+    },
+    "corruption_retention_png": {
+      "path": "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_CORRUPTION_DICE_RETENTION.png",
+      "sha256": "e3e6a4b851121ee7fd5b93d10395dbd7b5ed0697e5a9aded6aa1db3de0e0bb8c"
+    },
+    "corruption_retention_pdf": {
+      "path": "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_CORRUPTION_DICE_RETENTION.pdf",
+      "sha256": "f33463b22e254a3f8add65197ded0b2e1d7401a71c7e42fd4ebaa82cb5875b69"
+    },
+    "corruption_boundary_png": {
+      "path": "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_CORRUPTION_BOUNDARY_DEGRADATION.png",
+      "sha256": "e388d5b22d756f71e3041578ba3872ee0c8b253b4ac1932a49f28a33f03a54a7"
+    },
+    "corruption_boundary_pdf": {
+      "path": "final_report/internal_evidence_expansion_v24_0/figures/ACDC10_CORRUPTION_BOUNDARY_DEGRADATION.pdf",
+      "sha256": "3d0255f3c9fa2bcd0ae720f3f9a06e2a26d450ed7c6367af11018dd59184324e"
+    }
+  },
+  "review": {
+    "REVIEW_1_BOUNDARY_ALL_METHODS_CLASSES_TOLERANCES_PRESENT": "PASS",
+    "REVIEW_2_CORRUPTION_ALL_PREREGISTERED_CONDITIONS_PRESENT": "PASS",
+    "REVIEW_3_FULL_OUTPUTS_NOT_SMOKE_CANARY": "PASS",
+    "REVIEW_4_NO_TRAINING_OR_CHECKPOINT_SELECTION": "PASS",
+    "REVIEW_5_TABLES_AND_FIGURES_PRESENT": "PASS"
+  }
+}

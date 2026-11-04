@@ -1,0 +1,7 @@
+{
+  "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/runs/F97_main_signal_20261013/checkpoints/best.ckpt",
+  "sha256": "a234794d53a3247b9504fd1a1ebc051686eed4495f0417866120941ddcf4b6d3",
+  "step": 29000,
+  "selection": "validation best; frozen before new test access",
+  "test_manifest_sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671"
+}

@@ -1,0 +1,215 @@
+{
+  "identity": "98f2cac076f3932d9d13ec60752d0c4d261a0c99663a8900ee86a558d9fb33cc",
+  "status": "PASS",
+  "checkpoint_sha256": "b56292a270ccf6679b5597e9d556eda686df91778e496e715174aaa367b710de",
+  "branch": "model_1",
+  "load_receipt": {
+    "method_id": "R2_fixed92",
+    "checkpoint_sha256": "b56292a270ccf6679b5597e9d556eda686df91778e496e715174aaa367b710de",
+    "global_step": 29000,
+    "branch": "model_1",
+    "strict": true,
+    "state_keys": 234,
+    "parameters": 1827469,
+    "trainable_parameters": 1827469
+  },
+  "model_state_before": "2265ff2e25037f0eadf4c13f191aab6a6f541407ba9d83afc4a988b39c165d9f",
+  "model_state_after": "2265ff2e25037f0eadf4c13f191aab6a6f541407ba9d83afc4a988b39c165d9f",
+  "source_shape": [
+    10,
+    224,
+    224
+  ],
+  "errors": [
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "slice_index": 0,
+      "input_sha256": "5ab775fb46d4166291a8091fc5f0d766934411ba80de05e63904f526c1f93382",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "slice_index": 1,
+      "input_sha256": "8c475b3d3d3c8509662f18581634397c0594323dc0400ef7c136e9e8de0be175",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "slice_index": 2,
+      "input_sha256": "359a74204aee56e10011f946385d077f5d94b72dcd7dbfb88e485fe25d09b56d",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "slice_index": 3,
+      "input_sha256": "3dcf7ee80a8b48f46ad00ad2d3870de626a598d3e30542576306b8a6f46e7040",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "slice_index": 4,
+      "input_sha256": "cc87da98899161a24048f59bbfa7fae1c9812824d96a015e65b7d3f77e091bb4",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "slice_index": 5,
+      "input_sha256": "60f1be9ab26e9c08b2f61ecc3ad4d7f5b1891b0e45d166b9d4d1a5f080934bf2",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "slice_index": 6,
+      "input_sha256": "ff396ffcf14e9b4ec9c195db992e17e280ca6cce4c61516074fe5f53c7984eeb",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "slice_index": 7,
+      "input_sha256": "7e8d59c153f8759e4290c0808e3962f2bae9446dda3a7512e952448c26159ccd",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "slice_index": 8,
+      "input_sha256": "e0976a4f92deefef9b88eec81a917d9452a0480b38bcc9b7e1bbcc69033b2edc",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "slice_index": 9,
+      "input_sha256": "264de7b6997077c3791ff7ba2585f01f3bc45c1fc5543b4a3d4b0e47ac1f9645",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    }
+  ],
+  "metrics": [
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "path": "original_runtime",
+      "class_id": 1,
+      "unit": "native grid pixels",
+      "Dice": 0.9134231167677963,
+      "IoU": 0.8406428766003814,
+      "HD95": 1.0,
+      "ASD": 0.3236105205043026
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "path": "original_runtime",
+      "class_id": 2,
+      "unit": "native grid pixels",
+      "Dice": 0.9173057259713702,
+      "IoU": 0.847243536772518,
+      "HD95": 1.0,
+      "ASD": 0.47974824740122624
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "path": "original_runtime",
+      "class_id": 3,
+      "unit": "native grid pixels",
+      "Dice": 0.9357709421551558,
+      "IoU": 0.8792946736956917,
+      "HD95": 1.4142135623730951,
+      "ASD": 2.3297596251303245
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "path": "deployment_no_diagnostics",
+      "class_id": 1,
+      "unit": "native grid pixels",
+      "Dice": 0.9134231167677963,
+      "IoU": 0.8406428766003814,
+      "HD95": 1.0,
+      "ASD": 0.3236105205043026
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "path": "deployment_no_diagnostics",
+      "class_id": 2,
+      "unit": "native grid pixels",
+      "Dice": 0.9173057259713702,
+      "IoU": 0.847243536772518,
+      "HD95": 1.0,
+      "ASD": 0.47974824740122624
+    },
+    {
+      "method_id": "R2_fixed92",
+      "frame": "patient028_frame01",
+      "path": "deployment_no_diagnostics",
+      "class_id": 3,
+      "unit": "native grid pixels",
+      "Dice": 0.9357709421551558,
+      "IoU": 0.8792946736956917,
+      "HD95": 1.4142135623730951,
+      "ASD": 2.3297596251303245
+    }
+  ],
+  "original_prediction_sha256": "0f9207cf80ac0aefdc106b449f62ae0cd3a719fe1908673a056cae8048dae3a4",
+  "deployment_prediction_sha256": "0f9207cf80ac0aefdc106b449f62ae0cd3a719fe1908673a056cae8048dae3a4"
+}

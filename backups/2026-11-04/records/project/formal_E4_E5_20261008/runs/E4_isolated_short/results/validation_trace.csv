@@ -1,0 +1,2 @@
+time,segment,step,student1_macro_dice,student2_macro_dice,best_student1_macro_dice,selection
+2026-10-08T12:36:59.342507+08:00,2026-10-08T123626556098+0800,1,0.7980544315284859,0.8087719198387072,0.7980544315284859,"strict student1 val macro Dice, no test selection"

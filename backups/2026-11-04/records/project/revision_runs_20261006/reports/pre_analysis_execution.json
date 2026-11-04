@@ -1,0 +1,56 @@
+{
+  "time": "2026-10-06T21:26:47.346836+08:00",
+  "tasks": [
+    {
+      "task": "Historical_baseline",
+      "exit_code": 0,
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/pre_Historical_baseline.log"
+    },
+    {
+      "task": "Historical_Full",
+      "exit_code": 0,
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/pre_Historical_Full.log"
+    },
+    {
+      "task": "COVID_existing",
+      "exit_code": 0,
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/pre_COVID_existing.log"
+    },
+    {
+      "task": "A1",
+      "exit_code": 0,
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/pre_A1.log",
+      "reused": true
+    },
+    {
+      "task": "A2",
+      "exit_code": 0,
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/pre_A2.log",
+      "reused": true
+    },
+    {
+      "task": "A3",
+      "exit_code": 0,
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/pre_A3.log",
+      "reused": true
+    },
+    {
+      "task": "A4",
+      "exit_code": 0,
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/pre_A4.log",
+      "reused": true
+    },
+    {
+      "task": "A5",
+      "exit_code": 0,
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/pre_A5.log",
+      "reused": true
+    },
+    {
+      "task": "A6",
+      "exit_code": 0,
+      "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/logs/pre_A6.log",
+      "reused": true
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+"""Paths, atomic output and provenance shared by the independent revision queue."""
+from pathlib import Path
+import csv
+import hashlib
+import json
+import os
+import socket
+import sys
+from datetime import datetime, timezone, timedelta
+
+MAIN_WORK = Path(__file__).resolve().parents[1]
+WORK = Path(os.environ.get("BETA_TASK_WORK", str(MAIN_WORK)))
+SOURCE_WORK = MAIN_WORK
+PROJECT = MAIN_WORK.parent
+PARENT = PROJECT / "tcsmix_control_revision_20261006/formal_R1_20261007"
+PYTHON = Path('/home/renguanming/.conda/envs/beta_fft/bin/python')
+DATA = Path('/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC')
+FULL = PROJECT / 'runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT'
+BASE = PROJECT / 'runs/beta_fft_acdc_official_full_seed42_fresh_ckpt'
+
+def now():
+    return datetime.now(timezone(timedelta(hours=8))).isoformat()
+
+def sha(path):
+    h = hashlib.sha256()
+    with Path(path).open('rb') as f:
+        for block in iter(lambda: f.read(1024 * 1024), b''):
+            h.update(block)
+    return h.hexdigest()
+
+def atomic_json(path, value):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_name(path.name + '.tmp.' + str(os.getpid()))
+    with tmp.open('w') as f:
+        json.dump(value, f, ensure_ascii=False, indent=2, allow_nan=False)
+        f.write('\n')
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, path)
+
+def read_json(path):
+    return json.loads(Path(path).read_text())
+
+def write_csv(path, rows, fields=None):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fields = fields or (list(rows[0]) if rows else [])
+    tmp = path.with_name(path.name + '.tmp')
+    with tmp.open('w', newline='') as f:
+        w = csv.DictWriter(f, fieldnames=fields, extrasaction='ignore')
+        w.writeheader()
+        w.writerows(rows)
+    os.replace(tmp, path)
+
+def read_table(path):
+    path = Path(path)
+    with path.open(newline='') as f:
+        return list(csv.DictReader(f, delimiter='\t' if path.suffix == '.tsv' else ','))
+
+def bootstrap():
+    sys.path.insert(0, str(SOURCE_WORK / 'source/train_ACDC'))
+    sys.path.insert(0, str(SOURCE_WORK / 'source'))
+
+def config_for(task):
+    paths = sorted((WORK / 'configs').glob(task + '_*.yaml'))
+    if len(paths) != 1:
+        raise ValueError(f'Expected exactly one config for {task}: {paths}')
+    # JSON is a YAML 1.2 subset; avoids ambiguous scalar coercion.
+    return paths[0], read_json(paths[0])
+
+def analysis_status(task, status, reason, **kwargs):
+    atomic_json(WORK / f'analysis/{task}/status.json', dict(task=task, status=status, reason=reason, time=now(), **kwargs))
+
+def task_identity(task):
+    return read_json(MAIN_WORK/'manifests'/f'{task}_frozen.json')['code_identity']
+
+def atomic_torch(value,path):
+    import torch
+    path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
+    tmp=path.with_name(path.name+'.tmp.'+str(os.getpid()))
+    torch.save(value,tmp)
+    with tmp.open('rb') as f:os.fsync(f.fileno())
+    os.replace(tmp,path)
+
+def rng_state():
+    import torch,random,numpy as np
+    return dict(python_random=random.getstate(),numpy_random=np.random.get_state(),torch_random=torch.get_rng_state(),torch_cuda_random=torch.cuda.get_rng_state_all())
+
+def restore_rng(s):
+    import torch,random,numpy as np
+    random.setstate(s['python_random']);np.random.set_state(s['numpy_random']);torch.set_rng_state(s['torch_random']);torch.cuda.set_rng_state_all(s['torch_cuda_random'])
+
+def rng_digest(s):
+    import io,torch
+    f=io.BytesIO();torch.save(s,f);return hashlib.sha256(f.getvalue()).hexdigest()
+
+def stop_requested():
+    return (WORK/'state/stop_requested').exists() or (MAIN_WORK/'state/stop_requested').exists()

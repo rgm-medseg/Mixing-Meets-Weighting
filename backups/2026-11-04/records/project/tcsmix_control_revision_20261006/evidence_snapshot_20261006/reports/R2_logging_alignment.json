@@ -1,0 +1,8 @@
+{
+  "reason": "fixed geometry must retain selected B controller in diagnostic logging",
+  "executed_B_path_changed": false,
+  "formal_R2_runs": 0,
+  "executed_controller_snapshot": "reports/controller_executed_short.py",
+  "executed_controller_sha256": "3105f3845362a29c507cc90573d82f96f7ffb029373597e7d07cf814a44732e3",
+  "prepared_controller_sha256": "f923e7f9bf0ef9bdae94bbd400d54f52fbbc6064efac9bcece365465657f795c"
+}

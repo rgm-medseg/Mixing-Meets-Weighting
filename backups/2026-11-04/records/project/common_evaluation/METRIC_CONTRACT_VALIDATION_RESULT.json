@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "boundary_both_empty_nan": true,
+    "boundary_one_empty_penalty": true,
+    "boundary_single_voxel_shift": true,
+    "region_both_empty": true,
+    "region_one_empty": true,
+    "region_perfect": true
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T14:19:16.442164+00:00",
+  "dataset": "ACDC10 TEST",
+  "seed": 2026,
+  "corruptions": [
+    {
+      "type": "gaussian_noise",
+      "sigma_normalized": [
+        0.02,
+        0.05,
+        0.1
+      ]
+    },
+    {
+      "type": "gaussian_blur",
+      "sigma_pixels": [
+        0.5,
+        1.0,
+        1.5
+      ]
+    },
+    {
+      "type": "gamma_intensity_shift",
+      "gamma": [
+        0.7,
+        1.3
+      ]
+    }
+  ],
+  "applied_after": "canonical normalization",
+  "same_corruptions_for_methods": true,
+  "delete_negative_corruption_results": false
+}

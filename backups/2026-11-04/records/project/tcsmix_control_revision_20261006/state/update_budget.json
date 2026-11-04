@@ -1,0 +1,12 @@
+{
+  "limit_optimizer_step_calls": 500,
+  "optimizer_step_calls": 480,
+  "joint_SSL_updates": 240,
+  "runs": [],
+  "last_call": {
+    "optimizer": "optimizer2",
+    "pid": 62972,
+    "time": "2026-10-06T23:32:36.920558+08:00",
+    "run": "SHORT_TCSMIX_V2"
+  }
+}

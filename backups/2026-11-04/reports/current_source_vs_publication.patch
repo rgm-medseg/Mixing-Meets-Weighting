@@ -1,0 +1,201 @@
+--- publication/train_COVID19/covid19_dataset_adapter.py
++++ original-current/train_COVID19/covid19_dataset_adapter.py
+@@ -4,7 +4,6 @@
+ from __future__ import annotations
+ 
+ import csv
+-import os
+ from pathlib import Path
+ from typing import Any
+ 
+@@ -44,9 +43,7 @@
+         row = self.rows[index]
+         path = Path(row["derived_path"])
+         if not path.is_absolute():
+-            path = (Path(os.environ["DATA_ROOT"]) / Path(*path.parts[1:])
+-                    if os.environ.get("DATA_ROOT") and path.parts[0] == "data"
+-                    else Path(__file__).resolve().parents[1] / path)
++            path = Path(__file__).resolve().parents[1] / path
+         payload = np.load(path)
+         sample: dict[str, Any] = {
+             "image": payload["image"].astype(np.float32),
+@@ -121,9 +118,7 @@
+         for row in rows:
+             path = Path(row["derived_path"])
+             if not path.is_absolute():
+-                path = (Path(os.environ["DATA_ROOT"]) / Path(*path.parts[1:])
+-                    if os.environ.get("DATA_ROOT") and path.parts[0] == "data"
+-                    else Path(__file__).resolve().parents[1] / path)
++                path = Path(__file__).resolve().parents[1] / path
+             payload = np.load(path)
+             images.append(payload["image"].astype(np.float32))
+             masks.append(payload["mask"].astype(np.uint8))
+--- publication/train_COVID19/covid19_official20_v2.py
++++ original-current/train_COVID19/covid19_official20_v2.py
+@@ -7,7 +7,6 @@
+ 
+ from __future__ import annotations
+ 
+-import argparse
+ import csv
+ import hashlib
+ import json
+@@ -22,14 +21,12 @@
+ 
+ 
+ PROJECT_ROOT = Path(__file__).resolve().parents[1]
+-STAGE1_IDENTITY = PROJECT_ROOT / "configs/paper/covid19_raw_patients.json"
+-RAW_ROOT = PROJECT_ROOT / "data_raw/COVID19"
+-DATA_ROOT = PROJECT_ROOT / "data"
+-OUT_ROOT = DATA_ROOT / "COVID19_OFFICIAL20"
++STAGE1_IDENTITY = PROJECT_ROOT / "audits/COVID19_STAGE1_DATASET_IDENTITY.json"
++OUT_ROOT = PROJECT_ROOT / "data/COVID19_OFFICIAL20"
+ MANIFEST_ROOT = OUT_ROOT / "manifests"
+ DERIVED_ROOT = OUT_ROOT / "derived/slices_256"
+-AUDIT_JSON = OUT_ROOT / "preprocessing_summary.json"
+-AUDIT_MD = OUT_ROOT / "preprocessing_summary.md"
++AUDIT_JSON = PROJECT_ROOT / "audits/COVID19_OFFICIAL20_ALLSLICE_V2.json"
++AUDIT_MD = PROJECT_ROOT / "audits/COVID19_OFFICIAL20_ALLSLICE_V2.md"
+ MIGRATION_MD = PROJECT_ROOT / "audits/COVID19_PROTOCOL_V2_CODE_MIGRATION.md"
+ 
+ GLOBAL_EXPERIMENT_SEED = 42
+@@ -68,8 +65,8 @@
+         patients.append(
+             Patient(
+                 patient_id=item["patient_id"],
+-                image_path=RAW_ROOT / item["image_path"],
+-                mask_path=RAW_ROOT / item["mask_path"],
++                image_path=PROJECT_ROOT / item["image_path"],
++                mask_path=PROJECT_ROOT / item["mask_path"],
+                 original_shape="x".join(str(v) for v in item["image_shape"]),
+                 original_spacing=",".join(f"{float(v):.8g}" for v in item["image_spacing"]),
+                 orientation="".join(item["image_axcodes"]),
+@@ -180,8 +177,8 @@
+                     "sample_id": sample_id,
+                     "patient_id": patient.patient_id,
+                     "slice_idx": slice_idx,
+-                    "image_path": patient.image_path.relative_to(RAW_ROOT).as_posix(),
+-                    "mask_path": patient.mask_path.relative_to(RAW_ROOT).as_posix(),
++                    "image_path": patient.image_path.relative_to(PROJECT_ROOT).as_posix(),
++                    "mask_path": patient.mask_path.relative_to(PROJECT_ROOT).as_posix(),
+                     "infection_present": str(foreground > 0).lower(),
+                     "foreground_pixels": foreground,
+                     "original_shape": patient.original_shape,
+@@ -189,8 +186,8 @@
+                     "canonical_spacing": spacing,
+                     "orientation": patient.orientation,
+                     "canonical_orientation": patient.canonical_orientation,
+-                    "derived_path": (Path("data") / derived_path.relative_to(DATA_ROOT)).as_posix(),
+-                    "derived_mask_path": (Path("data") / derived_path.relative_to(DATA_ROOT)).as_posix(),
++                    "derived_path": derived_path.relative_to(PROJECT_ROOT).as_posix(),
++                    "derived_mask_path": derived_path.relative_to(PROJECT_ROOT).as_posix(),
+                 }
+             )
+     return rows
+@@ -202,21 +199,6 @@
+ 
+ 
+ def main() -> int:
+-    global RAW_ROOT, DATA_ROOT, OUT_ROOT, MANIFEST_ROOT, DERIVED_ROOT, AUDIT_JSON, AUDIT_MD
+-    parser = argparse.ArgumentParser()
+-    parser.add_argument("--raw-root", type=Path, required=True,
+-                        help="contains images/ and infection_masks/ from Zenodo 3757476")
+-    parser.add_argument("--data-root", type=Path, default=PROJECT_ROOT / "data")
+-    args = parser.parse_args()
+-    RAW_ROOT = args.raw_root.resolve()
+-    DATA_ROOT = args.data_root.resolve()
+-    OUT_ROOT = DATA_ROOT / "COVID19_OFFICIAL20"
+-    if OUT_ROOT.exists():
+-        raise FileExistsError(f"Use a new data root; preprocessing output already exists: {OUT_ROOT}")
+-    MANIFEST_ROOT = OUT_ROOT / "manifests"
+-    DERIVED_ROOT = OUT_ROOT / "derived/slices_256"
+-    AUDIT_JSON = OUT_ROOT / "preprocessing_summary.json"
+-    AUDIT_MD = OUT_ROOT / "preprocessing_summary.md"
+     patients = read_stage1_patients()
+     train_patients, val_patients, test_patients, permutation = split_patients(patients)
+     master_rows = build_master_manifest(patients)
+--- publication/train_promise12/dataloaders/promise12.py
++++ original-current/train_promise12/dataloaders/promise12.py
+@@ -67,10 +67,7 @@
+ 
+ class Promise12(Dataset):
+ 
+-    def __init__(self, data_dir, mode, out_size, strong_view_mode='cutout_then_jitter'):
+-        if strong_view_mode not in ('cutout_then_jitter', 'legacy_overwrite'):
+-            raise ValueError('Unknown PROMISE12 strong-view mode: ' + strong_view_mode)
+-        self.strong_view_mode = strong_view_mode
++    def __init__(self, data_dir, mode, out_size):
+         # store data in the npy file
+         self.out_size = out_size
+         np_data_path = os.path.join(data_dir, 'npy_image')
+@@ -108,11 +105,7 @@
+                 img, mask = random_rotate(img, mask)
+ 
+             image_strong, label_strong = cutout_gray(img,mask,p=0.5)
+-            if self.strong_view_mode == 'legacy_overwrite':
+-                # Compatibility with release 8fbca8f; see docs/publication_fixes_20261010.md.
+-                image_strong = color_jitter(img).type("torch.FloatTensor")
+-            else:
+-                image_strong = color_jitter(image_strong).type("torch.FloatTensor")
++            image_strong = color_jitter(img).type("torch.FloatTensor")
+             img_tensor = torch.from_numpy(img).unsqueeze(0)
+             mask_tensor = torch.from_numpy(mask)
+             mask_strong = torch.from_numpy(label_strong)
+--- publication/train_promise12/train_promise12_bcp_fft.py
++++ original-current/train_promise12/train_promise12_bcp_fft.py
+@@ -43,7 +43,7 @@
+ COVID_FORMAL_SELF_TRAIN_UPDATES = 30000
+ parser = argparse.ArgumentParser()
+ parser.add_argument('--root_path', type=str,
+-                    default=os.path.join(os.environ.get("DATA_ROOT", "./data"), "PROMISE12"), help='Name of Experiment')
++                    default="../AD-MT/code/data_promise12", help='Name of Experiment')
+ parser.add_argument('--exp', type=str,
+                     default='train_PROMISE12', help='experiment_name')
+ parser.add_argument('--model_1', type=str,
+@@ -58,7 +58,7 @@
+                     help='whether use deterministic training')
+ parser.add_argument('--base_lr', type=float, default=0.01,
+                     help='segmentation network learning rate')
+-parser.add_argument('--image_size', type=int, nargs=2, default=[224, 224],
++parser.add_argument('--image_size', type=list, default=[224, 224],
+                     help='patch size of network input')
+ parser.add_argument('--seed', type=int, default=1337, help='random seed')
+ parser.add_argument('--num_classes', type=int, default=2,
+@@ -365,9 +365,6 @@
+                     help='COVID19 Official20 validation all-slice manifest')
+ parser.add_argument('--promise12_slice_indices_json', type=str, default=None,
+                     help='PROMISE12 formal labeled/unlabeled slice-index binding')
+-parser.add_argument('--promise12_strong_view_mode', type=str, default='cutout_then_jitter',
+-                    choices=['cutout_then_jitter', 'legacy_overwrite'],
+-                    help='PROMISE12 2D strong view: corrected cutout then jitter, or release 8fbca8f compatibility')
+ parser.add_argument('--enable_v22_frozen_x03', action='store_true',
+                     help='enable frozen V22 X03 contour reliability loss for Final3 transfer')
+ parser.add_argument('--v22_frozen_x03_id', type=str, default='V21_3_X03_CONTOUR_RELIABILITY_WEIGHT',
+@@ -2329,8 +2326,6 @@
+         'covid19_unlabeled_manifest_sha256': covid19_manifest_identity(args.covid19_unlabeled_manifest),
+         'covid19_val_manifest_sha256': covid19_manifest_identity(args.covid19_val_manifest),
+         'promise12_slice_indices_sha256': promise12_slice_index_identity(args.promise12_slice_indices_json),
+-        **({'promise12_strong_view_mode': args.promise12_strong_view_mode}
+-           if args.dataset_name == 'promise12' and args.input_mode == '2d' else {}),
+     }
+ 
+ def save_self_train_full_checkpoint(path, args, pre_trained_model, model1, model2, ema_model, optimizer1, optimizer2, batch_sampler, iter_num, best_performance1, best_performance2, last_update_trace=None):
+@@ -2421,8 +2416,7 @@
+ 
+ def build_train_dataset_and_sampler(args, batch_size):
+     if args.dataset_name != 'covid19_official20':
+-        db_train = Promise12_25D(args.root_path, mode='train', out_size=224) if args.input_mode == '25d_3ch' else Promise12(
+-            args.root_path, mode='train', out_size=224, strong_view_mode=args.promise12_strong_view_mode)
++        db_train = Promise12_25D(args.root_path, mode='train', out_size=224) if args.input_mode == '25d_3ch' else Promise12(args.root_path, mode='train', out_size=224)
+         total_slices = len(db_train)
+         if args.promise12_slice_indices_json:
+             _, labeled_idxs, unlabeled_idxs = _load_promise12_slice_indices(args.promise12_slice_indices_json)
+@@ -3545,7 +3539,7 @@
+                     metric_list = metric_list / len(db_test)
+                     writer.add_scalar('info/model1_test_{}_dice'.format(1),metric_list[0], iter_num)
+                     performance1_test = np.mean(metric_list, axis=0)
+-
++                    
+                     logging.info('iteration %d : model1_mean_test_dice : %f' % (iter_num, performance1_test))
+                     if was_training:
+                         model1.train()

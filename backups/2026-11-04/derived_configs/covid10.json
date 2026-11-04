@@ -1,0 +1,23 @@
+{
+  "origin": "Checkpoint args and lineage export; not a newly invented training record",
+  "checkpoint": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/self_train/self_train_full_state_final.pth",
+  "checkpoint_sha256": "60c681082133456f1ee85abea52b17439d2a2ae45f528aedb74afbe61b5946cb",
+  "args": null,
+  "lineage": {
+    "protocol_identity": "OFFICIAL20_PATIENTLEVEL_ALLSLICE_V2",
+    "run_id": "three_innovation_ablation_transfer_v22_0/COVID10_FINAL3",
+    "dataset_name": "covid19_official20",
+    "labeled_num": 241,
+    "pretrain_target_updates": 10000,
+    "self_train_target_updates": 30000,
+    "use_mask_token_prehead_router": true,
+    "use_adamix_bcp_lite_v1": true,
+    "training_core_sha256": "e1006ebe9731d7665a886dc5f897f130c5818c132fa575cc16c9ea845cb27386",
+    "pretrain_checkpoint_sha256": "5d2590953fbe8a4a1a5ac2a6d31ec9176443b7f59e4b6b274a9cd6ac800200f7",
+    "covid19_labeled_manifest_sha256": "05df744c315693f04d6949bf21d83956c282c868f3a23f1bfc79f6fff3ed3dee",
+    "covid19_unlabeled_manifest_sha256": "2afe89c4d7924e9f9f7eb1bda5e256f763aa491015e37f3706d7638f11dd3ee0",
+    "covid19_val_manifest_sha256": "b586ef2080aaae74634eef4c3a126bf72e3216125bc426c88b82ebbc17efd56e",
+    "promise12_slice_indices_sha256": null
+  },
+  "portable_config": "records/publication/configs/paper/covid10.json"
+}

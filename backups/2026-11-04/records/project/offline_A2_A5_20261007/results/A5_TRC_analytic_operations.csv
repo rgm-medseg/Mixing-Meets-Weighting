@@ -1,0 +1,19 @@
+method_id,operation,formula,MACs,FLOPs,coverage
+Full_main,"TRC einsum bdhw,nd->bnhw",B*H*W*T*D,4194304,8388608,manual MAC count; torch profiler bmm agrees; add once to convolution hooks
+Full_main,"TRC einsum bnhw,nd->bdhw",B*H*W*T*D,4194304,8388608,manual MAC count; torch profiler bmm agrees; add once to convolution hooks
+Full_main,TRC logit scale,B*H*W*T,0,262144,"supplementary analytic arithmetic convention; exp/sqrt each1, no hardware-cycle interpretation; outside MAC FLOPs"
+Full_main,TRC residual gamma multiply and add,2*B*H*W*C,0,2097152,"supplementary analytic arithmetic convention; exp/sqrt each1, no hardware-cycle interpretation; outside MAC FLOPs"
+Full_main,TRC softmax convention,B*H*W*(4*T-1),0,983040,"supplementary analytic arithmetic convention; exp/sqrt each1, no hardware-cycle interpretation; outside MAC FLOPs"
+Full_main,TRC LayerNorm convention,B*H*W*(7*D+2),0,7471104,"supplementary analytic arithmetic convention; exp/sqrt each1, no hardware-cycle interpretation; outside MAC FLOPs"
+R1_v2_B,"TRC einsum bdhw,nd->bnhw",B*H*W*T*D,4194304,8388608,manual MAC count; torch profiler bmm agrees; add once to convolution hooks
+R1_v2_B,"TRC einsum bnhw,nd->bdhw",B*H*W*T*D,4194304,8388608,manual MAC count; torch profiler bmm agrees; add once to convolution hooks
+R1_v2_B,TRC logit scale,B*H*W*T,0,262144,"supplementary analytic arithmetic convention; exp/sqrt each1, no hardware-cycle interpretation; outside MAC FLOPs"
+R1_v2_B,TRC residual gamma multiply and add,2*B*H*W*C,0,2097152,"supplementary analytic arithmetic convention; exp/sqrt each1, no hardware-cycle interpretation; outside MAC FLOPs"
+R1_v2_B,TRC softmax convention,B*H*W*(4*T-1),0,983040,"supplementary analytic arithmetic convention; exp/sqrt each1, no hardware-cycle interpretation; outside MAC FLOPs"
+R1_v2_B,TRC LayerNorm convention,B*H*W*(7*D+2),0,7471104,"supplementary analytic arithmetic convention; exp/sqrt each1, no hardware-cycle interpretation; outside MAC FLOPs"
+R2_fixed92,"TRC einsum bdhw,nd->bnhw",B*H*W*T*D,4194304,8388608,manual MAC count; torch profiler bmm agrees; add once to convolution hooks
+R2_fixed92,"TRC einsum bnhw,nd->bdhw",B*H*W*T*D,4194304,8388608,manual MAC count; torch profiler bmm agrees; add once to convolution hooks
+R2_fixed92,TRC logit scale,B*H*W*T,0,262144,"supplementary analytic arithmetic convention; exp/sqrt each1, no hardware-cycle interpretation; outside MAC FLOPs"
+R2_fixed92,TRC residual gamma multiply and add,2*B*H*W*C,0,2097152,"supplementary analytic arithmetic convention; exp/sqrt each1, no hardware-cycle interpretation; outside MAC FLOPs"
+R2_fixed92,TRC softmax convention,B*H*W*(4*T-1),0,983040,"supplementary analytic arithmetic convention; exp/sqrt each1, no hardware-cycle interpretation; outside MAC FLOPs"
+R2_fixed92,TRC LayerNorm convention,B*H*W*(7*D+2),0,7471104,"supplementary analytic arithmetic convention; exp/sqrt each1, no hardware-cycle interpretation; outside MAC FLOPs"

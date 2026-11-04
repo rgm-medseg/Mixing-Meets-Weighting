@@ -1,0 +1,173 @@
+{
+  "status": "REFUSE_RUN_WAITING_UPSTREAM",
+  "created_at": "2026-08-25T18:37:30.492267+00:00",
+  "task_id": "ACDC2_TEST_CLOSURE",
+  "training_started": false,
+  "inference_started": false,
+  "test_started": false,
+  "formal_started": false,
+  "upstream": {
+    "requires": [
+      {
+        "TaskID": "ACDC2_BETAFFT_FULL",
+        "TaskType": "NEW_FULL",
+        "Action": "BLOCKED",
+        "FinalLaunchReady": "BLOCKED",
+        "Blocker": "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT",
+        "CompletionAsset": "experiments/internal_evidence_expansion_v24_0/ACDC2_BETAFFT_FULL/train.log",
+        "CompletionAssetExists": false,
+        "CompletionAssetPass": false,
+        "CompletionEvidence": {
+          "FormalFullComplete": false,
+          "BestValSelected": false,
+          "FrozenCheckpointSHA": false,
+          "TEST_COMPLETION_RECEIPT": false,
+          "ResultAsset": false,
+          "evidence": {
+            "FormalFullComplete": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC2_BETAFFT_FULL/FORMAL_FULL_COMPLETION_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC2_BETAFFT_FULL_FORMAL_FULL_COMPLETION_RECEIPT.json"
+              ]
+            },
+            "BestValSelected": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC2_BETAFFT_FULL/BEST_VAL_SELECTION.json",
+                "experiments/internal_evidence_expansion_v24_0/ACDC2_BETAFFT_FULL/best_val_selection.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC2_BETAFFT_FULL_BEST_VAL_SELECTION.json"
+              ]
+            },
+            "FrozenCheckpointSHA": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC2_BETAFFT_FULL/FROZEN_CHECKPOINT_SHA256.json",
+                "experiments/internal_evidence_expansion_v24_0/ACDC2_BETAFFT_FULL/frozen_checkpoint_sha256.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC2_BETAFFT_FULL_FROZEN_CHECKPOINT_SHA256.json"
+              ]
+            },
+            "TEST_COMPLETION_RECEIPT": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC2_BETAFFT_FULL/TEST_COMPLETION_RECEIPT.json",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC2_BETAFFT_FULL/TEST_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC2_BETAFFT_FULL_TEST_COMPLETION_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC2_BETAFFT_FULL_TEST_GATE_LOCKED_RECEIPT.json"
+              ]
+            },
+            "ResultAsset": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC2_BETAFFT_FULL/aggregate_metrics.tsv",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC2_BETAFFT_FULL/case_class_metrics.tsv",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC2_BETAFFT_FULL/TEST_FULL_PRECISION.tsv",
+                "final_report/internal_evidence_expansion_v24_0/ACDC2_BETAFFT_FULL_TEST_FULL_PRECISION.tsv"
+              ]
+            }
+          },
+          "missing_evidence": [
+            "FormalFullComplete",
+            "BestValSelected",
+            "FrozenCheckpointSHA",
+            "TEST_COMPLETION_RECEIPT",
+            "ResultAsset"
+          ],
+          "CompletionEvidencePASS": false
+        },
+        "Ready": false
+      },
+      {
+        "TaskID": "ACDC2_OURS_FULL",
+        "TaskType": "NEW_FULL",
+        "Action": "BLOCKED",
+        "FinalLaunchReady": "BLOCKED",
+        "Blocker": "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT",
+        "CompletionAsset": "experiments/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL/train.log",
+        "CompletionAssetExists": false,
+        "CompletionAssetPass": false,
+        "CompletionEvidence": {
+          "FormalFullComplete": false,
+          "BestValSelected": false,
+          "FrozenCheckpointSHA": false,
+          "TEST_COMPLETION_RECEIPT": false,
+          "ResultAsset": false,
+          "evidence": {
+            "FormalFullComplete": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL/FORMAL_FULL_COMPLETION_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL_FORMAL_FULL_COMPLETION_RECEIPT.json"
+              ]
+            },
+            "BestValSelected": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL/BEST_VAL_SELECTION.json",
+                "experiments/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL/best_val_selection.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL_BEST_VAL_SELECTION.json"
+              ]
+            },
+            "FrozenCheckpointSHA": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "experiments/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL/FROZEN_CHECKPOINT_SHA256.json",
+                "experiments/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL/frozen_checkpoint_sha256.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL_FROZEN_CHECKPOINT_SHA256.json"
+              ]
+            },
+            "TEST_COMPLETION_RECEIPT": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC2_OURS_FULL/TEST_COMPLETION_RECEIPT.json",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC2_OURS_FULL/TEST_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL_TEST_COMPLETION_RECEIPT.json",
+                "audits/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL_TEST_GATE_LOCKED_RECEIPT.json"
+              ]
+            },
+            "ResultAsset": {
+              "present": false,
+              "selected_asset": "",
+              "candidate_assets": [
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC2_OURS_FULL/aggregate_metrics.tsv",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC2_OURS_FULL/case_class_metrics.tsv",
+                "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC2_OURS_FULL/TEST_FULL_PRECISION.tsv",
+                "final_report/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL_TEST_FULL_PRECISION.tsv"
+              ]
+            }
+          },
+          "missing_evidence": [
+            "FormalFullComplete",
+            "BestValSelected",
+            "FrozenCheckpointSHA",
+            "TEST_COMPLETION_RECEIPT",
+            "ResultAsset"
+          ],
+          "CompletionEvidencePASS": false
+        },
+        "Ready": false
+      }
+    ],
+    "blocked": [
+      {
+        "TaskID": "ACDC2_BETAFFT_FULL",
+        "Reason": "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT"
+      },
+      {
+        "TaskID": "ACDC2_OURS_FULL",
+        "Reason": "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT"
+      }
+    ],
+    "ready": false
+  },
+  "hard_gate": "Refused because required upstream completion evidence is absent; launch readiness was not treated as completion."
+}

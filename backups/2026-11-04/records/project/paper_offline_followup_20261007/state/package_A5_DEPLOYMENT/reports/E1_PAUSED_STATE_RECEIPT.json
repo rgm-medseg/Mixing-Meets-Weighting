@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "queue_status": "INTERRUPTED",
+  "cached_queue_step": 3975,
+  "saved_checkpoint_step": 3976,
+  "receipt_step": 3976,
+  "progress_step": 3976,
+  "checkpoint_path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E1/checkpoints/last.ckpt",
+  "checkpoint_sha256": "72205384a57fb736e6b29bb820a63b2d6eb458702ddcd1fc9c673e185305cc17",
+  "checkpoint_hash_after": "72205384a57fb736e6b29bb820a63b2d6eb458702ddcd1fc9c673e185305cc17",
+  "source_hashes": {
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E1/TRAIN_RECEIPT.json": "87b729ad499e74508d28acbedc844d1f8c9c63f0c8a6f72a641631507f70a190",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E1/progress.json": "fd83bc674d416a2f3aa11c3367dad8f2151798d0f58d0ce3c010619d7ad5a8e9"
+  },
+  "old_queue_file_unmodified": true,
+  "reason": "queue polling cache3975 lags final save3976; authoritative checkpoint/receipt/progress agree",
+  "training_updates": 0
+}

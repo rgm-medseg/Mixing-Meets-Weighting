@@ -1,0 +1,20 @@
+{
+  "TaskID": "ACDC10_ARM_100",
+  "RUN_STATUS": "ABORTED_BY_USER_BEFORE_FULL_BUDGET",
+  "TERMINAL_REASON": "PRELAUNCH_REHARDENING_REQUESTED",
+  "Reason": "USER_REQUESTED_FULL_PRELAUNCH_REHARDENING",
+  "ScientificFailure": false,
+  "EngineeringFailure": false,
+  "PerformanceFailure": false,
+  "UserRequestedAbort": true,
+  "FullBudgetComplete": false,
+  "ValidationEligible": false,
+  "TestEligible": false,
+  "PaperEligible": false,
+  "ResumeAllowed": false,
+  "CheckpointReuseAllowed": false,
+  "CURRENT_PARTIAL_RUN_REUSE": false,
+  "CURRENT_PARTIAL_CHECKPOINT_REUSE": false,
+  "CURRENT_PARTIAL_RESULT_PAPER_ELIGIBLE": false,
+  "created_at": "2026-08-19T15:27:11.583361+00:00"
+}

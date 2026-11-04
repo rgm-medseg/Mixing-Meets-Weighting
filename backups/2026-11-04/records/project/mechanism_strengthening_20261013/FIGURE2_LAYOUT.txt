@@ -1,0 +1,10 @@
+Figure 2 layout proposal for the 17-page main-text manuscript
+
+Primary left-to-right path:
+Mixed samples → Aligned predictions → Spatial consistency weighting
+
+Left: original EMA teacher weak views produce q = mean maximum probability; TCSMix maps q through s=.18+.20q and rounded geometry. Show one shared mask and two complementary mixtures.
+Center: student1 weak mixed view and student2 spatially aligned strong mixed view, with the same sources and mask. Put TRC as a small decoder-feature residual inset: x + gamma*r(x).
+Right: aligned probability maps produce e and detached confidence-transition weights w. End at the original 0.05*mean(w*e) consistency item; mark stop-gradient on student2 and w.
+Use a thin secondary line for EMA updating the teacher. Keep other original losses in a compact retained-loss box so this item is not presented as the entire objective. GT is absent from the training path; optional offline diagnostic boxes sit below with a dashed border.
+Keep title, module names and the original algorithm. This is a layout recommendation only; no paper image or PDF was replaced.

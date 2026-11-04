@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "task_id": "ACDC10_BETAFFT_SEED2026",
+  "created_at": "2026-08-25T11:32:12.807438+00:00",
+  "BestCheckpointSHA256Frozen": true,
+  "BestCheckpointPath": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026/checkpoints/best.ckpt",
+  "BestCheckpointSHA256": "aecbdeb0cb54a098058c7f8d8e67c832c048f2b835313b8a815a3222301bc30c"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "PNG_sha256": {
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/figures/A2_actual_control_quality.png": "b1a2d312d2968b3732798c84a73981c4718467ff5a560edfef2a541d343bcea8",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/figures/A2_class_confidence.png": "7feb15cf2562f8b7653a0ed229700f6c0877717a725995c0f03887d5e27d2a03",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/figures/A2_confidence_quality.png": "bf7f8ca8d77046dd7c9c6548ed1f91db0b4d59baf43212836d6772022a417357",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/figures/A2_correct_error_confidence.png": "f872c19ca27c9690e570b6d803726dd60e4ee93cb21580d4716d3e1f75136ca7",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/figures/A2_reliability.png": "f6a06dde56c7120e8e14bc21649fc749bcd29b1c18a6ec3132222d6dcd8ca6cf"
+  },
+  "inspection": "all5 PNG previews viewed; titles and labels visible; no cropping/overlap; legends and markers distinguish methods/checkpoints; fraction units and conditional scopes in captions",
+  "vector_outputs": true,
+  "no_generated_AI_assets": true
+}

@@ -1,0 +1,61 @@
+--- original_frozen_forward
++++ independent_deployment_adapter
+@@ -1,40 +1,19 @@
+-def forward(self, x):
+-        proj = self.project(x)
+-        proj = self.norm(proj.permute(0, 2, 3, 1)).permute(0, 3, 1, 2)
+-        logits = torch.einsum("bdhw,nd->bnhw", proj, self.tokens) * self.scale
+-        weights = torch.softmax(logits, dim=1)
+-        routed = torch.einsum("bnhw,nd->bdhw", weights, self.tokens)
+-        residual = self.inverse_project(routed)
+-        out = x + self.gamma * residual
+-        with torch.no_grad():
+-            entropy = -(weights * torch.log(weights.clamp_min(1e-8))).sum(dim=1).mean()
+-            max_weight = weights.max(dim=1).values
+-            self.last_stats = {
+-                "token_utilization": weights.mean(dim=(0, 2, 3)).detach().cpu().tolist(),
+-                "routing_entropy": float(entropy.detach().cpu()),
+-                "activation_coverage": float((max_weight > (1.0 / self.token_num)).float().mean().detach().cpu()),
+-                "gamma": float(self.gamma.detach().cpu()),
+-                "token_norm": float(self.tokens.norm().detach().cpu()),
+-                "feature_norm": float(x.norm().detach().cpu()),
+-                "residual_norm": float(residual.norm().detach().cpu()),
+-                "residual_to_feature_ratio": float((residual.norm() / x.norm().clamp_min(1e-8)).detach().cpu()),
+-                "finite": bool(torch.isfinite(out).all().item()),
+-            }
+-        return out
++def router_forward(self,x):
++ proj=self.project(x)
++ proj=self.norm(proj.permute(0,2,3,1)).permute(0,3,1,2)
++ logits=torch.einsum('bdhw,nd->bnhw',proj,self.tokens)*self.scale
++ weights=torch.softmax(logits,dim=1)
++ routed=torch.einsum('bnhw,nd->bdhw',weights,self.tokens)
++ residual=self.inverse_project(routed)
++ out=x+self.gamma*residual
++ return out
+ 
+-def candidate_forward(self, feature):
+-        x0, x1, x2, x3, x4 = feature
+-        x = self.up1(x4, x3)
+-        x = self.up2(x, x2)
+-        x = self.up3(x, x1)
+-        x_f = self.up4(x, x0)
+-        x_f = self.mask_token_router(x_f)
+-        output = self.out_conv(x_f)
+-        with torch.no_grad():
+-            pred = output.argmax(dim=1)
+-            # The router is class-shared; per-class activation is summarized
+-            # by output-class spatial prevalence without changing its formula.
+-            self.mask_token_router.last_stats["predicted_class_fraction"] = [
+-                float((pred == c).float().mean().detach().cpu()) for c in range(output.shape[1])
+-            ]
+-        return output, x_f
++def decoder_forward(self,feature):
++ x0,x1,x2,x3,x4=feature
++ x=self.up1(x4,x3)
++ x=self.up2(x,x2)
++ x=self.up3(x,x1)
++ x_f=self.up4(x,x0)
++ x_f=self.mask_token_router(x_f)
++ output=self.out_conv(x_f)
++ return output,x_f

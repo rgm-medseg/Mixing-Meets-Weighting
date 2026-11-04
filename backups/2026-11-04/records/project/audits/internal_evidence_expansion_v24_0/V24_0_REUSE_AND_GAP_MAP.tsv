@@ -1,0 +1,20 @@
+TaskID	Plane	PrimaryInputAssets	Action	CurrentEvidenceStatus
+ARCHIVE_V23_RUNTIME	READ_ONLY_EXTRACTION	audits/internal_evidence_expansion_v24_0/V23_RUNTIME_ARCHIVE_RECEIPT.json	EXACT_REUSE	PASS
+FROZEN_METHOD_IDENTITY	READ_ONLY_EXTRACTION	audits/internal_evidence_expansion_v24_0/V24_0_FROZEN_METHOD_IDENTITY.json	EXACT_REUSE	PASS
+PATIENT_LEVEL_STATS	READ_ONLY_EXTRACTION	final_report/COVID19_FORMAL_TEST_PER_PATIENT.tsv; final_report/PROMISE20_TEST_CASE_METRICS.tsv; ACDC case metrics partial	READ_ONLY_EXTRACTION	ACDC5 baseline per-case asset may require frozen replay; others available
+X03_RELIABILITY_FAITHFULNESS	FROZEN_CHECKPOINT_REPLAY	ACDC10 VAL + ARM110/111 checkpoints + X03 source	FROZEN_CHECKPOINT_REPLAY	requires generating true X03 score maps; TEST access 0
+PSEUDO_LABEL_EVOLUTION	FROZEN_CHECKPOINT_REPLAY	ACDC10 VAL + common checkpoint schedule	FROZEN_CHECKPOINT_REPLAY	common checkpoint intersection must be audited by script
+HARD_MEDIUM_EASY	READ_ONLY_EXTRACTION	ACDC10 TEST case metrics for ARM000/111	READ_ONLY_EXTRACTION	difficulty strata frozen from β-FFT only
+PATHOLOGY_SUBGROUP	BLOCKED_MISSING_SOURCE_ASSET	ACDC official diagnosis/group metadata	BLOCKED_MISSING_SOURCE_ASSET	official metadata not yet located; noncritical
+BOUNDARY_F1	FROZEN_CHECKPOINT_REPLAY	ACDC10 TEST frozen predictions/checkpoints	FROZEN_CHECKPOINT_REPLAY	existing metrics do not include Boundary F1@1/2/3; exact replay likely required
+FACTORIAL_EFFECTS	READ_ONLY_EXTRACTION	final_report/three_innovation_postfull_test_v22_1/ACDC10_THREE_INNOVATION_8ARM_TEST_FULL_PRECISION.tsv	EXACT_REUSE	existing V22 factorial asset also available but V24 will regenerate formula-locked effects
+FULL_TRAINING_DYNAMICS	READ_ONLY_EXTRACTION	final_report/paper_internal_evidence_v23_0/TRAINING_DYNAMICS_RAW.tsv	EXACT_REUSE	VAL-only gate already PASS; V24 will extend stats
+CORRUPTION_ROBUSTNESS	FROZEN_CHECKPOINT_REPLAY	ACDC10 TEST + frozen β-FFT/Ours checkpoints	FROZEN_CHECKPOINT_REPLAY	no training; corruption spec frozen before run
+STUDENT_DIVERSITY	FROZEN_CHECKPOINT_REPLAY	ACDC10 VAL + common checkpoint schedule + dual branch outputs	FROZEN_CHECKPOINT_REPLAY	branch role binding required
+ACDC2_PROTOCOL	READ_ONLY_EXTRACTION	ACDC split generator/policy	READ_ONLY_EXTRACTION	must resolve floor/round/ceil/nested policy before NEW_FULL
+ACDC2_BETAFFT_FULL	NEW_FULL	pending ACDC2 protocol	NEW_FULL	blocked until ACDC2 protocol PASS
+ACDC2_OURS_FULL	NEW_FULL	pending ACDC2 protocol	NEW_FULL	blocked until ACDC2 protocol PASS
+ACDC10_BETAFFT_SEED2025	NEW_FULL	ACDC10 canonical split + seed2025	NEW_FULL	prelaunch only; no tmux until L1-L10 PASS
+ACDC10_OURS_SEED2025	NEW_FULL	ACDC10 canonical split + seed2025	NEW_FULL	prelaunch only; no tmux until L1-L10 PASS
+ACDC10_BETAFFT_SEED2026	NEW_FULL	ACDC10 canonical split + seed2026	NEW_FULL	prelaunch only; no tmux until L1-L10 PASS
+ACDC10_OURS_SEED2026	NEW_FULL	ACDC10 canonical split + seed2026	NEW_FULL	prelaunch only; no tmux until L1-L10 PASS

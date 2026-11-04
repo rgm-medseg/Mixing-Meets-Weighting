@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T00:45:51.002994+08:00",
+  "data_rows": 1372,
+  "code_identity": "22f979518334ce64b095c1e143b1cbd4e28a735f6f2f76525887a7f4448acbb9",
+  "scientific_change": "CTW spatial allocation only",
+  "source_unchanged": true,
+  "controller_unchanged": true,
+  "short_check": "PENDING",
+  "initialization_actual": "PENDING before formal first optimizer call"
+}

@@ -1,0 +1,9 @@
+Arm	ExpectedCaseClassMetrics	Exists	RowCount	CaseCount	PatientLevelStatsEligible
+000	final_report/paper_internal_evidence_v23_0/raw_test_replay/ACDC10_ARM_000/case_class_metrics.tsv	True	120	40	True
+001	final_report/three_innovation_postfull_test_v22_1/raw_test/ACDC10_ARM_001/case_class_metrics.tsv	True	120	40	True
+010	final_report/three_innovation_postfull_test_v22_1/raw_test/ACDC10_ARM_010/case_class_metrics.tsv	True	120	40	True
+011	final_report/three_innovation_postfull_test_v22_1/raw_test/ACDC10_ARM_011/case_class_metrics.tsv	True	120	40	True
+100	final_report/three_innovation_postfull_test_v22_1/raw_test/ACDC10_ARM_100/case_class_metrics.tsv	True	120	40	True
+101	final_report/three_innovation_postfull_test_v22_1/raw_test/ACDC10_ARM_101/case_class_metrics.tsv	True	120	40	True
+110	final_report/three_innovation_postfull_test_v22_1/raw_test/ACDC10_ARM_110/case_class_metrics.tsv	False	0	0	False
+111	final_report/three_innovation_postfull_test_v22_1/raw_test/ACDC10_ARM_111/case_class_metrics.tsv	False	0	0	False

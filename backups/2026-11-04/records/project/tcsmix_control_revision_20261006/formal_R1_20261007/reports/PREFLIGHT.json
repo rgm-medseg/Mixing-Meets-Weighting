@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "time": "2026-10-07T00:40:25.783322+08:00",
+  "host": "n1",
+  "python": "/home/renguanming/.conda/envs/beta_fft/bin/python",
+  "torch": "2.4.1+cu121",
+  "controller_sha256": "f923e7f9bf0ef9bdae94bbd400d54f52fbbc6064efac9bcece365465657f795c",
+  "config_sha256": "e9d6af11c56e8b1b8439fbbd6bb3d3d51681c79eaea43b4064bc78907dc35b66",
+  "pretrain_sha256": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3",
+  "reused_short_joint_steps": 240,
+  "new_smoke_optimizer_calls": 0,
+  "source_unchanged": true,
+  "loss_blocks_identical": true,
+  "teacher_forward_count_unchanged": true,
+  "fresh_initializer_step": 0,
+  "budget_joint": 30000,
+  "optimizer_calls_each_student": 30000,
+  "formal_R2": false,
+  "imports_pass": true
+}

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "time": "2026-10-06T23:35:29.290068+08:00",
+  "old_locked_inputs_unchanged": 82,
+  "short_formula_every_step_verified": true,
+  "mask_area_every_step_verified": true,
+  "checkpoints_strict_loaded": true,
+  "extra_optimizer_calls": 0,
+  "formal_dirs_absent": true
+}

@@ -1,0 +1,33 @@
+{
+  "audit_id": "X03_FROZEN_TRANSFER_CONTRACT_V22_0",
+  "created_at": "2026-08-19T15:28:48.364614+00:00",
+  "X03_DATASET_SPECIFIC_TUNING": false,
+  "X03_TEST_DRIVEN_TUNING": false,
+  "X03_SCIENTIFIC_IDENTITY_FROZEN": true,
+  "AllowedChanges": [
+    "dataset canonical num_classes/input shape/label mapping/evaluator behavior",
+    "pure E1 engineering compatibility if scientific semantics unchanged"
+  ],
+  "ForbiddenChanges": [
+    "weight",
+    "threshold",
+    "schedule",
+    "warmup",
+    "start_iteration",
+    "loss_coefficient",
+    "contour_operator",
+    "reliability_definition",
+    "normalization",
+    "dataset-specific tuning",
+    "TEST-driven tuning"
+  ],
+  "FrozenX03SourceSHA": "f28abc48fedff330f9aa7470072ebc16a607c6c59fd14942c2adb111b8ce748a",
+  "FrozenWeight": 0.05,
+  "FrozenMechanismEndpoint": [
+    "contour_uncertainty_mean",
+    "boundary_weight_mean",
+    "rv_boundary_pixel_ratio",
+    "innovation_x_loss",
+    "weighted_innovation_x_loss"
+  ]
+}

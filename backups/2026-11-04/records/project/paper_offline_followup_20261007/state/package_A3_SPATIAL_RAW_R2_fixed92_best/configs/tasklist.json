@@ -1,0 +1,32 @@
+[
+  {
+    "stage": "A2_MAPPING",
+    "authorized": true,
+    "training_updates": 0
+  },
+  {
+    "stage": "EQUIVALENCE",
+    "authorized": true,
+    "training_updates": 0
+  },
+  {
+    "stage": "TIMING",
+    "authorized": true,
+    "training_updates": 0
+  },
+  {
+    "stage": "A3",
+    "authorized": true,
+    "training_updates": 0
+  },
+  {
+    "stage": "REVIEW",
+    "authorized": true,
+    "training_updates": 0
+  },
+  {
+    "stage": "ARCHIVE",
+    "authorized": true,
+    "training_updates": 0
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "task": "A5",
+  "status": "PARTIAL",
+  "reason": "Same A100/FP32/shapes; CUDA synchronized, warmup10 + timing30; repeats are timing only. Training wall/peak from new runs; historical training wall source audited separately.",
+  "time": "2026-10-06T21:05:34.390707+08:00"
+}

@@ -1,0 +1,12 @@
+{
+  "numpy_version": "2.2.6",
+  "zero_overlap_records": 18,
+  "verified_saved_mask_cases": 9,
+  "single_empty_class_rows": 17,
+  "both_nonempty_zero_overlap_rows": 1,
+  "all_single_empty_penalties_match": true,
+  "model_created": false,
+  "forward_called": false,
+  "predictions_changed": false,
+  "images_copied": false
+}

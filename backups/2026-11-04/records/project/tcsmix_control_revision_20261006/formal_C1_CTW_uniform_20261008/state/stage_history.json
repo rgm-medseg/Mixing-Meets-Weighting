@@ -1,0 +1,205 @@
+[
+  {
+    "stage": "PREFLIGHT",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/preflight.py"
+    ],
+    "start": "2026-10-08T00:46:16.299964+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/PREFLIGHT_2026-10-08T004616299940+0800.log",
+    "resume_step": 0,
+    "process_identity": {
+      "pid": 20094,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/preflight.py ",
+      "start_ticks": "2611658826"
+    },
+    "process_group": 20094,
+    "exit_code": 0,
+    "end": "2026-10-08T00:46:21.507388+08:00",
+    "elapsed_seconds": 5.207466926425695,
+    "scope": "Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+  },
+  {
+    "stage": "SHORT_CHECK",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/short_check.py"
+    ],
+    "start": "2026-10-08T00:46:21.515423+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/SHORT_CHECK_2026-10-08T004621515379+0800.log",
+    "resume_step": 0,
+    "process_identity": {
+      "pid": 20118,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/short_check.py ",
+      "start_ticks": "2611659347"
+    },
+    "process_group": 20118,
+    "exit_code": 1,
+    "end": "2026-10-08T00:46:36.620942+08:00",
+    "elapsed_seconds": 15.105561681091785,
+    "scope": "Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+  },
+  {
+    "stage": "PREFLIGHT",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/preflight.py"
+    ],
+    "start": "2026-10-08T00:50:59.264339+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/PREFLIGHT_2026-10-08T005059264309+0800.log",
+    "resume_step": 0,
+    "process_identity": {
+      "pid": 21658,
+      "command": "",
+      "start_ticks": "2611687122"
+    },
+    "process_group": 21658,
+    "exit_code": 0,
+    "end": "2026-10-08T00:51:04.468299+08:00",
+    "elapsed_seconds": 5.204004026949406,
+    "scope": "Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+  },
+  {
+    "stage": "SHORT_CHECK",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/short_check.py"
+    ],
+    "start": "2026-10-08T00:51:04.482163+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/SHORT_CHECK_2026-10-08T005104482121+0800.log",
+    "resume_step": 0,
+    "process_identity": {
+      "pid": 21676,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/short_check.py ",
+      "start_ticks": "2611687644"
+    },
+    "process_group": 21676,
+    "exit_code": 0,
+    "end": "2026-10-08T00:51:59.841031+08:00",
+    "elapsed_seconds": 55.358919095247984,
+    "scope": "Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+  },
+  {
+    "stage": "TRAIN",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/train_C1_entry.py"
+    ],
+    "start": "2026-10-08T00:51:59.852754+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/TRAIN_2026-10-08T005159852721+0800.log",
+    "resume_step": 0,
+    "process_identity": {
+      "pid": 22912,
+      "command": "",
+      "start_ticks": "2611693181"
+    },
+    "process_group": 22912,
+    "exit_code": 0,
+    "end": "2026-10-08T08:13:44.465097+08:00",
+    "elapsed_seconds": 26504.612390317023,
+    "scope": "Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+  },
+  {
+    "stage": "POSTCHECK",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/train_postcheck.py"
+    ],
+    "start": "2026-10-08T08:13:44.490137+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/POSTCHECK_2026-10-08T081344490086+0800.log",
+    "resume_step": 30000,
+    "process_identity": {
+      "pid": 18909,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/train_postcheck.py ",
+      "start_ticks": "2614343645"
+    },
+    "process_group": 18909,
+    "exit_code": 0,
+    "end": "2026-10-08T08:13:49.662724+08:00",
+    "elapsed_seconds": 5.1726348623633385,
+    "scope": "Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+  },
+  {
+    "stage": "EVALUATE",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/evaluate_C1.py"
+    ],
+    "start": "2026-10-08T08:13:49.674965+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/EVALUATE_2026-10-08T081349674925+0800.log",
+    "resume_step": 30000,
+    "process_identity": {
+      "pid": 18928,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/evaluate_C1.py ",
+      "start_ticks": "2614344163"
+    },
+    "process_group": 18928,
+    "exit_code": 0,
+    "end": "2026-10-08T08:14:14.801304+08:00",
+    "elapsed_seconds": 25.126380547881126,
+    "scope": "Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+  },
+  {
+    "stage": "ANALYSIS",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/finalize.py",
+      "analysis"
+    ],
+    "start": "2026-10-08T08:14:14.813293+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/ANALYSIS_2026-10-08T081414813236+0800.log",
+    "resume_step": 30000,
+    "process_identity": {
+      "pid": 18958,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/finalize.py analysis ",
+      "start_ticks": "2614346677"
+    },
+    "process_group": 18958,
+    "exit_code": 0,
+    "end": "2026-10-08T08:14:30.071265+08:00",
+    "elapsed_seconds": 15.258021485060453,
+    "scope": "Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+  },
+  {
+    "stage": "REVIEW",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/finalize.py",
+      "review"
+    ],
+    "start": "2026-10-08T08:14:30.083994+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/REVIEW_2026-10-08T081430083920+0800.log",
+    "resume_step": 30000,
+    "process_identity": {
+      "pid": 18981,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/finalize.py review ",
+      "start_ticks": "2614348204"
+    },
+    "process_group": 18981,
+    "exit_code": 0,
+    "end": "2026-10-08T08:14:35.118299+08:00",
+    "elapsed_seconds": 5.034354861825705,
+    "scope": "Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+  },
+  {
+    "stage": "ARCHIVE",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/finalize.py",
+      "package"
+    ],
+    "start": "2026-10-08T08:14:35.131507+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/ARCHIVE_2026-10-08T081435131467+0800.log",
+    "resume_step": 30000,
+    "process_identity": {
+      "pid": 18998,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/finalize.py package ",
+      "start_ticks": "2614348709"
+    },
+    "process_group": 18998,
+    "exit_code": 0,
+    "end": "2026-10-08T08:15:20.635405+08:00",
+    "elapsed_seconds": 45.50394406914711,
+    "scope": "Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+  }
+]

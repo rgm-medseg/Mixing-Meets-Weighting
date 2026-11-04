@@ -1,0 +1,10 @@
+{
+  "time": "2026-10-07T00:40:20.762923+08:00",
+  "session": "beta_fft_R1_v2B_20261007",
+  "command": "/bin/bash /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/pipeline_tmux.sh",
+  "cwd": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007",
+  "resume": false,
+  "ownership": "server tmux ordinary bash/Python subprocess pipeline",
+  "client_independent": true,
+  "R2_started": false
+}

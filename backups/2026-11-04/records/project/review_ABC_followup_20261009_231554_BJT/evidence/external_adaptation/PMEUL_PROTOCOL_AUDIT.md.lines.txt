@@ -1,0 +1,14 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/audits/PMEUL_PROTOCOL_AUDIT.md
+ORIGINAL_SHA256: b5600f7815234e35a1257549b67f2de10063c22fe9d9ddbb5e678c95f058252d
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 82-91 ---
+82: - Released boundary values are not accepted into the paper table because spacing/evaluator provenance differs. Every formal prediction must be reevaluated by the project's frozen evaluator.
+83: - No official three-label result is released. A likely-below-Ours judgment at 5% remains an explicitly uncertain extrapolation from the same method and split family.
+84: 
+85: ## Three-dataset adaptation boundary
+86: 
+87: - ACDC: replace positional slicing with explicit frozen labeled/unlabeled manifests while retaining the same 68/136 slice identities; four output classes.
+88: - PROMISE12 and COVID-19: two output classes, one input channel, frozen explicit manifests, and the same released loss/decoder semantics.
+89: - Allowed adapter work: manifest reader, path mapping, class count, isolated output path, exact writer restoration, and evaluator output wrapper.
+90: - Forbidden changes: adding CE to the optimized loss, changing SDF semantics, averaging decoder outputs, choosing v1/v2 by observed target results, adding pretraining, changing iterations, or changing frozen samples.
+91: 

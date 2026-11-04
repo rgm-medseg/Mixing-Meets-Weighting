@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T22:00:48.761930+08:00",
+  "logical_joint_steps": 30000,
+  "raw_trace_rows": 30000,
+  "duplicate_trace_records": 0,
+  "optimizer_success_calls": {
+    "optimizer1": 30000,
+    "optimizer2": 30000
+  },
+  "replayed_physical_updates": 0,
+  "last_sha256": "a826ef72323a029088b5d3b922a45d448dec7008057590af6e94ce15e954fbcd",
+  "best_sha256": "7a124cfe70515de469915ce213feea258114b1398b125345559d1b5761cffd62",
+  "worker_resume_exact": false
+}

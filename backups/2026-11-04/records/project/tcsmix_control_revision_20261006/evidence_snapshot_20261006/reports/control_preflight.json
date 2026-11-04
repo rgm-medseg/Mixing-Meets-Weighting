@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "time": "2026-10-06T23:28:33.255034+08:00",
+  "optimizer_step_calls": 0,
+  "selected_controller": "v2_B",
+  "teacher_forward_count_unchanged": true,
+  "loss_blocks_byte_identical": true,
+  "original_spatial_CTW_loss_and_update_direction_equal": true,
+  "TRC": "original4x16token",
+  "EMA": 0.99,
+  "ctw_lambda": 0.05,
+  "original_inputs_unchanged": true,
+  "short_updates": 240,
+  "strict_optimizer_call_budget": 500,
+  "generated_source_sha256": "d05a1fefdc985c98c813474c5aa615639ba766ce3283195ca3a077343047cfa0",
+  "config_sha256": "801f9fb7885ac91308f0ab9ef18e25fed3ac27291ebaf592991d63d99669e49b"
+}

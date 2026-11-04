@@ -1,0 +1,20 @@
+{
+  "weight_asset_sha256": "PASS",
+  "weight_object_sha256": "PASS",
+  "weight_archive_restoration": "PASS",
+  "indexed_catalog_file_sha256": "PASS",
+  "restored_command_build_and_parser": "PASS",
+  "indexed_file_references": 7614,
+  "unique_indexed_contents": 3781,
+  "unique_weight_objects": 87,
+  "restored_files": 7713,
+  "training_started": false,
+  "evaluation_started": false,
+  "remote_download_sha256": "NOT_RUN_API_LOGIN_REQUIRED",
+  "paper_metrics_reproduced": false,
+  "catalog_archive_content_sha256": "PASS",
+  "catalog_archive_file_count": 7654,
+  "release_asset_count": 11,
+  "release_asset_bytes": 2946731782,
+  "release_asset_size_gib": 2.744357829913497
+}

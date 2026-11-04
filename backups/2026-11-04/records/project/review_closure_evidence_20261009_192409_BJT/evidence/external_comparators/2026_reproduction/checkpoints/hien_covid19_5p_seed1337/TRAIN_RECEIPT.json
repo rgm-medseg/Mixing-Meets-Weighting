@@ -1,0 +1,14 @@
+{
+  "best_checkpoint_sha256": "e29ba25eb452f53aa30a85f583a63a3cf9906eea9c1d1f7ecb2c6afc8ec65509",
+  "best_validation_dice": 0.8324687209333608,
+  "config_sha256": "a87c28cda99fcb6ebc5b9693caa58c9d1ee3d5afa0c63fe956a4a36a92bab89b",
+  "dataset": "COVID19",
+  "iteration": 30000,
+  "job_id": "hien_covid19_5p_seed1337",
+  "latest_checkpoint_sha256": "ec8cd91dfd8e8d84db124f8f35e9e4973034baa6f3c6e2744f62e5c6d9292f4c",
+  "method": "HiEn",
+  "nan_detected": false,
+  "selected_model_role": "teacher",
+  "status": "TRAIN_PASS",
+  "test_manifest_accessed": false
+}

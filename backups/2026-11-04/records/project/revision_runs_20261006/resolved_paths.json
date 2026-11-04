@@ -1,0 +1,12 @@
+{
+  "host": "n1",
+  "project": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+  "workspace": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006",
+  "python": "/home/renguanming/.conda/envs/beta_fft/bin/python",
+  "data": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC",
+  "full": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+  "baseline": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt",
+  "gpu": 0,
+  "persistence": "NFS /home",
+  "created": "2026-10-06T20:40:27.816882+08:00"
+}

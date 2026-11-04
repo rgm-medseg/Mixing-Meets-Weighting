@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T00:51:48.897528+08:00",
+  "scope": "CPU isolated arithmetic/plot fixture: R1 metrics on both sides, synthetic weight fields; NOT C1 results",
+  "files": {
+    "runs/isolated_analysis_fixture/results/frame_class_pairs.csv": "04550e3cd36ea6cd6e4bf64204a23821c2079d17c21fe8ebd020e96e2394aa96",
+    "runs/isolated_analysis_fixture/results/patient_pairs.csv": "fdf42a9565db88df1a8733adc50238d620b64c074d026c54fcd3c18c17206da8",
+    "runs/isolated_analysis_fixture/results/fixed_window_control_weight_summary.csv": "dc43e8286f6dcc7c0410b6122b4304242876bfb0cf9f85064525844d72a284ce",
+    "runs/isolated_analysis_fixture/results/C1_vs_R1_summary.csv": "9577d647f677a1441cec7f04daa46797273c67bf8e94cba3d4a56f14fc176098",
+    "runs/isolated_analysis_fixture/results/frame_pairs.csv": "4213afe89edc18c41b0043a144e1fc58895643c45790fac6ec406da58ed8e68a",
+    "runs/isolated_analysis_fixture/results/class_pairs.csv": "b2c6291fa51f197d3fad457ec73e82aa87c123b59698d116d0409933f1d098c1",
+    "runs/isolated_analysis_fixture/results/per_image_mean_checks.csv": "beb4b961854ef95b8b3a9031acb864a11165fa995466e7fba53e578ae572baca",
+    "runs/isolated_analysis_fixture/analysis/patient_Dice_spatial_advantage.png": "b8af83e4c41d5d650382c938c59932902b96599825aecd9efda14995cbac2bf7",
+    "runs/isolated_analysis_fixture/analysis/validation_and_geometry.png": "f7321a5485e461b462d8c0440c939185f4c9325fe709354e817a4a61b551b972",
+    "runs/isolated_analysis_fixture/analysis/weight_matching_checks.png": "1f426368e910a6542cd03e641e2b7a7355c36f352124a3726601cfac64274d90",
+    "runs/isolated_analysis_fixture/analysis/patient_Dice_spatial_advantage.svg": "bdaa5278b9b52e3b6299f1f474ffd9c42d9fe5a59cfb3b36a7d17540b5da49c5",
+    "runs/isolated_analysis_fixture/analysis/validation_and_geometry.svg": "f86f2ba416ddc74e7e28c0c45170553998575908df978a32196b029403cc5cac",
+    "runs/isolated_analysis_fixture/analysis/weight_matching_checks.svg": "6ad83b64dc3921cc39f8a6a435b5e4de9e19803dee4d343499811c27160936f7"
+  },
+  "window_count": 7,
+  "per_image_rows": 360000,
+  "paired_patient_rows": 20,
+  "figures": [
+    "patient_Dice_spatial_advantage",
+    "validation_and_geometry",
+    "weight_matching_checks"
+  ]
+}

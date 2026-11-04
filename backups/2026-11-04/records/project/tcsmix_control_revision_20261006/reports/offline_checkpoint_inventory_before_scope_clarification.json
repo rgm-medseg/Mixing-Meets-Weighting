@@ -1,0 +1,52 @@
+[
+  {
+    "run": "initial_pretrain_reconstruction",
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth",
+    "sha256": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3",
+    "step": 0,
+    "phase": "initialization",
+    "scope": "reconstructed SSL initial teacher; zero gate and exact historical pretrain, not saved teacher step0",
+    "middle_phase_available": false,
+    "state_unchanged": true
+  },
+  {
+    "run": "E1_uniform",
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E1/checkpoints/best.ckpt",
+    "sha256": "f3808c28e98a2930f3f1e9fa758a61d47e292ac583f542dfb9b852f0f84e6268",
+    "step": 3200,
+    "phase": "early",
+    "scope": "existing post-step teacher; E1 is uniform CTW, not Full",
+    "middle_phase_available": false,
+    "state_unchanged": true
+  },
+  {
+    "run": "E1_uniform",
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E1/checkpoints/last.ckpt",
+    "sha256": "72205384a57fb736e6b29bb820a63b2d6eb458702ddcd1fc9c673e185305cc17",
+    "step": 3976,
+    "phase": "early",
+    "scope": "existing post-step teacher; E1 is uniform CTW, not Full",
+    "middle_phase_available": false,
+    "state_unchanged": true
+  },
+  {
+    "run": "Historical_Full",
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/best.ckpt",
+    "sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+    "step": 29600,
+    "phase": "late",
+    "scope": "existing post-step teacher; E1 is uniform CTW, not Full",
+    "middle_phase_available": false,
+    "state_unchanged": true
+  },
+  {
+    "run": "Historical_Full",
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/checkpoints/last.ckpt",
+    "sha256": "1abf5ae770438d871dda4f6afa04dfc3755442a823551787251b1350d9c76c5a",
+    "step": 30000,
+    "phase": "late",
+    "scope": "existing post-step teacher; E1 is uniform CTW, not Full",
+    "middle_phase_available": false,
+    "state_unchanged": true
+  }
+]

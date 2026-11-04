@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "student1_nonzero": true,
+  "student2_gradient": null,
+  "weight_detached": true,
+  "scope": "independent synthetic logits only; no model parameter backward",
+  "lambda_coefficient": 0.05
+}

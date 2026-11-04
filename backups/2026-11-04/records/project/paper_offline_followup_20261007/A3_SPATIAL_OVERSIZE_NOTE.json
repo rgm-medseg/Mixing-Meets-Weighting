@@ -1,0 +1,10 @@
+{
+  "server_full_task_archive": {
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/paper_offline_A3_SPATIAL_20261007.tar.gz",
+    "sha256": "09fff68e1eff73cf400fd38aea471987e7524a10022370644770bbf042475c58",
+    "bytes": 63530816,
+    "files": 243,
+    "actual_extraction_verified": true
+  },
+  "delivery": "core and raw checkpoint shards below30MiB; no units omitted"
+}

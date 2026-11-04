@@ -1,0 +1,71 @@
+{
+  "base_lr": 0.01,
+  "batch_size": 4,
+  "checkpoint_cadence": 100,
+  "consistency": 0.1,
+  "consistency_rampup": 200.0,
+  "data": {
+    "evaluator": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_COVID19/covid19_volume_evaluator.py",
+    "evaluator_sha256": "ff20153cdbbe9e164bbdbd2348f6799daf0180a5503291177a86a5f9034f560b",
+    "forbidden_during_training": [
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID_test.tsv",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data/COVID19_OFFICIAL20/derived_npz/*TEST*"
+    ],
+    "labeled_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID5_labeled.tsv",
+    "labeled_manifest_sha256": "0689f3efeeeac1a8631540b9718109ba3c3acd9ba61d46cd8dd3ddc8f79fc05d",
+    "project_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main",
+    "root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data/COVID19_OFFICIAL20",
+    "test_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID_test.tsv",
+    "test_manifest_sha256": "453312727e51c7830423caa9e06b8cd67ad0ecf5c4f1e6058975cd3c973e73c3",
+    "unlabeled_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID5_unlabeled.tsv",
+    "unlabeled_manifest_sha256": "bfd037607ddead4ba4555be15d7464b47790497ae003e70a741fe908917d3107",
+    "val_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID_val.tsv",
+    "val_manifest_sha256": "b586ef2080aaae74634eef4c3a126bf72e3216125bc426c88b82ebbc17efd56e"
+  },
+  "dataset": "COVID19",
+  "dataset_contract_sha256": "4424753baa5fdb3e923cf0de5dcdac10a239472d72b198027aa7da1bcee0279d",
+  "device": "cuda:0",
+  "ema_supervised_alpha": 0.98,
+  "ema_unsupervised_alpha": 0.95,
+  "formal_seed": 1337,
+  "grayscale_adapter": "deterministic_repeat_1_to_3",
+  "inference_size": [
+    256,
+    256
+  ],
+  "input_channels": 3,
+  "job_id": "hien_covid19_5p_seed1337",
+  "labeled_batch_size": 2,
+  "max_iterations": 30000,
+  "method": "HiEn",
+  "momentum": 0.9,
+  "network": "unet_resnet34",
+  "num_classes": 2,
+  "optimizer": "SGD",
+  "patch_size": [
+    256,
+    256
+  ],
+  "pretraining": {
+    "enabled": true,
+    "identity": "torchvision_resnet34_legacy_pretrained_true",
+    "path": "external_comparators/2026_reproduction/pretrained/resnet34-b627a593.pth",
+    "sha256": "b627a593bcbe140c234610266fe4f8ae95ea42fc881d091c9b6052e6b1d0590f"
+  },
+  "ratio": "5p",
+  "schema": "BETA_FFT_2026_COMPARATOR_RUN_CONFIG_V1",
+  "seed": 1337,
+  "selection_rule": "shared_global_best_validation_dice_across_student_then_teacher",
+  "source_commit": "6dfa06f24c5a80223d14ee07183ced713ae8681e",
+  "supervised_loss": "0.5*(cross_entropy+dice)",
+  "supervised_updates_per_iteration": 1,
+  "test_access_during_training": false,
+  "test_output": "selected_model_logits_output_0",
+  "test_selection_forbidden": true,
+  "unsupervised_loss": "ramped_(prediction_consistency_after_iter1000+feature_contrastive)",
+  "unsupervised_updates_per_iteration": 1,
+  "validation_cadence": 100,
+  "vat_epsilon": 2.0,
+  "vat_xi": 1e-06,
+  "weight_decay": 0.0001
+}

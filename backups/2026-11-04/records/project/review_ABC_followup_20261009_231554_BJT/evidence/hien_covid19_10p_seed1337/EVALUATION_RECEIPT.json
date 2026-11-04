@@ -1,0 +1,22 @@
+{
+  "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/checkpoints/hien_covid19_10p_seed1337/best_model.pt",
+  "checkpoint_missing_keys": [],
+  "checkpoint_sha256": "b0c724af20bb6c714d8ee95a32519aa90e0d88ed88f2001d3b5410fb50b4f30d",
+  "checkpoint_unexpected_keys": [],
+  "config_sha256": "1f9485a71419b50e1d8fc8acf5f84ea1d203891396304f08889d92d1709b027b",
+  "dataset": "COVID19",
+  "evaluator": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_COVID19/covid19_volume_evaluator.py",
+  "evaluator_sha256": "ff20153cdbbe9e164bbdbd2348f6799daf0180a5503291177a86a5f9034f560b",
+  "job_id": "hien_covid19_10p_seed1337",
+  "method": "HiEn",
+  "metrics": {
+    "asd": 4.405406457133936,
+    "dice": 0.7025364467870172,
+    "hd95": 22.603731772813223,
+    "iou": 0.5443335929098077
+  },
+  "prediction_output": "selected_logits",
+  "split": "test",
+  "status": "EVALUATION_PASS",
+  "test_used_for_selection": false
+}

@@ -1,0 +1,66 @@
+{
+  "time": "2026-10-06T22:45:17.373382+08:00",
+  "scope": "project filenames via rg --files -uuu; exact Full run, mirrored controller, TFRecord summaries and dynamics schema",
+  "matched_files": 18,
+  "controller_records": 150,
+  "controller_adds_distinct_scale_steps": 0,
+  "events": [
+    {
+      "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/logs/events.out.tfevents.1787035329.n1",
+      "sha256": "1845dcfb2bb4051b5e7b7da3586657cc2b3c78cd0d524062208ba514e692cf09",
+      "tags": {
+        "info/total_loss": {
+          "n": 30000,
+          "step_min": 1,
+          "step_max": 30000
+        },
+        "info/model1_loss": {
+          "n": 30000,
+          "step_min": 1,
+          "step_max": 30000
+        },
+        "info/model2_loss": {
+          "n": 30000,
+          "step_min": 1,
+          "step_max": 30000
+        },
+        "info/consistency_weight": {
+          "n": 30000,
+          "step_min": 1,
+          "step_max": 30000
+        }
+      }
+    }
+  ],
+  "dynamics_records": 30001,
+  "dynamics_columns": [
+    "iter",
+    "global_step",
+    "total_loss",
+    "loss_1",
+    "loss_2",
+    "consistency_weight",
+    "repair_triggered",
+    "fft_triggered",
+    "pred_fg_ratio_1",
+    "pred_fg_ratio_2",
+    "pseudo_fg_ratio_1",
+    "pseudo_fg_ratio_2",
+    "branch_disagreement_ratio",
+    "branch_agreement_ratio",
+    "fft_mixing_triggered",
+    "fft_threshold",
+    "loss_finite",
+    "grad_finite",
+    "logits_finite",
+    "checkpoint_saved"
+  ],
+  "dynamics_has_q_or_scale": false,
+  "formal_checkpoints": [
+    "best.ckpt step29600",
+    "last.ckpt step30000"
+  ],
+  "no_formal_intermediate_checkpoint_found": true,
+  "no_saved_mask_array_found": true,
+  "excluded_smoke": "runtime/.../smoke/X03 checkpoints belong to engineering smoke; never substitute for Full history"
+}

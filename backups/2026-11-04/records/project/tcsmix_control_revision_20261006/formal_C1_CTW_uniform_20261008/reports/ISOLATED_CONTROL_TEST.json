@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T00:45:38.039444+08:00",
+  "real_stop_flag": true,
+  "exclusive_lock": true,
+  "stale_identity_rejected": true,
+  "scope": "isolated CPU controller fixture; actual trainer stop/resume independently exercised in 1+1 short check",
+  "formal_interrupted": false,
+  "actual_trainer_check_scope": "one failed engineering-check joint update + one successful check update; safe save and zero-update actual resume probe; total physical short updates=2"
+}

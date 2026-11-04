@@ -1,0 +1,1173 @@
+--- R1/scripts/preflight.py
++++ R2/scripts/preflight.py
+@@ -1,80 +1,121 @@
+-"""Definition, input and frozen-code admission. No training or optimizer update."""
+-import argparse
+-import ast
+-import platform
+-import py_compile
+-import shutil
+-import subprocess
++"""R2 source/area/data admission and synthetic forward checks; zero training updates."""
++import argparse,ast,platform,py_compile,shutil,subprocess,difflib
+ from common import *
+ 
++UNCHANGED=['controller.py','accepted_short_wiring.py','accepted_diagnostic_inputs.py','legacy_train_builder.py','revision_runtime.py','unified_evaluation.py']
+ def verify_frozen():
+     frozen=read_json(WORK/'run_manifest.json')
+     for p,h in frozen['frozen_files'].items():
+-        if sha(WORK/p)!=h:raise RuntimeError(f'Frozen R1 file changed: {p}')
++        if sha(WORK/p)!=h:raise RuntimeError(f'Frozen R2 file changed: {p}')
+     for p,h in frozen['external_inputs'].items():
+         if sha(p)!=h:raise RuntimeError(f'External input changed: {p}')
++    for name in ['old_inputs_locked.json','parent_R1_inputs_locked.json']:
++        for p,h in read_json(WORK/'state'/name).items():
++            if sha(p)!=h:raise RuntimeError(f'Preserved parent/old input changed: {p}')
+     queue=read_json(PROJECT/'revision_runs_20261006/state/queue.json')
+     assert queue['status']=='INTERRUPTED' and (PROJECT/'revision_runs_20261006/state/stop_requested').exists()
+     assert all(queue['tasks'][f'E{i}']['status']=='PENDING' for i in [2,3,4,5])
+-    assert not (WORK/'runs/R2').exists()
++    assert read_json(PARENT_R1/'state/status.json')['status']=='DONE'
+     import torch
+     assert torch.__version__==frozen['environment']['torch']
++
++def synthetic(cfg):
++    import numpy as np,torch
++    from controller import generate_mask
++    result=[]
++    for number,magnitude in enumerate([.2,2.,8.,None]):
++        logits=torch.zeros(6,4,256,256);labels=torch.zeros(6,256,256,dtype=torch.long)
++        for c in [1,2,3]:
++            if magnitude is not None:
++                labels[:,32*c:32*(c+1),60:100]=c
++                logits[:,c,32*c:32*(c+1),60:100]=magnitude
++        if magnitude is None:logits[:,0]=4.
++        seed=74200+number;np.random.seed(seed)
++        ey=int(np.random.randint(0,164));ex=int(np.random.randint(0,164));expected_next=int(np.random.randint(0,1000000))
++        np.random.seed(seed)
++        mask,target,st=generate_mask(torch.zeros(6,1,256,256),logits,logits,labels,labels,cfg)
++        assert mask.shape==(6,256,256) and torch.equal(mask,target) and torch.equal(mask[0].expand_as(mask),mask)
++        assert st['rectangle_h']==st['rectangle_w']==92 and st['patch_area_ratio']==8464/65536 and st['side_fraction']==.359375
++        assert int((mask[0]==0).sum())==8464
++        assert (st['rectangle_y'],st['rectangle_x'])==(ey,ex) and int(np.random.randint(0,1000000))==expected_next
++        # Parent complementary image/target equations, same single mask.
++        mix1=mask+2*(1-mask);mix2=2*mask+(1-mask)
++        assert torch.equal(mix1+mix2,torch.full_like(mask,3))
++        result.append(dict(logit_magnitude=magnitude,q_B=st['q_margin'],s_dynamic_B=.18+.20*st['q_margin'],s_actual=.359375,
++            h=92,w=92,pixels=8464,y=ey,x=ex,fallback=st['fallback'],same_image_target_mask=True,two_original_randint_calls=True))
++    assert len({round(x['q_B'],6) for x in result})==4
++    atomic_json(WORK/'reports/SYNTHETIC_FIXED_MASK_CHECK.json',dict(status='PASS',time=now(),cases=result,device='CPU',optimizer_calls=0,
++        controller_source_exact_R1=True,no_extra_random_calls=True,scientific_loop_same_R1=True))
+ 
+ def main():
+     p=argparse.ArgumentParser();p.add_argument('--freeze',action='store_true');a=p.parse_args()
+     assert socket.gethostname()=='n1'
+-    cfg=read_json(WORK/'configs/R1_full_v2B.yaml');accepted=WORK.parent
+-    assert cfg['controller_version']=='v2_B' and cfg['weight_mode']=='spatial' and cfg['trc']=='token'
+-    assert cfg['max_iterations']==30000 and cfg['seed']==42 and cfg['batch_size']==24 and cfg['labeled_bs']==12 and cfg['num_workers']==16
+-    assert cfg['pretrained_model']==read_json(WORK/'protocol.json')['pretrain']
+-    assert cfg['protocol_hash']==sha(WORK/'protocol.json')
+-    assert sha(cfg['pretrained_model'])=='477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3'
+-    assert sha(WORK/'scripts/controller.py')==sha(accepted/'scripts/controller.py')==cfg['controller_source_sha256']
+-    assert sha(WORK/'scripts/accepted_short_wiring.py')==sha(accepted/'scripts/train_control_entry.py')
+-    assert all(sha(p)==sha(accepted/'source'/p.relative_to(WORK/'source')) for p in (WORK/'source').rglob('*.py'))
+-    assert sha(WORK/'scripts/unified_evaluation.py')==sha(accepted/'scripts/evaluate.py')
++    cfg=read_json(WORK/'configs/R2_fixed92.yaml');protocol=read_json(WORK/'protocol.json');lock=read_json(WORK/'R2_AREA_LOCK.json')
++    assert cfg['task']=='R2' and cfg['phase']=='formal_R2' and cfg['formal_authorized']
++    assert cfg['controller_version']=='v2_fixed' and cfg['signal_version']=='v2_B' and cfg['mix_mode']=='fixed'
++    assert cfg['fixed_side']==.359375 and cfg['rectangle_h']==cfg['rectangle_w']==92
++    assert cfg['weight_mode']=='spatial' and cfg['trc']=='token' and cfg['max_iterations']==30000
++    assert cfg['seed']==42 and cfg['batch_size']==24 and cfg['labeled_bs']==12 and cfg['num_workers']==16
++    assert cfg['run_root']==str(WORK/'runs/R2_fixed92') and cfg['protocol_hash']==sha(WORK/'protocol.json')
++    assert cfg['area_lock_sha256']==sha(WORK/'R2_AREA_LOCK.json') and lock['source_sha256']==sha(lock['source_trace'])
++    assert lock['source_sha256']=='315139c2d54a89205988e0dd92eb28855ac3c42b84198b216d4c49fe2a35cb95'
++    assert cfg['pretrained_model']==protocol['pretrain'] and sha(cfg['pretrained_model'])=='477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3'
++    for name in UNCHANGED:assert sha(WORK/'scripts'/name)==sha(PARENT_R1/'scripts'/name),name
++    assert sha(WORK/'scripts/controller.py')==cfg['controller_source_sha256']
++    for p in (WORK/'source').rglob('*.py'):assert sha(p)==sha(PARENT_R1/'source'/p.relative_to(WORK/'source'))
+     for p in (WORK/'scripts').glob('*.py'):py_compile.compile(str(p),doraise=True)
+-    from train_R1_entry import build_source
++    from train_R2_entry import build_source
+     from legacy_train_builder import build_beta_source
+-    src=build_source(cfg);base=build_beta_source(cfg);ast.parse(src)
+-    for begin,end in [('            consistency_weight =','            optimizer1.zero_grad()'),('def update_model_ema(', '\n\ndef get_ACDC_2DLargestCC'),('def mix_loss(', '\n\ndef patients_to_slices')]:
+-        assert src[src.index(begin):src.index(end)]==base[base.index(begin):base.index(end)]
+-    assert src.count('ema_model(')==base.count('ema_model(')
+-    (WORK/'reports/expected_effective_source.py').write_text(src)
++    source=build_source(cfg);base=build_beta_source(cfg);ast.parse(source)
++    parent_source=(PARENT_R1/'runs/R1_full_v2B/v2_effective_source.py').read_text()
++    assert source==parent_source,'R2 scientific loop differs from actual R1 beyond separate controller configuration'
++    assert source.count('ema_model(')==base.count('ema_model(')
++    (WORK/'reports/expected_effective_source.py').write_text(source)
++    changes=[]
++    for path in (WORK/'scripts').glob('*.py'):
++        original=PARENT_R1/'scripts'/path.name.replace('R2','R1')
++        if original.exists() and original.read_text()!=path.read_text():
++            changes.append(''.join(difflib.unified_diff(original.read_text().splitlines(True),path.read_text().splitlines(True),fromfile='R1/scripts/'+original.name,tofile='R2/scripts/'+path.name)))
++    (WORK/'reports/R1_to_R2_engineering.patch').write_text(''.join(changes))
++    synthetic(cfg)
+     assert shutil.disk_usage(WORK).free>4*2**30
+     import torch,h5py,numpy,scipy,matplotlib,medpy
+-    ck=torch.load(cfg['pretrained_model'],map_location='cpu',weights_only=False);assert 'net' in ck and 'opt' in ck
++    ck=torch.load(cfg['pretrained_model'],map_location='cpu',weights_only=False);assert {'net','opt'}<=set(ck)
+     env=subprocess.run([str(PYTHON),'-m','pip','freeze'],capture_output=True,text=True,check=True).stdout
+     (WORK/'reports/environment_freeze.txt').write_text(env)
+     inputs={str(DATA/f'{x}.list'):sha(DATA/f'{x}.list') for x in ['train_slices','val','test']};inputs[cfg['pretrained_model']]=sha(cfg['pretrained_model'])
+-    old_archive=accepted/'TCSMIX_control_evidence_20261006.tar.gz'
+-    assert sha(old_archive)==read_json(accepted/'archive_delivery.json')['sha256']
+-    inputs[str(old_archive)]=sha(old_archive)
+-    split_lists={x:(DATA/f'{x}.list').read_text().splitlines() for x in ['train_slices','val','test']}
+-    patient_sets={x:{v.split('_')[0] for v in vv} for x,vv in split_lists.items()}
+-    assert [len(patient_sets[x]) for x in ['train_slices','val','test']]==[70,10,20]
+-    assert not (patient_sets['train_slices']&patient_sets['val'] or patient_sets['train_slices']&patient_sets['test'] or patient_sets['val']&patient_sets['test'])
+-    assert {v.split('_')[0] for v in split_lists['train_slices'][:136]}==set(read_json(WORK/'protocol.json')['labeled_patients'])
+-    assert all((DATA/'data/slices'/f'{v}.h5').exists() for v in split_lists['train_slices'])
+-    assert all((DATA/'data'/f'{v}.h5').exists() for split in ['val','test'] for v in split_lists[split])
+-    assert all(sha(p)==h for p,h in read_json(WORK/'state/old_inputs_locked.json').items())
++    lists={x:(DATA/f'{x}.list').read_text().splitlines() for x in ['train_slices','val','test']}
++    patients={x:{v.split('_')[0] for v in vv} for x,vv in lists.items()}
++    assert [len(patients[x]) for x in ['train_slices','val','test']]==[70,10,20]
++    assert not (patients['train_slices']&patients['val'] or patients['train_slices']&patients['test'] or patients['val']&patients['test'])
++    assert {v.split('_')[0] for v in lists['train_slices'][:136]}==set(protocol['labeled_patients'])
+     if a.freeze:
+         assert not (WORK/'run_manifest.json').exists()
+-        files=list((WORK/'scripts').glob('*.py'))+list((WORK/'scripts').glob('*.sh'))+list((WORK/'source').rglob('*.py'))+[WORK/'protocol.json',WORK/'configs/R1_full_v2B.yaml']
+-        atomic_json(WORK/'run_manifest.json',dict(created=now(),task='R1',host='n1',gpu=0,formal_authorized=True,R2_authorized=False,
++        data=[]
++        for split,ids in lists.items():
++            for number,v in enumerate(ids):
++                path=DATA/('data/slices' if split=='train_slices' else 'data')/f'{v}.h5'
++                assert path.exists();h=sha(path);inputs[str(path)]=h
++                data.append(dict(split=split,index=number,id=v,patient=v.split('_')[0],labeled=split=='train_slices' and number<136,path=str(path),sha256=h))
++        write_csv(WORK/'reports/DATA_FILE_INDEX.csv',data)
++        files=list((WORK/'scripts').glob('*.py'))+list((WORK/'scripts').glob('*.sh'))+list((WORK/'source').rglob('*.py'))
++        files += [WORK/'protocol.json',WORK/'configs/R2_fixed92.yaml',WORK/'R2_AREA_LOCK.json',WORK/'reports/DATA_FILE_INDEX.csv']
++        for path in (WORK/'reports').glob('Parent_R1_*'):inputs[str(path)]=sha(path)
++        atomic_json(WORK/'run_manifest.json',dict(created=now(),task='R2',host='n1',gpu=0,formal_authorized=True,R1_retrained=False,
+             frozen_files={str(p.relative_to(WORK)):sha(p) for p in sorted(files)},external_inputs=inputs,
+-            accepted_phase_archive=str(accepted/'TCSMIX_control_evidence_20261006.tar.gz'),accepted_phase_archive_sha256=sha(accepted/'TCSMIX_control_evidence_20261006.tar.gz'),
+-            scientific_changes='only accepted TCSMix v2_B teacher confidence path; original spatial CTW/TRC/loss/EMA',
+-            training_budget_joint_iterations=30000,optimizer_calls_normal_each_student=30000,precision='FP32 no AMP',automatic_retries=0,
++            parent_R1_manifest=str(PARENT_R1/'run_manifest.json'),parent_R1_manifest_sha256=sha(PARENT_R1/'run_manifest.json'),parent_R1_protocol_sha256=sha(PARENT_R1/'protocol.json'),
++            scientific_changes='ONLY rectangle dimensions fixed92; q_B retained for diagnostic logging; literal R1 effective loop and scientific dependencies unchanged',
++            area_lock_sha256=sha(WORK/'R2_AREA_LOCK.json'),training_budget_joint_iterations=30000,optimizer_calls_normal_each_student=30000,precision='FP32 no AMP',automatic_retries=0,
+             resume_exact=False,resume_boundary='main RNG and sampler IDs saved; 16-worker augmentation RNG/prefetch not restored',python=str(PYTHON),
+             environment=dict(torch=torch.__version__,python=platform.python_version(),pip_freeze_sha256=sha(WORK/'reports/environment_freeze.txt'))))
+     assert sha(WORK/'reports/environment_freeze.txt')==read_json(WORK/'run_manifest.json')['environment']['pip_freeze_sha256']
+     verify_frozen()
+-    for mod in ['train_R1_entry','evaluate_R1','analyze_R1','summarize_R1','package_R1','run_R1_pipeline']:__import__(mod)
++    for mod in ['train_R2_entry','evaluate_R2','analyze_R2','summarize_R2','package_R2','run_R2_pipeline','error_analysis']:__import__(mod)
+     atomic_json(WORK/'reports/PREFLIGHT.json',dict(status='PASS',time=now(),host=socket.gethostname(),python=str(PYTHON),torch=torch.__version__,
+-        controller_sha256=sha(WORK/'scripts/controller.py'),config_sha256=sha(WORK/'configs/R1_full_v2B.yaml'),pretrain_sha256=sha(cfg['pretrained_model']),
+-        reused_short_joint_steps=240,new_smoke_optimizer_calls=0,source_unchanged=True,loss_blocks_identical=True,teacher_forward_count_unchanged=True,
+-        fresh_initializer_step=0,budget_joint=30000,optimizer_calls_each_student=30000,formal_R2=False,imports_pass=True))
+-    print('R1 preflight PASS: locked accepted v2_B, spatial CTW/TRC, fresh parent initialization, 30000 joint iterations; zero new smoke updates.')
++        controller_sha256=sha(WORK/'scripts/controller.py'),config_sha256=sha(WORK/'configs/R2_fixed92.yaml'),pretrain_sha256=sha(cfg['pretrained_model']),
++        new_smoke_optimizer_calls=0,scientific_loop_byte_identical_R1=True,loss_blocks_identical=True,teacher_forward_count_unchanged=True,
++        fresh_initializer_step=0,budget_joint=30000,optimizer_calls_each_student=30000,controller_version='v2_fixed',signal_version='v2_B',fixed_h=92,fixed_w=92,
++        imports_pass=True,data_file_count=len(read_table(WORK/'reports/DATA_FILE_INDEX.csv')),R1_preserved=True,old_queue_paused=True))
++    print('R2 preflight PASS: fixed92, exact R1 loop/loss/EMA/initializer, zero new training smoke updates.',flush=True)
+ 
+ if __name__=='__main__':main()
+--- R1/scripts/train_postcheck.py
++++ R2/scripts/train_postcheck.py
+@@ -4,25 +4,27 @@
+ from common import *
+ 
+ def main():
+-    cfg=read_json(WORK/'configs/R1_full_v2B.yaml');run=Path(cfg['run_root'])
+-    receipt=read_json(run/'TRAIN_RECEIPT.json');assert receipt['status']=='TRAINED' and receipt['global_step']==30000
+-    rows=read_table(WORK/'results/R1_control_trace.csv');latest={int(r['step']):r for r in rows}
++    cfg=read_json(WORK/'configs/R2_fixed92.yaml');run=Path(cfg['run_root'])
++    receipt=read_json(run/'TRAIN_RECEIPT.json');assert receipt['status'] in ['TRAINED','INTERRUPTED'] and receipt['global_step']==30000
++    rows=read_table(WORK/'results/R2_control_trace.csv');latest={int(r['step']):r for r in rows}
+     assert set(latest)==set(range(1,30001))
+     for r in latest.values():
+         active=[c for c in cfg['foreground_ids'] if int(r[f'n_{c}'])>0]
+         q=np.mean([float(r[f'margin_class{c}']) for c in active]) if active else 0
+-        assert abs(q-float(r['q']))<1e-7 and abs((.18+.20*q)-float(r['s']))<1e-10
+-        d=max(1,min(255,round(256*(.18+.20*q))));assert int(r['rectangle_h'])==int(r['rectangle_w'])==d
++        assert abs(q-float(r['q']))<1e-7 and abs((.18+.20*q)-float(r['s_dynamic_B']))<1e-10
++        assert float(r['s'])==float(r['s_actual'])==.359375 and r['q_controls_geometry']=='False'
++        d=92;assert int(r['rectangle_h'])==int(r['rectangle_w'])==int(r['h_actual'])==int(r['w_actual'])==d
+         assert int(r['actual_area_pixels'])==d*d and float(r['actual_area'])==d*d/65536
+-        assert r['controller_version']=='v2_B' and r['shared_mask_and_target_identical']=='True'
++        assert r['controller_version']=='v2_fixed' and r['signal_version']=='v2_B' and r['shared_mask_and_target_identical']=='True'
++        assert 0<=int(r['y'])<164 and 0<=int(r['x'])<164
+         assert float(r['lr'])==.01 and abs(float(r['weighted_ctw_loss'])-.05*float(r['ctw_loss']))<1e-9
+         assert np.isfinite(float(r['loss']))
+     last=torch.load(run/'checkpoints/last.ckpt',map_location='cpu',weights_only=False);assert last['global_step']==30000
+     needed={'model_1','model_2','ema_model','optimizer1','optimizer2','random_state','sampler_state','lr_state','amp_state','controller_metadata'}
+     assert needed<=set(last) and last['amp_state'] is None
+-    assert last['controller_metadata']['cfg_sha256']==sha(WORK/'configs/R1_full_v2B.yaml') and last['controller_metadata']['stateless']
++    assert last['controller_metadata']['cfg_sha256']==sha(WORK/'configs/R2_fixed92.yaml') and last['controller_metadata']['stateless']
+     bestpath=run/'checkpoints/best.ckpt';best=torch.load(bestpath,map_location='cpu',weights_only=False)
+-    assert best['controller_metadata']['cfg_sha256']==sha(WORK/'configs/R1_full_v2B.yaml')
++    assert best['controller_metadata']['cfg_sha256']==sha(WORK/'configs/R2_fixed92.yaml')
+     vals=read_table(WORK/'results/validation_trace.csv');finalvals={int(r['step']):r for r in vals};assert set(finalvals)==set(range(200,30001,200))
+     bestvalue=max(float(r['student1_macro_dice']) for r in finalvals.values())
+     assert abs(bestvalue-best['best_metrics']['model1_best_val_dice'])<1e-10
+@@ -31,15 +33,21 @@
+     assert counts['optimizer1']>=30000 and counts['optimizer2']>=30000
+     initial=read_json(WORK/'reports/INITIALIZATION_ACTUAL.json');assert initial['joint_step']==0 and initial['fresh']
+     assert initial['sha256']==read_json(WORK/'protocol.json')['pretrain_sha256']
+-    atomic_json(WORK/'reports/SELECTED_CHECKPOINT.json',dict(status='FROZEN_BEFORE_TEST',time=now(),checkpoint=str(bestpath),sha256=sha(bestpath),
++    selection=dict(status='FROZEN_BEFORE_TEST',time=now(),checkpoint=str(bestpath),sha256=sha(bestpath),
+         student='model_1',selected_step=best['global_step'],selected_val_macro_dice=bestvalue,selection='original strict improvement of student1 validation macro Dice',
+-        validation_records=len(vals),test_metrics_consulted=False))
++        validation_records=len(vals),test_metrics_consulted=False)
++    frozen_selection=WORK/'reports/SELECTED_CHECKPOINT.json'
++    if frozen_selection.exists():
++        old=read_json(frozen_selection)
++        assert old['sha256']==selection['sha256'] and old['selected_step']==selection['selected_step']
++        assert old['selected_val_macro_dice']==selection['selected_val_macro_dice']
++    else:atomic_json(frozen_selection,selection)
+     atomic_json(WORK/'reports/TRAIN_POSTCHECK.json',dict(status='PASS',time=now(),logical_joint_steps=30000,raw_trace_rows=len(rows),
+         duplicate_trace_records=len(rows)-30000,optimizer_success_calls=counts,normal_calls_each_student=30000,
+         replayed_physical_updates=count if (count:=sum(counts.values())-60000) else 0,full_checkpoint_keys=sorted(last),
+         last_sha256=sha(run/'checkpoints/last.ckpt'),best_sha256=sha(bestpath),worker_resume_exact=False,test_access_before_selection=False))
+-    print('Completed R1 training checked; validation-selected student1 checkpoint frozen before final test.')
+-    from analyze_R1 import write_area_proposal
+-    write_area_proposal(rows)
++    print('Completed R2 training checked; validation-selected student1 checkpoint frozen before final test.')
++    assert sha(WORK/'R2_AREA_LOCK.json')==cfg['area_lock_sha256']
++    assert last['controller_metadata']['version']=='v2_fixed' and last['controller_metadata']['rectangle_h']==92
+ 
+ if __name__=='__main__':main()
+--- R1/scripts/control_cli.py
++++ R2/scripts/control_cli.py
+@@ -1,4 +1,4 @@
+-"""Only this R1 status and safe-stop controls; no other process signals."""
++"""Only this R2 status and safe-stop controls; no other process signals."""
+ import argparse
+ import time
+ from common import *
+@@ -8,10 +8,10 @@
+     s=read_json(WORK/'state/status.json')
+     if a.action=='status':print(json.dumps(s,ensure_ascii=False,indent=2));return
+     if s['status'] in ['DONE','INTERRUPTED','FAILED']:
+-        print('No active R1 to stop:',s['status']);return
++        print('No active R2 to stop:',s['status']);return
+     (WORK/'state/stop_requested').touch()
+-    atomic_json(WORK/'reports/LAST_STOP_REQUEST.json',dict(time=now(),scope='this R1 only',request='file flag; trainer saves at next full iteration boundary; no forced kill',state=s))
+-    print('R1 safe stop requested; waiting for completed checkpoint and process exit.',flush=True)
++    atomic_json(WORK/'reports/LAST_STOP_REQUEST.json',dict(time=now(),scope='this R2 only',request='file flag; trainer saves at next full iteration boundary; no forced kill',state=s))
++    print('R2 safe stop requested; waiting for completed checkpoint and process exit.',flush=True)
+     for _ in range(24):
+         time.sleep(5);s=read_json(WORK/'state/status.json')
+         if s['status'] in ['INTERRUPTED','DONE','FAILED'] and not s.get('child_pid'):
+--- R1/scripts/evaluate_R1.py
++++ R2/scripts/evaluate_R2.py
+@@ -5,7 +5,7 @@
+ from unified_evaluation import load_model,infer_volume,metrics
+ 
+ def main():
+-    selection=read_json(WORK/'reports/SELECTED_CHECKPOINT.json');cfg=read_json(WORK/'configs/R1_full_v2B.yaml')
++    selection=read_json(WORK/'reports/SELECTED_CHECKPOINT.json');cfg=read_json(WORK/'configs/R2_fixed92.yaml')
+     cp=selection['checkpoint'];ch=selection['sha256'];assert sha(cp)==ch
+     receipt=WORK/'results/EVALUATION_RECEIPT.json'
+     if receipt.exists():
+@@ -23,26 +23,26 @@
+                 pred=saved['prediction']
+         else:
+             pred=infer_volume(model,image);tmp=dst.with_suffix('.npz.tmp')
+-            with tmp.open('wb') as f:np.savez_compressed(f,prediction=pred,case=case,run='R1_v2_B',checkpoint_sha256=ch)
++            with tmp.open('wb') as f:np.savez_compressed(f,prediction=pred,case=case,run='R2_v2_B',checkpoint_sha256=ch)
+             os.replace(tmp,dst)
+         assert pred.shape==gt.shape
+         index.append(dict(case=case,patient=case.split('_')[0],prediction=str(dst),prediction_sha256=sha(dst),GT_source=str(source),GT_source_sha256=sha(source),
+             array_axes='z,y,x',original_shape='x'.join(map(str,gt.shape)),evaluation_shape='x'.join(map(str,pred.shape)),
+             evaluation_spacing='1,1,1',spacing_meaning='reconstruction grid, NOT physical mm',postprocessing='none',checkpoint_sha256=ch))
+         for c,name in [(1,'RV'),(2,'MYO'),(3,'LV')]:
+-            rows.append(dict(run='R1_v2_B',case=case,patient=case.split('_')[0],class_id=c,class_name=name,unit='grid',**metrics(pred==c,gt==c)))
++            rows.append(dict(run='R2_v2_B',case=case,patient=case.split('_')[0],class_id=c,class_name=name,unit='grid',**metrics(pred==c,gt==c)))
+         print('Final selected-checkpoint test case',case,flush=True)
+     keys=['dice','iou','hd95','asd']
+     write_csv(WORK/'results/case_class_metrics.csv',rows)
+-    classrows=[dict(run='R1_v2_B',class_name=name,unit='grid',**{k:float(np.mean([r[k] for r in rows if r['class_name']==name])) for k in keys}) for name in ['RV','MYO','LV']]
+-    write_csv(WORK/'results/R1_class_metrics.csv',classrows)
+-    caserows=[dict(run='R1_v2_B',case=c,patient=c.split('_')[0],unit='grid',**{k:float(np.mean([r[k] for r in rows if r['case']==c])) for k in keys}) for c in cases]
+-    write_csv(WORK/'results/R1_case_metrics.csv',caserows)
+-    patientrows=[dict(run='R1_v2_B',patient=p,frames=len([r for r in caserows if r['patient']==p]),unit='grid',
++    classrows=[dict(run='R2_v2_B',class_name=name,unit='grid',**{k:float(np.mean([r[k] for r in rows if r['class_name']==name])) for k in keys}) for name in ['RV','MYO','LV']]
++    write_csv(WORK/'results/R2_class_metrics.csv',classrows)
++    caserows=[dict(run='R2_v2_B',case=c,patient=c.split('_')[0],unit='grid',**{k:float(np.mean([r[k] for r in rows if r['case']==c])) for k in keys}) for c in cases]
++    write_csv(WORK/'results/R2_case_metrics.csv',caserows)
++    patientrows=[dict(run='R2_v2_B',patient=p,frames=len([r for r in caserows if r['patient']==p]),unit='grid',
+         **{k:float(np.mean([r[k] for r in caserows if r['patient']==p])) for k in keys}) for p in sorted({r['patient'] for r in caserows})]
+-    write_csv(WORK/'results/R1_patient_metrics.csv',patientrows);write_csv(WORK/'results/prediction_index.csv',index)
++    write_csv(WORK/'results/R2_patient_metrics.csv',patientrows);write_csv(WORK/'results/prediction_index.csv',index)
+     summary={k:float(np.mean([r[k] for r in rows])) for k in keys}
+-    write_csv(WORK/'results/R1_results.csv',[dict(run='R1_v2_B',status='EVALUATED',checkpoint=cp,checkpoint_sha256=ch,selected_step=ck['global_step'],
++    write_csv(WORK/'results/R2_results.csv',[dict(run='R2_v2_B',status='EVALUATED',checkpoint=cp,checkpoint_sha256=ch,selected_step=ck['global_step'],
+         cases=40,patients=20,unit='grid',**summary)])
+     atomic_json(receipt,dict(status='EVALUATED',time=now(),checkpoint=cp,checkpoint_sha256=ch,selected_step=ck['global_step'],
+         test_manifest=str(DATA/'test.list'),test_manifest_sha256=sha(DATA/'test.list'),metrics=summary,protocol='ACDC_v22_grid_directed_ASD',
+--- R1/scripts/launch_session.py
++++ R2/scripts/launch_session.py
+@@ -1,39 +1,55 @@
+-"""Idempotent session-local R1 launcher, no global tmux changes."""
++"""Idempotent session-local R2 launcher, no global tmux changes."""
+ import argparse
+ import fcntl
+ import shlex
+ import subprocess
++import time
+ from common import *
+ 
+-SESSION='beta_fft_R1_v2B_20261007'
++SESSION='beta_fft_R2_fixed92_20261007'
+ 
+ def main():
+     p=argparse.ArgumentParser();p.add_argument('--resume',action='store_true');a=p.parse_args()
+     lock=(WORK/'state/launcher.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX)
+     from preflight import verify_frozen
+     verify_frozen();state=read_json(WORK/'state/status.json')
+-    if state['status']=='DONE':print('R1 DONE:',WORK/'TCSMix_v2B_R1_final_evidence.tar.gz');return
++    if state['status']=='DONE':print('R2 DONE:',WORK/'TCSMix_R2_fixed92_final_evidence.tar.gz');return
+     pid=state.get('pipeline_pid')
+     if pid and Path(f'/proc/{pid}/cmdline').exists():
+         cmd=Path(f'/proc/{pid}/cmdline').read_bytes().decode(errors='replace')
+-        if str(WORK/'scripts/run_R1_pipeline.py') in cmd:
+-            print(f'Reuse live R1 controller PID{pid} session{SESSION}; no duplicate launch');return
++        if str(WORK/'scripts/run_R2_pipeline.py') in cmd:
++            print(f'Reuse live R2 controller PID{pid} session{SESSION}; no duplicate launch');return
+     if state['status'] in ['FAILED','INTERRUPTED'] and not a.resume:raise SystemExit('Same-run recovery required: use resume.sh; no restart')
+     command='/bin/bash '+shlex.quote(str(WORK/'scripts/pipeline_tmux.sh'))+(' --resume' if a.resume else '')
+     exists=subprocess.run(['tmux','has-session','-t',SESSION],capture_output=True).returncode==0
+     if exists:
+-        cwd=subprocess.run(['tmux','display-message','-p','-t',SESSION+':pipeline','#{pane_start_path}'],capture_output=True,text=True,check=True).stdout.strip()
+-        if cwd!=str(WORK):raise RuntimeError('Existing named tmux belongs to another directory; no mutation')
++        # tmux 3.0a has no pane_start_path; dead panes also lose current cwd.
++        original_command=subprocess.run(['tmux','display-message','-p','-t',SESSION+':pipeline','#{pane_start_command}'],capture_output=True,text=True,check=True).stdout.strip()
++        if str(WORK/'scripts/pipeline_tmux.sh') not in shlex.split(original_command):
++            raise RuntimeError('Existing named tmux has another pipeline command; no mutation')
++        dead=subprocess.run(['tmux','display-message','-p','-t',SESSION+':pipeline','#{pane_dead}'],capture_output=True,text=True,check=True).stdout.strip()
++        if dead=='0':
++            print('Reuse existing live R2 pipeline pane; awaiting heartbeat, no duplicate or respawn');return
+         subprocess.run(['tmux','respawn-pane','-k','-t',SESSION+':pipeline','-c',str(WORK),command],check=True)
+     else:
+         subprocess.run(['tmux','new-session','-d','-s',SESSION,'-n','pipeline','-c',str(WORK),command],check=True)
+         for name,mode in [('monitor','monitor'),('results','results')]:
+-            cmd=shlex.quote(str(PYTHON))+' '+shlex.quote(str(WORK/'scripts/monitor_R1.py'))+' --mode '+mode
++            cmd=shlex.quote(str(PYTHON))+' '+shlex.quote(str(WORK/'scripts/monitor_R2.py'))+' --mode '+mode
+             subprocess.run(['tmux','new-window','-t',SESSION,'-n',name,'-c',str(WORK),cmd],check=True)
++    # On resume, wait for the new controller heartbeat before reopening dead monitors.
++    for _ in range(20):
++        current=read_json(WORK/'state/status.json')
++        if current.get('pipeline_pid')!=pid:break
++        time.sleep(.25)
++    for name,mode in [('monitor','monitor'),('results','results')]:
++        dead=subprocess.run(['tmux','display-message','-p','-t',SESSION+':'+name,'#{pane_dead}'],capture_output=True,text=True,check=True).stdout.strip()
++        if dead=='1':
++            monitor=shlex.quote(str(PYTHON))+' '+shlex.quote(str(WORK/'scripts/monitor_R2.py'))+' --mode '+mode
++            subprocess.run(['tmux','respawn-pane','-k','-t',SESSION+':'+name,'-c',str(WORK),monitor],check=True)
+     for window in ['pipeline','monitor','results']:subprocess.run(['tmux','set-window-option','-t',SESSION+':'+window,'remain-on-exit','on'],check=True)
+     subprocess.run(['tmux','select-window','-t',SESSION+':monitor'],check=True)
+     atomic_json(WORK/'reports/TMUX_LAUNCH.json',dict(time=now(),session=SESSION,command=command,cwd=str(WORK),resume=a.resume,
+-        ownership='server tmux ordinary bash/Python subprocess pipeline',client_independent=True,R2_started=False))
++        ownership='server tmux ordinary bash/Python subprocess pipeline',client_independent=True,scope='authorized R2 only; old queue paused; R1 untouched'))
+     print('Server detached tmux launched:',SESSION)
+ 
+ if __name__=='__main__':main()
+--- R1/scripts/common.py
++++ R2/scripts/common.py
+@@ -68,3 +68,5 @@
+ 
+ def analysis_status(task, status, reason, **kwargs):
+     atomic_json(WORK / f'analysis/{task}/status.json', dict(task=task, status=status, reason=reason, time=now(), **kwargs))
++
++PARENT_R1 = WORK.parent / 'formal_R1_20261007'
+--- R1/scripts/package_R1.py
++++ R2/scripts/package_R2.py
+@@ -3,51 +3,79 @@
+ import shutil
+ import tarfile
+ import hashlib
++import csv
+ from common import *
+ 
+ def final_reviews():
+-    cfg=read_json(WORK/'configs/R1_full_v2B.yaml');manifest=read_json(WORK/'run_manifest.json');reviews=[]
++    import numpy as np
++    reviews=[];cfg=read_json(WORK/'configs/R2_fixed92.yaml')
+     try:
+         from preflight import verify_frozen
+-        verify_frozen();scope='PASS'
+-    except Exception as exc:scope='FAIL: '+str(exc)
+-    reviews.append(dict(round=1,topic='实验定义与范围',status=scope,controller=cfg['controller_version'],CTW='spatial .05',TRC='token',code_manifest=str(WORK/'run_manifest.json')))
++        verify_frozen()
++        assert cfg['controller_version']=='v2_fixed' and cfg['fixed_side']==.359375 and cfg['rectangle_h']==cfg['rectangle_w']==92
++        scope='PASS'
++    except Exception as exc:scope='FAIL: '+repr(exc)
++    reviews.append(dict(round=1,topic='唯一R2定义、范围与旧结果保护',status=scope,controller='v2_fixed',signal='v2_B',fixed_h=92,fixed_w=92,CTW='spatial .05',TRC='token',R1_retrained=False))
+     post=read_json(WORK/'reports/TRAIN_POSTCHECK.json') if (WORK/'reports/TRAIN_POSTCHECK.json').exists() else None
+     selection=read_json(WORK/'reports/SELECTED_CHECKPOINT.json') if (WORK/'reports/SELECTED_CHECKPOINT.json').exists() else None
+-    reviews.append(dict(round=2,topic='初始化预算和检查点选择',status='PASS' if post and selection else 'PARTIAL',
+-        evidence=['reports/INITIALIZATION_ACTUAL.json','reports/TRAIN_POSTCHECK.json','reports/SELECTED_CHECKPOINT.json'],postcheck=post,selection=selection))
++    initial=read_json(WORK/'reports/INITIALIZATION_ACTUAL.json') if (WORK/'reports/INITIALIZATION_ACTUAL.json').exists() else None
+     evaluation=read_json(WORK/'results/EVALUATION_RECEIPT.json') if (WORK/'results/EVALUATION_RECEIPT.json').exists() else None
++    wiring='PARTIAL'
++    if post and selection and initial:
++        try:
++            assert post['status']=='PASS' and post['logical_joint_steps']==30000
++            assert initial['joint_step']==0 and initial['fresh']
++            assert all(r['exact_pretrained_common_state'] and r['gamma']==0 for r in initial['checks'])
++            assert all(r['base_state_exact_match'] and r['router_state_empty'] for r in initial['optimizer_state_checks'])
++            assert not evaluation or selection['time']<evaluation['time']
++            assert not evaluation or selection['sha256']==evaluation['checkpoint_sha256']
++            assert (WORK/'reports/expected_effective_source.py').read_bytes()==(PARENT_R1/'runs/R1_full_v2B/v2_effective_source.py').read_bytes()
++            wiring='PASS'
++        except Exception as exc:wiring='FAIL: '+repr(exc)
++    reviews.append(dict(round=2,topic='接线、初始化、损失和预算及测试时序',status=wiring,postcheck=post,selection=selection,initializer=initial))
+     numeric='PARTIAL'
+     if evaluation:
+         try:
+-            import numpy as np
+-            rr=read_table(WORK/'results/case_class_metrics.csv');assert len(rr)==120
+-            for k in ['dice','iou','hd95','asd']:assert abs(np.mean([float(r[k]) for r in rr])-evaluation['metrics'][k])<1e-10
+-            assert all(r['unit']=='grid' for r in rr);numeric='PASS'
++            rows=read_table(WORK/'results/case_class_metrics.csv');assert len(rows)==120
++            for k in ['dice','iou','hd95','asd']:assert abs(np.mean([float(r[k]) for r in rows])-evaluation['metrics'][k])<1e-10
++            for level,idfield,file in [('class','class_name','R2_class_metrics.csv'),('frame','case','R2_case_metrics.csv'),('patient','patient','R2_patient_metrics.csv')]:
++                for r in read_table(WORK/'results'/file):
++                    subset=[x for x in rows if x[idfield]==r[idfield]]
++                    for k in ['dice','iou','hd95','asd']:assert abs(np.mean([float(x[k]) for x in subset])-float(r[k]))<1e-10
++            trace=read_table(WORK/'results/R2_control_trace.csv');assert len({int(r['step']) for r in trace})==30000
++            assert all(r['rectangle_h']=='92' and r['rectangle_w']=='92' and float(r['actual_area'])==8464/65536 and float(r['s_actual'])==.359375 for r in trace)
++            assert evaluation['protocol']=='ACDC_v22_grid_directed_ASD' and evaluation['postprocessing']=='none'
++            differences=read_table(WORK/'analysis/paired_case_class_differences.csv')
++            for d in differences:
++                for k in ['dice','iou','hd95','asd']:assert abs(float(d[k+'_method'])-float(d[k+'_reference'])-float(d[k+'_delta']))<1e-10
++            assert len(differences)==480
++            numeric='PASS'
+         except Exception as exc:numeric='FAIL: '+repr(exc)
+-    reviews.append(dict(round=3,topic='轨迹和评价数值单位',status=numeric,unit='grid, not mm',empty_policy='both0,one-grid-diagonal',evidence='results/EVALUATION_RECEIPT.json; analysis/scale_distribution.csv'))
++    reviews.append(dict(round=3,topic='固定逐步轨迹、面积、指标汇总和配对单位',status=numeric,unit='grid, not mm',ASD='directed prediction-to-GT',HD95='concatenated bidirectional surface distances'))
+     errors=read_json(WORK/'state/stage_errors.json') if (WORK/'state/stage_errors.json').exists() else []
++    geometry=WORK/'analysis/error_R1_R2/ERROR_ANALYSIS_RECEIPT.json'
++    audit=read_json(geometry) if geometry.exists() else dict(status='PARTIAL',reason='frozen prediction geometry unavailable')
+     diffs=read_table(WORK/'analysis/paired_case_class_differences.csv') if (WORK/'analysis/paired_case_class_differences.csv').exists() else []
+-    reviews.append(dict(round=4,topic='失败与不利结果完整性',status='PASS',all_stage_errors=errors,paired_rows=len(diffs),
+-        unfavorable_or_equal_dice_rows=sum(float(r['dice_delta'])<=0 for r in diffs),raw_logs_preserved=True,no_result_based_retraining=True))
+-    old=read_json(WORK/'state/old_inputs_locked.json');unchanged=all(sha(p)==h for p,h in old.items())
+-    no_R2=not (WORK/'runs/R2').exists()
+-    reviews.append(dict(round=5,topic='可追溯归档与旧队列/R2边界',status='PASS' if unchanged and no_R2 else 'FAIL',original_inputs_unchanged=len(old) if unchanged else False,R2_started=not no_R2,
+-        archive_validation='all snapshot bytes verified against SHA256SUMS on compressed readback; see archive receipt'))
+-    atomic_json(WORK/'reports/FINAL_FIVE_ROUND_CHECK.json',dict(time=now(),reviews=reviews,training_updates_triggered=0,
+-        status='FAIL' if any(r['status'].startswith('FAIL') for r in reviews) else 'PASS' if all(r['status']=='PASS' for r in reviews) else 'PARTIAL'))
+-    (WORK/'reports/FINAL_FIVE_ROUND_CHECK_CN.md').write_text('# 最终五轮核查\n\n'+'\n'.join(f"{r['round']}. {r['topic']}：{r['status']}。" for r in reviews)+
+-        '\n\n检查只核对实际协议、日志、轨迹、评价和归档；未触发训练或改变方法。失败/缺失报告与全部配对行保留。详细证据见同名JSON。\n')
++    reviews.append(dict(round=4,topic='误差解释的mask证据及全部不利结果',status='PASS' if audit.get('status')=='DONE' and audit.get('recomputed_metrics_match_frozen_CSV') else 'PARTIAL',geometry=audit,paired_rows=len(diffs),unfavorable_or_equal_Dice_rows=sum(float(r['dice_delta'])<=0 for r in diffs),all_stage_errors=errors,all_cases_retained=True,no_test_based_retraining=True,causal_claim='descriptive only, no information/variation/curriculum/CTW synergy decomposition'))
++    old=read_json(WORK/'state/old_inputs_locked.json');parent=read_json(WORK/'state/parent_R1_inputs_locked.json')
++    preserved=all(sha(p)==h for p,h in {**old,**parent}.items())
++    queue=read_json(PROJECT/'revision_runs_20261006/state/queue.json')
++    assert not any((WORK/'runs'/name).exists() for name in ['R1','R3','E1','E2','E3','E4','E5'])
++    reviews.append(dict(round=5,topic='独立后台、恢复边界、归档可追溯与旧队列',status='PASS' if preserved and queue['status']=='INTERRUPTED' else 'FAIL',preserved_input_files=len(old)+len(parent),server_tmux='beta_fft_R2_fixed92_20261007',resume_exact=False,worker_RNG_boundary='16-worker augment/prefetch not bitwise restorable',archive_validation='compressed readback every member against internal SHA256SUMS, then outer SHA256; final receipt written AFTER snapshot'))
++    status='FAIL' if any(r['status'].startswith('FAIL') for r in reviews) else 'PASS' if all(r['status']=='PASS' for r in reviews) else 'PARTIAL'
++    atomic_json(WORK/'reports/FINAL_FIVE_ROUND_CHECK.json',dict(time=now(),reviews=reviews,training_updates_triggered=0,status=status))
++    (WORK/'reports/FINAL_FIVE_ROUND_CHECK_CN.md').write_text('# 最终五轮核查\n\n'+'\n'.join(f"{r['round']}. {r['topic']}：{r['status']}。" for r in reviews)+'\n\n核查实际协议、接线/初始化、预算与数值、病例mask证据、独立归档；不触发训练或改变方法，PARTIAL/失败和不利结果保留。归档校验完成后另写回执，包内是此前一致快照。\n')
+ 
+ def package(start=False):
+     if not start:final_reviews()
+     label='startup' if start else 'final';stamp=now().replace(':','').replace('.','')
+     snapshot=WORK/'archives'/f'{label}_snapshot_{stamp}';snapshot.mkdir(parents=True)
+     allowed={'.py','.sh','.md','.json','.yaml','.csv','.tsv','.txt','.patch','.png','.svg','.log'}
+-    files=[p for p in WORK.iterdir() if p.is_file() and p.suffix in allowed]
++    captured=read_json(WORK/'state/status.json');cutoff=int(captured.get('joint_step',0))
++    files=[p for p in WORK.iterdir() if p.is_file() and p.suffix in allowed and p.name!='final_archive_receipt.json']
+     roots=['scripts','source','configs','reports','handoff_sources','results','analysis']
+     for root in roots:files.extend(p for p in (WORK/root).rglob('*') if p.is_file() and p.suffix in allowed and '__pycache__' not in p.parts and 'predictions' not in p.parts)
+-    cfg=read_json(WORK/'configs/R1_full_v2B.yaml');run=Path(cfg['run_root'])
++    cfg=read_json(WORK/'configs/R2_fixed92.yaml');run=Path(cfg['run_root'])
+     files.extend(p for p in run.rglob('*') if p.is_file() and p.suffix in {'.py','.csv','.json','.log'} and 'checkpoints' not in p.parts)
+     # Immutable finished phase logs, or finite startup excerpts; never copy a live log in a race.
+     for p in (WORK/'logs').glob('*.log'):
+@@ -58,28 +86,35 @@
+         if start and p.suffix in ['.log','.csv']:
+             raw=p.read_bytes()
+             if raw and not raw.endswith(b'\n'):raw=raw[:raw.rfind(b'\n')+1]
+-            dst.write_bytes(raw)
++            if p.suffix=='.csv' and ('results' in p.parts or 'audit' in p.parts):
++                import io
++                rows=list(csv.DictReader(io.StringIO(raw.decode())))
++                field='logical_step' if rows and 'logical_step' in rows[0] else 'step'
++                if rows and field in rows[0]:rows=[r for r in rows if int(r[field])<=cutoff]
++                fields=next(csv.reader(io.StringIO(raw.decode())),[])
++                write_csv(dst,rows,fields)
++            else:dst.write_bytes(raw)
+         else:shutil.copyfile(p,dst)
+     # Atomic JSON read captures one coherent live heartbeat; scientific outputs are phase-stable.
+-    for name in ['status.json','stage_errors.json','stage_history.json','train_segments.json','old_inputs_locked.json']:
++    for name in ['status.json','stage_errors.json','stage_history.json','train_segments.json','old_inputs_locked.json','parent_R1_inputs_locked.json']:
+         p=WORK/'state'/name
+-        if p.exists():atomic_json(snapshot/'state'/name,read_json(p))
++        if p.exists():atomic_json(snapshot/'state'/name,captured if name=='status.json' else read_json(p))
+     checkpoints=[]
+     for p in (run/'checkpoints').glob('*.ckpt'):checkpoints.append(dict(path=str(p),sha256=sha(p),large_weight_not_packaged=True))
+     atomic_json(snapshot/'CHECKPOINT_INDEX.json',checkpoints)
+-    atomic_json(snapshot/'SNAPSHOT_RECEIPT.json',dict(time=now(),label=label,medical_raw_arrays_and_predictions_excluded=True,
++    atomic_json(snapshot/'SNAPSHOT_RECEIPT.json',dict(time=now(),label=label,cutoff_joint_step=cutoff,startup_trace_and_optimizer_ledger_truncated_to_common_completed_step=start,medical_raw_arrays_and_predictions_excluded=True,
+         rule='static copied bytes and captured atomic heartbeat, no large weights/credentials; qualitative PNG/SVG follow existing anonymous ACDC render rules'))
+     sums={str(p.relative_to(snapshot)):sha(p) for p in sorted(snapshot.rglob('*')) if p.is_file()}
+     (snapshot/'SHA256SUMS').write_text(''.join(f'{h}  {name}\n' for name,h in sums.items()))
+-    name='TCSMix_v2B_R1_start_evidence.tar.gz' if start else 'TCSMix_v2B_R1_final_evidence.tar.gz'
++    name='TCSMix_R2_fixed92_start_evidence.tar.gz' if start else 'TCSMix_R2_fixed92_final_evidence.tar.gz'
+     archive=WORK/name
+     if archive.exists():
+         preserved=WORK/'archives'/f'previous_{stamp}_{name}';shutil.move(archive,preserved)
+         outer=Path(str(archive)+'.sha256')
+         if outer.exists():shutil.move(outer,Path(str(preserved)+'.sha256'))
+-    with tarfile.open(archive,'w:gz',compresslevel=6) as tar:tar.add(snapshot,arcname='TCSMix_v2B_R1_'+label)
++    with tarfile.open(archive,'w:gz',compresslevel=6) as tar:tar.add(snapshot,arcname='TCSMix_R2_fixed92_'+label)
+     with tarfile.open(archive,'r:gz') as tar:
+-        prefix='TCSMix_v2B_R1_'+label+'/'
++        prefix='TCSMix_R2_fixed92_'+label+'/'
+         members={m.name[len(prefix):]:m for m in tar.getmembers() if m.isfile()}
+         assert set(members)==set(sums)|{'SHA256SUMS'}
+         for p,h in sums.items():assert hashlib.sha256(tar.extractfile(members[p]).read()).hexdigest()==h
+--- R1/scripts/train_R1_entry.py
++++ R2/scripts/train_R2_entry.py
+@@ -1,4 +1,4 @@
+-"""Authorized single Full R1, using the actual accepted short-phase scientific wiring."""
++"""Authorized single Full R2, using the actual accepted short-phase scientific wiring."""
+ import argparse
+ import difflib
+ import fcntl
+@@ -18,19 +18,21 @@
+ 
+ def main():
+     p=argparse.ArgumentParser();p.add_argument('--resume',action='store_true');a=p.parse_args()
+-    cfg=read_json(WORK/'configs/R1_full_v2B.yaml')
+-    assert cfg['formal_authorized'] and cfg['phase']=='formal_R1' and cfg['task']=='R1'
+-    assert cfg['max_iterations']==30000 and cfg['weight_mode']=='spatial' and cfg['trc']=='token' and cfg['controller_version']=='v2_B'
++    cfg=read_json(WORK/'configs/R2_fixed92.yaml')
++    assert cfg['formal_authorized'] and cfg['phase']=='formal_R2' and cfg['task']=='R2'
++    assert cfg['max_iterations']==30000 and cfg['weight_mode']=='spatial' and cfg['trc']=='token' and cfg['controller_version']=='v2_fixed'
++    assert cfg['signal_version']=='v2_B' and cfg['fixed_side']==.359375 and cfg['mix_mode']=='fixed'
+     lock=(WORK/'state/training.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+     from preflight import verify_frozen
+     verify_frozen()
+-    run=Path(cfg['run_root']);cfg=dict(cfg,_resume=a.resume,config_sha256=sha(WORK/'configs/R1_full_v2B.yaml'),segment_id=now().replace(':','').replace('.',''))
+-    if not a.resume and ((run/'train.log').exists() or (WORK/'results/R1_control_trace.csv').exists()):raise RuntimeError('Existing R1 must be resumed, never restarted')
++    run=Path(cfg['run_root']);cfg=dict(cfg,_resume=a.resume,config_sha256=sha(WORK/'configs/R2_fixed92.yaml'),segment_id=now().replace(':','').replace('.',''))
++    if not a.resume and ((run/'train.log').exists() or (WORK/'results/R2_control_trace.csv').exists()):raise RuntimeError('Existing R2 must be resumed, never restarted')
+     if a.resume:
+         import torch
+         ck=torch.load(run/'checkpoints/last.ckpt',map_location='cpu',weights_only=False)
+         assert ck['global_step']<30000 and ck['controller_metadata']['cfg_sha256']==cfg['config_sha256']
+-        assert ck['controller_metadata']['version']=='v2_B' and ck['controller_metadata']['stateless']
++        assert ck['controller_metadata']['version']=='v2_fixed' and ck['controller_metadata']['stateless']
++        assert ck['controller_metadata']['area_lock_sha256']==cfg['area_lock_sha256']
+         assert {'model_1','model_2','ema_model','optimizer1','optimizer2','random_state','sampler_state','lr_state','amp_state'}<=set(ck)
+         del ck
+     os.environ.update(CUDA_VISIBLE_DEVICES='0',WANDB_MODE='disabled');bootstrap()
+@@ -44,7 +46,7 @@
+     assert sha(WORK/'scripts/controller.py')==cfg['controller_source_sha256']
+     (run/'v2_effective_source.py').write_text(source)
+     parent=build_beta_source(cfg)
+-    (WORK/'reports/R1_control_wiring.patch').write_text(''.join(difflib.unified_diff(parent.splitlines(True),source.splitlines(True),fromfile='retained_Full_durable.py',tofile='R1_v2B_scientific_loop.py')))
++    (WORK/'reports/R2_control_wiring.patch').write_text(''.join(difflib.unified_diff(parent.splitlines(True),source.splitlines(True),fromfile='retained_Full_durable.py',tofile='R2_fixed92_scientific_loop.py')))
+     argv=[str(WORK/'source/historical_full.py'),'--root_path',cfg['dataset_root'],'--run_root',str(run),
+         '--pretrained_model',str(Path(cfg['pretrained_model']).parent),'--seed','42','--labelnum','7','--gpu','0','--max_iterations','30000','--save_interval','200',
+         '--mask_token_enabled','true','--adamix_enabled','true','--innovation_x_id','V21_3_X03_CONTOUR_RELIABILITY_WEIGHT',
+--- R1/scripts/analyze_R1.py
++++ R2/scripts/analyze_R2.py
+@@ -1,211 +1,99 @@
+-"""Predefined full-trajectory, non-test quality and honest historical comparisons."""
++"""CPU-only fixed-area audit and descriptive four-method comparisons, all cases retained."""
+ import collections
+-import math
+ import numpy as np
+ import matplotlib
+ matplotlib.use('Agg')
+ import matplotlib.pyplot as plt
+ from common import *
+-
+-def write_area_proposal(rows):
+-    latest={int(r['step']):r for r in rows}
+-    complete=set(latest)==set(range(1,30001))
+-    if not complete:
+-        (WORK/'R2_FIXED_AREA_PROPOSAL.md').write_text('# R2固定面积建议\n\nNA：R1完整30000步真实面积轨迹尚未完成；不以部分轨迹锁定固定尺度。R2未授权、未启动。\n');return
+-    mean=sum(float(latest[i]['actual_area']) for i in range(1,30001))/30000
+-    pixels=mean*65536;d=min(range(1,256),key=lambda x:(abs(x*x-pixels),x));area=d*d/65536
+-    proposal=dict(status='PROPOSAL_ONLY_NOT_RUN',time=now(),trace_sha256=sha(WORK/'results/R1_control_trace.csv'),n_final_logical_steps=30000,
+-        raw_rows=len(rows),duplicates=len(rows)-30000,mean_actual_area=mean,mean_actual_pixels=pixels,h=d,w=d,fixed_side=d/256,fixed_area=area,
+-        area_absolute_error=area-mean,relative_error=(area-mean)/mean,error_percentage_points=100*(area-mean),
+-        rule='nearest integer square pixel area to full mean actual area; lower side wins exact tie',test_metrics_read=False,R2_started=False)
+-    atomic_json(WORK/'analysis/R2_area_proposal.json',proposal)
+-    (WORK/'R2_FIXED_AREA_PROPOSAL.md').write_text(f'''# R2固定面积建议（不启动）
+-
+-仅使用R1完整真实逻辑步1–30000的实际交换面积，保留所有原始记录；恢复重复step采用最后一次对应最终轨迹的记录。平均面积{mean:.10f}（{100*mean:.7f}%），平均像素面积{pixels:.4f}。
+-原方形比例下选择最接近平均像素面积的整数平方：**{d}×{d}**，fixed_side={d}/256={d/256:.10f}，实际面积{area:.10f}。有符号面积差{area-mean:.10f}，绝对匹配误差{abs(area-mean):.10f}，相对误差{(area-mean)/mean:.6%}，百分点差{100*(area-mean):.7f}。
+-定义只读取trace，不读取测试指标；建议在最终测试前由train_postcheck生成。当前不写正式R2锁定配置，不启动R2。以后是否执行需用户另行授权；R1相对旧Full差值不能单独归因于动态调度。
+-轨迹SHA256：{proposal['trace_sha256']}。面积计算原始统计见analysis/R2_area_proposal.json。
+-''')
+-
+-def trajectory():
+-    path=WORK/'results/R1_control_trace.csv';rows=read_table(path) if path.exists() else [];latest={int(r['step']):r for r in rows}
+-    final=[latest[k] for k in sorted(latest)];summary=[]
+-    for lo,hi in [(1,5000),(5001,10000),(10001,15000),(15001,20000),(20001,25000),(25001,30000),(1,30000)]:
+-        rr=[r for r in final if lo<=int(r['step'])<=hi]
+-        for version,key in [('v2_B','q'),('old_same_teacher_replay','old_q')]:
+-            ds=[int(r['rectangle_h']) if version=='v2_B' else round(256*(.18+.20*float(r[key]))) for r in rr]
+-            counts=collections.Counter(ds)
+-            summary.append(dict(segment_start=lo,segment_end=hi,controller=version,n_recorded=len(rr),requested_n=hi-lo+1,
+-                coverage='COMPLETE' if len(rr)==hi-lo+1 else 'PARTIAL',sizes=json.dumps(dict(sorted(counts.items()))),n_sizes=len(counts),
+-                modal_fraction=max(counts.values())/len(rr) if rr else 'NA',q_min=min(float(r[key]) for r in rr) if rr else 'NA',q_max=max(float(r[key]) for r in rr) if rr else 'NA',
+-                q_mean=np.mean([float(r[key]) for r in rr]) if rr else 'NA',area_mean=np.mean([d*d/65536 for d in ds]) if ds else 'NA',
+-                area_min=min(d*d/65536 for d in ds) if ds else 'NA',area_max=max(d*d/65536 for d in ds) if ds else 'NA',
+-                min_endpoint_hits=ds.count(46),max_endpoint_hits=ds.count(97),
+-                fallback=sum(r['fallback']=='True' for r in rr) if version=='v2_B' else 0,
+-                size_changes=sum(a!=b for a,b in zip(ds,ds[1:])),scope='recorded logical iterations; old replay uses identical v2 teacher, not independently trained old model'))
+-    write_csv(WORK/'analysis/scale_distribution.csv',summary);write_area_proposal(rows)
+-    if final:
+-        steps=[int(r['step']) for r in final];fig,axes=plt.subplots(3,2,figsize=(12,10),layout='constrained')
+-        axes[0,0].plot(steps,[float(r['old_q']) for r in final],label='old: same v2 teacher',linewidth=.5);axes[0,0].plot(steps,[float(r['q']) for r in final],label='v2_B',linewidth=.5);axes[0,0].legend();axes[0,0].set_ylabel('Teacher control proxy')
+-        axes[0,1].plot(steps,[int(r['rectangle_h']) for r in final],linewidth=.5);axes[0,1].set_ylabel('Actual rectangle side (pixels)')
+-        axes[1,0].plot(steps,[100*float(r['actual_area']) for r in final],linewidth=.5);axes[1,0].set_ylabel('Actual exchanged area (%)')
+-        for c in [1,2,3]:axes[1,1].plot(steps,[int(r[f'n_{c}']) for r in final],label=f'class{c}',linewidth=.5)
+-        axes[1,1].set_ylabel('Original LCC support pixels');axes[1,1].legend()
+-        axes[2,0].plot(steps,[float(r['ctw_loss']) for r in final],linewidth=.5);axes[2,0].set_ylabel('Original spatial CTW loss')
+-        for r in summary[:-2]:
+-            if r['controller']=='v2_B' and r['n_recorded']:
+-                cs=json.loads(r['sizes']);axes[2,1].plot([int(k) for k in cs],[v/r['n_recorded'] for v in cs.values()],label=f"{r['segment_start']}-{r['segment_end']}",marker='o')
+-        axes[2,1].legend(fontsize=7);axes[2,1].set(xlabel='Rectangle side (pixels)',ylabel='Within-stage fraction')
+-        for a in axes.ravel()[:-1]:a.set_xlabel('Joint iteration')
+-        fig.suptitle('R1 v2_B: real training trajectory | predefined 5000-step segments')
+-        save(fig,'control_trajectory')
+-    stable=[float(r['step_seconds']) for r in final if int(r['step'])>50 and int(r['step'])%200 not in range(0,11)]
+-    segments=read_json(WORK/'state/train_segments.json') if (WORK/'state/train_segments.json').exists() else []
+-    cost=dict(recorded_logical_steps=len(final),raw_trace_rows=len(rows),training_active_segment_seconds=sum(r['elapsed_seconds'] for r in segments),
+-        stable_timer_median_seconds=float(np.median(stable)) if stable else 'NA',stable_recorded_steps=len(stable),
+-        timer_scope='start after loader yields to control trace after optimizer; excludes validation/EMA/checkpoints following record and batch waiting',
+-        peak_allocated_bytes=max(int(r['peak_cuda_bytes']) for r in final) if final else 'NA',
+-        median_controller_wall_ms=float(np.median([float(r['controller_ms']) for r in final])) if final else 'NA',
+-        host='n1',gpu='GPU0 A10040GB',precision='FP32',batch24=24,original_teacher_forward_count=4,
+-        log_overhead='append optimizer events/step trace and inherited revision telemetry; no duplicate old-teacher forward; no claim of paired full training overhead delta')
+-    atomic_json(WORK/'analysis/runtime_cost.json',cost)
+-    return final,summary
++KEYS=['dice','iou','hd95','asd']
+ 
+ def save(fig,name):
+     for ext in ['png','svg']:fig.savefig(WORK/f'analysis/{name}.{ext}',dpi=160,bbox_inches='tight')
+     plt.close(fig)
+ 
+-def confidence_quality():
+-    import torch
+-    import revision_runtime as r
+-    from controller import signals
+-    from accepted_diagnostic_inputs import samples,pseudolabel,scores
+-    cfg=read_json(WORK/'configs/R1_full_v2B.yaml');r.CFG=cfg
+-    items=[s for s in samples() if s['gt'] is not None];assert len(items)==34
+-    original=read_table(WORK/'handoff_sources/diagnostic_samples.csv');current=read_table(WORK/'analysis/diagnostic_samples.csv')
+-    assert {s['sample']:s['input_sha256'] for s in original}=={s['sample']:s['input_sha256'] for s in current}
+-    rows=[]
+-    for which in ['best','last']:
+-        cp=Path(cfg['run_root'])/f'checkpoints/{which}.ckpt'
+-        if not cp.exists():continue
+-        model=r.BCP_net(ema=True);ck=torch.load(cp,map_location='cpu',weights_only=False);model.load_state_dict(ck['ema_model'],strict=True)
+-        frozen={k:v.detach().clone() for k,v in model.state_dict().items()}
+-        for mode in ['eval','train_snapshot']:
+-            model.train(mode=='train_snapshot')
+-            for cohort in ['labeled_train','validation']:
+-                subset=[s for s in items if s['cohort']==cohort]
+-                for start in range(0,len(subset),12):
+-                    batch=subset[start:start+12];n=len(batch)//2;assert n*2==len(batch)
+-                    model.load_state_dict(frozen);torch.manual_seed(4261100+start//12);torch.cuda.manual_seed_all(4261100+start//12)
+-                    x=torch.stack([s['x'] for s in batch]).cuda()
+-                    with torch.no_grad():
+-                        la=model(x[:n]);lb=model(x[n:]);y=torch.cat([pseudolabel(la,nms=1),pseudolabel(lb,nms=1)]);logits=torch.cat([la,lb])
+-                        for i,sample in enumerate(batch):
+-                            logit=logits[i:i+1];yy=y[i:i+1];st=signals(logit,logit,yy,yy,cfg['foreground_ids'],cfg['background_id'])
+-                            pred=yy[0].cpu().numpy();gt=sample['gt'];quality=scores(pred,gt)
+-                            row=dict(checkpoint=str(cp),checkpoint_sha256=sha(cp),checkpoint_step=ck['global_step'],branch='ema_model',mode=mode,
+-                                sample=sample['id'],patient=sample['patient'],cohort=cohort,old_q=st['old_q'],q_B=st['q_margin'],fallback=st['fallback'],
+-                                background_fraction=st['predicted_background_fraction'],background_confidence=st['background_confidence'],
+-                                rectangle_side=round(256*(.18+.20*st['q_margin'])),GT_foreground_fraction=float((gt>0).mean()),
+-                                GT_present_classes=';'.join(str(c) for c in [1,2,3] if (gt==c).any()),**quality)
+-                            for c in cfg['foreground_ids']:row.update({f'n_{c}':st['foreground_counts'][str(c)]//2,f'prob_class{c}':st['q_by_class'][str(c)],f'margin_class{c}':st['margin_by_class'][str(c)]})
+-                            rows.append(row)
+-                    model.load_state_dict(frozen)
+-        del model,ck,frozen;torch.cuda.empty_cache()
+-    write_csv(WORK/'analysis/confidence_quality.csv',rows)
+-    if rows:
+-        from scipy.stats import spearmanr
+-        corr=[]
+-        for cp in sorted({row['checkpoint'] for row in rows}):
+-            for mode in ['eval','train_snapshot']:
+-                for cohort in ['labeled_train','validation']:
+-                    rr=[row for row in rows if row['checkpoint']==cp and row['mode']==mode and row['cohort']==cohort]
+-                    rho=spearmanr([row['q_B'] for row in rr],[row['macro_dice'] for row in rr]).statistic
+-                    corr.append(dict(checkpoint=cp,mode=mode,cohort=cohort,slices=len(rr),patients=len({row['patient'] for row in rr}),
+-                        spearman=float(rho) if np.isfinite(rho) else 'NA',interpretation='descriptive repeated snapshots/slices; no parameter or checkpoint selection by quality'))
+-        write_csv(WORK/'analysis/confidence_quality_correlations.csv',corr)
+-        fig,axes=plt.subplots(1,2,figsize=(10,4),layout='constrained')
+-        for mode in ['eval','train_snapshot']:
+-            rr=[row for row in rows if row['mode']==mode and row['cohort']=='validation'];axes[0].scatter([row['q_B'] for row in rr],[row['macro_dice'] for row in rr],s=13,alpha=.6,label=mode)
+-            axes[1].scatter([row['background_fraction'] for row in rr],[row['q_B'] for row in rr],s=13,alpha=.6,label=mode)
+-        axes[0].set(xlabel='Foreground class-balanced probability margin',ylabel='Three-foreground macro Dice');axes[1].set(xlabel='Processed predicted background fraction',ylabel='Control proxy')
+-        for a in axes:a.legend()
+-        fig.suptitle('Offline final teachers on fixed validation slices | not test / not full trajectory');save(fig,'confidence_quality')
+-    return dict(status='DONE' if rows else 'PARTIAL',rows=len(rows),labeled_patients=7,validation_patients=10,test_inputs=0,
+-        GT_use='diagnostic only; never in unlabeled controller',middle_checkpoints='NA: only retained selected best and last teachers',
+-        state='independent process, reset cloned buffers per batch, no optimizer updates; post-step teachers not historical per-step logits')
++def trajectory():
++    summaries=[];final=[];series={}
++    for method,path in [('R1_v2_B',PARENT_R1/'results/R1_control_trace.csv'),('R2_fixed92',WORK/'results/R2_control_trace.csv')]:
++        rows=read_table(path) if path.exists() else [];latest={int(r['step']):r for r in rows};ordered=[latest[k] for k in sorted(latest)]
++        series[method]=ordered
++        if method=='R2_fixed92':final=ordered;raw_n=len(rows)
++        for lo,hi in [(1,5000),(5001,10000),(10001,15000),(15001,20000),(20001,25000),(25001,30000),(1,30000)]:
++            rr=[r for r in ordered if lo<=int(r['step'])<=hi];ds=[int(r['rectangle_h']) for r in rr];counts=collections.Counter(ds)
++            summaries.append(dict(method=method,segment_start=lo,segment_end=hi,n_recorded=len(rr),expected=hi-lo+1,coverage='COMPLETE' if len(rr)==hi-lo+1 else 'PARTIAL',sizes=json.dumps(dict(sorted(counts.items()))),n_sizes=len(counts),modal_fraction=max(counts.values())/len(rr) if rr else 'NA',q_B_min=min(float(r['q_B']) for r in rr) if rr else 'NA',q_B_max=max(float(r['q_B']) for r in rr) if rr else 'NA',q_B_mean=float(np.mean([float(r['q_B']) for r in rr])) if rr else 'NA',actual_area_mean=float(np.mean([float(r['actual_area']) for r in rr])) if rr else 'NA',actual_area_min=min(float(r['actual_area']) for r in rr) if rr else 'NA',actual_area_max=max(float(r['actual_area']) for r in rr) if rr else 'NA',size_changes=sum(x!=y for x,y in zip(ds,ds[1:])),fallback=sum(r['fallback']=='True' for r in rr),scope='actual logged iterations; q_B is diagnostic only in R2'))
++    write_csv(WORK/'analysis/scale_distribution.csv',summaries)
++    errors=[]
++    for r1 in summaries:
++        if r1['method']!='R1_v2_B':continue
++        r2=next(r for r in summaries if r['method']=='R2_fixed92' and r['segment_start']==r1['segment_start'] and r['segment_end']==r1['segment_end'])
++        errors.append(dict(segment_start=r1['segment_start'],segment_end=r1['segment_end'],R1_mean_actual_area=r1['actual_area_mean'],R2_recorded_mean_area=r2['actual_area_mean'],R2_locked_area=8464/65536,signed_area_error=8464/65536-r1['actual_area_mean'],error_percentage_points=100*(8464/65536-r1['actual_area_mean']),relative_error=(8464/65536-r1['actual_area_mean'])/r1['actual_area_mean'],interpretation='full-run mean match does not match each stage or individual step'))
++    write_csv(WORK/'analysis/area_matching_by_stage.csv',errors)
++    fig,axes=plt.subplots(2,2,figsize=(11,7),layout='constrained')
++    for method,rr in series.items():
++        if not rr:continue
++        steps=[int(r['step']) for r in rr]
++        axes[0,0].plot(steps,[int(r['rectangle_h']) for r in rr],label=method,linewidth=.5)
++        axes[0,1].plot(steps,[100*float(r['actual_area']) for r in rr],label=method,linewidth=.5)
++        axes[1,0].plot(steps,[float(r['q_B']) for r in rr],label=method,linewidth=.5)
++    for r in summaries:
++        if r['method']=='R1_v2_B' and r['segment_end']-r['segment_start']==4999:
++            counts=json.loads(r['sizes']);axes[1,1].plot([int(x) for x in counts],[n/r['n_recorded'] for n in counts.values()],marker='o',label=f"{r['segment_start']}-{r['segment_end']}")
++    axes[1,1].axvline(92,color='black',linestyle='--',label='R2 fixed92')
++    for ax,title in zip(axes.ravel(),['Actual side (pixels)','Actual area (%)','Foreground balanced margin q_B','R1 predefined stage side distribution']):ax.set_title(title);ax.legend(fontsize=7)
++    for ax in axes.ravel()[:3]:ax.set_xlabel('Joint iteration')
++    axes[1,1].set(xlabel='Side (pixels)',ylabel='Stage fraction')
++    fig.suptitle('R1 dynamic vs R2 fixed area | independent training trajectories');save(fig,'dynamic_fixed_trajectory')
++    stable=[float(r['step_seconds']) for r in final if int(r['step'])>50 and int(r['step'])%200 not in range(0,11)]
++    segments=read_json(WORK/'state/train_segments.json') if (WORK/'state/train_segments.json').exists() else []
++    atomic_json(WORK/'analysis/runtime_cost.json',dict(recorded_logical_steps=len(final),raw_trace_rows=raw_n,training_active_segment_seconds=sum(r['elapsed_seconds'] for r in segments),stable_timer_median_seconds=float(np.median(stable)) if stable else 'NA',timer_scope='step_seconds excludes batch waiting, following validation/EMA/checkpoint; end-to-end active segments include all of them',peak_allocated_bytes=max(int(r['peak_cuda_bytes']) for r in final) if final else 'NA',median_controller_wall_ms=float(np.median([float(r['controller_ms']) for r in final])) if final else 'NA',host='n1',gpu='GPU0 A10040GB',precision='FP32',batch24=24,R1_runtime=read_json(PARENT_R1/'analysis/runtime_cost.json'),log_overhead='new trace/event/progress costs in reports/logging_cost_*.json; no paired claim about inherited logging overhead',stage_history=str(WORK/'state/stage_history.json')))
++    return final
+ 
+-def historical_comparison():
+-    current=WORK/'results/case_class_metrics.csv'
+-    if not current.exists():return dict(status='PARTIAL',reason='R1 final evaluation missing')
+-    nowrows=read_table(current);differences=[];summaries=[]
+-    for ref in ['Historical_Full','Historical_baseline']:
+-        path=WORK/f'reports/{ref}_case_class_metrics.csv';receipt=WORK/f'reports/{ref}_EVALUATION_RECEIPT.json'
+-        if not path.exists() or not receipt.exists():continue
+-        old=read_json(receipt)
+-        if old['protocol']!='ACDC_v22_grid_directed_ASD' or old['manifest_sha256']!=sha(DATA/'test.list'):continue
+-        rows=read_table(path);lookup={(r['case'],r['class_name']):r for r in rows}
+-        for r in nowrows:
+-            prior=lookup.get((r['case'],r['class_name']))
+-            if prior is None:continue
+-            differences.append(dict(reference=ref,case=r['case'],patient=r['patient'],class_name=r['class_name'],unit='grid',
+-                **{k+'_delta':float(r[k])-float(prior[k]) for k in ['dice','iou','hd95','asd']},
+-                **{k+'_R1':float(r[k]) for k in ['dice','iou','hd95','asd']},**{k+'_reference':float(prior[k]) for k in ['dice','iou','hd95','asd']}))
+-        paired=[d for d in differences if d['reference']==ref]
+-        for level,field in [('class','class_name'),('case','case'),('patient','patient')]:
+-            for value in sorted({r[field] for r in paired}):
+-                rr=[r for r in paired if r[field]==value]
+-                summaries.append(dict(reference=ref,level=level,id=value,n_rows=len(rr),**{k+'_delta':np.mean([r[k+'_delta'] for r in rr]) for k in ['dice','iou','hd95','asd']}))
+-    write_csv(WORK/'analysis/paired_case_class_differences.csv',differences);write_csv(WORK/'analysis/paired_aggregated_differences.csv',summaries)
+-    pp=[r for r in summaries if r['level']=='patient' and r['reference']=='Historical_Full']
++def compare():
++    definitions={'R2_fixed92':(WORK/'results/case_class_metrics.csv',WORK/'results/EVALUATION_RECEIPT.json'),
++                 'R1_v2_B':(PARENT_R1/'results/case_class_metrics.csv',PARENT_R1/'results/EVALUATION_RECEIPT.json'),
++                 'Old_Full':(WORK/'reports/Historical_Full_case_class_metrics.csv',WORK/'reports/Historical_Full_EVALUATION_RECEIPT.json'),
++                 'beta_FFT_baseline':(WORK/'reports/Historical_baseline_case_class_metrics.csv',WORK/'reports/Historical_baseline_EVALUATION_RECEIPT.json')}
++    methods={};provenance=[];overall=[];missing=[]
++    for name,(path,receipt) in definitions.items():
++        if not path.exists() or not receipt.exists():
++            missing.append(dict(method=name,reason='unified CSV or evaluation receipt missing'));overall.append(dict(method=name,**{k:'NA' for k in KEYS}));continue
++        r=read_json(receipt);assert r['protocol']=='ACDC_v22_grid_directed_ASD' and r.get('test_manifest_sha256',r.get('manifest_sha256'))==sha(DATA/'test.list')
++        rows=read_table(path);assert len(rows)==120
++        methods[name]={(r['case'],r['class_name']):r for r in rows}
++        values={k:float(np.mean([float(x[k]) for x in rows])) for k in KEYS}
++        assert all(abs(values[k]-r['metrics'][k])<1e-10 for k in KEYS)
++        overall.append(dict(method=name,unit='grid',cases=40,patients=20,checkpoint=r['checkpoint'],checkpoint_sha256=r['checkpoint_sha256'],selected_step=r.get('selected_step',r.get('checkpoint_step')),**values))
++        provenance.append(dict(method=name,CSV=str(path),CSV_sha256=sha(path),receipt=str(receipt),receipt_sha256=sha(receipt),protocol=r['protocol'],test_manifest_sha256=sha(DATA/'test.list')))
++    differences=[];aggregates=[]
++    for method,ref in [('R2_fixed92','R1_v2_B'),('R2_fixed92','Old_Full'),('R2_fixed92','beta_FFT_baseline'),('R1_v2_B','Old_Full')]:
++        if method not in methods or ref not in methods:continue
++        assert set(methods[method])==set(methods[ref])
++        paired=[]
++        for key,r in methods[method].items():
++            old=methods[ref][key]
++            paired.append(dict(method=method,reference=ref,case=r['case'],patient=r['patient'],class_name=r['class_name'],unit='grid',**{k+'_delta':float(r[k])-float(old[k]) for k in KEYS},**{k+'_method':float(r[k]) for k in KEYS},**{k+'_reference':float(old[k]) for k in KEYS}))
++        differences.extend(paired)
++        for level,field in [('class','class_name'),('frame','case'),('patient','patient'),('overall',None)]:
++            values=sorted({r[field] for r in paired}) if field else ['ALL']
++            for value in values:
++                rr=[r for r in paired if not field or r[field]==value]
++                aggregates.append(dict(method=method,reference=ref,level=level,id=value,n_rows=len(rr),**{k+'_delta':float(np.mean([r[k+'_delta'] for r in rr])) for k in KEYS}))
++    write_csv(WORK/'analysis/method_comparison.csv',overall)
++    write_csv(WORK/'analysis/comparison_provenance.csv',provenance)
++    write_csv(WORK/'analysis/paired_case_class_differences.csv',differences);write_csv(WORK/'analysis/paired_aggregated_differences.csv',aggregates)
++    if missing:write_csv(WORK/'analysis/missing_references.csv',missing)
++    pp=[r for r in aggregates if r['method']=='R2_fixed92' and r['reference']=='R1_v2_B' and r['level']=='patient']
+     if pp:
+-        pp.sort(key=lambda r:r['dice_delta']);fig,ax=plt.subplots(figsize=(10,4),layout='constrained');ax.bar(range(len(pp)),[100*r['dice_delta'] for r in pp]);ax.axhline(0,color='black',linewidth=.8);ax.set_xticks(range(len(pp)),[r['id'] for r in pp],rotation=65);ax.set_ylabel('R1 − old Full Dice (percentage points)');save(fig,'patient_differences')
+-    qualitative(summaries)
+-    return dict(status='DONE' if len(differences)==240 else 'PARTIAL',matched_case_class_rows=len(differences),
+-        comparison='same reconstruction-grid evaluation/test list; older imported-source/pretrain-generating details incomplete',
+-        interpretation='R1-old Full delta alone does not isolate dynamic scheduling benefit; R2 not run')
+-
+-def qualitative(summaries):
+-    import h5py
+-    rr=[r for r in summaries if r['level']=='case' and r['reference']=='Historical_Full']
+-    if not rr:return
+-    median=float(np.median([r['dice_delta'] for r in rr]));ordered=[('largest_gain',max(rr,key=lambda r:(r['dice_delta'],r['id']))),
+-        ('typical_median_delta',min(rr,key=lambda r:(abs(r['dice_delta']-median),r['id']))),('largest_decline_or_smallest_gain',min(rr,key=lambda r:(r['dice_delta'],r['id'])))]
+-    selected=[]
+-    for rule,row in ordered:
+-        case=row['id'];oldpath=PROJECT/f'revision_runs_20261006/runs/Historical_Full/evaluation/predictions/{case}.npz';newpath=WORK/f'results/predictions/{case}.npz'
+-        if not oldpath.exists() or not newpath.exists():continue
+-        source=DATA/'data'/f'{case}.h5'
+-        with h5py.File(source,'r') as f:image=f['image'][:];gt=f['label'][:]
+-        z=int(np.argmax((gt>0).sum((1,2))))
+-        with np.load(oldpath) as f:oldpred=f['prediction']
+-        with np.load(newpath) as f:newpred=f['prediction']
+-        fig,axs=plt.subplots(1,4,figsize=(10,3),layout='constrained');base=image[z];lo,hi=np.percentile(base,[1,99]);base=np.clip((base-lo)/max(hi-lo,1e-6),0,1)
+-        for ax,title,pred in zip(axs,['Image','GT','Old Full','R1 v2_B'],[None,gt[z],oldpred[z],newpred[z]]):
+-            ax.imshow(base,cmap='gray',vmin=0,vmax=1)
+-            if pred is not None:
+-                for c,color in [(1,'#0072B2'),(2,'#E69F00'),(3,'#D55E00')]:
+-                    if (pred==c).any():ax.contour(pred==c,levels=[.5],colors=[color],linewidths=.8)
+-            ax.set_title(title);ax.axis('off')
+-        fig.suptitle(f'{rule} | anonymous ACDC ID {case} | z={z} | Dice delta={100*row["dice_delta"]:.3f}pp',fontsize=9)
+-        name='qualitative_'+rule;save(fig,name)
+-        selected.append(dict(rule=rule,case=case,z=z,dice_delta=row['dice_delta'],slice_selection='max GT foreground area, deterministic first tie',
+-            deidentification='existing ACDC anonymous patient/frame IDs, image-only normalized render, no DICOM headers/PHI or raw arrays',
+-            prediction=str(newpath),reference_prediction=str(oldpath),GT=str(source),figure=f'analysis/{name}.png'))
+-    write_csv(WORK/'analysis/qualitative_selection.csv',selected)
++        pp.sort(key=lambda r:r['dice_delta']);fig,axes=plt.subplots(2,2,figsize=(12,8),layout='constrained')
++        for ax,key in zip(axes.ravel(),KEYS):
++            factor=100 if key in ['dice','iou'] else 1;ax.bar(range(len(pp)),[factor*r[key+'_delta'] for r in pp]);ax.axhline(0,color='black',linewidth=.8);ax.set_xticks(range(len(pp)),[r['id'] for r in pp],rotation=70,fontsize=7);ax.set_ylabel('R2 − R1 '+key+(' (pp)' if factor==100 else ' (grid)'))
++        save(fig,'patient_differences_R2_R1')
++    return dict(status='DONE' if len(methods)==4 else 'PARTIAL',methods=len(methods),paired_rows=len(differences),missing=missing)
+ 
+ def main():
+     plt.rcParams.update({'svg.fonttype':'none','font.size':9})
+-    final,summary=trajectory();failures=[];details={}
+-    if (WORK/'results/EVALUATION_RECEIPT.json').exists():
+-        for name,fn in [('confidence_quality',confidence_quality),('historical_comparison',historical_comparison)]:
+-            try:details[name]=fn()
+-            except Exception as exc:
+-                import traceback
+-                text=traceback.format_exc();(WORK/f'reports/analysis_{name}_failure.txt').write_text(text);failures.append(dict(task=name,error=str(exc)));details[name]=dict(status='PARTIAL',reason=str(exc))
+-    else:details.update(confidence_quality=dict(status='PARTIAL',reason='final evaluation not completed'),historical_comparison=dict(status='PARTIAL',reason='R1 test metrics unavailable'))
+-    atomic_json(WORK/'analysis/ANALYSIS_RECEIPT.json',dict(status='ANALYZED' if not failures and len(final)==30000 and details['historical_comparison']['status']=='DONE' else 'PARTIAL',
+-        time=now(),recorded_final_logical_steps=len(final),predefined_segments='six5000-step segments plus whole',details=details,failures=failures,optimizer_updates=0,R2_started=False))
+-    print('Analysis finished; all recorded favorable and unfavorable cases retained.')
++    final=trajectory();comparison=compare();error=WORK/'analysis/error_R1_R2/ERROR_ANALYSIS_RECEIPT.json'
++    diagnostic=dict(source=str(PARENT_R1/'analysis/confidence_quality.csv'),sha256=sha(PARENT_R1/'analysis/confidence_quality.csv'),frozen_samples=str(PARENT_R1/'analysis/diagnostic_samples.csv'),GT_use='fixed labeled/validation offline diagnostics already completed, NOT this post-test error analysis',new_inference=0)
++    atomic_json(WORK/'analysis/ANALYSIS_RECEIPT.json',dict(status='ANALYZED' if len(final)==30000 and comparison['status']=='DONE' else 'PARTIAL',time=now(),recorded_logical_steps=len(final),fixed_h=92,fixed_w=92,predefined_segments='six5000-step segments plus whole; average match only globally',historical_comparison=comparison,R1_confidence_quality=diagnostic,error_analysis=read_json(error) if error.exists() else dict(status='PARTIAL',reason='error geometry stage not completed'),optimizer_updates=0,GPU_inference=0,interpretation='single run; dynamic versus near-mean-area fixed strategy, no separation of information/variation/curriculum effects or CTW interaction'))
++    print('R2 analysis finished, all favorable/equal/unfavorable paired rows retained.',flush=True)
+ 
+ if __name__=='__main__':main()
+--- R1/scripts/monitor_R1.py
++++ R2/scripts/monitor_R2.py
+@@ -8,8 +8,8 @@
+         s=read_json(WORK/'state/status.json')
+         if a.mode=='monitor':print(json.dumps({k:s.get(k) for k in ['heartbeat','status','stage','pipeline_pid','child_pid','joint_step','optimizer1_calls','optimizer2_calls','ETA_remaining_hours','ETA_training_finish']},ensure_ascii=False),flush=True)
+         else:
+-            print('R1 results:',WORK/'results','archive:',WORK/'TCSMix_v2B_R1_final_evidence.tar.gz',flush=True)
+-            for name in ['R1_results.csv','R1_class_metrics.csv']:
++            print('R2 results:',WORK/'results','archive:',WORK/'TCSMix_R2_fixed92_final_evidence.tar.gz',flush=True)
++            for name in ['R2_results.csv','R2_class_metrics.csv']:
+                 if (WORK/'results'/name).exists():print((WORK/'results'/name).read_text(),flush=True)
+         if s['status'] in ['DONE','FAILED','INTERRUPTED']:return
+         time.sleep(15)
+--- R1/scripts/summarize_R1.py
++++ R2/scripts/summarize_R2.py
+@@ -1,63 +1,56 @@
+-"""Write current/final scientific handoff without hiding absent or unfavorable results."""
++"""R2 results and manuscript handoff; actual negative or missing results are retained."""
+ from common import *
+ 
+ def main():
+-    status=read_json(WORK/'state/status.json');evalpath=WORK/'results/EVALUATION_RECEIPT.json'
+-    evaluation=read_json(evalpath) if evalpath.exists() else None
+-    analyses=read_json(WORK/'analysis/ANALYSIS_RECEIPT.json') if (WORK/'analysis/ANALYSIS_RECEIPT.json').exists() else dict(status='PARTIAL',reason='analysis unavailable')
+-    result=read_table(WORK/'results/R1_results.csv') if (WORK/'results/R1_results.csv').exists() else []
+-    if not result:
+-        write_csv(WORK/'results/R1_results.csv',[dict(run='R1_v2_B',status='NA',dice='NA',iou='NA',hd95='NA',asd='NA',reason='final selected-checkpoint evaluation not completed')])
+-    for name,fields in [('R1_case_metrics.csv',['case','patient','dice','iou','hd95','asd','reason']),('R1_class_metrics.csv',['class_name','dice','iou','hd95','asd','reason'])]:
++    state=read_json(WORK/'state/status.json');path=WORK/'results/EVALUATION_RECEIPT.json';evaluation=read_json(path) if path.exists() else None
++    selected=read_json(WORK/'reports/SELECTED_CHECKPOINT.json') if (WORK/'reports/SELECTED_CHECKPOINT.json').exists() else {}
++    analysis=read_json(WORK/'analysis/ANALYSIS_RECEIPT.json') if (WORK/'analysis/ANALYSIS_RECEIPT.json').exists() else dict(status='PARTIAL',reason='analysis not completed')
++    if not evaluation:
++        write_csv(WORK/'results/R2_results.csv',[dict(run='R2_fixed92',status='NA',dice='NA',iou='NA',hd95='NA',asd='NA',reason='frozen validation-best final evaluation not completed')])
++    for name,fields in [('R2_class_metrics.csv',['class_name','dice','iou','hd95','asd','reason']),('R2_case_metrics.csv',['case','patient','dice','iou','hd95','asd','reason']),('R2_patient_metrics.csv',['patient','dice','iou','hd95','asd','reason'])]:
+         if not (WORK/'results'/name).exists():write_csv(WORK/'results'/name,[],fields)
++    comparison=read_table(WORK/'analysis/method_comparison.csv') if (WORK/'analysis/method_comparison.csv').exists() else []
++    table='\n'.join('|'+str(r['method'])+'|'+'|'.join(str(r.get(k,'NA')) for k in ['dice','iou','hd95','asd'])+'|' for r in comparison)
+     values=evaluation['metrics'] if evaluation else {k:'NA' for k in ['dice','iou','hd95','asd']}
+-    metrics='\n'.join(f'|{k}|{v}|' for k,v in values.items())
+-    deltas=[]
+-    for ref in ['Historical_Full','Historical_baseline']:
+-        p=WORK/f'reports/{ref}_EVALUATION_RECEIPT.json'
+-        if not p.exists():deltas.append(f'{ref}: NA，历史同协议评价缺失');continue
+-        old=read_json(p)
+-        dd={k:values[k]-old['metrics'][k] if evaluation else 'NA' for k in values}
+-        deltas.append(f'{ref}: 原指标 {old["metrics"]}；R1−参照 {dd}。Dice/IoU为fraction，乘100才为百分点差。')
++    lock=read_json(WORK/'R2_AREA_LOCK.json');errors=read_json(WORK/'state/stage_errors.json') if (WORK/'state/stage_errors.json').exists() else []
+     timing=read_json(WORK/'analysis/runtime_cost.json') if (WORK/'analysis/runtime_cost.json').exists() else {}
+-    selection=read_json(WORK/'reports/SELECTED_CHECKPOINT.json') if (WORK/'reports/SELECTED_CHECKPOINT.json').exists() else dict(selected_step='NA',sha256='NA')
+-    errors=read_json(WORK/'state/stage_errors.json') if (WORK/'state/stage_errors.json').exists() else []
+-    (WORK/'FINAL_REPORT_R1_CN.md').write_text(f'''# R1新版Full实际结果
++    (WORK/'FINAL_REPORT_R2_CN.md').write_text(f'''# R2固定面积正式对照结果
+ 
+-报告时刻{now()}。仅R1：TRC+锁定TCSMix v2_B+原空间CTW；seed42、ACDC10%、同原pretrain net/opt、30000联合迭代。R2和旧E1–E5未启动/恢复。当前阶段{status.get('stage')}，状态{status.get('status')}；训练完成不自动等同评价与归档完成。
++报告时刻{now()}，阶段快照{state['stage']}/{state['status']}。完成训练、完成评价、完成归档是不同事件；最终流水线状态见state/status.json，归档后另写final_archive_receipt.json及外层SHA256，二者不会伪装成包内此前快照。
++仅一项ACDC10% seed42 R2：TRC + 固定92×92区域混合 + 原空间CTW。旧E1–E5保持暂停，R1和旧主结果未重训或覆盖。真实执行源来自R1冻结版本，controller.py字节相同，原训练科学循环字节相同；配置选择既有v2_fixed分支。完整工程差异见reports/R1_to_R2_engineering.patch、有效入口及run_manifest.json。
+ 
+-|指标|实际值（fraction或grid距离）|
+-|---|---|
+-{metrics}
++固定面积锁定：全R1 step1–30000 actual_area_pixels平均{lock['mean_actual_pixels']}，原方形整数平方距离最小92²=8464，平局选小边；源SHA{lock['source_sha256']}。固定比例.359375、实际面积.129150390625；有符号面积差{lock['signed_area_error']}，面积百分点差{lock['error_percentage_points']}，相对差{lock['relative_error']}。只匹配全程平均，不能声称每5000步阶段或每步匹配。固定定义未按测试分数、最优步或连续s均值重选。
+ 
+-评价完成：{bool(evaluation)}。选择step={selection.get('selected_step')}，checkpoint SHA={selection.get('sha256')}；按原严格student1验证前景macroDice，测试只用于冻结后的最终评价。两学生实际调用数/重复更新见reports/TRAIN_POSTCHECK.json、results/optimizer_calls.csv、完整R1_control_trace.csv。初始化实际三分支/零门控/预训练哈希见INITIALIZATION_ACTUAL.json；原始预训练生成日志未知，未补造。
++q_B始终是原weak教师概率/既有LCC前景支持的类别等权间隔，仅用于日志；s_dynamic_B=.18+.20*q_B是参考值；s及s_actual=.359375、h/w_actual=92。图像与目标共用原互补掩码，两次位置randint及端点规则不变；合法位置范围因尺寸不同，两个独立训练轨迹并非逐步相同。原空间CTW(.05、概率L1、stop-gradient、原更新方向)、TRC4token/dim16、EMA.99、其他损失/增强/双视图与频率分支沿用R1。
+ 
+-评价协议为原统一ACDC_v22_grid_directed_ASD：输入切片nearest resize256²，输出nearest回原H5切片平面，z轴不重采样；原重建grid单位spacing(1,1,1)，HD95/ASD不能标mm；无预测后处理，ASD为预测→GT方向。双空四指标0，单空Dice/IoU0、距离为体积grid对角。总体等权平均40个ED/ES frame体积×3前景类；病例/患者/类表单独保留，20个患者的两frame平均用于配对分析。
++原预训练net/opt重新初始化、joint_step0、TRC gamma0；没有用R1/旧Full/短程/E1权重起跑。初始化三分支公共状态及两优化器基础状态逐tensor核验，见INITIALIZATION_ACTUAL.json。原预训练生成日志未知如实NA，未新增预训练。70/10/20病例，7标注患者/136切片，256²、batch24/label12、16worker、FP32、SGD lr.01常数、momentum.9、wd1e-4；实际数据索引/哈希及名单附包。预算30000联合步，每学生正常各30000成功更新；恢复物理重放另存ledger，主RNG/采样器ID可恢复，worker增强和prefetch不保证位级恢复。
+ 
+-历史参照与差值：
+-{chr(10).join(deltas)}
++验证每200，student1前景macroDice严格提高更新best，平局沿用原规则。选择step{selected.get('selected_step','NA')}，checkpoint SHA{selected.get('sha256','NA')}；先冻结选择再最终测试，ACDC测试未用于此前候选方法选择，本次也未用于固定面积、控制器或检查点选择。
+ 
+-旧Full90.35%只属旧机制；新结果允许相同或下降，不自动重训。参照同测试清单与统一评价，但部分历史import版本/预训练生成协议无法完全核验；baseline还缺TRC/旧TCSMix/CTW，差值不是单独模块因果。新版与old Full分数差值也不能单独归于动态尺度，R2尚未执行。
++|方法|Dice fraction|IoU fraction|HD95 grid|ASD grid|
++|---|---|---|---|---|
++{table}
+ 
+-机制统计按预先固定的六个5000步区间及全程给出，见analysis/scale_distribution.csv和control_trajectory.png/SVG；raw trace全部保留，恢复重复step单独记录、最终逻辑轨迹取最后一次。old_q是同一新版教师输出的控制回放，无额外前向或随机数消耗；不是独立old训练。若晚期尺寸固定，如实保留。R2_FIXED_AREA_PROPOSAL只据完整真实面积在测试前生成建议，不执行R2。
++R2实际评价：{values}。40个ED/ES frame volumes×RV/MYO/LV等权平均，20patient两frame均值另存。输入/输出nearest order0、输出回原H5平面、z不重采样、spacing=(1,1,1)重建grid不是mm；ASD为MedPy prediction→GT单向，HD95双向表面距离合并95分位；无预测后处理。双空四项0，单空Dice/IoU0、距离为grid体积对角。同统一协议历史CSV复用，缺参照记NA，不从论文表猜病例值。
+ 
+-离线质量诊断状态：{analyses.get('status')}，细节{analyses.get('details',analyses)}。原固定标注/验证样本GT只用于诊断；重复切片/checkpoint不算独立病例。v2_B概率间隔不是校准正确率；极小/错误前景类、缺类及fallback保留。保留全部改善/持平/变差配对行；定性例按最大差、median差、最小差选，slice取最大GT前景面积，并给匿名ID规则/provenance。预测和原医学数组留服务器，包中只交付既有匿名ID规范的规范化图及索引。
++配对包含R2−R1、R2−旧Full、R2−β-FFT、R1−旧Full，全部改善/持平/下降行保留，见analysis/paired_*，没有剔除坏病例主结果。R1误差描述见R1_ERROR_ANALYSIS_CN.md及训练后R1_R2_ERROR_ANALYSIS_CN.md；patient065/075/083双frame的TP/FP/FN、逐slice面积/覆盖、6邻域三维连通域、双向表面分布及单向ASD贡献、实际大误差slice对照图均附CSV。对全部40frame复算并匹配原结果。这是测试后几何描述，不反向调整训练/固定面积/后处理。
+ 
+-实际成本：{timing}。训练用实际进程阶段时长，验证尾部包含在内；独立评价/分析/归档时长见state/stage_history.json。日志成本见reports/logging_cost_*.json，只计新trace/events/progress，不把控制器微基准当端到端差值。worker增强随机流和prefetch不能位级恢复；完整可恢复状态保存，不更改16worker协议。
++R1 q_B与质量沿用已冻结标注/验证诊断与其来源索引，区别于测试误差描述；R2训练期间不增加GPU推理。本次只有单次训练，病例配对不是训练重复；R1/R2比较动态策略与近平均面积固定策略，不能拆分置信度信息、尺度波动和课程效应，不能据此证明CTW协同或跨种子稳定性。R2更好/持平/变差均保留，不自动搜索或再训。旧90.35%仍属于旧TCSMix Full，新机制不自动替换论文主结果和其他数据集。
+ 
+-失败与缺失：{errors or '目前无阶段错误记录'}。缺失指标写NA；科学缺失与归档错误分别记录，FAILED/PARTIAL结果也归档已有证据。没有改batch/种子/控制器或自动从零重试。
++实际成本：{timing}。端到端训练用train_segments中的活动墙钟（含取数/验证/保存），各阶段含轮询检测≤5s延迟；step_seconds不替代完整墙钟。新增trace/events/progress日志成本见logging_cost；未隔离旧日志开销，不声称严格端到端额外成本差。
++分析状态：{analysis}。阶段错误：{errors or '无已记录阶段错误'}。大型权重/原医学影像/全预测留服务器，包内实际索引和哈希；匿名ID统一方向规范化渲染图可独立审查。无客户端在线依赖，服务器重启需要resume.sh；tmux不承诺跨重启存活。缺失或失败仍归档已有证据，科学核查与归档校验分开。
+ ''')
+-    (WORK/'EDITOR_HANDOFF_R1_CN.md').write_text(f'''# 给写作助手：R1 TCSMix v2_B
++    (WORK/'EDITOR_HANDOFF_R2_CN.md').write_text(f'''# 给写作助手：R2固定92面积对照
+ 
+-新版公式只替换教师控制信号：原weak参考视图softmax(dim1)/detach，复用原argmax+每类LCC伪标签支持；先按有支持前景类计算mean(P_c−max其他P)，再类等权；空前景q0。仍s=.18+.20q，Python round和原clamp，原随机位置、共享一个矩形、图/目标同步互补混合。TRC和原空间CTW(.05、L1/stop-gradient/更新方向)及其他Full设置保留。不要把本项目旧名AdaMix与外部AdaMix论文混同。
++R2={values}，选中step{selected.get('selected_step','NA')}，SHA{selected.get('sha256','NA')}。实际来源results/R2_results.csv，分数fraction×100展示百分比，HD95/ASD为grid不是mm。旧Full90.35%归旧机制，v2_B R1与固定R2独立列明，不能把旧分数移到新版；本轮未修改论文。
++唯一方法变化是v2_B动态尺寸变为固定92；公共科学循环、模型/损失/空间CTW/EMA/初始化/增强与评价保持R1。q_B继续记录但不控制掩码，s_dynamic_B参考，s_actual=.359375。R2面积比完整R1平均低约.04295面积pp（相对-.33145%），平均匹配不等于每阶段匹配。
+ 
+-本次正式指标：{values}；检查点step{selection.get('selected_step')}，SHA{selection.get('sha256')}。NA表示尚未得到，不能拿旧90.35填入新版列；旧90.35%/统一复评90.349657652%继续列在old Full。
+-实际协议、命令、初始化和代码哈希见protocol.json、run_manifest.json及configs；测量与平均单位见FINAL_REPORT_R1_CN.md。HD95/ASD是原H5重建grid距离，不能改成mm；ASD为定向值。
++主要对照原始CSV、配对病例和阶段面积图在analysis；全部不利行保留。R1/R2一次对照只比较整体动态和近平均固定策略，不能分离置信度信息、尺度波动/课程贡献，也不能证明与CTW协同、跨种子稳定性。训练结果下降允许报告，不引出自动搜索。
++R1_ERROR_ANALYSIS_CN.md和R1_R2_ERROR_ANALYSIS_CN.md只描述冻结测试预测几何；不能用误差slice倒推固定尺度/控制器/最佳checkpoint。HD95需要双向表面距离，ASD单向prediction→GT；孤立域和GT空slice范围延伸有实际mask/连通域/方向距离贡献证据，局部偏移和漏分割可共存，不能统称一个原因。案例选择为真实距离贡献最大的slice，规则/匿名ID/方向/颜色/指标附CSV，不只展示最大GT面积。
++R1固定标注/验证q_B质量诊断是另一组证据，未使用测试选择方法；切片或病例不等于独立训练重复。历史生成预训练日志与部分旧import版本缺失如实标NA，不强称全部历史完全可核验。
+ 
+-新旧配对差值见analysis/paired_case_class_differences.csv和paired_aggregated_differences.csv，全部病例含不利行保留。不能仅根据R1相对old分数差值归因于动态控制；后续匹配平均实际面积的R2才是另一个对照，本轮只给面积建议。单次运行不支持多种子显著性、泛化或新版CTW交互结论。
+-图注：control_trajectory为真实全程v2_B轨迹，old曲线是同教师输出回放；阶段分布预先固定5000步，重复step按最终轨迹处理且raw全部保留。confidence_quality为独立final teacher回放（eval/train_snapshot），原标注/验证GT只诊断，不是全程teacher质量或测试选参。patient_differences包含正/零/负差值；qualitative选择规则与匿名ID表一起交付，不能只保留改善例。
+-细小错误前景、部分阶段取整固定、代理信号未校准及恢复边界均须如实写出。状态/缺失：{analyses}。本轮不修改论文题目或模块名，正式评价允许下降，不自动再训。
++完整协议、有效代码/工程patch、运行命令、初始化/检查点回执、数据/预测/权重哈希和科学核查附包。snapshot状态是归档前时刻，最终状态与外层校验由完成回执另记。当前分析状态{analysis.get('status')}，实际错误{errors or '无'}。
+ ''')
+-    print('Scientific report and editor handoff written, missing formal values remain NA.')
++    print('R2 report/handoff written; all actual or NA results retained.',flush=True)
+ 
+ if __name__=='__main__':main()
+--- R1/scripts/run_R1_pipeline.py
++++ R2/scripts/run_R2_pipeline.py
+@@ -1,4 +1,4 @@
+-"""Server-owned, bounded single-run R1 train→evaluate→analyze→summary→archive."""
++"""Server-owned, bounded single-run R2 train→evaluate→analyze→summary→archive."""
+ import argparse
+ import csv
+ import fcntl
+@@ -16,7 +16,7 @@
+     STOP=True;(WORK/'state/stop_requested').touch()
+ 
+ def last_trace():
+-    p=WORK/'results/R1_control_trace.csv'
++    p=WORK/'results/R2_control_trace.csv'
+     if not p.exists():return {}
+     with p.open('rb') as f:
+         header=f.readline().decode().strip().split(',');f.seek(0,2);size=f.tell();f.seek(max(0,size-16384));tail=f.read().decode(errors='replace')
+@@ -41,15 +41,16 @@
+     previous=read_json(WORK/'state/status.json');r=last_trace();step=int(r.get('step',0))
+     elapsed=time.monotonic()-extra['child_start'] if extra and 'child_start' in extra else None
+     priorstep=extra.get('resume_step',0) if extra else 0
+-    remaining=24156*(30000-step)/30000;basis='short-stage planning estimate'
++    remaining=26440*(30000-step)/30000;basis='completed R1 active training wall clock including validation/loading/checkpoints'
+     if stage=='TRAIN' and elapsed and step-priorstep>=50:
+         remaining=elapsed/(step-priorstep)*(30000-step);basis='current active formal segment elapsed / progressed joint iterations, includes validation/loading'
+     obj=dict(status=status,stage=stage,heartbeat=now(),heartbeat_epoch=time.time(),pipeline_pid=os.getpid(),child_pid=CHILD.pid if CHILD and CHILD.poll() is None else None,
+         host=socket.gethostname(),gpu=0,started=previous.get('started',STARTED),joint_step=step,budget_joint_iterations=30000,
+         optimizer1_calls=int(r.get('optimizer1_calls',0)),optimizer2_calls=int(r.get('optimizer2_calls',0)),optimizer_counter_scope='actual successful physical calls in latest complete trace row; optimizer_events.csv additionally retains partial failure evidence',
+         ETA_training_finish=(datetime.now().astimezone()+timedelta(seconds=remaining)).isoformat() if step<30000 else None,
+-        ETA_remaining_hours=remaining/3600,ETA_basis=basis,latest_checkpoint=str(WORK/'runs/R1_full_v2B/checkpoints/last.ckpt'),
+-        latest_training_log=str(WORK/'runs/R1_full_v2B/train.log'),resource=resource(),formal_R1_authorized=True,R2_started=False,old_queue='INTERRUPTED',
++        ETA_remaining_hours=remaining/3600,ETA_basis=basis,latest_checkpoint=str(WORK/'runs/R2_fixed92/checkpoints/last.ckpt'),
++        latest_training_log=str(WORK/'runs/R2_fixed92/train.log'),resource=resource(),formal_R2_authorized=True,R2_started=step>0,R1_retrained=False,old_queue='INTERRUPTED',
++        controller_version='v2_fixed',signal_version='v2_B',fixed_h=92,fixed_w=92,fixed_area=8464/65536,
+         stage_errors=ERRORS,archive_status='VERIFIED' if (WORK/'final_archive_receipt.json').exists() else 'PENDING')
+     if extra:obj.update({k:v for k,v in extra.items() if k not in ['child_start']})
+     atomic_json(WORK/'state/status.json',obj)
+@@ -63,7 +64,7 @@
+ 
+ def run(stage,script,args=None,status='RUNNING'):
+     global CHILD
+-    cmd=(["/bin/bash",str(WORK/'scripts/train_R1.sh')] if stage=='TRAIN' else [str(PYTHON),str(WORK/'scripts'/script)])+(args or [])
++    cmd=(["/bin/bash",str(WORK/'scripts/train_R2.sh')] if stage=='TRAIN' else [str(PYTHON),str(WORK/'scripts'/script)])+(args or [])
+     stamp=now().replace(':','').replace('.','');log=WORK/'logs'/f'{stage.lower()}_{stamp}.log';start=time.monotonic()
+     step=int(last_trace().get('step',0));entry=dict(stage=stage,command=cmd,start=now(),log=str(log),resume_step=step)
+     with log.open('x') as f:
+@@ -85,49 +86,50 @@
+     p=argparse.ArgumentParser();p.add_argument('--resume',action='store_true');a=p.parse_args()
+     lock=(WORK/'state/pipeline.lock').open('w')
+     try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+-    except BlockingIOError:raise SystemExit('Existing R1 pipeline owns lock; no second controller')
++    except BlockingIOError:raise SystemExit('Existing R2 pipeline owns lock; no second controller')
+     signal.signal(signal.SIGTERM,stop_signal);signal.signal(signal.SIGINT,stop_signal)
+     if (WORK/'state/stage_history.json').exists():STAGES=read_json(WORK/'state/stage_history.json')
+     if (WORK/'state/stage_errors.json').exists():ERRORS=read_json(WORK/'state/stage_errors.json')
+     prior=read_json(WORK/'state/status.json')
+-    if prior['status']=='DONE':print('R1 already DONE; no retraining');return
++    if prior['status']=='DONE':print('R2 already DONE; no retraining');return
+     if a.resume:(WORK/'state/stop_requested').unlink(missing_ok=True)
+-    elif (WORK/'state/stop_requested').exists():raise RuntimeError('Stopped R1 requires explicit same-run resume')
++    elif (WORK/'state/stop_requested').exists():raise RuntimeError('Stopped R2 requires explicit same-run resume')
+     try:
+         if run('PREFLIGHT','preflight.py')!=0:raise RuntimeError('Definition/input preflight failed; training not started')
+-        receipt=WORK/'runs/R1_full_v2B/TRAIN_RECEIPT.json';trained=receipt.exists() and read_json(receipt).get('status')=='TRAINED' and read_json(receipt).get('global_step')==30000
++        run('R1_ERROR_AUDIT','error_analysis.py',status='RUNNING')  # CPU-only, idempotently reuses completed prelaunch analysis; PARTIAL cannot change R2.
++        receipt=WORK/'runs/R2_fixed92/TRAIN_RECEIPT.json';trained=receipt.exists() and read_json(receipt).get('status') in ['TRAINED','INTERRUPTED'] and read_json(receipt).get('global_step')==30000
+         if not trained:
+-            cp=WORK/'runs/R1_full_v2B/checkpoints/last.ckpt';has_started=(WORK/'runs/R1_full_v2B/train.log').exists()
+-            if has_started and (not a.resume or not cp.exists()):raise RuntimeError('Existing incomplete R1 requires --resume and its full last checkpoint; never restart from0')
++            cp=WORK/'runs/R2_fixed92/checkpoints/last.ckpt';has_started=(WORK/'runs/R2_fixed92/train.log').exists()
++            if has_started and (not a.resume or not cp.exists()):raise RuntimeError('Existing incomplete R2 requires --resume and its full last checkpoint; never restart from0')
+             if not admission('TRAIN'):
+                 state('INTERRUPTED','TRAIN');return
+-            code=run('TRAIN','train_R1_entry.py',['--resume'] if has_started else [])
++            code=run('TRAIN','train_R2_entry.py',['--resume'] if has_started else [])
+             if code==75 or STOP or (WORK/'state/stop_requested').exists():
+-                state('INTERRUPTED','TRAIN');run('SUMMARY','summarize_R1.py',status='INTERRUPTED');run('PACKAGE','package_R1.py',status='INTERRUPTED');state('INTERRUPTED','STOPPED');return
++                state('INTERRUPTED','TRAIN');run('SUMMARY','summarize_R2.py',status='INTERRUPTED');run('PACKAGE','package_R2.py',status='INTERRUPTED');state('INTERRUPTED','STOPPED');return
+             if code!=0:raise RuntimeError(f'Training exited{code}; no automatic retry or parameter change')
+         state('TRAINED','POSTCHECK')
+         if run('POSTCHECK','train_postcheck.py',status='TRAINED')!=0:raise RuntimeError('Completed-training postcheck failed; test evaluation not entered')
+         evalreceipt=WORK/'results/EVALUATION_RECEIPT.json'
+         if not evalreceipt.exists():
+             if not admission('EVALUATE'):state('INTERRUPTED','EVALUATE');return
+-            evalcode=run('EVALUATE','evaluate_R1.py',status='TRAINED')
++            evalcode=run('EVALUATE','evaluate_R2.py',status='TRAINED')
+         else:evalcode=0
+         state('EVALUATED' if evalcode==0 else 'FAILED','ANALYSIS')
+         if STOP or (WORK/'state/stop_requested').exists():state('INTERRUPTED','ANALYSIS');return
+-        if admission('ANALYSIS'):analysiscode=run('ANALYSIS','analyze_R1.py',status='EVALUATED' if evalcode==0 else 'FAILED')
+-        else:state('INTERRUPTED','ANALYSIS');return
++        geometrycode=run('ERROR_GEOMETRY','error_analysis.py',['--include-r2'],status='EVALUATED' if evalcode==0 else 'FAILED')
++        analysiscode=run('ANALYSIS','analyze_R2.py',status='EVALUATED' if evalcode==0 else 'FAILED')
+         state('ANALYZED' if analysiscode==0 else 'FAILED','SUMMARY')
+-        summarycode=run('SUMMARY','summarize_R1.py',status='ANALYZED')
+-        packcode=run('PACKAGE','package_R1.py',status='ANALYZED')
++        summarycode=run('SUMMARY','summarize_R2.py',status='ANALYZED')
++        packcode=run('PACKAGE','package_R2.py',status='ANALYZED')
+         if packcode!=0:state('FAILED','ARCHIVE',dict(archive_status='FAILED'))
+         else:
+             review=read_json(WORK/'reports/FINAL_FIVE_ROUND_CHECK.json')
+-            state('DONE' if evalcode==analysiscode==summarycode==0 and review['status']!='FAIL' else 'FAILED','FINISHED',dict(archive_status='VERIFIED',scientific_review=review['status'],results=str(WORK/'results'),archive=str(WORK/'TCSMix_v2B_R1_final_evidence.tar.gz')))
++            state('DONE' if evalcode==analysiscode==summarycode==geometrycode==0 and review['status']!='FAIL' else 'FAILED','FINISHED',dict(archive_status='VERIFIED',scientific_review=review['status'],results=str(WORK/'results'),archive=str(WORK/'TCSMix_R2_fixed92_final_evidence.tar.gz')))
+     except BaseException as exc:
+         text=traceback.format_exc();(WORK/f'reports/pipeline_failure_{int(time.time())}.txt').write_text(text)
+         ERRORS.append(dict(stage='PIPELINE',time=now(),error=str(exc)));atomic_json(WORK/'state/stage_errors.json',ERRORS)
+         state('FAILED','RECOVERY_REQUIRED')
+-        for stage,script in [('PARTIAL_ANALYSIS','analyze_R1.py'),('SUMMARY','summarize_R1.py'),('PACKAGE','package_R1.py')]:
++        for stage,script in [('PARTIAL_ANALYSIS','analyze_R2.py'),('SUMMARY','summarize_R2.py'),('PACKAGE','package_R2.py')]:
+             try:run(stage,script,status='FAILED')
+             except BaseException:(WORK/f'reports/{stage}_exception_{int(time.time())}.txt').write_text(traceback.format_exc())
+         state('FAILED','RECOVERY_REQUIRED',dict(archive_status='VERIFIED' if (WORK/'final_archive_receipt.json').exists() else 'FAILED'))
+--- R1/scripts/control_runtime.py
++++ R2/scripts/control_runtime.py
+@@ -1,4 +1,4 @@
+-"""Formal R1 telemetry; accepted controller unchanged, no short-phase budget guard."""
++"""Formal R2 telemetry; accepted controller unchanged, no short-phase budget guard."""
+ import csv
+ import os
+ import time
+@@ -12,8 +12,10 @@
+ 
+ def configure(cfg,stop_after=None):
+     global CFG,COUNTS,TRACE,EVENTS,SEGMENT
+-    assert stop_after is None and cfg['max_iterations']==30000 and cfg['controller_version']=='v2_B'
+-    CFG=cfg;SEGMENT=cfg['segment_id'];path=WORK/'results/R1_control_trace.csv'
++    assert stop_after is None and cfg['max_iterations']==30000 and cfg['controller_version']=='v2_fixed'
++    assert cfg['signal_version']=='v2_B' and cfg['fixed_side']==.359375 and cfg['mix_mode']=='fixed'
++    assert cfg['rectangle_h']==cfg['rectangle_w']==92
++    CFG=cfg;SEGMENT=cfg['segment_id'];path=WORK/'results/R2_control_trace.csv'
+     # Actual physical optimizer calls retain replayed updates across manual recovery.
+     ledger=WORK/'results/optimizer_calls.csv'
+     if ledger.exists():
+@@ -55,6 +57,8 @@
+     start=time.perf_counter();mm,ll,st=generate_mask(img,la,lb,plab_a,plab_b,CFG,min_side,max_side)
+     assert torch.equal(mm,ll) and torch.equal(mm[0].expand_as(mm),mm)
+     assert int((mm[0]==0).sum())==st['rectangle_h']*st['rectangle_w']
++    assert st['rectangle_h']==st['rectangle_w']==92 and st['side_fraction']==.359375
++    assert st['patch_area_ratio']==8464/65536
+     CONTROLLER_MS=(time.perf_counter()-start)*1000;LATEST=st
+     r.LATEST.update(q=st['teacher_conf'],s=st['side_fraction'],actual_area=st['patch_area_ratio'])
+     return mm,ll,st
+@@ -64,6 +68,8 @@
+     torch.cuda.synchronize();elapsed=time.perf_counter()-STEP_START;st=LATEST;start=time.perf_counter()
+     row=dict(step=step,segment=SEGMENT,time=now(),controller_version=CFG['controller_version'],
+         old_q=st['old_q'],q_A=st['q_fg'],q_B=st['q_margin'],q=st['teacher_conf'],s=st['side_fraction'],
++        signal_version='v2_B',q_controls_geometry=False,s_dynamic_B=.18+.20*st['q_margin'],s_actual=st['side_fraction'],
++        h_actual=st['rectangle_h'],w_actual=st['rectangle_w'],method_version='R2_fixed92',
+         rectangle_h=st['rectangle_h'],rectangle_w=st['rectangle_w'],actual_area_pixels=st['rectangle_h']*st['rectangle_w'],
+         actual_area=st['patch_area_ratio'],y=st['rectangle_y'],x=st['rectangle_x'],fallback=st['fallback'],
+         active_classes=st['active_classes'],predicted_background_fraction=st['predicted_background_fraction'],background_confidence=st['background_confidence'],
+@@ -84,7 +90,9 @@
+     if (WORK/'state/stop_requested').exists():r.STOP=True
+ 
+ def checkpoint_metadata():
+-    return dict(version='v2_B',foreground_ids=CFG['foreground_ids'],background_id=CFG['background_id'],empty_foreground_fallback=0.,
++    return dict(version='v2_fixed',task='R2',signal_version='v2_B',mix_mode='fixed',fixed_side=.359375,rectangle_h=92,rectangle_w=92,
++        q_controls_geometry=False,s_semantics='actual fixed side ratio; s_dynamic_B is diagnostic reference only',area_lock_sha256=CFG['area_lock_sha256'],
++        foreground_ids=CFG['foreground_ids'],background_id=CFG['background_id'],empty_foreground_fallback=0.,
+         min_side=.18,max_side=.38,stateless=True,cfg_sha256=CFG['config_sha256'],controller_sha256=CFG['controller_source_sha256'],
+         optimizer_success_calls=dict(COUNTS),segment=SEGMENT,AMP_enabled=False)
+ 
+@@ -99,10 +107,30 @@
+         assert model.decoder.mask_token_router.gamma.item()==0
+         checks.append(dict(branch=name,exact_pretrained_common_state=True,gamma=0.,parameters=sum(p.numel() for p in model.parameters()),
+             router_parameters=sum(p.numel() for p in model.decoder.mask_token_router.parameters())))
++    optimizer_checks=[]
++    for number,optimizer in enumerate(optimizers,1):
++        sd=optimizer.state_dict();old=ck['opt'];newids=sd['param_groups'][0]['params'];oldids=old['param_groups'][0]['params']
++        assert len(newids)==len(oldids)
++        for key,value in old['param_groups'][0].items():
++            if key!='params':assert sd['param_groups'][0][key]==value
++        for new_id,old_id in zip(newids,oldids):
++            actual=sd['state'].get(new_id,{});expected=old['state'].get(old_id,{})
++            assert set(actual)==set(expected)
++            for key,value in expected.items():
++                assert torch.equal(actual[key].cpu(),value.cpu()) if torch.is_tensor(value) else actual[key]==value
++        assert all(not sd['state'].get(i) for i in sd['param_groups'][1]['params'])
++        optimizer_checks.append(dict(optimizer=f'optimizer{number}',base_state_exact_match=True,base_parameters=len(newids),
++            inherited_state_count=len(old['state']),router_state_empty=True,lr_all_groups=[g['lr'] for g in sd['param_groups']]))
++    parent=read_json(PARENT_R1/'reports/INITIALIZATION_ACTUAL.json')
++    assert checks==parent['checks'] and sha(pre_model)==parent['sha256']
++    for number,optimizer in enumerate(optimizers,1):
++        assert [{k:v for k,v in g.items() if k!='params'} for g in optimizer.param_groups]==parent[f'optimizer{number}_groups']
+     atomic_json(WORK/'reports/INITIALIZATION_ACTUAL.json',dict(time=now(),joint_step=0,pretrain=str(pre_model),sha256=sha(pre_model),
+         fresh=True,checks=checks,optimizer1_groups=[{k:v for k,v in g.items() if k!='params'} for g in optimizers[0].param_groups],
+         optimizer2_groups=[{k:v for k,v in g.items() if k!='params'} for g in optimizers[1].param_groups],
+         source='exact parent load_parent_pretrain and transplant_parent_optimizer_state; no short/E1/late weights',
++        optimizer_state_checks=optimizer_checks,parent_R1_initial_receipt_sha256=sha(PARENT_R1/'reports/INITIALIZATION_ACTUAL.json'),
++        controller_version='v2_fixed',signal_version='v2_B',fixed_h=92,fixed_w=92,
+         generating_pretrain_history='NA: no original generating command/log retained; identical file reused',test_access=False))
+ 
+ def validation(step,value1,value2,best1):

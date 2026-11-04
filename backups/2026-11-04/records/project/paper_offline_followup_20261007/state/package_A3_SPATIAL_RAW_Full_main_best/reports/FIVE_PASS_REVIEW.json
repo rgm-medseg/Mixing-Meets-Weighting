@@ -1,0 +1,14 @@
+{
+  "source": "PARTIAL: immutable files PASS; Full author/code/trace unique mapping NEEDS_MAPPING",
+  "prediction_alignment": "PASS",
+  "statistics_timing": "PASS",
+  "figure_text": "PASS: automated rendered bounds and CSV checked; all PNG figures visually inspected",
+  "reproduction_archive": "PASS",
+  "A2_independent_checks": 192,
+  "A3_two_patient_checks": 12,
+  "timing_blocks": 80,
+  "volume_units": 480,
+  "uniform_rows": 2080,
+  "training_updates": 0,
+  "archive_verification": "Actual extraction SHA verification occurs immediately after compression; any failure aborts delivery."
+}

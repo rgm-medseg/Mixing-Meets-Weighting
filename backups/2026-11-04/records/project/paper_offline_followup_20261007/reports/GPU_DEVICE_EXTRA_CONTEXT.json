@@ -1,0 +1,5 @@
+{
+  "time": "2026-10-07T23:09:07+08:00",
+  "GPU_driver_clocks_power": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59, 550.54.14, 1095 MHz, 1215 MHz, 24.90 W, 400.00 W, 26\n",
+  "note": "read-only context snapshot during timing; no clock/power/backend changes made"
+}

@@ -1,0 +1,191 @@
+{
+  "identity": "98f2cac076f3932d9d13ec60752d0c4d261a0c99663a8900ee86a558d9fb33cc",
+  "status": "PASS",
+  "checkpoint_sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+  "branch": "model_1",
+  "load_receipt": {
+    "method_id": "Full_main",
+    "checkpoint_sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+    "global_step": 29600,
+    "branch": "model_1",
+    "strict": true,
+    "state_keys": 234,
+    "parameters": 1827469,
+    "trainable_parameters": 1827469
+  },
+  "model_state_before": "f26262ac454c399efc8569442e847eb3051e12f22951c506947d45ba421adcfd",
+  "model_state_after": "f26262ac454c399efc8569442e847eb3051e12f22951c506947d45ba421adcfd",
+  "source_shape": [
+    8,
+    224,
+    224
+  ],
+  "errors": [
+    {
+      "method_id": "Full_main",
+      "frame": "patient045_frame01",
+      "slice_index": 0,
+      "input_sha256": "e08f6b861b965e9203587b0a8e3466d3ef111bfa8b675b6515c5c4ceed5e61a8",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient045_frame01",
+      "slice_index": 1,
+      "input_sha256": "aa4418140e658e67b731260315f7db3d3e72f20ad0afdc86ef3e28391122cf0f",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient045_frame01",
+      "slice_index": 2,
+      "input_sha256": "88e3e25eac9e8cf748da8a813763f22df2ebdb7557caf624f731b4d881297a07",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient045_frame01",
+      "slice_index": 3,
+      "input_sha256": "d86f5ae03ad89fe4541e6d01e327a1e91bd4e9575e6cb755cefa85e6d8c6b5c0",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient045_frame01",
+      "slice_index": 4,
+      "input_sha256": "3ceb2db4599b150c99f9523cabf61c4e993841deac38927dcc478fa7e170fe7c",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient045_frame01",
+      "slice_index": 5,
+      "input_sha256": "d8e48c66f058a08d1bc0bca4f48f0f5e4e5851f783bd96dc7ccf73b54c3a8cb6",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient045_frame01",
+      "slice_index": 6,
+      "input_sha256": "dd7f24536fb76c54a05df7e4fd3487cca50479848c9f67487289a579c5769b6b",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient045_frame01",
+      "slice_index": 7,
+      "input_sha256": "d181fa4181e76d7ea264b7b6c89246fd460fe43b306606b0a20f97a794a9d78f",
+      "logits_exact": true,
+      "max_abs": 0.0,
+      "max_rel": 0.0,
+      "allclose": true,
+      "mask_exact": true,
+      "mask_mismatch_pixels": 0
+    }
+  ],
+  "metrics": [
+    {
+      "method_id": "Full_main",
+      "frame": "patient045_frame01",
+      "path": "original_runtime",
+      "class_id": 1,
+      "unit": "native grid pixels",
+      "Dice": 0.8956554590102003,
+      "IoU": 0.8110290093048714,
+      "HD95": 1.0,
+      "ASD": 0.2652888112714669
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient045_frame01",
+      "path": "original_runtime",
+      "class_id": 2,
+      "unit": "native grid pixels",
+      "Dice": 0.8664369679773004,
+      "IoU": 0.7643482925084928,
+      "HD95": 1.0,
+      "ASD": 0.2210564142487033
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient045_frame01",
+      "path": "original_runtime",
+      "class_id": 3,
+      "unit": "native grid pixels",
+      "Dice": 0.9696403035969641,
+      "IoU": 0.9410697128216078,
+      "HD95": 1.0,
+      "ASD": 0.09802329704651314
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient045_frame01",
+      "path": "deployment_no_diagnostics",
+      "class_id": 1,
+      "unit": "native grid pixels",
+      "Dice": 0.8956554590102003,
+      "IoU": 0.8110290093048714,
+      "HD95": 1.0,
+      "ASD": 0.2652888112714669
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient045_frame01",
+      "path": "deployment_no_diagnostics",
+      "class_id": 2,
+      "unit": "native grid pixels",
+      "Dice": 0.8664369679773004,
+      "IoU": 0.7643482925084928,
+      "HD95": 1.0,
+      "ASD": 0.2210564142487033
+    },
+    {
+      "method_id": "Full_main",
+      "frame": "patient045_frame01",
+      "path": "deployment_no_diagnostics",
+      "class_id": 3,
+      "unit": "native grid pixels",
+      "Dice": 0.9696403035969641,
+      "IoU": 0.9410697128216078,
+      "HD95": 1.0,
+      "ASD": 0.09802329704651314
+    }
+  ],
+  "original_prediction_sha256": "b13aa1f27cdbd31f5d4f13c6f305f99ba1d3400e0bb9647f21934ec3b9fcbb5f",
+  "deployment_prediction_sha256": "b13aa1f27cdbd31f5d4f13c6f305f99ba1d3400e0bb9647f21934ec3b9fcbb5f"
+}

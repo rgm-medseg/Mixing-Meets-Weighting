@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "script_sha256": "3445400d3b5eab0c98a2aba4fcf2ce6be3a113d8ac63eda2b60f40bbd3d88e86",
+  "source_csv_sha256": "d997df12ce00bb85b6ace2aa87e49f55f5ce1d7e09bfb1c8e51a28888318b7d0",
+  "new_figure": "A3_weight_distribution_with_tail",
+  "GPU_forwards": 0,
+  "training_updates": 0,
+  "original_distribution_retained": true
+}

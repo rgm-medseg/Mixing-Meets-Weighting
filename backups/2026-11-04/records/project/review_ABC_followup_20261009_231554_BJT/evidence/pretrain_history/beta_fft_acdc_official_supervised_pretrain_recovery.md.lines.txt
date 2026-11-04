@@ -1,0 +1,27 @@
+ORIGINAL_PATH: /home/renguanming/jupyterlab/rgm/beta-FFT-main/audit/beta_fft_acdc_official_supervised_pretrain_recovery.md
+ORIGINAL_SHA256: b78d4de3de75953a4c8162d726010ae66158744678bc8d2edde87bbdd235e51d
+Line numbers below are original source line numbers; this is a text excerpt.
+--- ORIGINAL LINES 1-23 ---
+1: # beta-FFT ACDC official supervised pretrain recovery
+2: 
+3: generated_at: 2026-06-18 00:55:01 CST
+4: 
+5: Recovered official ACDC training entry from README: `cd train_ACDC && python beta_fft_label7.py`.
+6: 
+7: Recovered supervised pretraining implementation from `train_ACDC/beta_fft_label7.py::pre_train`:
+8: 
+9: - model: `BCP_net(in_chns=1, class_num=num_classes)`
+10: - optimizer: SGD, lr 0.01, momentum 0.9, weight_decay 0.0001
+11: - loss: official `mix_loss`, optimized as `(loss_dice + loss_ce) / 2`
+12: - training length: `pre_iterations=10000`
+13: - batch size: 24, labeled_bs: 12
+14: - image size: [256, 256]
+15: - validation interval: 200 iterations
+16: - best criterion: validation mean Dice improvement
+17: - checkpoint format: `{'net': model.state_dict(), 'opt': optimizer.state_dict()}`
+18: 
+19: The official code contains a pretraining function but the local `__main__` has that call commented out. Since all critical logic and parameters are recoverable, a clean explicit-list pretraining entry was added at:
+20: 
+21: `/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/pretrain_acdc_clean_supervised.py`
+22: 
+23: This entry reuses the recovered model/loss/optimizer/schedule/checkpoint format and replaces official front-slice selection with explicit clean labeled list loading.

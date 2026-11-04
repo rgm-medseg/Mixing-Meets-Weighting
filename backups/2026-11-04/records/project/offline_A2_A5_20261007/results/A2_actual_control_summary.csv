@@ -1,0 +1,17 @@
+method_id,checkpoint_tag,checkpoint_step,mode,cohort,prediction_kind,class_id,level,signal,quality,spearman,valid_n,patients,frames,checkpoint_count,NA_reason,no_significance_test
+Full_main,best,29600,eval,validation,original_pseudolabel,GT_present_foreground_macro,slice,sample_control_proxy,dice,-0.2174203137168519,205,10,20,1,,True
+Full_main,last,30000,eval,validation,original_pseudolabel,GT_present_foreground_macro,slice,sample_control_proxy,dice,-0.302851754191981,205,10,20,1,,True
+R1_v2_B,best,29000,eval,validation,original_pseudolabel,GT_present_foreground_macro,slice,sample_control_proxy,dice,0.7991739796629056,205,10,20,1,,True
+R1_v2_B,last,30000,eval,validation,original_pseudolabel,GT_present_foreground_macro,slice,sample_control_proxy,dice,0.7973631424989551,205,10,20,1,,True
+R2_fixed92,best,29000,eval,validation,original_pseudolabel,GT_present_foreground_macro,slice,sample_control_proxy,dice,0.7950285901337921,205,10,20,1,,True
+R2_fixed92,last,30000,eval,validation,original_pseudolabel,GT_present_foreground_macro,slice,sample_control_proxy,dice,0.7978339601615824,205,10,20,1,,True
+baseline,best,21200,eval,validation,original_pseudolabel,GT_present_foreground_macro,slice,sample_control_proxy,dice,NA,0,0,0,1,constant input or fewer than3 valid observations,True
+baseline,last,30000,eval,validation,original_pseudolabel,GT_present_foreground_macro,slice,sample_control_proxy,dice,NA,0,0,0,1,constant input or fewer than3 valid observations,True
+Full_main,best,29600,eval,validation,original_pseudolabel,GT_present_foreground_macro,patient,sample_control_proxy,dice,0.12727272727272726,10,10,20,1,,True
+Full_main,last,30000,eval,validation,original_pseudolabel,GT_present_foreground_macro,patient,sample_control_proxy,dice,0.09090909090909088,10,10,20,1,,True
+R1_v2_B,best,29000,eval,validation,original_pseudolabel,GT_present_foreground_macro,patient,sample_control_proxy,dice,0.7696969696969697,10,10,20,1,,True
+R1_v2_B,last,30000,eval,validation,original_pseudolabel,GT_present_foreground_macro,patient,sample_control_proxy,dice,0.8545454545454544,10,10,20,1,,True
+R2_fixed92,best,29000,eval,validation,original_pseudolabel,GT_present_foreground_macro,patient,sample_control_proxy,dice,0.8060606060606059,10,10,20,1,,True
+R2_fixed92,last,30000,eval,validation,original_pseudolabel,GT_present_foreground_macro,patient,sample_control_proxy,dice,0.8303030303030302,10,10,20,1,,True
+baseline,best,21200,eval,validation,original_pseudolabel,GT_present_foreground_macro,patient,sample_control_proxy,dice,NA,0,0,0,1,constant input or fewer than3 valid observations,True
+baseline,last,30000,eval,validation,original_pseudolabel,GT_present_foreground_macro,patient,sample_control_proxy,dice,NA,0,0,0,1,constant input or fewer than3 valid observations,True

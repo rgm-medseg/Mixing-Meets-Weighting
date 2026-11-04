@@ -1,0 +1,14 @@
+[
+  {
+    "task": "R1",
+    "returncode": 1,
+    "stderr": "WAITING_FOR_FULL_APPROVAL: this entry refuses formal training; no tmux or queue handoff\n",
+    "no_training_entry_entered": true
+  },
+  {
+    "task": "R2",
+    "returncode": 1,
+    "stderr": "WAITING_FOR_FULL_APPROVAL: this entry refuses formal training; no tmux or queue handoff\n",
+    "no_training_entry_entered": true
+  }
+]

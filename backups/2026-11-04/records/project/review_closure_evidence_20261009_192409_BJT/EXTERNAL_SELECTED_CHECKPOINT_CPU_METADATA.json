@@ -1,0 +1,300 @@
+[
+  {
+    "row_id": "ROW11",
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/checkpoints/hien_acdc_10p_seed1337/best_model.pt",
+    "sha256": "53f3ca99ad03f6c3467008af424236a3556e31f0d61fe93c5b95a06edc445295",
+    "keys": [
+      "schema",
+      "config_sha256",
+      "iteration",
+      "validation_dice",
+      "selected_model_role",
+      "model"
+    ],
+    "loaded_device": "CPU",
+    "model_created": false,
+    "forward_called": false,
+    "checkpoint_selection_changed": false,
+    "iteration": 10500,
+    "validation_dice": 0.8658578039659258,
+    "selected_model_role": "student",
+    "config_sha256": "b64dba39f627a17ae5da7f30341b1a7fc766e4a9f2497581c2fa0e2de7f17b90",
+    "schema": "HIEN_CONTROLLED_BEST_MODEL_V1"
+  },
+  {
+    "row_id": "ROW12",
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/checkpoints/hien_acdc_5p_seed1337/best_model.pt",
+    "sha256": "846f8c925cdd751b16adb160a5926aed0bc5752a45283838b42dfc886021f9ef",
+    "keys": [
+      "schema",
+      "config_sha256",
+      "iteration",
+      "validation_dice",
+      "selected_model_role",
+      "model"
+    ],
+    "loaded_device": "CPU",
+    "model_created": false,
+    "forward_called": false,
+    "checkpoint_selection_changed": false,
+    "iteration": 19800,
+    "validation_dice": 0.7770338469146982,
+    "selected_model_role": "student",
+    "config_sha256": "ffeceed4a70515d97b4ddf731722de2c649062f222a35362ffad42b954fbc3e8",
+    "schema": "HIEN_CONTROLLED_BEST_MODEL_V1"
+  },
+  {
+    "row_id": "ROW13",
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/checkpoints/hien_covid19_10p_seed1337/best_model.pt",
+    "sha256": "b0c724af20bb6c714d8ee95a32519aa90e0d88ed88f2001d3b5410fb50b4f30d",
+    "keys": [
+      "schema",
+      "config_sha256",
+      "iteration",
+      "validation_dice",
+      "selected_model_role",
+      "model"
+    ],
+    "loaded_device": "CPU",
+    "model_created": false,
+    "forward_called": false,
+    "checkpoint_selection_changed": false,
+    "iteration": 3500,
+    "validation_dice": 0.838281383805644,
+    "selected_model_role": "teacher",
+    "config_sha256": "1f9485a71419b50e1d8fc8acf5f84ea1d203891396304f08889d92d1709b027b",
+    "schema": "HIEN_CONTROLLED_BEST_MODEL_V1"
+  },
+  {
+    "row_id": "ROW14",
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/checkpoints/hien_covid19_5p_seed1337/best_model.pt",
+    "sha256": "e29ba25eb452f53aa30a85f583a63a3cf9906eea9c1d1f7ecb2c6afc8ec65509",
+    "keys": [
+      "schema",
+      "config_sha256",
+      "iteration",
+      "validation_dice",
+      "selected_model_role",
+      "model"
+    ],
+    "loaded_device": "CPU",
+    "model_created": false,
+    "forward_called": false,
+    "checkpoint_selection_changed": false,
+    "iteration": 5300,
+    "validation_dice": 0.8324687209333608,
+    "selected_model_role": "teacher",
+    "config_sha256": "a87c28cda99fcb6ebc5b9693caa58c9d1ee3d5afa0c63fe956a4a36a92bab89b",
+    "schema": "HIEN_CONTROLLED_BEST_MODEL_V1"
+  },
+  {
+    "row_id": "ROW15",
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/checkpoints/hien_promise12_20p_seed1337/best_model.pt",
+    "sha256": "edbe3c1684c82ca9c156e21833f18ddf785749177f9f9b153942085ac862d8e3",
+    "keys": [
+      "schema",
+      "config_sha256",
+      "iteration",
+      "validation_dice",
+      "selected_model_role",
+      "model"
+    ],
+    "loaded_device": "CPU",
+    "model_created": false,
+    "forward_called": false,
+    "checkpoint_selection_changed": false,
+    "iteration": 25500,
+    "validation_dice": 0.8008277964009777,
+    "selected_model_role": "student",
+    "config_sha256": "fd582c4450cc19d6df47d57641f57d0a6c5f641199734ddae22298ce83053674",
+    "schema": "HIEN_CONTROLLED_BEST_MODEL_V1"
+  },
+  {
+    "row_id": "ROW16",
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/checkpoints/pmeul_acdc_10p_seed1337/best_model.pt",
+    "sha256": "80d752c70bb73a9184f1e1402a02cc9f1aa173c8609355c08c26863c8c15e6eb",
+    "keys": [
+      "schema",
+      "config_sha256",
+      "iteration",
+      "validation_dice",
+      "model",
+      "network",
+      "test_output",
+      "missing_keys",
+      "unexpected_keys"
+    ],
+    "loaded_device": "CPU",
+    "model_created": false,
+    "forward_called": false,
+    "checkpoint_selection_changed": false,
+    "iteration": 27200,
+    "validation_dice": 0.8198271917729212,
+    "config_sha256": "68654da0245e7c7ec10ec75daf8693be56fad1986f4dfd3115f9515dba327698",
+    "schema": "PMEUL_CONTROLLED_BEST_MODEL_V1"
+  },
+  {
+    "row_id": "ROW17",
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/checkpoints/pmeul_acdc_5p_seed1337/best_model.pt",
+    "sha256": "3f724956894a8d1c449d4fb1fc6415fa52dfba9e5fd9ab0054218c2845702b54",
+    "keys": [
+      "schema",
+      "config_sha256",
+      "iteration",
+      "validation_dice",
+      "model",
+      "network",
+      "test_output",
+      "missing_keys",
+      "unexpected_keys"
+    ],
+    "loaded_device": "CPU",
+    "model_created": false,
+    "forward_called": false,
+    "checkpoint_selection_changed": false,
+    "iteration": 23400,
+    "validation_dice": 0.6293530182664402,
+    "config_sha256": "0c02621f7ff15f8e2b5a0a67cb6c535edd6e4f6583b2d1df474516696e9c7fab",
+    "schema": "PMEUL_CONTROLLED_BEST_MODEL_V1"
+  },
+  {
+    "row_id": "ROW18",
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/checkpoints/pmeul_covid19_10p_seed1337/best_model.pt",
+    "sha256": "ae1115ec9ab0aa71e41408bc0dd3c2dee0de956e771859dead9230fca63f003b",
+    "keys": [
+      "schema",
+      "config_sha256",
+      "iteration",
+      "validation_dice",
+      "model",
+      "network",
+      "test_output",
+      "missing_keys",
+      "unexpected_keys"
+    ],
+    "loaded_device": "CPU",
+    "model_created": false,
+    "forward_called": false,
+    "checkpoint_selection_changed": false,
+    "iteration": 14200,
+    "validation_dice": 0.8536791365282417,
+    "config_sha256": "6e7696417dd95a99a41d2fa9081e4a6a0117c2bd898f00fcb54bed2d3a14e330",
+    "schema": "PMEUL_CONTROLLED_BEST_MODEL_V1"
+  },
+  {
+    "row_id": "ROW19",
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/checkpoints/pmeul_covid19_5p_seed1337/best_model.pt",
+    "sha256": "7e1a947da65a9d4ec0e8bdbf6ebfcc45ffc4f102cc7184bfff726e2f64f1a05e",
+    "keys": [
+      "schema",
+      "config_sha256",
+      "iteration",
+      "validation_dice",
+      "model",
+      "network",
+      "test_output",
+      "missing_keys",
+      "unexpected_keys"
+    ],
+    "loaded_device": "CPU",
+    "model_created": false,
+    "forward_called": false,
+    "checkpoint_selection_changed": false,
+    "iteration": 600,
+    "validation_dice": 0.8281510024535669,
+    "config_sha256": "9082c0686bd14077dae4c9bc7435c48b6cf9744061d1ab3b43b0abea2ad75009",
+    "schema": "PMEUL_CONTROLLED_BEST_MODEL_V1"
+  },
+  {
+    "row_id": "ROW20",
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/external_comparators/2026_reproduction/checkpoints/pmeul_promise12_20p_seed1337/best_model.pt",
+    "sha256": "38160ba30c453f0cf5ceac2c3ee48b8624c56042d08655b27321fbddf561b17d",
+    "keys": [
+      "schema",
+      "config_sha256",
+      "iteration",
+      "validation_dice",
+      "model",
+      "network",
+      "test_output",
+      "missing_keys",
+      "unexpected_keys"
+    ],
+    "loaded_device": "CPU",
+    "model_created": false,
+    "forward_called": false,
+    "checkpoint_selection_changed": false,
+    "iteration": 8000,
+    "validation_dice": 0.7264375361952636,
+    "config_sha256": "f3dd71cc0aa6550a736e12e6553d908a5a6ee99b5d8a73402a287cded5f0cb2e",
+    "schema": "PMEUL_CONTROLLED_BEST_MODEL_V1"
+  },
+  {
+    "row_id": "ROW21",
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/results/ACDC5/seed1337/checkpoints/best.pth",
+    "sha256": "738baea16170b46e5be1566b074676d0871547aca14ee832a5f7e3c4bcc18c63",
+    "keys": [
+      "net",
+      "ema_net",
+      "iter",
+      "best_val_dice"
+    ],
+    "loaded_device": "CPU",
+    "model_created": false,
+    "forward_called": false,
+    "checkpoint_selection_changed": false,
+    "iter": 10600,
+    "best_val_dice": 0.8520451559303406
+  },
+  {
+    "row_id": "ROW22",
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/results/ACDC10/seed1337/checkpoints/best.pth",
+    "sha256": "7a870d2ba5c605786b30f41a59f448b9c8cd144f9c8c9159691fcb9bfa17e6a1",
+    "keys": [
+      "net",
+      "ema_net",
+      "iter",
+      "best_val_dice"
+    ],
+    "loaded_device": "CPU",
+    "model_created": false,
+    "forward_called": false,
+    "checkpoint_selection_changed": false,
+    "iter": 23000,
+    "best_val_dice": 0.8763321877508597
+  },
+  {
+    "row_id": "ROW23",
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/results/COVID5/seed1337/checkpoints/best.pth",
+    "sha256": "b2793d72de8e5bd99c8eb49bf25328f3013512bb4fe46d160e85fd5fe0fd6324",
+    "keys": [
+      "net",
+      "ema_net",
+      "iter",
+      "best_val_dice"
+    ],
+    "loaded_device": "CPU",
+    "model_created": false,
+    "forward_called": false,
+    "checkpoint_selection_changed": false,
+    "iter": 3000,
+    "best_val_dice": 0.8394314658001318
+  },
+  {
+    "row_id": "ROW24",
+    "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/results/COVID10/seed1337/checkpoints/best.pth",
+    "sha256": "033855fd9a7e26809aef4099f3f3af2c9a5ae57cf5fc80cc2232c9b7c861f805",
+    "keys": [
+      "net",
+      "ema_net",
+      "iter",
+      "best_val_dice"
+    ],
+    "loaded_device": "CPU",
+    "model_created": false,
+    "forward_called": false,
+    "checkpoint_selection_changed": false,
+    "iter": 15600,
+    "best_val_dice": 0.8470715294550017
+  }
+]

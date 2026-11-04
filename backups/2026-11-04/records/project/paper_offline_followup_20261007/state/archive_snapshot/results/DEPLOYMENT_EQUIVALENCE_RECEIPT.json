@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "methods": 4,
+  "slices_per_method": 210,
+  "method_slice_checks": 840,
+  "method_volumes": 80,
+  "all_logits_exact": true,
+  "max_abs": 0.0,
+  "all_masks_exact": true,
+  "all_native_hashes_exact": true,
+  "model_BN_states_unchanged": true,
+  "atol": 1e-06,
+  "rtol": 1e-05,
+  "backend": {
+    "deterministic": true,
+    "benchmark": false,
+    "matmul_tf32": false,
+    "cudnn_tf32": true
+  },
+  "training_updates": 0,
+  "branch": "model_1",
+  "empty_policy": "both empty Dice/IoU/HD95/ASD0; single empty distance sqrt(sum(shape^2))",
+  "postprocessing": "softmax argmax; no LCC; original order0 restore; no z-axis resize",
+  "metrics_unit": "native grid pixels",
+  "identity": "98f2cac076f3932d9d13ec60752d0c4d261a0c99663a8900ee86a558d9fb33cc"
+}

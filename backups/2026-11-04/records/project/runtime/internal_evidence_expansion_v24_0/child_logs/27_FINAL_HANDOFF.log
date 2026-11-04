@@ -1,0 +1,33 @@
+{
+  "status": "REFUSE_RUN_WAITING_UPSTREAM",
+  "created_at": "2026-08-25T18:37:34.586326+00:00",
+  "task_id": "FINAL_HANDOFF",
+  "training_started": false,
+  "inference_started": false,
+  "test_started": false,
+  "formal_started": false,
+  "upstream": {
+    "requires": [
+      {
+        "TaskID": "FINAL_FIVE_REVIEW",
+        "TaskType": "FINALIZATION",
+        "Action": "FINALIZATION_READY",
+        "FinalLaunchReady": "PASS",
+        "Blocker": "",
+        "CompletionAsset": "audits/internal_evidence_expansion_v24_0/FINAL_FIVE_REVIEW.json",
+        "CompletionAssetExists": true,
+        "CompletionAssetPass": false,
+        "CompletionEvidence": null,
+        "Ready": false
+      }
+    ],
+    "blocked": [
+      {
+        "TaskID": "FINAL_FIVE_REVIEW",
+        "Reason": "WAITING_PASS_COMPLETION_ASSET:audits/internal_evidence_expansion_v24_0/FINAL_FIVE_REVIEW.json"
+      }
+    ],
+    "ready": false
+  },
+  "hard_gate": "Refused because required upstream completion evidence is absent; launch readiness was not treated as completion."
+}

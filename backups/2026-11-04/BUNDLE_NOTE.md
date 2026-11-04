@@ -1,0 +1,1 @@
+The catalogue Release archive contains the metadata snapshot before its own asset entry is added. Its embedded assets.json lists the ten weight bundles. The Git branch assets.json and SHA256SUMS.assets additionally list the catalogue archive itself, avoiding a self-hash cycle. All download URLs remain planned until remote verification succeeds.

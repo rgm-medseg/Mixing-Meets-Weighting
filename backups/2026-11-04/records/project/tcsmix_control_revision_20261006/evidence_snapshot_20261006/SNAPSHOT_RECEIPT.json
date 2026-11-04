@@ -1,0 +1,11 @@
+{
+  "time": "2026-10-07T00:00:53.249600+08:00",
+  "status": "WAITING_FOR_FULL_APPROVAL",
+  "copies_consistent": true,
+  "n_source_files": 144,
+  "optimizer_calls": 480,
+  "joint_steps": 240,
+  "old_inputs_unchanged": 82,
+  "weights_and_raw_medical_arrays_excluded": true,
+  "convention": "manifest hashes static copied bytes; originals and actual executed pre-correction files retained in archive"
+}

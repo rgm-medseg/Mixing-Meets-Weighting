@@ -1,0 +1,122 @@
+{
+  "audit_id": "V22_0_CURRENT_PRELAUNCH_STATUS",
+  "created_at": "2026-08-19T15:34:40.181970+00:00",
+  "CURRENT_AUTHORITATIVE_TASK": "V22.0_THREE_INNOVATION_ABLATION_TRANSFER",
+  "DO_NOT_REPEAT_V21_6": true,
+  "FORMAL_FULL_STARTED": false,
+  "FORMAL_TMUX_CONTROLLER_STARTED": false,
+  "FORMAL_RUN_ENABLED": false,
+  "FORMAL_START_AUTHORIZATION": true,
+  "V22_0_PRELAUNCH_READY": true,
+  "STRUCTURAL_PRELAUNCH_READY_BEFORE_FINAL_HARD_GATE": true,
+  "run_guard": "FORMAL_RUN_GUARD_SKIPPED_BY_REHARDENING_POLICY_NO_RUN_CALL_ALLOWED",
+  "ACDC_LOCAL_L1_L10": "PASS",
+  "ACDC_LOCAL_L10_REPLACES_GLOBAL_L10": false,
+  "TRANSFER_REAL_TEST_ACCESS_BEFORE_FORMAL": 0,
+  "MSCMR10": {
+    "state": "BLOCKED_PARENT_IDENTITY",
+    "blocker": "TRANSFER_CONTROL_IDENTITY_BLOCKER_OVERLAY_CONFLICT",
+    "derived_config_state": "STAGING_ONLY",
+    "final_launch_ready": false,
+    "formal_full_allowed": false
+  },
+  "transfer_gates": {
+    "L1_L2": {
+      "audit_id": "V22_0_TRANSFER_FINAL3_L1_L2_CONFIG_AUDIT",
+      "created_at": "2026-08-19T15:30:55.183203+00:00",
+      "L1_ALL_PASS": true,
+      "L2_ALL_PASS": true,
+      "formal_full_started": false,
+      "real_transfer_test_access_before_formal_full": 0,
+      "blocked_tasks": [
+        "MSCMR10_FINAL3"
+      ],
+      "audit_tsv": "audits/three_innovation_ablation_transfer_v22_0/TRANSFER_FINAL3_L1_L2_CONFIG_AUDIT.tsv"
+    },
+    "L3_L5": {
+      "L3_EXECUTABLE_ALL_PASS": true,
+      "L4_EXECUTABLE_ALL_PASS": true,
+      "L5_EXECUTABLE_ALL_PASS": true,
+      "blocked_tasks_skipped_fail_closed": true
+    },
+    "L6_L7": {
+      "L6_EXECUTABLE_ALL_PASS": true,
+      "L7_EXECUTABLE_ALL_PASS": true,
+      "blocked_tasks_skipped_fail_closed": true
+    },
+    "L8_L9": {
+      "L8_EXECUTABLE_ALL_PASS": true,
+      "L9_FAILURE_INJECTION_PASS": true,
+      "blocked_tasks_skipped_fail_closed": true
+    },
+    "FORMAL_COMMAND_BINDING": {
+      "EXECUTABLE_FORMAL_COMMAND_BINDING_ALL_PASS": true,
+      "blocked_tasks_skipped_fail_closed": true
+    }
+  },
+  "GLOBAL_MASTER_QUEUE_L10": "PASS",
+  "GLOBAL_MASTER_QUEUE_L10_FINAL_PASS": true,
+  "FINAL_REGISTRY": {
+    "MASTER_REGISTRY_FINAL_PASS": true,
+    "task_count": 14,
+    "exact_reuse_count": 3,
+    "new_full_ready_count": 10,
+    "blocked_count": 1
+  },
+  "PRELAUNCH_FIVE_REVIEW": {
+    "PRELAUNCH_FIVE_REVIEW_PASS": true,
+    "FORMAL_RUN_ENABLED": false,
+    "FORMAL_FULL_STARTED": false,
+    "FORMAL_TMUX_CONTROLLER_STARTED": false
+  },
+  "CURRENT_RUNTIME_STATE": {
+    "tmux_session_started": false,
+    "formal_full_started": false,
+    "gpu": "0, NVIDIA A100-SXM4-40GB, 0, 40960, 0"
+  },
+  "DATASET_EVALUATOR_PROTOCOL_LOCK": {
+    "protocol_lock_all_pass": true,
+    "boundary_units_by_dataset": {
+      "ACDC": [
+        "pixel-unit"
+      ],
+      "COVID-19": [
+        "mm"
+      ],
+      "MS-CMRSeg": [
+        "mm"
+      ],
+      "PROMISE12": [
+        "pixel-unit"
+      ]
+    },
+    "cross_dataset_hd95_asd_direct_comparison_allowed": false
+  },
+  "POST_FULL_CHECKPOINT_TEST_GATE": {
+    "formal_full_complete": false,
+    "new_full_task_count": 10,
+    "ready_for_frozen_best_test_once_count": 0,
+    "locked_new_full_task_count": 10,
+    "TEST_UNLOCKED": false,
+    "TEST_UNLOCKED_COUNT": 0,
+    "IF_TASK_FORMAL_FULL_COMPLETE_FALSE_THEN_TEST_UNLOCKED_FALSE": true,
+    "IF_BEST_CHECKPOINT_SHA256_FROZEN_FALSE_THEN_TEST_UNLOCKED_FALSE": true,
+    "ONE_TASK_COMPLETE_MUST_NOT_UNLOCK_OTHER_TASK_TEST": true,
+    "MSCMR10_TEST_UNLOCKED": false,
+    "TRANSFER_TEST_USED_FOR_TUNING": false
+  },
+  "FINAL_PRESTART_HARD_GATE": {
+    "HARD_GATE_PASS": true,
+    "TRANSFER_REAL_TRAIN_VAL_SMOKE_PASS": true,
+    "TRANSFER_X03_DEFAULT_OFF_EQUIVALENCE": "PASS",
+    "TRANSFER_X03_TENSOR_ROLE_PARITY": "PASS",
+    "TRANSFER_REAL_TEST_ACCESS_BEFORE_FORMAL": 0,
+    "blocking_reasons": []
+  },
+  "quarantine_receipts": [
+    "runtime/three_innovation_ablation_transfer_v22_0/quarantine/ACCIDENTAL_PRELAUNCH_RUN_PROBE_ACDC10_ARM_100_20260819T141634Z/QUARANTINE_RECEIPT.json"
+  ],
+  "X03_FREEZE_PARITY_PASS": true,
+  "remaining_prelaunch_work": [],
+  "remaining_before_formal_start": []
+}

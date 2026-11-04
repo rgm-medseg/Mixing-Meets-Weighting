@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T12:34:54.600632+08:00",
+  "reference": {
+    "run": "R1_v2_B",
+    "status": "EVALUATED",
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/runs/R1_full_v2B/checkpoints/best.ckpt",
+    "checkpoint_sha256": "5df2de9b8df16e4d89df9265f104b4b8c7c321245d9eaa0479971672b4d7a1a9",
+    "selected_step": "29000",
+    "cases": "40",
+    "patients": "20",
+    "unit": "grid",
+    "dice": "0.8998445206808252",
+    "iou": "0.8234190597056135",
+    "hd95": "2.94213147078008",
+    "asd": "0.7689256378227837"
+  },
+  "evaluation": {
+    "status": "EVALUATED",
+    "time": "2026-10-07T08:01:37.974260+08:00",
+    "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/runs/R1_full_v2B/checkpoints/best.ckpt",
+    "checkpoint_sha256": "5df2de9b8df16e4d89df9265f104b4b8c7c321245d9eaa0479971672b4d7a1a9",
+    "selected_step": 29000,
+    "test_manifest": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/test.list",
+    "test_manifest_sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+    "metrics": {
+      "dice": 0.8998445206808252,
+      "iou": 0.8234190597056135,
+      "hd95": 2.94213147078008,
+      "asd": 0.7689256378227837
+    },
+    "protocol": "ACDC_v22_grid_directed_ASD",
+    "average": "mean RV/MYO/LV and 40 reconstructed ED/ES frame volumes; 20-patient paired results separately",
+    "unit": "HD95 and directed pred-to-GT ASD are reconstruction grid distances, not mm",
+    "postprocessing": "none",
+    "empty_both": "all four0",
+    "empty_one": "Dice/IoU0,HD95/ASD sqrt(Nz²+Ny²+Nx²)",
+    "resize": "nearest order0 to256² and back to native in-plane grid",
+    "case_axis": "z untouched",
+    "test_selection": false
+  },
+  "rows": 120
+}

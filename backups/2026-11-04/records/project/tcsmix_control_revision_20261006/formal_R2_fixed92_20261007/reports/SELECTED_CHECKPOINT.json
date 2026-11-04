@@ -1,0 +1,12 @@
+{
+  "status": "FROZEN_BEFORE_TEST",
+  "time": "2026-10-07T18:25:22.252327+08:00",
+  "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/checkpoints/best.ckpt",
+  "sha256": "b56292a270ccf6679b5597e9d556eda686df91778e496e715174aaa367b710de",
+  "student": "model_1",
+  "selected_step": 29000,
+  "selected_val_macro_dice": 0.9013421617148242,
+  "selection": "original strict improvement of student1 validation macro Dice",
+  "validation_records": 150,
+  "test_metrics_consulted": false
+}

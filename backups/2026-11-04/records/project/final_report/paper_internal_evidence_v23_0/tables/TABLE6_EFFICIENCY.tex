@@ -1,0 +1,10 @@
+\begin{table}[t]
+\centering
+\caption{Efficiency and complexity comparison. Latency and FPS are mean$\pm$std over three scratch repeats. Training-step timing uses the full BCP+FFT training step with X03 enabled for Ours.}
+\begin{tabular}{lrrrrrr}
+\toprule
+Method & Params & Inf. Lat. (ms) & FPS & Inf. Mem. & Train Lat. (ms) & Train Mem. \\
+\midrule
+β-FFT & 1826828 & 1.614$\pm$0.020 & 619.819$\pm$7.614 & 45.063 & 583.174$\pm$18.911 & 13322.333 \\nOurs & 1827469 & 2.935$\pm$0.063 & 340.785$\pm$7.226 & 54.425 & 709.435$\pm$31.135 & 15776.607 \\n\bottomrule
+\end{tabular}
+\end{table}

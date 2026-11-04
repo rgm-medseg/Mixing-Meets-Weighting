@@ -1,0 +1,4 @@
+task,parameters,adapter_parameters,covered_MACs,conv_linear_MACs,TRC_einsum_MACs,input,precision,full_FLOPs,coverage,structure
+E4,1827475,647,2987393024,2987393024,0,1x1x256x256,FP32,NA,conv/transpose-conv/linear output-grid convention + R1 two token einsums; excludes LN/BN/GELU/softmax/interpolate/pooling/additions,16->18 Conv1x1bias/LN18/GELU/Conv1x1bias16 + gamma0 residual
+R1,1827469,641,2991587328,2983198720,8388608,1x1x256x256,FP32,NA,conv/transpose-conv/linear output-grid convention + R1 two token einsums; excludes LN/BN/GELU/softmax/interpolate/pooling/additions,token residual
+E5,1813764,0,2949644288,2949644288,0,1x1x256x256,FP32,NA,conv/transpose-conv/linear output-grid convention + R1 two token einsums; excludes LN/BN/GELU/softmax/interpolate/pooling/additions,native official UNet; no added adapters

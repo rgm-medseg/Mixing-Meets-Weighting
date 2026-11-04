@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "literal_aug_comparisons": 216,
+  "outputs_exact": true,
+  "RNG_after_exact": true,
+  "unique_slices": 210,
+  "unique_frames": 20,
+  "unique_patients": 10,
+  "exposures": 216,
+  "repeat_exposures": 6,
+  "batches": 9,
+  "batch_size": 24,
+  "roles": "img_a6 img_b6 uimg_a6 uimg_b6; val simulated roles",
+  "pairing": "unl: uimg_a outside/img_a inside; labeled: img_b outside/uimg_b inside; student1 weak and student2 strong share source composition",
+  "geometry_shared": true,
+  "cutout_tracked": true,
+  "cutout_artificial_labels_zero": true,
+  "GT_use": "only post-hoc anatomy/error; controller and w receive no GT",
+  "GT_true": "anatomical weak transformed GT retained; strong artificial GT recorded separately; errors exclude occlusion and rotation padding",
+  "seed": 4261007,
+  "identity": "98f2cac076f3932d9d13ec60752d0c4d261a0c99663a8900ee86a558d9fb33cc"
+}

@@ -1,0 +1,36 @@
+{
+  "cases": 10,
+  "seconds": 3.3534490540623665,
+  "macro": {
+    "dice": 0.8110316082469234,
+    "iou": 0.6843582268075924,
+    "hd95": 3.669142478708649,
+    "asd": 1.5342924140259098
+  },
+  "historical_precision_record": {
+    "dice": 0.8110316082469234,
+    "iou": 0.6843582268075924,
+    "hd95": 3.669142478708649,
+    "asd": 1.5342924140259098
+  },
+  "absolute_errors": {
+    "dice": 0.0,
+    "iou": 0.0,
+    "hd95": 0.0,
+    "asd": 0.0
+  },
+  "all_masks_nonempty": true,
+  "all_metrics_finite": true,
+  "checkpoint": "train_promise12/beta_FFT/PROMISE12_bcp_fft_test_seed_pb2d_original_2d_baseline_7/self_train/model1_iter_17400_dice_0.8657.pth",
+  "checkpoint_sha256_recorded": "5323e5eb888a0f5e5869cdc2c3476fdf51178f7faf147249f727825cd1f7b9d7",
+  "checkpoint_sha256_current": "5323e5eb888a0f5e5869cdc2c3476fdf51178f7faf147249f727825cd1f7b9d7",
+  "prediction_grid": "existing staged (Z,224,224); no resampling",
+  "postprocessing": "none added",
+  "empty_rule": "historical binary_metrics: both_empty Dice/IoU1, distance0; one_empty Dice/IoU0, distancesinf",
+  "historical_import_binding": "Located historical script/current bytes; old receipt does not freeze imported dependencies. CPU metric compatibility is not full runtime provenance.",
+  "model_created": false,
+  "forward_called": false,
+  "checkpoint_reselection": false,
+  "predictions_modified": false,
+  "source_modified": false
+}

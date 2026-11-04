@@ -1,0 +1,22 @@
+{
+  "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth",
+  "sha256": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3",
+  "keys": [
+    "net",
+    "opt"
+  ],
+  "optimizer_param_groups": [
+    {
+      "lr": 0.01,
+      "momentum": 0.9,
+      "dampening": 0,
+      "weight_decay": 0.0001,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false
+    }
+  ],
+  "net_parameter_keys": 226,
+  "historical_generation_provenance": "NA: cannot infer generation seed or budget from weights alone"
+}

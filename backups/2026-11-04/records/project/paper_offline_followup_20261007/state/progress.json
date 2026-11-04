@@ -1,0 +1,8 @@
+{
+  "stage": "A3",
+  "time": "2026-10-07T23:22:00.334461+08:00",
+  "method": "R2_fixed92",
+  "checkpoint": "last",
+  "strategy": "original_strategy",
+  "batch": 8
+}

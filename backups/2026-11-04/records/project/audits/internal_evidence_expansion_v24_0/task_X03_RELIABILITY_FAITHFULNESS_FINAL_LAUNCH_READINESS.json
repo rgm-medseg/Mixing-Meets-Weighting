@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:17:58.519322+00:00",
+  "task_id": "X03_RELIABILITY_FAITHFULNESS",
+  "task_type": "FROZEN_REPLAY_ANALYSIS",
+  "action": "READ_ONLY_READY",
+  "registry_FinalLaunchReady": "PASS",
+  "registry_Blocker": "",
+  "registry_BlockerCategory": "NONE",
+  "LaunchBlocking": false,
+  "NoncriticalTerminalGap": false,
+  "ProtocolExcluded": false,
+  "FinalLaunchReady": true,
+  "FinalLaunchReady_semantics": "launch permission only; not completion evidence",
+  "PostFullCompletionEvidenceRequired": false,
+  "FormalFullStarted": false,
+  "TmuxStarted": false,
+  "checks": {
+    "StaticPass": true,
+    "ArgvPass": true,
+    "PathPass": true,
+    "ScientificIdentityPass": true,
+    "ImportPass": true,
+    "RoleBindingPass": true,
+    "SmokePass": true,
+    "ClosedLoopPass": true,
+    "FailureInjectionPass": true,
+    "ControllerDryPass": true,
+    "OutputClean": true,
+    "SourceFreezePass": true,
+    "ConfigFreezePass": true
+  },
+  "l1_l10": {
+    "TaskOrder": "5",
+    "TaskID": "X03_RELIABILITY_FAITHFULNESS",
+    "Action": "READ_ONLY_READY",
+    "FinalLaunchReady": "PASS",
+    "Blocker": "",
+    "L1StaticPaths": "PASS",
+    "L2DryRunOrReceiptMode": "NA_RECEIPT_CHECK_ONLY",
+    "L3Paths": "PASS",
+    "L4ScientificIdentity": "PASS_OR_NA",
+    "L5ImportCompile": "PASS",
+    "L6TestFirewall": "PASS",
+    "L7SmokeGate": "PASS_OR_NA",
+    "L8ClosedLoopReceipt": "PASS",
+    "L9FailureInjection": "PASS_OR_NA",
+    "L10ControllerDryConsumption": "PASS_WITH_BLOCKERS"
+  },
+  "freeze_evidence": {
+    "source": {
+      "applicable": true,
+      "pass": true,
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_x03_reliability_faithfulness.py",
+      "exists": true,
+      "expected_sha256": "1d7e016b6a0ce224fd3b43df7ed2be747c3bf8ba0b0ecc00ff7be77479ea81a7",
+      "current_sha256": "1d7e016b6a0ce224fd3b43df7ed2be747c3bf8ba0b0ecc00ff7be77479ea81a7"
+    },
+    "launcher": {
+      "applicable": true,
+      "pass": true,
+      "path": "scripts/internal_evidence_expansion_v24_0/run_x03_reliability_faithfulness.sh",
+      "exists": true,
+      "expected_sha256": "0f3bb12e65c58fc79d979588ef0247f60a3cc64d084e038bd18e3a7a102c08b3",
+      "current_sha256": "0f3bb12e65c58fc79d979588ef0247f60a3cc64d084e038bd18e3a7a102c08b3"
+    },
+    "config": {
+      "applicable": true,
+      "pass": true,
+      "path": "audits/internal_evidence_expansion_v24_0/X03_SCORE_SEMANTIC_CONTRACT.json",
+      "exists": true,
+      "expected_sha256": "7758c6ec04845e46ed692d2a438da681c1868ca804ffadf78001ec5281a8a7e6",
+      "current_sha256": "7758c6ec04845e46ed692d2a438da681c1868ca804ffadf78001ec5281a8a7e6"
+    },
+    "checkpoint": {
+      "applicable": false,
+      "pass": true,
+      "path": "ACDC10_ARM_110/111 frozen checkpoints",
+      "expected_sha256": "see X03_RELIABILITY_FAITHFULNESS_RECEIPT.json",
+      "current_sha256": "",
+      "reason": "descriptive_non_sha_field"
+    }
+  },
+  "expected_receipt": "audits/internal_evidence_expansion_v24_0/X03_RELIABILITY_FAITHFULNESS_RECEIPT.json",
+  "test_semantics": {
+    "TESTAccessAllowed": "0",
+    "TEST_DATA_READ_FOR_PRE_REGISTERED_EVALUATION": false,
+    "TEST_USED_FOR_TUNING": false,
+    "TEST_USED_FOR_SELECTION": false
+  }
+}

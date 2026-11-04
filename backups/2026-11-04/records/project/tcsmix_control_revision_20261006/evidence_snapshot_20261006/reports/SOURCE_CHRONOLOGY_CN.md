@@ -1,0 +1,9 @@
+# 实际执行与后续准备源文件
+
+历史source/23个Python文件原SHA保留，原历史入口未改。新增controller是独立模块，new_controller.patch表示新增文件，不删除旧TRC或CTW。control_loop.patch是相对保留Full科学定义及耐久工程层的真实控制接线差异。
+
+短程实际controller见controller_executed_short.py；之后只修正未运行R2固定分支的B信号日志，signals/geometry和B路径未改，R2_logging_alignment.json给出hash。
+短程实际调度wrapper见run_short_check_executed.py；之后添加已运行检查，阻止重复调用在失败前改写status，short_wrapper_postrun_guard.json及final_negative_checks.json给出证据。
+离线实际入口见offline_diagnostics_executed.py；之后修正单切片重复像素计数与Full/E1来源说明，保留修正前CSV/inventory。预测、控制均值、几何、质量和方案取舍不变，metadata修正为0次模型前向/优化。
+原receipt计时194.075s按兼容规则保留；测量报告220.242562s来自实际两个入口timestamp至子进程结束。旧规则恢复偏移遗漏先前验证尾部，不能只展示较小计时。
+所有五轮检查后的配置与脚本版本列入code_identity.json和本包SHA256SUMS。阶段之后没有训练或额外optimizer.step。

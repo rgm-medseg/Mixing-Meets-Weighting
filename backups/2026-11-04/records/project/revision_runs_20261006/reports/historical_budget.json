@@ -1,0 +1,10 @@
+{
+  "historical_full_log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/train.log",
+  "sha256": "50a8922dfc74495006fb5f77f249b4d94347ab84900c570b952726dd6b098d9f",
+  "first_seconds_of_day": 52928.738,
+  "last_seconds_of_day": 78363.301,
+  "elapsed_seconds": 25434.56300000001,
+  "hours": 7.065156388888892,
+  "updates": 30000,
+  "interpretation": "historical observed duration, not guarantee on current server; E5 duration unknown"
+}

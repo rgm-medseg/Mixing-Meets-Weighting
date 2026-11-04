@@ -1,0 +1,22 @@
+{
+  "task": "SHORT_TCSMIX_V2",
+  "pid": 62972,
+  "time": "2026-10-06T23:32:36.937856+08:00",
+  "peak_cuda_bytes": 16561985536,
+  "step": 240,
+  "wall_seconds": 193.55153596401215,
+  "lr": 0.01,
+  "total_loss": 1.6229623556137085,
+  "q": 0.8433047930399576,
+  "s": 0.3486609586079915,
+  "actual_area": 0.1208648681640625,
+  "raw_weight_mean": 0.2608035206794739,
+  "raw_weight_min": 0.25,
+  "raw_weight_max": 1.25,
+  "used_weight_mean": 0.2608035206794739,
+  "used_weight_min": 0.25,
+  "used_weight_max": 1.25,
+  "max_per_image_mean_error": 0.0,
+  "ctw_loss": 0.003502258565276861,
+  "weighted_ctw_loss": 0.00017511292826384307
+}

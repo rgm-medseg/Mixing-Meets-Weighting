@@ -1,0 +1,1 @@
+此前修订报告概括为512→256，未覆盖两例radiopaedia的630→256。完整核查确认coronacases_002/009为512²，radiopaedia_27_86410_0/40_86625_0为630²；Z分别200/256/66/93不变。COVID_SPACING_AUDIT.md和covid_spacing_geometry.csv逐病例给出真实尺寸与spacing；所有已计算修正值本就按各病例实际尺寸计算，未按统一比例推测。本次仅补清尺寸表述，不覆盖历史成绩。

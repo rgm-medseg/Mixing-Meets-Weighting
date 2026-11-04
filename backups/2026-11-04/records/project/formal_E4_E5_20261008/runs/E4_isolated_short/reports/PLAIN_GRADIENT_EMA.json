@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "step": 2,
+  "gamma": 0.003402682486921549,
+  "gradients": {
+    "gamma": 0.00994233787059784,
+    "project.weight": 0.00933996681123972,
+    "project.bias": 0.0010477442992851138,
+    "norm.weight": 0.00026622816221788526,
+    "norm.bias": 0.00028228398878127337,
+    "inverse_project.weight": 0.01214304007589817,
+    "inverse_project.bias": 0.0008851300226524472
+  },
+  "teacher_names_shapes_match": true,
+  "EMA_algebra_checked_in_loop": true
+}

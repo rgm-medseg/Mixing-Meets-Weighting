@@ -1,0 +1,91 @@
+ORIGINAL: /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/dataloaders/dataset.py
+SHA256: 0ee048bd93cda8cbea35c06755e855d9a1540a57077efa6b541b69945b22bd58
+216:         return sample
+217: 
+218: def random_rot_flip(image, label=None):
+219:     k = np.random.randint(0, 4)  
+220:     image = np.rot90(image, k)  
+228:         return image
+229: 
+230: def random_rotate(image, label):
+231:     angle = np.random.randint(-20, 20)  
+232:     image = ndimage.rotate(image, angle, order=0, reshape=False)  
+245: def color_jitter(image):
+249:     # s is the strength of color distortion.
+250:     s = 1.0
+251:     jitter = transforms.ColorJitter(0.8 * s, 0.8 * s, 0.8 * s, 0.2 * s)
+252:     return jitter(image)
+253: 
+254: def cutout_gray(img, mask, p=0.5, size_min=0.02, size_max=0.4, ratio_1=0.3, ratio_2=1/0.3, value_min=0, value_max=1, pixel_level=True):
+255:     if random.random() < p:
+256:         img = np.array(img)
+276: 
+277:         img[y:y + erase_h, x:x + erase_w] = value
+278:         mask[y:y + erase_h, x:x + erase_w] = 0
+279: 
+280:     return img, mask
+343:             combined = np.concatenate(parts, axis=0)  # [4 or 6, H, W]
+344:             if random.random() > 0.5:
+345:                 combined = self._random_rot_flip_multich(combined)
+346:             elif random.random() > 0.5:
+347:                 combined = self._random_rotate_multich(combined)
+348:             H_in, W_in = combined.shape[1], combined.shape[2]
+349:             resized = np.stack([
+356:         else:
+357:             if random.random() > 0.5:
+358:                 image, label = random_rot_flip(image, label)
+359:             elif random.random() > 0.5:
+360:                 image, label = random_rotate(image, label)
+361:             x, y = image.shape
+362:             image = zoom(image, (self.output_size[0] / x, self.output_size[1] / y), order=0)
+370: 
+371:     @staticmethod
+372:     def _random_rot_flip_multich(combined):
+373:         k = np.random.randint(0, 4)
+374:         combined = np.rot90(combined, k, axes=(1, 2))
+378: 
+379:     @staticmethod
+380:     def _random_rotate_multich(combined):
+381:         angle = np.random.randint(-20, 20)
+382:         C = combined.shape[0]
+388: 
+389: 
+390: class WeakStrongAugment(object):
+391:     """returns weakly and strongly augmented images
+392:     Args:
+408:             combined = np.concatenate(parts, axis=0)  # [4 or 6, H, W]
+409:             if random.random() > 0.5:
+410:                 combined = RandomGenerator._random_rot_flip_multich(combined)
+411:             elif random.random() > 0.5:
+412:                 combined = RandomGenerator._random_rotate_multich(combined)
+413:             H_in, W_in = combined.shape[1], combined.shape[2]
+414:             resized = np.stack([
+421: 
+422:             # Strong augmentation: use shared spatial/intensity parameters for the triplet.
+423:             image_strong = cutout_25d_shared_spatial(np.copy(image_weak), p=0.5)
+424:             image_strong_t = shared_brightness_contrast_25d(torch.from_numpy(image_strong))
+425: 
+426:             image_weak_t = torch.from_numpy(image_weak)
+430:             sample = {
+431:                 "image": image_weak_t,
+432:                 "image_strong": image_strong_t,
+433:                 "label": label_t,
+434:                 "label_strong": label_strong_t,
+440:             # Original 2D code path (unchanged)
+441:             if random.random() > 0.5:
+442:                 image, label = random_rot_flip(image, label)
+443:             elif random.random() > 0.5:
+444:                 image, label = random_rotate(image, label)
+445:             x, y = image.shape
+446:             image = zoom(image, (self.output_size[0] / x, self.output_size[1] / y), order=0)
+447:             label = zoom(label, (self.output_size[0] / x, self.output_size[1] / y), order=0)
+448: 
+449:             image_strong, label_strong = cutout_gray(image, label, p=0.5)
+450:             image_strong = color_jitter(image_strong).type("torch.FloatTensor")
+451:             image = torch.from_numpy(image.astype(np.float32)).unsqueeze(0)
+452: 
+455:             sample = {
+456:                 "image": image,
+457:                 "image_strong": image_strong,
+458:                 "label": label,
+459:                 "label_strong": label_strong

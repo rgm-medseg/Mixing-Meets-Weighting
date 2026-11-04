@@ -1,0 +1,45 @@
+{
+  "audit_id": "V22_0_REBOOT_PERSISTENCE_AND_DISCONNECT_AUDIT",
+  "created_at": "2026-08-19T15:18:04.765919+00:00",
+  "bootstrap_script": "scripts/three_innovation_ablation_transfer_v22_0/resume_formal_controller_v22_0.sh",
+  "systemd_user_unit": "/home/renguanming/.config/systemd/user/three_innovation_ablation_transfer_v22_0.service",
+  "bootstrap_dry_canary": {
+    "returncode": 0,
+    "stdout": "",
+    "log": "runtime/three_innovation_ablation_transfer_v22_0/reboot_resume/bootstrap.log",
+    "log_tail": "2026-08-19T23:17:51+08:00\nV22_0_REBOOT_RESUME_BOOTSTRAP\ncwd=/home/renguanming/jupyterlab/rgm/beta-FFT-main\nsession=three_innovation_ablation_transfer_v22_0\nSESSION_ALREADY_EXISTS_NO_ACTION\n2026-08-19T23:18:04+08:00\nV22_0_REBOOT_RESUME_BOOTSTRAP\ncwd=/home/renguanming/jupyterlab/rgm/beta-FFT-main\nsession=three_innovation_ablation_transfer_v22_0\nSESSION_ALREADY_EXISTS_NO_ACTION\n",
+    "expected_when_session_exists": "SESSION_ALREADY_EXISTS_NO_ACTION",
+    "PASS": true
+  },
+  "systemctl_user_version": {
+    "returncode": 0,
+    "stdout": "systemd 245 (245.4-4ubuntu3.22)\n+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid"
+  },
+  "systemctl_user_bus": {
+    "returncode": 1,
+    "stdout": "Failed to connect to bus: No such file or directory"
+  },
+  "loginctl_user": {
+    "returncode": 0,
+    "stdout": "RuntimePath=/run/user/501079\nState=active\nLinger=no"
+  },
+  "systemd_unit_verify": {
+    "returncode": 0,
+    "stdout": ""
+  },
+  "systemd_user_enable_attempt": {
+    "returncode": "SKIPPED",
+    "stdout": "systemctl --user bus unavailable"
+  },
+  "crontab_available": false,
+  "tmux_available": true,
+  "LOCAL_PC_OFF_CONTINUE": "true_if_server_alive",
+  "SSH_DISCONNECTED_CONTINUE": "true_if_server_alive",
+  "VSCODE_CLOSED_CONTINUE": "true_if_server_alive",
+  "SERVER_POWERED_OFF_CONTINUE_COMPUTE": false,
+  "LOCAL_PC_OFF_EXECUTION_SAFE": "PASS",
+  "SERVER_REBOOT_AUTO_RESUME_CONFIGURED": false,
+  "SERVER_REBOOT_AUTO_RESUME_PERMISSION_BLOCKER": true,
+  "USER_ACK_REQUIRED": true,
+  "blocking_reason": "systemctl --user bus unavailable, linger is not enabled, and crontab is unavailable; cannot truthfully enable reboot resume from this shell"
+}

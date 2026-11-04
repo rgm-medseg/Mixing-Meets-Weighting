@@ -1,0 +1,14 @@
+{
+  "best_checkpoint_sha256": "edbe3c1684c82ca9c156e21833f18ddf785749177f9f9b153942085ac862d8e3",
+  "best_validation_dice": 0.8008277964009777,
+  "config_sha256": "fd582c4450cc19d6df47d57641f57d0a6c5f641199734ddae22298ce83053674",
+  "dataset": "PROMISE12",
+  "iteration": 30000,
+  "job_id": "hien_promise12_20p_seed1337",
+  "latest_checkpoint_sha256": "b51442c13a05a63418c001c1271c5cd9905e9f07ce4cb24e9c290e3b20845642",
+  "method": "HiEn",
+  "nan_detected": false,
+  "selected_model_role": "student",
+  "status": "TRAIN_PASS",
+  "test_manifest_accessed": false
+}

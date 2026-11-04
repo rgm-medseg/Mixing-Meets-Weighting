@@ -1,0 +1,49 @@
+{
+  "status": "PASS_SOURCE_GAPS_MAPPED",
+  "created_at": "2026-08-24T14:32:25.745373+00:00",
+  "training_started": false,
+  "checkpoint_replay_started": false,
+  "test_manifest_accessed": false,
+  "x03_score_semantic_contract": {
+    "status": "PASS",
+    "created_at": "2026-08-24T14:32:25.745953+00:00",
+    "task_id": "X03_RELIABILITY_FAITHFULNESS",
+    "source": "train_ACDC/v21_3_acdc10_third_innovation_components.py",
+    "source_sha256": "f28abc48fedff330f9aa7470072ebc16a607c6c59fd14942c2adb111b8ce748a",
+    "frozen_candidate_id": "V21_3_X03_CONTOUR_RELIABILITY_WEIGHT",
+    "score_name": "contour_uncertainty_or_boundary_weight",
+    "score_semantics": "higher score means stronger contour uncertainty / stronger boundary consistency weight, not lower risk reliability",
+    "higher_score_means_more_reliable": false,
+    "higher_score_means_less_reliable_or_more_fragile_boundary": true,
+    "direction_fixed_before_result_reading": true,
+    "gt_used_to_generate_score": false,
+    "semantic_evidence_tokens": [
+      "contour",
+      "boundary_weight",
+      "contour_uncertainty_mean",
+      "boundary_weight_mean"
+    ],
+    "renaming_to_reliability_without_direction_note_allowed": false
+  },
+  "mechanism_source_asset_audit": {
+    "status": "PASS_SOURCE_GAP_MAPPED",
+    "created_at": "2026-08-24T14:32:25.782778+00:00",
+    "training_started": false,
+    "checkpoint_replay_started": false,
+    "test_manifest_accessed": false,
+    "audit_asset": "audits/internal_evidence_expansion_v24_0/V24_0_MECHANISM_SOURCE_ASSET_AUDIT.tsv",
+    "audit_sha256": "226e5d307d5fae0936e7f26958650e6b5c962b1d3c9e0e88cebfb82e13a1a517",
+    "common_checkpoint_iterations": [
+      "BEST",
+      "LAST"
+    ],
+    "common_checkpoint_count": 2,
+    "pseudo_label_evolution_status": "BLOCKED_COMMON_ITERATION_COUNT_LT_4_OR_PSEUDO_OUTPUTS_MISSING",
+    "student_diversity_status": "BLOCKED_COMMON_ITERATION_COUNT_LT_4_OR_BRANCH_OUTPUTS_MISSING",
+    "x03_pixel_faithfulness_status": "FROZEN_CHECKPOINT_REPLAY_REQUIRED",
+    "required_common_checkpoint_count": 4,
+    "note": "BEST/LAST checkpoint names are not sufficient to claim exact iteration schedule without stronger metadata."
+  },
+  "transfer_source": "train_ACDC/v21_3_acdc10_third_innovation_transfer.py",
+  "transfer_source_sha256": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15"
+}

@@ -1,0 +1,420 @@
+{
+  "status": "PRELAUNCH_READY",
+  "created_at": "2026-08-24T17:17:58.438702+00:00",
+  "formal_started": false,
+  "tmux_started": false,
+  "EXPECTED_NEW_FULL_COUNT": 4,
+  "EXPECTED_NEW_FULL_READY": 4,
+  "active_new_full_ready_count": 4,
+  "task_count": 27,
+  "pass_ready_count": 22,
+  "blocked_or_pending_count": 5,
+  "launch_blocking_count": 0,
+  "protocol_excluded_count": 2,
+  "noncritical_terminal_gap_count": 3,
+  "hard_gate_status": {
+    "X03_RAW_SCORE_EFFECTIVE_WEIGHT_SEMANTIC_AUDIT": "PASS",
+    "ACDC2_LABEL1_FROZEN_BETAFFT_EXECUTABILITY_AUDIT": "BLOCKED",
+    "V24_TEST_SEMANTIC_SPLIT_AUDIT": "PASS",
+    "V24_FAILURE_INJECTION_AUDIT": "PASS"
+  },
+  "required_script_inventory": [
+    {
+      "path": "controllers/internal_evidence_expansion_controller_v24_0.py",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "3324b9d3242367d52dc594283e6be7d0f426a20681f1897140194868a9df4c5e",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_new_full_launcher.py",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "e5dee26a1c713160c907d659d540c0e6d7dee63c55ad73a18f3536158902cda8",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_frozen_best_test_launcher.py",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "8be18c670190848f744342112ccf685b68eef86773de6a74ece52dd8f17027e5",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_postfull_and_finalization.py",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "5b589a5f772b940803eb05fe5b048f0dae5284d515c7d5eb0fdfeed631f20008",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_hard_gate_semantic_audits.py",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "e62078a0fc8914545dfeaf9b678c65c3a3dbcb5dc3035bcb3cfdedc565db86a8",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_failure_injection_audit.py",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "d76fcd2c83a3887d76e0fe95c2f24a549ad0ce1fdf93aa709929c1ee194ff373",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_final_launch_readiness.py",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "7c333bd1e0a7c913e1ffece252ef72d859d930f04c451128fe661a38bdbc68f8",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_new_full_scratch_closed_loop.py",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "1931e0bf81706c751b94ba519935ab7a3fdc6fa78f270b09c542b0194c94343f",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_prelaunch_five_review.py",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "90532dcbfdd73368a837d05c3a63191cc359ebfba961b002570754cc37d39516",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_formal_start_manifest.py",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "f1695028b642376c0f416002ae19f709f626ff321038489f560afda8ff971046",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_master_registry_freeze.py",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "c74816b0d70bdb6d89fcc1968504dae082335dd058ab8395655e2f7d27775ff2",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_prestart_environment_gate.py",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "ac1eb29d9f6bdf7681b33bd4f36cdc0b237bc6ea4aa70228bfbbb6067e3ec2c6",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_resume_safety_audit.py",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "d06ac97fffbe9b96ed6064dfe22d06657d9fb8a563fc4015ece61f40724cf3e9",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc2_betafft_test_gate.sh",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "bfd3ab4a95b5c1c10befc645d1e4ea0a718521ec61f5964d20160d5d95343f19",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc2_ours_test_gate.sh",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "0419a670cae813ddefc9b5809f5ddc51092b3b43b72674c72e9aff4dd6c40f05",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc10_betafft_seed2025_test_gate.sh",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "0abd1fc945dbbe70f20d8df8c348e7e3a65d4c1e8e581003bc3f06880f582610",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc10_ours_seed2025_test_gate.sh",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "a2ab623ebe02a6a4069cc468ee19fb5f23523e6e203031402c6e158ea6376b32",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc10_betafft_seed2026_test_gate.sh",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "ad1e9a23d0f4c221ccdd20087dea3cb83c5200f63500ac1ad7ec2065f7d49db8",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc10_ours_seed2026_test_gate.sh",
+      "kind": "core_or_launcher",
+      "exists": true,
+      "sha256": "4af5a99fb42c348680ab8f1b913d556f36964dacecee8f36bfae7c584d02ad9f",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_patient_level_statistics.py",
+      "kind": "registry_source",
+      "exists": true,
+      "sha256": "175e24ac64621008829bf9ddf14591715442f66fbc730a3a82b8cc31823f691a",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_x03_reliability_faithfulness.py",
+      "kind": "registry_source",
+      "exists": true,
+      "sha256": "1d7e016b6a0ce224fd3b43df7ed2be747c3bf8ba0b0ecc00ff7be77479ea81a7",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_x03_reliability_faithfulness.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "0f3bb12e65c58fc79d979588ef0247f60a3cc64d084e038bd18e3a7a102c08b3",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_mechanism_asset_audit.py",
+      "kind": "registry_source",
+      "exists": true,
+      "sha256": "c01db4d0935875eae5406c82a2d2a9c68708844df5b156e451ed6db1079c9e53",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_acdc10_caselevel_analysis.py",
+      "kind": "registry_source",
+      "exists": true,
+      "sha256": "6cf580f99d1058080671c239bf04e9ab46bd086a2c2deca2b725b698cda76b9e",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_acdc10_frozen_replay_analyses.py",
+      "kind": "registry_source",
+      "exists": true,
+      "sha256": "23d8eb3a5c2ef9dd71e773b197982fd59a6f525c0be78b5948dd42c4e4c2c02b",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc10_frozen_replay_analyses.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "aa3e7af48f202099a681f47c952cd57d3aa1b82295e098457873cd465b9f3939",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_readonly_plane_a_extractor.py",
+      "kind": "registry_source",
+      "exists": true,
+      "sha256": "e9fd3d7149a219547a9ca1844b061311eaa85c9868cc1d915d9ccfb211c9ae64",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "train_ACDC/beta_fft_acdc_repro.py",
+      "kind": "registry_source",
+      "exists": true,
+      "sha256": "18b128da9429211059eed2e36290964439449b52e6e7de621609170a92bed316",
+      "syntax": "PASS",
+      "executable": false,
+      "executable_required": false
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc2_betafft_full.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "27959992e02c140ef71ce199971f414e3c80d36d63ce55aae9bca39669c70bf9",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "train_ACDC/v21_3_acdc10_third_innovation_transfer.py",
+      "kind": "registry_source",
+      "exists": true,
+      "sha256": "dbf29b2ae055e88e802e1edd6bc559748fafa64966dcb1557ba64aa302ac5c15",
+      "syntax": "PASS",
+      "executable": false,
+      "executable_required": false
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc2_ours_full.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "2edba4eb4723afba9fbe0adf94a7e257efd16d8fd2052afac78e55097f54fc62",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc10_betafft_seed2025.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "b8bed12d332e4c4348af00e973c233e2e7a99dab6ead3db1e70d40883ce07568",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc10_ours_seed2025.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "7a83cdb7c9c64acf4de9a50dfb5763467710a2a72b90b322be322287af8b9d81",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc10_betafft_seed2026.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "6407d5006a7dcae659bfe4464ab4d1b54ce4ba4c096897c7570fda91bc232485",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc10_ours_seed2026.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "9c1ba1013dd28f1e0d386f90a6ee1af6e2f6fa601f3e6ede6a6f805e23982bf4",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_acdc2_test_closure.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "074fa0b0ebb5520c3fed09825bdc078e898413d7999164ae409601bb330a42a2",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_seed_test_closure.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "c97f887208ab14d505fc29dd3e608830a77a2949701fd020264bad4fb43abedc",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_build_label_efficiency.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "723b879c3d22bda79507d9f668d388667279d70de581dc7063c30d3c6fcae8f8",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_build_seed_stability.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "f1a1358bfcfb6a7e3c8cb2503ad45774a6d0748e45eda8a6eeda2c5b298616cc",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_regenerate_all_tables_figures.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "b21077ba7e2b51535911fd87290c17328d214928104a33dae3a5a33c8624c2dc",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_final_five_review.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "13ccffdb4a746a4a55e9ecba2e6402aba4bb2d6fe5b4248ee6a9252254a67b66",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    },
+    {
+      "path": "scripts/internal_evidence_expansion_v24_0/run_final_handoff.sh",
+      "kind": "registry_launcher",
+      "exists": true,
+      "sha256": "c9ac9e17bf214bb228ebd845caec2f1df68cbde8d921aa86d5d1936b8b521c6f",
+      "syntax": "PASS",
+      "executable": true,
+      "executable_required": true
+    }
+  ],
+  "required_scripts_pass": true,
+  "controller_dry_run_status": "PASS",
+  "controller_dry_run_failed_count": 0,
+  "controller_dry_run_blocked_count": 0,
+  "controller_dry_run_noncritical_blocked_count": 3,
+  "controller_dry_run_protocol_excluded_count": 2,
+  "tmux_start_allowed": true,
+  "prelaunch_ready": true,
+  "audit_tsv": "audits/internal_evidence_expansion_v24_0/V24_0_PRELAUNCH_L1_L10_AUDIT.tsv",
+  "audit_tsv_sha256": "a78e1357932a38b90f5d42100d10d8b515a660b97f741474c4b77a78089eabe5",
+  "registry": "audits/internal_evidence_expansion_v24_0/V24_0_MASTER_TASK_REGISTRY.tsv",
+  "registry_sha256": "1aeb5c3ce40ff74bb7cd2554a54db8d06f22f7eb521fd16d964514af0fa21c16",
+  "five_review": {
+    "REVIEW_1_ALL_RESULTS_FROM_REAL_ASSETS": "BLOCKED_PENDING_COMPLETION_ASSETS",
+    "REVIEW_2_PROTOCOL_IDENTITY_LOCKED": "PASS_WITH_ACDC2_PROTOCOL_BLOCKER",
+    "REVIEW_3_TEST_ENDPOINT_FIREWALL": "PASS",
+    "REVIEW_4_NO_VAL_AS_TEST_NO_GUESSED_VALUES": "PASS",
+    "REVIEW_5_NO_TRAINING_OR_FORMAL_STARTED": "PASS"
+  }
+}

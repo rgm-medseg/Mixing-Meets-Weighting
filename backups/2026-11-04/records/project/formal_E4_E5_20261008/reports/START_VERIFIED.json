@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T13:11:52.976698+08:00",
+  "current_step": 1600,
+  "state": {
+    "status": "RUNNING",
+    "stage": "TRAIN",
+    "task": "E4",
+    "heartbeat": "2026-10-08T13:11:49.910911+08:00",
+    "heartbeat_epoch": 1791436309.9109445,
+    "host": "n1",
+    "GPU": 0,
+    "resource": {
+      "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+      "name": "NVIDIA A100-SXM4-40GB",
+      "total_mib": 40960,
+      "used_mib": 16735,
+      "free_mib": 23591,
+      "utilization": 84,
+      "pids": [
+        10247
+      ]
+    },
+    "tmux_session": "beta_fft_E4_E5_20261008",
+    "pipeline_identity": {
+      "pid": 43469,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/run_queue.py ",
+      "start_ticks": "2615984625"
+    },
+    "child_identity": {
+      "pid": 43502,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py ",
+      "start_ticks": "2615986239"
+    },
+    "current_command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py"
+    ],
+    "current_log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E4/logs/TRAIN_2026-10-08T124730432755+0800.log",
+    "tasks": {
+      "E4": {
+        "status": "RUNNING",
+        "step": 1600,
+        "time": "2026-10-08T12:47:30.421227+08:00",
+        "stage": "TRAIN",
+        "optimizer_calls": {
+          "optimizer1": 1600,
+          "optimizer2": 1600
+        }
+      },
+      "E5": {
+        "status": "READY",
+        "step": 0,
+        "time": "2026-10-08T12:47:30.406088+08:00",
+        "optimizer_calls": {
+          "optimizer1": 0,
+          "optimizer2": 0
+        }
+      }
+    },
+    "ETA_current_training_remaining_hours": 7.196037246625508,
+    "ETA_basis": "current active process wall/progress including validation and IO",
+    "formal_budget": 60000,
+    "E5_pretrain_budget": 0,
+    "E3_executed": false,
+    "old_queue": "INTERRUPTED",
+    "automatic_retries": 0,
+    "worker_resume_exact": false
+  },
+  "initialization_receipt_sha256": "253b87c6e897c38f36c7bf349d43659b0a6e1706a1250e5d069b087afbfdae95",
+  "tmux_detach_verified": true,
+  "first200_verified": true,
+  "E5_short_steps": 2,
+  "E3": false,
+  "old_queue": "INTERRUPTED",
+  "ETA_E5_hours": [
+    7.41691168397665,
+    9.364728396758437
+  ]
+}

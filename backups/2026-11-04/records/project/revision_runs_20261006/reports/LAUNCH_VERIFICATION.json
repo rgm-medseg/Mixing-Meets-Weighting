@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "time": "2026-10-06T21:30:52.484766+08:00",
+  "host": "n1",
+  "session": "beta_fft_revision_20261006",
+  "controller_pid": 28224,
+  "training_pid": 28255,
+  "formal_step_before_attach": 8,
+  "formal_step_after_detach": 37,
+  "controller_alive": true,
+  "training_alive": true,
+  "actual_tty_attach_and_Ctrl_b_d_detach": true,
+  "heartbeat_age_seconds": 2.537574291229248,
+  "evidence_directory": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/reports"
+}

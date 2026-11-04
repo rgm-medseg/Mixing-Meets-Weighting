@@ -1,0 +1,12 @@
+{
+  "repository": "rgm-medseg/Mixing-Meets-Weighting",
+  "tag": "comixw-critical-backup-2026-11-04",
+  "time_utc": "2026-11-04T06:51:32.231643+00:00",
+  "assets": [],
+  "file_verification": "NOT_RUN",
+  "paper_metrics_reproduced": false,
+  "training_started": false,
+  "evaluation_started": false,
+  "status": "BLOCKED_GITHUB_API_LOGIN",
+  "reason": "SSH Git authentication succeeds, but no GitHub API credential is available. No Release was created and no asset upload was attempted."
+}

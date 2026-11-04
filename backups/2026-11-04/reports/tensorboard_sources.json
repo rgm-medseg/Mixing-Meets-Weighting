@@ -1,0 +1,727 @@
+[
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC5_FINAL3/logs/events.out.tfevents.1787268005.n1",
+    "experiment_ids": [
+      "acdc5"
+    ],
+    "size": 6834000,
+    "sha256": "e5de69f2e960c22bd3f4947418a43606706d78245af7ed1e711970881f4f1be6"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/logs/events.out.tfevents.1787035329.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_111",
+      "acdc10"
+    ],
+    "size": 6834000,
+    "sha256": "1845dcfb2bb4051b5e7b7da3586657cc2b3c78cd0d524062208ba514e692cf09"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/pre_train/log/events.out.tfevents.1787295045.n1",
+    "experiment_ids": [
+      "promise20"
+    ],
+    "size": 1559659,
+    "sha256": "3a837d7e5eedc3c1fc39eb9886e6f8e60ec0e334f3a1c1293f49fb2d7e6b91da"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/self_train/log/events.out.tfevents.1787295448.n1",
+    "experiment_ids": [
+      "promise20"
+    ],
+    "size": 9259,
+    "sha256": "fc832200cdf30c1d5378758725b7b80f57a9f39bf9f24f179a7c9d11ea3249a6"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/pre_train/log/events.out.tfevents.1787314966.n1",
+    "experiment_ids": [
+      "covid5"
+    ],
+    "size": 1559659,
+    "sha256": "898f3a694c2596e69f872832661049539176814f53c052e807a02e0b7444851f"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID5_FINAL3/self_train/log/events.out.tfevents.1787316240.n1",
+    "experiment_ids": [
+      "covid5"
+    ],
+    "size": 3788,
+    "sha256": "e704c760ae6ede391f4ff31eec404732aaf768fafa72cdecb65d6bae08f5e938"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/pre_train/log/events.out.tfevents.1787330681.n1",
+    "experiment_ids": [
+      "covid10"
+    ],
+    "size": 1559659,
+    "sha256": "6c7fa12efcff4cf72d58c125a6d533af92178525c2decffc52ca7c44326a5894"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/self_train/log/events.out.tfevents.1787331970.n1",
+    "experiment_ids": [
+      "covid10"
+    ],
+    "size": 3788,
+    "sha256": "1c1022e79415218175473907db7b1c875a3e82ba17d264d1edbdf77e8eb77966"
+  },
+  {
+    "source": "runs/beta_fft_acdc_official_full_seed42_fresh_ckpt/logs/events.out.tfevents.1781687348.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_000"
+    ],
+    "size": 6834000,
+    "sha256": "c3589f060ceae0c82df8ac9352b4d1b0f519e310fc94903fe32f1cf16bb29c90"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100_fresh_restart_after_prelaunch_hardening/logs/events.out.tfevents.1787153692.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_100"
+    ],
+    "size": 6834000,
+    "sha256": "bbc96a9f144512413d4af2dac8c6db5ba47c5b0e5fcb043526f8c8ffa03d100e"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_010/logs/events.out.tfevents.1787178831.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_010"
+    ],
+    "size": 6834000,
+    "sha256": "eaa8086852dbb3f51cc6295a4667da9fb8543c7197c11f06350fb868fc456e70"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_001/logs/events.out.tfevents.1787199956.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_001"
+    ],
+    "size": 6834000,
+    "sha256": "34a4e401486efa4580407b05408f92e6ae917eeb16ee405949fa44a0db5fc750"
+  },
+  {
+    "source": "runs/beta_fft_acdc_10pct_mask_token_adamix_full_seed42/logs/events.out.tfevents.1784372755.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_110"
+    ],
+    "size": 6834000,
+    "sha256": "37ba0cb624986a14710e89e94b0baa2503f82415e868b1c98bec286d91ae99a2"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_101/logs/events.out.tfevents.1787221428.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_101"
+    ],
+    "size": 6834000,
+    "sha256": "82b1e9ff7c7e0ce4a3d040737dfacc89db231cc5eed79503a11a2680bee2be45"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_011/logs/events.out.tfevents.1787246754.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_011"
+    ],
+    "size": 6834000,
+    "sha256": "f0aa527c4cb0fb38ea98408bb42c6629227e7c0ebc390c4d83844a9884d249b5"
+  },
+  {
+    "source": "experiments/paper_internal_evidence_v23_0/ACDC10_X03_WEIGHT_001/logs/events.out.tfevents.1787456505.n1",
+    "experiment_ids": [
+      "ACDC10_X03_WEIGHT_001"
+    ],
+    "size": 6834000,
+    "sha256": "fbc71912c82ea0025a763ecb1478b431afeae58194ba4d356d866afc79681bc4"
+  },
+  {
+    "source": "experiments/paper_internal_evidence_v23_0/ACDC10_X03_WEIGHT_003/logs/events.out.tfevents.1787482107.n1",
+    "experiment_ids": [
+      "ACDC10_X03_WEIGHT_003"
+    ],
+    "size": 6834000,
+    "sha256": "b057589995044cfd212567a26a26d896d64ef4cfe9b60a16b345c99d34b8cdb5"
+  },
+  {
+    "source": "experiments/paper_internal_evidence_v23_0/ACDC10_X03_WEIGHT_007/logs/events.out.tfevents.1787507636.n1",
+    "experiment_ids": [
+      "ACDC10_X03_WEIGHT_007"
+    ],
+    "size": 6834000,
+    "sha256": "ed2fa5d4ff7309a3c9d88aa9337aa9a4daf7fe04d5150f383c6248e6c0b256a7"
+  },
+  {
+    "source": "experiments/paper_internal_evidence_v23_0/ACDC10_X03_WEIGHT_010/logs/events.out.tfevents.1787533151.n1",
+    "experiment_ids": [
+      "ACDC10_X03_WEIGHT_010"
+    ],
+    "size": 6834000,
+    "sha256": "eb339296c2564b27b0193f349b4263d15c141a2e86d729263d030dcfa6440a00"
+  },
+  {
+    "source": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025/logs/events.out.tfevents.1787592447.n1",
+    "experiment_ids": [
+      "ACDC10_BETAFFT_SEED2025"
+    ],
+    "size": 6920490,
+    "sha256": "a75955b2e134a69bdde2d734a24877b4835ac6238715b09cad614884f6e3a28a"
+  },
+  {
+    "source": "experiments/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026/logs/events.out.tfevents.1787637777.n1",
+    "experiment_ids": [
+      "ACDC10_BETAFFT_SEED2026"
+    ],
+    "size": 6920490,
+    "sha256": "6136a230c8b5a9c4ed7aef9ec6ab7a369b8881c62a1bd53b8738dbd3b1eb458c"
+  },
+  {
+    "source": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025/logs/events.out.tfevents.1787612176.n1",
+    "experiment_ids": [
+      "ACDC10_OURS_SEED2025"
+    ],
+    "size": 6834000,
+    "sha256": "823d1a634052fa760dd9e69187209fcb507f85dd1b0e43f72319fed3e775c06c"
+  },
+  {
+    "source": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026/logs/events.out.tfevents.1787657539.n1",
+    "experiment_ids": [
+      "ACDC10_OURS_SEED2026"
+    ],
+    "size": 6834000,
+    "sha256": "1fbf088a15475b76d72acc02b526894355301a231ad2308c3fd1d3435c0fa40c"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X01_CLASS_DISTRIBUTION_GUARD/logs/events.out.tfevents.1786981324.n1",
+    "experiment_ids": [
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD"
+    ],
+    "size": 6834000,
+    "sha256": "e8424f793b9e72b9d9b73c6b31a682916ce44b5074d85e4720d85433d7b7d33a"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER/logs/events.out.tfevents.1787008325.n1",
+    "experiment_ids": [
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER"
+    ],
+    "size": 6834000,
+    "sha256": "a0e928d999e4a47fe3f8d08bd175d875cf941fcc181acb508e50845b2dc0c504"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN/logs/events.out.tfevents.1787062331.n1",
+    "experiment_ids": [
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN"
+    ],
+    "size": 6834000,
+    "sha256": "6bd6f53a9b1427ec72a09ce19ff312ea68f0ed8810bfcf1684e85af5febc35fa"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT/logs/events.out.tfevents.1787089332.n1",
+    "experiment_ids": [
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT"
+    ],
+    "size": 6834000,
+    "sha256": "7081315354a6648045039356f0f1196469a5253eef826dabd7ce8bf31a376c23"
+  },
+  {
+    "source": "runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP/logs/events.out.tfevents.1787116334.n1",
+    "experiment_ids": [
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP"
+    ],
+    "size": 6834000,
+    "sha256": "1333ae5c64c3e3f0b1b5298537b5e6faef53ab15e27f049c9041cac397b0d1a3"
+  },
+  {
+    "source": "tcsmix_control_revision_20261006/formal_R1_20261007/runs/R1_full_v2B/logs/events.out.tfevents.1791304837.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_000",
+      "ACDC10_ARM_001",
+      "ACDC10_ARM_010",
+      "ACDC10_ARM_011",
+      "ACDC10_ARM_100",
+      "ACDC10_ARM_100_aborted_candidate",
+      "ACDC10_ARM_101",
+      "ACDC10_ARM_110",
+      "ACDC10_ARM_111",
+      "ACDC10_BETAFFT_SEED2025",
+      "ACDC10_BETAFFT_SEED2026",
+      "ACDC10_OURS_SEED2025",
+      "ACDC10_OURS_SEED2026",
+      "ACDC10_X03_WEIGHT_001",
+      "ACDC10_X03_WEIGHT_003",
+      "ACDC10_X03_WEIGHT_007",
+      "ACDC10_X03_WEIGHT_010",
+      "C1_CTW_uniform",
+      "E1_interrupted_candidate",
+      "E4_plain_residual",
+      "E5_AdaMix_common_protocol",
+      "F97_main_signal",
+      "R1_v2_B_control_signal",
+      "R2_fixed92",
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD",
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER",
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN",
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT",
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP",
+      "acdc10",
+      "acdc5",
+      "covid10",
+      "covid5",
+      "promise20"
+    ],
+    "size": 6834000,
+    "sha256": "660f9de7168b54b9be65d67f220de8a7c1d6941392e9c98f9918a52c1a0e4aa3"
+  },
+  {
+    "source": "tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/logs/events.out.tfevents.1791342364.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_000",
+      "ACDC10_ARM_001",
+      "ACDC10_ARM_010",
+      "ACDC10_ARM_011",
+      "ACDC10_ARM_100",
+      "ACDC10_ARM_100_aborted_candidate",
+      "ACDC10_ARM_101",
+      "ACDC10_ARM_110",
+      "ACDC10_ARM_111",
+      "ACDC10_BETAFFT_SEED2025",
+      "ACDC10_BETAFFT_SEED2026",
+      "ACDC10_OURS_SEED2025",
+      "ACDC10_OURS_SEED2026",
+      "ACDC10_X03_WEIGHT_001",
+      "ACDC10_X03_WEIGHT_003",
+      "ACDC10_X03_WEIGHT_007",
+      "ACDC10_X03_WEIGHT_010",
+      "C1_CTW_uniform",
+      "E1_interrupted_candidate",
+      "E4_plain_residual",
+      "E5_AdaMix_common_protocol",
+      "F97_main_signal",
+      "R1_v2_B_control_signal",
+      "R2_fixed92",
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD",
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER",
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN",
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT",
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP",
+      "acdc10",
+      "acdc5",
+      "covid10",
+      "covid5",
+      "promise20"
+    ],
+    "size": 6834000,
+    "sha256": "0f18c5faec59e14bd70fbcf53080c97cf54923318739e894aefb9d6a4ce5d49c"
+  },
+  {
+    "source": "tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/runs/C1_CTW_mean_uniform_v2B/logs/events.out.tfevents.1791391925.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_000",
+      "ACDC10_ARM_001",
+      "ACDC10_ARM_010",
+      "ACDC10_ARM_011",
+      "ACDC10_ARM_100",
+      "ACDC10_ARM_100_aborted_candidate",
+      "ACDC10_ARM_101",
+      "ACDC10_ARM_110",
+      "ACDC10_ARM_111",
+      "ACDC10_BETAFFT_SEED2025",
+      "ACDC10_BETAFFT_SEED2026",
+      "ACDC10_OURS_SEED2025",
+      "ACDC10_OURS_SEED2026",
+      "ACDC10_X03_WEIGHT_001",
+      "ACDC10_X03_WEIGHT_003",
+      "ACDC10_X03_WEIGHT_007",
+      "ACDC10_X03_WEIGHT_010",
+      "C1_CTW_uniform",
+      "E1_interrupted_candidate",
+      "E4_plain_residual",
+      "E5_AdaMix_common_protocol",
+      "F97_main_signal",
+      "R1_v2_B_control_signal",
+      "R2_fixed92",
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD",
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER",
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN",
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT",
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP",
+      "acdc10",
+      "acdc5",
+      "covid10",
+      "covid5",
+      "promise20"
+    ],
+    "size": 6834000,
+    "sha256": "3a60876a8bb031006b3b614f0a3a25512af9842f90aefaaa9a94c231f981796e"
+  },
+  {
+    "source": "tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/runs/isolated_short_failed_attempt1/runs/short/logs/events.out.tfevents.1791391590.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_000",
+      "ACDC10_ARM_001",
+      "ACDC10_ARM_010",
+      "ACDC10_ARM_011",
+      "ACDC10_ARM_100",
+      "ACDC10_ARM_100_aborted_candidate",
+      "ACDC10_ARM_101",
+      "ACDC10_ARM_110",
+      "ACDC10_ARM_111",
+      "ACDC10_BETAFFT_SEED2025",
+      "ACDC10_BETAFFT_SEED2026",
+      "ACDC10_OURS_SEED2025",
+      "ACDC10_OURS_SEED2026",
+      "ACDC10_X03_WEIGHT_001",
+      "ACDC10_X03_WEIGHT_003",
+      "ACDC10_X03_WEIGHT_007",
+      "ACDC10_X03_WEIGHT_010",
+      "C1_CTW_uniform",
+      "E1_interrupted_candidate",
+      "E4_plain_residual",
+      "E5_AdaMix_common_protocol",
+      "F97_main_signal",
+      "R1_v2_B_control_signal",
+      "R2_fixed92",
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD",
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER",
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN",
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT",
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP",
+      "acdc10",
+      "acdc5",
+      "covid10",
+      "covid5",
+      "promise20"
+    ],
+    "size": 40,
+    "sha256": "242b3c58d5f5da6375b1567948109f997074b8e51b2f3920da6470ed193e2668"
+  },
+  {
+    "source": "formal_E4_E5_20261008/tasks/E4/runs/E4_plain_residual_v2B/logs/events.out.tfevents.1791434858.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_000",
+      "ACDC10_ARM_001",
+      "ACDC10_ARM_010",
+      "ACDC10_ARM_011",
+      "ACDC10_ARM_100",
+      "ACDC10_ARM_100_aborted_candidate",
+      "ACDC10_ARM_101",
+      "ACDC10_ARM_110",
+      "ACDC10_ARM_111",
+      "ACDC10_BETAFFT_SEED2025",
+      "ACDC10_BETAFFT_SEED2026",
+      "ACDC10_OURS_SEED2025",
+      "ACDC10_OURS_SEED2026",
+      "ACDC10_X03_WEIGHT_001",
+      "ACDC10_X03_WEIGHT_003",
+      "ACDC10_X03_WEIGHT_007",
+      "ACDC10_X03_WEIGHT_010",
+      "C1_CTW_uniform",
+      "E1_interrupted_candidate",
+      "E4_plain_residual",
+      "E5_AdaMix_common_protocol",
+      "F97_main_signal",
+      "R1_v2_B_control_signal",
+      "R2_fixed92",
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD",
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER",
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN",
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT",
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP",
+      "acdc10",
+      "acdc5",
+      "covid10",
+      "covid5",
+      "promise20"
+    ],
+    "size": 6834000,
+    "sha256": "0f51851fd17f78d8c31b9ada5a1691ca708a7c0514722359f8d7fe66cac75042"
+  },
+  {
+    "source": "mechanism_strengthening_20261013/runs/F97_main_signal_20261013/logs/events.out.tfevents.1791907193.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_000",
+      "ACDC10_ARM_001",
+      "ACDC10_ARM_010",
+      "ACDC10_ARM_011",
+      "ACDC10_ARM_100",
+      "ACDC10_ARM_100_aborted_candidate",
+      "ACDC10_ARM_101",
+      "ACDC10_ARM_110",
+      "ACDC10_ARM_111",
+      "ACDC10_BETAFFT_SEED2025",
+      "ACDC10_BETAFFT_SEED2026",
+      "ACDC10_OURS_SEED2025",
+      "ACDC10_OURS_SEED2026",
+      "ACDC10_X03_WEIGHT_001",
+      "ACDC10_X03_WEIGHT_003",
+      "ACDC10_X03_WEIGHT_007",
+      "ACDC10_X03_WEIGHT_010",
+      "C1_CTW_uniform",
+      "E1_interrupted_candidate",
+      "E4_plain_residual",
+      "E5_AdaMix_common_protocol",
+      "F97_main_signal",
+      "R1_v2_B_control_signal",
+      "R2_fixed92",
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD",
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER",
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN",
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT",
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP",
+      "acdc10",
+      "acdc5",
+      "covid10",
+      "covid5",
+      "promise20"
+    ],
+    "size": 6834000,
+    "sha256": "5eb17aeb192feaecb588c948a7282faa2bf8c81a7bf1c431ad8c0fcd624a8101"
+  },
+  {
+    "source": "revision_runs_20261006/runs/E1/logs/events.out.tfevents.1791293422.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_000",
+      "ACDC10_ARM_001",
+      "ACDC10_ARM_010",
+      "ACDC10_ARM_011",
+      "ACDC10_ARM_100",
+      "ACDC10_ARM_100_aborted_candidate",
+      "ACDC10_ARM_101",
+      "ACDC10_ARM_110",
+      "ACDC10_ARM_111",
+      "ACDC10_BETAFFT_SEED2025",
+      "ACDC10_BETAFFT_SEED2026",
+      "ACDC10_OURS_SEED2025",
+      "ACDC10_OURS_SEED2026",
+      "ACDC10_X03_WEIGHT_001",
+      "ACDC10_X03_WEIGHT_003",
+      "ACDC10_X03_WEIGHT_007",
+      "ACDC10_X03_WEIGHT_010",
+      "C1_CTW_uniform",
+      "E1_interrupted_candidate",
+      "E4_plain_residual",
+      "E5_AdaMix_common_protocol",
+      "F97_main_signal",
+      "R1_v2_B_control_signal",
+      "R2_fixed92",
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD",
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER",
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN",
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT",
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP",
+      "acdc10",
+      "acdc5",
+      "covid10",
+      "covid5",
+      "promise20"
+    ],
+    "size": 898108,
+    "sha256": "d4cf6f9e3f9e77d9ec4e70902c1afdb39074eb8404e94f2963d0f600ce1ea65d"
+  },
+  {
+    "source": "experiments/three_innovation_ablation_transfer_v22_0/ACDC10_ARM_100/logs/events.out.tfevents.1787151441.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_100_aborted_candidate"
+    ],
+    "size": 451532,
+    "sha256": "f0cfc4ba2bcba58ae10a8d9a29849d0752ed91129de08fa9e4c7ec20e9a16291"
+  },
+  {
+    "source": "tcsmix_control_revision_20261006/runs/SHORT_TCSMIX_V2/logs/events.out.tfevents.1791300723.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_000",
+      "ACDC10_ARM_001",
+      "ACDC10_ARM_010",
+      "ACDC10_ARM_011",
+      "ACDC10_ARM_100",
+      "ACDC10_ARM_100_aborted_candidate",
+      "ACDC10_ARM_101",
+      "ACDC10_ARM_110",
+      "ACDC10_ARM_111",
+      "ACDC10_BETAFFT_SEED2025",
+      "ACDC10_BETAFFT_SEED2026",
+      "ACDC10_OURS_SEED2025",
+      "ACDC10_OURS_SEED2026",
+      "ACDC10_X03_WEIGHT_001",
+      "ACDC10_X03_WEIGHT_003",
+      "ACDC10_X03_WEIGHT_007",
+      "ACDC10_X03_WEIGHT_010",
+      "C1_CTW_uniform",
+      "E1_interrupted_candidate",
+      "E4_plain_residual",
+      "E5_AdaMix_common_protocol",
+      "F97_main_signal",
+      "R1_v2_B_control_signal",
+      "R2_fixed92",
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD",
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER",
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN",
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT",
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP",
+      "acdc10",
+      "acdc5",
+      "covid10",
+      "covid5",
+      "promise20"
+    ],
+    "size": 9080,
+    "sha256": "550aa7c10b7f59ac32ac2f020a205c8d26e26b185d3969dafe2009ab00859c59"
+  },
+  {
+    "source": "tcsmix_control_revision_20261006/runs/SHORT_TCSMIX_V2/logs/events.out.tfevents.1791300534.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_000",
+      "ACDC10_ARM_001",
+      "ACDC10_ARM_010",
+      "ACDC10_ARM_011",
+      "ACDC10_ARM_100",
+      "ACDC10_ARM_100_aborted_candidate",
+      "ACDC10_ARM_101",
+      "ACDC10_ARM_110",
+      "ACDC10_ARM_111",
+      "ACDC10_BETAFFT_SEED2025",
+      "ACDC10_BETAFFT_SEED2026",
+      "ACDC10_OURS_SEED2025",
+      "ACDC10_OURS_SEED2026",
+      "ACDC10_X03_WEIGHT_001",
+      "ACDC10_X03_WEIGHT_003",
+      "ACDC10_X03_WEIGHT_007",
+      "ACDC10_X03_WEIGHT_010",
+      "C1_CTW_uniform",
+      "E1_interrupted_candidate",
+      "E4_plain_residual",
+      "E5_AdaMix_common_protocol",
+      "F97_main_signal",
+      "R1_v2_B_control_signal",
+      "R2_fixed92",
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD",
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER",
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN",
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT",
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP",
+      "acdc10",
+      "acdc5",
+      "covid10",
+      "covid5",
+      "promise20"
+    ],
+    "size": 44732,
+    "sha256": "e03f53a838d4ebb0820907c61f39d6a4029264ca6c04825d33fce868c3ebe4ef"
+  },
+  {
+    "source": "formal_E4_E5_20261008/runs/E4_isolated_short/runs/short/logs/events.out.tfevents.1791434192.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_000",
+      "ACDC10_ARM_001",
+      "ACDC10_ARM_010",
+      "ACDC10_ARM_011",
+      "ACDC10_ARM_100",
+      "ACDC10_ARM_100_aborted_candidate",
+      "ACDC10_ARM_101",
+      "ACDC10_ARM_110",
+      "ACDC10_ARM_111",
+      "ACDC10_BETAFFT_SEED2025",
+      "ACDC10_BETAFFT_SEED2026",
+      "ACDC10_OURS_SEED2025",
+      "ACDC10_OURS_SEED2026",
+      "ACDC10_X03_WEIGHT_001",
+      "ACDC10_X03_WEIGHT_003",
+      "ACDC10_X03_WEIGHT_007",
+      "ACDC10_X03_WEIGHT_010",
+      "C1_CTW_uniform",
+      "E1_interrupted_candidate",
+      "E4_plain_residual",
+      "E5_AdaMix_common_protocol",
+      "F97_main_signal",
+      "R1_v2_B_control_signal",
+      "R2_fixed92",
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD",
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER",
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN",
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT",
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP",
+      "acdc10",
+      "acdc5",
+      "covid10",
+      "covid5",
+      "promise20"
+    ],
+    "size": 262,
+    "sha256": "a3907923d55b9b8d584fe0f1258b9925db9940a6f730bc35ba755d901c4b6ebe"
+  },
+  {
+    "source": "formal_E4_E5_20261008/runs/E4_isolated_short/runs/short/logs/events.out.tfevents.1791434230.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_000",
+      "ACDC10_ARM_001",
+      "ACDC10_ARM_010",
+      "ACDC10_ARM_011",
+      "ACDC10_ARM_100",
+      "ACDC10_ARM_100_aborted_candidate",
+      "ACDC10_ARM_101",
+      "ACDC10_ARM_110",
+      "ACDC10_ARM_111",
+      "ACDC10_BETAFFT_SEED2025",
+      "ACDC10_BETAFFT_SEED2026",
+      "ACDC10_OURS_SEED2025",
+      "ACDC10_OURS_SEED2026",
+      "ACDC10_X03_WEIGHT_001",
+      "ACDC10_X03_WEIGHT_003",
+      "ACDC10_X03_WEIGHT_007",
+      "ACDC10_X03_WEIGHT_010",
+      "C1_CTW_uniform",
+      "E1_interrupted_candidate",
+      "E4_plain_residual",
+      "E5_AdaMix_common_protocol",
+      "F97_main_signal",
+      "R1_v2_B_control_signal",
+      "R2_fixed92",
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD",
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER",
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN",
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT",
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP",
+      "acdc10",
+      "acdc5",
+      "covid10",
+      "covid5",
+      "promise20"
+    ],
+    "size": 262,
+    "sha256": "b1a507e24d7ef5e2f37a749fc1dbf7562b3c1b638e41737f686d382d332b1df6"
+  },
+  {
+    "source": "formal_E4_E5_20261008/runs/E4_isolated_short/runs/short/logs/events.out.tfevents.1791434243.n1",
+    "experiment_ids": [
+      "ACDC10_ARM_000",
+      "ACDC10_ARM_001",
+      "ACDC10_ARM_010",
+      "ACDC10_ARM_011",
+      "ACDC10_ARM_100",
+      "ACDC10_ARM_100_aborted_candidate",
+      "ACDC10_ARM_101",
+      "ACDC10_ARM_110",
+      "ACDC10_ARM_111",
+      "ACDC10_BETAFFT_SEED2025",
+      "ACDC10_BETAFFT_SEED2026",
+      "ACDC10_OURS_SEED2025",
+      "ACDC10_OURS_SEED2026",
+      "ACDC10_X03_WEIGHT_001",
+      "ACDC10_X03_WEIGHT_003",
+      "ACDC10_X03_WEIGHT_007",
+      "ACDC10_X03_WEIGHT_010",
+      "C1_CTW_uniform",
+      "E1_interrupted_candidate",
+      "E4_plain_residual",
+      "E5_AdaMix_common_protocol",
+      "F97_main_signal",
+      "R1_v2_B_control_signal",
+      "R2_fixed92",
+      "V21_3_X01_CLASS_DISTRIBUTION_GUARD",
+      "V21_3_X02_UNCERTAINTY_CROSS_BRANCH_FILTER",
+      "V21_3_X04_REGION_PROTOTYPE_SEMANTIC_ALIGN",
+      "V21_3_X05_LABEL_ADAPTIVE_BOUNDARY_OPT",
+      "V21_3_X06_LATE_STABILITY_RELIABILITY_RAMP",
+      "acdc10",
+      "acdc5",
+      "covid10",
+      "covid5",
+      "promise20"
+    ],
+    "size": 40,
+    "sha256": "06c041aa7d9d2375a351c7aa55921bba51cd0dc2300e20fe2830473f94b9bd7e"
+  }
+]

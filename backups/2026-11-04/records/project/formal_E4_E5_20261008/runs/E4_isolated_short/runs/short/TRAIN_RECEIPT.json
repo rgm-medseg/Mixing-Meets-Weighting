@@ -1,0 +1,12 @@
+{
+  "task": "E4",
+  "status": "INTERRUPTED",
+  "global_step": 2,
+  "time": "2026-10-08T12:37:13.351689+08:00",
+  "pid": 40946,
+  "training_seconds": 3.698287133127451,
+  "wall_time_convention": "Sum of active process segments; downtime excluded, unsaved final crash interval unavailable; replayed updates retained in trace",
+  "resume_exact": false,
+  "resume_boundary": "saved IDs and main RNG; worker augmentation streams restart",
+  "test_access_during_training": 0
+}

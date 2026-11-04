@@ -1,0 +1,341 @@
+{
+  "status": "PASS",
+  "time": "2026-10-07T11:11:03.842099+08:00",
+  "scope": "startup verification, not completed-training/final numerical review",
+  "reviews": [
+    {
+      "round": 1,
+      "topic": "定义与范围",
+      "status": "PASS",
+      "fixed_h": 92,
+      "fixed_w": 92,
+      "source_steps": [
+        1,
+        30000
+      ],
+      "old_queue": "INTERRUPTED",
+      "R1_retrained": false
+    },
+    {
+      "round": 2,
+      "topic": "实际接线、初始化、损失/CTW/TRC与预算",
+      "status": "PASS",
+      "scientific_loop_byte_identical_R1": true,
+      "fresh_initializer_step": 0,
+      "actual_initializer": {
+        "time": "2026-10-07T11:06:04.189058+08:00",
+        "joint_step": 0,
+        "pretrain": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth",
+        "sha256": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3",
+        "fresh": true,
+        "checks": [
+          {
+            "branch": "model_1",
+            "exact_pretrained_common_state": true,
+            "gamma": 0.0,
+            "parameters": 1827469,
+            "router_parameters": 641
+          },
+          {
+            "branch": "model_2",
+            "exact_pretrained_common_state": true,
+            "gamma": 0.0,
+            "parameters": 1827469,
+            "router_parameters": 641
+          },
+          {
+            "branch": "ema_model",
+            "exact_pretrained_common_state": true,
+            "gamma": 0.0,
+            "parameters": 1827469,
+            "router_parameters": 641
+          }
+        ],
+        "optimizer1_groups": [
+          {
+            "lr": 0.01,
+            "momentum": 0.9,
+            "dampening": 0,
+            "weight_decay": 0.0001,
+            "nesterov": false,
+            "maximize": false,
+            "foreach": null,
+            "differentiable": false,
+            "fused": false
+          },
+          {
+            "lr": 0.01,
+            "momentum": 0.9,
+            "dampening": 0,
+            "weight_decay": 0.0001,
+            "nesterov": false,
+            "maximize": false,
+            "foreach": null,
+            "differentiable": false,
+            "fused": null
+          }
+        ],
+        "optimizer2_groups": [
+          {
+            "lr": 0.01,
+            "momentum": 0.9,
+            "dampening": 0,
+            "weight_decay": 0.0001,
+            "nesterov": false,
+            "maximize": false,
+            "foreach": null,
+            "differentiable": false,
+            "fused": false
+          },
+          {
+            "lr": 0.01,
+            "momentum": 0.9,
+            "dampening": 0,
+            "weight_decay": 0.0001,
+            "nesterov": false,
+            "maximize": false,
+            "foreach": null,
+            "differentiable": false,
+            "fused": null
+          }
+        ],
+        "source": "exact parent load_parent_pretrain and transplant_parent_optimizer_state; no short/E1/late weights",
+        "optimizer_state_checks": [
+          {
+            "optimizer": "optimizer1",
+            "base_state_exact_match": true,
+            "base_parameters": 142,
+            "inherited_state_count": 82,
+            "router_state_empty": true,
+            "lr_all_groups": [
+              0.01,
+              0.01
+            ]
+          },
+          {
+            "optimizer": "optimizer2",
+            "base_state_exact_match": true,
+            "base_parameters": 142,
+            "inherited_state_count": 82,
+            "router_state_empty": true,
+            "lr_all_groups": [
+              0.01,
+              0.01
+            ]
+          }
+        ],
+        "parent_R1_initial_receipt_sha256": "9f00d459eecf262fa393592abfcec3c8ade0a53669041f8d68dbe10c763eb841",
+        "controller_version": "v2_fixed",
+        "signal_version": "v2_B",
+        "fixed_h": 92,
+        "fixed_w": 92,
+        "generating_pretrain_history": "NA: no original generating command/log retained; identical file reused",
+        "test_access": false
+      },
+      "checkpoint": {
+        "status": "PASS",
+        "time": "2026-10-07T11:09:05.366858+08:00",
+        "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/checkpoints/last.ckpt",
+        "sha256": "bc7ee3ab928a110df5572005886d568e2e6c9abca583f8ceaae3aa28feb82f53",
+        "global_step": 200,
+        "keys": [
+          "amp_state",
+          "args",
+          "best_metrics",
+          "controller_metadata",
+          "ema_model",
+          "epoch",
+          "global_step",
+          "lr_state",
+          "model_1",
+          "model_2",
+          "optimizer1",
+          "optimizer2",
+          "random_state",
+          "resume_exact",
+          "sampler_state"
+        ],
+        "controller_metadata": {
+          "version": "v2_fixed",
+          "task": "R2",
+          "signal_version": "v2_B",
+          "mix_mode": "fixed",
+          "fixed_side": 0.359375,
+          "rectangle_h": 92,
+          "rectangle_w": 92,
+          "q_controls_geometry": false,
+          "s_semantics": "actual fixed side ratio; s_dynamic_B is diagnostic reference only",
+          "area_lock_sha256": "e9453e24be891ebe363798505f272d05f0df83d4879d117d12cb5b8392b5d43b",
+          "foreground_ids": [
+            1,
+            2,
+            3
+          ],
+          "background_id": 0,
+          "empty_foreground_fallback": 0.0,
+          "min_side": 0.18,
+          "max_side": 0.38,
+          "stateless": true,
+          "cfg_sha256": "002b456d2a45b06c4df558ef1e8b326e9a690db590527827ee8848667e5bcf1d",
+          "controller_sha256": "f923e7f9bf0ef9bdae94bbd400d54f52fbbc6064efac9bcece365465657f795c",
+          "optimizer_success_calls": {
+            "optimizer1": 200,
+            "optimizer2": 200
+          },
+          "segment": "2026-10-07T110601169385+0800",
+          "AMP_enabled": false
+        },
+        "lr_state": [
+          0.01,
+          0.01
+        ],
+        "worker_resume_exact": false,
+        "read_only_CPU": true
+      },
+      "budget_joint": 30000,
+      "each_student_updates": 30000
+    },
+    {
+      "round": 3,
+      "topic": "实际固定mask与诊断字段、单位和未来汇总",
+      "status": "PASS",
+      "actual_checked_trace": {
+        "status": "PASS",
+        "time": "2026-10-07T11:07:40.158471+08:00",
+        "steps_checked": 124,
+        "h_w_types": [
+          "92x92"
+        ],
+        "fixed_pixels": 8464,
+        "fixed_area": 0.129150390625,
+        "q_B_range": [
+          0.759606142838796,
+          0.8585541248321533
+        ],
+        "q_is_logging_only": true,
+        "loss_CTW_LR_checked": true,
+        "each_optimizer_calls": 124,
+        "sample_indices_recorded": true,
+        "all_recorded_masks_shared_targets_identical": true,
+        "fresh_init_receipt": "reports/INITIALIZATION_ACTUAL.json",
+        "source_loop_identical_R1": true,
+        "no_extra_smoke_training_updates": 0
+      },
+      "engineering_rehearsal": {
+        "status": "PASS",
+        "time": "2026-10-07T11:01:39.077596+08:00",
+        "training_updates": 0,
+        "inference_calls": 0,
+        "fixture_scope": "temporary metadata only; R1 metrics used as explicitly declared placeholder to verify pairing; ALL fixtures deleted; not formal R2 results",
+        "tested": [
+          "30000-step fixed trajectory statistics and per-stage matching",
+          "four-method aggregate and 480 pair rows",
+          "R2-minus-R1 fixture exactly zero",
+          "summary generation with partial stage metadata",
+          "archive internal compressed readback and external SHA256"
+        ],
+        "fixture_files_retained": false
+      },
+      "surface_unit": "grid not mm",
+      "ASD": "pred-to-GT directed"
+    },
+    {
+      "round": 4,
+      "topic": "误差解释的已有预测mask证据与不利结果",
+      "status": "PASS",
+      "geometry_receipt": {
+        "status": "DONE",
+        "time": "2026-10-07T10:58:28.613569+08:00",
+        "CPU_only": true,
+        "optimizer_updates": 0,
+        "GPU_inference": 0,
+        "models": [
+          "Old_Full",
+          "R1_v2_B"
+        ],
+        "volume_class_rows": 240,
+        "recomputed_metrics_match_frozen_CSV": true,
+        "R1_patients_Dice_declined": 12,
+        "R1_patients_count": 20,
+        "R1_class_deltas": [
+          {
+            "model": "R1_v2_B",
+            "class_name": "RV",
+            "dice_delta": 0.0019555476692891733,
+            "iou_delta": 0.00242179089133627,
+            "hd95_delta": -0.29369360507710757,
+            "asd_delta": -0.06294825287380643
+          },
+          {
+            "model": "R1_v2_B",
+            "class_name": "MYO",
+            "dice_delta": -0.005413050456933857,
+            "iou_delta": -0.00794931290868324,
+            "hd95_delta": 1.9405820935320839,
+            "asd_delta": 0.44897077905237326
+          },
+          {
+            "model": "R1_v2_B",
+            "class_name": "LV",
+            "dice_delta": -0.0074986647313787765,
+            "iou_delta": -0.012197185038979192,
+            "hd95_delta": 2.9094058417849658,
+            "asd_delta": 0.633674889299195
+          }
+        ],
+        "two_patient_net_contribution": {
+          "hd95": {
+            "all_net_sum": 182.2517732095977,
+            "two_patients_net_sum": 163.86239265350633,
+            "net_share": 0.8990990307954768,
+            "meaning": "signed delta sum share, includes cancellation; not exclusive cause attribution or exclusion-adjusted main score"
+          },
+          "asd": {
+            "all_net_sum": 40.78789661911049,
+            "two_patients_net_sum": 28.471255880026128,
+            "net_share": 0.6980319712462543,
+            "meaning": "signed delta sum share, includes cancellation; not exclusive cause attribution or exclusion-adjusted main score"
+          }
+        },
+        "connectivity": "6-neighbor (scipy generate_binary_structure(3,1)); erosion border_value=0; unit spacing1",
+        "surface_definition": "HD95 pooled bidirectional border distances; ASD pred-to-GT only",
+        "missing": [],
+        "priority_cases": [
+          "patient065",
+          "patient075",
+          "patient083"
+        ],
+        "test_use": "post-test error description only; no controller, area, checkpoint or postprocessing changes",
+        "R2_included": false
+      },
+      "test_error_use": "post-test description only; no area/controller/model/postprocess adjustment"
+    },
+    {
+      "round": 5,
+      "topic": "服务器后台、恢复、真实文件与归档接线",
+      "status": "PASS",
+      "detach": {
+        "status": "PASS",
+        "time": "2026-10-07T11:07:40.147233+08:00",
+        "session": "beta_fft_R2_fixed92_20261007",
+        "actual_attach_command": "TERM=xterm-256color tmux attach-session -t beta_fft_R2_fixed92_20261007",
+        "detach": "Ctrl-b d",
+        "attach_tool_PTY_session": 67170,
+        "detach_exit_code": 0,
+        "step_before": 40,
+        "step_after": 124,
+        "same_pipeline_pid": 81963,
+        "same_trainer_pid": 82001,
+        "zero_attached_clients_verified": true
+      },
+      "duplicate_start": "verified reuse PID81963; no second pipeline",
+      "archive_rehearsal": "compressed readback/internal+outer SHA PASS on deleted temporary fixture; actual startup archive is verified separately after this report",
+      "source_manifest_hash": "452e4742bb903273f0d60c9c0a0a040d629e38f6c7d8784a9016d5e6aebbe05f",
+      "resolved_startup_errors": [
+        "zero-update missing run directory, preserved and created before actual initialization",
+        "tmux3.0a ownership compatibility, launcher-only manifest amendment before first training update"
+      ]
+    }
+  ],
+  "new_smoke_training_updates": 0
+}

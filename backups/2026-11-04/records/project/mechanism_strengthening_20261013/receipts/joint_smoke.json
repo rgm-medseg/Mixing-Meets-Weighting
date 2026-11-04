@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "batches": 1,
+  "loads": [
+    {
+      "branch": "model_1",
+      "step": 29600,
+      "strict": true,
+      "checkpoint_sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086"
+    },
+    {
+      "branch": "model_2",
+      "step": 29600,
+      "strict": true,
+      "checkpoint_sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086"
+    },
+    {
+      "branch": "ema_model",
+      "step": 29600,
+      "strict": true,
+      "checkpoint_sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086"
+    }
+  ],
+  "model_hash_before": [
+    "f26262ac454c399efc8569442e847eb3051e12f22951c506947d45ba421adcfd",
+    "c69cbbef0da2052b47bce8d67166136e9e6b9af532605932d26e6e62090577de",
+    "4b9b323e4e12c45702da8603bd6e32806a7a8614634d8a2c1c346897bbc85745"
+  ],
+  "model_hash_after": [
+    "f26262ac454c399efc8569442e847eb3051e12f22951c506947d45ba421adcfd",
+    "c69cbbef0da2052b47bce8d67166136e9e6b9af532605932d26e6e62090577de",
+    "4b9b323e4e12c45702da8603bd6e32806a7a8614634d8a2c1c346897bbc85745"
+  ],
+  "optimizer_steps": 0,
+  "parameter_gradients_none": true,
+  "scope": "CTW consistency item only; not total training gradient",
+  "checks": [
+    {
+      "batch": 0,
+      "condition": "fixed_uniform",
+      "lambda_weighted_loss": 3.42304992955178e-05,
+      "student2_gradient": null,
+      "weight_detached": true,
+      "max_analytic_gradient_difference": 9.467253370143425e-16,
+      "literal_loss_agrees": true
+    },
+    {
+      "batch": 0,
+      "condition": "fixed_CTW",
+      "lambda_weighted_loss": 5.144170063431375e-05,
+      "student2_gradient": null,
+      "weight_detached": true,
+      "max_analytic_gradient_difference": 2.9264785039728736e-15,
+      "literal_loss_agrees": true
+    },
+    {
+      "batch": 0,
+      "condition": "dynamic_uniform",
+      "lambda_weighted_loss": 3.42304992955178e-05,
+      "student2_gradient": null,
+      "weight_detached": true,
+      "max_analytic_gradient_difference": 9.467253370143425e-16,
+      "literal_loss_agrees": true
+    },
+    {
+      "batch": 0,
+      "condition": "dynamic_CTW",
+      "lambda_weighted_loss": 5.144170063431375e-05,
+      "student2_gradient": null,
+      "weight_detached": true,
+      "max_analytic_gradient_difference": 2.9264785039728736e-15,
+      "literal_loss_agrees": true
+    }
+  ]
+}

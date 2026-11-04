@@ -1,0 +1,6 @@
+{
+  "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/archives/initial_verified_archive_5670dc4e16205ef27b341eef9d8d8ec094729a455dc08d6bd6a656c6c5978e23.tar.gz",
+  "sha256": "5670dc4e16205ef27b341eef9d8d8ec094729a455dc08d6bd6a656c6c5978e23",
+  "initial_snapshot": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/archives/snapshot_2026-10-07T195912.033154+0800",
+  "reason": "consistent initial archive retained; final package adds actual-control text/plot, source forward audit and visual/resume verification"
+}

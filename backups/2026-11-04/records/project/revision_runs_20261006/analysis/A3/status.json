@@ -1,0 +1,8 @@
+{
+  "task": "A3",
+  "status": "PARTIAL",
+  "reason": "True two-student/EMA outputs on four fixed already-labeled slices mixed offline; 2-pixel neighborhoods separated into GT-only/mix-only/overlap/interior. No anatomical semantics assigned to tokens; normalization denominator floor 1e-6.",
+  "time": "2026-10-06T21:05:23.007591+08:00",
+  "diagnostic_only": true,
+  "test_access": false
+}

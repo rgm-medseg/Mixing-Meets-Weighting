@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T16:07:56.391392+00:00",
+  "task_id": "V24_BETAFFT_TEST_FIREWALL_SOURCE_DRIFT_AUDIT",
+  "training_started": false,
+  "formal_started": false,
+  "tmux_started": false,
+  "change_class": "E1_ENGINEERING_TEST_FIREWALL_ONLY",
+  "changed_source": "train_ACDC/beta_fft_acdc_repro.py",
+  "current_source_sha256": "18b128da9429211059eed2e36290964439449b52e6e7de621609170a92bed316",
+  "semantic_assertions": {
+    "algorithm_changed": false,
+    "default_behavior_changed": false,
+    "new_flag_default": "False",
+    "v24_betafft_launcher_sets_disable_intrain_test_eval": "true",
+    "purpose": "prevent in-training TEST loader/eval; formal TEST remains per-task frozen BEST gate only",
+    "training_parameters_changed": false,
+    "loss_changed": false,
+    "optimizer_changed": false,
+    "scheduler_changed": false,
+    "x03_changed": false
+  },
+  "registry_sha_updates": [
+    {
+      "TaskID": "ACDC2_BETAFFT_FULL",
+      "field": "SourceSHA",
+      "path": "train_ACDC/beta_fft_acdc_repro.py",
+      "sha256": "18b128da9429211059eed2e36290964439449b52e6e7de621609170a92bed316"
+    },
+    {
+      "TaskID": "ACDC10_BETAFFT_SEED2025",
+      "field": "SourceSHA",
+      "path": "train_ACDC/beta_fft_acdc_repro.py",
+      "sha256": "18b128da9429211059eed2e36290964439449b52e6e7de621609170a92bed316"
+    },
+    {
+      "TaskID": "ACDC10_BETAFFT_SEED2026",
+      "field": "SourceSHA",
+      "path": "train_ACDC/beta_fft_acdc_repro.py",
+      "sha256": "18b128da9429211059eed2e36290964439449b52e6e7de621609170a92bed316"
+    }
+  ],
+  "registry": "audits/internal_evidence_expansion_v24_0/V24_0_MASTER_TASK_REGISTRY_WORKING.tsv",
+  "registry_sha256": "bf916e5d4795b62837453eb1c6fc94933b43d4c7e050554cc32d4738f896d9d9",
+  "updated_at": "2026-08-24T16:20:07.083210+00:00",
+  "registry_sha_updates_latest": [],
+  "v24_launcher_sha256": "e5dee26a1c713160c907d659d540c0e6d7dee63c55ad73a18f3536158902cda8"
+}

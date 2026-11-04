@@ -1,0 +1,19 @@
+{
+  "ACDC_REMOVED_ROWS": [
+    "Cross Teaching",
+    "SCP-Net",
+    "PLGCL"
+  ],
+  "DISPLAY_BETAFFT_REPORTED": false,
+  "DISPLAY_MASK_ADAMIX_ROW": false,
+  "DISPLAY_PLUS_MINUS": false,
+  "FormattingAudit": "audits/paper_internal_evidence_v23_0/PAPER_TABLE_BOLD_UNDERLINE_AUDIT.tsv",
+  "MSCMR_IN_CURRENT_PAPER": false,
+  "PROMISE10_IN_CURRENT_PAPER": false,
+  "TABLES_BUILT": [
+    "TABLE1_ACDC_5P_10P",
+    "TABLE2_PROMISE20",
+    "TABLE3_COVID_5P_10P",
+    "TABLE4_ACDC10_8ARM"
+  ]
+}

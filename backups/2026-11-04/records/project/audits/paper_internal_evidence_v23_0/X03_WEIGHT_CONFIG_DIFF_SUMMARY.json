@@ -1,0 +1,10 @@
+{
+  "all_test_access_zero": true,
+  "all_unexpected_scientific_difference_count_zero": true,
+  "created_at": "2026-08-23T03:16:51.974522+00:00",
+  "derived_count": 4,
+  "diff_tsv": "audits/paper_internal_evidence_v23_0/X03_WEIGHT_CONFIG_DIFF.tsv",
+  "parent_config": "configs/paper_internal_evidence_v23_0/ACDC10_ARM_111_CANONICAL_PARENT_RECONSTRUCTED.json",
+  "parent_config_sha256": "19bc401c3c3f2a56a42836d7ed954dd52808ad64b66d7d11c1d88abf8fdb1399",
+  "schema": "V23_0_X03_WEIGHT_CONFIG_DIFF_SUMMARY_V1"
+}

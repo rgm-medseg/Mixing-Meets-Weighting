@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-26T03:20:27.497859+00:00",
+  "task_id": "ACDC10_OURS_SEED2026",
+  "TEST_COMPLETION_RECEIPT": true,
+  "training_started": false,
+  "checkpoint_selection_started": false,
+  "test_started": true,
+  "test_manifest_sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+  "case_count": 40,
+  "BestCheckpointPath": "experiments/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026/checkpoints/best.ckpt",
+  "BestCheckpointSHA256": "d4b5789ee2693407ba57c02eae3acb3d1947f4bfa8263ac0d5622c038a7af7b2",
+  "test_used_for_tuning": false,
+  "test_used_for_selection": false,
+  "prediction_dir": "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2026/predictions_npz",
+  "case_class_metrics_tsv": "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2026/case_class_metrics.tsv",
+  "aggregate_metrics_tsv": "final_report/internal_evidence_expansion_v24_0/raw_test/ACDC10_OURS_SEED2026/aggregate_metrics.tsv",
+  "aggregate": {
+    "dice": "0.897029904666",
+    "iou": "0.818976028477",
+    "hd95": "3.370103202056",
+    "asd": "0.865228925322"
+  }
+}

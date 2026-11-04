@@ -1,0 +1,70 @@
+{
+  "status": "PRELAUNCH_READY",
+  "created_at": "2026-08-24T17:17:58.772112+00:00",
+  "formal_started": false,
+  "tmux_started": false,
+  "V24_0_PRELAUNCH_READY": true,
+  "EXPECTED_NEW_FULL_COUNT": 4,
+  "EXPECTED_NEW_FULL_READY": 4,
+  "active_new_full_ready_count": 4,
+  "task_count": 27,
+  "final_launch_ready_count": 22,
+  "not_ready_count": 5,
+  "not_ready_task_ids": [
+    "PSEUDO_LABEL_EVOLUTION",
+    "PATHOLOGY_SUBGROUP",
+    "STUDENT_DIVERSITY",
+    "ACDC2_BETAFFT_FULL",
+    "ACDC2_OURS_FULL"
+  ],
+  "launch_blocking_count": 0,
+  "launch_blocking_tasks": [],
+  "noncritical_terminal_gap_count": 3,
+  "noncritical_terminal_gap_tasks": [
+    {
+      "TaskID": "PSEUDO_LABEL_EVOLUTION",
+      "TaskType": "FROZEN_REPLAY_ANALYSIS",
+      "Action": "BLOCKED",
+      "FinalLaunchReady": "BLOCKED_NONCRITICAL",
+      "Blocker": "PARTIAL_PSEUDO_LABEL_EVOLUTION_COMMON_CHECKPOINT_COUNT_LT_4_OR_PSEUDO_OUTPUTS_MISSING"
+    },
+    {
+      "TaskID": "PATHOLOGY_SUBGROUP",
+      "TaskType": "ANALYSIS",
+      "Action": "BLOCKED",
+      "FinalLaunchReady": "BLOCKED_NONCRITICAL",
+      "Blocker": "BLOCKED_OFFICIAL_PATHOLOGY_METADATA_UNAVAILABLE"
+    },
+    {
+      "TaskID": "STUDENT_DIVERSITY",
+      "TaskType": "ANALYSIS",
+      "Action": "BLOCKED",
+      "FinalLaunchReady": "BLOCKED_NONCRITICAL",
+      "Blocker": "BLOCKED_STUDENT_DIVERSITY_COMMON_CHECKPOINT_COUNT_LT_4_OR_BRANCH_OUTPUTS_MISSING"
+    }
+  ],
+  "protocol_excluded_count": 2,
+  "protocol_excluded_tasks": [
+    {
+      "TaskID": "ACDC2_BETAFFT_FULL",
+      "TaskType": "NEW_FULL",
+      "Action": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED",
+      "FinalLaunchReady": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED_FROM_FORMAL_QUEUE",
+      "Blocker": "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT"
+    },
+    {
+      "TaskID": "ACDC2_OURS_FULL",
+      "TaskType": "NEW_FULL",
+      "Action": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED",
+      "FinalLaunchReady": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED_FROM_FORMAL_QUEUE",
+      "Blocker": "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT"
+    }
+  ],
+  "registry_changes": [],
+  "registry": "audits/internal_evidence_expansion_v24_0/V24_0_MASTER_TASK_REGISTRY.tsv",
+  "registry_sha256": "1aeb5c3ce40ff74bb7cd2554a54db8d06f22f7eb521fd16d964514af0fa21c16",
+  "l1_l10_audit": "audits/internal_evidence_expansion_v24_0/V24_0_PRELAUNCH_L1_L10_AUDIT.tsv",
+  "l1_l10_audit_sha256": "a78e1357932a38b90f5d42100d10d8b515a660b97f741474c4b77a78089eabe5",
+  "generated_task_readiness_glob": "audits/internal_evidence_expansion_v24_0/task_*_FINAL_LAUNCH_READINESS.json",
+  "hard_gate": "No NEW_FULL task is FinalLaunchReady without its own real TRAIN/VAL smoke receipt and scratch closed-loop receipt."
+}

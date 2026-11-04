@@ -1,0 +1,62 @@
+{
+  "ASD": 3.1078299197251433,
+  "Dice": 0.6104486203568935,
+  "HD95": 10.659434330669756,
+  "IoU": 0.4568131240600374,
+  "asd": 3.1078299197251433,
+  "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/results/COVID10/seed1337/checkpoints/best.pth",
+  "checkpoint_selection": "best_validation_dice",
+  "dataset": "COVID19_OFFICIAL20",
+  "dice": 0.6104486203568935,
+  "evaluator": {
+    "name": "beta_fft_covid_frozen",
+    "sha256": "ff20153cdbbe9e164bbdbd2348f6799daf0180a5503291177a86a5f9034f560b",
+    "source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_COVID19/covid19_volume_evaluator.py"
+  },
+  "hd95": 10.659434330669756,
+  "iou": 0.4568131240600374,
+  "raw_evaluation": {
+    "aggregation": "PATIENT_VOLUME_MACRO",
+    "macro": {
+      "asd_mm": 3.1078299197251433,
+      "dice": 0.6104486203568935,
+      "hd95_mm": 10.659434330669756,
+      "iou": 0.4568131240600374
+    },
+    "per_patient": {
+      "coronacases_002": {
+        "asd_mm": 0.9772872135176294,
+        "dice": 0.8052943426455836,
+        "hd95_mm": 2.631160228946657,
+        "iou": 0.6740525063125974
+      },
+      "coronacases_009": {
+        "asd_mm": 3.648935272332182,
+        "dice": 0.6771773218165665,
+        "hd95_mm": 9.0,
+        "iou": 0.5119184400032365
+      },
+      "radiopaedia_27_86410_0": {
+        "asd_mm": 4.129755590108799,
+        "dice": 0.57454972017889,
+        "hd95_mm": 18.236778462100453,
+        "iou": 0.40306542312439997
+      },
+      "radiopaedia_40_86625_0": {
+        "asd_mm": 3.6753416029419643,
+        "dice": 0.38477309678653404,
+        "hd95_mm": 12.769798631631915,
+        "iou": 0.23821612679991563
+      }
+    },
+    "primary_validation_metric": "PATIENT_VOLUME_MACRO_DICE",
+    "unit": "mm"
+  },
+  "run_id": "UCAD_FAIR_COVID10",
+  "schema": "UCAD_2026_FROZEN_TEST_RESULT_V1",
+  "seed": 1337,
+  "setting": "10%",
+  "status": "TEST_PASS",
+  "test_manifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/reproductions/UCAD_2026/manifests/COVID_test.tsv",
+  "unit": "mm"
+}

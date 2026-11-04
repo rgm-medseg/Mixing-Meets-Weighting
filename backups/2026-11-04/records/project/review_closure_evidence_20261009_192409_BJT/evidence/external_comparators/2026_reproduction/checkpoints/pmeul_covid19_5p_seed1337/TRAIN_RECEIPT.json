@@ -1,0 +1,16 @@
+{
+  "best_checkpoint_sha256": "7e1a947da65a9d4ec0e8bdbf6ebfcc45ffc4f102cc7184bfff726e2f64f1a05e",
+  "best_validation_dice": 0.8281510024535669,
+  "ce_in_optimized_loss": false,
+  "checkpoint_missing_keys": [],
+  "checkpoint_unexpected_keys": [],
+  "config_sha256": "9082c0686bd14077dae4c9bc7435c48b6cf9744061d1ab3b43b0abea2ad75009",
+  "dataset": "COVID19",
+  "iteration": 30000,
+  "job_id": "pmeul_covid19_5p_seed1337",
+  "latest_checkpoint_sha256": "1e0968f31de7936474c7f9e7353d21c944cfeb1154c4a24a7ff9dd4270915fc7",
+  "method": "PMEUL",
+  "nan_detected": false,
+  "status": "TRAIN_PASS",
+  "test_manifest_accessed": false
+}

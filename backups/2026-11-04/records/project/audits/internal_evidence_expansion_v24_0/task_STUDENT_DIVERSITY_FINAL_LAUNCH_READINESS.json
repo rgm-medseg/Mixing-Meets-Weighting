@@ -1,0 +1,88 @@
+{
+  "status": "NOT_READY",
+  "created_at": "2026-08-24T17:17:58.543702+00:00",
+  "task_id": "STUDENT_DIVERSITY",
+  "task_type": "ANALYSIS",
+  "action": "BLOCKED",
+  "registry_FinalLaunchReady": "BLOCKED_NONCRITICAL",
+  "registry_Blocker": "BLOCKED_STUDENT_DIVERSITY_COMMON_CHECKPOINT_COUNT_LT_4_OR_BRANCH_OUTPUTS_MISSING",
+  "registry_BlockerCategory": "BLOCKED_STUDENT_DIVERSITY_COMMON_CHECKPOINT_COUNT_LT_4_OR_BRANCH_OUTPUTS_MISSING",
+  "LaunchBlocking": false,
+  "NoncriticalTerminalGap": true,
+  "ProtocolExcluded": false,
+  "FinalLaunchReady": false,
+  "FinalLaunchReady_semantics": "launch permission only; not completion evidence",
+  "PostFullCompletionEvidenceRequired": false,
+  "FormalFullStarted": false,
+  "TmuxStarted": false,
+  "checks": {
+    "StaticPass": true,
+    "ArgvPass": true,
+    "PathPass": true,
+    "ScientificIdentityPass": true,
+    "ImportPass": true,
+    "RoleBindingPass": true,
+    "SmokePass": false,
+    "ClosedLoopPass": false,
+    "FailureInjectionPass": false,
+    "ControllerDryPass": true,
+    "OutputClean": true,
+    "SourceFreezePass": true,
+    "ConfigFreezePass": true
+  },
+  "l1_l10": {
+    "TaskOrder": "13",
+    "TaskID": "STUDENT_DIVERSITY",
+    "Action": "BLOCKED",
+    "FinalLaunchReady": "BLOCKED_NONCRITICAL",
+    "Blocker": "BLOCKED_STUDENT_DIVERSITY_COMMON_CHECKPOINT_COUNT_LT_4_OR_BRANCH_OUTPUTS_MISSING",
+    "L1StaticPaths": "PASS",
+    "L2DryRunOrReceiptMode": "NA",
+    "L3Paths": "PASS",
+    "L4ScientificIdentity": "PASS_OR_NA",
+    "L5ImportCompile": "PASS",
+    "L6TestFirewall": "PASS",
+    "L7SmokeGate": "BLOCKED_OR_PENDING",
+    "L8ClosedLoopReceipt": "BLOCKED_OR_PENDING",
+    "L9FailureInjection": "BLOCKED_OR_PENDING",
+    "L10ControllerDryConsumption": "PASS_WITH_BLOCKERS"
+  },
+  "freeze_evidence": {
+    "source": {
+      "applicable": true,
+      "pass": true,
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_mechanism_asset_audit.py",
+      "exists": true,
+      "expected_sha256": "c01db4d0935875eae5406c82a2d2a9c68708844df5b156e451ed6db1079c9e53",
+      "current_sha256": "c01db4d0935875eae5406c82a2d2a9c68708844df5b156e451ed6db1079c9e53"
+    },
+    "launcher": {
+      "applicable": false,
+      "pass": true,
+      "path": "",
+      "expected_sha256": "",
+      "current_sha256": ""
+    },
+    "config": {
+      "applicable": false,
+      "pass": true,
+      "path": "",
+      "expected_sha256": "",
+      "current_sha256": ""
+    },
+    "checkpoint": {
+      "applicable": false,
+      "pass": true,
+      "path": "",
+      "expected_sha256": "",
+      "current_sha256": ""
+    }
+  },
+  "expected_receipt": "audits/internal_evidence_expansion_v24_0/STUDENT_DIVERSITY_TERMINAL_SOURCE_GAP_RECEIPT.json",
+  "test_semantics": {
+    "TESTAccessAllowed": "0",
+    "TEST_DATA_READ_FOR_PRE_REGISTERED_EVALUATION": false,
+    "TEST_USED_FOR_TUNING": false,
+    "TEST_USED_FOR_SELECTION": false
+  }
+}

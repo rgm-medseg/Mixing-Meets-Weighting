@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "time": "2026-10-06T23:40:50.968512+08:00",
+  "optimizer_updates": 0,
+  "checks": [
+    "background multiplicity invariance",
+    "foreground class-size invariance",
+    "all background fallback0",
+    "monotonic probability/margin/size",
+    "constant/extreme probabilities and missing classes",
+    "NaN/Inf fail closed",
+    "detach/no gradient",
+    "shared mask equals target mask",
+    "same-geometry old/new mask equality",
+    "generic2/5class mappings",
+    "planned R2 keeps B signal logs while fixing geometry"
+  ],
+  "nonfinite_rejected": [
+    "nan",
+    "inf",
+    "-inf"
+  ],
+  "scope": "controlled tensors, not medical efficacy"
+}

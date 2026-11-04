@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "controller_pid": 89925,
+  "start": "2026-10-07T19:44:50.759729+08:00",
+  "stage": "FINISHED",
+  "completed": [
+    "A2",
+    "A5",
+    "REVIEW"
+  ],
+  "pending": [],
+  "training_updates": 0,
+  "old_queue": "INTERRUPTED",
+  "identity": "9c039632d8918000110d4d8d541296761dd96f663068b817b651dd2940f1b740",
+  "heartbeat": "2026-10-07T20:03:15.717790+08:00",
+  "child_pid": null,
+  "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/logs/finalize_delivery_archive.log",
+  "elapsed_stage_seconds": 75.2441996075213,
+  "finished": "2026-10-07T19:46:51.196719+08:00",
+  "archive": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/offline_A2_A5_20261007/A2_A5_offline_evidence_20261007.tar.gz",
+  "finalized": "2026-10-07T20:03:15.717815+08:00",
+  "A2_status": "DONE",
+  "A5_status": "PARTIAL",
+  "finalization": "completed report additions, visual and resume verification, actual extraction SHA verification",
+  "previous_verified_archive_sha256": "5670dc4e16205ef27b341eef9d8d8ec094729a455dc08d6bd6a656c6c5978e23",
+  "archive_sha256": "3cb9dabc6b60602e03c3643dde85ee2b9cd3505002bde470634f18a85aa2b7f0"
+}

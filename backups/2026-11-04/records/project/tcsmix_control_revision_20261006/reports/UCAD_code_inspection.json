@@ -1,0 +1,79 @@
+{
+  "url": "https://raw.githubusercontent.com/dcb937/UCAD/7a5361a203e3f2c3406118f854c0582b59bb9e01/code/train_UCAD.py",
+  "source_sha256": "0e1256fe323b8d6a288ac9ea6787328a4f56beed16c15f12f9a56ccfd1e16646",
+  "relevant_code_lines": [
+    [
+      131,
+      "probs = F.softmax(output, dim=1)"
+    ],
+    [
+      193,
+      "def get_cutmix_mask_uncertainty("
+    ],
+    [
+      204,
+      "entropy_map = -torch.sum(prob_maps * torch.log(prob_maps + 1e-8), dim=1)  # [B,H,W]"
+    ],
+    [
+      207,
+      "entropy_np = entropy_map.detach().cpu().numpy()"
+    ],
+    [
+      212,
+      "ent = entropy_np[b]"
+    ],
+    [
+      261,
+      "output_soft = F.softmax(output, dim=1)"
+    ],
+    [
+      272,
+      "def mix_loss_entropy(output, mixed_label, mask, teacher_logits, l_weight=1.0, u_weight=0.5, unlab=False, beta=0.5):"
+    ],
+    [
+      276,
+      "output_soft = F.softmax(output, dim=1)"
+    ],
+    [
+      287,
+      "# student probs + entropy"
+    ],
+    [
+      288,
+      "p_s = F.softmax(output, dim=1)"
+    ],
+    [
+      290,
+      "# teacher probs + entropy"
+    ],
+    [
+      291,
+      "p_t = F.softmax(teacher_logits, dim=1)"
+    ],
+    [
+      515,
+      "prob_maps = torch.softmax(logits, dim=1)"
+    ],
+    [
+      517,
+      "prob_maps_ub = torch.softmax(logits_ub, dim=1)"
+    ],
+    [
+      518,
+      "img_mask_a = get_cutmix_mask_uncertainty(seg_a, case_a, prob_maps, num_labels=args.num_labels, temperature=args.temperature)"
+    ],
+    [
+      519,
+      "img_mask_ub = get_cutmix_mask_uncertainty(seg_ub, case_ub, prob_maps_ub, num_labels=args.num_labels, temperature=args.temperature)"
+    ],
+    [
+      546,
+      "unl_dice, unl_ce, unc_1 = mix_loss_entropy(out_unl, mixed_unl, loss_mask_a, pre_a, u_weight=args.u_weight, unlab=True, beta=beta)"
+    ],
+    [
+      547,
+      "l_dice, l_ce, unc_2 = mix_loss_entropy(out_l, mixed_l, loss_mask_ub, pre_b, u_weight=args.u_weight, beta=beta)"
+    ]
+  ],
+  "used_as_reference_only": true
+}

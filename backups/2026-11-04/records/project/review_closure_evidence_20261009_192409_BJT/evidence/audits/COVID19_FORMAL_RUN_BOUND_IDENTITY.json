@@ -1,0 +1,39 @@
+{
+  "COVID19_FORMAL_RUN_BOUND_IDENTITY": "FROZEN",
+  "authorization_identity_sha256": "dbf6f49956ce8c2ce19792b80226d8c51a605cbf7d492063c7e06c5b6a9f8c44",
+  "authorization_timestamp_utc": "2026-08-09T08:50:10.392439+00:00",
+  "formal_full_runs": [
+    "COVID19_5P_BASELINE_R2",
+    "COVID19_5P_MASK_TOKEN_ADAMIX_R1",
+    "COVID19_10P_BASELINE_R1",
+    "COVID19_10P_MASK_TOKEN_ADAMIX_R1"
+  ],
+  "global_experiment_seed": 42,
+  "hashes": {
+    "10P_labeled_sha256": "05df744c315693f04d6949bf21d83956c282c868f3a23f1bfc79f6fff3ed3dee",
+    "10P_unlabeled_sha256": "2afe89c4d7924e9f9f7eb1bda5e256f763aa491015e37f3706d7638f11dd3ee0",
+    "5P_labeled_sha256": "0689f3efeeeac1a8631540b9718109ba3c3acd9ba61d46cd8dd3ddc8f79fc05d",
+    "5P_unlabeled_sha256": "bfd037607ddead4ba4555be15d7464b47790497ae003e70a741fe908917d3107",
+    "COVID19_10P_BASELINE_R1_config_sha256": "4286b718a8e4e0dada2f6062f638534de968db7ebb510cfa14d609624b97260f",
+    "COVID19_10P_MASK_TOKEN_ADAMIX_R1_config_sha256": "324696f47b21ec4483610db3df94c329297f9c85df37169fbc48a333208a48e7",
+    "COVID19_5P_BASELINE_R2_config_sha256": "8cf7d2dbd24ad27d4fd7d5db493d2bf4b078ba5011d154b3725c7f24e7180918",
+    "COVID19_5P_MASK_TOKEN_ADAMIX_R1_config_sha256": "a5245baf577b57747c7d29267fad986b42bd54914f2c70c1dc25cef96e2c6112",
+    "adamix_source_sha256": "05228e2d005cdf8d4a9eac461bce3d360d81070787036bc2551cc3a764dd977d",
+    "beta_fft_source_sha256": "05228e2d005cdf8d4a9eac461bce3d360d81070787036bc2551cc3a764dd977d",
+    "checkpoint_schema_identity": "COVID_SELFTRAIN_CHECKPOINT_SCHEMA_VERSION=1",
+    "controller_sha256": "269c21e2fc8972db869ed01f889e763e23fded2a1b72e80d75fd5d3423f7afff",
+    "dataset_adapter_sha256": "a6031696e9a63888c385cfe735bc010e73f5bad5cdf80e1cb6ed264e812d4ba1",
+    "evaluator_sha256": "ff20153cdbbe9e164bbdbd2348f6799daf0180a5503291177a86a5f9034f560b",
+    "fft_helper_sha256": "7e807dfc8944ed0d683110e4077bb3d355021b5f7b77ab08c9b989176836ff96",
+    "mask_token_source_sha256": "0c0e7ae8e1a427159afb7c4976402268b549be8c76eb116fe5bef79c386d3e4e",
+    "patient_split_sha256": "f5e4404116ee99262ef14cd002c65dffa595b852edb17df06e6945cfa56d626e",
+    "phase_budget_identity": "PRETRAIN=10000;SELF_TRAIN=30000",
+    "preprocess_config_sha256": "36be904f21c5bbb88c9e620e24f62cfdbff5fd3d9181a67cf34e4d7248ab5be4",
+    "protocol_sha256": "d47cb902de329546b8e5a323c64d80138bae78901ccba81c633a3f5ba23b4599",
+    "queue_sha256": "827346d3ab68e4007a3285f7d57ef3e192a6d0ab09a7bd926d06ec510dfdde73",
+    "terminal_validator_sha256": "e8b0ebd1158a0a85b9c697f93aa5682916be6d60ece597a4a366e4d7cd748329",
+    "training_core_sha256": "ecf34e48b2c19d40865a0e69979ce1f7652116339c7f6a5464e0b8c9da383001"
+  },
+  "protocol_identity": "OFFICIAL20_PATIENTLEVEL_ALLSLICE_V2",
+  "schema": "V18.5_COVID19_FORMAL_RUN_BOUND_IDENTITY"
+}

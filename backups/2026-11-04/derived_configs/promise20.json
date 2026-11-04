@@ -1,0 +1,23 @@
+{
+  "origin": "Checkpoint args and lineage export; not a newly invented training record",
+  "checkpoint": "experiments/three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3/self_train/self_train_full_state_final.pth",
+  "checkpoint_sha256": "51071c2210a09c67aca814f308295f86a44ad9efad418caf76c1ed8f5608a5d7",
+  "args": null,
+  "lineage": {
+    "protocol_identity": "LEGACY_PROMISE12",
+    "run_id": "three_innovation_ablation_transfer_v22_0/PROMISE20_FINAL3",
+    "dataset_name": "promise12",
+    "labeled_num": 7,
+    "pretrain_target_updates": 10000,
+    "self_train_target_updates": 30000,
+    "use_mask_token_prehead_router": true,
+    "use_adamix_bcp_lite_v1": true,
+    "training_core_sha256": "e1006ebe9731d7665a886dc5f897f130c5818c132fa575cc16c9ea845cb27386",
+    "pretrain_checkpoint_sha256": "ec720ac4bc5f8c31e760a1e40d29528f7a3954a63d16b8192220232c0c47f4a7",
+    "covid19_labeled_manifest_sha256": null,
+    "covid19_unlabeled_manifest_sha256": null,
+    "covid19_val_manifest_sha256": null,
+    "promise12_slice_indices_sha256": null
+  },
+  "portable_config": "records/publication/configs/paper/promise20.json"
+}

@@ -1,0 +1,5 @@
+{
+  "time": "2026-10-08T00:53:07.076189+08:00",
+  "command": "/home/renguanming/.conda/envs/beta_fft/bin/python -u -c 'import json,time,pathlib\np=pathlib.Path(\"/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/state/status.json\")\nwhile True:\n try:\n  s=json.loads(p.read_text());print(\"\\033[2J\\033[H\",end=\"\");print(\"C1_CTW_mean_uniform_v2B | n1 / GPU0 | TRC + TCSMix v2_B\");print(s[\"status\"],s[\"stage\"],s[\"heartbeat\"]);print(\"step\",s[\"joint_step\"],\"/30000 | optimizer calls\",s[\"optimizer1_calls\"],s[\"optimizer2_calls\"]);print(\"remaining hours\",round(s[\"ETA_remaining_hours\"],2),\"ETA\",s[\"ETA_training_finish\"]);print(\"controller\",s[\"pipeline_identity\"]);print(\"child\",s[\"child_identity\"]);print(\"log\",s[\"current_log\"]);print(\"GPU\",s[\"resource\"]);print(\"E1 paused 3976; E2-E5 pending; no other training authorized\",flush=True)\n  if s[\"status\"] in [\"DONE\",\"FAILED\",\"INTERRUPTED\"]:break\n except FileNotFoundError:pass\n time.sleep(10)\n'",
+  "scope": "read-only tmux monitoring; no RNG/model/update"
+}

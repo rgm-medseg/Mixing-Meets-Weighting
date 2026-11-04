@@ -1,0 +1,33 @@
+{
+  "root_path": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC",
+  "exp": "beta_fft_acdc_official_10pct_seed42",
+  "model": "unet",
+  "pre_iterations": 10000,
+  "max_iterations": 30000,
+  "batch_size": 24,
+  "deterministic": 1,
+  "base_lr": 0.01,
+  "image_size": [
+    256,
+    256
+  ],
+  "seed": 42,
+  "num_classes": 4,
+  "labeled_bs": 12,
+  "labelnum": 7,
+  "u_weight": 0.5,
+  "gpu": "0",
+  "consistency": 0.1,
+  "consistency_rampup": 200.0,
+  "magnitude": 6.0,
+  "s_param": 6,
+  "patch_size": 64,
+  "h_size": 4,
+  "w_size": 4,
+  "top_num": 4,
+  "run_root": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/beta_fft_acdc_official_full_seed42_fresh_ckpt",
+  "pretrained_model": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7",
+  "data_manifest_name": "official",
+  "resume_ckpt": "",
+  "save_interval": 200
+}

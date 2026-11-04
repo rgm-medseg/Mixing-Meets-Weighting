@@ -1,0 +1,24 @@
+
+SOURCE /home/renguanming/jupyterlab/rgm/beta-FFT-main/runs/acdc10_third_innovation_codex_prep_top6_v21_3/V21_3_X03_CONTOUR_RELIABILITY_WEIGHT/effective_source.py SHA d3959d5baf54727db740f3ece79608292b396d3f0f49b7b97743398bda42ad00
+22: from v14_mask_adamix_components import (v14_bcp_net as BCP_net, generate_adamix_bcp_lite_v1_mask, load_parent_pretrain, transplant_parent_optimizer_state, make_optimizer, mask_token_endpoint, process_image_batches_parent_2d)
+356:                     img_mask, loss_mask, adamix_stats = generate_adamix_bcp_lite_v1_mask(
+
+SOURCE /home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/v14_mask_adamix_components.py SHA 75754fa75e6fd6fc01c97682262895998799c7ce3c0bc2dcbe058ef4c63dcaee
+122: def generate_adamix_bcp_lite_v1_mask(img, logits_a, logits_b, min_side=0.18, max_side=0.38):
+128:         conf_a = torch.softmax(logits_a.detach(), dim=1).max(dim=1)[0].mean()
+130:         teacher_conf = torch.clamp(0.5 * (conf_a + conf_b), 0.0, 1.0)
+131:         side_fraction = min_side + (max_side - min_side) * teacher_conf.item()
+132:     patch_x = max(1, min(img_x - 1, int(round(img_x * side_fraction))))
+133:     patch_y = max(1, min(img_y - 1, int(round(img_y * side_fraction))))
+
+SOURCE /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/control_runtime.py SHA 4030fa2a337416f5379a976fb3b6b3865a7b01db45c43573ee8f49dc55050e36
+52: def generate_adamix_bcp_lite_v1_mask(img,la,lb,min_side=.18,max_side=.38,plab_a=None,plab_b=None):
+
+SOURCE /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/controller.py SHA f923e7f9bf0ef9bdae94bbd400d54f52fbbc6064efac9bcece365465657f795c
+56:     if version=='old': return parent.generate_adamix_bcp_lite_v1_mask(img,logits_a,logits_b,min_side,max_side)
+
+SOURCE /home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R1_20261007/scripts/revision_runtime.py SHA 3d80da98dd2c41c4a7171c76a48d5d0236559346dc4d28cca2e9329d1adbb84b
+153: def ctw_maps(out1,out2,uniform=False):
+170:     raw,norm,original,w,error=ctw_maps(out1,out2,CFG['weight_mode']=='uniform')
+179: def generate_adamix_bcp_lite_v1_mask(img,la,lb,min_side=.18,max_side=.38):
+181:         result=parent.generate_adamix_bcp_lite_v1_mask(img,la,lb,min_side,max_side)

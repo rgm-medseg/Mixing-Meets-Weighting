@@ -1,0 +1,19 @@
+{
+  "status": "WAITING_FOR_FULL_APPROVAL",
+  "time": "2026-10-06T23:59:05.331170+08:00",
+  "phase": "mechanism_offline_short_evidence_completed",
+  "controller_version": "v2_B",
+  "optimizer_step_calls": 480,
+  "joint_SSL_updates": 240,
+  "optimizer_call_limit": 500,
+  "formal_training_authorized": false,
+  "formal_training_started": false,
+  "old_queue": "INTERRUPTED",
+  "old_E1_checkpoint_step": 3976,
+  "old_E2_E5": "PENDING",
+  "new_tmux_created": false,
+  "review": "five rounds PASS",
+  "R1": "configuration ready; formal entry/queue only after explicit user confirmation",
+  "R2": "planned, fixed geometry deferred until complete R1 actual area trajectory",
+  "next": "deliver static evidence package; no training handoff"
+}

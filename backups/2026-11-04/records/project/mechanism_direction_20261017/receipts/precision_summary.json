@@ -1,0 +1,7 @@
+{
+  "raw_signed_flips": 2599,
+  "raw_flip_L1_mass_fraction": 3.9953673169807e-09,
+  "robust_direction_flips": 0,
+  "max_mean_weight_roundoff": 3.134846338070929e-08,
+  "neutral_rule": "relative 1e-6 plus 8 FP32 rounding units at original per-class coefficient"
+}

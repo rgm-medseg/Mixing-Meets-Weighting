@@ -1,0 +1,22 @@
+{
+  "task": "R2",
+  "pid": 82001,
+  "time": "2026-10-07T18:24:50.930180+08:00",
+  "peak_cuda_bytes": 16564344832,
+  "step": 30000,
+  "wall_seconds": 26337.96643873304,
+  "lr": 0.01,
+  "total_loss": 1.1873525381088257,
+  "q": 0.9222899278004965,
+  "s": 0.359375,
+  "actual_area": 0.129150390625,
+  "raw_weight_mean": 0.25664034485816956,
+  "raw_weight_min": 0.25,
+  "raw_weight_max": 1.25,
+  "used_weight_mean": 0.25664034485816956,
+  "used_weight_min": 0.25,
+  "used_weight_max": 1.25,
+  "max_per_image_mean_error": 0.0,
+  "ctw_loss": 0.0032522769179195166,
+  "weighted_ctw_loss": 0.00016261384589597583
+}

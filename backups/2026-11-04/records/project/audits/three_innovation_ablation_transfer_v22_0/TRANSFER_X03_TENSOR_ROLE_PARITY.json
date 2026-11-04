@@ -1,0 +1,10 @@
+{
+  "audit_id": "V22_0_TRANSFER_X03_TENSOR_ROLE_PARITY",
+  "created_at": "2026-08-19T15:32:13.096545+00:00",
+  "tsv": "audits/three_innovation_ablation_transfer_v22_0/TRANSFER_X03_TENSOR_ROLE_PARITY.tsv",
+  "TRANSFER_X03_TENSOR_ROLE_PARITY": "PASS",
+  "row_count": 30,
+  "pass_count": 30,
+  "ACDC10_reference_call_site": "compute_v21_3_innovation_x(candidate_id, out_1, out_2, pre_a, pre_b, image_output_1_FFT, image_output_2_FFT, iter_num, max_iterations)",
+  "blocked_reason": null
+}

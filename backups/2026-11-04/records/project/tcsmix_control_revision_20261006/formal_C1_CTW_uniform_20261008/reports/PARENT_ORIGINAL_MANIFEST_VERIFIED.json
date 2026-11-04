@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T00:59:59.937133+08:00",
+  "parent_original_manifest_sha256": "7f70393976e34ad6b9631c0da166c06ca375a1cd88d6ad7e504d4d5b9c8dbf0b",
+  "original_frozen_files": 50,
+  "original_external_inputs": 5,
+  "list_initializer_and_accepted_archive_match_original_hashes": true
+}

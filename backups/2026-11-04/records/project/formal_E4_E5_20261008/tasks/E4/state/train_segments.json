@@ -1,0 +1,21 @@
+[
+  {
+    "task": "E4",
+    "stage": "TRAIN",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py"
+    ],
+    "start": "2026-10-08T12:47:30.432798+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/tasks/E4/logs/TRAIN_2026-10-08T124730432755+0800.log",
+    "resume_step": 0,
+    "process_identity": {
+      "pid": 43502,
+      "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/train_E4_entry.py ",
+      "start_ticks": "2615986239"
+    },
+    "end": "2026-10-08T20:26:27.347326+08:00",
+    "exit_code": 0,
+    "elapsed_seconds": 27536.914573486894
+  }
+]

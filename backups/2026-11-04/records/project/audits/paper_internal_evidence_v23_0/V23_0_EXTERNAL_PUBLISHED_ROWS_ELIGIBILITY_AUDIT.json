@@ -1,0 +1,71 @@
+{
+  "status": "PASS_DEFER_EXTERNAL_ROWS_NOT_INSERTED",
+  "created_at": "2026-08-24T12:55:24.948143+00:00",
+  "external_method_reproduction": false,
+  "main_tables_changed": false,
+  "eligible_strict_external_rows_inserted": 0,
+  "excluded_or_deferred_rows": [
+    {
+      "Table": "TABLE1_ACDC_5P_10P",
+      "Dataset": "ACDC",
+      "Ratio": "5%/10%",
+      "CandidateRows": "β-FFT paper Table 1 rows",
+      "EvidenceAsset": "audits/PUBLISHED_REFERENCE_ENDPOINT_AUDIT.tsv; audits/ACDC_TEST_ENDPOINT_EXPOSURE_AUDIT.json",
+      "PrimaryPaperProvenance": "YES",
+      "ComparisonLedgerVerified": "YES_ENDPOINT_TEST",
+      "Endpoint": "TEST",
+      "Unit": "95HD/ASD unit not explicit in paper table",
+      "V23DisplayRuleConflict": "DISPLAY_BETAFFT_REPORTED=false",
+      "Eligibility": "EXCLUDED_BY_V23_RULE",
+      "Decision": "DO_NOT_INSERT_MAIN_TABLE",
+      "Reason": "V23 explicitly deletes β-FFT (reported); only reproduced β-FFT baseline is displayed."
+    },
+    {
+      "Table": "TABLE1_ACDC_5P_10P",
+      "Dataset": "ACDC",
+      "Ratio": "5%/10%",
+      "CandidateRows": "HCCP-SAM2 Table 1 external rows (MT, UA-MT, DTC, MC-Net, MC-Net+, DC-Net, SAMT-PCL, BMT-DCCL, UniMatchV2, HCCP-SAM2)",
+      "EvidenceAsset": "final_report/PAPER_COMPARISON_TABLES_DRAFT_V19_4.md; audits/PUBLISHED_REFERENCE_ENDPOINT_AUDIT.tsv; audits/ACDC_TEST_ENDPOINT_EXPOSURE_AUDIT.json",
+      "PrimaryPaperProvenance": "YES",
+      "ComparisonLedgerVerified": "REFERENCE_ONLY_ENDPOINT_NOT_EXPLICIT",
+      "Endpoint": "NOT_EXPLICITLY_STATED",
+      "Unit": "published mm; local ACDC pixel-unit",
+      "V23DisplayRuleConflict": "NONE_FOR_METHOD_NAMES_EXCEPT deleted rows if present",
+      "Eligibility": "DEFERRED_NOT_STRICT_MAIN_TABLE_ELIGIBLE",
+      "Decision": "DO_NOT_INSERT_MAIN_TABLE_WITHOUT_USER_CHATGPT_DECISION",
+      "Reason": "Ledger marks endpoint as NOT_EXPLICITLY_STATED/REFERENCE_ONLY and boundary unit differs from local ACDC assets; V23 final paper decision is deferred to USER + ChatGPT."
+    },
+    {
+      "Table": "TABLE2_PROMISE20",
+      "Dataset": "PROMISE12",
+      "Ratio": "20%",
+      "CandidateRows": "PUBLISHED_BETA_FFT",
+      "EvidenceAsset": "final_report/PAPER_COMPARISON_TABLE_INPUTS_V19_5_R3.tsv",
+      "PrimaryPaperProvenance": "YES",
+      "ComparisonLedgerVerified": "YES_PUBLISHED_EXTERNAL_TEST_REFERENCE",
+      "Endpoint": "TEST",
+      "Unit": "paper_unit; mean±std in source",
+      "V23DisplayRuleConflict": "DISPLAY_BETAFFT_REPORTED=false",
+      "Eligibility": "EXCLUDED_BY_V23_RULE",
+      "Decision": "DO_NOT_INSERT_MAIN_TABLE",
+      "Reason": "V23 explicitly deletes β-FFT (reported) and requires no ±; current Table 2 displays reproduced β-FFT and Ours only."
+    },
+    {
+      "Table": "TABLE3_COVID_5P_10P",
+      "Dataset": "COVID-19",
+      "Ratio": "5%/10%",
+      "CandidateRows": "HCCP COVID published/reference rows",
+      "EvidenceAsset": "audits/COVID19_HCCP_1490_PROVENANCE_FINAL.json; final_report/PAPER_COMPARISON_TABLES_DRAFT_V19_4.md",
+      "PrimaryPaperProvenance": "PARTIAL",
+      "ComparisonLedgerVerified": "REFERENCE_ONLY_PROTOCOL_UNRECOVERED",
+      "Endpoint": "NOT_STRICTLY_MATCHED_FOR_LOCAL_PROTOCOL",
+      "Unit": "mm",
+      "V23DisplayRuleConflict": "NONE_FOR_METHOD_NAMES",
+      "Eligibility": "DEFERRED_NOT_STRICT_MAIN_TABLE_ELIGIBLE",
+      "Decision": "DO_NOT_INSERT_MAIN_TABLE_WITHOUT_USER_CHATGPT_DECISION",
+      "Reason": "HCCP 1490 pool identity/rule and parent protocol are unrecovered; previous table draft says reference-only/partially comparable."
+    }
+  ],
+  "decision": "Current Table 1-3 internal-only β-FFT/Ours rows are retained; external rows require USER + ChatGPT paper-decision before display.",
+  "audit_tsv": "audits/paper_internal_evidence_v23_0/V23_0_EXTERNAL_PUBLISHED_ROWS_ELIGIBILITY_AUDIT.tsv"
+}

@@ -1,0 +1,14 @@
+{
+  "dataset": "ACDC",
+  "formal_lock_generated": false,
+  "formal_protocol_status": "FORMAL_PROTOCOL_MATERIALIZED_VALIDATION_ONLY",
+  "labeled_patient_count": 7,
+  "labeled_slice_count": 136,
+  "outputs": {
+    "common_protocols/acdc/formal_protocol.yaml": "2f490abd8020146631bcef26feddcada315c72199f6832aa746437f3c5d1c5c1",
+    "common_protocols/acdc/protocol.sha256": "6a6fda0fb6f0e61dfad7cbb5295b0bbadbf87aa88ed2a5006dc6212320f3cefa",
+    "common_protocols/acdc/split_registry.tsv": "68999d979d11f4a8a635973f5121c20a44aa4afd52cdef70fb6049a5bc8e9657"
+  },
+  "status": "PASS",
+  "training_authorized": false
+}

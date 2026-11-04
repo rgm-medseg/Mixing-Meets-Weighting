@@ -1,0 +1,17 @@
+{
+  "status": "CONFIRMED_MASK_DESCRIPTION",
+  "time": "2026-10-07T11:08:23.688872+08:00",
+  "patients": [
+    "patient065",
+    "patient075"
+  ],
+  "rows": 12,
+  "remote_definition": "6-neighbor component, GT overlap zero, min distance to GT voxels >=10 grid; descriptive only",
+  "directed_ASD_delta_sum": 28.471255880026128,
+  "remote_component_additive_contribution_delta_sum": 24.25225997027479,
+  "net_share": 0.8518156021100862,
+  "nonremote_contribution_delta_sum": 4.218995909751339,
+  "source": "analysis/error_R1/mask_volume_metrics.csv",
+  "HD95_attribution": "percentile is not additively decomposed",
+  "causal_scope": "geometric attribution of frozen prediction ASD only; not causal effect of training module"
+}

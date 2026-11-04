@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:17:58.534381+00:00",
+  "task_id": "FACTORIAL_EFFECTS",
+  "task_type": "ANALYSIS",
+  "action": "READ_ONLY_READY",
+  "registry_FinalLaunchReady": "PASS",
+  "registry_Blocker": "",
+  "registry_BlockerCategory": "NONE",
+  "LaunchBlocking": false,
+  "NoncriticalTerminalGap": false,
+  "ProtocolExcluded": false,
+  "FinalLaunchReady": true,
+  "FinalLaunchReady_semantics": "launch permission only; not completion evidence",
+  "PostFullCompletionEvidenceRequired": false,
+  "FormalFullStarted": false,
+  "TmuxStarted": false,
+  "checks": {
+    "StaticPass": true,
+    "ArgvPass": true,
+    "PathPass": true,
+    "ScientificIdentityPass": true,
+    "ImportPass": true,
+    "RoleBindingPass": true,
+    "SmokePass": true,
+    "ClosedLoopPass": true,
+    "FailureInjectionPass": true,
+    "ControllerDryPass": true,
+    "OutputClean": true,
+    "SourceFreezePass": true,
+    "ConfigFreezePass": true
+  },
+  "l1_l10": {
+    "TaskOrder": "10",
+    "TaskID": "FACTORIAL_EFFECTS",
+    "Action": "READ_ONLY_READY",
+    "FinalLaunchReady": "PASS",
+    "Blocker": "",
+    "L1StaticPaths": "PASS",
+    "L2DryRunOrReceiptMode": "NA",
+    "L3Paths": "PASS",
+    "L4ScientificIdentity": "PASS_OR_NA",
+    "L5ImportCompile": "PASS",
+    "L6TestFirewall": "PASS",
+    "L7SmokeGate": "PASS_OR_NA",
+    "L8ClosedLoopReceipt": "PASS",
+    "L9FailureInjection": "PASS_OR_NA",
+    "L10ControllerDryConsumption": "PASS_WITH_BLOCKERS"
+  },
+  "freeze_evidence": {
+    "source": {
+      "applicable": true,
+      "pass": true,
+      "path": "scripts/internal_evidence_expansion_v24_0/v24_readonly_plane_a_extractor.py",
+      "exists": true,
+      "expected_sha256": "e9fd3d7149a219547a9ca1844b061311eaa85c9868cc1d915d9ccfb211c9ae64",
+      "current_sha256": "e9fd3d7149a219547a9ca1844b061311eaa85c9868cc1d915d9ccfb211c9ae64"
+    },
+    "launcher": {
+      "applicable": false,
+      "pass": true,
+      "path": "",
+      "expected_sha256": "",
+      "current_sha256": ""
+    },
+    "config": {
+      "applicable": false,
+      "pass": true,
+      "path": "",
+      "expected_sha256": "",
+      "current_sha256": ""
+    },
+    "checkpoint": {
+      "applicable": false,
+      "pass": true,
+      "path": "",
+      "expected_sha256": "",
+      "current_sha256": ""
+    }
+  },
+  "expected_receipt": "audits/internal_evidence_expansion_v24_0/FACTORIAL_EFFECTS_RECEIPT.json",
+  "test_semantics": {
+    "TESTAccessAllowed": "0",
+    "TEST_DATA_READ_FOR_PRE_REGISTERED_EVALUATION": false,
+    "TEST_USED_FOR_TUNING": false,
+    "TEST_USED_FOR_SELECTION": false
+  }
+}

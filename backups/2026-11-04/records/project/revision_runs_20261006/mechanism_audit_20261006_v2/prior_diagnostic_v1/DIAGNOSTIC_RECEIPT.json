@@ -1,0 +1,24 @@
+{
+  "time": "2026-10-06T22:45:33.184550+08:00",
+  "status": "DONE",
+  "device": "NVIDIA A100-SXM4-40GB",
+  "diagnostic_seconds": 14.954356264322996,
+  "parameter_updates": 0,
+  "optimizer_steps": 0,
+  "test_access": false,
+  "queue_status": "INTERRUPTED",
+  "stop_requested": true,
+  "E1_resume_executed": false,
+  "locked_files_unchanged": 72,
+  "all_tracked_inputs_unchanged": true,
+  "E1_step": 3976,
+  "confidence_rows": 1984,
+  "offline_batches": 48,
+  "offline_dynamic_sides": [
+    97
+  ],
+  "offline_dynamic_fixed_masks_equal": 48,
+  "E2_E3_status": "PENDING, not launched",
+  "script": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/scripts/tcsmix_mechanism_diagnostics.py",
+  "script_sha256": "41f97fc4d60a3f717efec2ff9f63440b65590ab33360d78579615fa16a7f6f83"
+}

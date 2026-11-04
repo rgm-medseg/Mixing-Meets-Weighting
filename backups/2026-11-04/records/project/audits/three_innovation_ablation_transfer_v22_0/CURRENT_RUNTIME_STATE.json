@@ -1,0 +1,14 @@
+{
+  "audit_id": "V22_0_CURRENT_RUNTIME_STATE",
+  "created_at": "2026-08-19T15:34:25.991874+00:00",
+  "tmux_ls": "no server running on /tmp/tmux-501079/default",
+  "gpu": "0, NVIDIA A100-SXM4-40GB, 0, 40960, 0",
+  "process_probe": "84692 84689 S          00:00 bash -lc ps -eo pid,ppid,stat,etime,cmd | rg -i 'three_innovation_ablation_transfer_v22_0|train_ACDC/v21_3|v22_0_transfer|v22_0_acdc|formal controller' || true\n84695 84692 R          00:00 rg -i three_innovation_ablation_transfer_v22_0|train_ACDC/v21_3|v22_0_transfer|v22_0_acdc|formal controller",
+  "conflicting_controller_detected": false,
+  "formal_training_started_by_v22": false,
+  "formal_full_started": false,
+  "tmux_session_started": false,
+  "FORMAL_FULL_STARTED": false,
+  "FORMAL_TMUX_CONTROLLER_STARTED": false,
+  "FORMAL_RUN_ENABLED": false
+}

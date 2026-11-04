@@ -1,0 +1,1 @@
+{"status": "PASS_WITH_MIXED_FINDINGS", "new_arrays": 45, "alignment_mixtures": 108, "GT_CE_derivative_max_error": 5.960464477539063e-08, "main_checks": 108, "factorial_checks": 432}

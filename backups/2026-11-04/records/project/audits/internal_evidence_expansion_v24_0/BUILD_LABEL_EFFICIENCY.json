@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-26T03:21:53.744648+00:00",
+  "task_id": "BUILD_LABEL_EFFICIENCY",
+  "source_tsv": "final_report/internal_evidence_expansion_v24_0/ACDC_LABEL_EFFICIENCY_2P_5P_10P.tsv",
+  "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT": true,
+  "ACDC2_rows_are_blocker_records_not_results": true
+}

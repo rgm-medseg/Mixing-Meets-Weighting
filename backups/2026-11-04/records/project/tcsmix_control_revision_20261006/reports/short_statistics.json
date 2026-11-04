@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "time": "2026-10-06T23:35:29.072586+08:00",
+  "joint_SSL_updates": 240,
+  "actual_optimizer_step_calls": 480,
+  "hard_limit": 500,
+  "fallback_steps": 0,
+  "sizes": {
+    "85": 6,
+    "86": 19,
+    "87": 51,
+    "88": 93,
+    "89": 63,
+    "90": 8
+  },
+  "most_common_size_fraction": 0.3875,
+  "counterfactual_old_sizes_on_same_v2_teachers": {
+    "97": 240
+  },
+  "q_min": 0.7555969754854838,
+  "q_max": 0.8600263794263204,
+  "area_min": 0.1102447509765625,
+  "area_max": 0.12359619140625,
+  "actual_size_change_count": 176,
+  "stable_step_median_seconds": 0.6836839132010937,
+  "stable_step_p10_seconds": 0.6764989554882049,
+  "stable_step_p90_seconds": 0.6971546322107315,
+  "stable_steps": 179,
+  "stable_scope": "steps51..199 and211..240, excludes startup/resume warmup; timer ends before EMA/logging/checkpoints/validation",
+  "full30000_compute_hours_estimate": 5.697365943342447,
+  "active_segment_seconds": 194.07507002353668,
+  "peak_training_cuda_bytes": 16561985536,
+  "short_not_formal": true,
+  "formal_Dice": "NA",
+  "test_access": false,
+  "CTW": "original spatial,lambda.05",
+  "TRC": "original641parameters"
+}

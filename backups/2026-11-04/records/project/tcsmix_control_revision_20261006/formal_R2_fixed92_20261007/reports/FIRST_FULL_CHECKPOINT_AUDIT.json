@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "time": "2026-10-07T11:09:05.366858+08:00",
+  "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_R2_fixed92_20261007/runs/R2_fixed92/checkpoints/last.ckpt",
+  "sha256": "bc7ee3ab928a110df5572005886d568e2e6c9abca583f8ceaae3aa28feb82f53",
+  "global_step": 200,
+  "keys": [
+    "amp_state",
+    "args",
+    "best_metrics",
+    "controller_metadata",
+    "ema_model",
+    "epoch",
+    "global_step",
+    "lr_state",
+    "model_1",
+    "model_2",
+    "optimizer1",
+    "optimizer2",
+    "random_state",
+    "resume_exact",
+    "sampler_state"
+  ],
+  "controller_metadata": {
+    "version": "v2_fixed",
+    "task": "R2",
+    "signal_version": "v2_B",
+    "mix_mode": "fixed",
+    "fixed_side": 0.359375,
+    "rectangle_h": 92,
+    "rectangle_w": 92,
+    "q_controls_geometry": false,
+    "s_semantics": "actual fixed side ratio; s_dynamic_B is diagnostic reference only",
+    "area_lock_sha256": "e9453e24be891ebe363798505f272d05f0df83d4879d117d12cb5b8392b5d43b",
+    "foreground_ids": [
+      1,
+      2,
+      3
+    ],
+    "background_id": 0,
+    "empty_foreground_fallback": 0.0,
+    "min_side": 0.18,
+    "max_side": 0.38,
+    "stateless": true,
+    "cfg_sha256": "002b456d2a45b06c4df558ef1e8b326e9a690db590527827ee8848667e5bcf1d",
+    "controller_sha256": "f923e7f9bf0ef9bdae94bbd400d54f52fbbc6064efac9bcece365465657f795c",
+    "optimizer_success_calls": {
+      "optimizer1": 200,
+      "optimizer2": 200
+    },
+    "segment": "2026-10-07T110601169385+0800",
+    "AMP_enabled": false
+  },
+  "lr_state": [
+    0.01,
+    0.01
+  ],
+  "worker_resume_exact": false,
+  "read_only_CPU": true
+}

@@ -1,0 +1,7 @@
+TaskID	ConfigPath	Method	Seed	Labelnum	PretrainedModel	PretrainedModelExists	TESTAccessBeforeBestFreeze	L1Static	L2DryRun	Blocker	FinalLaunchReady
+ACDC2_BETAFFT_FULL	configs/internal_evidence_expansion_v24_0/ACDC2_BETAFFT_FULL.json	BETAFFT	1337	1	/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label1/unet_best_model.pth	False	0	PASS	FAIL_CLOSED	PRETRAINED_MODEL_MISSING_LABEL1_BLOCKER	BLOCKED
+ACDC2_OURS_FULL	configs/internal_evidence_expansion_v24_0/ACDC2_OURS_FULL.json	OURS	1337	1	/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label1/unet_best_model.pth	False	0	PASS	FAIL_CLOSED	PRETRAINED_MODEL_MISSING_LABEL1_BLOCKER	BLOCKED
+ACDC10_BETAFFT_SEED2025	configs/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2025.json	BETAFFT	2025	7	/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth	True	0	PASS	PASS		PASS
+ACDC10_OURS_SEED2025	configs/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2025.json	OURS	2025	7	/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth	True	0	PASS	PASS		PASS
+ACDC10_BETAFFT_SEED2026	configs/internal_evidence_expansion_v24_0/ACDC10_BETAFFT_SEED2026.json	BETAFFT	2026	7	/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth	True	0	PASS	PASS		PASS
+ACDC10_OURS_SEED2026	configs/internal_evidence_expansion_v24_0/ACDC10_OURS_SEED2026.json	OURS	2026	7	/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth	True	0	PASS	PASS		PASS

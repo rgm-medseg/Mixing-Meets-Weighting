@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "load": {
+    "branch": "model_1",
+    "step": 29600,
+    "strict": true,
+    "checkpoint_sha256": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086"
+  },
+  "model_hash_before": "f26262ac454c399efc8569442e847eb3051e12f22951c506947d45ba421adcfd",
+  "model_hash_after": "f26262ac454c399efc8569442e847eb3051e12f22951c506947d45ba421adcfd",
+  "batch_norm_and_parameters_unchanged": true,
+  "checkpoint_sha_after": "c447a0a6d643405627cebf4718424b7d102fffd677b23f10ab5ef1e5227c3086",
+  "parameter_gradients_none": true,
+  "optimizer_steps": 0,
+  "unique_slices": 210,
+  "source_exposures": 216,
+  "repeat_exposures": 6,
+  "mixed_images": 108,
+  "patients": [
+    "patient002",
+    "patient019",
+    "patient028",
+    "patient030",
+    "patient039",
+    "patient045",
+    "patient078",
+    "patient082",
+    "patient085",
+    "patient087"
+  ],
+  "direction_tolerance": 1e-06,
+  "original_gradients_reused": true,
+  "new_model_forward": "student1 only, one pass, cached by batch",
+  "max_scaling_peak_relative_error": 4.121181017712915e-07,
+  "robust_direction_flips": 0,
+  "raw_signed_flips": 2599,
+  "precision_note": "raw FP32 sign disagreements at near-zero gradients are retained in analytic checks; paired labels use rounding-aware uncertainty bound"
+}

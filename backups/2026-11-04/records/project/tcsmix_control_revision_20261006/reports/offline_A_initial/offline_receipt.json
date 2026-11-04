@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "time": "2026-10-06T23:22:48.635210+08:00",
+  "joint_updates": 0,
+  "optimizer_step_calls": 0,
+  "test_access": false,
+  "samples": 70,
+  "batch_records": 70,
+  "rows": 770,
+  "checkpoint_count": 5,
+  "modes": [
+    "eval",
+    "train_snapshot: buffers restored each batch"
+  ],
+  "support_source": "literal frozen original get_ACDC_masks(nms=1)",
+  "controller_version": "v2_A",
+  "mid_training_checkpoint": "NA: none retained for this Full; E1 early checkpoints belong to uniform CTW"
+}

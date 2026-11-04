@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "time": "2026-10-07T23:07:43.918724+08:00",
+  "container_pid": 7385,
+  "NVML_pid": 36499,
+  "GPU_uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+  "before": {
+    "index": 0,
+    "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+    "used_mib": 0,
+    "free_mib": 40326,
+    "utilization": 0,
+    "pids": []
+  },
+  "after": {
+    "index": 0,
+    "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+    "used_mib": 425,
+    "free_mib": 39901,
+    "utilization": 0,
+    "pids": [
+      36499
+    ]
+  },
+  "basis": "exclusive GPU admission with zero foreign PIDs, isolated CUDA context initialization, exactly one newly appearing NVML PID; subsequent foreign PID monitoring retained"
+}

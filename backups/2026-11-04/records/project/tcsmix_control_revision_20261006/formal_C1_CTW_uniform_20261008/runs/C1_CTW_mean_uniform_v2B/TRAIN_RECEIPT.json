@@ -1,0 +1,12 @@
+{
+  "task": "C1",
+  "status": "TRAINED",
+  "global_step": 30000,
+  "time": "2026-10-08T08:13:41.085892+08:00",
+  "pid": 22912,
+  "training_seconds": 26496.194557134062,
+  "wall_time_convention": "Sum of active process segments; downtime excluded, unsaved final crash interval unavailable; replayed updates retained in trace",
+  "resume_exact": false,
+  "resume_boundary": "saved IDs and main RNG; worker augmentation streams restart",
+  "test_access_during_training": 0
+}

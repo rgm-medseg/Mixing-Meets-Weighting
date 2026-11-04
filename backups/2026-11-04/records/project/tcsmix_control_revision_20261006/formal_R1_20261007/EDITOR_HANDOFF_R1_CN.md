@@ -1,0 +1,10 @@
+# 给写作助手：R1 TCSMix v2_B
+
+新版公式只替换教师控制信号：原weak参考视图softmax(dim1)/detach，复用原argmax+每类LCC伪标签支持；先按有支持前景类计算mean(P_c−max其他P)，再类等权；空前景q0。仍s=.18+.20q，Python round和原clamp，原随机位置、共享一个矩形、图/目标同步互补混合。TRC和原空间CTW(.05、L1/stop-gradient/更新方向)及其他Full设置保留。不要把本项目旧名AdaMix与外部AdaMix论文混同。
+
+本次正式指标：{'dice': 0.8998445206808252, 'iou': 0.8234190597056135, 'hd95': 2.94213147078008, 'asd': 0.7689256378227837}；检查点step29000，SHA5df2de9b8df16e4d89df9265f104b4b8c7c321245d9eaa0479971672b4d7a1a9。NA表示尚未得到，不能拿旧90.35填入新版列；旧90.35%/统一复评90.349657652%继续列在old Full。
+实际协议、命令、初始化和代码哈希见protocol.json、run_manifest.json及configs；测量与平均单位见FINAL_REPORT_R1_CN.md。HD95/ASD是原H5重建grid距离，不能改成mm；ASD为定向值。
+
+新旧配对差值见analysis/paired_case_class_differences.csv和paired_aggregated_differences.csv，全部病例含不利行保留。不能仅根据R1相对old分数差值归因于动态控制；后续匹配平均实际面积的R2才是另一个对照，本轮只给面积建议。单次运行不支持多种子显著性、泛化或新版CTW交互结论。
+图注：control_trajectory为真实全程v2_B轨迹，old曲线是同教师输出回放；阶段分布预先固定5000步，重复step按最终轨迹处理且raw全部保留。confidence_quality为独立final teacher回放（eval/train_snapshot），原标注/验证GT只诊断，不是全程teacher质量或测试选参。patient_differences包含正/零/负差值；qualitative选择规则与匿名ID表一起交付，不能只保留改善例。
+细小错误前景、部分阶段取整固定、代理信号未校准及恢复边界均须如实写出。状态/缺失：{'status': 'ANALYZED', 'time': '2026-10-07T08:02:02.655451+08:00', 'recorded_final_logical_steps': 30000, 'predefined_segments': 'six5000-step segments plus whole', 'details': {'confidence_quality': {'status': 'DONE', 'rows': 136, 'labeled_patients': 7, 'validation_patients': 10, 'test_inputs': 0, 'GT_use': 'diagnostic only; never in unlabeled controller', 'middle_checkpoints': 'NA: only retained selected best and last teachers', 'state': 'independent process, reset cloned buffers per batch, no optimizer updates; post-step teachers not historical per-step logits'}, 'historical_comparison': {'status': 'DONE', 'matched_case_class_rows': 240, 'comparison': 'same reconstruction-grid evaluation/test list; older imported-source/pretrain-generating details incomplete', 'interpretation': 'R1-old Full delta alone does not isolate dynamic scheduling benefit; R2 not run'}}, 'failures': [], 'optimizer_updates': 0, 'R2_started': False}。本轮不修改论文题目或模块名，正式评价允许下降，不自动再训。

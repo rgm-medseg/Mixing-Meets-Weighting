@@ -1,0 +1,110 @@
+{
+  "time": "2026-10-07T11:06:04.189058+08:00",
+  "joint_step": 0,
+  "pretrain": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth",
+  "sha256": "477a666c3c603c44a87247d3c3cbc76d89bcaa7aeb03db234ca9ac3a36827bf3",
+  "fresh": true,
+  "checks": [
+    {
+      "branch": "model_1",
+      "exact_pretrained_common_state": true,
+      "gamma": 0.0,
+      "parameters": 1827469,
+      "router_parameters": 641
+    },
+    {
+      "branch": "model_2",
+      "exact_pretrained_common_state": true,
+      "gamma": 0.0,
+      "parameters": 1827469,
+      "router_parameters": 641
+    },
+    {
+      "branch": "ema_model",
+      "exact_pretrained_common_state": true,
+      "gamma": 0.0,
+      "parameters": 1827469,
+      "router_parameters": 641
+    }
+  ],
+  "optimizer1_groups": [
+    {
+      "lr": 0.01,
+      "momentum": 0.9,
+      "dampening": 0,
+      "weight_decay": 0.0001,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false,
+      "fused": false
+    },
+    {
+      "lr": 0.01,
+      "momentum": 0.9,
+      "dampening": 0,
+      "weight_decay": 0.0001,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false,
+      "fused": null
+    }
+  ],
+  "optimizer2_groups": [
+    {
+      "lr": 0.01,
+      "momentum": 0.9,
+      "dampening": 0,
+      "weight_decay": 0.0001,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false,
+      "fused": false
+    },
+    {
+      "lr": 0.01,
+      "momentum": 0.9,
+      "dampening": 0,
+      "weight_decay": 0.0001,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false,
+      "fused": null
+    }
+  ],
+  "source": "exact parent load_parent_pretrain and transplant_parent_optimizer_state; no short/E1/late weights",
+  "optimizer_state_checks": [
+    {
+      "optimizer": "optimizer1",
+      "base_state_exact_match": true,
+      "base_parameters": 142,
+      "inherited_state_count": 82,
+      "router_state_empty": true,
+      "lr_all_groups": [
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "optimizer": "optimizer2",
+      "base_state_exact_match": true,
+      "base_parameters": 142,
+      "inherited_state_count": 82,
+      "router_state_empty": true,
+      "lr_all_groups": [
+        0.01,
+        0.01
+      ]
+    }
+  ],
+  "parent_R1_initial_receipt_sha256": "9f00d459eecf262fa393592abfcec3c8ade0a53669041f8d68dbe10c763eb841",
+  "controller_version": "v2_fixed",
+  "signal_version": "v2_B",
+  "fixed_h": 92,
+  "fixed_w": 92,
+  "generating_pretrain_history": "NA: no original generating command/log retained; identical file reused",
+  "test_access": false
+}

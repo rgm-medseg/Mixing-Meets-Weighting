@@ -1,0 +1,208 @@
+{
+  "status": "PASS",
+  "time": "2026-10-06T23:59:05.319369+08:00",
+  "rounds": [
+    {
+      "round": 1,
+      "topic": "范围与实际计算",
+      "status": "PASS",
+      "frozen_source_files": 23,
+      "identical_scientific_blocks": [
+        {
+          "start": "            consistency_weight =",
+          "sha256": "414390c15f389d7aecfd1ecc306cd75092fb25fe55e6418a53ee92f9b6197fdb"
+        },
+        {
+          "start": "def update_model_ema(",
+          "sha256": "f869aa8bbe7d9e48fd6f895b9b3bfa890894f7c2a53c2f1c1d56a678cefd2006"
+        },
+        {
+          "start": "def mix_loss(",
+          "sha256": "e92eca521046465579e201ca6fc892c0e7f9a0ceb6d4e3fa709ab62c5ee82fbc"
+        }
+      ],
+      "teacher_forward_count": 4,
+      "new_parameters": 0,
+      "evidence": [
+        "reports/control_loop.patch",
+        "reports/control_preflight.json",
+        "reports/short_checkpoint_checks.json"
+      ],
+      "boundary": "historical imported versions/pretrain-generating budget not all retained; explicitly recorded"
+    },
+    {
+      "round": 2,
+      "topic": "公式、实现与数值",
+      "status": "PASS",
+      "offline_rows_verified": 770,
+      "short_steps_verified": 240,
+      "checks": [
+        "background multiplicity invariance",
+        "foreground class-size invariance",
+        "all background fallback0",
+        "monotonic probability/margin/size",
+        "constant/extreme probabilities and missing classes",
+        "NaN/Inf fail closed",
+        "detach/no gradient",
+        "shared mask equals target mask",
+        "same-geometry old/new mask equality",
+        "generic2/5class mappings",
+        "planned R2 keeps B signal logs while fixing geometry"
+      ],
+      "old_q_reconstructed_from_background_and_foreground": true,
+      "correction": "single-response unique pixel counts repaired; no q/geometry/quality changes",
+      "evidence": [
+        "reports/controller_checks.json",
+        "reports/offline_metadata_correction.json",
+        "control_diagnostics.csv",
+        "short_trace.csv"
+      ]
+    },
+    {
+      "round": 3,
+      "topic": "数据使用与版本归属",
+      "status": "PASS",
+      "unique_input_samples": 70,
+      "independent_patients": {
+        "unlabeled_train": 24,
+        "unlabeled_edge": 6,
+        "labeled_train": 7,
+        "validation": 10
+      },
+      "locked_old_inputs_unchanged": 82,
+      "checkpoint_steps": [
+        0,
+        3200,
+        3976,
+        29600,
+        30000
+      ],
+      "test_model_inputs": 0,
+      "evidence": [
+        "analysis/diagnostic_samples.csv",
+        "reports/offline_checkpoint_inventory.json",
+        "reports/data_manifest_hashes.csv",
+        "state/old_inputs_locked.json"
+      ],
+      "limits": "E1 early is uniform CTW; initial teacher reconstructed; Full middle absent; no new formal metrics"
+    },
+    {
+      "round": 4,
+      "topic": "证据完整与解释边界",
+      "status": "PASS",
+      "joint_steps": 240,
+      "optimizer_calls": 480,
+      "actual_exit_codes": [
+        75,
+        0
+      ],
+      "saved_restored_steps": [
+        200,
+        240
+      ],
+      "required_files": [
+        "TCSMIX_CONTROL_DESIGN_CN.md",
+        "SCOPE_DIFF_AUDIT.md",
+        "SHORT_RUN_REPORT_CN.md",
+        "FULL_READINESS_CN.md",
+        "EDITOR_HANDOFF_CN.md",
+        "control_diagnostics.csv",
+        "short_trace.csv",
+        "analysis/offline_scale_distribution.csv",
+        "analysis/controlled_probability_checks.csv",
+        "analysis/control_quality_correlations.csv",
+        "analysis/controller_cost.csv",
+        "analysis/diagnostic_GT_summary.csv"
+      ],
+      "figures_visually_inspected": [
+        "control_replay.png",
+        "controlled_signal_response.png",
+        "short_control_trace.png"
+      ],
+      "identified_fixed_reporting_issues": [
+        "escaped math control characters",
+        "duplicated single-sample pixel counts",
+        "ambiguous Full inventory scope"
+      ],
+      "disclosed_measurement_limit": "raw compatibility receipt undercounts prior validation tail; actual segment timestamps 220.242562s used",
+      "no_automatic_efficacy_claim": true,
+      "no_extra_training_after_repairs": true
+    },
+    {
+      "round": 5,
+      "topic": "正式训练前停止",
+      "status": "PASS",
+      "host": "n1",
+      "gpu": "0, NVIDIA A100-SXM4-40GB, 40960 MiB, 0 MiB, 0 %",
+      "old_queue_status": "INTERRUPTED",
+      "old_E1_final_checkpoint_step": 3976,
+      "original_queue_sampled_step": 3975,
+      "original_queue_sample_is_stale": true,
+      "pending": [
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "tmux_sessions": "beta_fft_revision_20261006:3",
+      "no_new_tmux": true,
+      "live_short_training_processes": [],
+      "formal_runs_absent": true,
+      "R2_scale_still_unlocked": true,
+      "negative_checks": [
+        {
+          "task": "R1_formal",
+          "command": [
+            "/home/renguanming/.conda/envs/beta_fft/bin/python",
+            "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/train_control_entry.py",
+            "--config",
+            "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/configs/R1_planned.yaml"
+          ],
+          "exit_code": 1,
+          "stderr": "WAITING_FOR_FULL_APPROVAL: this entry refuses formal training; no tmux or queue handoff",
+          "stdout": "",
+          "optimizer_updates": 0
+        },
+        {
+          "task": "R2_formal",
+          "command": [
+            "/home/renguanming/.conda/envs/beta_fft/bin/python",
+            "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/train_control_entry.py",
+            "--config",
+            "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/configs/R2_planned.yaml"
+          ],
+          "exit_code": 1,
+          "stderr": "WAITING_FOR_FULL_APPROVAL: this entry refuses formal training; no tmux or queue handoff",
+          "stdout": "",
+          "optimizer_updates": 0
+        },
+        {
+          "task": "repeat_short",
+          "command": [
+            "/home/renguanming/.conda/envs/beta_fft/bin/python",
+            "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/run_short_check.py"
+          ],
+          "exit_code": 1,
+          "stderr": "Short run already executed; preserve its artifacts and WAITING_FOR_FULL_APPROVAL. No restart permitted.",
+          "stdout": "",
+          "optimizer_updates": 0
+        },
+        {
+          "task": "lock_R2_from_short",
+          "command": [
+            "/home/renguanming/.conda/envs/beta_fft/bin/python",
+            "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/lock_R2_from_R1.py",
+            "--run",
+            "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/runs/SHORT_TCSMIX_V2"
+          ],
+          "exit_code": 1,
+          "stderr": "Traceback (most recent call last):\n  File \"/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/lock_R2_from_R1.py\", line 29, in <module>\n    if __name__=='__main__':main()\n  File \"/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/scripts/lock_R2_from_R1.py\", line 9, in main\n    if receipt.get('task')!='R1' or receipt.get('status')!='TRAINED' or receipt.get('global_step')!=30000:raise RuntimeError('Require complete R1 run; offline/short estimate forbidden')\nRuntimeError: Require complete R1 run; offline/short estimate forbidden",
+          "stdout": "",
+          "optimizer_updates": 0
+        }
+      ],
+      "unchanged_counter": 480
+    }
+  ],
+  "extra_optimizer_calls": 0
+}

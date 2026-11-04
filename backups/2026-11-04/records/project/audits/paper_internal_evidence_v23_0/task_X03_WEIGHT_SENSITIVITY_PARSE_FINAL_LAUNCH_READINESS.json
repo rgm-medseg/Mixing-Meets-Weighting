@@ -1,0 +1,23 @@
+{
+  "TaskID": "X03_WEIGHT_SENSITIVITY_PARSE",
+  "GeneratedAt": "2026-08-24T12:55:24.948143+00:00",
+  "BackfillReceiptAfterFormalStart": true,
+  "StaticPass": "PASS",
+  "ArgvPass": "PASS",
+  "PathPass": "PASS",
+  "ScientificIdentityPass": "PASS",
+  "ImportPass": "PASS",
+  "ReuseOrTogglePass": "PASS",
+  "SmokePass": "NOT_APPLICABLE",
+  "ClosedLoopPass": "PASS",
+  "FailureInjectionPass": "NOT_APPLICABLE_OR_COVERED_BY_GLOBAL_L9",
+  "ControllerDryConsumptionPass": "PASS",
+  "OutputClean": "PASS",
+  "SourceFreezePass": "PASS",
+  "ConfigFreezePass": "PASS",
+  "FinalLaunchReady": true,
+  "TerminalStatus": "PASS",
+  "EvidenceReceipt": "audits/paper_internal_evidence_v23_0/X03_WEIGHT_SENSITIVITY_PARSE_SUMMARY.json",
+  "SourceRegistry": "audits/paper_internal_evidence_v23_0/V23_0_MASTER_TASK_REGISTRY_FINAL.tsv",
+  "Note": "Post-run machine receipt generated to close objective-required task_<TaskID>_FINAL_LAUNCH_READINESS naming; scientific/config/source assets were not modified."
+}

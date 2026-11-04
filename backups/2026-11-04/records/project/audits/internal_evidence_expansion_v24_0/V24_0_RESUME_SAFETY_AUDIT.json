@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T16:48:11.440751+00:00",
+  "task_id": "V24_0_RESUME_SAFETY_AUDIT",
+  "formal_started": false,
+  "tmux_started": false,
+  "training_started": false,
+  "new_full_task_count": 6,
+  "bitwise_exact_claim_count": 0,
+  "resume_class_counts": {
+    "NO_CHECKPOINT_YET": 6
+  },
+  "audit_tsv": "audits/internal_evidence_expansion_v24_0/V24_0_RESUME_SAFETY_AUDIT.tsv",
+  "audit_tsv_sha256": "37975f4a78820b426fa2246f4f5af573d2995d983432b6280e65c6c25b23b470",
+  "policy": "If live child exists and identity matches, monitor only. If dead child has completion receipt, mark complete. If dead child has valid checkpoint, resume same task. Without checkpoint, block."
+}

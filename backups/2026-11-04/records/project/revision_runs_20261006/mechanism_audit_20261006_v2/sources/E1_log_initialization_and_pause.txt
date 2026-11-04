@@ -1,0 +1,16 @@
+[21:30:21.744] Namespace(root_path='/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC', exp='beta_fft_acdc_official_10pct_seed42', model='unet', pre_iterations=10000, max_iterations=30000, batch_size=24, deterministic=1, base_lr=0.01, image_size=[256, 256], seed=42, num_classes=4, labeled_bs=12, labelnum=7, u_weight=0.5, gpu='0', consistency=0.1, consistency_rampup=200.0, magnitude=6.0, s_param=6, patch_size=64, h_size=4, w_size=4, top_num=4, run_root='/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E1', pretrained_model='/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7', data_manifest_name='official', resume_ckpt='', save_interval=200, mask_token_enabled=True, adamix_enabled=True, mask_token_num=4, mask_token_dim=16, adamix_min_side=0.18, adamix_max_side=0.38, mechanism_log_interval=200, innovation_x_id='V21_3_X03_CONTOUR_RELIABILITY_WEIGHT', enable_v21_3_innovation_x=True, v21_3_innovation_x_weight=0.05)
+[21:30:21.744] run_root=/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/runs/E1
+[21:30:21.745] pretrained_model=/home/renguanming/jupyterlab/rgm/beta-FFT-main/train_ACDC/Pre_model/label7/unet_best_model.pth
+[21:30:25.091] iteration 1: loss: 2.845199, model1_loss: 1.015486, model2_loss: 1.253330
+[22:28:22.583] iteration 3971: loss: 1.062570, model1_loss: 0.463195, model2_loss: 0.516114
+[22:28:22.584] iteration 3971: loss: 1.062570, ICT_loss: 0.028335, FFT_loss: 0.187332
+[22:28:23.836] iteration 3972: loss: 0.664018, model1_loss: 0.331606, model2_loss: 0.287802
+[22:28:23.837] iteration 3972: loss: 0.664018, ICT_loss: 0.020217, FFT_loss: 0.085608
+[22:28:24.546] iteration 3973: loss: 0.805847, model1_loss: 0.319592, model2_loss: 0.430425
+[22:28:24.547] iteration 3973: loss: 0.805847, ICT_loss: 0.023660, FFT_loss: 0.090299
+[22:28:25.256] iteration 3974: loss: 0.872386, model1_loss: 0.335750, model2_loss: 0.483005
+[22:28:25.257] iteration 3974: loss: 0.872386, ICT_loss: 0.023603, FFT_loss: 0.164000
+[22:28:25.963] iteration 3975: loss: 1.182739, model1_loss: 0.535680, model2_loss: 0.580622
+[22:28:25.964] iteration 3975: loss: 1.182739, ICT_loss: 0.022177, FFT_loss: 0.149518
+[22:28:26.672] iteration 3976: loss: 2.048941, model1_loss: 0.900385, model2_loss: 1.026737
+[22:28:26.673] iteration 3976: loss: 2.048941, ICT_loss: 0.037583, FFT_loss: 0.236617

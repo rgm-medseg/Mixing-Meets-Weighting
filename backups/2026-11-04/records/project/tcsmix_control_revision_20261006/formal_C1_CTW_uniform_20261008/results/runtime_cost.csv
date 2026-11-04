@@ -1,0 +1,10 @@
+scope,segment,start,end,wall_seconds,exit_code,note
+PREFLIGHT,0,2026-10-08T00:46:16.299964+08:00,2026-10-08T00:46:21.507388+08:00,5.207466926425695,0,"Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+SHORT_CHECK,1,2026-10-08T00:46:21.515423+08:00,2026-10-08T00:46:36.620942+08:00,15.105561681091785,1,"Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+PREFLIGHT,2,2026-10-08T00:50:59.264339+08:00,2026-10-08T00:51:04.468299+08:00,5.204004026949406,0,"Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+SHORT_CHECK,3,2026-10-08T00:51:04.482163+08:00,2026-10-08T00:51:59.841031+08:00,55.358919095247984,0,"Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+TRAIN,4,2026-10-08T00:51:59.852754+08:00,2026-10-08T08:13:44.465097+08:00,26504.612390317023,0,"Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+POSTCHECK,5,2026-10-08T08:13:44.490137+08:00,2026-10-08T08:13:49.662724+08:00,5.1726348623633385,0,"Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+EVALUATE,6,2026-10-08T08:13:49.674965+08:00,2026-10-08T08:14:14.801304+08:00,25.126380547881126,0,"Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+R1 successful train reference,0,NA,NA,26440.013047698885,0,"parent state/train_segments.json successful Popen segment, includes validation/IO"
+standalone validation,all,NA,NA,NA,NA,included in training Popen wall; not independently instrumented in R1/C1

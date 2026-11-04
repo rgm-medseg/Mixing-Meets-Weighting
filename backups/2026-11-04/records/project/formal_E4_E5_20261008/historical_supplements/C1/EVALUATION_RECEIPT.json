@@ -1,0 +1,24 @@
+{
+  "status": "EVALUATED",
+  "time": "2026-10-08T08:14:12.922973+08:00",
+  "checkpoint": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/runs/C1_CTW_mean_uniform_v2B/checkpoints/best.ckpt",
+  "checkpoint_sha256": "d37c9a8f6f28e3be0ce1b7041b9092044160011de10441f8eaea62b13c6517c7",
+  "selected_step": 27800,
+  "test_manifest": "/home/renguanming/jupyterlab/rgm/KnowSAM-main/ACDC/test.list",
+  "test_manifest_sha256": "98161bdfaad072bf5713d7345751ab5a2bf3e5468b8edb03fd9ebfedc4503671",
+  "metrics": {
+    "dice": 0.8965431116643965,
+    "iou": 0.8185149190106303,
+    "hd95": 1.548304888339121,
+    "asd": 0.49454106974328754
+  },
+  "protocol": "ACDC_v22_grid_directed_ASD",
+  "average": "mean RV/MYO/LV and 40 reconstructed ED/ES frame volumes; 20-patient paired results separately",
+  "unit": "HD95 and directed pred-to-GT ASD are reconstruction grid distances, not mm",
+  "postprocessing": "none",
+  "empty_both": "all four0",
+  "empty_one": "Dice/IoU0,HD95/ASD sqrt(Nz²+Ny²+Nx²)",
+  "resize": "nearest order0 to256² and back to native in-plane grid",
+  "case_axis": "z untouched",
+  "test_selection": false
+}

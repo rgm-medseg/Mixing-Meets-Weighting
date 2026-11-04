@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:17:58.831079+00:00",
+  "task_id": "V24_0_PRELAUNCH_FIVE_REVIEW",
+  "registry": "audits/internal_evidence_expansion_v24_0/V24_0_MASTER_TASK_REGISTRY.tsv",
+  "EXPECTED_NEW_FULL_COUNT": 4,
+  "EXPECTED_NEW_FULL_READY": 4,
+  "NEW_FULL_READY": 4,
+  "protocol_excluded_count": 2,
+  "noncritical_terminal_gap_count": 3,
+  "launch_blocking_count": 0,
+  "PRELAUNCH_REVIEW_1_SCOPE": "PASS",
+  "PRELAUNCH_REVIEW_2_PREREG": "PASS",
+  "PRELAUNCH_REVIEW_3_SCRIPTS": "PASS",
+  "PRELAUNCH_REVIEW_4_DATA": "PASS",
+  "PRELAUNCH_REVIEW_5_CONTROLLER": "PASS",
+  "formal_started": false,
+  "tmux_started": false,
+  "FORMAL_START_AUTHORIZATION": true,
+  "blocked_or_pending_task_ids": [
+    "PSEUDO_LABEL_EVOLUTION",
+    "PATHOLOGY_SUBGROUP",
+    "STUDENT_DIVERSITY",
+    "ACDC2_BETAFFT_FULL",
+    "ACDC2_OURS_FULL"
+  ],
+  "noncritical_terminal_gap_task_ids": [
+    "PSEUDO_LABEL_EVOLUTION",
+    "PATHOLOGY_SUBGROUP",
+    "STUDENT_DIVERSITY"
+  ],
+  "protocol_excluded_task_ids": [
+    "ACDC2_BETAFFT_FULL",
+    "ACDC2_OURS_FULL"
+  ],
+  "launch_blocking_task_ids": [],
+  "hard_blockers": [],
+  "noncritical_terminal_gaps": [
+    {
+      "TaskID": "PSEUDO_LABEL_EVOLUTION",
+      "Blocker": "PARTIAL_PSEUDO_LABEL_EVOLUTION_COMMON_CHECKPOINT_COUNT_LT_4_OR_PSEUDO_OUTPUTS_MISSING",
+      "FinalLaunchReady": "BLOCKED_NONCRITICAL"
+    },
+    {
+      "TaskID": "PATHOLOGY_SUBGROUP",
+      "Blocker": "BLOCKED_OFFICIAL_PATHOLOGY_METADATA_UNAVAILABLE",
+      "FinalLaunchReady": "BLOCKED_NONCRITICAL"
+    },
+    {
+      "TaskID": "STUDENT_DIVERSITY",
+      "Blocker": "BLOCKED_STUDENT_DIVERSITY_COMMON_CHECKPOINT_COUNT_LT_4_OR_BRANCH_OUTPUTS_MISSING",
+      "FinalLaunchReady": "BLOCKED_NONCRITICAL"
+    }
+  ],
+  "protocol_excluded_tasks": [
+    {
+      "TaskID": "ACDC2_BETAFFT_FULL",
+      "Blocker": "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT",
+      "FinalLaunchReady": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED_FROM_FORMAL_QUEUE",
+      "Action": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED"
+    },
+    {
+      "TaskID": "ACDC2_OURS_FULL",
+      "Blocker": "ACDC2_PROTOCOL_NOT_EXECUTABLE_UNDER_FROZEN_BETAFFT",
+      "FinalLaunchReady": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED_FROM_FORMAL_QUEUE",
+      "Action": "TERMINAL_PROTOCOL_BLOCKED_EXCLUDED"
+    }
+  ],
+  "controller_dry_run_status": "PASS",
+  "controller_dry_run_failed_count": 0,
+  "controller_dry_run_blocked_count": 0,
+  "prestart_environment_gate_status": "PASS",
+  "resume_safety_audit_status": "PASS",
+  "tmux_start_allowed": false,
+  "prelaunch_ready": true
+}

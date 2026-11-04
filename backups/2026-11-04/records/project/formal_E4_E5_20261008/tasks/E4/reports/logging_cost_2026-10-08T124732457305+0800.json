@@ -1,0 +1,12 @@
+{
+  "time": "2026-10-08T20:26:24.761409+08:00",
+  "segment": "2026-10-08T124732457305+0800",
+  "trace_append_seconds": 14.142734825611115,
+  "optimizer_event_append_seconds": 17.40799729526043,
+  "control_progress_atomic_seconds": 22.71085749566555,
+  "scope": "instrumented new trace/events/progress only; inherited train.log/revision telemetry/checkpoint overhead not separately isolated",
+  "optimizer_success_calls": {
+    "optimizer1": 30000,
+    "optimizer2": 30000
+  }
+}

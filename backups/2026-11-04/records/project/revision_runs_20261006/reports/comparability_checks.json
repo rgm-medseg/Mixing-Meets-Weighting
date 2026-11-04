@@ -1,0 +1,37 @@
+{
+  "status": "PASS_WITH_HISTORICAL_PROVENANCE_GAPS",
+  "time": "2026-10-27T15:09:38.415135+08:00",
+  "locked_existing_artifacts": 72,
+  "expected_controls_verified": true,
+  "generated_loop_sources_equal": true,
+  "actual_E1_loop_matches": true,
+  "config_changed": false,
+  "no_unexpected_scientific_change_found_in_available_source": true,
+  "cannot_prove_original_time_list_or_imported_dependency_hashes": true,
+  "counts": {
+    "E1": {
+      "保持一致": 30,
+      "预期改变": 1,
+      "其他差异": 2,
+      "无法核验": 4
+    },
+    "E2": {
+      "保持一致": 30,
+      "预期改变": 1,
+      "其他差异": 2,
+      "无法核验": 4
+    },
+    "E3": {
+      "保持一致": 29,
+      "预期改变": 2,
+      "其他差异": 2,
+      "无法核验": 4
+    },
+    "E4": {
+      "保持一致": 30,
+      "预期改变": 1,
+      "其他差异": 2,
+      "无法核验": 4
+    }
+  }
+}

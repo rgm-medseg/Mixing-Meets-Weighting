@@ -1,0 +1,77 @@
+{
+  "commands": [
+    [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/scripts/setup.py"
+    ],
+    [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/scripts/diagnose_joint.py",
+      "--smoke"
+    ],
+    [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/scripts/diagnose_trc.py",
+      "--smoke"
+    ],
+    [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/scripts/diagnose_joint.py"
+    ],
+    [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/scripts/diagnose_trc.py"
+    ],
+    [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/scripts/pipeline.py"
+    ],
+    [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/scripts/figures.py"
+    ],
+    [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/scripts/additional_checks.py"
+    ],
+    [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/scripts/report.py"
+    ]
+  ],
+  "pipeline_launch": {
+    "detached": true,
+    "pid": 40681,
+    "child_train_pid": 40933,
+    "environment": {
+      "OMP_NUM_THREADS": "4",
+      "MKL_NUM_THREADS": "4"
+    }
+  },
+  "pipeline_dependent_commands": [
+    [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/scripts/train_fixed.py"
+    ],
+    [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/scripts/evaluate_fixed.py"
+    ],
+    [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/scripts/report.py"
+    ]
+  ],
+  "scope": "All three pipeline dependent commands completed; see pipeline_status.json and fixed training/test receipts.",
+  "pipeline_final_status": "DONE",
+  "postprocess_commands": [
+    [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/scripts/final_control_analysis.py"
+    ],
+    [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/scripts/tables.py"
+    ]
+  ]
+}

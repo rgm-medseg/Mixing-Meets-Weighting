@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "time": "2026-10-07T11:07:40.147233+08:00",
+  "session": "beta_fft_R2_fixed92_20261007",
+  "actual_attach_command": "TERM=xterm-256color tmux attach-session -t beta_fft_R2_fixed92_20261007",
+  "detach": "Ctrl-b d",
+  "attach_tool_PTY_session": 67170,
+  "detach_exit_code": 0,
+  "step_before": 40,
+  "step_after": 124,
+  "same_pipeline_pid": 81963,
+  "same_trainer_pid": 82001,
+  "zero_attached_clients_verified": true
+}

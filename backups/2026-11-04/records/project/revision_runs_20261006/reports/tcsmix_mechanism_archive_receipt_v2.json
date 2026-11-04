@@ -1,0 +1,12 @@
+{
+  "time": "2026-10-06T22:57:07.381723+08:00",
+  "status": "VERIFIED",
+  "archive": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/tcsmix_mechanism_evidence_20261006_v2.tar.gz",
+  "bytes": 2148790,
+  "sha256": "36747a8580cb1dec7aa9ca35eec3da7450d011151a6aaa72c8b5e405b3d2d259",
+  "manifest_records": 99,
+  "all_archive_member_hashes_verified": true,
+  "snapshot": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/revision_runs_20261006/mechanism_audit_20261006_v2",
+  "queue_status": "INTERRUPTED",
+  "E1_step": 3976
+}

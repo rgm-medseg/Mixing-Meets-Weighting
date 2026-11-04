@@ -1,0 +1,59 @@
+{
+  "status": "DONE",
+  "stage": "FINISHED",
+  "task": null,
+  "heartbeat": "2026-10-08T22:01:59.272427+08:00",
+  "heartbeat_epoch": 1791468119.2724514,
+  "host": "n1",
+  "GPU": 0,
+  "resource": {
+    "uuid": "GPU-0a89fa49-2afe-ac0e-2fe5-2ba2541aeb59",
+    "name": "NVIDIA A100-SXM4-40GB",
+    "total_mib": 40960,
+    "used_mib": 0,
+    "free_mib": 40326,
+    "utilization": 0,
+    "pids": []
+  },
+  "tmux_session": "beta_fft_E4_E5_20261008",
+  "pipeline_identity": {
+    "pid": 43469,
+    "command": "/home/renguanming/.conda/envs/beta_fft/bin/python /home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/scripts/run_queue.py ",
+    "start_ticks": "2615984625"
+  },
+  "child_identity": null,
+  "current_command": null,
+  "current_log": null,
+  "tasks": {
+    "E4": {
+      "status": "DONE",
+      "step": 30000,
+      "time": "2026-10-08T20:27:13.858670+08:00",
+      "stage": "ANALYZED",
+      "optimizer_calls": {
+        "optimizer1": 30000,
+        "optimizer2": 30000
+      }
+    },
+    "E5": {
+      "status": "DONE",
+      "step": 30000,
+      "time": "2026-10-08T22:01:28.377032+08:00",
+      "stage": "ANALYZED",
+      "optimizer_calls": {
+        "optimizer1": 30000,
+        "optimizer2": 30000
+      }
+    }
+  },
+  "ETA_current_training_remaining_hours": null,
+  "ETA_basis": "pending preparation",
+  "formal_budget": 60000,
+  "E5_pretrain_budget": 0,
+  "E3_executed": false,
+  "old_queue": "INTERRUPTED",
+  "automatic_retries": 0,
+  "worker_resume_exact": false,
+  "archive": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/E4_E5_final_evidence_20261008.tar.gz",
+  "training_queue_stopped": true
+}

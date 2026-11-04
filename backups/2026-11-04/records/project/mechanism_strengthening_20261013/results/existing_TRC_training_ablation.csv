@@ -1,0 +1,3 @@
+arm,TRC,TCSMix,CTW,test_dice_percent,scope,source_table,source_sha256
+011,off,on,on,90.08936846,existing reported training ablation; not reevaluated this round,/home/renguanming/jupyterlab/rgm/beta-FFT-main/final_report/paper_internal_evidence_v23_0/tables/TABLE4_ACDC10_8ARM_FULL_PRECISION.tsv,5cb39eec601182edfe1df2a4024583b6ca8878e25ab5a2a50bd815476a373e46
+111,on,on,on,90.34965765204997,existing reported training ablation; not reevaluated this round,/home/renguanming/jupyterlab/rgm/beta-FFT-main/final_report/paper_internal_evidence_v23_0/tables/TABLE4_ACDC10_8ARM_FULL_PRECISION.tsv,5cb39eec601182edfe1df2a4024583b6ca8878e25ab5a2a50bd815476a373e46

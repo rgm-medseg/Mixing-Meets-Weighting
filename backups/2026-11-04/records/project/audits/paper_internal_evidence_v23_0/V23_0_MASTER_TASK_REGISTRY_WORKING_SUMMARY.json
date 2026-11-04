@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-23T03:36:36.064690+00:00",
+  "registry": "audits/paper_internal_evidence_v23_0/V23_0_MASTER_TASK_REGISTRY_WORKING.tsv",
+  "task_count": 13,
+  "read_only_ready_count": 6,
+  "new_full_pending_l1_l10_count": 0,
+  "blocked_count": 1,
+  "formal_started": false,
+  "tmux_started": false,
+  "launch_task_count": 12,
+  "launch_ready_count": 12,
+  "all_launch_tasks_ready": true,
+  "all_final_launch_ready": false
+}

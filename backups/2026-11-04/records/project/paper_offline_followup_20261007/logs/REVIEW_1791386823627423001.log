@@ -1,0 +1,18 @@
+A3 medians ('Full_main', 'best', 'matched92')
+A3 medians ('Full_main', 'last', 'matched92')
+A3 medians ('R1_v2_B', 'best', 'matched92')
+A3 medians ('R1_v2_B', 'best', 'original_strategy')
+A3 medians ('R1_v2_B', 'last', 'matched92')
+A3 medians ('R1_v2_B', 'last', 'original_strategy')
+A3 medians ('R2_fixed92', 'best', 'matched92')
+A3 medians ('R2_fixed92', 'best', 'original_strategy')
+A3 medians ('R2_fixed92', 'last', 'matched92')
+A3 medians ('R2_fixed92', 'last', 'original_strategy')
+Traceback (most recent call last):
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/scripts/finish.py", line 190, in <module>
+    if __name__=='__main__':main()
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/scripts/finish.py", line 188, in main
+    timing_summary();spatial_summary();figures();review();reports()
+  File "/home/renguanming/jupyterlab/rgm/beta-FFT-main/paper_offline_followup_20261007/scripts/finish.py", line 103, in review
+    cfg=config();old=read(ROOT/'revision_runs_20261006/state/queue.json');assert old['status']=='INTERRUPTED' and old['tasks']['E1']['latest_step']==3976
+AssertionError

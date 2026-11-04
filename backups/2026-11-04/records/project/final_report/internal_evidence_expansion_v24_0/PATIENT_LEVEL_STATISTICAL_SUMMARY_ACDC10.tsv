@@ -1,0 +1,2 @@
+Dataset	Split	Comparison	CaseCount	MeanDeltaDice	MedianDeltaDice	StdDeltaDice	ImprovedCaseCount	WorsenedCaseCount	TieCount	ImprovementRate	BootstrapCI95Low	BootstrapCI95High	BootstrapIterations	BootstrapSeed	WilcoxonPValue	SignTestPValueSupplement	RankBiserialEffectSize	GlobalA1Status
+ACDC	ACDC10	β-FFT vs Ours	40	0.006890235561	0.002952260049	0.022815650637	24	16	0	0.600000000000	0.000592004543	0.014525979752	10000	2026	NOT_COMPUTED_SCIPY_NOT_REQUIRED_FOR_ACDC10_INTERMEDIATE	0.268187251055	0.324390243902	PARTIAL_ACDC10_ONLY_RETAINED_SETTINGS_NOT_COMPLETE

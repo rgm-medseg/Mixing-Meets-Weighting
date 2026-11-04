@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T12:25:42.145532+00:00",
+  "FINAL_REVIEW_1_COMPLETENESS": "PASS",
+  "FINAL_REVIEW_2_NUMERICAL": "PASS",
+  "FINAL_REVIEW_3_EXPERIMENT": "PASS",
+  "FINAL_REVIEW_4_VISUAL_EFFICIENCY": "PASS",
+  "FINAL_REVIEW_5_HANDOFF": "PASS",
+  "V23_0_COMPLETE": "PASS_INTERNAL_EVIDENCE_ASSETS_COMPLETE",
+  "missing_required_assets": [],
+  "asset_copies": [
+    {
+      "src": "final_report/paper_internal_evidence_v23_0/figures/FIG_X03_WEIGHT_SENSITIVITY_ACDC10.png",
+      "dst": "final_report/paper_internal_evidence_v23_0/figures/X03_WEIGHT_SENSITIVITY_DICE.png",
+      "sha256": "657a8e89ea09c392deacbd32d0611df2fdbaf679d7fd743f10b14633a658d583",
+      "status": "COPIED"
+    },
+    {
+      "src": "final_report/paper_internal_evidence_v23_0/figures/FIG_X03_WEIGHT_SENSITIVITY_ACDC10.pdf",
+      "dst": "final_report/paper_internal_evidence_v23_0/figures/X03_WEIGHT_SENSITIVITY_DICE.pdf",
+      "sha256": "46f323e73c97c3ec17c7fc1167ae8e9b16a0e215c00ff6aa74cd54107df3e862",
+      "status": "COPIED"
+    },
+    {
+      "src": "final_report/paper_internal_evidence_v23_0/ACDC10_TRAINING_DYNAMICS_VALIDATION_CURVES.tsv",
+      "dst": "final_report/paper_internal_evidence_v23_0/TRAINING_DYNAMICS_RAW.tsv",
+      "sha256": "fa630736fd580c21ed2c65765cf916a34b741488c27b78de3af9c4f5bea0b144",
+      "status": "COPIED"
+    },
+    {
+      "src": "final_report/paper_internal_evidence_v23_0/figures/FIG_TRAINING_DYNAMICS_ACDC10.png",
+      "dst": "final_report/paper_internal_evidence_v23_0/figures/TRAINING_DYNAMICS_BETAFFT_VS_OURS.png",
+      "sha256": "9e45e322bd1f983aeaf7d54e2ff4c468a021e95a12f263791772ada8fc2d94f9",
+      "status": "COPIED"
+    },
+    {
+      "src": "final_report/paper_internal_evidence_v23_0/figures/FIG_TRAINING_DYNAMICS_ACDC10.pdf",
+      "dst": "final_report/paper_internal_evidence_v23_0/figures/TRAINING_DYNAMICS_BETAFFT_VS_OURS.pdf",
+      "sha256": "b30822db94d4cce4c95bb4c7ea0cd1312360a9ebc05994f2c4ca441491b9c208",
+      "status": "COPIED"
+    },
+    {
+      "src": "final_report/paper_internal_evidence_v23_0/figures/FIG_TRAINING_DYNAMICS_ACDC10.png",
+      "dst": "final_report/paper_internal_evidence_v23_0/figures/TRAINING_DYNAMICS_000_110_111.png",
+      "sha256": "9e45e322bd1f983aeaf7d54e2ff4c468a021e95a12f263791772ada8fc2d94f9",
+      "status": "COPIED"
+    },
+    {
+      "src": "final_report/paper_internal_evidence_v23_0/figures/FIG_TRAINING_DYNAMICS_ACDC10.pdf",
+      "dst": "final_report/paper_internal_evidence_v23_0/figures/TRAINING_DYNAMICS_000_110_111.pdf",
+      "sha256": "b30822db94d4cce4c95bb4c7ea0cd1312360a9ebc05994f2c4ca441491b9c208",
+      "status": "COPIED"
+    }
+  ],
+  "mechanism_visualization": {
+    "images": [
+      "final_report/paper_internal_evidence_v23_0/figures/FIG_X03_MECHANISM_patient002_frame01_slice1.png",
+      "final_report/paper_internal_evidence_v23_0/figures/FIG_X03_MECHANISM_patient002_frame02_slice1.png",
+      "final_report/paper_internal_evidence_v23_0/figures/FIG_X03_MECHANISM_patient019_frame01_slice1.png",
+      "final_report/paper_internal_evidence_v23_0/figures/FIG_X03_MECHANISM_patient019_frame02_slice1.png"
+    ],
+    "status": "PASS",
+    "fixed_png": "final_report/paper_internal_evidence_v23_0/figures/X03_MECHANISM_FIXED_CASES.png",
+    "fixed_pdf": "final_report/paper_internal_evidence_v23_0/figures/X03_MECHANISM_FIXED_CASES.pdf",
+    "gallery_pdf": "final_report/paper_internal_evidence_v23_0/figures/X03_MECHANISM_ALL_VAL_GALLERY.pdf"
+  },
+  "notes": [
+    "No source/config/launcher/controller edits were made by this final asset consolidation step.",
+    "Evidence gaps are disclosed instead of invented."
+  ],
+  "updated_at": "2026-08-24T12:56:07.959839+00:00",
+  "efficiency_protocol": "INFERENCE_SCRATCH_BENCHMARK_WARMUP50_MEASURED200_REPEAT3",
+  "training_step_benchmark": "PASS_FULL_BCP_FFT_REAL_TRAIN_BATCH",
+  "residual_risk": [
+    "External published rows for Table 1-3 are excluded/deferred by audits/paper_internal_evidence_v23_0/V23_0_EXTERNAL_PUBLISHED_ROWS_ELIGIBILITY_AUDIT.json; internal β-FFT/Ours tables are complete.",
+    "FLOPs remain NOT_MEASURED_NO_THOP_DEPENDENCY; no high-risk dependency installation was performed."
+  ],
+  "objective_filename_alias_receipt": "audits/paper_internal_evidence_v23_0/V23_0_OBJECTIVE_FILENAME_ALIAS_RECEIPT.json",
+  "external_published_rows_eligibility_audit": "audits/paper_internal_evidence_v23_0/V23_0_EXTERNAL_PUBLISHED_ROWS_ELIGIBILITY_AUDIT.json",
+  "task_final_launch_readiness_summary": "audits/paper_internal_evidence_v23_0/V23_0_TASK_FINAL_LAUNCH_READINESS_SUMMARY.json",
+  "terminal_registry": "audits/paper_internal_evidence_v23_0/V23_0_MASTER_TASK_REGISTRY_TERMINAL.tsv"
+}

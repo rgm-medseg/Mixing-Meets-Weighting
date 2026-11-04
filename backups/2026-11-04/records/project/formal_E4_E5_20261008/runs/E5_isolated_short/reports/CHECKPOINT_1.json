@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T12:39:42.956864+08:00",
+  "task": "E5",
+  "path": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/runs/E5_isolated_short/runs/short/checkpoints/last.ckpt",
+  "sha256": "0d76a684f89ac8c891d6887e73cf4aecb4bc02c9a3f26b640042ea48b8835411",
+  "step": 1,
+  "keys": [
+    "adamix_age",
+    "amp_state",
+    "args",
+    "best_metrics",
+    "epoch",
+    "global_step",
+    "lr_state",
+    "metadata",
+    "model_1",
+    "model_2",
+    "optimizer1",
+    "optimizer2",
+    "pretraining_stage",
+    "random_state",
+    "resume_exact",
+    "sampler_state",
+    "scheduler_state",
+    "teacher_state"
+  ],
+  "optimizer_physical_calls": {
+    "optimizer1": 1,
+    "optimizer2": 1
+  },
+  "independent_model_optimizer_reload": false,
+  "worker_resume_exact": false
+}

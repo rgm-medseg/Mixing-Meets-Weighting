@@ -1,0 +1,25 @@
+{
+  "source_files": [
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/arrays/joint/dynamic_uniform_b0_p0.npz",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/arrays/joint/dynamic_CTW_b0_p0.npz",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/results/joint_patient_region.csv"
+  ],
+  "source_sha256": {
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/arrays/joint/dynamic_uniform_b0_p0.npz": "e9268e4ac072e14cd61a34a6c9dafbd9387d6c77721f91f946210b7764c33b82",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/arrays/joint/dynamic_CTW_b0_p0.npz": "42f5febe246f033203ecfaaa493fbabc349b8ae21c325c62cfee106593b14921",
+    "/home/renguanming/jupyterlab/rgm/beta-FFT-main/mechanism_strengthening_20261013/results/joint_patient_region.csv": "902a36087183c3bdfee7617f445a43aad2f51dc99e77ed4ee701a474c9a0e5cc"
+  },
+  "case_selection": "fixed before outputs; not selected by Dice, error, or visual appearance",
+  "transforms": "nearest-neighbor display; no smoothing; full image; common image contrast; no data edits",
+  "width_mm": 190,
+  "height_mm": 150.0,
+  "vector_text": true,
+  "raster_native_grid": [
+    256,
+    256
+  ],
+  "png_dpi": 220,
+  "embedded_raster_export_dpi": 500,
+  "description": "Aligned mixed images, actual weights/errors/logit gradients and patient-level spatial allocations. Dynamic and fixed geometry coincide on these inputs; the figure does not demonstrate a mixing interaction.",
+  "manuscript_phase": "Neurocomputing draft; journal-specific guide returned403, final production choices pending verification"
+}

@@ -1,0 +1,5 @@
+task,stage,start,end,seconds,exit_code,scope
+E4,SHORT_CHECK,2026-10-08T12:47:19.868758+08:00,2026-10-08T12:47:25.096309+08:00,5.227595683187246,0,"Popen wall, includes imports/validation/IO and <=5s polling lag"
+E4,TRAIN,2026-10-08T12:47:30.432798+08:00,2026-10-08T20:26:27.347326+08:00,27536.914573486894,0,"Popen wall, includes imports/validation/IO and <=5s polling lag"
+E4,POSTCHECK,2026-10-08T20:26:27.434786+08:00,2026-10-08T20:26:37.695985+08:00,10.261246275156736,0,"Popen wall, includes imports/validation/IO and <=5s polling lag"
+E4,EVALUATE,2026-10-08T20:26:37.726147+08:00,2026-10-08T20:27:03.268324+08:00,25.54222732037306,0,"Popen wall, includes imports/validation/IO and <=5s polling lag"

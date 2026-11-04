@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "load": {
+    "branch": "model_1",
+    "step": 29000,
+    "strict": true,
+    "checkpoint_sha256": "a234794d53a3247b9504fd1a1ebc051686eed4495f0417866120941ddcf4b6d3"
+  },
+  "cases": 40,
+  "evaluator": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tools/v21_5_acdc10_test_frozen_checkpoint.py",
+  "evaluator_sha256": "f49d5e5e284ffcc5093e337c3826d58a3e27b789f13d398d4588185cfab8734e",
+  "selection_lock": "fixed_test_selection_lock.json",
+  "metrics": {
+    "dice": 0.8985481319872154,
+    "iou": 0.8219031085740568,
+    "hd95": 2.2512519584940445,
+    "asd": 0.6997793485855203
+  },
+  "postprocessing": "literal original argmax + nearest native-grid resize; no student LCC"
+}

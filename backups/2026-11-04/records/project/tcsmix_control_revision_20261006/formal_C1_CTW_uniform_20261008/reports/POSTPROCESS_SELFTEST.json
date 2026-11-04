@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T00:45:40.620362+08:00",
+  "independent_surface_metrics": true,
+  "delta_direction_and_pp": true,
+  "scope": "CPU artificial arrays, no checkpoint/model inference/training"
+}

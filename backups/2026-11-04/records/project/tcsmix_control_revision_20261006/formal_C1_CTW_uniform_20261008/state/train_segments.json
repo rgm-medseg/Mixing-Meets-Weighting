@@ -1,0 +1,22 @@
+[
+  {
+    "stage": "TRAIN",
+    "command": [
+      "/home/renguanming/.conda/envs/beta_fft/bin/python",
+      "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/scripts/train_C1_entry.py"
+    ],
+    "start": "2026-10-08T00:51:59.852754+08:00",
+    "log": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/tcsmix_control_revision_20261006/formal_C1_CTW_uniform_20261008/logs/TRAIN_2026-10-08T005159852721+0800.log",
+    "resume_step": 0,
+    "process_identity": {
+      "pid": 22912,
+      "command": "",
+      "start_ticks": "2611693181"
+    },
+    "process_group": 22912,
+    "exit_code": 0,
+    "end": "2026-10-08T08:13:44.465097+08:00",
+    "elapsed_seconds": 26504.612390317023,
+    "scope": "Popen launch to observed completion, <=5s poll lag; stage imports/IO included"
+  }
+]

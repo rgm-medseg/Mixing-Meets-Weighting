@@ -1,0 +1,39 @@
+{
+  "ASD": 3.0315494897283286,
+  "Arm": "FINAL3",
+  "BestValDice": 0.8505,
+  "BestValIter": 9000,
+  "BoundaryUnit": "mm",
+  "CheckpointPath": "experiments/three_innovation_ablation_transfer_v22_0/COVID10_FINAL3/self_train/unet_best_model.pth",
+  "CheckpointSHA": "8c89fe9238c187e4e387b5cc40b253e11e16b451e2788d6d395f2841274b019a",
+  "CheckpointSelectionEndpoint": "VALIDATION_BEST",
+  "Dataset": "COVID-19",
+  "Dice": 0.6794082017690449,
+  "EvaluatorPath": "train_COVID19/covid19_volume_evaluator.py",
+  "EvaluatorSHA": "ff20153cdbbe9e164bbdbd2348f6799daf0180a5503291177a86a5f9034f560b",
+  "Finite": true,
+  "HD95": 11.877109828896515,
+  "IoU": 0.5237523299362863,
+  "PerClassMetrics": {
+    "foreground": {
+      "asd": 3.0315494897283286,
+      "dice": 0.6794082017690449,
+      "hd95": 11.877109828896515,
+      "iou": 0.5237523299362863
+    }
+  },
+  "Ratio": "10%",
+  "ReturnCode": 0,
+  "TEST_ONLY_MODE": true,
+  "TaskID": "COVID10_FINAL3",
+  "TestComplete": true,
+  "TestManifest": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/data/COVID19_OFFICIAL20/manifests/TEST_ALL_SLICES.tsv",
+  "TestManifestSHA": "453312727e51c7830423caa9e06b8cd67ad0ecf5c4f1e6058975cd3c973e73c3",
+  "TestTimestamp": "2026-08-22T10:27:39.649639+00:00",
+  "backward_called": false,
+  "checkpoint_reselection_after_test": false,
+  "optimizer_created": false,
+  "optimizer_step_called": false,
+  "schema": "V22_1_POSTFULL_TEST_COMPLETION_RECEIPT",
+  "training_started": false
+}

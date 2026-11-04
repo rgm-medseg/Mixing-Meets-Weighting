@@ -1,0 +1,25 @@
+{
+  "status": "BLOCKED_MISSING_SOURCE_ASSET",
+  "created_at": "2026-08-24T14:30:53.046901+00:00",
+  "task_id": "PATIENT_LEVEL_STATS",
+  "training_started": false,
+  "checkpoint_replay_started": false,
+  "test_manifest_accessed": false,
+  "required_arms": [
+    "000",
+    "001",
+    "010",
+    "011",
+    "100",
+    "101",
+    "110",
+    "111"
+  ],
+  "missing_case_class_metric_arms": [
+    "110",
+    "111"
+  ],
+  "audit_asset": "audits/internal_evidence_expansion_v24_0/PATIENT_LEVEL_STATS_INPUT_ASSET_AUDIT.tsv",
+  "audit_sha256": "3f026d8611f43b17b26b2ff75f39a617f758b07a2f8129b01ee2f41387f3d6c5",
+  "next_action": "FROZEN_CHECKPOINT_REPLAY_REQUIRED_FOR_MISSING_ARMS"
+}

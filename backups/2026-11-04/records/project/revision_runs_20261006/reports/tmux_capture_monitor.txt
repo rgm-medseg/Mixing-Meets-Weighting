@@ -1,0 +1,23 @@
+Every 10.0s: /home/renguanming/jupyterlab/rgm/b...  n1: Tue Oct  6 21:30:52 2026
+
+host=n1 controller_pid=28224 alive=True heartbeat_age_seconds=1.8942875862121582
+ status=RUNNING
+E1: RUNNING pid=28255 step=37 reason= log=/home/renguanming/jupyterlab/rgm/beta-
+FFT-main/revision_runs_20261006/logs/E1.log
+E2: PENDING pid=None step=0 reason= log=/home/renguanming/jupyterlab/rgm/beta-FF
+T-main/revision_runs_20261006/logs/E2.log
+E3: PENDING pid=None step=0 reason= log=/home/renguanming/jupyterlab/rgm/beta-FF
+T-main/revision_runs_20261006/logs/E3.log
+E4: PENDING pid=None step=0 reason= log=/home/renguanming/jupyterlab/rgm/beta-FF
+T-main/revision_runs_20261006/logs/E4.log
+E5: PENDING pid=None step=0 reason= log=/home/renguanming/jupyterlab/rgm/beta-FF
+T-main/revision_runs_20261006/logs/E5.log
+active=E1 archive=PENDING results=/home/renguanming/jupyterlab/rgm/beta-FFT-main
+/revision_runs_20261006
+
+
+
+
+
+
+

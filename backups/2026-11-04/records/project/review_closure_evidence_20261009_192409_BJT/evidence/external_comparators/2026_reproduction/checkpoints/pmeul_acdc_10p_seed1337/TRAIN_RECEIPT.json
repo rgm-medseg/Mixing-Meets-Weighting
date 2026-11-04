@@ -1,0 +1,16 @@
+{
+  "best_checkpoint_sha256": "80d752c70bb73a9184f1e1402a02cc9f1aa173c8609355c08c26863c8c15e6eb",
+  "best_validation_dice": 0.8198271917729212,
+  "ce_in_optimized_loss": false,
+  "checkpoint_missing_keys": [],
+  "checkpoint_unexpected_keys": [],
+  "config_sha256": "68654da0245e7c7ec10ec75daf8693be56fad1986f4dfd3115f9515dba327698",
+  "dataset": "ACDC",
+  "iteration": 30000,
+  "job_id": "pmeul_acdc_10p_seed1337",
+  "latest_checkpoint_sha256": "ba1fb90a287f3930167822b299aaff3a29ba1777ae57cd646b0773612ee1b8d4",
+  "method": "PMEUL",
+  "nan_detected": false,
+  "status": "TRAIN_PASS",
+  "test_manifest_accessed": false
+}

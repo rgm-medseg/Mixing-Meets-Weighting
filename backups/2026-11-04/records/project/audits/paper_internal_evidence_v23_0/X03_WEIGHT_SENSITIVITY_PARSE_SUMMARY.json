@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T12:23:54.283634+00:00",
+  "output_tsv": "final_report/paper_internal_evidence_v23_0/X03_WEIGHT_SENSITIVITY_FULL_PRECISION.tsv",
+  "figure_png": "final_report/paper_internal_evidence_v23_0/figures/FIG_X03_WEIGHT_SENSITIVITY_ACDC10.png",
+  "figure_pdf": "final_report/paper_internal_evidence_v23_0/figures/FIG_X03_WEIGHT_SENSITIVITY_ACDC10.pdf",
+  "point_count": 6,
+  "test_access": 0,
+  "final_weight_frozen": 0.05,
+  "x03_weight_reselection_allowed": false
+}

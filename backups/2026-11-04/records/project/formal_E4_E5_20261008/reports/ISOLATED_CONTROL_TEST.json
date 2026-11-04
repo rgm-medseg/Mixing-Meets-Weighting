@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T12:40:02.701917+08:00",
+  "exclusive_lock": true,
+  "real_file_stop": true,
+  "stale_PID_identity_rejected": true,
+  "scope": "isolated CPU; real trainer safe stop/resume separately in each2-step short"
+}

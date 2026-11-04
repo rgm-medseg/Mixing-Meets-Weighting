@@ -1,0 +1,20 @@
+{
+  "audit_id": "V22_0_POST_FULL_CHECKPOINT_TEST_GATE",
+  "created_at": "2026-08-19T15:32:13.213358+00:00",
+  "gate_tsv": "audits/three_innovation_ablation_transfer_v22_0/POST_FULL_CHECKPOINT_TEST_GATE.tsv",
+  "formal_state_path": "runtime/three_innovation_ablation_transfer_v22_0/controller_formal_state.json",
+  "formal_state_status": "ABORTED_BY_USER_BEFORE_FULL_BUDGET",
+  "formal_full_complete": false,
+  "new_full_task_count": 10,
+  "ready_for_frozen_best_test_once_count": 0,
+  "locked_new_full_task_count": 10,
+  "TEST_UNLOCKED": false,
+  "TEST_UNLOCKED_COUNT": 0,
+  "IF_TASK_FORMAL_FULL_COMPLETE_FALSE_THEN_TEST_UNLOCKED_FALSE": true,
+  "IF_BEST_CHECKPOINT_SHA256_FROZEN_FALSE_THEN_TEST_UNLOCKED_FALSE": true,
+  "ONE_TASK_COMPLETE_MUST_NOT_UNLOCK_OTHER_TASK_TEST": true,
+  "MSCMR10_TEST_UNLOCKED": false,
+  "TRANSFER_TEST_USED_FOR_TUNING": false,
+  "TRANSFER_REAL_TEST_ACCESS_BEFORE_FORMAL": 0,
+  "test_started": false
+}

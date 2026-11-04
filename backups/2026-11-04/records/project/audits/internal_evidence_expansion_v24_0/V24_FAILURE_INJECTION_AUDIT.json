@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-24T17:17:50.553440+00:00",
+  "task_id": "V24_FAILURE_INJECTION_AUDIT",
+  "training_started": false,
+  "formal_started": false,
+  "test_started": false,
+  "probes": [
+    {
+      "Probe": "missing_config_new_full",
+      "Command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/scripts/internal_evidence_expansion_v24_0/v24_new_full_launcher.py",
+        "--config",
+        "configs/internal_evidence_expansion_v24_0/DOES_NOT_EXIST.json",
+        "--mode",
+        "dry-run"
+      ],
+      "ReturnCode": 1,
+      "FailClosed": true,
+      "TrainingStartedEvidence": false,
+      "TestStartedEvidence": false,
+      "UnsafeTokenFound": false,
+      "Log": "runtime/internal_evidence_expansion_v24_0/failure_injection/missing_config_new_full.log"
+    },
+    {
+      "Probe": "acdc2_missing_pretrain_fail_closed",
+      "Command": [
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/scripts/internal_evidence_expansion_v24_0/run_acdc2_betafft_full.sh",
+        "--mode",
+        "dry-run"
+      ],
+      "ReturnCode": 1,
+      "FailClosed": true,
+      "TrainingStartedEvidence": false,
+      "TestStartedEvidence": false,
+      "UnsafeTokenFound": false,
+      "Log": "runtime/internal_evidence_expansion_v24_0/failure_injection/acdc2_missing_pretrain_fail_closed.log"
+    },
+    {
+      "Probe": "output_collision_before_full",
+      "Command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/scripts/internal_evidence_expansion_v24_0/v24_new_full_launcher.py",
+        "--config",
+        "runtime/internal_evidence_expansion_v24_0/failure_injection/output_collision_config.json",
+        "--mode",
+        "full"
+      ],
+      "ReturnCode": 1,
+      "FailClosed": true,
+      "TrainingStartedEvidence": false,
+      "TestStartedEvidence": false,
+      "UnsafeTokenFound": false,
+      "Log": "runtime/internal_evidence_expansion_v24_0/failure_injection/output_collision_before_full.log"
+    },
+    {
+      "Probe": "unknown_test_gate_task",
+      "Command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/scripts/internal_evidence_expansion_v24_0/v24_frozen_best_test_launcher.py",
+        "--task-id",
+        "NOT_A_V24_TASK",
+        "--mode",
+        "dry-run"
+      ],
+      "ReturnCode": 0,
+      "FailClosed": true,
+      "TrainingStartedEvidence": false,
+      "TestStartedEvidence": false,
+      "UnsafeTokenFound": false,
+      "Log": "runtime/internal_evidence_expansion_v24_0/failure_injection/unknown_test_gate_task.log"
+    },
+    {
+      "Probe": "premature_test_locked",
+      "Command": [
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/scripts/internal_evidence_expansion_v24_0/run_acdc10_betafft_seed2025_test_gate.sh",
+        "--mode",
+        "run"
+      ],
+      "ReturnCode": 3,
+      "FailClosed": true,
+      "TrainingStartedEvidence": false,
+      "TestStartedEvidence": false,
+      "UnsafeTokenFound": false,
+      "Log": "runtime/internal_evidence_expansion_v24_0/failure_injection/premature_test_locked.log"
+    },
+    {
+      "Probe": "postfull_run_missing_upstream",
+      "Command": [
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/scripts/internal_evidence_expansion_v24_0/run_seed_test_closure.sh",
+        "--mode",
+        "run"
+      ],
+      "ReturnCode": 0,
+      "FailClosed": true,
+      "TrainingStartedEvidence": false,
+      "TestStartedEvidence": false,
+      "UnsafeTokenFound": false,
+      "Log": "runtime/internal_evidence_expansion_v24_0/failure_injection/postfull_run_missing_upstream.log"
+    },
+    {
+      "Probe": "unknown_postfull_task",
+      "Command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/scripts/internal_evidence_expansion_v24_0/v24_postfull_and_finalization.py",
+        "--task-id",
+        "NOT_A_TASK",
+        "--mode",
+        "dry-run"
+      ],
+      "ReturnCode": 2,
+      "FailClosed": true,
+      "TrainingStartedEvidence": false,
+      "TestStartedEvidence": false,
+      "UnsafeTokenFound": false,
+      "Log": "runtime/internal_evidence_expansion_v24_0/failure_injection/unknown_postfull_task.log"
+    },
+    {
+      "Probe": "controller_run_without_prelaunch",
+      "Command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/controllers/internal_evidence_expansion_controller_v24_0.py",
+        "--mode",
+        "run"
+      ],
+      "ReturnCode": 3,
+      "FailClosed": true,
+      "TrainingStartedEvidence": false,
+      "TestStartedEvidence": false,
+      "UnsafeTokenFound": false,
+      "Log": "runtime/internal_evidence_expansion_v24_0/failure_injection/controller_run_without_prelaunch.log"
+    },
+    {
+      "Probe": "controller_resume_without_prelaunch",
+      "Command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/controllers/internal_evidence_expansion_controller_v24_0.py",
+        "--mode",
+        "resume"
+      ],
+      "ReturnCode": 3,
+      "FailClosed": true,
+      "TrainingStartedEvidence": false,
+      "TestStartedEvidence": false,
+      "UnsafeTokenFound": false,
+      "Log": "runtime/internal_evidence_expansion_v24_0/failure_injection/controller_resume_without_prelaunch.log"
+    },
+    {
+      "Probe": "start_manifest_without_prelaunch",
+      "Command": [
+        "/home/renguanming/.conda/envs/beta_fft/bin/python",
+        "/home/renguanming/jupyterlab/rgm/beta-FFT-main/scripts/internal_evidence_expansion_v24_0/v24_formal_start_manifest.py"
+      ],
+      "ReturnCode": 3,
+      "FailClosed": true,
+      "TrainingStartedEvidence": false,
+      "TestStartedEvidence": false,
+      "UnsafeTokenFound": false,
+      "Log": "runtime/internal_evidence_expansion_v24_0/failure_injection/start_manifest_without_prelaunch.log"
+    }
+  ],
+  "review": {
+    "missing_config": "PASS",
+    "missing_pretrain": "PASS",
+    "output_collision": "PASS",
+    "premature_test": "PASS",
+    "missing_receipt": "PASS",
+    "controller_run_without_prelaunch": "PASS",
+    "controller_resume_without_prelaunch": "PASS",
+    "start_manifest_without_prelaunch": "PASS"
+  }
+}

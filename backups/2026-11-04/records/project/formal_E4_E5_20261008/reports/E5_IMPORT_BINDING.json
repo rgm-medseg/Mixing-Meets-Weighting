@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "time": "2026-10-08T12:44:36.007865+08:00",
+  "actual_commit": "85361fb91cf43a69a158d41dfa9e7ee9fce36db9",
+  "official_repository": "https://github.com/Senyh/AdaMix",
+  "native_model_class": "models.networks.UNet",
+  "native_model_file": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/external/AdaMix/models/networks.py",
+  "AdaMix_file": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/external/AdaMix/wheels/adamix_utils.py",
+  "loss_file": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/external/AdaMix/wheels/loss_functions.py",
+  "dataset_file": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/external/AdaMix/exp_acdc/data/dataset.py",
+  "literal_step_source": "/home/renguanming/jupyterlab/rgm/beta-FFT-main/formal_E4_E5_20261008/runs/E5_isolated_short/runs/short/official_step_source.py",
+  "literal_step_sha256": "be0a52d74a654c392fef4b0689f641e600dd006969f73975747d52da1e0e3592",
+  "models_parameters": [
+    1827475,
+    1827469,
+    1813764
+  ],
+  "scope": "independent import/CPU architecture inventory; actual runtime shape counts and source hashes additionally in initialization receipts",
+  "training_updates": 0
+}
