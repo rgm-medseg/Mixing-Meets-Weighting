@@ -1,5 +1,5 @@
 {
-  "release_upload": "Pending GitHub API login. SSH push works, but no Release or remote asset exists yet. Planned asset URLs are not verified downloads.",
+  "release_upload": "Completed with the existing gh login. All 12 assets were re-downloaded from GitHub and SHA-256 verified; archives were restored and primary model/optimizer states loaded on CPU.",
   "paper_metrics": "No training, inference, validation, or test evaluation was run. Existing result receipts were preserved and five selected checkpoint hashes matched.",
   "original_git": "Training tree has no .git. Original training commits and historical uncommitted diffs cannot be reconstructed. Publication baseline and current differences, plus per-run source hashes, are saved.",
   "pretraining": "label3/label7 initialization bytes are saved and bound. Their original generating commands, logs and actual pretraining update counts were not found in the existing confirmed records.",

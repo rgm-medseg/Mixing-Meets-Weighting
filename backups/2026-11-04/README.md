@@ -1,6 +1,6 @@
 # CoMixW 关键实验备份 · 2026-11-04
 
-本目录保存 5 个主实验和关键消融/对照的清单、代码、脱敏日志、配置、指标原始表及恢复工具。大型权重放在本次独立 Release；在 API 登录完成前，附件仅保留本地，链接标为计划地址，不表示已上传。
+本目录保存 5 个主实验和关键消融/对照的清单、代码、脱敏日志、配置、指标原始表及恢复工具。大型权重与完整训练材料已上传至 [独立 Release](https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/tag/comixw-critical-backup-2026-11-04)。12 个附件均已从 GitHub 重新下载并逐项核对 SHA，解包恢复通过；主实验模型与优化器状态已在 CPU 加载。
 
 原训练目录只读，未删除文件、未修改训练逻辑、未启动训练或评估。权重均在稳定后复制并核对 SHA-256。`PAPER_AUTHOR_CONFIRMED_FACTS.md` 的固定结果优先于旧历史记录：COVID 主 Full HD95 为 22.79/11.88 mm；原始 ACDC10 Full 为 90.35%，控制信号替换为 89.98%。
 
@@ -20,7 +20,7 @@
 
 ## 新服务器下载、验证和恢复文件
 
-以下命令以仓库根目录为起点；仅在 Release 上传成功后，`--download` 才能取得附件。当前可从原备份服务器复制 `assets/` 目录使用相同命令验证恢复。
+以下命令以仓库根目录为起点，可从已发布 Release 下载全部附件并验证恢复。无需访问原训练服务器。原始医学数据须另行准备。
 
 ```bash
 git clone --branch backup/comixw-critical-2026-11-04 https://github.com/rgm-medseg/Mixing-Meets-Weighting.git
@@ -61,11 +61,11 @@ python "$COMIXW_CATALOG/tools/resume_main.py" --catalog "$COMIXW_CATALOG" --rest
 python "$COMIXW_CATALOG/tools/resume_main.py" --catalog "$COMIXW_CATALOG" --restored "$PWD/restored" --setting covid5 --data-root /datasets --output-root /work/resumed --execute
 ```
 
-`--setting` 可选 `acdc5/acdc10/promise20/covid5/covid10`。工具使用保留的历史训练入口、原 run identity 和原 30000 步预算，并检查二分类训练核心、初始化与清单 SHA；输出必须是新目录。ACDC 缺少完整 worker RNG/prefetch 状态，不能承诺逐步一致。恢复工具的参数构造和 CPU 状态已检查，本次没有执行训练恢复。
+`--setting` 可选 `acdc5/acdc10/promise20/covid5/covid10`。工具使用保留的历史训练入口、原 run identity 和原 30000 步预算，并检查二分类训练核心、初始化与清单 SHA；输出必须是新目录。ACDC 缺少完整 worker RNG/prefetch 状态，不能承诺逐步一致。恢复工具的参数构造已通过历史入口解析；远端下载后，10 个主检查点的 24 组模型状态与 14 组优化器状态均在 CPU 加载通过。本次没有执行训练恢复。
 
 ## Release 上传重试
 
-SSH 只能推送 Git，创建/上传 Release 还需要 GitHub API 登录。工具从 `GH_TOKEN/GITHUB_TOKEN`、GitHub CLI 登录或用户私有凭据文件读取；凭据不进入本目录。`--login` 会在终端隐藏输入并保存到备份外的权限 600 文件。
+本次已使用现有 `gh` 登录完成上传与远端验证。以下工具保留供重试使用；它从 `GH_TOKEN/GITHUB_TOKEN`、GitHub CLI 登录或用户私有凭据文件读取；凭据不进入本目录。`--login` 会在终端隐藏输入并保存到备份外的权限 600 文件。
 
 ```bash
 python backups/2026-11-04/tools/upload_release.py --catalog backups/2026-11-04 --assets /path/to/assets --download-cache /path/to/remote-verification --login

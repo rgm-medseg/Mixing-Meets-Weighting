@@ -1,12 +1,118 @@
 {
   "repository": "rgm-medseg/Mixing-Meets-Weighting",
   "tag": "comixw-critical-backup-2026-11-04",
-  "time_utc": "2026-11-04T06:51:32.231643+00:00",
-  "assets": [],
-  "file_verification": "NOT_RUN",
-  "paper_metrics_reproduced": false,
+  "source_commit": "9dd9ac2ca5331e7b80b0bc25ec64f3708460da70",
+  "started_utc": "2026-11-04T07:35:44.291838+00:00",
+  "assets": [
+    {
+      "name": "P0-acdc10.tar.gz",
+      "size": 81582364,
+      "sha256": "dc13b932e553b68c0d2d8165bec4763ec1e8ff4665c6cbc2cf9c1f27f32b1eda",
+      "url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P0-acdc10.tar.gz",
+      "remote_download_sha256": "PASS",
+      "github_digest": "sha256:dc13b932e553b68c0d2d8165bec4763ec1e8ff4665c6cbc2cf9c1f27f32b1eda"
+    },
+    {
+      "name": "P0-acdc5.tar.gz",
+      "size": 81584599,
+      "sha256": "7f1c7c1be9ef75e55926c1f7ea26519622d19840cb059e153621187a208af731",
+      "url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P0-acdc5.tar.gz",
+      "remote_download_sha256": "PASS",
+      "github_digest": "sha256:7f1c7c1be9ef75e55926c1f7ea26519622d19840cb059e153621187a208af731"
+    },
+    {
+      "name": "P0-covid10.tar.gz",
+      "size": 168930252,
+      "sha256": "8a5afb03adca2489136904d5778831446dc7d83be92550b292329718408bee11",
+      "url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P0-covid10.tar.gz",
+      "remote_download_sha256": "PASS",
+      "github_digest": "sha256:8a5afb03adca2489136904d5778831446dc7d83be92550b292329718408bee11"
+    },
+    {
+      "name": "P0-covid5.tar.gz",
+      "size": 168851688,
+      "sha256": "23574f6caa9817e8567e2f870401a6a8d4e26b56ec381cf319863d4b1de6be9e",
+      "url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P0-covid5.tar.gz",
+      "remote_download_sha256": "PASS",
+      "github_digest": "sha256:23574f6caa9817e8567e2f870401a6a8d4e26b56ec381cf319863d4b1de6be9e"
+    },
+    {
+      "name": "P0-promise20.tar.gz",
+      "size": 169102517,
+      "sha256": "a3a150f3eff9131edabdec0934a13b86632d511f183c3d21d15ca452497fe80e",
+      "url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P0-promise20.tar.gz",
+      "remote_download_sha256": "PASS",
+      "github_digest": "sha256:a3a150f3eff9131edabdec0934a13b86632d511f183c3d21d15ca452497fe80e"
+    },
+    {
+      "name": "P1-acdc-coefficients.tar.gz",
+      "size": 272112982,
+      "sha256": "5e6d510ebb2ce2ede31895a1902152544d988bf0733f531334218c1123128311",
+      "url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P1-acdc-coefficients.tar.gz",
+      "remote_download_sha256": "PASS",
+      "github_digest": "sha256:5e6d510ebb2ce2ede31895a1902152544d988bf0733f531334218c1123128311"
+    },
+    {
+      "name": "P1-acdc-controls.tar.gz",
+      "size": 528266277,
+      "sha256": "9534282a75b28a126374114204d0b60f33dff3eb5a0906a95241dcbbb02dc684",
+      "url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P1-acdc-controls.tar.gz",
+      "remote_download_sha256": "PASS",
+      "github_digest": "sha256:9534282a75b28a126374114204d0b60f33dff3eb5a0906a95241dcbbb02dc684"
+    },
+    {
+      "name": "P1-acdc-factorial.tar.gz",
+      "size": 543821791,
+      "sha256": "1f74b740a20158da90f56f3d969aab31467d96480818b4c48b29f452671f7519",
+      "url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P1-acdc-factorial.tar.gz",
+      "remote_download_sha256": "PASS",
+      "github_digest": "sha256:1f74b740a20158da90f56f3d969aab31467d96480818b4c48b29f452671f7519"
+    },
+    {
+      "name": "P1-acdc-module-replacements.tar.gz",
+      "size": 340143132,
+      "sha256": "a006189f822bf5d33c6ceb031b7a21260d817a19d4a04a5bb4a244c14f2a3ccc",
+      "url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P1-acdc-module-replacements.tar.gz",
+      "remote_download_sha256": "PASS",
+      "github_digest": "sha256:a006189f822bf5d33c6ceb031b7a21260d817a19d4a04a5bb4a244c14f2a3ccc"
+    },
+    {
+      "name": "P1-acdc-seeds.tar.gz",
+      "size": 271968849,
+      "sha256": "f4b7df97d1ab1510b507b89c9d91cfe7ae08f7bdd4bbef04daa7a2c3be7903f4",
+      "url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/P1-acdc-seeds.tar.gz",
+      "remote_download_sha256": "PASS",
+      "github_digest": "sha256:f4b7df97d1ab1510b507b89c9d91cfe7ae08f7bdd4bbef04daa7a2c3be7903f4"
+    },
+    {
+      "name": "comixw-catalog-2026-11-04.tar.gz",
+      "size": 320367331,
+      "sha256": "dbf2cfeaa97bb8c74ff8f517996b53d2dccb1519e92c3b8815d7a810c7a7311a",
+      "url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/comixw-catalog-2026-11-04.tar.gz",
+      "remote_download_sha256": "PASS",
+      "github_digest": "sha256:dbf2cfeaa97bb8c74ff8f517996b53d2dccb1519e92c3b8815d7a810c7a7311a"
+    },
+    {
+      "name": "SHA256SUMS.assets",
+      "size": 980,
+      "sha256": "db531310307d0120dbc347fbdd5876281063a9a9e9df092789fcfda3407cd11f",
+      "url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/download/comixw-critical-backup-2026-11-04/SHA256SUMS.assets",
+      "remote_download_sha256": "PASS",
+      "github_digest": "sha256:db531310307d0120dbc347fbdd5876281063a9a9e9df092789fcfda3407cd11f"
+    }
+  ],
   "training_started": false,
   "evaluation_started": false,
-  "status": "BLOCKED_GITHUB_API_LOGIN",
-  "reason": "SSH Git authentication succeeds, but no GitHub API credential is available. No Release was created and no asset upload was attempted."
+  "paper_metrics_reproduced": false,
+  "authenticated_user": "rgm-medseg",
+  "repository_write_permission": true,
+  "release_id": 433614244,
+  "release_url": "https://github.com/rgm-medseg/Mixing-Meets-Weighting/releases/tag/comixw-critical-backup-2026-11-04",
+  "status": "PUBLISHED_REMOTE_SHA256_AND_RESTORE_PASS",
+  "download_cache": "/home/renguanming/jupyterlab/rgm/comixw_backup_20261104/verification_remote/gh-download-oi2bkkyo",
+  "remote_archive_restoration": "PASS",
+  "restored_directory": "/home/renguanming/jupyterlab/rgm/comixw_backup_20261104/verification_remote/gh-download-oi2bkkyo/restored",
+  "published_at": "2026-11-04T07:15:28Z",
+  "asset_count": 12,
+  "total_asset_bytes": 2946732762
 }

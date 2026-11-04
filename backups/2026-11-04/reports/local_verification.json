@@ -10,11 +10,14 @@
   "restored_files": 7713,
   "training_started": false,
   "evaluation_started": false,
-  "remote_download_sha256": "NOT_RUN_API_LOGIN_REQUIRED",
+  "remote_download_sha256": "PASS",
   "paper_metrics_reproduced": false,
   "catalog_archive_content_sha256": "PASS",
   "catalog_archive_file_count": 7654,
-  "release_asset_count": 11,
-  "release_asset_bytes": 2946731782,
-  "release_asset_size_gib": 2.744357829913497
+  "release_asset_count": 12,
+  "release_asset_bytes": 2946732762,
+  "release_asset_size_gib": 2.744357829913497,
+  "remote_archive_restoration": "PASS",
+  "remote_cpu_primary_weights": "PASS",
+  "backup_bundle_count": 11
 }

@@ -5116,21 +5116,21 @@
         "sha256": "7a124cfe70515de469915ce213feea258114b1398b125345559d1b5761cffd62",
         "iteration": 27200,
         "cpu_load": "PASS",
-        "resume_status": "可加载评估，恢复训练状态不完整"
+        "resume_status": "TRAINING_STATE_PRESENT_TWO_PEER_STUDENTS_WORKER_EXACTNESS_LIMITED"
       },
       {
         "source": "formal_E4_E5_20261008/tasks/E5/runs/E5_AdaMix_CT_common_protocol/checkpoints/last.ckpt",
         "sha256": "a826ef72323a029088b5d3b922a45d448dec7008057590af6e94ce15e954fbcd",
         "iteration": 30000,
         "cpu_load": "PASS",
-        "resume_status": "可加载评估，恢复训练状态不完整"
+        "resume_status": "TRAINING_STATE_PRESENT_TWO_PEER_STUDENTS_WORKER_EXACTNESS_LIMITED"
       },
       {
         "source": "formal_E4_E5_20261008/tasks/E5/runs/E5_AdaMix_CT_common_protocol/checkpoints/official_val_loss_best.ckpt",
         "sha256": "7e7981d2b43b7a0f9dcc8c756411e6ceb9b7053354704073181d82b6c5c10c49",
         "iteration": 24892,
         "cpu_load": "PASS",
-        "resume_status": "可加载评估，恢复训练状态不完整"
+        "resume_status": "TRAINING_STATE_PRESENT_TWO_PEER_STUDENTS_WORKER_EXACTNESS_LIMITED"
       }
     ],
     "recorded_module_arguments": {},
@@ -5138,7 +5138,7 @@
       "source": "formal_E4_E5_20261008/tasks/E5/runs/E5_AdaMix_CT_common_protocol/checkpoints/last.ckpt",
       "sha256": "a826ef72323a029088b5d3b922a45d448dec7008057590af6e94ce15e954fbcd",
       "iteration": 30000,
-      "status": "可加载评估，恢复训练状态不完整"
+      "status": "TRAINING_STATE_PRESENT_TWO_PEER_STUDENTS_WORKER_EXACTNESS_LIMITED"
     },
     "weight_evidence_bindings": [
       {

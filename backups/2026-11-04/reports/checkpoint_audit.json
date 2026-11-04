@@ -6338,9 +6338,11 @@
     "teacher_state": null,
     "amp_state": null,
     "unexpected_image_keys": [],
-    "resume_status": "可加载评估，恢复训练状态不完整",
+    "resume_status": "TRAINING_STATE_PRESENT_TWO_PEER_STUDENTS_WORKER_EXACTNESS_LIMITED",
     "precision_note": "FP32 in retained main source; no AMP/GradScaler calls. For controls, inspect amp_state and saved configuration.",
-    "privacy_scan": "No image/ground-truth payload keys found; model, optimizer, RNG, sampler indices, args and lineage only."
+    "privacy_scan": "No image/ground-truth payload keys found; model, optimizer, RNG, sampler indices, args and lineage only.",
+    "initial_generic_ema_classification": "可加载评估，恢复训练状态不完整",
+    "teacher_note": "E5 official_adapter.py saves teacher_state=None, scheduler_state=None and amp_state=None by design; peer models, optimizers, RNG, sampler plans, AdaMix age and lr_state are retained. No state was fabricated."
   },
   "a826ef72323a029088b5d3b922a45d448dec7008057590af6e94ce15e954fbcd": {
     "sha256": "a826ef72323a029088b5d3b922a45d448dec7008057590af6e94ce15e954fbcd",
@@ -6447,9 +6449,11 @@
     "teacher_state": null,
     "amp_state": null,
     "unexpected_image_keys": [],
-    "resume_status": "可加载评估，恢复训练状态不完整",
+    "resume_status": "TRAINING_STATE_PRESENT_TWO_PEER_STUDENTS_WORKER_EXACTNESS_LIMITED",
     "precision_note": "FP32 in retained main source; no AMP/GradScaler calls. For controls, inspect amp_state and saved configuration.",
-    "privacy_scan": "No image/ground-truth payload keys found; model, optimizer, RNG, sampler indices, args and lineage only."
+    "privacy_scan": "No image/ground-truth payload keys found; model, optimizer, RNG, sampler indices, args and lineage only.",
+    "initial_generic_ema_classification": "可加载评估，恢复训练状态不完整",
+    "teacher_note": "E5 official_adapter.py saves teacher_state=None, scheduler_state=None and amp_state=None by design; peer models, optimizers, RNG, sampler plans, AdaMix age and lr_state are retained. No state was fabricated."
   },
   "7e7981d2b43b7a0f9dcc8c756411e6ceb9b7053354704073181d82b6c5c10c49": {
     "sha256": "7e7981d2b43b7a0f9dcc8c756411e6ceb9b7053354704073181d82b6c5c10c49",
@@ -6556,9 +6560,11 @@
     "teacher_state": null,
     "amp_state": null,
     "unexpected_image_keys": [],
-    "resume_status": "可加载评估，恢复训练状态不完整",
+    "resume_status": "TRAINING_STATE_PRESENT_TWO_PEER_STUDENTS_WORKER_EXACTNESS_LIMITED",
     "precision_note": "FP32 in retained main source; no AMP/GradScaler calls. For controls, inspect amp_state and saved configuration.",
-    "privacy_scan": "No image/ground-truth payload keys found; model, optimizer, RNG, sampler indices, args and lineage only."
+    "privacy_scan": "No image/ground-truth payload keys found; model, optimizer, RNG, sampler indices, args and lineage only.",
+    "initial_generic_ema_classification": "可加载评估，恢复训练状态不完整",
+    "teacher_note": "E5 official_adapter.py saves teacher_state=None, scheduler_state=None and amp_state=None by design; peer models, optimizers, RNG, sampler plans, AdaMix age and lr_state are retained. No state was fabricated."
   },
   "a234794d53a3247b9504fd1a1ebc051686eed4495f0417866120941ddcf4b6d3": {
     "sha256": "a234794d53a3247b9504fd1a1ebc051686eed4495f0417866120941ddcf4b6d3",

@@ -1,0 +1,36 @@
+{
+  "removed_incomplete_placeholders": [
+    {
+      "name": "P0-acdc10.tar.gz",
+      "id": 708611958,
+      "state": "starter",
+      "reason": "Incomplete placeholder from cancelled slow-proxy transfer; no completed asset deleted"
+    },
+    {
+      "name": "P0-acdc5.tar.gz",
+      "id": 708611954,
+      "state": "starter",
+      "reason": "Incomplete placeholder from cancelled slow-proxy transfer; no completed asset deleted"
+    },
+    {
+      "name": "P0-covid10.tar.gz",
+      "id": 708611956,
+      "state": "starter",
+      "reason": "Incomplete placeholder from cancelled slow-proxy transfer; no completed asset deleted"
+    },
+    {
+      "name": "P0-covid5.tar.gz",
+      "id": 708611930,
+      "state": "starter",
+      "reason": "Incomplete placeholder from cancelled slow-proxy transfer; no completed asset deleted"
+    },
+    {
+      "name": "P0-promise20.tar.gz",
+      "id": 708611959,
+      "state": "starter",
+      "reason": "Incomplete placeholder from cancelled slow-proxy transfer; no completed asset deleted"
+    }
+  ],
+  "retained_assets": [],
+  "proxy_change": "Only this backup process uses direct HTTPS; global network configuration unchanged"
+}
