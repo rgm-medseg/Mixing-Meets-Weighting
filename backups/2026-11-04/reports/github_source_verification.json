@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/rgm-medseg/Mixing-Meets-Weighting",
+  "source_commit": "9dd9ac2ca5331e7b80b0bc25ec64f3708460da70",
+  "download_source": "https://api.github.com/repos/rgm-medseg/Mixing-Meets-Weighting/tarball/9dd9ac2ca5331e7b80b0bc25ec64f3708460da70",
+  "downloaded_archive_bytes": 669850233,
+  "downloaded_git_catalog_files": 7656,
+  "per_file_sha256": "PASS",
+  "archive_read": "PASS",
+  "scope": "Git-tracked backup catalogue only; Release weights have not been uploaded or remotely verified.",
+  "release_asset_upload": "BLOCKED_GITHUB_API_LOGIN",
+  "release_asset_remote_sha256": "NOT_RUN",
+  "paper_metrics_reproduced": false
+}
